@@ -603,7 +603,7 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     .tool-detail-modal-backdrop {
       position: fixed;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.88);
+      background-color: rgba(0, 0, 0, 0.64);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -622,12 +622,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       position: relative;
       padding: var(--spacing-09);
       background-color: var(--background);
-      --shadow-color: rgb(0 0 0 / 0.04);
-      box-shadow:
-        0px 0px 0px 0.5px var(--background-selected),
-        0px 1px 1px -0.5px var(--shadow-color),
-        0px 3px 3px -1.5px var(--shadow-color),
-        0px 12px 12px -6px var(--shadow-color);
       content-visibility: auto;
       contain-intrinsic-size: 8.5rem;
       transition: box-shadow 0.2s ease-out;
@@ -789,8 +783,8 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     .snapshot-value {
       margin: 0;
       color: var(--content-primary);
-      font-size: var(--desktop-body);
-      line-height: var(--lh-desktop-body);
+      font-size: var(--desktop-body-sm);
+      line-height: var(--lh-desktop-body-sm);
     }
 
     .snapshot-value--muted {
