@@ -10,7 +10,7 @@ export function getStaticPaths() {
   data.tools.forEach((category: any) => {
     category.content.forEach((tool: any) => {
       if (tool.slug) {
-        paths.push({ params: { slug: tool.slug, category: category.category } });
+        paths.push({ params: { slug: tool.slug } });
       }
     });
   });
