@@ -51,7 +51,12 @@ export default function CardsContainer({ filter, sort = "nameAsc", randomSeed = 
   const filteredCards = useMemo(() => {
     const base = data.tools
       .filter((item) => filter === "all" || filter === item.category)
-      .flatMap((item) => item.content);
+      .flatMap((item) =>
+        item.content.map((tool) => ({
+          ...tool,
+          category: item.category,
+        }))
+      );
 
     // Create a copy and apply sort
     const sorted = [...base];
