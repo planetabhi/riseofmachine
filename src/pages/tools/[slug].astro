@@ -292,24 +292,25 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 }
 ---
 
-<Layout site={`Rise of Machine - ${tool.title}`} title={tool.title} tagline={tool.body}>
-
-  <head>
-    <title>{seoTitle} | Rise of Machine</title>
-    <meta name="description" content={seoDescription} />
-    <link rel="canonical" href={seoCanonicalUrl} />
-    <link rel="icon" href={seoFavicon} />
-    <meta property="og:title" content={seoOgTitle} />
-    <meta property="og:description" content={seoOgDescription} />
-    <meta property="og:url" content={seoCanonicalUrl} />
-    <meta property="og:image" content={seoOgImage} />
-    <meta property="og:type" content={seoOgType} />
-    <meta property="og:site_name" content={seoOgSiteName} />
-    <meta name="twitter:card" content={seoTwitterCard} />
-    <meta name="twitter:title" content={seoOgTitle} />
-    <meta name="twitter:description" content={seoOgDescription} />
-    <meta name="twitter:image" content={seoOgImage} />
-  </head>
+<Layout
+  site={`Rise of Machine - ${tool.title}`}
+  title={tool.title}
+  tagline={tool.body}
+  pageTitle={seoTitle}
+  pageDescription={seoDescription}
+  canonicalUrl={seoCanonicalUrl}
+  ogTitle={seoOgTitle}
+  ogDescription={seoOgDescription}
+  ogUrl={seoCanonicalUrl}
+  ogImage={seoOgImage}
+  ogType={seoOgType}
+  ogSiteName={seoOgSiteName}
+  twitterCard={seoTwitterCard}
+  twitterTitle={seoOgTitle}
+  twitterDescription={seoOgDescription}
+  twitterImage={seoOgImage}
+  pageFavicon={seoFavicon}
+>
 
   <main>
     <div class="tool-detail-modal-backdrop" id="modalBackdrop">

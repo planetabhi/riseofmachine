@@ -28,5 +28,5 @@ https://
 **Checklist before submitting:**
 - [ ] I've starred this repository (Optional but appreciated).
 - [ ] I've verified the tool is actively maintained.
+- [ ] The website link is correct and accessible.
 - [ ] Tool is not already listed on [riseofmachine.com](https://riseofmachine.com/).
-- [ ] The website link is correct and accessible

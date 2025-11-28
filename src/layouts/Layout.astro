@@ -6,9 +6,41 @@ export interface Props {
     site: string;
     title: string;
     tagline: string;
+    pageTitle?: string;
+    pageDescription?: string;
+    canonicalUrl?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
+    ogUrl?: string;
+    ogType?: string;
+    ogSiteName?: string;
+    twitterCard?: string;
+    twitterTitle?: string;
+    twitterDescription?: string;
+    twitterImage?: string;
+    pageFavicon?: string;
 }
 
-const { site, title, tagline } = Astro.props;
+const {
+    site,
+    title,
+    tagline,
+    pageTitle,
+    pageDescription,
+    canonicalUrl,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    ogUrl,
+    ogType,
+    ogSiteName,
+    twitterCard,
+    twitterTitle,
+    twitterDescription,
+    twitterImage,
+    pageFavicon,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -17,26 +49,25 @@ const { site, title, tagline } = Astro.props;
         <ViewTransitions />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/rise-of-machine.svg" />
+        <link rel="icon" type="image/svg+xml" href={pageFavicon || "/rise-of-machine.svg"} />
         <meta name="generator" content={Astro.generator} />
-        <title>{site} — Discover AI tools curated by agents for makers and SMBs</title>
+        <title>{pageTitle ? `${pageTitle} | Rise of Machine` : `${site} — Discover AI tools curated by agents for makers and SMBs`}</title>
         <meta name="author" content="@planetabhi" />
         <meta
             name="description"
-            content="Discover AI tools curated by agents for makers and SMBs"
+            content={pageDescription || "Discover AI tools curated by agents for makers and SMBs"}
         />
-        <meta property="og:title" content="Rise of Machine" />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:description"
-            content="Discover AI tools curated by agents for makers and SMBs"
-        />
-        <meta
-            property="og:image"
-            content="https://res.cloudinary.com/drwfwpkeo/image/upload/v1703755911/Light_Screenshot_ub9ydn.png"
-        />
-        <meta property="og:url" content="https://riseofmachine.com/" />
-        <meta name="twitter:card" content="summary_large_image" />
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {ogTitle && <meta property="og:title" content={ogTitle} />}
+        {ogType && <meta property="og:type" content={ogType} />}
+        {ogDescription && <meta property="og:description" content={ogDescription} />}
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        {ogUrl && <meta property="og:url" content={ogUrl} />}
+        {ogSiteName && <meta property="og:site_name" content={ogSiteName} />}
+        {twitterCard && <meta name="twitter:card" content={twitterCard} />}
+        {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
+        {twitterDescription && <meta name="twitter:description" content={twitterDescription} />}
+        {twitterImage && <meta name="twitter:image" content={twitterImage} />}
 
         <!-- Google tag (gtag.js) -->
         <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-S08Z38BTMJ"></script>
