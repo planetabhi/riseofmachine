@@ -1,0 +1,39 @@
+.sort-buttons-group {
+  display: flex;
+  gap: var(--spacing-02);
+  align-items: center;
+}
+
+.sort-icon-btn {
+  z-index: 999;
+  --icon-fill: var(--content-secondary);
+  --icon-fill-hover: var(--content-secondary);
+  width: var(--spacing-09);
+  height: var(--spacing-09);
+  background: none;
+  border: none;
+  padding: var(--spacing-00);
+  color: var(--content-secondary);
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-02);
+  transition: transform 0.1s ease;
+  position: relative;
+}
+
+.sort-icon-btn:hover {
+  color: var(--content-secondary);
+}
+
+.sort-icon-btn:focus {
+  outline: 1px solid var(--button-primary);
+  outline-offset: 2px;
+}
+
+.sort-icon {
+  stroke: currentColor;
+}

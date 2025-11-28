@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import SortButtons from "../components/SortButtons";
 
 export interface Props {
     site: string;
@@ -16,7 +17,7 @@ const { site, title, tagline } = Astro.props;
         <ViewTransitions />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/rise-of-machine.png" />
+        <link rel="icon" type="image/svg+xml" href="/rise-of-machine.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{site} — Discover AI tools curated by agents for makers and SMBs</title>
         <meta name="author" content="@planetabhi" />
@@ -51,25 +52,18 @@ const { site, title, tagline } = Astro.props;
 
     <body>
         <div class="floating-nav" aria-label="main navigation">
-            <div class="logo">
-                <a href="/" aria-label="home page" tabindex="-1"
-                    ><img
-                        src="/rise-of-machine.png"
-                        width="24"
-                        height="24"
-                        alt="Rise of Machine"
-                        aria-hidden="true"
-                    /></a
-                >
-            </div>
-            <div class="btn-group">
-                <a
-                    href="https://github.com/NewDesignFile/template-directory/issues"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="submit-btn"
-                    tabindex="0">Submit a tool</a
-                >
+            <div class="left-group">
+                <div class="logo">
+                    <a href="/" aria-label="home page" tabindex="-1"
+                        ><img
+                            src="/rise-of-machine.svg"
+                            width="32"
+                            height="32"
+                            alt="Rise of Machine"
+                            aria-hidden="true"
+                        /></a
+                    >
+                </div>
                 <button
                     class="theme-toggle"
                     id="theme-toggle"
@@ -78,11 +72,21 @@ const { site, title, tagline } = Astro.props;
                     aria-live="polite"
                 >
                 <!-- Light icon -->
-                <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M5 12H1m22 0h-4M7.05 7.05 4.222 4.222m15.556 15.556L16.95 16.95m-9.9 0-2.828 2.828M19.778 4.222 16.95 7.05M12 19v4m0-22v4m4 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" d="M5 12H1m22 0h-4M7.05 7.05 4.222 4.222m15.556 15.556L16.95 16.95m-9.9 0-2.828 2.828M19.778 4.222 16.95 7.05M12 19v4m0-22v4m4 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
 
                 <!-- Dark icon -->
-                <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.41 13.28C7.332 10.205 6.716 5.693 8.357 2c-1.23.41-2.256 1.23-3.281 2.256a10.4 10.4 0 0 0 0 14.768c4.102 4.102 10.46 3.897 14.562-.205 1.026-1.026 1.846-2.051 2.256-3.282-3.896 1.436-8.409.82-11.486-2.256"/></svg>
+                <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.41 13.28C7.332 10.205 6.716 5.693 8.357 2c-1.23.41-2.256 1.23-3.281 2.256a10.4 10.4 0 0 0 0 14.768c4.102 4.102 10.46 3.897 14.562-.205 1.026-1.026 1.846-2.051 2.256-3.282-3.896 1.436-8.409.82-11.486-2.256"/></svg>
                 </button>
+            </div>
+            <div class="btn-group">
+                <SortButtons client:load onSortChange={() => {}} onRandomSeed={() => {}} />
+                <a
+                    href="https://github.com/NewDesignFile/template-directory/issues"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="submit-btn"
+                    tabindex="0">Submit a tool</a
+                >
             </div>
         </div>
 
@@ -204,8 +208,8 @@ const { site, title, tagline } = Astro.props;
         transition: transform 0.2s ease;
 
         &:hover {
-            background-color: var(--background-secondary);
-            color: var(--content-primary);
+            background-color: var(--background);
+            color: var(--accent);
         }
 
         &:active {
@@ -261,6 +265,12 @@ const { site, title, tagline } = Astro.props;
         }
     }
 
+    .left-group {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-04);
+    }
+
     .theme-toggle .icon-light { 
         opacity: 0;
         transform: rotate(-15deg) scale(0.8);
@@ -304,36 +314,6 @@ const { site, title, tagline } = Astro.props;
             margin: var(--spacing-06);
         }
     }
-
-    /* logo animation */
-    .logo {
-        transition: all 0.2s ease-out;
-    }
-    .logo:hover {
-        animation: buzz 0.32s linear 2;
-        transform: scale(1.1) translateZ(0);
-        filter: brightness(1.1);
-    }
-    @keyframes buzz {
-        50% {
-            transform: translateX(3px) rotate(2deg);
-        }
-        100% {
-            transform: translateX(-3px) rotate(-2deg);
-        }
-    }
-    @supports (not (animation: buzz)) {
-        .logo:hover {
-            -webkit-animation: buzz 0.32s linear 2;
-        }
-    }
-    @media (prefers-reduced-motion: reduce) {
-        .logo:hover {
-            animation: none;
-            transform: scale(1.2);
-        }
-    }
-
 
 </style>
 

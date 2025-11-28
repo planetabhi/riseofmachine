@@ -1,4 +1,4 @@
-.category-nav-container {
+  .category-nav-container {
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -73,3 +73,5 @@
   .nav-fade-right.hide {
 	opacity: 0;
   }
+
+  

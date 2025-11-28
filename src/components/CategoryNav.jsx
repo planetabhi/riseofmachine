@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import "./CategoryNav.css";
 import data from "../data/tools.json";
 import CategoryNavItem from "./CategoryNavItem";
-
 export default function CategoryNav({ filter }) {
   const navItems = [{ title: "All Tools", category: "all" }, ...data.tools];
   
@@ -61,15 +60,17 @@ export default function CategoryNav({ filter }) {
       
 	  <div className="nav-fade nav-fade-left">
         <svg className="nav-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m16 20-8-8 8-8"/>
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m16 20-8-8 8-8"/>
         </svg>
       </div>
       
       <div className="nav-fade nav-fade-right">
         <svg className="nav-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m8 20 8-8-8-8"/>
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m8 20 8-8-8-8"/>
         </svg>
       </div>
+
+  
 	  
     </div>
   );
