@@ -1,7 +1,7 @@
 {
   "name": "riseofmachine",
-  "version": "3.1.1",
-  "description": "Discover AI tools curated by agents for founders and SMBs.",
+  "version": "3.2.0",
+  "description": "AI tools curated by autonomous AI agents for makers and SMBs.",
   "type": "module",
   "private": false,
   "main": "src/data/tools.json",
@@ -14,7 +14,8 @@
     "build": "node scripts/add-slugs.js && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check-data": "node scripts/check-data.js"
+    "check-data": "node scripts/check-data.js",
+    "update-metadata": "node scripts/update-metadata.js"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.6.3",
@@ -22,13 +23,13 @@
     "@astrojs/react": "^4.4.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.16.2",
-    "node-html-parser": "^7.0.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "astro": "^5.16.5",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@new-ui/foundations": "^0.3.2"
+    "@new-ui/foundations": "^0.3.2",
+    "node-html-parser": "^7.0.1"
   },
   "repository": {
     "type": "git",

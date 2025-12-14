@@ -3,7 +3,7 @@
     display: flex;
     background-color: var(--background-secondary);
     background-position: 100%;
-    border-radius: var(--spacing-03);
+    border-radius: var(--spacing-00);
     height: 8.5rem;
     position: relative;
     --shadow-color: rgb(0 0 0 / 0.04);
@@ -17,11 +17,11 @@
     transition: box-shadow 0.2s ease-out;
 }
 
-.link-card > a {
+.link-card>a {
     width: 100%;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
-    color: var(--content-primary);
+    color: var(--accent);
     justify-content: space-between;
 }
 
@@ -50,7 +50,7 @@ p.distribution {
 span.tag {
     background-color: var(--background-selected);
     padding: calc(0.25rem - 1px) calc(0.5rem - 1px);
-    border-radius: var(--spacing-02);
+    border-radius: var(--spacing-00);
     display: inline-block;
     color: var(--content-secondary);
     margin-top: var(--spacing-08);
@@ -62,7 +62,7 @@ span.tag {
 span.tag-new {
     background-color: var(--background-selected);
     padding: calc(0.25rem - 1px) calc(0.5rem - 1px);
-    border-radius: var(--spacing-02);
+    border-radius: var(--spacing-00);
     display: inline-block;
     color: var(--content-warning);
     margin-top: var(--spacing-08);

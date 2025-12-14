@@ -44,41 +44,65 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-new-ui-theme="dark--warm">
+<html lang="en" data-new-ui-theme="light--warm">
     <head>
         <ViewTransitions />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href={pageFavicon || "/rise-of-machine.svg"} />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href={pageFavicon || "/rise-of-machine.svg"}
+        />
         <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle ? `${pageTitle} | Rise of Machine` : `${site} — Discover AI tools curated by agents for founders and SMBs`}</title>
+        <title>
+            {
+                pageTitle
+                    ? `${pageTitle} | Rise of Machine`
+                    : `${site} — AI tools curated by autonomous AI agents for makers and SMBs.`
+            }
+        </title>
         <meta name="author" content="@planetabhi" />
         <meta
             name="description"
-            content={pageDescription || "Discover AI tools curated by agents for founders and SMBs"}
+            content={pageDescription ||
+                "AI tools curated by autonomous AI agents for makers and SMBs."}
         />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {ogTitle && <meta property="og:title" content={ogTitle} />}
         {ogType && <meta property="og:type" content={ogType} />}
-        {ogDescription && <meta property="og:description" content={ogDescription} />}
+        {
+            ogDescription && (
+                <meta property="og:description" content={ogDescription} />
+            )
+        }
         {ogImage && <meta property="og:image" content={ogImage} />}
         {ogUrl && <meta property="og:url" content={ogUrl} />}
         {ogSiteName && <meta property="og:site_name" content={ogSiteName} />}
         {twitterCard && <meta name="twitter:card" content={twitterCard} />}
         {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
-        {twitterDescription && <meta name="twitter:description" content={twitterDescription} />}
+        {
+            twitterDescription && (
+                <meta name="twitter:description" content={twitterDescription} />
+            )
+        }
         {twitterImage && <meta name="twitter:image" content={twitterImage} />}
 
         <!-- Google tag (gtag.js) -->
-        <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-S08Z38BTMJ"></script>
+        <script
+            type="text/partytown"
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-S08Z38BTMJ"
+        ></script>
         <script type="text/partytown">
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-            gtag('config', 'G-S08Z38BTMJ');
+            gtag("config", "G-S08Z38BTMJ");
         </script>
-
     </head>
 
     <body>
@@ -102,15 +126,55 @@ const {
                     aria-label="auto"
                     aria-live="polite"
                 >
-                <!-- Light icon -->
-                <svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" d="M5 12H1m22 0h-4M7.05 7.05 4.222 4.222m15.556 15.556L16.95 16.95m-9.9 0-2.828 2.828M19.778 4.222 16.95 7.05M12 19v4m0-22v4m4 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                    <!-- Light icon -->
+                    <svg
+                        class="icon-light"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        ><g clip-path="url(#a)"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="1"
+                                d="M5 12H1m22 0h-4M7.05 7.05 4.222 4.222m15.556 15.556L16.95 16.95m-9.9 0-2.828 2.828M19.778 4.222 16.95 7.05M12 19v4m0-22v4m4 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0"
+                            ></path></g
+                        ><defs
+                            ><clipPath id="a"
+                                ><path fill="#fff" d="M0 0h24v24H0z"
+                                ></path></clipPath
+                            ></defs
+                        ></svg
+                    >
 
-                <!-- Dark icon -->
-                <svg class="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.41 13.28C7.332 10.205 6.716 5.693 8.357 2c-1.23.41-2.256 1.23-3.281 2.256a10.4 10.4 0 0 0 0 14.768c4.102 4.102 10.46 3.897 14.562-.205 1.026-1.026 1.846-2.051 2.256-3.282-3.896 1.436-8.409.82-11.486-2.256"/></svg>
+                    <!-- Dark icon -->
+                    <svg
+                        class="icon-dark"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        ><path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            d="M10.41 13.28C7.332 10.205 6.716 5.693 8.357 2c-1.23.41-2.256 1.23-3.281 2.256a10.4 10.4 0 0 0 0 14.768c4.102 4.102 10.46 3.897 14.562-.205 1.026-1.026 1.846-2.051 2.256-3.282-3.896 1.436-8.409.82-11.486-2.256"
+                        ></path></svg
+                    >
                 </button>
             </div>
             <div class="btn-group">
-                <SortButtons client:load onSortChange={() => {}} onRandomSeed={() => {}} />
+                <SortButtons
+                    client:load
+                    onSortChange={() => {}}
+                    onRandomSeed={() => {}}
+                />
                 <a
                     href="https://github.com/NewDesignFile/template-directory/issues"
                     target="_blank"
@@ -137,50 +201,37 @@ const {
 
         <div class="footer">
             <p>
-                ABHIMANYU RANA 2025 © <br /> <a
+                ABHIMANYU RANA 2025 © <br />
+                <a
                     href="https://planetabhi.com/"
                     class="nu-u-link--subtle"
-                    target="_blank" rel="noopener noreferrer">@planetabhi</a
+                    target="_blank"
+                    rel="noopener noreferrer">@planetabhi</a
                 >
             </p>
         </div>
     </body>
 </html>
 <style is:global>
-    @font-face {
-        font-family: "Gothic";
-        font-style: normal;
-        font-weight: 400; 
-        src: url("/fonts/regular.woff2") format("woff2");
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: "Gothic";
-        font-style: normal;
-        font-weight: 700;
-        src: url("/fonts/bold.woff2") format("woff2");
-        font-display: swap;
-    }
     :root {
         --accent: var(--link);
-        --body-copy: "Gothic", var(--system-ui);
+        --body-copy: var(--system-ui);
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
     html[data-new-ui-theme*="dark"] {
-        --link: #F55000;
-        --link-hover: #F55000;
-        --link-visited: #F55000;
-        --border-focus: #F55000;
+        --link: orange;
+        --link-hover: orange;
+        --link-visited: orange;
+        --border-focus: orange;
     }
     html[data-new-ui-theme*="light"] {
-        --link: #F55000;
-        --link-hover: #F55000;
-        --link-visited: #F55000;
-        --border-focus: #F55000;
+        --link: blue;
+        --link-hover: blue;
+        --link-visited: blue;
+        --border-focus: blue;
     }
     html {
         font-family: var(--body-copy);
@@ -200,13 +251,13 @@ const {
         margin-bottom: var(--spacing-10);
     }
     h1.title {
-        max-inline-size: 28rem;
+        max-inline-size: 32rem;
     }
     p {
         margin-top: var(--spacing-00);
     }
     p.description-text {
-        max-inline-size: 28rem;
+        max-inline-size: 32rem;
     }
     .nu-u-link--subtle {
         color: var(--content-secondary) !important;
@@ -234,7 +285,7 @@ const {
         color: inherit;
         color: var(--content-secondary);
         background-color: var(--background);
-        border-radius: var(--spacing-03);
+        border-radius: var(--spacing-00);
         font-size: var(--desktop-body-sm);
         transition: transform 0.2s ease;
 
@@ -277,20 +328,22 @@ const {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: var(--spacing-02);
+        border-radius: var(--spacing-00);
         transition: transform 0.1s ease;
         position: relative;
-        
+
         @nest [data-theme="dark--warm"] & {
             --icon-fill: var(--content-secondary);
             --icon-fill-hover: var(--content-secondary);
         }
-        
+
         svg {
             position: absolute;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
         }
-        
+
         &:hover svg {
             transform: rotate(15deg) scale(1.05);
         }
@@ -302,24 +355,24 @@ const {
         gap: var(--spacing-04);
     }
 
-    .theme-toggle .icon-light { 
+    .theme-toggle .icon-light {
         opacity: 0;
         transform: rotate(-15deg) scale(0.8);
         pointer-events: none;
     }
 
-    .theme-toggle .icon-dark { 
+    .theme-toggle .icon-dark {
         opacity: 1;
         transform: rotate(0deg) scale(1);
     }
 
-    [data-new-ui-theme="dark--warm"] .theme-toggle .icon-light { 
+    [data-new-ui-theme="dark--warm"] .theme-toggle .icon-light {
         opacity: 1;
         transform: rotate(0deg) scale(1);
         pointer-events: auto;
     }
 
-    [data-new-ui-theme="dark--warm"] .theme-toggle .icon-dark { 
+    [data-new-ui-theme="dark--warm"] .theme-toggle .icon-dark {
         opacity: 0;
         transform: rotate(15deg) scale(0.8);
         pointer-events: none;
@@ -345,7 +398,6 @@ const {
             margin: var(--spacing-06);
         }
     }
-
 </style>
 
 <script is:inline>
@@ -411,62 +463,51 @@ const {
 </script>
 
 <script is:inline>
-// Initial theme setup
-const theme = (() => {
-if (
-typeof localStorage !== "undefined" &&
-localStorage.getItem("theme-preference")
-        ) {
-return localStorage.getItem("theme-preference");
+    // Initial theme setup
+    const theme = (() => {
+        try {
+            if (
+                typeof localStorage !== "undefined" &&
+                localStorage.getItem("theme-preference")
+            ) {
+                return localStorage.getItem("theme-preference");
+            }
+        } catch (e) {
+            // ignore
         }
-return window.matchMedia("(prefers-color-scheme: dark)").matches
-? "dark--warm"
-: "light--warm";
+        return "light--warm";
     })();
-document.firstElementChild.setAttribute("data-new-ui-theme", theme);
+    document.firstElementChild.setAttribute("data-new-ui-theme", theme);
 
-// Handle theme toggle
-function toggleTheme() {
-const currentTheme =
-document.firstElementChild.getAttribute("data-new-ui-theme");
-const newTheme = currentTheme === "light--warm" ? "dark--warm" : "light--warm";
-document.firstElementChild.setAttribute("data-new-ui-theme", newTheme);
-localStorage.setItem("theme-preference", newTheme);
+    // Handle theme toggle
+    function toggleTheme() {
+        const currentTheme =
+            document.firstElementChild.getAttribute("data-new-ui-theme");
+        const newTheme =
+            currentTheme === "light--warm" ? "dark--warm" : "light--warm";
+        document.firstElementChild.setAttribute("data-new-ui-theme", newTheme);
+        localStorage.setItem("theme-preference", newTheme);
     }
 
-// Initialize toggle button
-function initThemeToggle() {
-const themeToggle = document.querySelector("#theme-toggle");
-if (themeToggle) {
-themeToggle.addEventListener("click", toggleTheme);
+    // Initialize toggle button
+    function initThemeToggle() {
+        const themeToggle = document.querySelector("#theme-toggle");
+        if (themeToggle) {
+            themeToggle.addEventListener("click", toggleTheme);
         }
     }
 
-// Handle page transitions
-document.addEventListener("astro:page-load", () => {
-const storedTheme = localStorage.getItem("theme-preference");
-if (storedTheme) {
-document.firstElementChild.setAttribute(
-"data-new-ui-theme",
-storedTheme,
+    // Handle page transitions
+    document.addEventListener("astro:page-load", () => {
+        const storedTheme = localStorage.getItem("theme-preference");
+        if (storedTheme) {
+            document.firstElementChild.setAttribute(
+                "data-new-ui-theme",
+                storedTheme,
             );
         }
-initThemeToggle();
+        initThemeToggle();
     });
 
-// If user hasn't set a preference
-window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", ({ matches: isDark }) => {
-// Only apply system preference if user hasn't manually chosen a theme
-if (!localStorage.getItem("theme-preference")) {
-const newTheme = isDark ? "dark--warm" : "light--warm";
-document.firstElementChild.setAttribute(
-"data-new-ui-theme",
-newTheme,
-                );
-            }
-        });
-
-initThemeToggle();
+    initThemeToggle();
 </script>

@@ -1,12 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import data from "../../data/tools.json";
+import metadata from "../../data/metadata.json";
 import "@new-ui/foundations";
-import { parse } from "node-html-parser";
 
 export function getStaticPaths() {
   const paths: any[] = [];
-  
+
   data.tools.forEach((category: any) => {
     category.content.forEach((tool: any) => {
       if (tool.slug) {
@@ -14,14 +14,15 @@ export function getStaticPaths() {
       }
     });
   });
-  
+
   return paths;
 }
 
 export const prerender = true;
 
 const { slug } = Astro.params;
-const found = data.tools.flatMap((t) => t.content).find((x) => x.slug === slug) || null;
+const found =
+  data.tools.flatMap((t) => t.content).find((x) => x.slug === slug) || null;
 
 if (!found) {
   // If slug not found, render not-found behaviour (Astro will handle as 404)
@@ -29,62 +30,43 @@ if (!found) {
 }
 
 const tool = found;
-const category = tool.category || 'all';
+const category = tool.category || "all";
 
 // helpers
 function extractDomain(url: string) {
-  try { return new URL(url).hostname.replace('www.', ''); } catch { return '' }
+  try {
+    return new URL(url).hostname.replace("www.", "");
+  } catch {
+    return "";
+  }
 }
 function formatDate(dateStr: string) {
-  try { return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); } catch { return dateStr }
+  try {
+    return new Date(dateStr).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
 }
 
-const domain = extractDomain(tool.url || '');
-const formattedDate = formatDate(tool['date-added']);
+const domain = extractDomain(tool.url || "");
+const formattedDate = formatDate(tool["date-added"]);
 const canonicalUrl = `https://riseofmachine.com/tools/${tool.slug}`;
 const faviconUrl = `https://www.google.com/s2/favicons?sz=128&domain=${domain}`;
-const fallbackPath = category === 'all' ? '/' : `/${category}`;
+const fallbackPath = category === "all" ? "/" : `/${category}`;
 
-type MetadataBlock = {
-  basic: {
-    title: string | null;
-    description: string | null;
-    canonicalUrl: string | null;
-    favicon: string | null;
-  };
-  openGraph: {
-    title: string | null;
-    description: string | null;
-    image: string | null;
-    type: string | null;
-    siteName: string | null;
-  };
-  brand: {
-    author: string | null;
-    twitterHandle: string | null;
-    emails: string[];
-    phones: string[];
-    contactUrls: string[];
-  };
-} | null;
+// Get pre-fetched metadata if available
+const meta = (metadata as any)[slug] || {};
 
-const userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
-const fetchTimeoutMs = 8000;
-const maxHtmlBytes = 500_000; // prevent parsing excessively large pages
-const metadataCache = new Map<string, Promise<MetadataBlock>>();
-
-const liveMetadata = await fetchExternalMetadata(tool.url || '');
-
-const seoTitle = liveMetadata?.basic.title || tool.title;
-const seoDescription = liveMetadata?.basic.description || tool.body;
-const seoCanonicalUrl = liveMetadata?.basic.canonicalUrl || canonicalUrl;
-const seoOgTitle = liveMetadata?.openGraph.title || tool.title;
-const seoOgDescription = liveMetadata?.openGraph.description || tool.body;
-const seoOgImage = liveMetadata?.openGraph.image || faviconUrl;
-const seoOgType = liveMetadata?.openGraph.type || "website";
-const seoOgSiteName = liveMetadata?.openGraph.siteName || "Rise of Machine";
-const seoFavicon = liveMetadata?.basic.favicon || faviconUrl;
-const seoTwitterCard = liveMetadata?.openGraph.image ? "summary_large_image" : "summary";
+const seoTitle = meta.title || tool.title;
+const seoDescription = meta.description || tool.body;
+// We don't have OG images in the new simplified metadata, so falling back to favicon or site default
+const seoOgImage = faviconUrl;
+const seoOgType = "website";
+const seoOgSiteName = "Rise of Machine";
 
 const shareText = `Check out ${tool.title} - ${tool.body}`;
 const encodedShareText = encodeURIComponent(shareText);
@@ -92,204 +74,6 @@ const encodedCanonicalUrl = encodeURIComponent(canonicalUrl);
 const xShareUrl = `https://x.com/intent/post?text=${encodedShareText}&url=${encodedCanonicalUrl}&via=planetabhi`;
 const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedCanonicalUrl}`;
 const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}&title=${encodedShareText}`;
-
-const hasBasicMetadata = Boolean(
-  liveMetadata &&
-    (liveMetadata.basic.title ||
-      liveMetadata.basic.description ||
-      liveMetadata.basic.canonicalUrl ||
-      liveMetadata.basic.favicon)
-);
-
-const hasOpenGraphMetadata = Boolean(
-  liveMetadata &&
-    (liveMetadata.openGraph.title ||
-      liveMetadata.openGraph.description ||
-      liveMetadata.openGraph.image ||
-      liveMetadata.openGraph.type ||
-      liveMetadata.openGraph.siteName)
-);
-
-const hasBrandMetadata = Boolean(
-  liveMetadata &&
-    (liveMetadata.brand.author ||
-      liveMetadata.brand.twitterHandle ||
-      liveMetadata.brand.emails.length ||
-      liveMetadata.brand.phones.length ||
-      liveMetadata.brand.contactUrls.length)
-);
-
-function normalizeToolUrl(rawUrl: string | undefined | null) {
-  if (!rawUrl) return null;
-  const trimmed = rawUrl.trim();
-  if (!trimmed) return null;
-
-  const candidate = /^[a-zA-Z]+:\/\//.test(trimmed) ? trimmed : `https://${trimmed}`;
-
-  try {
-    return new URL(candidate).href;
-  } catch {
-    return null;
-  }
-}
-
-async function readResponseWithLimit(response: Response) {
-  if (!response.body) {
-    return await response.text();
-  }
-
-  const reader = response.body.getReader();
-  const decoder = new TextDecoder();
-  let received = 0;
-  let result = "";
-
-  while (true) {
-    const { value, done } = await reader.read();
-    if (done) break;
-    if (!value) continue;
-
-    const remaining = maxHtmlBytes - received;
-    if (remaining <= 0) {
-      break;
-    }
-
-    const chunk = value.byteLength > remaining ? value.slice(0, remaining) : value;
-    received += chunk.byteLength;
-    result += decoder.decode(chunk, { stream: true });
-
-    if (value.byteLength > remaining) {
-      break;
-    }
-  }
-
-  result += decoder.decode();
-  return result;
-}
-
-async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> {
-  const normalizedUrl = normalizeToolUrl(targetUrl);
-  if (!normalizedUrl) return null;
-
-  if (metadataCache.has(normalizedUrl)) {
-    return metadataCache.get(normalizedUrl)!;
-  }
-
-  const metadataPromise = (async () => {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), fetchTimeoutMs);
-
-    try {
-      const response = await fetch(normalizedUrl, {
-        headers: { "User-Agent": userAgent },
-        signal: controller.signal,
-      });
-
-      if (!response.ok) {
-        console.warn(`[metadata] Non-OK response (${response.status}) for ${normalizedUrl}`);
-        return null;
-      }
-
-      const html = await readResponseWithLimit(response);
-      const root = parse(html);
-      const baseUrl = new URL(normalizedUrl);
-
-      const pickMetaByName = (name: string) =>
-        root.querySelector(`meta[name="${name}"]`)?.getAttribute("content")?.trim() ?? null;
-
-      const pickMetaByProperty = (property: string) =>
-        root.querySelector(`meta[property="${property}"]`)?.getAttribute("content")?.trim() ?? null;
-
-      const pickLinkByRel = (rel: string) =>
-        root.querySelector(`link[rel="${rel}"]`)?.getAttribute("href")?.trim() ?? null;
-
-      const toAbsolute = (value: string | null) => {
-        if (!value) return null;
-        try {
-          return new URL(value, baseUrl).href;
-        } catch {
-          return value;
-        }
-      };
-
-      const unique = <T,>(items: (T | null | undefined)[]) =>
-        Array.from(new Set(items.filter(Boolean) as T[]));
-
-      const emailAddresses = unique(
-        root.querySelectorAll('a[href^="mailto:"]').map((anchor) =>
-          anchor.getAttribute("href")?.replace("mailto:", "").trim() ?? null
-        )
-      );
-
-      const phoneNumbers = unique(
-        root.querySelectorAll('a[href^="tel:"]').map((anchor) =>
-          anchor.getAttribute("href")?.replace("tel:", "").trim() ?? null
-        )
-      );
-
-      const contactUrls = unique(
-        root.querySelectorAll("a[href]").map((anchor) => {
-          const href = anchor.getAttribute("href") ?? "";
-          const text = anchor.text?.toLowerCase() ?? "";
-          if (!href) return null;
-          const normalizedHref = href.toLowerCase();
-          if (
-            normalizedHref.includes("contact") ||
-            normalizedHref.includes("support") ||
-            text.includes("contact") ||
-            text.includes("support")
-          ) {
-            return toAbsolute(href);
-          }
-          return null;
-        })
-      ).slice(0, 3);
-
-      const basicTitle =
-        root.querySelector("title")?.text?.trim() ??
-        pickMetaByProperty("og:title") ??
-        pickMetaByName("title") ??
-        null;
-
-      return {
-        basic: {
-          title: basicTitle,
-          description: pickMetaByName("description") ?? pickMetaByProperty("og:description"),
-          canonicalUrl: toAbsolute(pickLinkByRel("canonical")) ?? normalizedUrl,
-          favicon:
-            toAbsolute(pickLinkByRel("icon") ?? pickLinkByRel("shortcut icon")) ??
-            `https://www.google.com/s2/favicons?sz=128&domain=${baseUrl.hostname}`,
-        },
-        openGraph: {
-          title: pickMetaByProperty("og:title"),
-          description: pickMetaByProperty("og:description"),
-          image: toAbsolute(pickMetaByProperty("og:image")),
-          type: pickMetaByProperty("og:type"),
-          siteName: pickMetaByProperty("og:site_name") ?? pickMetaByName("application-name"),
-        },
-        brand: {
-          author: pickMetaByName("author") ?? pickMetaByName("creator"),
-          twitterHandle:
-            root.querySelector('meta[name="twitter:site"]')?.getAttribute("content")?.trim() ?? null,
-          emails: emailAddresses,
-          phones: phoneNumbers,
-          contactUrls,
-        },
-      };
-    } catch (error) {
-      if ((error as Error).name === "AbortError") {
-        console.warn(`[metadata] Timed out fetching ${normalizedUrl}`);
-      } else {
-        console.warn(`[metadata] Failed fetching ${normalizedUrl}: ${(error as Error).message}`);
-      }
-      return null;
-    } finally {
-      clearTimeout(timeoutId);
-    }
-  })();
-
-  metadataCache.set(normalizedUrl, metadataPromise);
-  return metadataPromise;
-}
 ---
 
 <Layout
@@ -298,30 +82,55 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
   tagline={tool.body}
   pageTitle={seoTitle}
   pageDescription={seoDescription}
-  canonicalUrl={seoCanonicalUrl}
-  ogTitle={seoOgTitle}
-  ogDescription={seoOgDescription}
-  ogUrl={seoCanonicalUrl}
+  canonicalUrl={canonicalUrl}
+  ogTitle={seoTitle}
+  ogDescription={seoDescription}
+  ogUrl={canonicalUrl}
   ogImage={seoOgImage}
   ogType={seoOgType}
   ogSiteName={seoOgSiteName}
-  twitterCard={seoTwitterCard}
-  twitterTitle={seoOgTitle}
-  twitterDescription={seoOgDescription}
+  twitterCard="summary"
+  twitterTitle={seoTitle}
+  twitterDescription={seoDescription}
   twitterImage={seoOgImage}
-  pageFavicon={seoFavicon}
+  pageFavicon={faviconUrl}
 >
-
   <main>
     <div class="tool-detail-modal-backdrop" id="modalBackdrop">
-      <div class="tool-detail-modal" id="toolModal" data-fallback={fallbackPath}>
-        <button class="tool-detail-close-btn" id="closeModal" title="Close (Press ESC)" aria-label="Close tool details">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 6L6 18M6 6l12 12"/></svg>
+      <div
+        class="tool-detail-modal"
+        id="toolModal"
+        data-fallback={fallbackPath}
+      >
+        <button
+          class="tool-detail-close-btn"
+          id="closeModal"
+          title="Close (Press ESC)"
+          aria-label="Close tool details"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+            ><path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M18 6L6 18M6 6l12 12"></path></svg
+          >
         </button>
 
         <div class="tool-detail-header">
           <div class="tool-icon-container">
-            <img src={faviconUrl} alt={`${tool.title} icon`} class="tool-icon" onerror="this.style.display='none'" />
+            <img
+              src={faviconUrl}
+              alt={`${tool.title} icon`}
+              class="tool-icon"
+              onerror="this.style.display='none'"
+            />
           </div>
           <div class="tool-header-content">
             <h1 class="tool-title">{tool.title}</h1>
@@ -331,7 +140,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 
         <div class="tool-detail-content">
           <section class="tool-summary">
-
             <article>
               <p class="snapshot-label">About</p>
               <p class="tool-description">{tool.body}</p>
@@ -344,148 +152,129 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
               </article>
               <article class="snapshot-card">
                 <p class="snapshot-label">Official site</p>
-                {tool.url ? (
-                  <a href={tool.url} target="_blank" rel="noopener noreferrer" class="snapshot-value link-muted">{domain || tool.url}</a>
-                ) : (
-                  <p class="snapshot-value snapshot-value--muted">Not provided</p>
-                )}
+                {
+                  tool.url ? (
+                    <a
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="snapshot-value link-muted"
+                    >
+                      {domain || tool.url}
+                    </a>
+                  ) : (
+                    <p class="snapshot-value snapshot-value--muted">
+                      Not provided
+                    </p>
+                  )
+                }
               </article>
             </div>
-          
+
             <div class="tool-detail-actions">
-              {tool.url ? (
-                <a href={tool.url} target="_blank" rel="noopener noreferrer" class="btn-primary">Visit {tool.title}</a>
-              ) : (
-                <span class="btn-primary btn-disabled" aria-disabled="true">No website listed</span>
-              )}
+              {
+                tool.url ? (
+                  <a
+                    href={tool.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary"
+                  >
+                    Visit {tool.title}
+                  </a>
+                ) : (
+                  <span class="btn-primary btn-disabled" aria-disabled="true">
+                    No website listed
+                  </span>
+                )
+              }
             </div>
-
           </section>
-
-          {liveMetadata && (
-            <section class="tool-section">
-
-              <div class="live-metadata-grid">
-                {hasBasicMetadata && liveMetadata && (
-                  <article class="live-group">
-                    <div class="live-card-grid">
-                      {liveMetadata.basic.title && (
-                        <div class="live-card">
-                          <p class="live-label">Page title</p>
-                          <p class="live-value">{liveMetadata.basic.title}</p>
-                        </div>
-                      )}
-                      {liveMetadata.basic.description && (
-                        <div class="live-card">
-                          <p class="live-label">Description</p>
-                          <p class="live-value">{liveMetadata.basic.description}</p>
-                        </div>
-                      )}
-                    </div>
-                  </article>
-                )}
-
-                {hasOpenGraphMetadata && liveMetadata && (
-                  <article class="live-group">
-                    <div class="live-card-grid">
-                      {liveMetadata.openGraph.title && (
-                        <div class="live-card">
-                          <p class="live-label">OG title</p>
-                          <p class="live-value">{liveMetadata.openGraph.title}</p>
-                        </div>
-                      )}
-                      {liveMetadata.openGraph.description && (
-                        <div class="live-card">
-                          <p class="live-label">OG description</p>
-                          <p class="live-value">{liveMetadata.openGraph.description}</p>
-                        </div>
-                      )}
-                      {liveMetadata.openGraph.siteName && (
-                        <div class="live-card">
-                          <p class="live-label">Site name</p>
-                          <p class="live-value">{liveMetadata.openGraph.siteName}</p>
-                        </div>
-                      )}
-                      {liveMetadata.openGraph.image && (
-                        <div class="live-card live-card-image">
-                          <p class="live-label">OG image</p>
-                          <img src={liveMetadata.openGraph.image} alt={`${tool.title} Open Graph image`} loading="lazy" />
-                        </div>
-                      )}
-                    </div>
-                  </article>
-                )}
-
-                {hasBrandMetadata && liveMetadata && (
-                  <article class="live-group">
-                    <div class="live-card-grid">
-                      {(liveMetadata.brand.author || liveMetadata.brand.twitterHandle) && (
-                        <div class="live-card">
-                          <p class="live-label">Brand details</p>
-                          <ul class="list-pills">
-                            {liveMetadata.brand.author && <li><span class="tag">{liveMetadata.brand.author}</span></li>}
-                            {liveMetadata.brand.twitterHandle && <li><span class="tag">{liveMetadata.brand.twitterHandle}</span></li>}
-                          </ul>
-                        </div>
-                      )}
-                      {liveMetadata.brand.emails.length > 0 && (
-                        <div class="live-card">
-                          <p class="live-label">Email</p>
-                          <ul class="list-pills">
-                            {liveMetadata.brand.emails.map((email: string) => (
-                              <li><a href={`mailto:${email}`} class="live-link">{email}</a></li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      {liveMetadata.brand.phones.length > 0 && (
-                        <div class="live-card">
-                          <p class="live-label">Phone</p>
-                          <ul class="list-pills">
-                            {liveMetadata.brand.phones.map((phone: string) => (
-                              <li><a href={`tel:${phone}`} class="live-link">{phone}</a></li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      {liveMetadata.brand.contactUrls.length > 0 && (
-                        <div class="live-card">
-                          <p class="live-label">Contact links</p>
-                          <ul class="list-pills">
-                            {liveMetadata.brand.contactUrls.map((link: string) => (
-                              <li><a href={link} target="_blank" rel="noopener noreferrer" class="live-link">{extractDomain(link) || link}</a></li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  </article>
-                )}
-
-              </div>
-            </section>
-          )}
 
           <div class="tool-detail-share">
             <h3 class="share-title">Share this tool</h3>
             <div class="share-buttons">
-              <a href={xShareUrl} target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on X" aria-label="Share on X">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path></svg>
+              <a
+                href={xShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="share-btn"
+                title="Share on X"
+                aria-label="Share on X"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                  ><path
+                    d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"
+                  ></path></svg
+                >
               </a>
-              <a href={linkedinShareUrl} target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on LinkedIn" aria-label="Share on LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
+              <a
+                href={linkedinShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="share-btn"
+                title="Share on LinkedIn"
+                aria-label="Share on LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                  ><path
+                    d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                  ></path></svg
+                >
               </a>
-              <a href={redditShareUrl} target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on Reddit" aria-label="Share on Reddit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M248,104a32,32,0,0,0-52.94-24.19c-16.75-8.9-36.76-14.28-57.66-15.53l5.19-31.17,17.72,2.72a24,24,0,1,0,2.87-15.74l-26-4a8,8,0,0,0-9.11,6.59L121.2,64.16c-21.84.94-42.82,6.38-60.26,15.65a32,32,0,0,0-42.59,47.74A59,59,0,0,0,16,144c0,21.93,12,42.35,33.91,57.49C70.88,216,98.61,224,128,224s57.12-8,78.09-22.51C228,186.35,240,165.93,240,144a59,59,0,0,0-2.35-16.45A32.16,32.16,0,0,0,248,104ZM184,24a8,8,0,1,1-8,8A8,8,0,0,1,184,24Zm40.13,93.78a8,8,0,0,0-3.29,10A43.58,43.58,0,0,1,224,144c0,16.53-9.59,32.27-27,44.33C178.67,201,154.17,208,128,208s-50.67-7-69-19.67C41.59,176.27,32,160.53,32,144a43.75,43.75,0,0,1,3.14-16.17,8,8,0,0,0-3.27-10A16,16,0,1,1,52.94,94.59a8,8,0,0,0,10.45,2.23l.36-.22C81.45,85.9,104.25,80,128,80h0c23.73,0,46.53,5.9,64.23,16.6l.42.25a8,8,0,0,0,10.39-2.26,16,16,0,1,1,21.07,23.19ZM88,144a16,16,0,1,1,16-16A16,16,0,0,1,88,144Zm96-16a16,16,0,1,1-16-16A16,16,0,0,1,184,128Zm-16.93,44.25a8,8,0,0,1-3.32,10.82,76.18,76.18,0,0,1-71.5,0,8,8,0,1,1,7.5-14.14,60.18,60.18,0,0,0,56.5,0A8,8,0,0,1,167.07,172.25Z"></path></svg>
+              <a
+                href={redditShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="share-btn"
+                title="Share on Reddit"
+                aria-label="Share on Reddit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                  ><path
+                    d="M248,104a32,32,0,0,0-52.94-24.19c-16.75-8.9-36.76-14.28-57.66-15.53l5.19-31.17,17.72,2.72a24,24,0,1,0,2.87-15.74l-26-4a8,8,0,0,0-9.11,6.59L121.2,64.16c-21.84.94-42.82,6.38-60.26,15.65a32,32,0,0,0-42.59,47.74A59,59,0,0,0,16,144c0,21.93,12,42.35,33.91,57.49C70.88,216,98.61,224,128,224s57.12-8,78.09-22.51C228,186.35,240,165.93,240,144a59,59,0,0,0-2.35-16.45A32.16,32.16,0,0,0,248,104ZM184,24a8,8,0,1,1-8,8A8,8,0,0,1,184,24Zm40.13,93.78a8,8,0,0,0-3.29,10A43.58,43.58,0,0,1,224,144c0,16.53-9.59,32.27-27,44.33C178.67,201,154.17,208,128,208s-50.67-7-69-19.67C41.59,176.27,32,160.53,32,144a43.75,43.75,0,0,1,3.14-16.17,8,8,0,0,0-3.27-10A16,16,0,1,1,52.94,94.59a8,8,0,0,0,10.45,2.23l.36-.22C81.45,85.9,104.25,80,128,80h0c23.73,0,46.53,5.9,64.23,16.6l.42.25a8,8,0,0,0,10.39-2.26,16,16,0,1,1,21.07,23.19ZM88,144a16,16,0,1,1,16-16A16,16,0,0,1,88,144Zm96-16a16,16,0,1,1-16-16A16,16,0,0,1,184,128Zm-16.93,44.25a8,8,0,0,1-3.32,10.82,76.18,76.18,0,0,1-71.5,0,8,8,0,1,1,7.5-14.14,60.18,60.18,0,0,0,56.5,0A8,8,0,0,1,167.07,172.25Z"
+                  ></path></svg
+                >
               </a>
-              <button class="share-btn" id="copyLinkBtn" title="Copy link to clipboard" aria-label="Copy link to clipboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M240,88.23a54.43,54.43,0,0,1-16,37L189.25,160a54.27,54.27,0,0,1-38.63,16h-.05A54.63,54.63,0,0,1,96,119.84a8,8,0,0,1,16,.45A38.62,38.62,0,0,0,150.58,160h0a38.39,38.39,0,0,0,27.31-11.31l34.75-34.75a38.63,38.63,0,0,0-54.63-54.63l-11,11A8,8,0,0,1,135.7,59l11-11A54.65,54.65,0,0,1,224,48,54.86,54.86,0,0,1,240,88.23ZM109,185.66l-11,11A38.41,38.41,0,0,1,70.6,208h0a38.63,38.63,0,0,1-27.29-65.94L78,107.31A38.63,38.63,0,0,1,144,135.71a8,8,0,0,0,16,.45A54.86,54.86,0,0,0,144,96a54.65,54.65,0,0,0-77.27,0L32,130.75A54.62,54.62,0,0,0,70.56,224h0a54.28,54.28,0,0,0,38.64-16l11-11A8,8,0,0,0,109,185.66Z"></path></svg>
+              <button
+                class="share-btn"
+                id="copyLinkBtn"
+                title="Copy link to clipboard"
+                aria-label="Copy link to clipboard"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                  ><path
+                    d="M240,88.23a54.43,54.43,0,0,1-16,37L189.25,160a54.27,54.27,0,0,1-38.63,16h-.05A54.63,54.63,0,0,1,96,119.84a8,8,0,0,1,16,.45A38.62,38.62,0,0,0,150.58,160h0a38.39,38.39,0,0,0,27.31-11.31l34.75-34.75a38.63,38.63,0,0,0-54.63-54.63l-11,11A8,8,0,0,1,135.7,59l11-11A54.65,54.65,0,0,1,224,48,54.86,54.86,0,0,1,240,88.23ZM109,185.66l-11,11A38.41,38.41,0,0,1,70.6,208h0a38.63,38.63,0,0,1-27.29-65.94L78,107.31A38.63,38.63,0,0,1,144,135.71a8,8,0,0,0,16,.45A54.86,54.86,0,0,0,144,96a54.65,54.65,0,0,0-77.27,0L32,130.75A54.62,54.62,0,0,0,70.56,224h0a54.28,54.28,0,0,0,38.64-16l11-11A8,8,0,0,0,109,185.66Z"
+                  ></path></svg
+                >
               </button>
             </div>
           </div>
 
           <div class="tool-detail-nav">
-            <a href={category === 'all' ? '/' : `/${category}`} class="nav-link">← Go back to {category === 'all' ? 'all' : category}</a>
+            <a href={category === "all" ? "/" : `/${category}`} class="nav-link"
+              >← Go back to {category === "all" ? "all" : category}</a
+            >
           </div>
         </div>
       </div>
@@ -494,8 +283,8 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 
   <script type="module">
     (function () {
-      const modalEl = document.getElementById('toolModal');
-      const fallbackNavigateTo = modalEl?.dataset.fallback || '/';
+      const modalEl = document.getElementById("toolModal");
+      const fallbackNavigateTo = modalEl?.dataset.fallback || "/";
       const hasSameOriginReferrer = (() => {
         try {
           if (!document.referrer) return false;
@@ -508,8 +297,8 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 
       function closeModal() {
         // remove modal marker before navigating back
-        document.body.removeAttribute('data-modal-open');
-        document.body.style.overflow = '';
+        document.body.removeAttribute("data-modal-open");
+        document.body.style.overflow = "";
         if (hasSameOriginReferrer && window.history.length > 1) {
           window.history.back();
         } else {
@@ -518,54 +307,53 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       }
 
       // Delegate clicks for close, backdrop, and copy
-      document.addEventListener('click', (e) => {
-        const close = e.target.closest('.tool-detail-close-btn');
+      document.addEventListener("click", (e) => {
+        const close = e.target.closest(".tool-detail-close-btn");
         if (close) return closeModal();
 
         // If clicked outside the modal but inside backdrop
-        const backdrop = e.target.closest('.tool-detail-modal-backdrop');
-        const modal = e.target.closest('.tool-detail-modal');
+        const backdrop = e.target.closest(".tool-detail-modal-backdrop");
+        const modal = e.target.closest(".tool-detail-modal");
         if (backdrop && !modal) return closeModal();
 
-        const copyBtn = e.target.closest('#copyLinkBtn');
+        const copyBtn = e.target.closest("#copyLinkBtn");
         if (copyBtn) {
           const url = window.location.href;
           navigator.clipboard.writeText(url).then(() => {
             const original = copyBtn.innerHTML;
-            copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-            copyBtn.title = 'Copied!';
+            copyBtn.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            copyBtn.title = "Copied!";
             setTimeout(() => {
               copyBtn.innerHTML = original;
-              copyBtn.title = 'Copy link to clipboard';
+              copyBtn.title = "Copy link to clipboard";
             }, 2000);
           });
         }
       });
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
       });
 
       // Mark that modal is open so we can hide background elements (title/description)
-      document.body.setAttribute('data-modal-open', 'true');
+      document.body.setAttribute("data-modal-open", "true");
       // Prevent background scroll while modal open
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
 
       // Ensure state cleanup on page hide/unload
-      window.addEventListener('pagehide', () => {
-        document.body.removeAttribute('data-modal-open');
-        document.body.style.overflow = '';
+      window.addEventListener("pagehide", () => {
+        document.body.removeAttribute("data-modal-open");
+        document.body.style.overflow = "";
       });
-      window.addEventListener('unload', () => {
-        document.body.removeAttribute('data-modal-open');
-        document.body.style.overflow = '';
+      window.addEventListener("unload", () => {
+        document.body.removeAttribute("data-modal-open");
+        document.body.style.overflow = "";
       });
     })();
   </script>
 
   <style is:global>
-    /* Inherit fonts and base styles from Layout and foundations */
-    /* When a modal detail page is open, hide the page title + description behind it */
     body[data-modal-open="true"] .title,
     body[data-modal-open="true"] .description-text {
       opacity: 0 !important;
@@ -574,7 +362,7 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       transition: opacity 120ms ease;
     }
     section {
-        margin-bottom: var(--spacing-04);
+      margin-bottom: var(--spacing-04);
     }
   </style>
 
@@ -593,7 +381,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 
     .tool-detail-modal {
       background-color: var(--background-secondary);
-      border-radius: var(--spacing-06);
       width: 100%;
       max-width: 680px;
       max-height: 90vh;
@@ -619,7 +406,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: var(--spacing-03);
     }
 
     .tool-detail-close-btn:hover {
@@ -637,7 +423,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     .tool-icon {
       width: 48px;
       height: 48px;
-      border-radius: var(--spacing-03);
     }
 
     .tool-title {
@@ -666,8 +451,8 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       background: var(--background-secondary);
       gap: var(--spacing-05);
       padding: var(--spacing-06);
-      border-radius: var(--spacing-03);
-      border: .5px solid var(--border-muted);
+
+      border: 0.5px solid var(--border-muted);
     }
 
     .tool-description {
@@ -710,8 +495,8 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       background: var(--background-secondary);
       gap: var(--spacing-05);
       padding: var(--spacing-06);
-      border-radius: var(--spacing-03);
-      border: .5px solid var(--border-muted);
+
+      border: 0.5px solid var(--border-muted);
     }
 
     .section-header {
@@ -746,7 +531,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     }
 
     .snapshot-card {
-      border-radius: var(--spacing-03);
       display: flex;
       flex-direction: column;
       gap: var(--spacing-01);
@@ -797,8 +581,7 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       display: inline-block;
       padding: var(--spacing-03) var(--spacing-05);
       background-color: var(--accent);
-      color: white;
-      border-radius: var(--spacing-03);
+      color: var(--background-high-contrast);
       text-decoration: none;
       font-weight: 600;
       text-align: center;
@@ -858,7 +641,7 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 
     .live-card-image img {
       width: 100%;
-      border-radius: var(--spacing-03);
+
       border: 1px solid var(--border-muted);
       object-fit: cover;
     }
@@ -888,7 +671,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     }
 
     .favicon-preview img {
-      border-radius: var(--spacing-03);
       border: 1px solid var(--border-muted);
     }
 
@@ -904,7 +686,7 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     .list-pills li {
       background-color: var(--background-secondary);
       padding: 0;
-      border-radius: var(--spacing-03);
+
       font-size: var(--desktop-caption);
       color: var(--content-secondary);
     }
@@ -920,9 +702,9 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: var(--spacing-03);
+
       background-color: var(--background);
-      border: .5px solid var(--border-muted);
+      border: 0.5px solid var(--border-muted);
       color: var(--content-secondary);
     }
 
@@ -933,7 +715,7 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
 
     .tool-detail-nav {
       padding-top: var(--spacing-05);
-      border-top: .5px solid var(--border-muted);
+      border-top: 0.5px solid var(--border-muted);
       display: flex;
       gap: var(--spacing-03);
     }
@@ -958,7 +740,6 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
     span.tag {
       background-color: var(--background-selected);
       padding: calc(0.25rem - 1px) calc(0.5rem - 1px);
-      border-radius: var(--spacing-02);
       display: inline-block;
       color: var(--content-secondary);
       font-size: var(--desktop-caption);
@@ -986,5 +767,4 @@ async function fetchExternalMetadata(targetUrl: string): Promise<MetadataBlock> 
       }
     }
   </style>
-
 </Layout>

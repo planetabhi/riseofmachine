@@ -4023,14 +4023,6 @@
           "slug": "openrouter"
         },
         {
-          "title": "Othersideai/self-operating-computer",
-          "body": "A framework to enable multimodal models to...",
-          "tag": "Not available",
-          "url": "https://github.com/OthersideAI/self-operating-computer?ref=riseofmachine.com",
-          "date-added": "2025-06-14",
-          "slug": "othersideaiself-operating-computer"
-        },
-        {
           "title": "Patronus AI",
           "body": "Automated AI evaluation.",
           "tag": "Not available",
@@ -4793,12 +4785,12 @@
           "slug": "clothes-changer"
         },
         {
-          "title": "DressX Background Removal",
+          "title": "DressX",
           "body": "AI tool instantly removes image backgrounds.",
           "tag": "Freemium",
           "url": "https://dressxme.com/change_background/?ref=riseofmachine.com",
           "date-added": "2025-06-29",
-          "slug": "dressx-background-removal"
+          "slug": "dressx"
         },
         {
           "title": "Dual Shades",

@@ -6,28 +6,28 @@ import Dashboard from "../../components/Dashboard";
 
 export function getStaticPaths() {
   return [
-    {params: {category: 'art'}},
-    {params: {category: 'audio'}},
-    {params: {category: 'code'}},
-    {params: {category: 'copywriting'}},
-    {params: {category: 'design'}},
-    {params: {category: 'developer'}},
-    {params: {category: 'education'}},
-    {params: {category: 'enterprise'}},
-    {params: {category: 'fashion'}},
-    {params: {category: 'gaming'}},
-    {params: {category: 'health'}},
-    {params: {category: 'legal'}},
-    {params: {category: 'llm'}},
-    {params: {category: 'music'}},
-    {params: {category: 'nocode'}},
-    {params: {category: 'photos'}},
-    {params: {category: 'productivity'}},
-    {params: {category: 'prompts'}},
-    {params: {category: 'research'}},
-    {params: {category: 'seo'}},
-    {params: {category: 'social'}},
-    {params: {category: 'xtras'}},
+    { params: { category: "art" } },
+    { params: { category: "audio" } },
+    { params: { category: "code" } },
+    { params: { category: "copywriting" } },
+    { params: { category: "design" } },
+    { params: { category: "developer" } },
+    { params: { category: "education" } },
+    { params: { category: "enterprise" } },
+    { params: { category: "fashion" } },
+    { params: { category: "gaming" } },
+    { params: { category: "health" } },
+    { params: { category: "legal" } },
+    { params: { category: "llm" } },
+    { params: { category: "music" } },
+    { params: { category: "nocode" } },
+    { params: { category: "photos" } },
+    { params: { category: "productivity" } },
+    { params: { category: "prompts" } },
+    { params: { category: "research" } },
+    { params: { category: "seo" } },
+    { params: { category: "social" } },
+    { params: { category: "xtras" } },
   ];
 }
 
@@ -37,9 +37,9 @@ const { category } = Astro.params;
 <Layout
   site=`Rise of Machine - ${category}`
   title="Make the Most of It"
-  tagline="Discover AI tools curated by agents for founders and SMBs"
+  tagline="AI tools curated by autonomous AI agents for makers and SMBs"
 >
   <main>
-      <Dashboard client:load category=`${category}` />
+    <Dashboard client:load category=`${category}` />
   </main>
 </Layout>
