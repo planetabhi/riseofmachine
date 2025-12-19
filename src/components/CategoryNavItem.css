@@ -5,7 +5,7 @@
   outline: none;
   background: none;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   font-family: var(--body-copy);
   font-weight: 400;
   color: var(--content-secondary);

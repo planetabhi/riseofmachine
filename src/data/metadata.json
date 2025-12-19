@@ -4656,5 +4656,24 @@
     "slug": "viralrot",
     "title": "ViralRot · Brainrot Video Generator",
     "description": "ViralRot is the fastest way to create Brainrot / Subway Surfers style short-form videos with multimodal AI."
+  },
+  "ghibli-app": {
+    "slug": "ghibli-app",
+    "title": "Ghibli AI - Transform Photos into Magical Studio Ghibli Artwork",
+    "description": "Transform your photos and ideas into enchanting Studio Ghibli style art with Ghibli AI. Create high-quality Miyazaki-inspired masterpieces instantly, no artistic skills required."
+  },
+  "mixo": {
+    "slug": "mixo",
+    "title": "AI Website Builder to Launch Your Business Seconds"
+  },
+  "rizz-app-ai": {
+    "slug": "rizz-app-ai",
+    "title": "AI Rizz Lines Generator | Smart Dating Messages | Rizz App AI",
+    "description": "Generate smooth rizz lines and creative pickup lines with AI. Boost your flirting game with our free AI-powered generator for authentic conversations."
+  },
+  "sora-2": {
+    "slug": "sora-2",
+    "title": "Free AI Video Generator - Sora 2 | No Sign Up Required",
+    "description": "Create realistic AI videos with synchronized audio instantly. Physics-accurate motion, cinematic quality. 10 free credits, no credit card needed. Try Sora 2 now!"
   }
 }

@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import "@new-ui/foundations";
 import Dashboard from "../components/Dashboard";
+import ItemListSchema from "../components/schema/ItemListSchema.astro";
+import BreadcrumbSchema from "../components/schema/BreadcrumbSchema.astro";
+import data from "../data/tools.json";
 
 export function getStaticPaths() {
   return [
@@ -31,14 +34,27 @@ export function getStaticPaths() {
 }
 
 const { category } = Astro.params;
+
+// Get tools for this category
+const categoryData = data.tools.find((cat: any) => cat.category === category);
+const categoryTools = categoryData?.content || [];
+const categoryTitle = categoryData?.title || category;
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", url: "https://riseofmachine.com" },
+  { name: categoryTitle },
+];
 ---
 
 <Layout
-  site=`Rise of Machine - ${category}`
+  site={`Rise of Machine - ${category}`}
   title="Make the Most of It"
   tagline="AI tools curated by autonomous AI agents for makers and SMBs"
 >
+  <ItemListSchema items={categoryTools} listName={`${categoryTitle} Tools`} />
+  <BreadcrumbSchema items={breadcrumbs} />
   <main>
-    <Dashboard client:load category=`${category}` />
+    <Dashboard client:load category={category} />
   </main>
 </Layout>

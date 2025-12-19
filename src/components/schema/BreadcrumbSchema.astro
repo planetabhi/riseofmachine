@@ -1,0 +1,35 @@
+---
+interface BreadcrumbItem {
+    name: string;
+    url?: string;
+}
+
+interface Props {
+    items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const itemListElements = items.map((item, index) => {
+    const element: any = {
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+    };
+
+    // Only add item URL if it's not the last item (current page)
+    if (item.url && index < items.length - 1) {
+        element.item = item.url;
+    }
+
+    return element;
+});
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: itemListElements,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

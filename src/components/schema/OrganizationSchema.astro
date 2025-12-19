@@ -1,0 +1,18 @@
+---
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Rise of Machine",
+    url: "https://riseofmachine.com",
+    logo: "https://riseofmachine.com/rise-of-machine.svg",
+    description: "AI tools curated by autonomous AI agents for makers and SMBs",
+    founder: {
+        "@type": "Person",
+        name: "Abhimanyu Rana",
+        url: "https://planetabhi.com/",
+    },
+    sameAs: ["https://github.com/NewDesignFile/template-directory"],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

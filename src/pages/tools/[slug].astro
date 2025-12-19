@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import data from "../../data/tools.json";
 import metadata from "../../data/metadata.json";
 import "@new-ui/foundations";
+import SoftwareApplicationSchema from "../../components/schema/SoftwareApplicationSchema.astro";
+import BreadcrumbSchema from "../../components/schema/BreadcrumbSchema.astro";
 
 export function getStaticPaths() {
   const paths: any[] = [];
@@ -74,6 +76,17 @@ const encodedCanonicalUrl = encodeURIComponent(canonicalUrl);
 const xShareUrl = `https://x.com/intent/post?text=${encodedShareText}&url=${encodedCanonicalUrl}&via=planetabhi`;
 const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedCanonicalUrl}`;
 const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}&title=${encodedShareText}`;
+
+// Get category title for breadcrumb
+const categoryData = data.tools.find((cat: any) => cat.category === category);
+const categoryTitle = categoryData?.title || category;
+
+// Breadcrumb data
+const breadcrumbs = [
+  { name: "Home", url: "https://riseofmachine.com" },
+  { name: categoryTitle, url: `https://riseofmachine.com/${category}` },
+  { name: tool.title },
+];
 ---
 
 <Layout
@@ -95,6 +108,15 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
   twitterImage={seoOgImage}
   pageFavicon={faviconUrl}
 >
+  <SoftwareApplicationSchema
+    name={tool.title}
+    description={tool.body}
+    url={tool.url}
+    tag={tool.tag}
+    dateAdded={tool["date-added"]}
+    category={category}
+  />
+  <BreadcrumbSchema items={breadcrumbs} />
   <main>
     <div class="tool-detail-modal-backdrop" id="modalBackdrop">
       <div
@@ -143,6 +165,11 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
             <article>
               <p class="snapshot-label">About</p>
               <p class="tool-description">{tool.body}</p>
+              {
+                meta.description && meta.description !== tool.body && (
+                  <p class="tool-description-full">{meta.description}</p>
+                )
+              }
             </article>
 
             <div class="snapshot-grid">
@@ -192,7 +219,7 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
           </section>
 
           <div class="tool-detail-share">
-            <h3 class="share-title">Share this tool</h3>
+            <h3 class="share-title">Share this AI tool</h3>
             <div class="share-buttons">
               <a
                 href={xShareUrl}
@@ -273,7 +300,7 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
 
           <div class="tool-detail-nav">
             <a href={category === "all" ? "/" : `/${category}`} class="nav-link"
-              >← Go back to {category === "all" ? "all" : category}</a
+              >← Go back</a
             >
           </div>
         </div>
@@ -459,6 +486,13 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
       margin: 0;
       color: var(--content-primary);
       font-size: var(--desktop-body);
+      line-height: var(--lh-desktop-body);
+    }
+
+    .tool-description-full {
+      margin: var(--spacing-04) 0 0 0;
+      color: var(--content-secondary);
+      font-size: var(--desktop-body-sm);
       line-height: var(--lh-desktop-body);
     }
 

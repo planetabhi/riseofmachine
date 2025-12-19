@@ -21,9 +21,10 @@
     "@astrojs/netlify": "^6.6.3",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.6.0",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.16.5",
+    "astro": "^5.16.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },

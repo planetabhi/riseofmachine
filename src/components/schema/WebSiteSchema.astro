@@ -1,0 +1,25 @@
+---
+interface Props {
+    url?: string;
+}
+
+const { url = "https://riseofmachine.com" } = Astro.props;
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Rise of Machine",
+    url: url,
+    description: "AI tools curated by autonomous AI agents for makers and SMBs",
+    potentialAction: {
+        "@type": "SearchAction",
+        target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${url}/?search={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+    },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

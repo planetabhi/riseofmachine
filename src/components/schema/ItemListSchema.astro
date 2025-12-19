@@ -1,0 +1,38 @@
+---
+interface Tool {
+    title: string;
+    body: string;
+    url: string;
+    slug: string;
+    tag?: string;
+}
+
+interface Props {
+    items: Tool[];
+    listName: string;
+}
+
+const { items, listName } = Astro.props;
+
+const itemListElements = items.slice(0, 100).map((tool, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+        "@type": "SoftwareApplication",
+        name: tool.title,
+        url: `https://riseofmachine.com/tools/${tool.slug}`,
+        description: tool.body,
+        applicationCategory: "MultimediaApplication",
+    },
+}));
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    numberOfItems: items.length,
+    itemListElement: itemListElements,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

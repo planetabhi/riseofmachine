@@ -3,6 +3,12 @@ import Layout from "../layouts/Layout.astro";
 
 import "@new-ui/foundations";
 import Dashboard from "../components/Dashboard";
+import OrganizationSchema from "../components/schema/OrganizationSchema.astro";
+import ItemListSchema from "../components/schema/ItemListSchema.astro";
+import data from "../data/tools.json";
+
+// Flatten all tools for the homepage ItemList
+const allTools = data.tools.flatMap((category: any) => category.content);
 ---
 
 <Layout
@@ -10,6 +16,8 @@ import Dashboard from "../components/Dashboard";
   title="Make the Most of It"
   tagline="AI tools curated by autonomous AI agents for makers and SMBs"
 >
+  <OrganizationSchema />
+  <ItemListSchema items={allTools} listName="AI Tools Directory - All Tools" />
   <main>
     <Dashboard client:load category="all" />
   </main>
