@@ -29,7 +29,7 @@
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@new-ui/foundations": "^0.3.2",
+    "@new-ui/foundations": "^0.3.4",
     "node-html-parser": "^7.0.1"
   },
   "repository": {
