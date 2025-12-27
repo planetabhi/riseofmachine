@@ -58,9 +58,8 @@ export default function CategoryNavItem(props) {
     <button
       ref={buttonRef}
       onClick={handleNavigation}
-      className={`nav__item nu-u-text--secondary-alt nu-c-fs-normal nav__item--filter ${
-        isActive ? "is-active" : ""
-      }`}
+      className={`nav__item nu-u-text--secondary-alt nu-c-fs-small nav__item--filter ${isActive ? "is-active" : ""
+        }`}
       aria-label={`Navigate to ${title} category with ${getCategoryCount()} items`}
       dangerouslySetInnerHTML={{
         __html: `${title} <span class="category-count">${getCategoryCount()}</span>`,

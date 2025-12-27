@@ -3,7 +3,7 @@
   	top: 0;
   	width: 100%;
   	z-index: 999999;
-  	background-color: var(--background);
+  	background-color: var(--background-secondary);
   	-webkit-backdrop-filter: blur(.5rem);
   	backdrop-filter: blur(.5rem);
   }
@@ -40,13 +40,13 @@
 
   .nav-fade-left {
   	left: -16px;
-  	background: linear-gradient(to right, var(--background) 30%, rgba(0, 0, 0, 0));
+  	background: linear-gradient(to right, var(--background-secondary) 30%, rgba(0, 0, 0, 0));
   	opacity: 0;
   }
 
   .nav-fade-right {
   	right: -16px;
-  	background: linear-gradient(to left, var(--background) 30%, rgba(0, 0, 0, 0));
+  	background: linear-gradient(to left, var(--background-secondary) 30%, rgba(0, 0, 0, 0));
   }
 
   .nav-arrow-icon {

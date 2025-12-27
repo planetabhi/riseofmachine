@@ -1,10 +1,10 @@
 .link-card {
     list-style: none;
     display: flex;
-    background-color: var(--background-secondary);
+    background-color: var(--background);
     background-position: 100%;
     border-radius: var(--spacing-00);
-    height: 8.5rem;
+    height: 8rem;
     position: relative;
     --shadow-color: rgb(0 0 0 / 0.04);
     box-shadow:
@@ -13,7 +13,7 @@
         0px 3px 3px -1.5px var(--shadow-color),
         0px 12px 12px -6px var(--shadow-color);
     content-visibility: auto;
-    contain-intrinsic-size: 8.5rem;
+    contain-intrinsic-size: 8rem;
     transition: box-shadow 0.2s ease-out;
 }
 
@@ -49,24 +49,28 @@ p.distribution {
 
 span.tag {
     background-color: var(--background-selected);
-    padding: calc(0.25rem - 1px) calc(0.5rem - 1px);
+    padding: calc(0.12rem - 1px) calc(0.24rem - 1px);
     border-radius: var(--spacing-00);
     display: inline-block;
     color: var(--content-secondary);
     margin-top: var(--spacing-08);
+    font-family: var(--monospace);
     font-size: var(--desktop-caption);
     line-height: var(--lh-desktop-caption);
-    font-family: var(--body-copy);
+    align-content: center;
 }
 
 span.tag-new {
     background-color: var(--background-selected);
-    padding: calc(0.25rem - 1px) calc(0.5rem - 1px);
+    padding: calc(0.12rem - 1px) calc(0.24rem - 1px);
     border-radius: var(--spacing-00);
     display: inline-block;
-    color: var(--content-warning);
     margin-top: var(--spacing-08);
     font-size: var(--desktop-caption);
     line-height: var(--lh-desktop-caption);
-    font-family: var(--body-copy);
+    font-family: var(--monospace);
+}
+
+strong {
+    font-weight: 500;
 }

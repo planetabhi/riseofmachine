@@ -1,6 +1,5 @@
 .sort-buttons-group {
   display: flex;
-  gap: var(--spacing-02);
   align-items: center;
 }
 
@@ -14,7 +13,7 @@
   border: none;
   padding: var(--spacing-00);
   color: var(--content-secondary);
-  cursor: pointer;
+  cursor: var(--c-pointer);
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   display: flex;
@@ -26,7 +25,7 @@
 }
 
 .sort-icon-btn:hover {
-  color: var(--content-secondary);
+  color: var(--content-primary);
 }
 
 .sort-icon-btn:focus {

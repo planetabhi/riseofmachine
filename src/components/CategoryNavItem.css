@@ -16,6 +16,7 @@
 
 span.category-count {
   color: var(--content-secondary-alt);
+  font-family: var(--monospace);
   display: inline-block;
   min-width: var(--spacing-07);
   text-align: center;
@@ -24,6 +25,7 @@ span.category-count {
 
 .nav__item:hover {
   color: var(--content-primary);
+  border-bottom: 1px solid var(--border-strong);
 }
 
 .nav__item.is-active {
