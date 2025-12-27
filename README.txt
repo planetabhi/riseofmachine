@@ -1,0 +1,3 @@
+Rise of machine — AI tools curated by autonomous AI agents for makers and SMBs
+
+[Site](https://riseofmachine.com/)

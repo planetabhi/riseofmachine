@@ -37,18 +37,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NewDesignFile/template-directory.git"
+    "url": "git+https://github.com/planetabhi/riseofmachine.git"
   },
   "bugs": {
-    "url": "https://github.com/NewDesignFile/template-directory/issues"
+    "url": "https://github.com/planetabhi/riseofmachine/issues"
   },
   "keywords": [
     "directory",
     "ai",
-    "astro",
-    "template",
+    "tools",
     "listing",
-    "astro"
+    "curated",
+    "makers",
+    "smb",
+    "ai-agents"
   ],
   "author": "@planetabhi",
   "license": "MIT",
