@@ -6,8 +6,20 @@
   "private": false,
   "main": "src/data/tools.json",
   "files": [
-    "src/data/tools.json"
+    "src/data/tools.json",
+    "src/data/tools/*.json",
+    "src/data/metadata.json",
+    "src/data/slug-map.json",
+    "src/data/tool-metadata/*.json"
   ],
+  "exports": {
+    ".": "./src/data/tools.json",
+    "./tools": "./src/data/tools.json",
+    "./metadata": "./src/data/metadata.json",
+    "./slug-map": "./src/data/slug-map.json",
+    "./categories/*": "./src/data/tools/*.json",
+    "./tool/*": "./src/data/tool-metadata/*.json"
+  },
   "scripts": {
     "add-slugs": "bun run scripts/add-slugs.ts",
     "clean": "rm -rf dist .astro src/data/slug-map.json src/data/tool-metadata",
