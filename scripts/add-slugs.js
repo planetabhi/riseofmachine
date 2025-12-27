@@ -31,10 +31,10 @@ let duplicatesHandled = 0;
 data.tools.forEach(category => {
   category.content.forEach(tool => {
     totalTools++;
-    
+
     let baseSlug = titleToSlug(tool.title);
     let slug = baseSlug;
-    
+
     // Handle duplicates by adding suffix
     if (slugMap.has(slug)) {
       let counter = 2;
@@ -44,12 +44,12 @@ data.tools.forEach(category => {
       slug = `${baseSlug}-${counter}`;
       duplicatesHandled++;
     }
-    
+
     slugMap.set(slug, {
       title: tool.title,
       category: category.category
     });
-    
+
     tool.slug = slug;
   });
 });
@@ -81,4 +81,43 @@ if (duplicates.length > 0) {
       console.log(`     • ${slug} (${title})`);
     });
   });
+}
+
+// Also process split category files if they exist
+const toolsDir = path.join(__dirname, '../src/data/tools');
+if (fs.existsSync(toolsDir)) {
+  console.log(`\n📦 Processing split category files...`);
+
+  const files = fs.readdirSync(toolsDir).filter(f => f.endsWith('.json'));
+  let splitFilesProcessed = 0;
+
+  files.forEach(file => {
+    const filepath = path.join(toolsDir, file);
+    const categoryData = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+    let modified = false;
+
+    categoryData.forEach(tool => {
+      if (!tool.slug) {
+        const baseSlug = titleToSlug(tool.title);
+        let slug = baseSlug;
+        let counter = 2;
+
+        while (slugMap.has(slug)) {
+          slug = `${baseSlug}-${counter}`;
+          counter++;
+        }
+
+        tool.slug = slug;
+        slugMap.set(slug, { title: tool.title, category: file.replace('.json', '') });
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filepath, JSON.stringify(categoryData, null, 2));
+      splitFilesProcessed++;
+    }
+  });
+
+  console.log(`✅ Processed ${files.length} category files (${splitFilesProcessed} modified)`);
 }

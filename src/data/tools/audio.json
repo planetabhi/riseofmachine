@@ -1,0 +1,364 @@
+[
+  {
+    "title": "ReelScribe",
+    "body": "Accurate AI audio and video transcription tool.",
+    "tag": "Freemium",
+    "url": "https://reelscribe.ai?ref=riseofmachine.com",
+    "date-added": "2025-12-21",
+    "slug": "reelscribe"
+  },
+  {
+    "title": "Adtwin",
+    "body": "AI platform for audio ad creation and tracking.",
+    "url": "https://adtwin.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "adtwin"
+  },
+  {
+    "title": "Aimakesong",
+    "body": "AI song generator.",
+    "tag": "Freemium",
+    "url": "https://www.aimakesong.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-20",
+    "slug": "aimakesong"
+  },
+  {
+    "title": "Altered",
+    "body": "Change your voice to AI voices.",
+    "tag": "Freemium",
+    "url": "https://www.altered.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "altered"
+  },
+  {
+    "title": "Audio Muse",
+    "body": "Online audio tools with AI music generation.",
+    "tag": "Freemium",
+    "url": "https://audiomuse.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "audio-muse"
+  },
+  {
+    "title": "Azure Text to",
+    "body": "The best and most realistic voice tools...",
+    "tag": "Freemium",
+    "url": "https://speech.microsoft.com/portal/voicegallery?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "azure-text-to"
+  },
+  {
+    "title": "BlogAudio",
+    "body": "Convert text to audio speech.",
+    "tag": "From $16/mo",
+    "url": "https://blogaudio.co/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "blogaudio"
+  },
+  {
+    "title": "Calldock",
+    "body": "Voice agents.",
+    "tag": "Freemium",
+    "url": "https://calldock.co/?ref=riseofmachine.com",
+    "category": "audio",
+    "date-added": "2025-06-06",
+    "slug": "calldock"
+  },
+  {
+    "title": "Cleanvoice",
+    "body": "Removes filler, stuttering & mouth sounds.",
+    "tag": "Pay-as-you-go",
+    "url": "https://cleanvoice.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "cleanvoice"
+  },
+  {
+    "title": "Descript",
+    "body": "Intuitive content creation, editing & AI tools.",
+    "tag": "Freemium",
+    "url": "https://www.descript.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "descript"
+  },
+  {
+    "title": "Dubbing 3.0",
+    "body": "AI dubbing API for 30+ languages with lipsync.",
+    "tag": "Freemium",
+    "url": "https://sievedata.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "dubbing-30"
+  },
+  {
+    "title": "Dubbing AI",
+    "body": "Realtime AI voice changer.",
+    "tag": "Free",
+    "url": "https://dubbingai.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-22",
+    "slug": "dubbing-ai"
+  },
+  {
+    "title": "Eleven AI",
+    "body": "Voice-first AI assistant that takes action via MCP.",
+    "tag": "Free",
+    "url": "https://try.elevenlabs.io/v97l1k3mkplm?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "eleven-ai"
+  },
+  {
+    "title": "ElevenLabs",
+    "body": "AI lifelike voice synthesis & customization.",
+    "tag": "Freemium",
+    "url": "https://elevenlabs.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "elevenlabs"
+  },
+  {
+    "title": "F5 TTS",
+    "body": "Text to speech.",
+    "tag": "Free",
+    "url": "https://www.f5tts.net/?ref=riseofmachine.com",
+    "date-added": "2024-12-13",
+    "slug": "f5-tts"
+  },
+  {
+    "title": "Harmonai",
+    "body": "Generative audio tools.",
+    "tag": "Open-source",
+    "url": "https://www.harmonai.org/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "harmonai"
+  },
+  {
+    "title": "Kits AI",
+    "body": "AI voice generation toolkit.",
+    "tag": "Freemium",
+    "url": "https://app.kits.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "kits-ai"
+  },
+  {
+    "title": "Kyutai TTS",
+    "body": "Open-source text-to-speech for real-time AI.",
+    "tag": "Free",
+    "url": "https://kyutai.org/next/tts?ref=riseofmachine.com",
+    "date-added": "2025-07-07",
+    "slug": "kyutai-tts"
+  },
+  {
+    "title": "Lalal",
+    "body": "Split vocal & instrumental tracks.",
+    "tag": "$18 one-time",
+    "url": "https://www.lalal.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "lalal"
+  },
+  {
+    "title": "Lami",
+    "body": "Free AI Music Generator from Text.",
+    "tag": "Freemium",
+    "url": "https://lami.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "lami"
+  },
+  {
+    "title": "LyricsToSong",
+    "body": "Create professional songs from text or lyrics.",
+    "tag": "Freemium",
+    "url": "https://lyricstosongai.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "lyricstosong"
+  },
+  {
+    "title": "Mix Audio",
+    "body": "Multimodal AI music generator.",
+    "tag": "Freemium",
+    "url": "https://mix.audio/?ref=riseofmachine.com",
+    "date-added": "2024-03-23",
+    "slug": "mix-audio"
+  },
+  {
+    "title": "Monologue",
+    "body": "Effortless voice dictation so you can work faster.",
+    "url": "https://www.monologue.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-21",
+    "slug": "monologue"
+  },
+  {
+    "title": "NiceVoice",
+    "body": "Free voice cloning tool.",
+    "tag": "Free",
+    "url": "https://nicevoice.org?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "nicevoice"
+  },
+  {
+    "title": "NoteVocal",
+    "body": "Thoughts to text.",
+    "tag": "From $10/mo",
+    "url": "https://www.notevocal.com/?ref=riseofmachine.com",
+    "date-added": "2024-06-28",
+    "slug": "notevocal"
+  },
+  {
+    "title": "OpenWispr",
+    "body": "Open-source, private AI voice dictation tool.",
+    "url": "https://openwispr.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "openwispr"
+  },
+  {
+    "title": "Phone App",
+    "body": "AI-powered phone call app with live translation.",
+    "tag": "Not available",
+    "url": "https://aiphone.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "phone-app"
+  },
+  {
+    "title": "Play.ht",
+    "body": "AI voice generator and realistic text to speech.",
+    "url": "https://play.ht/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-08-24",
+    "slug": "playht"
+  },
+  {
+    "title": "Podcastle",
+    "body": "Podcasting software.",
+    "tag": "Freemium",
+    "url": "https://podcastle.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "podcastle"
+  },
+  {
+    "title": "Respeecher",
+    "body": "Authentic voice transformation with ethical AI.",
+    "tag": "Freemium",
+    "url": "https://respeecher.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "respeecher"
+  },
+  {
+    "title": "Seamless",
+    "body": "Seamless is a family of AI models that enable...",
+    "tag": "Free",
+    "url": "https://github.com/facebookresearch/seamless_communication?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "seamless"
+  },
+  {
+    "title": "So-vits-svc",
+    "body": "SoftVC VITS Singing Voice Conversion.",
+    "tag": "Free",
+    "url": "https://github.com/svc-develop-team/so-vits-svc?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "so-vits-svc"
+  },
+  {
+    "title": "Song Maker",
+    "body": "Create songs effortlessly with our AI Song Maker.",
+    "tag": "Freemium",
+    "url": "https://www.aisongmaker.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "song-maker"
+  },
+  {
+    "title": "SpeechLab",
+    "body": "AI dubbing.",
+    "tag": "Freemium",
+    "url": "https://www.speechlab.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "speechlab"
+  },
+  {
+    "title": "Sync",
+    "body": "Dub any video to any audio in any language.",
+    "tag": "Freemium",
+    "url": "https://synclabs.so/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "sync"
+  },
+  {
+    "title": "Trint",
+    "body": "Audio/video to editable text; 40+ languages.",
+    "tag": "Freemium",
+    "url": "https://trint.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "trint"
+  },
+  {
+    "title": "Unreal Speech",
+    "body": "Lifelike, customizable text-to-speech voiceovers.",
+    "tag": "Freemium",
+    "url": "https://unrealspeech.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "unreal-speech"
+  },
+  {
+    "title": "Voice Cloning Free",
+    "body": "Free AI voice cloning for realistic podcasts.",
+    "tag": "Freemium",
+    "url": "https://aiclonevoicefree.com?ref=riseofmachine.com",
+    "date-added": "2025-06-29",
+    "slug": "voice-cloning-free"
+  },
+  {
+    "title": "Voicebun",
+    "body": "Build smart voice agents in minutes, no code.",
+    "tag": "Freemium",
+    "url": "https://www.voicebun.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "voicebun"
+  },
+  {
+    "title": "Voicemod",
+    "body": "Real-time AI voice changer.",
+    "tag": "Freemium",
+    "url": "https://www.voicemod.net/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "voicemod"
+  },
+  {
+    "title": "Voicemy.ai",
+    "body": "Create, share, and inspire with your AI voice.",
+    "tag": "Freemium",
+    "url": "https://voicemy.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-19",
+    "slug": "voicemyai"
+  },
+  {
+    "title": "Voicetype",
+    "body": "Speech to text.",
+    "tag": "Freemium",
+    "url": "https://voicetype.ai/?ref=riseofmachine.com",
+    "category": "audio",
+    "date-added": "2025-06-06",
+    "slug": "voicetype"
+  },
+  {
+    "title": "WellSaid Labs",
+    "body": "Lifelike, customizable text-to-spoken audio.",
+    "tag": "Freemium",
+    "url": "https://wellsaidlabs.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "wellsaid-labs"
+  },
+  {
+    "title": "Whisper",
+    "body": "A general-purpose speech recognition model.",
+    "url": "https://openai.com/research/whisper?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-08-24",
+    "slug": "whisper"
+  },
+  {
+    "title": "Wondercraft",
+    "body": "End-to-end podcast builder.",
+    "tag": "Freemium",
+    "url": "https://www.wondercraft.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "wondercraft"
+  }
+]

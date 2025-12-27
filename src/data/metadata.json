@@ -4725,5 +4725,15 @@
     "slug": "track-3iatlas",
     "title": "Track Comet 3I/ATLAS Live - Rare Interstellar Visitor",
     "description": "Follow 3I/ATLAS, the third interstellar comet ever discovered! Get real-time tracking, observing guides, and witness this once-in-a-lifetime visitor from beyond our solar system."
+  },
+  "manna": {
+    "slug": "manna",
+    "title": "Manna – Gamified Bible Study App for Daily Devotionals & Quizzes",
+    "description": "Gamify Bible study with Manna and build a daily faith habit through short lessons, Bible quizzes, devotionals, verse widget and interactive Scripture study."
+  },
+  "qwen": {
+    "slug": "qwen",
+    "title": "Qwen Chat",
+    "description": "Qwen Chat offers comprehensive functionality spanning chatbot, image and video understanding, image generation, document processing, web search integration, tool utilization, and artifacts."
   }
 }

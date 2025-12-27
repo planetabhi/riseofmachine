@@ -1,0 +1,435 @@
+[
+  {
+    "title": "Banana Nano",
+    "body": "Googles revolutionary AI image generation.",
+    "tag": "Freemium",
+    "url": "https://banana-nano.org/?ref=riseofmachine.com",
+    "date-added": "2025-10-18",
+    "slug": "banana-nano"
+  },
+  {
+    "title": "Cheers GEO",
+    "body": "Create 3D maps for your next project.",
+    "url": "https://cheersgeo.com/?ref=riseofmachine.com",
+    "tag": "Not available",
+    "date-added": "2025-10-21",
+    "slug": "cheers-geo"
+  },
+  {
+    "title": "CSM",
+    "body": "Data into 3D world models.",
+    "tag": "Free",
+    "url": "https://csm.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "csm"
+  },
+  {
+    "title": "DesignsAI",
+    "body": "Create logos, videos, banners & mockups.",
+    "tag": "From $29/mo",
+    "url": "https://designs.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "designsai"
+  },
+  {
+    "title": "Designstripe",
+    "body": "AI-powered creative studio for design needs.",
+    "tag": "Freemium",
+    "url": "https://designstripe.com/?ref=riseofmachine.com",
+    "date-added": "2025-10-11",
+    "slug": "designstripe"
+  },
+  {
+    "title": "Dora",
+    "body": "3D website.",
+    "tag": "Freemium",
+    "url": "https://www.dora.run/?ref=riseofmachine.com",
+    "date-added": "2023-12-25",
+    "slug": "dora"
+  },
+  {
+    "title": "Durable",
+    "body": "AI website builder.",
+    "tag": "From $0/mo",
+    "url": "https://durable.co/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "durable"
+  },
+  {
+    "title": "Flair",
+    "body": "Design tool for branded content.",
+    "tag": "Freemium",
+    "url": "https://flair.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "flair"
+  },
+  {
+    "title": "FLORA AI",
+    "body": "Creative AI tools on one canvas.",
+    "tag": "Freemium",
+    "url": "https://www.florafauna.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "flora-ai"
+  },
+  {
+    "title": "Flux2ai",
+    "body": ".2 AI Image Generator - Text to Image, Multi Image Workflows Flux ai image gen.",
+    "tag": "Freemium",
+    "url": "https://flux2ai.org/?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "flux2ai"
+  },
+  {
+    "title": "Gamma",
+    "body": "Generate docs, decks & webpages.",
+    "tag": "Freemium",
+    "url": "https://gamma.app/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "gamma"
+  },
+  {
+    "title": "Graffiti",
+    "body": "Neon-styled creative OS for visuals.",
+    "tag": "Freemium",
+    "url": "https://aigraffiti.net?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "graffiti"
+  },
+  {
+    "title": "Illostration AI",
+    "body": "Create illustrations.",
+    "tag": "From $4.90/mo",
+    "url": "https://www.illostration.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "illostration-ai"
+  },
+  {
+    "title": "Illustration.App",
+    "body": "SVG illustrations.",
+    "tag": "Freemium",
+    "url": "https://www.illustraai.com/?ref=riseofmachine.com",
+    "category": "design",
+    "date-added": "2025-06-06",
+    "slug": "illustrationapp"
+  },
+  {
+    "title": "Illustroke",
+    "body": "Create illustrations.",
+    "tag": "$6 for 50 tokens",
+    "url": "https://illustroke.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "illustroke"
+  },
+  {
+    "title": "Kaedim",
+    "body": "2D images to high-quality 3D models quickly.",
+    "tag": "Paid",
+    "url": "https://www.kaedim3d.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "kaedim"
+  },
+  {
+    "title": "Kinetix",
+    "body": "Revolutionize 3D animation with AI for all.",
+    "tag": "Paid",
+    "url": "https://www.kinetix.tech/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "kinetix"
+  },
+  {
+    "title": "Kittl",
+    "body": "Design tool.",
+    "tag": "Freemium",
+    "url": "https://www.kittl.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "kittl"
+  },
+  {
+    "title": "Logo Galleria",
+    "body": "AI logo maker.",
+    "tag": "Freemium",
+    "url": "https://logogalleria.com/?ref=riseofmachine.com",
+    "date-added": "2024-10-23",
+    "slug": "logo-galleria"
+  },
+  {
+    "title": "LogoLlama",
+    "body": "Generate a logo for your brand.",
+    "tag": "Freemium",
+    "url": "https://logollama.co/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "logollama"
+  },
+  {
+    "title": "Luma AI",
+    "body": "Text to detailed 3D models, dynamic scenes.",
+    "tag": "Not available",
+    "url": "https://lumalabs.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "luma-ai"
+  },
+  {
+    "title": "Magician",
+    "body": "Generate icons, copy & images in Figma.",
+    "tag": "Free",
+    "url": "https://magician.design/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "magician"
+  },
+  {
+    "title": "MagicPath",
+    "body": "Generate front-end UIs from prompts.",
+    "tag": "Freemium",
+    "url": "https://www.magicpath.ai/?ref=riseofmachine.com",
+    "date-added": "2025-10-30",
+    "slug": "magicpath"
+  },
+  {
+    "title": "Magicpatterns",
+    "body": "Optional) - Design.",
+    "tag": "Freemium",
+    "url": "https://www.magicpatterns.com?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "magicpatterns"
+  },
+  {
+    "title": "Mew.Design",
+    "body": "Generate & refine graphics, social posts, and flyers",
+    "tag": "Freemium",
+    "url": "https://mew.design?ref=riseofmachine.com",
+    "date-added": "2025-07-14",
+    "slug": "mewdesign"
+  },
+  {
+    "title": "Mixboard",
+    "body": "A new way to visualize your ideas.",
+    "url": "https://www.mixboard.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-24",
+    "slug": "mixboard"
+  },
+  {
+    "title": "Mixo",
+    "body": "Launch a startup in seconds with AI.",
+    "url": "https://www.mixo.io/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-21",
+    "slug": "mixo"
+  },
+  {
+    "title": "Move",
+    "body": "Capture and create 3D animations.",
+    "tag": "From $15",
+    "url": "https://www.move.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "move"
+  },
+  {
+    "title": "Nano Banana",
+    "body": "Googles revolutionary AI image generation.",
+    "tag": "Freemium",
+    "url": "https://nanobanana.pro/?ref=riseofmachine.com",
+    "date-added": "2025-10-10",
+    "slug": "nano-banana"
+  },
+  {
+    "title": "Napkin AI",
+    "body": "Turns text into visuals for quick sharing.",
+    "tag": "Freemium",
+    "url": "https://www.napkin.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "napkin-ai"
+  },
+  {
+    "title": "✨ New UI",
+    "body": "Modern, semantic UI framework for building beautiful sites and apps.",
+    "tag": "Open-source",
+    "url": "https://new-ui.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-19",
+    "slug": "new-ui"
+  },
+  {
+    "title": "New UI Templates",
+    "body": "Simple templates for AI founders.",
+    "tag": "Freemium",
+    "url": "https://new-ui.com/templates?ref=riseofmachine.com",
+    "date-added": "2025-08-10",
+    "slug": "new-ui-templates"
+  },
+  {
+    "title": "Paper Design",
+    "body": "A canvas for designers to create beautiful art.",
+    "tag": "Freemium",
+    "url": "https://paper.design?ref=riseofmachine.com",
+    "date-added": "2025-10-19",
+    "slug": "paper-design"
+  },
+  {
+    "title": "Patterned AI",
+    "body": "Generate patterns.",
+    "tag": "From $10/mo",
+    "url": "https://www.patterned.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "patterned-ai"
+  },
+  {
+    "title": "Pencil",
+    "body": "A new way to design right where you code.",
+    "tag": "Not available",
+    "url": "https://pencil.dev?ref=riseofmachine.com",
+    "date-added": "2025-10-19",
+    "slug": "pencil"
+  },
+  {
+    "title": "Pixelesq",
+    "body": "AI-native website builder.",
+    "tag": "Freemium",
+    "url": "https://www.pixelesq.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-16",
+    "slug": "pixelesq"
+  },
+  {
+    "title": "Recraft V3 SVG",
+    "body": "Text to SVG images.",
+    "tag": "$0.08 per image",
+    "url": "https://replicate.com/recraft-ai/recraft-v3-svg?ref=riseofmachine.com",
+    "date-added": "2024-11-07",
+    "slug": "recraft-v3-svg"
+  },
+  {
+    "title": "Rustic AI",
+    "body": "AI-powered design editor for visuals.",
+    "url": "https://rusticai.art/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "rustic-ai"
+  },
+  {
+    "title": "Sargam Icons",
+    "body": "A collection of 1200+ open-source icons.",
+    "tag": "Open-source",
+    "url": "https://sargamicons.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-19",
+    "slug": "sargam-icons"
+  },
+  {
+    "title": "Shape of AI",
+    "body": "UX patterns for AI design.",
+    "tag": "Freemium",
+    "url": "https://www.shapeof.ai/?ref=riseofmachine.com",
+    "date-added": "2024-08-26",
+    "slug": "shape-of-ai"
+  },
+  {
+    "title": "Slea",
+    "body": "Free AI logo generator for custom logos.",
+    "tag": "Free",
+    "url": "https://slea.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "slea"
+  },
+  {
+    "title": "Sports Logo Generator",
+    "body": "Create stunning, professional sports logos.",
+    "tag": "Freemium",
+    "url": "https://www.imagine.art/features/ai-sports-logo-generator/?ref=riseofmachine.com",
+    "date-added": "2025-10-11",
+    "slug": "sports-logo-generator"
+  },
+  {
+    "title": "Subframe",
+    "body": "The UI design tool for the AI era.",
+    "tag": "Freemium",
+    "url": "https://www.subframe.com?ref=riseofmachine.com",
+    "date-added": "2025-10-19",
+    "slug": "subframe"
+  },
+  {
+    "title": "Tempo",
+    "body": "Design React apps 10x faster with AI.",
+    "tag": "Freemium",
+    "url": "https://www.tempo.new/?ref=riseofmachine.com",
+    "date-added": "2025-10-24",
+    "slug": "tempo"
+  },
+  {
+    "title": "Textomap",
+    "body": "Generate interactive maps from text.",
+    "tag": "Freemium",
+    "url": "https://www.textomap.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "textomap"
+  },
+  {
+    "title": "Tripo",
+    "body": "Generate 3D models with text or images.",
+    "tag": "Freemium",
+    "url": "https://www.tripo3d.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "tripo"
+  },
+  {
+    "title": "Uizard",
+    "body": "Design & ideation tool",
+    "tag": "Freemium",
+    "url": "https://uizard.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "uizard"
+  },
+  {
+    "title": "V0",
+    "body": "Generate UI with text prompts.",
+    "tag": "Beta",
+    "url": "https://v0.dev/?ref=riseofmachine.com",
+    "date-added": "2023-12-23",
+    "slug": "v0"
+  },
+  {
+    "title": "Variant",
+    "body": "AI-powered design tool.",
+    "tag": "Not available",
+    "url": "https://variant.ai?ref=riseofmachine.com",
+    "date-added": "2025-10-19",
+    "slug": "variant"
+  },
+  {
+    "title": "Wix Logo Maker",
+    "body": "Effortlessly design custom logos with AI.",
+    "tag": "Freemium",
+    "url": "https://www.wix.com/logo/maker?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "wix-logo-maker"
+  },
+  {
+    "title": "Wonder",
+    "body": "Design like magic.",
+    "tag": "Not available",
+    "url": "https://wonder.so?ref=riseofmachine.com",
+    "date-added": "2025-10-19",
+    "slug": "wonder"
+  },
+  {
+    "title": "X-Design",
+    "body": "Smart AI suite for lifestyle product images.",
+    "tag": "Freemium",
+    "url": "https://x-design.com/?ref=riseofmachine.com",
+    "date-added": "2025-08-01",
+    "slug": "x-design"
+  },
+  {
+    "title": "Yard Landscape Design",
+    "body": "AI yard landscape design generator.",
+    "tag": "Free",
+    "url": "https://www.ai-yard-design.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-21",
+    "slug": "yard-landscape-design"
+  },
+  {
+    "title": "Yenex",
+    "body": "Create the perfect renewable energy system for home.",
+    "tag": "$9.99 One-time",
+    "url": "https://yenex.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "yenex"
+  }
+]

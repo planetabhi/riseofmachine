@@ -1,0 +1,684 @@
+[
+  {
+    "title": "Anyimg",
+    "body": "AI image platform converts photos to art styles.",
+    "tag": "Freemium",
+    "url": "https://anyimg.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-29",
+    "slug": "anyimg"
+  },
+  {
+    "title": "ArtPose",
+    "body": "Pose generator for artists.",
+    "tag": "Freemium",
+    "url": "https://posegenerator.net?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "artpose"
+  },
+  {
+    "title": "Astria",
+    "body": "Create custom images.",
+    "tag": "From $0.10/prompt",
+    "url": "https://www.astria.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "astria"
+  },
+  {
+    "title": "Banana AI",
+    "body": "AI image generator with chat-based editing.",
+    "tag": "Freemium",
+    "url": "https://www.bananaai.app/?ref=riseofmachine.com",
+    "date-added": "2025-09-18",
+    "slug": "banana-ai"
+  },
+  {
+    "title": "Banana AI Art",
+    "body": "AI Image generator.",
+    "tag": "Not available",
+    "url": "https://banana-ai.art/?ref=riseofmachine.com",
+    "date-added": "2025-11-03",
+    "slug": "banana-ai-art"
+  },
+  {
+    "title": "Best Coloring Pages",
+    "body": "Photo/idea to printable coloring pages.",
+    "tag": "Freemium",
+    "url": "https://www.bestcoloringpages.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "best-coloring-pages"
+  },
+  {
+    "title": "Blimey",
+    "body": "Build 3D scene, generate images.",
+    "tag": "From $9",
+    "url": "https://blimeycreate.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "blimey"
+  },
+  {
+    "title": "BrickCenter",
+    "body": "Generate custom brick sets.",
+    "tag": "Freemium",
+    "url": "https://www.brickcenter.net/?ref=riseofmachine.com",
+    "date-added": "2024-10-22",
+    "slug": "brickcenter"
+  },
+  {
+    "title": "Bylo AI",
+    "body": "Generate stunning images in multiple AI styles.",
+    "tag": "Freemium",
+    "url": "https://bylo.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "bylo-ai"
+  },
+  {
+    "title": "Chronopets",
+    "body": "Use AI to transform your pet through time.",
+    "tag": "Freemium",
+    "url": "https://www.chronopets.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "chronopets"
+  },
+  {
+    "title": "ColorMon",
+    "body": "AI coloring pages from text/photo, print-ready.",
+    "tag": "Freemium",
+    "url": "https://colormon.art?ref=riseofmachine.com",
+    "date-added": "2025-10-08",
+    "slug": "colormon"
+  },
+  {
+    "title": "ColorPage.ai",
+    "body": "Create coloring pages.",
+    "tag": "Freemium",
+    "url": "https://colorpage.ai/?ref=riseofmachine.com",
+    "date-added": "2024-11-17",
+    "slug": "colorpageai"
+  },
+  {
+    "title": "ComicsAI",
+    "body": "AI Comic Generator. Transform your stories into comics with AI.",
+    "tag": "Free",
+    "url": "https://comicsai.org?ref=riseofmachine.com",
+    "date-added": "2025-12-20",
+    "slug": "comicsai"
+  },
+  {
+    "title": "Comfy",
+    "body": "A powerful node-based generative AI tool.",
+    "tag": "Free",
+    "url": "https://comfy.org?ref=riseofmachine.com",
+    "date-added": "2025-11-06",
+    "slug": "comfy"
+  },
+  {
+    "title": "Controlnet",
+    "body": "ControlNet is a neural network structure to...",
+    "tag": "Free",
+    "url": "https://github.com/lllyasviel/ControlNet?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "controlnet"
+  },
+  {
+    "title": "Craiyon",
+    "body": "Transforms text into vivid, diverse artistic images.",
+    "tag": "Freemium",
+    "url": "https://www.craiyon.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "craiyon"
+  },
+  {
+    "title": "Designer",
+    "body": "Generate designs & images.",
+    "tag": "Free",
+    "url": "https://designer.microsoft.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "designer"
+  },
+  {
+    "title": "Draggan",
+    "body": "Interactive Point-based Manipulation on the...",
+    "tag": "Free",
+    "url": "https://github.com/XingangPan/DragGAN?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "draggan"
+  },
+  {
+    "title": "Draw3D",
+    "body": "Transform sketch to photorealistic image.",
+    "tag": "Freemium",
+    "url": "https://draw3d.online/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "draw3d"
+  },
+  {
+    "title": "Drawww",
+    "body": "Real-Time AI drawing app for iPad.",
+    "tag": "Free",
+    "url": "https://www.drawww.app/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "drawww"
+  },
+  {
+    "title": "Dsnr",
+    "body": "Idea to image.",
+    "tag": "Freemium",
+    "url": "https://dsnr.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "dsnr"
+  },
+  {
+    "title": "Elf On The Shelf Generator",
+    "body": "Create magical elf images and videos.",
+    "tag": "Freemium",
+    "url": "https://elfontheshelfgenerator.com/?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "elf-on-the-shelf-generator"
+  },
+  {
+    "title": "Emergent",
+    "body": "Advanced AI app builder that ships full-stack apps.",
+    "tag": "Freemium",
+    "url": "https://app.emergent.sh?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "emergent"
+  },
+  {
+    "title": "Exactly",
+    "body": "AI artwork creation platform.",
+    "tag": "Freemium",
+    "url": "https://exactly.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-25",
+    "slug": "exactly"
+  },
+  {
+    "title": "Fastimage",
+    "body": "Image generator - F.",
+    "tag": "Freemium",
+    "url": "https://fastimage.ai?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "fastimage"
+  },
+  {
+    "title": "Fiddl.art",
+    "body": "AI art generator for custom models and earning.",
+    "url": "https://fiddl.art/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "fiddlart"
+  },
+  {
+    "title": "fileAI",
+    "body": "Secure, real-time file access for AI agents.",
+    "tag": "Freemium",
+    "url": "https://fileai.app/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "fileai"
+  },
+  {
+    "title": "Flux Context AI",
+    "body": "All-in-one platform for instant image transformation.",
+    "tag": "From $5.99",
+    "url": "https://fluxcontextai.com?ref=riseofmachine.com",
+    "date-added": "2025-07-10",
+    "slug": "flux-context-ai"
+  },
+  {
+    "title": "FLUX Kontext",
+    "body": "AI image editing and generation suite.",
+    "tag": "From $9.99/mo",
+    "url": "https://flux-kontext.io?ref=riseofmachine.com",
+    "date-added": "2025-06-20",
+    "slug": "flux-kontext"
+  },
+  {
+    "title": "Freepik Pikaso",
+    "body": "Generative AI with Freepik.",
+    "tag": "Free",
+    "url": "https://www.freepik.com/pikaso/?ref=riseofmachine.com",
+    "date-added": "2023-12-22",
+    "slug": "freepik-pikaso"
+  },
+  {
+    "title": "FurryAI",
+    "body": "Furry AI art generator.",
+    "tag": "Freemium",
+    "url": "https://www.furryaiart.com/?ref=riseofmachine.com",
+    "date-added": "2024-10-22",
+    "slug": "furryai"
+  },
+  {
+    "title": "Gempix2",
+    "body": "Free AI image generator.",
+    "tag": "Free",
+    "url": "https://gempix2ai.art/?ref=riseofmachine.com",
+    "date-added": "2025-11-10",
+    "slug": "gempix2"
+  },
+  {
+    "title": "GenColor.ai",
+    "body": "AI platform for personalized coloring pages.",
+    "tag": "Freemium",
+    "url": "https://gencolor.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "gencolorai"
+  },
+  {
+    "title": "GenXi",
+    "body": "Create realistic images from text.",
+    "tag": "Freemium",
+    "url": "https://genxi.io/?ref=riseofmachine.com",
+    "date-added": "2024-08-23",
+    "slug": "genxi"
+  },
+  {
+    "title": "Getimg AI",
+    "body": "Create and edit images.",
+    "tag": "From $0/mo",
+    "url": "https://getimg.ai/editor/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "getimg-ai"
+  },
+  {
+    "title": "Ghibli App",
+    "body": "Transform photos into Ghibli artwork.",
+    "tag": "Free",
+    "url": "https://aighibli.app/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "ghibli-app"
+  },
+  {
+    "title": "Ghibli Art AI",
+    "body": "Create Ghibli-style images from photos.",
+    "url": "https://ghibliart.ai/?ref=riseofmachine.com",
+    "tag": "Free",
+    "date-added": "2025-06-01",
+    "slug": "ghibli-art-ai"
+  },
+  {
+    "title": "Grok Ghibli",
+    "body": "Generates Studio Ghibli style images.",
+    "url": "https://grokghibli.pro/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-06-01",
+    "slug": "grok-ghibli"
+  },
+  {
+    "title": "Hotpot",
+    "body": "Create graphics, pictures & writing.",
+    "tag": "Freemium",
+    "url": "https://hotpot.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "hotpot"
+  },
+  {
+    "title": "Ideogram.AI",
+    "body": "Enter text to create pictures. A product develo...",
+    "tag": "Freemium",
+    "url": "https://ideogram.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "ideogramai"
+  },
+  {
+    "title": "Image Generator NSFW",
+    "body": "Create and enjoy Unlimited NSFW Images.",
+    "tag": "Free",
+    "url": "https://aiimagegeneratornsfw.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "image-generator-nsfw"
+  },
+  {
+    "title": "ImageFX",
+    "body": "AI-powered platform for stunning art creation.",
+    "tag": "Freemium",
+    "url": "https://imgfx.dev/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "imagefx"
+  },
+  {
+    "title": "Imgnai",
+    "body": "Text to art.",
+    "tag": "Freemium",
+    "url": "https://imgnai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "imgnai"
+  },
+  {
+    "title": "Image to Prompt",
+    "body": "Generate detailed AI art prompts from images for Midjourney & SD.",
+    "tag": "Freemium",
+    "url": "https://image2prompts.com?ref=riseofmachine.com",
+    "date-added": "2025-12-21",
+    "slug": "image-to-prompt"
+  },
+  {
+    "title": "Infinite Craft Guide",
+    "body": "Learn recipes and strategies for Infinite Craft.",
+    "tag": "Free",
+    "url": "https://www.infinitecraftguide.net/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "infinite-craft-guide"
+  },
+  {
+    "title": "Invoke",
+    "body": "Creative AI for professionals.",
+    "tag": "From $13/mo",
+    "url": "https://invoke.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "invoke"
+  },
+  {
+    "title": "Kixo",
+    "body": "Advanced AI image generation platform.",
+    "tag": "Freemium",
+    "url": "https://kixo.ai/?ref=riseofmachine.com",
+    "date-added": "2025-09-18",
+    "slug": "kixo"
+  },
+  {
+    "title": "Krea",
+    "body": "Image generation.",
+    "tag": "Beta",
+    "url": "https://www.krea.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "krea"
+  },
+  {
+    "title": "Leonardo",
+    "body": "Create visual assets.",
+    "tag": "Freemium",
+    "url": "https://leonardo.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-25",
+    "slug": "leonardo"
+  },
+  {
+    "title": "Lexica",
+    "body": "Image generation engine.",
+    "tag": "Freemium",
+    "url": "https://lexica.art/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "lexica"
+  },
+  {
+    "title": "Lora",
+    "body": "Create personalized LoRA AI models for art.",
+    "tag": "Freemium",
+    "url": "https://loraai.me/?ref=riseofmachine.com",
+    "date-added": "2025-10-11",
+    "slug": "lora"
+  },
+  {
+    "title": "Lora Pro",
+    "body": "Create personalized LoRA AI models for art.",
+    "tag": "Freemium",
+    "url": "https://loraai.pro/?ref=riseofmachine.com",
+    "date-added": "2025-10-11",
+    "slug": "lora-pro"
+  },
+  {
+    "title": "MagicTryOn",
+    "body": "AI virtual try-on for outfits.",
+    "tag": "Freemium",
+    "url": "https://magictryon.net/?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "magictryon"
+  },
+  {
+    "title": "MediaAI Art",
+    "body": "Transforms photos to art and short videos.",
+    "tag": "Freemium",
+    "url": "https://www.mediaai.art?ref=riseofmachine.com",
+    "date-added": "2025-06-19",
+    "slug": "mediaai-art"
+  },
+  {
+    "title": "Melies",
+    "body": "AI Filmmaking software.",
+    "tag": "Private Beta",
+    "url": "https://melies.co/?ref=riseofmachine.com",
+    "date-added": "2024-09-11",
+    "slug": "melies"
+  },
+  {
+    "title": "Midjourney",
+    "body": "Enter text or pictures to create pictures",
+    "tag": "Not available",
+    "url": "https://www.midjourney.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "midjourney"
+  },
+  {
+    "title": "Mirrorize",
+    "body": "Generative AI.",
+    "tag": "From $0/mo",
+    "url": "https://mirrorize.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "mirrorize"
+  },
+  {
+    "title": "Muze Art",
+    "body": "Spotify Canvases.",
+    "tag": "From $12/mo",
+    "url": "https://www.muzeart.ai/?ref=riseofmachine.com",
+    "category": "art",
+    "date-added": "2025-06-06",
+    "slug": "muze-art"
+  },
+  {
+    "title": "Nano Banana Pro",
+    "body": "Studio-quality image generation tool.",
+    "tag": "Premium",
+    "url": "https://banana-nano.pro?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "nano-banana-pro"
+  },
+  {
+    "title": "Nanobananaimage",
+    "body": "’s Powerful AI Image Generation Tools Unlock the future of digit.",
+    "tag": "Freemium",
+    "url": "https://nanobananaimage.me/?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "nanobananaimage"
+  },
+  {
+    "title": "Nero AI",
+    "body": "AI picture upscale, AI repair scratches, AI...",
+    "tag": "Not available",
+    "url": "https://ai.nero.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "nero-ai"
+  },
+  {
+    "title": "NightCafe Creator",
+    "body": "AI art generator app.",
+    "tag": "Freemium",
+    "url": "https://nightcafe.studio/?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "nightcafe-creator"
+  },
+  {
+    "title": "OC Maker",
+    "body": "Create stunning original characters with AI.",
+    "tag": "Freemium",
+    "url": "https://aiocmaker.com?ref=riseofmachine.com",
+    "date-added": "2025-08-20",
+    "slug": "oc-maker"
+  },
+  {
+    "title": "OCMaker",
+    "body": "Generate characters online.",
+    "tag": "Freemium",
+    "url": "https://www.ocmaker.net/?ref=riseofmachine.com",
+    "date-added": "2024-10-22",
+    "slug": "ocmaker"
+  },
+  {
+    "title": "Pictorial",
+    "body": "Visual generator for businesses.",
+    "tag": "From $8.99/mo",
+    "url": "https://www.pictorial.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "pictorial"
+  },
+  {
+    "title": "PixarAI",
+    "body": "Disney pixar-inspired AI generator.",
+    "tag": "Freemium",
+    "url": "https://www.pixarai.com/?ref=riseofmachine.com",
+    "date-added": "2024-10-22",
+    "slug": "pixarai"
+  },
+  {
+    "title": "Prisma",
+    "body": "Transform photos into art with AI quickly.",
+    "tag": "Not available",
+    "url": "https://prisma-ai.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "prisma"
+  },
+  {
+    "title": "Ptool",
+    "body": "NSFW AI image generator.",
+    "tag": "Freemium",
+    "url": "https://www.ptool.ai/?ref=riseofmachine.com",
+    "date-added": "2024-10-04",
+    "slug": "ptool"
+  },
+  {
+    "title": "Rabbit Road",
+    "body": "AI art generation tool.",
+    "tag": "Freemium",
+    "url": "https://rabbitroad.art/?ref=riseofmachine.com",
+    "date-added": "2025-10-11",
+    "slug": "rabbit-road"
+  },
+  {
+    "title": "RunDiffusion",
+    "body": "Stable diffusion in the cloud.",
+    "tag": "From $0.50/hr",
+    "url": "https://rundiffusion.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "rundiffusion"
+  },
+  {
+    "title": "SDXL Turbo",
+    "body": "Text-to-image generation.",
+    "tag": "Freemium",
+    "url": "https://sdxlturbo.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "sdxl-turbo"
+  },
+  {
+    "title": "Seede AI",
+    "body": "Helps you create a poster in 1 min",
+    "tag": "Not available",
+    "url": "https://seede.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "seede-ai"
+  },
+  {
+    "title": "Skybox AI",
+    "body": "Generate 360-degree panoramic images using text...",
+    "tag": "Freemium",
+    "url": "https://skybox.blockadelabs.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "skybox-ai"
+  },
+  {
+    "title": "SREF Midjourney",
+    "body": "Midjourney sref codes library.",
+    "tag": "Freemium",
+    "url": "https://sref-midjourney.com/?ref=riseofmachine.com",
+    "date-added": "2024-09-11",
+    "slug": "sref-midjourney"
+  },
+  {
+    "title": "Stable Diffusion Webui",
+    "body": "Open source project, input text or pictures to...",
+    "tag": "Free",
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "stable-diffusion-webui"
+  },
+  {
+    "title": "Stockimg",
+    "body": "Create images with AI.",
+    "tag": "Freemium",
+    "url": "https://stockimg.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-25",
+    "slug": "stockimg"
+  },
+  {
+    "title": "Tattooer Info",
+    "body": "AI tattoo generator.",
+    "tag": "Freemium",
+    "url": "https://tattooer.info/?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "tattooer-info"
+  },
+  {
+    "title": "Unicorn Coloring Pages",
+    "body": "Generate personalized unicorn coloring pages.",
+    "tag": "Freemium",
+    "url": "https://unicorn-coloring-pages.com?ref=riseofmachine.com",
+    "date-added": "2025-06-26",
+    "slug": "unicorn-coloring-pages"
+  },
+  {
+    "title": "Vieutopia",
+    "body": "Generate art.",
+    "tag": "Freemium",
+    "url": "https://vieutopia.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "vieutopia"
+  },
+  {
+    "title": "Visual-chatgpt",
+    "body": "Create images with ChatGPT",
+    "tag": "Free",
+    "url": "https://github.com/microsoft/visual-chatgpt?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "visual-chatgpt"
+  },
+  {
+    "title": "Vizcom",
+    "body": "Product visualization.",
+    "tag": "Freemium",
+    "url": "https://www.vizcom.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "vizcom"
+  },
+  {
+    "title": "WanAI",
+    "body": "Free, open-source AI video generation tool.",
+    "tag": "Free",
+    "url": "https://wanai.dev/?ref=riseofmachine.com",
+    "date-added": "2025-11-18",
+    "slug": "wanai"
+  },
+  {
+    "title": "Winter Comics",
+    "body": "Comics.",
+    "tag": "Freemium",
+    "url": "https://www.wintercomics.com/?ref=riseofmachine.com",
+    "category": "art",
+    "date-added": "2025-06-06",
+    "slug": "winter-comics"
+  },
+  {
+    "title": "Wplace Website",
+    "body": "AI-powered pixel art tool for wplace.live.",
+    "tag": "Freemium",
+    "url": "https://wplace.website/?ref=riseofmachine.com",
+    "date-added": "2025-10-11",
+    "slug": "wplace-website"
+  },
+  {
+    "title": "Yix",
+    "body": "Creative platform for image generation.",
+    "tag": "Freemium",
+    "url": "https://yix.ai/?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "yix"
+  }
+]

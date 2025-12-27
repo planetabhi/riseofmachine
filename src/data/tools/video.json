@@ -1,0 +1,724 @@
+[
+  {
+    "title": "AI Kungfu",
+    "body": "Turns your photos into martial arts videos.",
+    "tag": "Freemium",
+    "url": "https://aikungfu.net/?ref=riseofmachine.com",
+    "date-added": "2025-02-19",
+    "slug": "ai-kungfu"
+  },
+  {
+    "title": "Animant",
+    "body": "Go beyond static presentations.",
+    "url": "https://www.animant.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-20",
+    "slug": "animant"
+  },
+  {
+    "title": "Animatediff",
+    "body": "AnimateDiff is a plug-and-play module turning...",
+    "tag": "Free",
+    "url": "https://github.com/guoyww/AnimateDiff?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "animatediff"
+  },
+  {
+    "title": "Autopilot Shorts",
+    "body": "AI video generation and editing tool for shorts.",
+    "tag": "From $9.50/mo",
+    "url": "https://autopilotshorts.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-03",
+    "slug": "autopilot-shorts"
+  },
+  {
+    "title": "CapCut",
+    "body": "Advanced video editing with AI features & effects.",
+    "tag": "Freemium",
+    "url": "https://www.capcut.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "capcut"
+  },
+  {
+    "title": "CQTAI",
+    "body": "AI content pipelines, automated video apps.",
+    "tag": "Starting from ¥0.06",
+    "url": "https://cqtai.com?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "cqtai"
+  },
+  {
+    "title": "Create Video",
+    "body": "All-in-one AI video & image generator.",
+    "tag": "From $7.99/mo",
+    "url": "https://aicreate.video/?ref=riseofmachine.com",
+    "date-added": "2025-09-05",
+    "slug": "create-video"
+  },
+  {
+    "title": "CreateNew",
+    "body": "Platform for video & image creation.",
+    "tag": "Freemium",
+    "url": "https://www.createnew.ai?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "createnew"
+  },
+  {
+    "title": "Creatify",
+    "body": "Generate videos from link or text.",
+    "tag": "Freemium",
+    "url": "https://creatify.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "creatify"
+  },
+  {
+    "title": "D-id",
+    "body": "Generate digital human dubbing video based on text",
+    "tag": "Not available",
+    "url": "https://studio.d-id.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "d-id"
+  },
+  {
+    "title": "Dadan",
+    "body": "Online Video Creation platform.",
+    "tag": "Freemium",
+    "url": "https://www.dadan.io/features/ai-assist?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "dadan"
+  },
+  {
+    "title": "DaVinci Resolve",
+    "body": "Unified editing, color, VFX & audio post-prod.",
+    "tag": "Freemium",
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "davinci-resolve"
+  },
+  {
+    "title": "Decohere",
+    "body": "Generate AI video.",
+    "tag": "Freemium",
+    "url": "https://www.decohere.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "decohere"
+  },
+  {
+    "title": "Deforum",
+    "body": "Stable Diffusion to generate AI visuals.",
+    "tag": "Beta",
+    "url": "https://deforum.art/?ref=riseofmachine.com",
+    "date-added": "2023-12-31",
+    "slug": "deforum"
+  },
+  {
+    "title": "DreamCut",
+    "body": "AI video editor and screen recorder.",
+    "tag": "Freemium",
+    "url": "https://dreamcut.ai/?ref=riseofmachine.com",
+    "date-added": "2024-10-23",
+    "slug": "dreamcut"
+  },
+  {
+    "title": "Dubbah",
+    "body": "Dub videos in 28 different languages.",
+    "tag": "From $49.99",
+    "url": "https://www.dubbah.co/?ref=riseofmachine.com",
+    "date-added": "2023-12-27",
+    "slug": "dubbah"
+  },
+  {
+    "title": "Eddie",
+    "body": "ChatGPT for video editing assistance.",
+    "tag": "Not available",
+    "url": "https://eddie.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "eddie"
+  },
+  {
+    "title": "Elai.io",
+    "body": "Video creation with AI avatars & text-to-speech.",
+    "tag": "Freemium",
+    "url": "https://elai.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "elaiio"
+  },
+  {
+    "title": "Flask",
+    "body": "Notion + Loom, for video collaboration.",
+    "tag": "Freemium",
+    "url": "https://flask.do/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "flask"
+  },
+  {
+    "title": "Fliki",
+    "body": "Create video & audio content.",
+    "tag": "Freemium",
+    "url": "https://fliki.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "fliki"
+  },
+  {
+    "title": "Freebeat",
+    "body": "AI Video Creation.",
+    "tag": "Freemium",
+    "url": "https://freebeat.ai/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "freebeat"
+  },
+  {
+    "title": "Funy Video, Image",
+    "body": "Videos.",
+    "tag": "Not available",
+    "url": "https://funy.ai/ai-kissing-video-free/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "funy-video-image"
+  },
+  {
+    "title": "Genmo",
+    "body": "Make videos using AI.",
+    "tag": "Freemium",
+    "url": "https://www.genmo.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-31",
+    "slug": "genmo"
+  },
+  {
+    "title": "Google Veo",
+    "body": "The most capable generative video model.",
+    "url": "https://deepmind.google/technologies/veo/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "google-veo"
+  },
+  {
+    "title": "Hailuoai",
+    "body": "AI Video Creation Tool by Minimax",
+    "tag": "Not available",
+    "url": "https://hailuoai.com/video?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "hailuoai"
+  },
+  {
+    "title": "Heygen",
+    "body": "Produce videos with AI-generated avatars & voices.",
+    "tag": "Freemium",
+    "url": "https://www.heygen.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "heygen"
+  },
+  {
+    "title": "Hoox",
+    "body": "Videos.",
+    "tag": "Freemium",
+    "url": "https://www.hoox.video/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "hoox"
+  },
+  {
+    "title": "Image to Video",
+    "body": "Image to video generator.",
+    "tag": "Freemium",
+    "url": "https://dovideo.io/image-to-video?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "image-to-video"
+  },
+  {
+    "title": "Image2Video",
+    "body": "Image to video generator.",
+    "tag": "Freemium",
+    "url": "https://image2video.ai/?ref=riseofmachine.com",
+    "date-added": "2024-09-20",
+    "slug": "image2video"
+  },
+  {
+    "title": "Img2Video",
+    "body": "Text & images into short videos.",
+    "tag": "Freemium",
+    "url": "https://img2video.ai/?ref=riseofmachine.com",
+    "date-added": "2024-10-30",
+    "slug": "img2video"
+  },
+  {
+    "title": "Invideo AI",
+    "body": "Transform text to dynamic full-length videos.",
+    "tag": "Freemium",
+    "url": "https://invideo.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "invideo-ai"
+  },
+  {
+    "title": "Kaiber",
+    "body": "Text, photos, and music to videos.",
+    "tag": "From $5/mo",
+    "url": "https://kaiber.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-31",
+    "slug": "kaiber"
+  },
+  {
+    "title": "Kite",
+    "body": "Create Apple-style marketing videos.",
+    "tag": "Freemium",
+    "url": "https://kite.video/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "kite"
+  },
+  {
+    "title": "Kling AI",
+    "body": "AI Video Creation Tool by kuaishou.",
+    "tag": "Not available",
+    "url": "https://klingai.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "kling-ai"
+  },
+  {
+    "title": "Libretto",
+    "body": "Audio & video production.",
+    "tag": "Freemium",
+    "url": "https://libretto.fm/?ref=riseofmachine.com",
+    "date-added": "2024-11-17",
+    "slug": "libretto"
+  },
+  {
+    "title": "LTX2",
+    "body": "Transform text into stunning video content.",
+    "tag": "Not available",
+    "url": "https://ltx2.org/?ref=riseofmachine.com",
+    "date-added": "2025-11-03",
+    "slug": "ltx2"
+  },
+  {
+    "title": "Lumen5",
+    "body": "Transform text to dynamic videos using AI.",
+    "tag": "Freemium",
+    "url": "https://lumen5.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "lumen5"
+  },
+  {
+    "title": "Lyric Video Studio",
+    "body": "Lyric videos.",
+    "tag": "Freemium",
+    "url": "https://lyricvideo.studio/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "lyric-video-studio"
+  },
+  {
+    "title": "Magic Hour",
+    "body": "AI video for creators.",
+    "tag": "Freemium",
+    "url": "https://magichour.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-31",
+    "slug": "magic-hour"
+  },
+  {
+    "title": "Magic Shorts",
+    "body": "AI faceless short-form videos",
+    "tag": "From $15/mo",
+    "url": "https://magicshorts.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-30",
+    "slug": "magic-shorts"
+  },
+  {
+    "title": "MagicLight AI",
+    "body": "Turns your stories or scripts into animated videos.",
+    "url": "https://magiclight.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "magiclight-ai"
+  },
+  {
+    "title": "Moonvalley",
+    "body": "Text-to-video generative AI model.",
+    "tag": "Beta",
+    "url": "https://moonvalley.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "moonvalley"
+  },
+  {
+    "title": "Morph Studio",
+    "body": "Text to video.",
+    "tag": "Beta",
+    "url": "https://www.morphstudio.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "morph-studio"
+  },
+  {
+    "title": "Neural Frames",
+    "body": "Text to video.",
+    "tag": "Freemium",
+    "url": "https://www.neuralframes.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-31",
+    "slug": "neural-frames"
+  },
+  {
+    "title": "Noeffort",
+    "body": "Videos.",
+    "tag": "$25 One-time",
+    "url": "https://noeffort.ai/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "noeffort"
+  },
+  {
+    "title": "Omagic AI",
+    "body": "Create 3D/CGI videos & images with AI effects.",
+    "tag": "Freemium",
+    "url": "https://omagicai.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "omagic-ai"
+  },
+  {
+    "title": "OpusClip",
+    "body": "AI video clipping tool.",
+    "tag": "Beta",
+    "url": "https://www.opus.pro/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "opusclip"
+  },
+  {
+    "title": "Photo to Video AI",
+    "body": "Transform photos into cinematic videos with native audio.",
+    "tag": "Freemium",
+    "url": "https://phototovideoai.io?ref=riseofmachine.com",
+    "date-added": "2025-10-20",
+    "slug": "photo-to-video-ai"
+  },
+  {
+    "title": "PhotoTo Video",
+    "body": "Free AI video generation platform.",
+    "tag": "Freemium",
+    "url": "https://phototo.video/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "phototo-video"
+  },
+  {
+    "title": "Picloft",
+    "body": "Transform text & images into professional videos.",
+    "tag": "From $2.99",
+    "url": "https://picloft.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-18",
+    "slug": "picloft"
+  },
+  {
+    "title": "Pictory",
+    "body": "Transform text to polished videos, edit easily.",
+    "tag": "Freemium",
+    "url": "https://pictory.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "pictory"
+  },
+  {
+    "title": "Pika",
+    "body": "Idea-to-video platform.",
+    "tag": "Invite Only",
+    "url": "https://pika.art/?ref=riseofmachine.com",
+    "date-added": "2023-12-22",
+    "slug": "pika"
+  },
+  {
+    "title": "PixVerse",
+    "body": "Video creation platform.",
+    "tag": "Beta",
+    "url": "https://pixverse.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "pixverse"
+  },
+  {
+    "title": "PowerDirector",
+    "body": "AI video editing, cross-platform, many effects.",
+    "tag": "Paid",
+    "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/overview_en_US.html?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "powerdirector"
+  },
+  {
+    "title": "Qudemo",
+    "body": "Make your demo videos interactive using AI.",
+    "url": "https://www.qudemo.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-24",
+    "slug": "qudemo"
+  },
+  {
+    "title": "Rask AI",
+    "body": "Translate video & audio.",
+    "tag": "From $50/mo",
+    "url": "https://www.rask.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "rask-ai"
+  },
+  {
+    "title": "Rewin.ai",
+    "body": "Videos to Youtube and TikTok scripts.",
+    "tag": "Freemium",
+    "url": "https://rewin.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-22",
+    "slug": "rewinai"
+  },
+  {
+    "title": "Rizzle",
+    "body": "No edit video creation powered by AI.",
+    "tag": "Not available",
+    "url": "https://rizzle.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "rizzle"
+  },
+  {
+    "title": "Scriptmagic",
+    "body": "Youtube scripts.",
+    "tag": "Freemium",
+    "url": "https://scriptmagic.pro/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "scriptmagic"
+  },
+  {
+    "title": "Seedance",
+    "body": "AI video generator for cinematic, multi-shot videos.",
+    "tag": "Freemium",
+    "url": "https://seedanceai.io?ref=riseofmachine.com",
+    "date-added": "2025-06-29",
+    "slug": "seedance"
+  },
+  {
+    "title": "Seedances",
+    "body": "AI video generation from text and images.",
+    "tag": "Freemium",
+    "url": "https://www.seedances.app/?ref=riseofmachine.com",
+    "date-added": "2025-10-03",
+    "slug": "seedances"
+  },
+  {
+    "title": "Shorts Generator",
+    "body": "Instant TikTok, Instagram, YouTube videos from ideas.",
+    "tag": "Freemium",
+    "url": "https://shortsgenerator.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "shorts-generator"
+  },
+  {
+    "title": "Shortsfarm",
+    "body": "UGC videos.",
+    "tag": "From $29/mo",
+    "url": "https://shortsfarm.ai/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "shortsfarm"
+  },
+  {
+    "title": "Sora",
+    "body": "Sora is an AI model published by OpenAI that...",
+    "tag": "Not available",
+    "url": "https://openai.com/sora?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "sora"
+  },
+  {
+    "title": "Sora 2",
+    "body": "Create realistic AI videos with synchronized audio.",
+    "tag": "Freemium",
+    "url": "https://www.aisora2.com/?ref=riseofmachine.com",
+    "date-added": "2025-10-02",
+    "slug": "sora-2"
+  },
+  {
+    "title": "Step Video T2V",
+    "body": "Transforms text into high-quality videos.",
+    "tag": "Not available",
+    "url": "https://stepvideot2v.net?ref=riseofmachine.com",
+    "date-added": "2025-06-30",
+    "slug": "step-video-t2v"
+  },
+  {
+    "title": "Summarize",
+    "body": "Summarize.tech: ai-powered video summaries",
+    "tag": "Not available",
+    "url": "https://www.summarize.tech/?ref=riseofmachine.com",
+    "date-added": "2025-06-03",
+    "slug": "summarize"
+  },
+  {
+    "title": "Supermaker",
+    "body": "Videos.",
+    "tag": "Freemium",
+    "url": "https://supermaker.ai/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "supermaker"
+  },
+  {
+    "title": "Tailored Labs",
+    "body": "AI video editing using plain English prompts.",
+    "tag": "Freemium",
+    "url": "https://tailorlabsai.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "tailored-labs"
+  },
+  {
+    "title": "Textideo",
+    "body": "AI video generation from text and images.",
+    "tag": "From $9.99",
+    "url": "https://textideo.com/?ref=riseofmachine.com",
+    "date-added": "2025-08-06",
+    "slug": "textideo"
+  },
+  {
+    "title": "TryVeo3",
+    "body": "Cinematic videos from text/images, synced audio.",
+    "tag": "Free",
+    "url": "https://tryveo3.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "tryveo3"
+  },
+  {
+    "title": "Veo 3 by Kie",
+    "body": "Veo 3 API for video generation, synchronized audio.",
+    "tag": "Not available",
+    "url": "https://kie.ai/features/v3-api?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "veo-3-by-kie"
+  },
+  {
+    "title": "Veo Video",
+    "body": "AI video generation platform from text/images.",
+    "url": "https://veo-video.org/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "veo-video"
+  },
+  {
+    "title": "Veo3 Video Generator",
+    "body": "Create stunning videos from text or images.",
+    "tag": "Freemium",
+    "url": "https://zacose.com/veo3_ai_video_generator?ref=riseofmachine.com",
+    "date-added": "2025-06-11",
+    "slug": "veo3-video-generator"
+  },
+  {
+    "title": "Veo3.bot",
+    "body": "Free access to Google Veo 3 AI video generation.",
+    "tag": "Free",
+    "url": "https://veo3.bot/?ref=riseofmachine.com",
+    "date-added": "2025-07-14",
+    "slug": "veo3bot"
+  },
+  {
+    "title": "Vidduo Agent",
+    "body": "AI video generator for high-quality 1080p videos.",
+    "tag": "Freemium",
+    "url": "https://www.vidduo.com?ref=riseofmachine.com",
+    "date-added": "2025-06-29",
+    "slug": "vidduo-agent"
+  },
+  {
+    "title": "Video Marketer",
+    "body": "A research tool for video marketing.",
+    "url": "https://memories.ai?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-24",
+    "slug": "video-marketer"
+  },
+  {
+    "title": "Videomaker",
+    "body": "Luma AI video maker free online.",
+    "tag": "Free",
+    "url": "https://videomaker.me/?ref=riseofmachine.com",
+    "date-added": "2024-10-23",
+    "slug": "videomaker"
+  },
+  {
+    "title": "Videoswapface",
+    "body": "Free unlimited video face swap with AI.",
+    "tag": "Free",
+    "url": "https://videoswapface.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "videoswapface"
+  },
+  {
+    "title": "Vidu Studio",
+    "body": "Text and image to video converter.",
+    "tag": "Freemium",
+    "url": "https://www.vidu-studio.net/?ref=riseofmachine.com",
+    "date-added": "2024-12-13",
+    "slug": "vidu-studio"
+  },
+  {
+    "title": "Viralrot",
+    "body": "‑to‑Brainrot video generator that turns short.",
+    "tag": "Freemium",
+    "url": "https://viralrot.com?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "viralrot"
+  },
+  {
+    "title": "Vivago",
+    "body": "Video generator.",
+    "tag": "Freemium",
+    "url": "https://vivago.ai/home?ref=riseofmachine.com",
+    "date-added": "2024-12-14",
+    "slug": "vivago"
+  },
+  {
+    "title": "Vivago.Ai/video",
+    "body": "Text to Video; Image to Video; 4K enhance",
+    "tag": "Free",
+    "url": "https://vivago.ai/video?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "vivagoaivideo"
+  },
+  {
+    "title": "VMeg Clips To Videos",
+    "body": "Marketing videos.",
+    "tag": "Freemium",
+    "url": "https://www.vmeg.ai/tools/clips-to-videos/?ref=riseofmachine.com",
+    "category": "video",
+    "date-added": "2025-06-06",
+    "slug": "vmeg-clips-to-videos"
+  },
+  {
+    "title": "Wan 2.2",
+    "body": "AI video generator for professional videos.",
+    "url": "https://wan22.studio/?ref=riseofmachine.com",
+    "tag": "Paid",
+    "date-added": "2025-07-31",
+    "slug": "wan-22"
+  },
+  {
+    "title": "Wan 2.6",
+    "body": "AI video generator for multi-shot storytelling and syncing.",
+    "tag": "Freemium",
+    "url": "https://wan2-6.org?ref=riseofmachine.com",
+    "date-added": "2025-12-21",
+    "slug": "wan-26"
+  },
+  {
+    "title": "Wan 2.2 AI",
+    "body": "Professional AI platform for video generation.",
+    "url": "https://wan22.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "wan-22-ai"
+  },
+  {
+    "title": "Watermark Remover",
+    "body": "Remove watermark from video online for free.",
+    "tag": "Freemium",
+    "url": "https://www.aiease.ai/remove-video-watermark/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "watermark-remover"
+  },
+  {
+    "title": "Wondershare Filmora",
+    "body": "Easy video editing software for all creators.",
+    "tag": "Freemium",
+    "url": "https://filmora.wondershare.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "wondershare-filmora"
+  }
+]

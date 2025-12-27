@@ -1,0 +1,548 @@
+[
+  {
+    "title": "Adcopy",
+    "body": "Generate ad copy.",
+    "tag": "Freemium",
+    "url": "https://adcopy.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-19",
+    "slug": "adcopy"
+  },
+  {
+    "title": "Albus",
+    "body": "Knowledge bot for Slack.",
+    "tag": "From $4.99/mo",
+    "url": "https://www.springworks.in/albus/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "albus"
+  },
+  {
+    "title": "Amazely",
+    "body": "AI growth platform for businesses.",
+    "tag": "Freemium",
+    "url": "https://amazely.co/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "amazely"
+  },
+  {
+    "title": "Arches",
+    "body": "AI-driven solutions.",
+    "tag": "Freemium",
+    "url": "https://platform.archesai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "arches"
+  },
+  {
+    "title": "Autoblocks",
+    "body": "GenAI product workspace.",
+    "tag": "Freemium",
+    "url": "https://www.autoblocks.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "autoblocks"
+  },
+  {
+    "title": "Bland",
+    "body": "Implementing AI phone calls.",
+    "tag": "From $0.12/min",
+    "url": "https://www.bland.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-28",
+    "slug": "bland"
+  },
+  {
+    "title": "Brainfish",
+    "body": "AI customer support.",
+    "tag": "From $159/mo",
+    "url": "https://www.brainfi.sh/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "brainfish"
+  },
+  {
+    "title": "Caladan",
+    "body": "AI fundraising copilot to connect wth VCs.",
+    "url": "https://www.caladan.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-21",
+    "slug": "caladan"
+  },
+  {
+    "title": "Chat Agents",
+    "body": "No-code platform to create AI Chatbots.",
+    "url": "https://www.chatagents.io/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "chat-agents"
+  },
+  {
+    "title": "Chat Whisperer",
+    "body": "Custom ChatGPT for your business.",
+    "tag": "Freemium",
+    "url": "https://chatwhisperer.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "chat-whisperer"
+  },
+  {
+    "title": "Chatclient",
+    "body": "Build a custom AI chatbot.",
+    "tag": "Freemium",
+    "url": "https://chatclient.ai/?ref=riseofmachine.com",
+    "date-added": "2024-11-17",
+    "slug": "chatclient"
+  },
+  {
+    "title": "Chatsimple",
+    "body": "AI-powered virtual agent.",
+    "tag": "Freemium",
+    "url": "https://www.chatsimple.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "chatsimple"
+  },
+  {
+    "title": "Cody",
+    "body": "AI assistant for business.",
+    "tag": "$29/mo",
+    "url": "https://meetcody.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-27",
+    "slug": "cody"
+  },
+  {
+    "title": "Conduit",
+    "body": "Unified inbox & workflows for conversational agents.",
+    "url": "https://www.conduit.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-24",
+    "slug": "conduit"
+  },
+  {
+    "title": "ConvoZen",
+    "body": "Conversational intelligence for customer success.",
+    "tag": "Not available",
+    "url": "https://convozen.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "convozen"
+  },
+  {
+    "title": "Credal AI",
+    "body": "Securely connect internal data to LLMs.",
+    "tag": "Freemium",
+    "url": "https://www.credal.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "credal-ai"
+  },
+  {
+    "title": "DropshipHunt",
+    "body": "Find winning products with trend & competitor data.",
+    "tag": "Freemium",
+    "url": "https://dropshiphunt.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-17",
+    "slug": "dropshiphunt"
+  },
+  {
+    "title": "Dust",
+    "body": "AI assistant for teams.",
+    "tag": "Freemium",
+    "url": "https://dust.tt/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "dust"
+  },
+  {
+    "title": "Ellie",
+    "body": "Your AI email assistant.",
+    "url": "https://ellie.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-21",
+    "slug": "ellie"
+  },
+  {
+    "title": "Explee",
+    "body": "Sales prospecting.",
+    "tag": "Freemium",
+    "url": "https://explee.com/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "explee"
+  },
+  {
+    "title": "Flowla",
+    "body": "Manage sales with a digital sales room.",
+    "tag": "Freemium",
+    "url": "https://www.flowla.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "flowla"
+  },
+  {
+    "title": "Glean",
+    "body": "Search all company apps.",
+    "tag": "Not available",
+    "url": "https://www.glean.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "glean"
+  },
+  {
+    "title": "GPTbots.ai",
+    "body": "Build AI bot for your business.",
+    "tag": "From $0/mo",
+    "url": "https://www.gptbots.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-23",
+    "slug": "gptbotsai"
+  },
+  {
+    "title": "Gradient",
+    "body": "AI cloud for enterprise.",
+    "tag": "Not available",
+    "url": "https://gradient.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-27",
+    "slug": "gradient"
+  },
+  {
+    "title": "Guidde",
+    "body": "Create video documentation.",
+    "tag": "Freemium",
+    "url": "https://www.guidde.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "guidde"
+  },
+  {
+    "title": "Hoory",
+    "body": "AI-powered customer support assistant.",
+    "tag": "Not available",
+    "url": "https://hoory.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "hoory"
+  },
+  {
+    "title": "Insights by Coupler.io",
+    "body": "Data integration, reporting, and AI insights.",
+    "url": "https://www.coupler.io/ai-insights?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "insights-by-couplerio"
+  },
+  {
+    "title": "InsightSquared",
+    "body": "Revenue analysis.",
+    "tag": "Not available",
+    "url": "https://www.insightsquared.com/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "insightsquared"
+  },
+  {
+    "title": "Invoice Mama",
+    "body": "Create invoices, track payments, manage finances.",
+    "tag": "Freemium",
+    "url": "https://invoicemama.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "invoice-mama"
+  },
+  {
+    "title": "Ioni",
+    "body": "Automate for customer support.",
+    "tag": "From $29/mo",
+    "url": "https://ioni.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-23",
+    "slug": "ioni"
+  },
+  {
+    "title": "Jude AI",
+    "body": "Real estate with AI.",
+    "tag": "From $12.99/mo",
+    "url": "https://www.judeai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "jude-ai"
+  },
+  {
+    "title": "Kommunicate",
+    "body": "Customer support with chatbot.",
+    "tag": "From $100/mo",
+    "url": "https://www.kommunicate.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "kommunicate"
+  },
+  {
+    "title": "Lindy",
+    "body": "AI employee.",
+    "tag": "Beta",
+    "url": "https://www.lindy.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-27",
+    "slug": "lindy"
+  },
+  {
+    "title": "MagicBlocks",
+    "body": "Sales.",
+    "tag": "Freemium",
+    "url": "https://magicblocks.ai/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "magicblocks"
+  },
+  {
+    "title": "Marblism",
+    "body": "Virtual Employees.",
+    "tag": "Freemium",
+    "url": "https://www.marblism.com/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "marblism"
+  },
+  {
+    "title": "Mendable",
+    "body": "Train AI on technical resources.",
+    "tag": "Freemium",
+    "url": "https://www.mendable.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "mendable"
+  },
+  {
+    "title": "Multimodal",
+    "body": "AI agents to automate workflows.",
+    "tag": "Freemium",
+    "url": "https://www.multimodal.dev/?ref=riseofmachine.com",
+    "date-added": "2024-03-23",
+    "slug": "multimodal"
+  },
+  {
+    "title": "Mutual",
+    "body": "Customer service with AI.",
+    "tag": "Freemium",
+    "url": "https://mutual.info/?ref=riseofmachine.com",
+    "date-added": "2023-12-30",
+    "slug": "mutual"
+  },
+  {
+    "title": "My AskAI",
+    "body": "AI customer service assistant.",
+    "tag": "Freemium",
+    "url": "https://myaskai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "my-askai"
+  },
+  {
+    "title": "MyReport",
+    "body": "Business reports.",
+    "tag": "Freemium",
+    "url": "https://myreport.alaba.ai/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "myreport"
+  },
+  {
+    "title": "Namelix",
+    "body": "AI generates memorable, brandable business names.",
+    "tag": "Free",
+    "url": "https://namelix.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "namelix"
+  },
+  {
+    "title": "Nanonets",
+    "body": "Capture data from documents.",
+    "tag": "Pay-as-you-go",
+    "url": "https://nanonets.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "nanonets"
+  },
+  {
+    "title": "Normal",
+    "body": "AI models for core enterprise workflows.",
+    "tag": "Not available",
+    "url": "https://normalcomputing.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "normal"
+  },
+  {
+    "title": "Nuclia",
+    "body": "Embed search & generative answers.",
+    "tag": "From $30/mo",
+    "url": "https://nuclia.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "nuclia"
+  },
+  {
+    "title": "Poper AI",
+    "body": "AI-powered onsite engagement platform.",
+    "tag": "Freemium",
+    "url": "https://www.poper.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "poper-ai"
+  },
+  {
+    "title": "Prometai",
+    "body": "Business plans.",
+    "tag": "Freemium",
+    "url": "https://prometai.app/business-plan-templates/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "prometai"
+  },
+  {
+    "title": "Rainex Agents",
+    "body": "Business automation.",
+    "tag": "Freemium",
+    "url": "https://rainex.io/ai-agents/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "rainex-agents"
+  },
+  {
+    "title": "Rebellion",
+    "body": "AI agent for real estate automation.",
+    "tag": "Freemium",
+    "url": "https://rebillion.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-23",
+    "slug": "rebellion"
+  },
+  {
+    "title": "Receiptor",
+    "body": "Automated bookkeeping with AI.",
+    "tag": "Freemium",
+    "url": "https://receiptor.ai/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "receiptor"
+  },
+  {
+    "title": "Retune",
+    "body": "Train & customize your own AI model, generate API.",
+    "tag": "Freemium",
+    "url": "https://retune.so/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "retune"
+  },
+  {
+    "title": "Revyou",
+    "body": "Aggregate, collect, & showcase client reviews.",
+    "tag": "Freemium",
+    "url": "https://www.revyou.me/?ref=riseofmachine.com",
+    "date-added": "2024-11-17",
+    "slug": "revyou"
+  },
+  {
+    "title": "SalesTarget",
+    "body": "Automate B2B outreach with your sales Co-Pilot.",
+    "url": "https://www.salestarget.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-23",
+    "slug": "salestarget"
+  },
+  {
+    "title": "Scale AI",
+    "body": "Training data for AI apps.",
+    "tag": "Pay-as-you-go",
+    "url": "https://scale.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "scale-ai"
+  },
+  {
+    "title": "Security Questionnaire",
+    "body": "AI that answers Security Questionnaires & RFP.",
+    "url": "https://sprinto.com/security-questionnaire/?ref=riseofmachine.com",
+    "tag": "Free",
+    "date-added": "2025-09-24",
+    "slug": "security-questionnaire"
+  },
+  {
+    "title": "Simple Phones",
+    "body": "AI phone agent.",
+    "tag": "From $49/mo",
+    "url": "https://www.simplephones.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-27",
+    "slug": "simple-phones"
+  },
+  {
+    "title": "Sniff Job",
+    "body": "AI-powered job search assistant.",
+    "url": "https://sniffjob.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "sniff-job"
+  },
+  {
+    "title": "Social Intents",
+    "body": "AI chatbot Software for Teams, and Slack.",
+    "tag": "From $39/mo",
+    "url": "https://www.socialintents.com/?ref=riseofmachine.com",
+    "date-added": "2024-12-14",
+    "slug": "social-intents"
+  },
+  {
+    "title": "Streaml",
+    "body": "Automate your outbound with an AI employee.",
+    "url": "https://streaml.app/?ref=riseofmachine.com",
+    "tag": "Free Trial",
+    "date-added": "2025-09-27",
+    "slug": "streaml"
+  },
+  {
+    "title": "Supaboard",
+    "body": "World's simplest BI tool with AI data analysts.",
+    "tag": "Not available",
+    "url": "https://supaboard.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "supaboard"
+  },
+  {
+    "title": "Super.AI",
+    "body": "The all-in-one AI platform.",
+    "url": "https://super.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-21",
+    "slug": "superai"
+  },
+  {
+    "title": "Toffu",
+    "body": "A marketing agent that gets things done.",
+    "tag": "Freemium",
+    "url": "https://toffu.ai/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "toffu"
+  },
+  {
+    "title": "Together.ai",
+    "body": "Platform for building & running generative AI.",
+    "tag": "Pay-as-you-go",
+    "url": "https://www.together.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "togetherai"
+  },
+  {
+    "title": "Trenz",
+    "body": "TikTok shop analytics for trending products.",
+    "tag": "Freemium",
+    "url": "https://www.trenz.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-29",
+    "slug": "trenz"
+  },
+  {
+    "title": "Triviat",
+    "body": "Customer Service.",
+    "tag": "Freemium",
+    "url": "https://triviat.com/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "triviat"
+  },
+  {
+    "title": "Unify AI Sales",
+    "body": "AI platform for outbound sales reps.",
+    "tag": "From $1000/mo",
+    "url": "https://www.unifygtm.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "unify-ai-sales"
+  },
+  {
+    "title": "Venturekit",
+    "body": "Business plans.",
+    "tag": "From $8/mo",
+    "url": "https://www.venturekit.ai/?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "venturekit"
+  },
+  {
+    "title": "Veriff",
+    "body": "Identity verification.",
+    "tag": "Freemium",
+    "url": "https://www.veriff.com/plans/self-serve?ref=riseofmachine.com",
+    "category": "enterprise",
+    "date-added": "2025-06-06",
+    "slug": "veriff"
+  }
+]

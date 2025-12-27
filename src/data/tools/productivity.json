@@ -1,0 +1,928 @@
+[
+  {
+    "title": "Upscaler",
+    "body": "Bring Every Pixel to Life with AI.",
+    "tag": "Freemium",
+    "url": "https://www.4kupscaler.com/tools/convert-video-to-4k?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "upscaler"
+  },
+  {
+    "title": "Ada",
+    "body": "AI data analyst for professional reports.",
+    "tag": "Freemium",
+    "url": "https://ada.im/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "ada"
+  },
+  {
+    "title": "AgentSea",
+    "body": "Unified, private chat for AI models.",
+    "tag": "Freemium",
+    "url": "https://agentsea.ai/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "agentsea"
+  },
+  {
+    "title": "Allenai/olmocr",
+    "body": "A toolkit for training language models to work...",
+    "tag": "Free",
+    "url": "https://github.com/allenai/olmocr?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "allenaiolmocr"
+  },
+  {
+    "title": "Autoppt",
+    "body": "AI generator for PowerPoint presentations.",
+    "url": "https://autoppt.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-06-02",
+    "slug": "autoppt"
+  },
+  {
+    "title": "Autotab",
+    "body": "Build browser automations.",
+    "tag": "Freemium",
+    "url": "https://www.autotab.com/?ref=riseofmachine.com",
+    "date-added": "2024-10-23",
+    "slug": "autotab"
+  },
+  {
+    "title": "BeforeSunset",
+    "body": "Personalized AI daily planning for your life.",
+    "tag": "Not available",
+    "url": "https://beforesunset.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "beforesunset"
+  },
+  {
+    "title": "Blocks",
+    "body": "Email builder.",
+    "tag": "Freemium",
+    "url": "https://useblocks.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-23",
+    "slug": "blocks"
+  },
+  {
+    "title": "Caesr AI",
+    "body": "AI that controls real apps across web and desktop.",
+    "tag": "Freemium",
+    "url": "https://www.caesr.ai/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "caesr-ai"
+  },
+  {
+    "title": "CallZero",
+    "body": "Calls.",
+    "tag": "Freemium",
+    "url": "https://callzero.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "callzero"
+  },
+  {
+    "title": "ChatGPT Writer",
+    "body": "Generate emails & replies.",
+    "tag": "Extension",
+    "url": "https://chatgptwriter.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "chatgpt-writer"
+  },
+  {
+    "title": "Chatize",
+    "body": "Chat with documents.",
+    "tag": "Freemium",
+    "url": "https://www.chatize.com/?ref=riseofmachine.com",
+    "date-added": "2024-03-31",
+    "slug": "chatize"
+  },
+  {
+    "title": "Cloudairy",
+    "body": "AI-powered collaborative workspace and diagramming.",
+    "tag": "Freemium",
+    "url": "https://cloudairy.com?ref=riseofmachine.com",
+    "date-added": "2025-06-29",
+    "slug": "cloudairy"
+  },
+  {
+    "title": "CognosysAI",
+    "body": "Web-based AI Agent.",
+    "tag": "Freemium",
+    "url": "https://www.cognosys.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "cognosysai"
+  },
+  {
+    "title": "Computerx",
+    "body": "Productivity.",
+    "tag": "Free",
+    "url": "https://computerx.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "computerx"
+  },
+  {
+    "title": "Concierge",
+    "body": "Productivity.",
+    "tag": "Freemium",
+    "url": "https://askconcierge.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "concierge"
+  },
+  {
+    "title": "Context",
+    "body": "AI office suite automates document creation.",
+    "tag": "Freemium",
+    "url": "https://context.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-07",
+    "slug": "context"
+  },
+  {
+    "title": "Cvbee.ai",
+    "body": "AI-powered CV maker.",
+    "tag": "Freemium",
+    "url": "https://cvbee.ai/?ref=riseofmachine.com",
+    "date-added": "2024-09-20",
+    "slug": "cvbeeai"
+  },
+  {
+    "title": "Dart",
+    "body": "Brainstorm, plan, and execute faster with agents.",
+    "url": "https://www.dart.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-20",
+    "slug": "dart"
+  },
+  {
+    "title": "Dashform",
+    "body": "Auto-generated and adaptive forms.",
+    "tag": "Freemium",
+    "url": "https://getaiform.com/?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "dashform"
+  },
+  {
+    "title": "Decktopus",
+    "body": "Stop wasting hours on bad presentation slides.",
+    "tag": "Not available",
+    "url": "https://decktopus.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "decktopus"
+  },
+  {
+    "title": "Disclaimr",
+    "body": "Newsletter summaries.",
+    "tag": "Freemium",
+    "url": "https://disclaimr.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "disclaimr"
+  },
+  {
+    "title": "Doculator",
+    "body": "AI document translator for 100+ languages.",
+    "tag": "Freemium",
+    "url": "https://doculator.org?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "doculator"
+  },
+  {
+    "title": "Dola Calendar Assistant",
+    "body": "Smartly plan & sync life on messaging apps.",
+    "tag": "Not available",
+    "url": "https://dola.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "dola-calendar-assistant"
+  },
+  {
+    "title": "Eloovor - Career Coach",
+    "body": "Resume optimization.",
+    "tag": "Not available",
+    "url": "https://www.eloovor.com/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "eloovor-career-coach"
+  },
+  {
+    "title": "Everyday",
+    "body": "Get tasks done across apps with plain English.",
+    "tag": "Freemium",
+    "url": "https://www.everyday.new?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "everyday"
+  },
+  {
+    "title": "Fireflies",
+    "body": "Transcribe, search & analyze voice convos.",
+    "tag": "Freemium",
+    "url": "https://fireflies.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "fireflies"
+  },
+  {
+    "title": "Floworks",
+    "body": "AI-powered assistant.",
+    "tag": "Not available",
+    "url": "https://floworks.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "floworks"
+  },
+  {
+    "title": "FocusFlow.ai",
+    "body": "Track and improve your day.",
+    "tag": "Beta",
+    "url": "https://focusflow.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "focusflowai"
+  },
+  {
+    "title": "Forage Mail",
+    "body": "AI manages your inbox, less email clutter.",
+    "tag": "Freemium",
+    "url": "https://foragemail.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "forage-mail"
+  },
+  {
+    "title": "Genppt",
+    "body": "PowerPoint presentations.",
+    "tag": "From $9/mo",
+    "url": "https://genppt.com/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "genppt"
+  },
+  {
+    "title": "Glitter",
+    "body": "Turn processes into step-by-step guides.",
+    "tag": "Not available",
+    "url": "https://glitter.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "glitter"
+  },
+  {
+    "title": "Google Translate",
+    "body": "Support text, picture, document and URL",
+    "tag": "Free",
+    "url": "https://translate.google.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "google-translate"
+  },
+  {
+    "title": "Groupthink",
+    "body": "Creates meeting agendas, takes notes, & share summary.",
+    "tag": "Free",
+    "url": "https://groupthink.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "groupthink"
+  },
+  {
+    "title": "HelloCV AI",
+    "body": "Create a Notion‑style CV/resume site with AI.",
+    "tag": "Freemium",
+    "url": "https://www.hello.cv/?ref=riseofmachine.com",
+    "date-added": "2025-07-16",
+    "slug": "hellocv-ai"
+  },
+  {
+    "title": "Hero",
+    "body": "Your daily assistant to run your life.",
+    "tag": "Free",
+    "url": "https://tryhero.app/?ref=riseofmachine.com",
+    "date-added": "2025-11-14",
+    "slug": "hero"
+  },
+  {
+    "title": "Hipocap",
+    "body": "Automate tasks with simple prompts.",
+    "tag": "Freemium",
+    "url": "https://hipocap.com/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "hipocap"
+  },
+  {
+    "title": "Humanize AI Text",
+    "body": "Turns AI content into natural, human-like writing.",
+    "url": "https://humanizeaitext.ai?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-06-02",
+    "slug": "humanize-ai-text"
+  },
+  {
+    "title": "Humata",
+    "body": "Chat through long documents.",
+    "tag": "From $0/mo",
+    "url": "https://www.humata.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-27",
+    "slug": "humata"
+  },
+  {
+    "title": "Hyperfeed",
+    "body": "Create & share AI workflows via simple text editor.",
+    "tag": "Freemium",
+    "url": "https://hyperfeed.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "hyperfeed"
+  },
+  {
+    "title": "HyperPresent",
+    "body": "Presentations.",
+    "tag": "Freemium",
+    "url": "https://hyperpresent.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "hyperpresent"
+  },
+  {
+    "title": "Immersive-translate",
+    "body": "Open source project. Immersive bilingual web...",
+    "tag": "Free",
+    "url": "https://github.com/immersive-translate/immersive-translate?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "immersive-translate"
+  },
+  {
+    "title": "Intellibar",
+    "body": "Assistant for Mac.",
+    "tag": "Freemium",
+    "url": "https://intellibar.app/?ref=riseofmachine.com",
+    "date-added": "2024-09-28",
+    "slug": "intellibar"
+  },
+  {
+    "title": "Jigso",
+    "body": "Optimize tasks, automate alerts, retrieve data.",
+    "tag": "Freemium",
+    "url": "https://www.jigso.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "jigso"
+  },
+  {
+    "title": "JobBuddy",
+    "body": "Your AI copilot for job searching.",
+    "tag": "Not available",
+    "url": "https://jobright.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "jobbuddy"
+  },
+  {
+    "title": "JobGPT",
+    "body": "Job applications.",
+    "tag": "Freemium",
+    "url": "https://6figr.com/auto-apply?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "jobgpt"
+  },
+  {
+    "title": "JobWinner",
+    "body": "Creates customized resumes and cover letters.",
+    "tag": "Freemium",
+    "url": "https://jobwinner.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "jobwinner"
+  },
+  {
+    "title": "Koncile",
+    "body": "Capture all information in your documents.",
+    "tag": "Freemium",
+    "url": "https://koncile.com/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "koncile"
+  },
+  {
+    "title": "Kortix Suna",
+    "body": "Task automation.",
+    "tag": "Freemium",
+    "url": "https://www.suna.so/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "kortix-suna"
+  },
+  {
+    "title": "Krisp",
+    "body": "Assistant for meetings & calls.",
+    "tag": "Freemium",
+    "url": "https://krisp.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-11",
+    "slug": "krisp"
+  },
+  {
+    "title": "Lazy 2.0",
+    "body": "Capture thoughts and chat with your notes using AI.",
+    "tag": "Not available",
+    "url": "https://lazy.so/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "lazy-20"
+  },
+  {
+    "title": "Linnk.ai",
+    "body": "Instant insights where you read.",
+    "tag": "Freemium",
+    "url": "https://www.linnk.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "linnkai"
+  },
+  {
+    "title": "Lock-in",
+    "body": "AI focus assistant for optimizing attention.",
+    "url": "https://lock-in.ai/?ref=riseofmachine.com",
+    "tag": "Contact for pricing",
+    "date-added": "2025-07-31",
+    "slug": "lock-in"
+  },
+  {
+    "title": "Lyra",
+    "body": "Record, transcribe + auto‑create action items for every call.",
+    "tag": "Freemium",
+    "url": "https://lyra.so?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "lyra"
+  },
+  {
+    "title": "MagicTrips",
+    "body": "Personalized travel itineraries in seconds.",
+    "tag": "Free",
+    "url": "https://magictrips.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "magictrips"
+  },
+  {
+    "title": "Mavex.ai",
+    "body": "Personal AI executive assistant.",
+    "tag": "Freemium",
+    "url": "https://mavex.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "mavexai"
+  },
+  {
+    "title": "Meet-Ting",
+    "body": "Free AI assistant for email meeting scheduling.",
+    "url": "https://meet-ting.com/?ref=riseofmachine.com",
+    "tag": "Free",
+    "date-added": "2025-07-31",
+    "slug": "meet-ting"
+  },
+  {
+    "title": "Mem",
+    "body": "Personal AI thought partner.",
+    "tag": "Freemium",
+    "url": "https://get.mem.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "mem"
+  },
+  {
+    "title": "Mindmap Extension",
+    "body": "Web pages, PDFs, YT videos to mind maps.",
+    "tag": "Freemium",
+    "url": "https://funblocks.net/ai-extensions?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "mindmap-extension"
+  },
+  {
+    "title": "Mnemosphere",
+    "body": "ChatGPT for high-performers.",
+    "tag": "Freemium",
+    "url": "https://mnemosphere.ai/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "mnemosphere"
+  },
+  {
+    "title": "MultiOn",
+    "body": "Agents that act on your behalf.",
+    "tag": "From $0.04/request",
+    "url": "https://www.multion.ai/?ref=riseofmachine.com",
+    "date-added": "2024-07-16",
+    "slug": "multion"
+  },
+  {
+    "title": "MyDeviceAI V2",
+    "body": "Private, local AI search and summarization mobile app.",
+    "tag": "Free",
+    "url": "https://github.com/navedmerchant/MyDeviceAI?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "mydeviceai-v2"
+  },
+  {
+    "title": "Nimo",
+    "body": "An intelligent canvas that goes far beyond your browser.",
+    "tag": "Freemium",
+    "url": "https://www.nimo.space?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "nimo"
+  },
+  {
+    "title": "Noiz",
+    "body": "Summarize YouTube videos with AI.",
+    "tag": "Freemium",
+    "url": "https://noiz.io/?ref=riseofmachine.com",
+    "date-added": "2024-12-14",
+    "slug": "noiz"
+  },
+  {
+    "title": "Notion",
+    "body": "You assign the tasks. Your Agents do the work.",
+    "url": "https://www.notion.so/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-22",
+    "slug": "notion"
+  },
+  {
+    "title": "Noty",
+    "body": "Meetings into action items & follow-ups.",
+    "tag": "Freemium",
+    "url": "https://noty.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "noty"
+  },
+  {
+    "title": "Nurturally",
+    "body": "Lead nurturing platform for intelligent follow-ups.",
+    "tag": "From $19/mo",
+    "url": "https://nurturally.io/?ref=riseofmachine.com",
+    "date-added": "2025-05-27",
+    "slug": "nurturally"
+  },
+  {
+    "title": "OCRMD",
+    "body": "PDFs into editable Markdown and LaTeX.",
+    "tag": "Freemium",
+    "url": "https://ocrmd.com/?ref=riseofmachine.com",
+    "date-added": "2025-08-30",
+    "slug": "ocrmd"
+  },
+  {
+    "title": "Openai-translator",
+    "body": "Open source project. Crossword translation...",
+    "tag": "Not available",
+    "url": "https://github.com/yetone/openai-translator?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "openai-translator"
+  },
+  {
+    "title": "Orchestra",
+    "body": "A chat-centric workspace for builders and modern teams.",
+    "tag": "Freemium",
+    "url": "https://orch.so/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "orchestra"
+  },
+  {
+    "title": "Otter",
+    "body": "Meeting assistant.",
+    "tag": "Freemium",
+    "url": "https://otter.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "otter"
+  },
+  {
+    "title": "Pally AI",
+    "body": "Researches contacts' online posts for meeting prep.",
+    "tag": "Freemium",
+    "url": "https://pally.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "pally-ai"
+  },
+  {
+    "title": "PDFConvo",
+    "body": "Document Q&A.",
+    "tag": "From $2.99/mo",
+    "url": "https://www.pdfconvo.com/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "pdfconvo"
+  },
+  {
+    "title": "Peerfect",
+    "body": "Cover letter generator.",
+    "tag": "Free",
+    "url": "https://peerfect.net/coverletter?ref=riseofmachine.com",
+    "date-added": "2024-10-22",
+    "slug": "peerfect"
+  },
+  {
+    "title": "Personal",
+    "body": "Personal AI messenger.",
+    "tag": "From $0/mo",
+    "url": "https://www.personal.ai/?ref=riseofmachine.com",
+    "date-added": "2024-09-28",
+    "slug": "personal"
+  },
+  {
+    "title": "Pitch",
+    "body": "Create & share presentations.",
+    "tag": "Freemium",
+    "url": "https://pitch.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "pitch"
+  },
+  {
+    "title": "PixieBrix",
+    "body": "Productivity.",
+    "tag": "Not available",
+    "url": "https://www.pixiebrix.com/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "pixiebrix"
+  },
+  {
+    "title": "Plus Docs",
+    "body": "Generate & edit presentations.",
+    "tag": "Freemium",
+    "url": "https://www.plusdocs.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-22",
+    "slug": "plus-docs"
+  },
+  {
+    "title": "Plz.ai Directory",
+    "body": "AI tool directory for various tasks.",
+    "tag": "Free",
+    "url": "https://plz.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "plzai-directory"
+  },
+  {
+    "title": "Pointer",
+    "body": "AI to edit your documents within Google Docs.",
+    "tag": "Freemium",
+    "url": "https://www.getpointer.ai/google-docs-ai?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "pointer"
+  },
+  {
+    "title": "Powered Template",
+    "body": "Free presentation generator.",
+    "tag": "Freemium",
+    "url": "https://ai.poweredtemplate.com/?ref=riseofmachine.com",
+    "date-added": "2025-01-06",
+    "slug": "powered-template"
+  },
+  {
+    "title": "Reclaim AI",
+    "body": "Smart calendar tool.",
+    "tag": "Freemium",
+    "url": "https://reclaim.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "reclaim-ai"
+  },
+  {
+    "title": "remio Note Taker",
+    "body": "Local first AI note taker and PKM solution.",
+    "tag": "Not available",
+    "url": "https://remio.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "remio-note-taker"
+  },
+  {
+    "title": "Rewind AI",
+    "body": "Find anything you have seen, said, or heard.",
+    "tag": "Freemium",
+    "url": "https://www.rewind.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "rewind-ai"
+  },
+  {
+    "title": "Reztune",
+    "body": "Rewrite and format your resume for any job.",
+    "tag": "Freemium",
+    "url": "https://reztune.com/?ref=riseofmachine.com",
+    "date-added": "2025-08-30",
+    "slug": "reztune"
+  },
+  {
+    "title": "Riley Parenting",
+    "body": "AI parenting app with tracking & personalized guidance.",
+    "tag": "From $7.99/mo",
+    "url": "https://go.rileyapp.com/phunt?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "riley-parenting"
+  },
+  {
+    "title": "Runbear",
+    "body": "Custom ChatGPT for Slack, Teams, HubSpot. Build AI teammates.",
+    "tag": "Freemium",
+    "url": "https://runbear.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "runbear"
+  },
+  {
+    "title": "Runner H AI",
+    "body": "Automates complex tasks using natural language.",
+    "tag": "Free",
+    "url": "https://runnerhai.com?ref=riseofmachine.com",
+    "date-added": "2025-06-08",
+    "slug": "runner-h-ai"
+  },
+  {
+    "title": "Sara Interviewer",
+    "body": "Hire 10x faster with unbiased AI interviews.",
+    "tag": "Freemium",
+    "url": "https://teammates.ai/sara?ref=riseofmachine.com",
+    "date-added": "2025-07-07",
+    "slug": "sara-interviewer"
+  },
+  {
+    "title": "Semantic Email",
+    "body": "AI extracts data from emails to fill Google Forms.",
+    "tag": "Freemium",
+    "url": "https://promptrepo.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "semantic-email"
+  },
+  {
+    "title": "ShortcutAI",
+    "body": "ChatGPT for Apple notes.",
+    "tag": "Freemium",
+    "url": "https://shortcutai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "shortcutai"
+  },
+  {
+    "title": "Sidekick",
+    "body": "Build automations with a chat interface.",
+    "tag": "Freemium",
+    "url": "https://joinsidekick.com/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "sidekick"
+  },
+  {
+    "title": "Sider",
+    "body": "AI assistant.",
+    "tag": "From $10/mo",
+    "url": "https://sider.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "sider"
+  },
+  {
+    "title": "Skywork",
+    "body": "AI tool for productivity & workflow automation.",
+    "tag": "Not available",
+    "url": "https://skywork.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "skywork"
+  },
+  {
+    "title": "SlidesAI",
+    "body": "Create slides from any text.",
+    "tag": "From $0/mo",
+    "url": "https://www.slidesai.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "slidesai"
+  },
+  {
+    "title": "Supernormal",
+    "body": "Create meeting notes.",
+    "tag": "Freemium",
+    "url": "https://supernormal.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "supernormal"
+  },
+  {
+    "title": "Syft",
+    "body": "Define your news, your topics, your way.",
+    "tag": "Not available",
+    "url": "https://syft.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "syft"
+  },
+  {
+    "title": "Taskade",
+    "body": "AI-powered productivity.",
+    "tag": "Freemium",
+    "url": "https://www.taskade.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "taskade"
+  },
+  {
+    "title": "ThinkFill",
+    "body": "Form filling.",
+    "tag": "Freemium",
+    "url": "https://thinkfill.ai/?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "thinkfill"
+  },
+  {
+    "title": "TimeOS",
+    "body": "Automate meetings.",
+    "tag": "Freemium",
+    "url": "https://www.timeos.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "timeos"
+  },
+  {
+    "title": "TL;DV",
+    "body": "Transcribe & summarize meetings.",
+    "tag": "Freemium",
+    "url": "https://tldv.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-23",
+    "slug": "tldv"
+  },
+  {
+    "title": "TuCan Chat",
+    "body": "Translate WhatsApp messages—voice, video, or text.",
+    "tag": "Freemium",
+    "url": "https://tucanchat.io/?ref=riseofmachine.com",
+    "date-added": "2025-08-30",
+    "slug": "tucan-chat"
+  },
+  {
+    "title": "Ultra",
+    "body": "Chat with your email.",
+    "tag": "Not available",
+    "url": "https://ultramail.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "ultra"
+  },
+  {
+    "title": "Umi-ocr",
+    "body": "Comes with a highly efficient offline OCR...",
+    "tag": "Free",
+    "url": "https://github.com/hiroi-sora/Umi-OCR?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "umi-ocr"
+  },
+  {
+    "title": "VocalScribe",
+    "body": "Voice recordings into polished blog posts.",
+    "tag": "Freemium",
+    "url": "https://vocalscribe.xyz/?ref=riseofmachine.com",
+    "date-added": "2024-11-07",
+    "slug": "vocalscribe"
+  },
+  {
+    "title": "Walles",
+    "body": "AI assistant plugin.",
+    "tag": "Freemium",
+    "url": "https://walles.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "walles"
+  },
+  {
+    "title": "Wave",
+    "body": "Task automation.",
+    "tag": "Not available",
+    "url": "https://thatswave.com/login?ref=riseofmachine.com",
+    "category": "productivity",
+    "date-added": "2025-06-06",
+    "slug": "wave"
+  },
+  {
+    "title": "Wiseone",
+    "body": "AI-powered reading tool.",
+    "tag": "Extension",
+    "url": "https://wiseone.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "wiseone"
+  },
+  {
+    "title": "Wudpecker",
+    "body": "Storing meeting knowledge.",
+    "tag": "Freemium",
+    "url": "https://www.wudpecker.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "wudpecker"
+  },
+  {
+    "title": "Xmind",
+    "body": "Turn mind maps into lightweight project plans.",
+    "tag": "Freemium",
+    "url": "https://xmind.com?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "xmind"
+  },
+  {
+    "title": "You",
+    "body": "Personalized, private AI search results.",
+    "tag": "Freemium",
+    "url": "https://you.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "you"
+  },
+  {
+    "title": "Youtube Transcripts",
+    "body": "Easily convert YouTube videos to text.",
+    "tag": "Freemium",
+    "url": "https://youtubetranscripts.org/?ref=riseofmachine.com",
+    "date-added": "2025-10-10",
+    "slug": "youtube-transcripts"
+  },
+  {
+    "title": "zookish",
+    "body": "Conversational AI to turn website visitors to leads.",
+    "tag": "Freemium",
+    "url": "https://zookish.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "zookish"
+  },
+  {
+    "title": "Zyler AI",
+    "body": "AI agent for Marketing Analytics. Create reports faster.",
+    "tag": "Freemium",
+    "url": "https://www.zyler.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "zyler-ai"
+  }
+]

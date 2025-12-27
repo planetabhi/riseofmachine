@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Chub",
+    "body": "Create and roleplay with AI characters.",
+    "url": "https://chub.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "chub"
+  },
+  {
+    "title": "Game Generator",
+    "body": "AI-powered game generation.",
+    "tag": "Freemium",
+    "url": "https://ai-game-generator.com/?ref=riseofmachine.com",
+    "date-added": "2025-10-27",
+    "slug": "game-generator"
+  },
+  {
+    "title": "Meshy",
+    "body": "Turn simple text prompts or images into full 3D models.",
+    "url": "https://www.meshy.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "meshy"
+  },
+  {
+    "title": "Path Weaver",
+    "body": "Roleplay stories.",
+    "tag": "Freemium",
+    "url": "https://www.pathweaver.app/?ref=riseofmachine.com",
+    "category": "gaming",
+    "date-added": "2025-06-06",
+    "slug": "path-weaver"
+  },
+  {
+    "title": "Pinpoint Answer",
+    "body": "AI-powered LinkedIn Pinpoint game analysis.",
+    "tag": "Not available",
+    "url": "https://pinpointanswer.online/?ref=riseofmachine.com",
+    "date-added": "2025-08-01",
+    "slug": "pinpoint-answer"
+  },
+  {
+    "title": "Qmai",
+    "body": "AI motion capture.",
+    "tag": "Not available",
+    "url": "https://www.qmai.vip/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "qmai"
+  },
+  {
+    "title": "Rolechar",
+    "body": "AI character chat and immersive roleplay.",
+    "url": "https://rolechar.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-11-05",
+    "slug": "rolechar"
+  },
+  {
+    "title": "Roleplayr",
+    "body": "Conversations with images.",
+    "tag": "Freemium",
+    "url": "https://roleplayr.ai/?ref=riseofmachine.com",
+    "category": "gaming",
+    "date-added": "2025-06-06",
+    "slug": "roleplayr"
+  },
+  {
+    "title": "Rosebud AI",
+    "body": "Create games.",
+    "tag": "Beta",
+    "url": "https://www.rosebud.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-12",
+    "slug": "rosebud-ai"
+  },
+  {
+    "title": "Saga",
+    "body": "AI text role-playing game.",
+    "tag": "Freemium",
+    "url": "https://sagarpg.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "saga"
+  },
+  {
+    "title": "SilentSalt",
+    "body": "A thrilling horror game experience.",
+    "tag": "Free",
+    "url": "https://silentsalt.site/?ref=riseofmachine.com",
+    "date-added": "2025-10-03",
+    "slug": "silentsalt"
+  },
+  {
+    "title": "Soga AI",
+    "body": "AI character chatbot game.",
+    "tag": "Freemium",
+    "url": "https://soga.gg/?ref=riseofmachine.com",
+    "date-added": "2024-04-18",
+    "slug": "soga-ai"
+  }
+]

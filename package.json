@@ -9,9 +9,12 @@
     "src/data/tools.json"
   ],
   "scripts": {
-    "dev": "node scripts/add-slugs.js && astro dev",
+    "split-data": "node scripts/split-data.js",
+    "generate-slug-map": "node scripts/generate-slug-map.js",
+    "prepare-data": "npm run split-data && npm run generate-slug-map",
+    "dev": "npm run prepare-data && node scripts/add-slugs.js && astro dev",
     "start": "astro dev",
-    "build": "node scripts/add-slugs.js && astro build",
+    "build": "npm run prepare-data && node scripts/add-slugs.js && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check-data": "node scripts/check-data.js",

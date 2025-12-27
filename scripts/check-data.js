@@ -11,7 +11,7 @@ const REQUIRED_REF = '?ref=riseofmachine.com';
 
 try {
   const data = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'));
-  
+
   if (!data.tools || !Array.isArray(data.tools)) {
     console.error('❌ Invalid tools.json structure');
     process.exit(1);
@@ -119,6 +119,39 @@ try {
     console.log();
   }
 
+  // Also validate split category files if they exist
+  const toolsDir = path.join(__dirname, '../src/data/tools');
+  if (fs.existsSync(toolsDir)) {
+    console.log(`\n📦 Validating split category files...`);
+
+    const files = fs.readdirSync(toolsDir).filter(f => f.endsWith('.json'));
+    let splitToolsChecked = 0;
+
+    files.forEach(file => {
+      const filepath = path.join(toolsDir, file);
+      const categoryData = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+      const categoryName = file.replace('.json', '');
+
+      categoryData.forEach(tool => {
+        splitToolsChecked++;
+
+        // Same validation as main tools.json
+        if (!tool.url) {
+          issues.missing_url.push({ ...tool, category: categoryName });
+        } else {
+          if (!tool.url.startsWith('http://') && !tool.url.startsWith('https://')) {
+            issues.missing_protocol.push({ ...tool, category: categoryName });
+          }
+          if (!tool.url.includes(REQUIRED_REF)) {
+            issues.missing_ref.push({ ...tool, category: categoryName });
+          }
+        }
+      });
+    });
+
+    console.log(`✅ Validated ${files.length} category files (${splitToolsChecked} tools)`);
+  }
+
   console.log(`${'='.repeat(70)}`);
 
   if (!hasIssues) {
@@ -126,8 +159,8 @@ try {
     process.exit(0);
   }
 
-  const issueCount = issues.missing_url.length + issues.missing_protocol.length + 
-                     issues.missing_ref.length + duplicates.length;
+  const issueCount = issues.missing_url.length + issues.missing_protocol.length +
+    issues.missing_ref.length + duplicates.length;
   console.log(`Summary: ${issueCount} issue(s) found\n`);
 
   process.exit(1);

@@ -1,0 +1,152 @@
+[
+  {
+    "title": "AiCoursify",
+    "body": "Courses.",
+    "tag": "From $49/mo",
+    "url": "https://www.aicoursify.com/?ref=riseofmachine.com",
+    "category": "education",
+    "date-added": "2025-06-06",
+    "slug": "aicoursify"
+  },
+  {
+    "title": "Bevinzey",
+    "body": "Learning platform for students and educators.",
+    "tag": "From $13/mo",
+    "url": "https://bevinzey.com/?ref=riseofmachine.com",
+    "date-added": "2024-05-02",
+    "slug": "bevinzey"
+  },
+  {
+    "title": "Eduaide",
+    "body": "Create lesson, teaching resources, & assessments.",
+    "tag": "Freemium",
+    "url": "https://www.eduaide.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "eduaide"
+  },
+  {
+    "title": "EverLearns",
+    "body": "AI learning space.",
+    "tag": "From $119/yr",
+    "url": "https://everlearns.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "everlearns"
+  },
+  {
+    "title": "Examful AI",
+    "body": "AP, IB, A-Level papers and tutoring.",
+    "tag": "Free",
+    "url": "https://examful.ai/?ref=riseofmachine.com",
+    "date-added": "2024-10-23",
+    "slug": "examful-ai"
+  },
+  {
+    "title": "FourGPA",
+    "body": "Exam preparation.",
+    "tag": "Freemium",
+    "url": "https://www.fourgpa.com/?ref=riseofmachine.com",
+    "category": "education",
+    "date-added": "2025-06-06",
+    "slug": "fourgpa"
+  },
+  {
+    "title": "Grader Good",
+    "body": "Grading tool for educators.",
+    "tag": "From $119/yr",
+    "url": "https://gradergood.com/?ref=riseofmachine.com",
+    "date-added": "2024-10-04",
+    "slug": "grader-good"
+  },
+  {
+    "title": "LearnFast",
+    "body": "Solve math & physics problems.",
+    "tag": "Freemium",
+    "url": "https://learnfast.ai/?ref=riseofmachine.com",
+    "date-added": "2024-11-07",
+    "slug": "learnfast"
+  },
+  {
+    "title": "Lovestudy.Ai",
+    "body": "Study materials.",
+    "tag": "Freemium",
+    "url": "https://lovestudy.ai/?ref=riseofmachine.com",
+    "category": "education",
+    "date-added": "2025-06-06",
+    "slug": "lovestudyai"
+  },
+  {
+    "title": "Manna",
+    "body": "Duolingo for bible study with a study pet.",
+    "url": "https://themanna.app?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-24",
+    "slug": "manna"
+  },
+  {
+    "title": "Math.now",
+    "body": "Solve math problems.",
+    "tag": "Free",
+    "url": "https://math.now/?ref=riseofmachine.com",
+    "date-added": "2024-10-22",
+    "slug": "mathnow"
+  },
+  {
+    "title": "Mindgrasp",
+    "body": "Transform lectures and readings into study tools.",
+    "tag": "From $5.99",
+    "url": "https://www.mindgrasp.ai/?ref=riseofmachine.com",
+    "date-added": "2024-12-14",
+    "slug": "mindgrasp"
+  },
+  {
+    "title": "My Math Solver AI",
+    "body": "Solve math problems.",
+    "tag": "Free",
+    "url": "https://mymathsolver.ai/?ref=riseofmachine.com",
+    "date-added": "2024-10-23",
+    "slug": "my-math-solver-ai"
+  },
+  {
+    "title": "Studdy",
+    "body": "Snap and ask.",
+    "tag": "Freemium",
+    "url": "https://studdy.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "studdy"
+  },
+  {
+    "title": "Study Fetch",
+    "body": "Cleart flashcards, quizzes, and chat help.",
+    "tag": "Not available",
+    "url": "https://www.studyfetch.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "study-fetch"
+  },
+  {
+    "title": "Thea",
+    "body": "Study assistance.",
+    "tag": "Not available",
+    "url": "https://www.theastudy.com/home?ref=riseofmachine.com",
+    "category": "education",
+    "date-added": "2025-06-06",
+    "slug": "thea"
+  },
+  {
+    "title": "Thesify",
+    "body": "Academic writing.",
+    "tag": "Freemium",
+    "url": "https://www.thesify.ai/?ref=riseofmachine.com",
+    "category": "education",
+    "date-added": "2025-06-06",
+    "slug": "thesify"
+  },
+  {
+    "title": "Thesisai",
+    "body": "Academic writing.",
+    "tag": "Not available",
+    "url": "https://theresanaiforthat.com/ai/thesisai/?ref=riseofmachine.com",
+    "category": "education",
+    "date-added": "2025-06-06",
+    "slug": "thesisai"
+  }
+]

@@ -1,15 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import data from "../../data/tools.json";
+import slugMap from "../../data/slug-map.json";
 import metadata from "../../data/metadata.json";
 import "@new-ui/foundations";
 import SoftwareApplicationSchema from "../../components/schema/SoftwareApplicationSchema.astro";
 import BreadcrumbSchema from "../../components/schema/BreadcrumbSchema.astro";
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+  // Import tools.json only for build-time path generation
+  const data = await import("../../data/tools.json");
   const paths: any[] = [];
 
-  data.tools.forEach((category: any) => {
+  data.default.tools.forEach((category: any) => {
     category.content.forEach((tool: any) => {
       if (tool.slug) {
         paths.push({ params: { slug: tool.slug } });
@@ -23,16 +25,24 @@ export function getStaticPaths() {
 export const prerender = true;
 
 const { slug } = Astro.params;
-const found =
-  data.tools.flatMap((t) => t.content).find((x) => x.slug === slug) || null;
+
+// Use slug-map to find category
+const categoryName = (slugMap as Record<string, string>)[slug as string];
+
+if (!categoryName) {
+  throw new Error(`Tool not found: ${slug}`);
+}
+
+// Dynamically import only the needed category file
+const categoryTools = await import(`../../data/tools/${categoryName}.json`);
+const found = categoryTools.default.find((x: any) => x.slug === slug) || null;
 
 if (!found) {
-  // If slug not found, render not-found behaviour (Astro will handle as 404)
   throw new Error(`Tool not found: ${slug}`);
 }
 
 const tool = found;
-const category = tool.category || "all";
+const category = categoryName;
 
 // helpers
 function extractDomain(url: string) {
@@ -78,8 +88,9 @@ const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${
 const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}&title=${encodedShareText}`;
 
 // Get category title for breadcrumb
-const categoryData = data.tools.find((cat: any) => cat.category === category);
-const categoryTitle = categoryData?.title || category;
+// We'll use the category name directly since we don't have the full data loaded
+const categoryTitle =
+  categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
 
 // Breadcrumb data
 const breadcrumbs = [
@@ -219,7 +230,7 @@ const breadcrumbs = [
           </section>
 
           <div class="tool-detail-share">
-            <h3 class="share-title">Share this AI tool</h3>
+            <h3 class="share-title">Share</h3>
             <div class="share-buttons">
               <a
                 href={xShareUrl}
@@ -394,6 +405,9 @@ const breadcrumbs = [
   </style>
 
   <style scoped>
+    article {
+      margin-bottom: var(--spacing-06);
+    }
     .tool-detail-modal-backdrop {
       position: fixed;
       inset: 0;
@@ -404,6 +418,9 @@ const breadcrumbs = [
       z-index: 10000000;
       padding: var(--spacing-05);
       overflow-y: auto;
+      background-image: url(/grid.png);
+      background-size: 5px;
+      background-repeat: repeat;
     }
 
     .tool-detail-modal {
@@ -475,11 +492,7 @@ const breadcrumbs = [
     .tool-summary {
       display: flex;
       flex-direction: column;
-      background: var(--background-secondary);
       gap: var(--spacing-05);
-      padding: var(--spacing-06);
-
-      border: 0.5px solid var(--border-muted);
     }
 
     .tool-description {
@@ -573,7 +586,9 @@ const breadcrumbs = [
     .snapshot-label {
       margin: 0;
       font-size: var(--desktop-caption);
-      color: var(--content-secondary-alt);
+      color: var(--content-secondary);
+      font-family: var(--monospace);
+      letter-spacing: 0.05rem;
       text-transform: uppercase;
     }
 
@@ -619,8 +634,8 @@ const breadcrumbs = [
       text-decoration: none;
       font-weight: 600;
       text-align: center;
-      font-size: var(--desktop-body-sm);
-      line-height: var(--lh-desktop-body-sm);
+      font-size: var(--desktop-body);
+      line-height: var(--lh-desktop-body);
     }
 
     .btn-primary:hover {
@@ -738,7 +753,7 @@ const breadcrumbs = [
       justify-content: center;
 
       background-color: var(--background);
-      border: 0.5px solid var(--border-muted);
+      border: none;
       color: var(--content-secondary);
     }
 
@@ -760,11 +775,12 @@ const breadcrumbs = [
     }
 
     .share-title {
-      color: var(--content-secondary-alt);
-      font-size: var(--desktop-caption);
-      line-height: var(--lh-desktop-caption);
-      text-transform: uppercase;
       margin-bottom: var(--spacing-04);
+      font-size: var(--desktop-caption);
+      color: var(--content-secondary);
+      font-family: var(--monospace);
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
     }
 
     .tool-detail-share {

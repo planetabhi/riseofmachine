@@ -1,0 +1,154 @@
+[
+  {
+    "title": "AskCodebase",
+    "body": "AI programming agent.",
+    "tag": "From $10/mo",
+    "url": "https://askcodebase.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-25",
+    "slug": "askcodebase"
+  },
+  {
+    "title": "Bito",
+    "body": "Assistant with ChatGPT for devs.",
+    "tag": "Freemium",
+    "url": "https://bito.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "bito"
+  },
+  {
+    "title": "Blackbox AI",
+    "body": "The AI-powered coding assistant.",
+    "url": "https://www.blackbox.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "blackbox-ai"
+  },
+  {
+    "title": "Builder.io",
+    "body": "The visual development platform.",
+    "url": "https://www.builder.io/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "builderio"
+  },
+  {
+    "title": "Code Snippets",
+    "body": "Manage code snippets, visualize codebase.",
+    "tag": "From $4/mo",
+    "url": "https://codesnippets.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "code-snippets"
+  },
+  {
+    "title": "Codeium",
+    "body": "AI-powered toolkit.",
+    "tag": "From $0/mo",
+    "url": "https://codeium.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "codeium"
+  },
+  {
+    "title": "CodeStream",
+    "body": "AI assistant for code refactoring.",
+    "tag": "From $19/mo",
+    "url": "https://codestream.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-19",
+    "slug": "codestream"
+  },
+  {
+    "title": "Cody by Sourcegraph",
+    "body": "AI coding assistant that writes code.",
+    "url": "https://about.sourcegraph.com/cody?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "cody-by-sourcegraph"
+  },
+  {
+    "title": "Continue",
+    "body": "Autopilot in IDE.",
+    "tag": "Open-source",
+    "url": "https://continue.dev/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "continue"
+  },
+  {
+    "title": "Cursor",
+    "body": "Editor for pair-programming with AI.",
+    "tag": "Freemium",
+    "url": "https://cursor.com/?ref=riseofmachine.com",
+    "date-added": "2024-08-26",
+    "slug": "cursor"
+  },
+  {
+    "title": "Cursor Directory",
+    "body": ".cursorrules files directory.",
+    "tag": "Freemium",
+    "url": "https://cursor.directory/?ref=riseofmachine.com",
+    "date-added": "2024-08-26",
+    "slug": "cursor-directory"
+  },
+  {
+    "title": "Developer Pal",
+    "body": "The AI-powered coding assistant.",
+    "url": "https://www.developerpal.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "developer-pal"
+  },
+  {
+    "title": "GitHub Copilot",
+    "body": "AI pair programmer.",
+    "tag": "From $10/mo",
+    "url": "https://github.com/features/copilot/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "github-copilot"
+  },
+  {
+    "title": "Grok Video",
+    "body": "AI video generation.",
+    "tag": "Freemium",
+    "url": "https://grokvideo.net?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "grok-video"
+  },
+  {
+    "title": "Lovable",
+    "body": "The AI-native product platform.",
+    "url": "https://lovable.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "lovable"
+  },
+  {
+    "title": "Melty",
+    "body": "AI code editor.",
+    "tag": "Early access",
+    "url": "https://melty.sh/?ref=riseofmachine.com",
+    "date-added": "2024-09-11",
+    "slug": "melty"
+  },
+  {
+    "title": "Q Developer",
+    "body": "Assistant for software development.",
+    "tag": "Freemium",
+    "url": "https://aws.amazon.com/q/developer/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "q-developer"
+  },
+  {
+    "title": "Qodo",
+    "body": "Automates code reviews, test generation & QA.",
+    "tag": "Freemium",
+    "url": "https://www.qodo.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "qodo"
+  },
+  {
+    "title": "Replit Ghostwriter",
+    "body": "The AI-powered pair programmer.",
+    "url": "https://replit.com/site/ghostwriter?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-10-22",
+    "slug": "replit-ghostwriter"
+  }
+]

@@ -1,0 +1,693 @@
+[
+  {
+    "title": "ChatGPT Apps SDK",
+    "body": "Build and monetize apps for the ChatGPT marketplace.",
+    "tag": "Free",
+    "url": "https://chatgpt-app.net?ref=riseofmachine.com",
+    "date-added": "2025-12-21",
+    "slug": "chatgpt-apps-sdk"
+  },
+  {
+    "title": "AI SDK 5 by Vercel",
+    "body": "The AI toolkit for TypeScript.",
+    "tag": "Open-source",
+    "url": "https://vercel.com/blog/ai-sdk-5?ref=riseofmachine.com",
+    "date-added": "2025-08-01",
+    "slug": "ai-sdk-5-by-vercel"
+  },
+  {
+    "title": "AI2sql",
+    "body": "Natural language to SQL queries effortlessly.",
+    "tag": "Freemium",
+    "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "ai2sql"
+  },
+  {
+    "title": "Amazon Codewhisperer",
+    "body": "A code writing assistant developed by Amazon",
+    "tag": "Not available",
+    "url": "https://aws.amazon.com/cn/codewhisperer?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "amazon-codewhisperer"
+  },
+  {
+    "title": "Amazon SageMaker",
+    "body": "Build, train, and deploy ML models at scale.",
+    "tag": "Freemium",
+    "url": "https://aws.amazon.com/sagemaker/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "amazon-sagemaker"
+  },
+  {
+    "title": "Archie",
+    "body": "Product development.",
+    "tag": "Freemium",
+    "url": "https://archie.8base.com/?ref=riseofmachine.com",
+    "category": "developer",
+    "date-added": "2025-06-06",
+    "slug": "archie"
+  },
+  {
+    "title": "Atla",
+    "body": "Automatically detect errors in your AI agents.",
+    "url": "https://www.atla.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-23",
+    "slug": "atla"
+  },
+  {
+    "title": "AutoRegex",
+    "body": "From English to RegEx.",
+    "tag": "Free",
+    "url": "https://www.autoregex.xyz/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "autoregex"
+  },
+  {
+    "title": "Axflow",
+    "body": "TypeScript framework for AI development.",
+    "tag": "Open-source",
+    "url": "https://axflow.dev/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "axflow"
+  },
+  {
+    "title": "BingChain",
+    "body": "AI-powered chatbot framework, Langchain alternative.",
+    "tag": "Free",
+    "url": "https://github.com/postman-open-technologies/bingchain?ref=riseofmachine.com",
+    "date-added": "2025-06-03",
+    "slug": "bingchain"
+  },
+  {
+    "title": "Blaze SQL",
+    "body": "AI-driven, no-code SQL query generation.",
+    "tag": "Paid",
+    "url": "https://www.blazesql.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "blaze-sql"
+  },
+  {
+    "title": "Buildrs",
+    "body": "The one place to find vibe coders.",
+    "tag": "Free",
+    "url": "https://buildrs.space/?ref=riseofmachine.com",
+    "date-added": "2025-07-07",
+    "slug": "buildrs"
+  },
+  {
+    "title": "BuildShip",
+    "body": "Build workflows, APIs, & scheduled jobs.",
+    "tag": "Freemium",
+    "url": "https://buildship.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "buildship"
+  },
+  {
+    "title": "Builduo",
+    "body": "Build API backends.",
+    "tag": "Freemium",
+    "url": "https://builduo.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-16",
+    "slug": "builduo"
+  },
+  {
+    "title": "CapMonster Cloud",
+    "body": "AI CAPTCHA-solving service for automation pros.",
+    "tag": "Paid",
+    "url": "https://capmonster.cloud/en/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "capmonster-cloud"
+  },
+  {
+    "title": "Cekura",
+    "body": "Launch reliable voice & chat AI agents faster. Automates QA.",
+    "tag": "Freemium",
+    "url": "https://cekura.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "cekura"
+  },
+  {
+    "title": "Chef",
+    "body": "AI-powered software development assistant.",
+    "tag": "Not available",
+    "url": "https://chef.convex.dev/?ref=riseofmachine.com",
+    "date-added": "2025-06-04",
+    "slug": "chef"
+  },
+  {
+    "title": "Codebuddy",
+    "body": "AI powered coding.",
+    "tag": "Freemium",
+    "url": "https://codebuddy.ca/?ref=riseofmachine.com",
+    "date-added": "2024-08-21",
+    "slug": "codebuddy"
+  },
+  {
+    "title": "Cosine",
+    "body": "Search & understand large codebases.",
+    "tag": "Free",
+    "url": "https://cosine.sh/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "cosine"
+  },
+  {
+    "title": "create-api.dev",
+    "body": "AI tool to generate OpenAPI specs, no login needed.",
+    "tag": "Free",
+    "url": "https://create-api.dev/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "create-apidev"
+  },
+  {
+    "title": "Cursor MCP",
+    "body": "Find the best MCP Servers for Cursor.",
+    "tag": "Free",
+    "url": "https://cursormcp.net/en?ref=riseofmachine.com",
+    "date-added": "2025-09-16",
+    "slug": "cursor-mcp"
+  },
+  {
+    "title": "Director",
+    "body": "A web browser for your AI.",
+    "tag": "Freemium",
+    "url": "https://browserbase.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "director"
+  },
+  {
+    "title": "Droidrun",
+    "body": "Open-source AI mobile app automation platform.",
+    "url": "https://www.droidrun.ai/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "droidrun"
+  },
+  {
+    "title": "EVOLink",
+    "body": "Pay less for top image, video & chat models.",
+    "tag": "$X One-time",
+    "url": "https://evolink.ai/?ref=riseofmachine.com",
+    "date-added": "2025-12-14",
+    "slug": "evolink"
+  },
+  {
+    "title": "Fitten Code",
+    "body": "Fitten Code is an AI programming assistant...",
+    "tag": "Free",
+    "url": "https://code.fittentech.com/en?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "fitten-code"
+  },
+  {
+    "title": "Flappy",
+    "body": "Production-Ready LLM Agent SDK for Every Developer",
+    "tag": "Free",
+    "url": "https://github.com/pleisto/flappy?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "flappy"
+  },
+  {
+    "title": "Frontend",
+    "body": "UI generated from prompts or images by AI.",
+    "tag": "Not available",
+    "url": "https://frontend.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "frontend"
+  },
+  {
+    "title": "Helix",
+    "body": "Build, optimize text and image AI.",
+    "tag": "Freemium",
+    "url": "https://tryhelix.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "helix"
+  },
+  {
+    "title": "I18n Code Gen",
+    "body": "AI-powered code translation and localization tool.",
+    "tag": "Free",
+    "url": "https://github.com/linexjlin/I18nCodeGenServer?ref=riseofmachine.com",
+    "date-added": "2025-06-03",
+    "slug": "i18n-code-gen"
+  },
+  {
+    "title": "KitOps",
+    "body": "Packaging for AI/ML projects.",
+    "tag": "Free",
+    "url": "https://kitops.ml/?ref=riseofmachine.com",
+    "date-added": "2025-06-04",
+    "slug": "kitops"
+  },
+  {
+    "title": "Lightning",
+    "body": "Train. Deploy. Host AI web apps.",
+    "tag": "Freemium",
+    "url": "https://lightning.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "lightning"
+  },
+  {
+    "title": "Liner",
+    "body": "Build & deploy ML applications.",
+    "tag": "Free",
+    "url": "https://liner.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "liner"
+  },
+  {
+    "title": "Lintrule",
+    "body": "Using LLM for code reviews.",
+    "tag": "$1.00/1,000 lines",
+    "url": "https://www.lintrule.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "lintrule"
+  },
+  {
+    "title": "Lm-sys/fastchat",
+    "body": "An open platform for training, serving, and...",
+    "tag": "Free",
+    "url": "https://github.com/lm-sys/FastChat?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "lm-sysfastchat"
+  },
+  {
+    "title": "Lobe Chat",
+    "body": "Open-source AI chat framework.",
+    "tag": "Free",
+    "url": "https://lobechat.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-04",
+    "slug": "lobe-chat"
+  },
+  {
+    "title": "MakeHub",
+    "body": "LLM provider arbitrage for best price/performance via single API.",
+    "tag": "Not available",
+    "url": "https://makehub.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "makehub"
+  },
+  {
+    "title": "Marscode",
+    "body": "Built-in AI programming assistant with capabili...",
+    "tag": "Free",
+    "url": "https://www.marscode.com?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "marscode"
+  },
+  {
+    "title": "Marvin",
+    "body": "Build AI interfaces.",
+    "tag": "Free",
+    "url": "https://www.askmarvin.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "marvin"
+  },
+  {
+    "title": "n8n Workflow Builder",
+    "body": "Build AI automations & agents.",
+    "tag": "Open-source",
+    "url": "https://n8n.io?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "n8n-workflow-builder"
+  },
+  {
+    "title": "Neum",
+    "body": "RAG framework for large-scale and real-time data.",
+    "tag": "Open-source",
+    "url": "https://www.neum.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "neum"
+  },
+  {
+    "title": "Nora",
+    "body": "The AI coding agent for building secure Web3 apps.",
+    "tag": "Freemium",
+    "url": "https://www.mynora.ai/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "nora"
+  },
+  {
+    "title": "Ollama Desktop App",
+    "body": "The easiest way to chat with local AI.",
+    "tag": "Open-source",
+    "url": "https://ollama.ai/download?ref=riseofmachine.com",
+    "date-added": "2025-08-01",
+    "slug": "ollama-desktop-app"
+  },
+  {
+    "title": "OneNode",
+    "body": "Simplest backend for AI coding, open source.",
+    "tag": "Freemium",
+    "url": "https://www.onenode.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "onenode"
+  },
+  {
+    "title": "Open Interpreter",
+    "body": "Code Interpreter in terminal, running locally.",
+    "tag": "Open-source",
+    "url": "https://openinterpreter.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-28",
+    "slug": "open-interpreter"
+  },
+  {
+    "title": "Orchids",
+    "body": "The AI Full Stack Engineer.",
+    "tag": "Freemium",
+    "url": "https://www.orchids.app?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "orchids"
+  },
+  {
+    "title": "OSS Insight",
+    "body": "GitHub data insights with AI SQL & analytics.",
+    "tag": "Free",
+    "url": "https://ossinsight.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "oss-insight"
+  },
+  {
+    "title": "Pieces",
+    "body": "Developer productivity tool.",
+    "tag": "Free",
+    "url": "https://pieces.app/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "pieces"
+  },
+  {
+    "title": "Poe API",
+    "body": "One API for all the best AI models.",
+    "tag": "Freemium",
+    "url": "https://poe.com/api_introduction?ref=riseofmachine.com",
+    "date-added": "2025-08-04",
+    "slug": "poe-api"
+  },
+  {
+    "title": "Portia AI",
+    "body": "Build safe, reliable AI agents for compliance.",
+    "tag": "Not available",
+    "url": "https://www.portialabs.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "portia-ai"
+  },
+  {
+    "title": "Postbot",
+    "body": "AI assistant for API workflows.",
+    "tag": "Freemium",
+    "url": "https://learning.postman.com/docs/getting-started/basics/about-postbot/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "postbot"
+  },
+  {
+    "title": "Proofs.Io",
+    "body": "Proof of concept.",
+    "tag": "Freemium",
+    "url": "https://www.proofs.io/?ref=riseofmachine.com",
+    "category": "developer",
+    "date-added": "2025-06-06",
+    "slug": "proofsio"
+  },
+  {
+    "title": "Pythagora 2.0",
+    "body": "All-in-one AI dev platform. Builds apps via chat.",
+    "tag": "Freemium",
+    "url": "https://pythagora.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "pythagora-20"
+  },
+  {
+    "title": "Rantir",
+    "body": "Data, AI & integrations under one platform.",
+    "tag": "From $129/Once",
+    "url": "https://rantir.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-02",
+    "slug": "rantir"
+  },
+  {
+    "title": "Reachy Mini",
+    "body": "Open‑source desktop robot kit.",
+    "tag": "Hardware purchase",
+    "url": "https://www.pollen-robotics.com/reachy-mini/?ref=riseofmachine.com",
+    "date-added": "2025-07-16",
+    "slug": "reachy-mini"
+  },
+  {
+    "title": "RepoTalent",
+    "body": "Turn your codebase into a talent engine.",
+    "tag": "From $10/mo",
+    "url": "https://repotalent.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "repotalent"
+  },
+  {
+    "title": "Roboto",
+    "body": "Copilot for sensor data.",
+    "tag": "Freemium",
+    "url": "https://www.roboto.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "roboto"
+  },
+  {
+    "title": "Rork App",
+    "body": "Create mobile apps from an idea.",
+    "tag": "Freemium",
+    "url": "https://rork.app/?ref=riseofmachine.com",
+    "date-added": "2025-09-04",
+    "slug": "rork-app"
+  },
+  {
+    "title": "RunPod",
+    "body": "Develop, train, and scale AI apps.",
+    "tag": "From $0.2/hr",
+    "url": "https://www.runpod.io/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "runpod"
+  },
+  {
+    "title": "Rybbit",
+    "body": "Open Source Google Analytics Replacement.",
+    "tag": "Open-source",
+    "url": "https://rybbit.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-12",
+    "slug": "rybbit"
+  },
+  {
+    "title": "Rysana",
+    "body": "AIUX toolkits and APIs.",
+    "tag": "Open-source",
+    "url": "https://rysana.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "rysana"
+  },
+  {
+    "title": "Scade",
+    "body": "Develop products and services.",
+    "tag": "Beta",
+    "url": "https://www.scade.pro/?ref=riseofmachine.com",
+    "date-added": "2023-12-24",
+    "slug": "scade"
+  },
+  {
+    "title": "Scalene",
+    "body": "Scalene: a high-performance, high-precision...",
+    "tag": "Free",
+    "url": "https://github.com/plasma-umass/scalene?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "scalene"
+  },
+  {
+    "title": "Shaped",
+    "body": "Deploy embeddings infrastructure.",
+    "tag": "Flat-fee/mo",
+    "url": "https://www.shaped.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "shaped"
+  },
+  {
+    "title": "SmythOS",
+    "body": "Open source OS for AI agents. Build & deploy.",
+    "tag": "Freemium",
+    "url": "https://smythos.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "smythos"
+  },
+  {
+    "title": "StackGen",
+    "body": "AI platform for autonomous cloud management.",
+    "url": "https://stackgen.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-07-31",
+    "slug": "stackgen"
+  },
+  {
+    "title": "Starter Best",
+    "body": "A platform to discover the best new products daily.",
+    "tag": "Freemium",
+    "url": "https://starterbest.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-15",
+    "slug": "starter-best"
+  },
+  {
+    "title": "Strata",
+    "body": "One MCP server for AI agents to handle tools.",
+    "url": "https://www.strata.com/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-22",
+    "slug": "strata"
+  },
+  {
+    "title": "String.com",
+    "body": "AI agent for building other AI agents quickly.",
+    "tag": "Freemium",
+    "url": "https://string.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "stringcom"
+  },
+  {
+    "title": "Sweep",
+    "body": "Handles small features in your codebase.",
+    "tag": "Freemium",
+    "url": "https://sweep.dev/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "sweep"
+  },
+  {
+    "title": "Synexa",
+    "body": "AI model integration.",
+    "tag": "Not available",
+    "url": "https://synexa.ai/?ref=riseofmachine.com",
+    "category": "developer",
+    "date-added": "2025-06-06",
+    "slug": "synexa"
+  },
+  {
+    "title": "Synthetic",
+    "body": "Synthetic data for vision AI.",
+    "tag": "Beta",
+    "url": "https://syntheticaidata.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "synthetic"
+  },
+  {
+    "title": "Tabnine",
+    "body": "Assistant for software developers.",
+    "tag": "Freemium",
+    "url": "https://www.tabnine.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "tabnine"
+  },
+  {
+    "title": "Teable",
+    "body": "The AI database agent that transforms data.",
+    "url": "https://www.teable.io/?ref=riseofmachine.com",
+    "tag": "Freemium",
+    "date-added": "2025-09-21",
+    "slug": "teable"
+  },
+  {
+    "title": "Teachable Machine",
+    "body": "Create ML models for your sites & apps.",
+    "tag": "Free",
+    "url": "https://teachablemachine.withgoogle.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "teachable-machine"
+  },
+  {
+    "title": "TensorBlock Forge",
+    "body": "One API for all AI models.",
+    "tag": "Free",
+    "url": "https://tensorblock.co/forge?ref=riseofmachine.com",
+    "date-added": "2025-07-07",
+    "slug": "tensorblock-forge"
+  },
+  {
+    "title": "Text Remover",
+    "body": "Remove unwanted text overlays and watermarks.",
+    "tag": "Freemium",
+    "url": "https://text-remover.org/?ref=riseofmachine.com",
+    "date-added": "2025-07-06",
+    "slug": "text-remover"
+  },
+  {
+    "title": "Tinq",
+    "body": "NLP API toolkit, NLP as a service.",
+    "tag": "From $15/mo",
+    "url": "https://tinq.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "tinq"
+  },
+  {
+    "title": "Tinygrad",
+    "body": "Neural network framework.",
+    "tag": "Open-source",
+    "url": "https://tinygrad.org/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "tinygrad"
+  },
+  {
+    "title": "Trae",
+    "body": "Trae is your helpful coding partner. It offers...",
+    "tag": "Free",
+    "url": "https://www.trae.ai?ref=riseofmachine.com",
+    "date-added": "2025-06-14",
+    "slug": "trae"
+  },
+  {
+    "title": "useSAASkit",
+    "body": "AI startup boilerplate.",
+    "tag": "$119 One-time",
+    "url": "https://www.usesaaskit.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-04",
+    "slug": "usesaaskit"
+  },
+  {
+    "title": "Vellum",
+    "body": "Developer platform for LLM apps.",
+    "tag": "Not available",
+    "url": "https://www.vellum.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "vellum"
+  },
+  {
+    "title": "Viseal",
+    "body": "Immersive language learning from daily scenes.",
+    "tag": "Freemium",
+    "url": "https://viseal.ai/?ref=riseofmachine.com",
+    "date-added": "2025-07-11",
+    "slug": "viseal"
+  },
+  {
+    "title": "WebSparks",
+    "body": "AI agent for building full-stack applications.",
+    "tag": "Not available",
+    "url": "https://websparks.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "websparks"
+  },
+  {
+    "title": "X Note Writer API",
+    "body": "API for AI to propose X Community Notes.",
+    "tag": "Free",
+    "url": "https://communitynotes.x.com/guide/en/api/overview?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "x-note-writer-api"
+  },
+  {
+    "title": "Zen Agents",
+    "body": "Build & share custom AI agents for your codebase.",
+    "tag": "Freemium",
+    "url": "https://hubs.la/Q03sR2B60?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "zen-agents"
+  },
+  {
+    "title": "Zeno",
+    "body": "AI evaluation.",
+    "tag": "Open-source",
+    "url": "https://zenoml.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "zeno"
+  }
+]

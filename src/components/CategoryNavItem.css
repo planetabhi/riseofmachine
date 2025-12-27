@@ -4,7 +4,7 @@
   border: none;
   outline: none;
   background: none;
-  cursor: pointer;
+  cursor: var(--c-pointer);
   border-bottom: 1px solid transparent;
   font-family: var(--body-copy);
   font-weight: 400;

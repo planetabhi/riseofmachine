@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Akkio",
+    "body": "No-code AI for predictive analytics and models.",
+    "tag": "Freemium",
+    "url": "https://www.akkio.com/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "akkio"
+  },
+  {
+    "title": "Brancher AI",
+    "body": "Connect models to build AI apps.",
+    "tag": "100 credits free",
+    "url": "https://www.brancher.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "brancher-ai"
+  },
+  {
+    "title": "Browse AI",
+    "body": "Extract and monitor web data without coding.",
+    "tag": "Freemium",
+    "url": "https://www.browse.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "browse-ai"
+  },
+  {
+    "title": "BuildAI",
+    "body": "Build AI-powered web apps.",
+    "tag": "Freemium",
+    "url": "https://www.buildai.space/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "buildai"
+  },
+  {
+    "title": "Butternut",
+    "body": "Build websites instantly using generative AI.",
+    "tag": "Not available",
+    "url": "https://butternut.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "butternut"
+  },
+  {
+    "title": "Chaindesk",
+    "body": "Custom AI chatbot.",
+    "tag": "Freemium",
+    "url": "https://www.chaindesk.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "chaindesk"
+  },
+  {
+    "title": "Create",
+    "body": "Text to app.",
+    "tag": "Freemium",
+    "url": "https://www.create.xyz/?ref=riseofmachine.com",
+    "date-added": "2024-11-07",
+    "slug": "create"
+  },
+  {
+    "title": "Droxy",
+    "body": "No-code chatbot builder.",
+    "tag": "Freemium",
+    "url": "https://www.droxy.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-29",
+    "slug": "droxy"
+  },
+  {
+    "title": "EasySite",
+    "body": "AI website builder.",
+    "tag": "Not available",
+    "url": "https://www.easysite.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-24",
+    "slug": "easysite"
+  },
+  {
+    "title": "Ezsite.ai",
+    "body": "AI website builder.",
+    "tag": "Not available",
+    "url": "https://ezsite.ai/?ref=riseofmachine.com",
+    "date-added": "2025-06-01",
+    "slug": "ezsiteai"
+  },
+  {
+    "title": "Imagica",
+    "body": "Build no-code AI apps.",
+    "tag": "Freemium",
+    "url": "https://get.imagica.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "imagica"
+  },
+  {
+    "title": "Lindo",
+    "body": "Build landing pages.",
+    "tag": "From $17/mo",
+    "url": "https://www.lindoai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "lindo"
+  },
+  {
+    "title": "Makeform",
+    "body": "Free AI form builder, conversational text input.",
+    "tag": "Freemium",
+    "url": "https://www.makeform.ai/?ref=riseofmachine.com",
+    "category": "nocode",
+    "date-added": "2025-06-06",
+    "slug": "makeform"
+  },
+  {
+    "title": "Olive",
+    "body": "Generate admin dashboards from a natural language prompt.",
+    "tag": "Not available",
+    "url": "https://fromolive.com/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "olive"
+  },
+  {
+    "title": "PageAI",
+    "body": "Get a production-ready website from a single prompt.",
+    "tag": "$19 One-time",
+    "url": "https://pageai.pro/?ref=riseofmachine.com",
+    "date-added": "2025-06-17",
+    "slug": "pageai"
+  },
+  {
+    "title": "Riku",
+    "body": "Build & deploy.",
+    "tag": "From $29/mo",
+    "url": "https://riku.ai/?ref=riseofmachine.com",
+    "date-added": "2023-12-15",
+    "slug": "riku"
+  },
+  {
+    "title": "Shader",
+    "body": "Create AI filters.",
+    "tag": "Private Beta",
+    "url": "https://www.shaderapp.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-25",
+    "slug": "shader"
+  },
+  {
+    "title": "Stack",
+    "body": "Build custom AI assistants.",
+    "tag": "Freemium",
+    "url": "https://www.stack-ai.com/?ref=riseofmachine.com",
+    "date-added": "2023-12-26",
+    "slug": "stack"
+  },
+  {
+    "title": "UniDeck Beta",
+    "body": "No-code dashboards with AI insights and custom APIs.",
+    "tag": "Freemium",
+    "url": "https://unideck.app/?ref=riseofmachine.com",
+    "date-added": "2025-07-03",
+    "slug": "unideck-beta"
+  },
+  {
+    "title": "Vectorize AI",
+    "body": "Data into optimized vector search indexes.",
+    "tag": "Freemium",
+    "url": "https://vectorize.io/?ref=riseofmachine.com",
+    "date-added": "2024-08-04",
+    "slug": "vectorize-ai"
+  }
+]
