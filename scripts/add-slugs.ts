@@ -25,17 +25,42 @@ try {
     const data: ToolsConfig = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'));
     let modified = false;
 
+    // 1. Build a set of all existing slugs to detect collisions
+    const existingSlugs = new Set<string>();
     data.tools.forEach((category: Category) => {
-        // 1. Generate missing slugs
+        category.content.forEach((tool: Tool) => {
+            if (tool.slug) {
+                existingSlugs.add(tool.slug);
+            }
+        });
+    });
+
+    data.tools.forEach((category: Category) => {
+        // 2. Generate missing slugs with collision detection
         category.content.forEach((tool: Tool) => {
             if (!tool.slug) {
-                tool.slug = slugify(tool.title);
-                console.log(`Generated slug for ${tool.title}: ${tool.slug}`);
+                let baseSlug = slugify(tool.title);
+                let uniqueSlug = baseSlug;
+                let counter = 1;
+
+                while (existingSlugs.has(uniqueSlug)) {
+                    uniqueSlug = `${baseSlug}-${counter}`;
+                    counter++;
+                }
+
+                tool.slug = uniqueSlug;
+                existingSlugs.add(uniqueSlug);
+
+                if (uniqueSlug !== baseSlug) {
+                    console.log(`Generated unique slug for ${tool.title}: ${uniqueSlug} (collision resolved)`);
+                } else {
+                    console.log(`Generated slug for ${tool.title}: ${uniqueSlug}`);
+                }
                 modified = true;
             }
         });
 
-        // 2. Sort tools alphabetically by title
+        // 3. Sort tools alphabetically by title
         const originalOrder = [...category.content];
         category.content.sort((a, b) => a.title.localeCompare(b.title));
 
