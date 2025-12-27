@@ -6,8 +6,8 @@ This project uses [Bun](https://bun.sh/) for development and dependency manageme
 
 ```bash
 # Clone the repository
-git clone https://github.com/NewDesignFile/template-directory.git
-cd template-directory
+git clone https://github.com/planetabhi/riseofmachine.git
+cd riseofmachine
 
 # Install dependencies
 bun install

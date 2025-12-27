@@ -6,12 +6,25 @@
   "private": false,
   "main": "src/data/tools.json",
   "files": [
-    "src/data/tools.json"
+    "src/data/tools.json",
+    "src/data/tools/*.json",
+    "src/data/metadata.json",
+    "src/data/slug-map.json",
+    "src/data/tool-metadata/*.json"
   ],
+  "exports": {
+    ".": "./src/data/tools.json",
+    "./tools": "./src/data/tools.json",
+    "./metadata": "./src/data/metadata.json",
+    "./slug-map": "./src/data/slug-map.json",
+    "./categories/*": "./src/data/tools/*.json",
+    "./tool/*": "./src/data/tool-metadata/*.json"
+  },
   "scripts": {
     "add-slugs": "bun run scripts/add-slugs.ts",
     "clean": "rm -rf dist .astro src/data/slug-map.json src/data/tool-metadata",
     "prepare-data": "bun run add-slugs && bun run scripts/split-data.ts && bun run scripts/generate-slug-map.ts && bun run scripts/generate-tool-metadata.ts",
+    "prepublishOnly": "bun run prepare-data",
     "dev": "bun run prepare-data && astro dev",
     "start": "astro dev",
     "build": "bun run prepare-data && astro build",
@@ -37,18 +50,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NewDesignFile/template-directory.git"
+    "url": "git+https://github.com/planetabhi/riseofmachine.git"
   },
   "bugs": {
-    "url": "https://github.com/NewDesignFile/template-directory/issues"
+    "url": "https://github.com/planetabhi/riseofmachine/issues"
   },
   "keywords": [
     "directory",
     "ai",
-    "astro",
-    "template",
+    "tools",
     "listing",
-    "astro"
+    "curated",
+    "makers",
+    "smb",
+    "ai-agents"
   ],
   "author": "@planetabhi",
   "license": "MIT",
