@@ -54,15 +54,15 @@
     "title": "AI Coloring Page Generator – Create Printable Pages in 10 Seconds | ColorPage.ai",
     "description": "Stunning coloring pages in seconds. Enjoy fast, easy, and fun designs with our user-friendly platform. Perfect for kids, educators, and creative enthusiasts. Start your artistic journey today!"
   },
-  "comicsai": {
-    "slug": "comicsai",
-    "title": "ComicsAI - #1 Free AI Comic Factory & AI Comics Generator",
-    "description": "Create stunning anime comics with the best AI Comic Factory. Free AI Comics Generator that transforms your stories into manga & anime-style art in minutes. No drawing skills required."
-  },
   "comfy": {
     "slug": "comfy",
     "title": "ComfyUI | Generate video, images, 3D, audio with AI",
     "description": "The most powerful and modular visual AI application and engine"
+  },
+  "comicsai": {
+    "slug": "comicsai",
+    "title": "ComicsAI - #1 Free AI Comic Factory & AI Comics Generator",
+    "description": "Create stunning anime comics with the best AI Comic Factory. Free AI Comics Generator that transforms your stories into manga & anime-style art in minutes. No drawing skills required."
   },
   "designer": {
     "slug": "designer",
@@ -164,15 +164,15 @@
     "title": "NSFW AI Image Generator No Login. FREE Unlimited NSFW Images",
     "description": "Create FREE Unlimited NSFW Images without having to Log in or create an account. Try out our tool Today!"
   },
-  "imagefx": {
-    "slug": "imagefx",
-    "title": "ImageFX - Free AI Image Generator | Create Stunning AI Art",
-    "description": "Transform your ideas into stunning artwork with ImageFX, the professional AI image generator. Create high-quality digital art, illustrations, and photo-realistic images in seconds with our advanced AI technology."
-  },
   "image-to-prompt": {
     "slug": "image-to-prompt",
     "title": "Image to Prompt: Free AI Prompt Generator for Midjourney & SD",
     "description": "Free AI-powered image to prompt generator. Upload images and get detailed prompts for AI art generation with our advanced converter."
+  },
+  "imagefx": {
+    "slug": "imagefx",
+    "title": "ImageFX - Free AI Image Generator | Create Stunning AI Art",
+    "description": "Transform your ideas into stunning artwork with ImageFX, the professional AI image generator. Create high-quality digital art, illustrations, and photo-realistic images in seconds with our advanced AI technology."
   },
   "infinite-craft-guide": {
     "slug": "infinite-craft-guide",
@@ -328,11 +328,6 @@
     "title": "YIX.ai — AI Image & Video Generator for Creators",
     "description": "YIX.ai is an AI-powered creative platform for image generation, video synthesis, and smart media creation. Turn ideas into visuals in seconds."
   },
-  "reelscribe": {
-    "slug": "reelscribe",
-    "title": "Free Transcribe Audio to Text & Video to text | ReelScribe",
-    "description": "Transcribe videos and audio to text instantly with ReelScribe – the fast, accurate, and unlimited AI transcription tool. Convert MP4, MP3, or any video to text and subtitles in 145+ languages. 99.8% accuracy. Download transcripts as DOCX, PDF, TXT, or SRT. Start transcribing for free today!"
-  },
   "adtwin": {
     "slug": "adtwin",
     "title": "Adtwin - AI Audio Advertising Platform",
@@ -461,6 +456,11 @@
     "slug": "podcastle",
     "title": "Podcastle: All-in-One Video and Podcast Software",
     "description": "Podcastle is the easiest way to create studio-quality videos and podcasts. Record, edit and distribute content directly in your browser using AI-powered tools."
+  },
+  "reelscribe": {
+    "slug": "reelscribe",
+    "title": "Free Transcribe Audio to Text & Video to text | ReelScribe",
+    "description": "Transcribe videos and audio to text instantly with ReelScribe – the fast, accurate, and unlimited AI transcription tool. Convert MP4, MP3, or any video to text and subtitles in 145+ languages. 99.8% accuracy. Download transcripts as DOCX, PDF, TXT, or SRT. Start transcribing for free today!"
   },
   "respeecher": {
     "slug": "respeecher",
@@ -944,6 +944,11 @@
     "title": "Yahini - Content strategy and workflows built on your brand",
     "description": "Manage your complete content operations in one workspace. From research to execution, powered by AI content agents that understand your business."
   },
+  "new-ui": {
+    "slug": "new-ui",
+    "title": "New UI - Modern, Semantic UI Framework",
+    "description": "New UI is a modern, semantic UI framework for building beautiful, accessible sites and apps."
+  },
   "banana-nano": {
     "slug": "banana-nano",
     "title": "Nano Banana - Advanced AI Image Generate & Edit",
@@ -1070,11 +1075,6 @@
     "title": "Napkin AI - The visual AI for business storytelling",
     "description": "Just type, copy-paste or generate your text and Napkin will instantly transform it into insightful visuals. Make your communication more effective with Napkin."
   },
-  "new-ui": {
-    "slug": "new-ui",
-    "title": "New UI - Modern, Semantic UI Framework",
-    "description": "New UI is a modern, semantic UI framework for building beautiful, accessible sites and apps."
-  },
   "new-ui-templates": {
     "slug": "new-ui-templates",
     "title": "New UI Templates - Authentic, Simple Website Templates",
@@ -1180,11 +1180,6 @@
     "title": "Build, Browse And Compare Renewable Energy Systems - Yenex",
     "description": "Create renewable energy systems from solar to hydroponics. Explore thousands of products and real setups to compare costs, sizes, power, and efficiency."
   },
-  "chatgpt-apps-sdk": {
-    "slug": "chatgpt-apps-sdk",
-    "title": "ChatGPT APP - Build & Monetize Apps for ChatGPT",
-    "description": "Build powerful apps using the ChatGPT Apps SDK, submit to ChatGPT marketplace, and earn money when users engage with your creations"
-  },
   "ai-sdk-5-by-vercel": {
     "slug": "ai-sdk-5-by-vercel",
     "title": "AI SDK 5 - Vercel",
@@ -1254,6 +1249,11 @@
     "slug": "cekura",
     "title": "Cekura | Automated QA for Voice AI and Chat AI Agents",
     "description": "End-to-end testing and observability for Conversational AI. Run pre-production simulations across diverse personas and monitor production conversations to test instruction-following, tool calls, and conversational quality."
+  },
+  "chatgpt-apps-sdk": {
+    "slug": "chatgpt-apps-sdk",
+    "title": "ChatGPT APP - Build & Monetize Apps for ChatGPT",
+    "description": "Build powerful apps using the ChatGPT Apps SDK, submit to ChatGPT marketplace, and earn money when users engage with your creations"
   },
   "chef": {
     "slug": "chef",
@@ -1579,6 +1579,11 @@
     "title": "Bevinzey | AI-Powered Learning Platform",
     "description": "Transform how you learn with AI-powered summaries, intelligent question generation, and personalized tutoring. Built for students, educators, and institutions."
   },
+  "eduaide": {
+    "slug": "eduaide",
+    "title": "Eduaide.Ai: AI Created for Teachers",
+    "description": "AI for Teachers: Eduaide offers AI tools to create graphic organizers, engaging educational games, lesson plans, and high-quality instructional materials."
+  },
   "everlearns": {
     "slug": "everlearns",
     "title": "Create an Online Course with AI in 5 Minutes | EverLearns",
@@ -1687,11 +1692,6 @@
   "caladan": {
     "slug": "caladan",
     "title": "Caladan"
-  },
-  "eduaide": {
-    "slug": "eduaide",
-    "title": "Eduaide.Ai: AI Created for Teachers",
-    "description": "AI for Teachers: Eduaide offers AI tools to create graphic organizers, engaging educational games, lesson plans, and high-quality instructional materials."
   },
   "chat-agents": {
     "slug": "chat-agents",
@@ -1972,11 +1972,6 @@
     "title": "Self-Serve Plans with Flexibility & Scalability - Veriff",
     "description": "Explore our Self-Serve plans for unmatched flexibility and scalability, perfect for growing your business at your own pace. Learn more with Veriff!"
   },
-  "saree-generator": {
-    "slug": "saree-generator",
-    "title": "AI Saree Generator - Change Your Photo To Vintage Saree Images with Nano Banana Model",
-    "description": "Transform your photos into stunning vintage saree images with AI Saree Generator. Use nano banana AI model to edit and change your photos into traditional Indian saree designs. Free online saree changer tool for vintage saree creation."
-  },
   "aisthetic": {
     "slug": "aisthetic",
     "title": "r.ismakov"
@@ -2005,6 +2000,11 @@
     "slug": "outfitfm",
     "title": "AI Product Photos for Your Clothing Brand — Outfit",
     "description": "Create professional AI product photos for your clothing brand in seconds. Generate stunning, high-quality on-model photos with custom backgrounds to elevate your brand and sell more."
+  },
+  "saree-generator": {
+    "slug": "saree-generator",
+    "title": "AI Saree Generator - Change Your Photo To Vintage Saree Images with Nano Banana Model",
+    "description": "Transform your photos into stunning vintage saree images with AI Saree Generator. Use nano banana AI model to edit and change your photos into traditional Indian saree designs. Free online saree changer tool for vintage saree creation."
   },
   "uwear": {
     "slug": "uwear",
@@ -2921,11 +2921,6 @@
     "title": "Dazy.ai",
     "description": "Create consistent, realistic photos and videos in seconds"
   },
-  "upscaler": {
-    "slug": "upscaler",
-    "title": "Free AI Video Converter - Convert Videos from 720p, 1080p to 4K in Seconds Online",
-    "description": "Video converter simplifies video editing—convert video to 4K with one click. Achieve flawless videos effortlessly."
-  },
   "ada": {
     "slug": "ada",
     "title": "Ada.im | Your Own AI Data Analyst",
@@ -3056,6 +3051,11 @@
     "title": "Forage Mail | End email overwhelm with AI",
     "description": "Forage is an invisible AI that filters incoming mail, surfaces priority messages, and sweeps the rest into a concise daily summary—right inside Gmail."
   },
+  "genppt": {
+    "slug": "genppt",
+    "title": "GenPPT: The Fastest AI PowerPoint Generator (Try Free)",
+    "description": "Create beautiful PowerPoint presentations in seconds with GenPPT—the fastest AI PPT generator. Enter your topic and get a ready-to-use deck. Free trial."
+  },
   "google-translate": {
     "slug": "google-translate",
     "title": "Google Translate",
@@ -3095,11 +3095,6 @@
     "slug": "hyperfeed",
     "title": "hyperfeed.ai",
     "description": "Magic AI Workflows - Simple as Text"
-  },
-  "genppt": {
-    "slug": "genppt",
-    "title": "GenPPT: The Fastest AI PowerPoint Generator (Try Free)",
-    "description": "Create beautiful PowerPoint presentations in seconds with GenPPT—the fastest AI PPT generator. Enter your topic and get a ready-to-use deck. Free trial."
   },
   "intellibar": {
     "slug": "intellibar",
@@ -3383,6 +3378,11 @@
     "slug": "ultra",
     "title": "Ultra",
     "description": "Imagine a world without inboxes. That's Ultra"
+  },
+  "upscaler": {
+    "slug": "upscaler",
+    "title": "Free AI Video Converter - Convert Videos from 720p, 1080p to 4K in Seconds Online",
+    "description": "Video converter simplifies video editing—convert video to 4K with one click. Achieve flawless videos effortlessly."
   },
   "vocalscribe": {
     "slug": "vocalscribe",
@@ -4238,15 +4238,15 @@
     "title": "Wan2.2 - AI Video Generator | Create Professional Videos",
     "description": "Create professional AI-generated videos with Wan2.2 AI. Access powerful video generation tools, manage credits, API keys, and join our community platform."
   },
-  "wan-26": {
-    "slug": "wan-26",
-    "title": "Wan 2.6 Video Generator | AI Multi-Shot Video with Sound",
-    "description": "Wan 2.6 makes 1080p videos from text, images, or short clips. It keeps shots, faces, and voices in sync for clear wan2.6 video stories."
-  },
   "wan-22-ai": {
     "slug": "wan-22-ai",
     "title": "Wan 2.2 AI - Professional Text-to-Video & Image-to-Video Generation Platform",
     "description": "Create stunning videos with Wan 2.2 text-to-video and Wan 2.2 image-to-video AI models. Generate high-quality videos with Wan 2.2 cinema-grade aesthetic control, professional motion generation, and up to 720p resolution. Perfect for creators, marketers, and content producers using Wan 2.2 AI."
+  },
+  "wan-26": {
+    "slug": "wan-26",
+    "title": "Wan 2.6 Video Generator | AI Multi-Shot Video with Sound",
+    "description": "Wan 2.6 makes 1080p videos from text, images, or short clips. It keeps shots, faces, and voices in sync for clear wan2.6 video stories."
   },
   "watermark-remover": {
     "slug": "watermark-remover",
@@ -4523,15 +4523,15 @@
     "slug": "trace",
     "title": "Trace"
   },
-  "track-3iatlas": {
-    "slug": "track-3iatlas",
-    "title": "Track Comet 3I/ATLAS Live - Rare Interstellar Visitor",
-    "description": "Follow 3I/ATLAS, the third interstellar comet ever discovered! Get real-time tracking, observing guides, and witness this once-in-a-lifetime visitor from beyond our solar system."
-  },
   "traceroot": {
     "slug": "traceroot",
     "title": "TraceRoot.AI",
     "description": "AI-enhanced production debugging platform that visualizes logs, traces, and function calls in an interactive tree structure with contextual insights."
+  },
+  "track-3iatlas": {
+    "slug": "track-3iatlas",
+    "title": "Track Comet 3I/ATLAS Live - Rare Interstellar Visitor",
+    "description": "Follow 3I/ATLAS, the third interstellar comet ever discovered! Get real-time tracking, observing guides, and witness this once-in-a-lifetime visitor from beyond our solar system."
   },
   "tradinglens": {
     "slug": "tradinglens",

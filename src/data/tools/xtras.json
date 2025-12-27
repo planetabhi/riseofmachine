@@ -133,7 +133,6 @@
     "tag": "Freemium",
     "url": "https://deforge.ai/?ref=riseofmachine.com",
     "date-added": "2025-08-23",
-    "category": "Developer",
     "slug": "deforge"
   },
   {
@@ -150,7 +149,6 @@
     "tag": "Open-source",
     "url": "https://vercel.com/ai-elements?ref=riseofmachine.com",
     "date-added": "2025-08-25",
-    "category": "Developer",
     "slug": "elements-by-vercel"
   },
   {
@@ -247,7 +245,6 @@
     "tag": "Freemium",
     "url": "https://madespace.ai/?ref=riseofmachine.com",
     "date-added": "2025-08-23",
-    "category": "Design",
     "slug": "madespace"
   },
   {
@@ -312,7 +309,6 @@
     "tag": "Open-source",
     "url": "https://onlook.app/?ref=riseofmachine.com",
     "date-added": "2025-08-25",
-    "category": "Design",
     "slug": "onlook-for-web"
   },
   {
@@ -329,7 +325,6 @@
     "tag": "Freemium",
     "url": "https://performameter.com/?ref=riseofmachine.com",
     "date-added": "2025-08-24",
-    "category": "Fun",
     "slug": "performameter"
   },
   {
@@ -362,7 +357,6 @@
     "tag": "Freemium",
     "url": "https://www.qoder.ai/?ref=riseofmachine.com",
     "date-added": "2025-08-25",
-    "category": "Code",
     "slug": "qoder"
   },
   {
@@ -379,7 +373,6 @@
     "tag": "Freemium",
     "url": "https://reachllm.com/?ref=riseofmachine.com",
     "date-added": "2025-08-23",
-    "category": "SEO",
     "slug": "reachllm"
   },
   {
@@ -468,7 +461,6 @@
     "tag": "Freemium",
     "url": "https://www.trace.so/?ref=riseofmachine.com",
     "date-added": "2025-08-24",
-    "category": "Productivity",
     "slug": "trace"
   },
   {
@@ -477,7 +469,6 @@
     "tag": "Open-source",
     "url": "https://traceroot.ai/?ref=riseofmachine.com",
     "date-added": "2025-08-25",
-    "category": "Developer",
     "slug": "traceroot"
   },
   {
@@ -510,7 +501,6 @@
     "tag": "Freemium",
     "url": "https://www.vibeflow.com/?ref=riseofmachine.com",
     "date-added": "2025-08-24",
-    "category": "No Code",
     "slug": "vibeflow"
   }
 ]
