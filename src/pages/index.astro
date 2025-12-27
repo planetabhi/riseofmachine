@@ -19,6 +19,6 @@ const allTools = data.tools.flatMap((category: any) => category.content);
   <OrganizationSchema />
   <ItemListSchema items={allTools} listName="AI Tools Directory - All Tools" />
   <main>
-    <Dashboard client:load category="all" />
+    <Dashboard client:load category="all" transition:persist />
   </main>
 </Layout>

@@ -34,6 +34,7 @@ export default function SortButtons({ onSortChange, onRandomSeed }) {
         onClick={handleNameToggle}
         title={sortMode === "nameAsc" ? "Sort Z → A" : "Sort A → Z"}
         aria-label={sortMode === "nameAsc" ? "Sort Z to A" : "Sort A to Z"}
+        aria-pressed={sortMode === "nameAsc" || sortMode === "nameDesc"}
       >
         {/* Sort icon */}
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" className="sort-icon">
@@ -46,6 +47,7 @@ export default function SortButtons({ onSortChange, onRandomSeed }) {
         onClick={handleRandom}
         title="Shuffle randomly"
         aria-label="Shuffle randomly"
+        aria-pressed={sortMode === "random"}
       >
         {/* Shuffle icon */}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

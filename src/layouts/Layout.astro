@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import SortButtons from "../components/SortButtons";
 import WebSiteSchema from "../components/schema/WebSiteSchema.astro";
 
@@ -103,6 +104,7 @@ const {
 
             gtag("config", "G-S08Z38BTMJ");
         </script>
+        <ViewTransitions />
         <WebSiteSchema />
     </head>
 

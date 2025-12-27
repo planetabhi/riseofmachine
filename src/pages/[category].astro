@@ -56,6 +56,6 @@ const breadcrumbs = [
   <ItemListSchema items={categoryTools} listName={`${categoryTitle} Tools`} />
   <BreadcrumbSchema items={breadcrumbs} />
   <main>
-    <Dashboard client:load category={category} />
+    <Dashboard client:load category={category} transition:persist />
   </main>
 </Layout>
