@@ -80,21 +80,25 @@ async function main() {
     if (fs.existsSync(metadataPath)) {
         try {
             existingMetadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
-        } catch (e) { console.log("Could not read existing metadata, starting fresh."); }
+        } catch (e) {
+            console.log("Could not read existing metadata, starting fresh.");
+        }
     }
 
-    // Initialize results with existing data so we don't lose it
-    const results = { ...existingMetadata };
+    // Initialize results as empty to prune stale keys
+    const results = {};
 
     for (let i = 0; i < allTools.length; i += CONCURRENCY_LIMIT) {
         const chunk = allTools.slice(i, i + CONCURRENCY_LIMIT);
         const promises = chunk.map(tool => {
-            // Check if we already have valid metadata for this slug
+            // If we have valid existing metadata, keep it and skip fetch
             if (existingMetadata[tool.slug] && existingMetadata[tool.slug].title) {
+                results[tool.slug] = existingMetadata[tool.slug];
                 completed++;
                 return Promise.resolve();
             }
 
+            // Otherwise, fetch fresh metadata
             return fetchMetadata(tool).then(res => {
                 completed++;
                 if (completed % 50 === 0) process.stdout.write(`\rProgress: ${completed}/${allTools.length}`);

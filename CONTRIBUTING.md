@@ -73,4 +73,4 @@ git push -u origin add/your-ai-tool
 - **Conciseness**: Keep the description concise and informative.
 - **Protocol**: All URLs should include a valid protocol `https://…` and remain accessible.
 - **Ref Parameter**: Make sure the URL includes the reference parameter: `?ref=riseofmachine.com`
-- **Validation**: Verify your JSON syntax and data validitiy by running `bun run check-data`.
+- **Validation**: Verify your JSON syntax and data validity by running `bun run check-data`.
