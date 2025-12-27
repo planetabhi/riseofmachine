@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { parse } from 'node-html-parser';
+import type { ToolsConfig, Tool, MetadataEntry, MetadataMap } from '../src/types/index.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,9 +14,7 @@ const CONCURRENCY_LIMIT = 25;
 const TIMEOUT_MS = 6000;
 const USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
-
-
-async function fetchMetadata(tool) {
+async function fetchMetadata(tool: Tool): Promise<MetadataEntry | null> {
     const url = tool.url;
     if (!url) return null;
 
@@ -48,13 +47,12 @@ async function fetchMetadata(tool) {
         if (!title && !description) return null;
 
         return {
-            slug: tool.slug,
+            slug: tool.slug || '',
             title: title || undefined,
             description: description || undefined,
         };
 
-    } catch (err) {
-        // console.log(`Failed to fetch ${url}: ${err.message}`);
+    } catch (err: any) {
         return null;
     } finally {
         clearTimeout(timeoutId);
@@ -63,20 +61,13 @@ async function fetchMetadata(tool) {
 
 async function main() {
     console.log("Reading tools.json...");
-    const data = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'));
+    const data: ToolsConfig = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'));
 
     const allTools = data.tools.flatMap(cat => cat.content).filter(t => t.slug && t.url);
     console.log(`Found ${allTools.length} tools. Starting metadata fetch (Concurrency: ${CONCURRENCY_LIMIT})...`);
 
-    // Load existing metadata to avoid re-fetching if we want to add incremental logic later
-    // For now, we'll just fetch everything to be fresh. 
-    // Optimization: In real world, we might want to checks if metadata.json exists and skip known ones.
-    // Let's implement incremental update: only fetch if not already in metadata.json?
-    // User said "Update-metadata script", implying a refresh. 
-    // But 1000 requests is still slow. Let's do a fresh fetch but show progress.
-
     let completed = 0;
-    let existingMetadata = {};
+    let existingMetadata: MetadataMap = {};
     if (fs.existsSync(metadataPath)) {
         try {
             existingMetadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
@@ -86,14 +77,16 @@ async function main() {
     }
 
     // Initialize results as empty to prune stale keys
-    const results = {};
+    const results: MetadataMap = {};
 
     for (let i = 0; i < allTools.length; i += CONCURRENCY_LIMIT) {
         const chunk = allTools.slice(i, i + CONCURRENCY_LIMIT);
         const promises = chunk.map(tool => {
+            const slug = tool.slug as string;
+
             // If we have valid existing metadata, keep it and skip fetch
-            if (existingMetadata[tool.slug] && existingMetadata[tool.slug].title) {
-                results[tool.slug] = existingMetadata[tool.slug];
+            if (existingMetadata[slug] && existingMetadata[slug].title) {
+                results[slug] = existingMetadata[slug];
                 completed++;
                 return Promise.resolve();
             }
@@ -102,14 +95,14 @@ async function main() {
             return fetchMetadata(tool).then(res => {
                 completed++;
                 if (completed % 50 === 0) process.stdout.write(`\rProgress: ${completed}/${allTools.length}`);
-                if (res) results[res.slug] = res;
+                if (res && res.slug) results[res.slug] = res;
             });
         });
 
         await Promise.all(promises);
     }
 
-    console.log(`\n\nFetched metadata for ${Object.keys(results).length} tools.`);
+    console.log(`\n\nPruned stale keys. Fetched metadata for ${Object.keys(results).length} tools.`);
 
     fs.writeFileSync(metadataPath, JSON.stringify(results, null, 2));
     console.log(`Saved to ${metadataPath}`);

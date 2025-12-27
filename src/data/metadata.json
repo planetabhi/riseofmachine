@@ -1688,6 +1688,11 @@
     "slug": "caladan",
     "title": "Caladan"
   },
+  "eduaide": {
+    "slug": "eduaide",
+    "title": "Eduaide.Ai: AI Created for Teachers",
+    "description": "AI for Teachers: Eduaide offers AI tools to create graphic organizers, engaging educational games, lesson plans, and high-quality instructional materials."
+  },
   "chat-agents": {
     "slug": "chat-agents",
     "title": "Chatagents | AI Chatbot for Websites | 24/7 AI Chat Support",
@@ -3090,6 +3095,11 @@
     "slug": "hyperfeed",
     "title": "hyperfeed.ai",
     "description": "Magic AI Workflows - Simple as Text"
+  },
+  "genppt": {
+    "slug": "genppt",
+    "title": "GenPPT: The Fastest AI PowerPoint Generator (Try Free)",
+    "description": "Create beautiful PowerPoint presentations in seconds with GenPPT—the fastest AI PPT generator. Enter your topic and get a ready-to-use deck. Free trial."
   },
   "intellibar": {
     "slug": "intellibar",

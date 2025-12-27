@@ -9,16 +9,16 @@
     "src/data/tools.json"
   ],
   "scripts": {
-    "split-data": "node scripts/split-data.js",
-    "generate-slug-map": "node scripts/generate-slug-map.js",
+    "split-data": "bun run scripts/split-data.ts",
+    "generate-slug-map": "bun run scripts/generate-slug-map.ts",
     "prepare-data": "bun run split-data && bun run generate-slug-map",
-    "dev": "bun run prepare-data && node scripts/add-slugs.js && astro dev",
+    "dev": "bun run prepare-data && bun run scripts/add-slugs.ts && astro dev",
     "start": "astro dev",
-    "build": "bun run prepare-data && node scripts/add-slugs.js && astro build",
+    "build": "bun run prepare-data && bun run scripts/add-slugs.ts && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check-data": "node scripts/check-data.js",
-    "update-metadata": "node scripts/update-metadata.js"
+    "check-data": "bun run scripts/check-data.ts",
+    "update-metadata": "bun run scripts/update-metadata.ts"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.6.3",
