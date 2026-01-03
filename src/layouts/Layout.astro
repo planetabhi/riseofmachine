@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import SortButtons from "../components/SortButtons";
 import WebSiteSchema from "../components/schema/WebSiteSchema.astro";
+import Hero from "../components/Hero.astro";
 
 export interface Props {
     site: string;
@@ -104,6 +105,13 @@ const {
 
             gtag("config", "G-S08Z38BTMJ");
         </script>
+        <script is:inline>
+            // Prevent flash of background content on tool detail pages
+            // This runs immediately before page render
+            if (window.location.pathname.startsWith("/tools/")) {
+                document.documentElement.setAttribute("data-tool-page", "true");
+            }
+        </script>
         <ViewTransitions />
         <WebSiteSchema />
     </head>
@@ -179,6 +187,29 @@ const {
                     onRandomSeed={() => {}}
                 />
                 <a
+                    href="/favorites"
+                    class="favorites-link"
+                    id="favoritesLink"
+                    style="display: none;"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1.5"
+                            d="M12 17.025c-.142 0-.341.072-.588.208a7 7 0 0 0-.835.56c-.614.464-1.317 1.085-1.983 1.706a62 62 0 0 0-2.455 2.43l-.04.041-.013.014a.05.05 0 0 1-.055.012A.05.05 0 0 1 6 21.95V4.438A2.43 2.43 0 0 1 8.43 2h7.14A2.43 2.43 0 0 1 18 4.438V21.95a.05.05 0 0 1-.085.034h-.001l-.013-.014-.04-.041-.151-.158a67 67 0 0 0-2.304-2.272c-.666-.621-1.37-1.242-1.983-1.707a7 7 0 0 0-.835-.56c-.247-.135-.446-.207-.588-.207Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="favorites-text">Saved tools</span>
+                </a>
+                <a
                     href="https://github.com/planetabhi/riseofmachine/issues"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -188,23 +219,12 @@ const {
             </div>
         </div>
 
-        <header class="nu-u-mb-10 nu-u-mt-10">
-            <div class="container">
-                <h1
-                    class="nu-c-h5 nu-u-text--primary nu-u-mt-0 nu-u-mb-2 title"
-                >
-                    {title}
-                </h1>
-                <p class="nu-c-fs-small nu-u-text--secondary description-text">
-                    {tagline}
-                </p>
-            </div>
-        </header>
+        <Hero title={title} tagline={tagline} />
         <slot />
 
         <div class="footer">
             <p>
-                ABHIMANYU RANA 2025 © <br />
+                ABHIMANYU RANA 2026 © <br />
                 <a
                     href="https://planetabhi.com/"
                     class="nu-u-link--subtle"
@@ -454,6 +474,38 @@ const {
         transform: rotate(15deg) scale(0.8);
         pointer-events: none;
     }
+
+    .favorites-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-02);
+        padding: var(--spacing-02) var(--spacing-04);
+        border: 0.5px solid var(--border-muted);
+        background-color: var(--background);
+        color: var(--content-secondary);
+        text-decoration: none;
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+        transition: all 0.2s ease;
+        border-radius: var(--spacing-00);
+    }
+
+    .favorites-link:hover {
+        background-color: var(--background-secondary);
+        color: var(--accent);
+        border-color: var(--border);
+    }
+
+    .favorites-link svg {
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 48rem) {
+        .favorites-text {
+            display: none;
+        }
+    }
+
     .footer p {
         padding-bottom: var(--spacing-10);
         text-align: center;
@@ -463,6 +515,64 @@ const {
         font-size: var(--desktop-caption);
         line-height: var(--lh-desktop-caption);
         font-family: var(--monospace);
+    }
+
+    /* Empty state styles */
+    .empty-state {
+        text-align: center;
+        padding: var(--spacing-15) var(--spacing-06);
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .empty-state h2 {
+        margin-top: var(--spacing-04);
+        margin-bottom: var(--spacing-03);
+    }
+
+    .back-home-btn {
+        padding: var(--spacing-03) var(--spacing-06);
+        background-color: var(--accent);
+        color: var(--background);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: var(--spacing-00);
+        transition: filter 0.2s ease;
+    }
+
+    .back-home-btn:hover {
+        filter: brightness(1.1);
+    }
+
+    /* Favorites page styles */
+    .favorites-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--spacing-06);
+        flex-wrap: wrap;
+        gap: var(--spacing-04);
+    }
+
+    .sort-select {
+        padding: var(--spacing-02) var(--spacing-04);
+        border: 0.5px solid var(--border-muted);
+        background-color: var(--background);
+        color: var(--content-secondary);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+        border-radius: var(--spacing-00);
+        cursor: var(--c-pointer);
+    }
+
+    .sort-select:hover {
+        background-color: var(--background-secondary);
+        border-color: var(--border);
+    }
+
+    .sort-select:focus {
+        outline: 2px solid var(--border-focus);
+        outline-offset: 2px;
     }
 
     @media (max-width: 30rem) {
@@ -538,6 +648,40 @@ const {
     window.addEventListener("scroll", () => {
         throttle(handleNavScroll, 80);
     });
+</script>
+
+<script is:inline>
+    // Update favorites link visibility
+    function updateFavoritesLink() {
+        try {
+            const linkEl = document.getElementById("favoritesLink");
+            if (!linkEl) return;
+
+            const bookmarks = localStorage.getItem("rom_bookmarks");
+            const count = bookmarks ? JSON.parse(bookmarks).length : 0;
+
+            // Show link only if there are bookmarks
+            linkEl.style.display = count > 0 ? "inline-flex" : "none";
+        } catch (e) {
+            console.error("Error updating favorites link:", e);
+        }
+    }
+
+    // Run on initial load
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", updateFavoritesLink);
+    } else {
+        updateFavoritesLink();
+    }
+
+    // Listen for bookmark changes
+    window.addEventListener("bookmarks:changed", updateFavoritesLink);
+
+    // Also update on page show (for back/forward navigation)
+    window.addEventListener("pageshow", updateFavoritesLink);
+
+    // Handle Astro page transitions
+    document.addEventListener("astro:page-load", updateFavoritesLink);
 </script>
 
 <script is:inline>

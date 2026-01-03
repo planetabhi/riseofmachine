@@ -1,0 +1,26 @@
+---
+interface Props {
+    title: string;
+    tagline: string;
+}
+
+const { title, tagline } = Astro.props;
+---
+
+<div class="hero">
+    <div class="container">
+        <h1 class="nu-c-h5 nu-u-text--primary nu-u-mt-0 nu-u-mb-2 title">
+            {title}
+        </h1>
+        <p class="nu-c-fs-small nu-u-text--secondary description-text">
+            {tagline}
+        </p>
+    </div>
+</div>
+
+<style>
+    .hero {
+        margin-bottom: var(--spacing-10);
+        margin-top: var(--spacing-10);
+    }
+</style>

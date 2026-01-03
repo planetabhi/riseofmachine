@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "@new-ui/foundations";
+import FavoritesView from "../components/FavoritesView";
+import BreadcrumbSchema from "../components/schema/BreadcrumbSchema.astro";
+
+const breadcrumbs = [
+    { name: "Home", url: "https://riseofmachine.com" },
+    { name: "Saved tools" },
+];
+---
+
+<Layout
+    site="Rise of Machine - Saved tools"
+    title="Saved tools"
+    tagline="AI tools you've saved for quick access"
+    pageTitle="Saved tools"
+    pageDescription="Your saved AI tools collection"
+>
+    <BreadcrumbSchema items={breadcrumbs} />
+    <main>
+        <FavoritesView client:load />
+    </main>
+</Layout>

@@ -74,3 +74,30 @@ span.tag-new {
 strong {
     font-weight: 500;
 }
+
+/* Bookmark button positioning */
+.card-bookmark {
+    position: absolute;
+    top: var(--spacing-03);
+    right: var(--spacing-03);
+    z-index: 10;
+    opacity: 0;
+}
+
+/* Show on hover/focus */
+.link-card:hover .card-bookmark,
+.link-card:focus-within .card-bookmark {
+    opacity: 1;
+}
+
+/* Always show if bookmarked */
+.card-bookmark:has(.bookmarked) {
+    opacity: 1;
+}
+
+/* Always show on touch devices */
+@media (hover: none) {
+    .card-bookmark {
+        opacity: 1;
+    }
+}

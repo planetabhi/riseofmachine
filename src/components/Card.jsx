@@ -1,4 +1,5 @@
 import "./Card.css";
+import BookmarkButton from "./BookmarkButton";
 
 export default function Card(props) {
   const { href, title, body, tag, dateAdded, slug, category } = props;
@@ -37,6 +38,11 @@ export default function Card(props) {
           <span className="tag">{tag}</span>
         </p>
       </a>
+      {slug && (
+        <div className="card-bookmark">
+          <BookmarkButton slug={slug} title={title} variant="small" />
+        </div>
+      )}
     </li>
   );
 }

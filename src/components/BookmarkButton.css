@@ -1,0 +1,56 @@
+.bookmark-btn {
+    background: none;
+    border: none;
+    cursor: var(--c-pointer);
+    padding: var(--spacing-02);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-02);
+    color: var(--content-secondary);
+    border-radius: var(--spacing-01);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bookmark-btn:hover {
+    color: var(--content-primary);
+}
+
+.bookmark-btn:focus {
+    outline: none;
+}
+
+.bookmark-btn.bookmarked {
+    color: var(--content-primary);
+}
+
+.bookmark-label {
+    font-size: var(--desktop-body-sm);
+    line-height: var(--lh-desktop-body-sm);
+    white-space: nowrap;
+}
+
+/* Variant: small (for cards) */
+.bookmark-btn--small {
+    padding: var(--spacing-01);
+}
+
+.bookmark-btn--small svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Variant: large (for detail pages) */
+.bookmark-btn--large {
+    padding: var(--spacing-02);
+}
+
+.bookmark-btn--large svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Default variant */
+.bookmark-btn--default svg {
+    width: 20px;
+    height: 20px;
+}
