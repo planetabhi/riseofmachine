@@ -64,7 +64,7 @@ export default function FavoritesView() {
                     <p className="nu-c-fs-small nu-u-text--secondary" style={{ maxWidth: '32rem', margin: '0 auto' }}>
                         Start saving AI tools by clicking the bookmark icon on any tool card. Your saved tools will appear here for quick access.
                     </p>
-                    <a href="/" className="back-home-btn" style={{ marginTop: 'var(--spacing-06)', display: 'inline-block' }}>
+                    <a href="/" className="submit-btn" style={{ marginTop: 'var(--spacing-06)', display: 'inline-block' }}>
                         Browse AI Tools
                     </a>
                 </div>

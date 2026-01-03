@@ -20,7 +20,7 @@
 }
 
 .bookmark-btn.bookmarked {
-    color: var(--content-primary);
+    color: var(--accent);
 }
 
 .bookmark-label {
