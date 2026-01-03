@@ -95,13 +95,43 @@ async function fetchMetadata(tool: Tool): Promise<MetadataEntry | null> {
             root.querySelector('meta[name="description"]')?.getAttribute('content')?.trim() ||
             root.querySelector('meta[property="og:description"]')?.getAttribute('content')?.trim();
 
-        // Only return if we actually found something useful to augment tools.json
-        if (!title && !description) return null;
+        // Extract OG image for preview
+        const ogImage = root.querySelector('meta[property="og:image"]')?.getAttribute('content')?.trim();
+
+        // Extract Twitter handle from meta tag or link
+        let twitterHandle = root.querySelector('meta[name="twitter:site"]')?.getAttribute('content')?.trim() ||
+            root.querySelector('meta[name="twitter:creator"]')?.getAttribute('content')?.trim();
+
+        if (!twitterHandle) {
+            const twitterLink = root.querySelector('a[href*="twitter.com"]')?.getAttribute('href') ||
+                root.querySelector('a[href*="x.com"]')?.getAttribute('href');
+            if (twitterLink) {
+                const match = twitterLink.match(/(?:twitter\.com|x\.com)\/(@?\w+)/);
+                if (match && match[1]) {
+                    twitterHandle = match[1].startsWith('@') ? match[1] : `@${match[1]}`;
+                }
+            }
+        }
+
+        // Normalize twitter handle to include @
+        if (twitterHandle && !twitterHandle.startsWith('@')) {
+            twitterHandle = `@${twitterHandle}`;
+        }
+
+        // Extract GitHub link
+        const githubLink = root.querySelector('a[href*="github.com"]')?.getAttribute('href')?.trim();
+        const githubUrl = githubLink && githubLink.includes('github.com') ? githubLink : undefined;
+
+        // Only return if we found something useful
+        if (!title && !description && !ogImage && !twitterHandle && !githubUrl) return null;
 
         return {
             slug: tool.slug || '',
             title: title || undefined,
             description: description || undefined,
+            ogImage: ogImage || undefined,
+            twitterHandle: twitterHandle || undefined,
+            githubUrl: githubUrl || undefined,
         };
 
     } catch (err: any) {

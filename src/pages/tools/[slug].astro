@@ -83,6 +83,10 @@ const seoOgImage = faviconUrl;
 const seoOgType = "website";
 const seoOgSiteName = "Rise of Machine";
 
+// Social/external links from metadata
+const twitterHandle = meta.twitterHandle || null;
+const githubUrl = meta.githubUrl || null;
+
 const shareText = `Check out ${tool.title} - ${tool.body}`;
 const encodedShareText = encodeURIComponent(shareText);
 const encodedCanonicalUrl = encodeURIComponent(canonicalUrl);
@@ -94,6 +98,23 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
 // We'll use the category name directly since we don't have the full data loaded
 const categoryTitle =
   categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
+
+// Get related tools from same category (up to 4)
+const relatedTools = categoryTools.default
+  .filter((t: any) => t.slug !== slug)
+  .slice(0, 4);
+
+// Get prev/next tools for navigation
+const allCategoryTools = categoryTools.default;
+const currentIndex = allCategoryTools.findIndex((t: any) => t.slug === slug);
+const prevTool =
+  currentIndex > 0
+    ? allCategoryTools[currentIndex - 1]
+    : allCategoryTools[allCategoryTools.length - 1];
+const nextTool =
+  currentIndex < allCategoryTools.length - 1
+    ? allCategoryTools[currentIndex + 1]
+    : allCategoryTools[0];
 
 // Breadcrumb data
 const breadcrumbs = [
@@ -133,10 +154,56 @@ const breadcrumbs = [
   <BreadcrumbSchema items={breadcrumbs} />
   <main>
     <div class="tool-detail-modal-backdrop" id="modalBackdrop">
+      <!-- Navigation arrows (desktop only) -->
+      <a
+        href={`/tools/${prevTool.slug}`}
+        class="nav-arrow nav-arrow--prev"
+        aria-label={`Previous tool: ${prevTool.title}`}
+        title={prevTool.title}
+        data-nav-prev
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48 48"
+          width="32"
+          height="32"
+        >
+          <path
+            d="M44 24H5M24.5 4.5 5 24l19.5 19.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-miterlimit="10"></path>
+        </svg>
+      </a>
+      <a
+        href={`/tools/${nextTool.slug}`}
+        class="nav-arrow nav-arrow--next"
+        aria-label={`Next tool: ${nextTool.title}`}
+        title={nextTool.title}
+        data-nav-next
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48 48"
+          width="32"
+          height="32"
+        >
+          <path
+            d="M4 24h39M23.5 43.5 43 24 23.5 4.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-miterlimit="10"></path>
+        </svg>
+      </a>
+
       <div
         class="tool-detail-modal"
         id="toolModal"
         data-fallback={fallbackPath}
+        data-prev-tool={`/tools/${prevTool.slug}`}
+        data-next-tool={`/tools/${nextTool.slug}`}
       >
         <button
           class="tool-detail-close-btn"
@@ -170,9 +237,14 @@ const breadcrumbs = [
           </div>
           <div class="tool-header-content">
             <h1 class="tool-title nu-c-h5 nu-u-text--primary">{tool.title}</h1>
-            <p class="tool-meta nu-c-text nu-u-text--secondary">
-              Added on {formattedDate}
-            </p>
+            <div class="tool-header-meta">
+              <a href={`/${category}`} class="category-badge">{categoryTitle}</a
+              >
+              <span class="meta-separator">·</span>
+              <span class="tool-meta nu-c-text nu-u-text--secondary"
+                >Added {formattedDate}</span
+              >
+            </div>
           </div>
         </div>
 
@@ -314,6 +386,77 @@ const breadcrumbs = [
             </div>
           </div>
 
+          {
+            (twitterHandle || githubUrl) && (
+              <div class="tool-external-links">
+                <h3 class="external-links-title">Links</h3>
+                <div class="external-links-buttons">
+                  {twitterHandle && (
+                    <a
+                      href={`https://x.com/${twitterHandle.replace("@", "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="external-link-btn"
+                      title={`Follow on X ${twitterHandle}`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        viewBox="0 0 256 256"
+                      >
+                        <path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z" />
+                      </svg>
+                      <span>{twitterHandle}</span>
+                    </a>
+                  )}
+                  {githubUrl && (
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="external-link-btn"
+                      title="View on GitHub"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        viewBox="0 0 256 256"
+                      >
+                        <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.55a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.55a8,8,0,0,0,1.11,7.92A41.74,41.74,0,0,1,200,104Z" />
+                      </svg>
+                      <span>GitHub</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            )
+          }
+
+          {
+            relatedTools.length > 0 && (
+              <div class="tool-related">
+                <h3 class="related-title">Similar Tools</h3>
+                <div class="related-grid">
+                  {relatedTools.map((t: any) => (
+                    <a href={`/tools/${t.slug}`} class="related-card">
+                      <img
+                        src={`/favicons/${t.slug}.png`}
+                        alt=""
+                        class="related-icon"
+                        onerror="this.style.display='none'"
+                      />
+                      <span class="related-name">{t.title}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )
+          }
+
           <div class="tool-detail-nav">
             <a href={category === "all" ? "/" : `/${category}`} class="nav-link"
               >← Go back</a
@@ -331,9 +474,11 @@ const breadcrumbs = [
   </main>
 
   <script type="module">
-    (function () {
+    function initToolModal() {
       const modalEl = document.getElementById("toolModal");
-      const fallbackNavigateTo = modalEl?.dataset.fallback || "/";
+      if (!modalEl) return;
+
+      const fallbackNavigateTo = modalEl.dataset.fallback || "/";
       const hasSameOriginReferrer = (() => {
         try {
           if (!document.referrer) return false;
@@ -345,7 +490,6 @@ const breadcrumbs = [
       })();
 
       function closeModal() {
-        // remove modal marker before navigating back
         document.body.removeAttribute("data-modal-open");
         document.body.style.overflow = "";
         if (hasSameOriginReferrer && window.history.length > 1) {
@@ -355,15 +499,22 @@ const breadcrumbs = [
         }
       }
 
-      // Delegate clicks for close, backdrop, and copy
-      document.addEventListener("click", (e) => {
+      function handleClick(e) {
         const close = e.target.closest(".tool-detail-close-btn");
-        if (close) return closeModal();
+        if (close) {
+          e.preventDefault();
+          e.stopPropagation();
+          return closeModal();
+        }
 
-        // If clicked outside the modal but inside backdrop
+        // If clicked outside the modal but inside backdrop (exclude nav arrows)
         const backdrop = e.target.closest(".tool-detail-modal-backdrop");
         const modal = e.target.closest(".tool-detail-modal");
-        if (backdrop && !modal) return closeModal();
+        const navArrow = e.target.closest(".nav-arrow");
+        if (backdrop && !modal && !navArrow) {
+          e.preventDefault();
+          return closeModal();
+        }
 
         const copyBtn = e.target.closest("#copyLinkBtn");
         if (copyBtn) {
@@ -379,27 +530,47 @@ const breadcrumbs = [
             }, 2000);
           });
         }
-      });
+      }
 
-      document.addEventListener("keydown", (e) => {
+      function handleKeydown(e) {
+        // Get fresh reference to modal for navigation data
+        const currentModal = document.getElementById("toolModal");
+
         if (e.key === "Escape") closeModal();
-      });
 
-      // Mark that modal is open IMMEDIATELY to prevent flash of background content
+        if (e.key === "ArrowLeft") {
+          const prevUrl = currentModal?.dataset.prevTool;
+          if (prevUrl) window.location.href = prevUrl;
+        }
+        if (e.key === "ArrowRight") {
+          const nextUrl = currentModal?.dataset.nextTool;
+          if (nextUrl) window.location.href = nextUrl;
+        }
+      }
+
+      // Remove any existing listeners before adding new ones
+      document.removeEventListener("click", handleClick);
+      document.removeEventListener("keydown", handleKeydown);
+
+      document.addEventListener("click", handleClick);
+      document.addEventListener("keydown", handleKeydown);
+
+      // Mark that modal is open
       document.body.setAttribute("data-modal-open", "true");
-      // Prevent background scroll while modal open
       document.body.style.overflow = "hidden";
+    }
 
-      // Ensure state cleanup on page hide/unload
-      window.addEventListener("pagehide", () => {
-        document.body.removeAttribute("data-modal-open");
-        document.body.style.overflow = "";
-      });
-      window.addEventListener("unload", () => {
-        document.body.removeAttribute("data-modal-open");
-        document.body.style.overflow = "";
-      });
-    })();
+    // Initialize on first load
+    initToolModal();
+
+    // Re-initialize on ViewTransitions navigation
+    document.addEventListener("astro:page-load", initToolModal);
+
+    // Cleanup on page hide
+    window.addEventListener("pagehide", () => {
+      document.body.removeAttribute("data-modal-open");
+      document.body.style.overflow = "";
+    });
   </script>
 
   <style is:global>
@@ -437,6 +608,47 @@ const breadcrumbs = [
       background-image: url(/grid.png);
       background-size: 5px;
       background-repeat: repeat;
+      /* background-color: rgba(0, 0, 0, 0.32); */
+    }
+
+    /* Navigation arrows */
+    .nav-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10000001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      color: var(--content-secondary);
+      text-decoration: none;
+      opacity: 0.7;
+      transition:
+        opacity 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    .nav-arrow:hover {
+      opacity: 1;
+      background-color: var(--background-secondary);
+      color: var(--content-primary);
+    }
+
+    .nav-arrow--prev {
+      left: var(--spacing-06);
+    }
+
+    .nav-arrow--next {
+      right: var(--spacing-06);
+    }
+
+    /* Hide nav arrows on mobile */
+    @media (max-width: 900px) {
+      .nav-arrow {
+        display: none;
+      }
     }
 
     .tool-detail-modal {
@@ -779,9 +991,12 @@ const breadcrumbs = [
     }
 
     .tool-detail-nav {
+      margin-top: var(--spacing-06);
       padding-top: var(--spacing-05);
       border-top: 0.5px solid var(--border-muted);
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: var(--spacing-03);
     }
 
@@ -800,14 +1015,124 @@ const breadcrumbs = [
     }
 
     .tool-detail-share {
-      margin: var(--spacing-06) 0;
+      margin-top: var(--spacing-06);
     }
 
-    .tool-detail-nav {
+    /* Category badge */
+    .tool-header-meta {
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      gap: var(--spacing-02);
+      flex-wrap: wrap;
+    }
+
+    .category-badge {
+      display: inline-block;
+      padding: var(--spacing-01) var(--spacing-03);
+      background-color: var(--background-selected);
+      color: var(--content-secondary);
+      font-size: var(--desktop-caption);
+      line-height: var(--lh-desktop-caption);
+      text-decoration: none;
+      border-radius: var(--spacing-00);
+    }
+
+    .category-badge:hover {
+      background-color: var(--accent);
+      color: var(--background);
+    }
+
+    .meta-separator {
+      color: var(--content-secondary);
+    }
+
+    /* External links section */
+    .tool-external-links {
+      margin-top: var(--spacing-06);
+      padding-top: var(--spacing-05);
+      border-top: 0.5px solid var(--border-muted);
+    }
+
+    .external-links-title {
+      margin: 0 0 var(--spacing-04) 0;
+      font-size: var(--desktop-caption);
+      color: var(--content-secondary);
+      font-family: var(--monospace);
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+    }
+
+    .external-links-buttons {
+      display: flex;
+      gap: var(--spacing-03);
+      flex-wrap: wrap;
+    }
+
+    .external-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-02);
+      padding: var(--spacing-02) var(--spacing-04);
+      background-color: var(--background-secondary);
+      color: var(--content-primary);
+      text-decoration: none;
+      font-size: var(--desktop-body-sm);
+      border-radius: var(--spacing-00);
+    }
+
+    .external-link-btn:hover {
+      background-color: var(--background-selected);
+    }
+
+    /* Related tools section */
+    .tool-related {
+      margin-top: var(--spacing-06);
+      padding-top: var(--spacing-05);
+      border-top: 0.5px solid var(--border-muted);
+    }
+
+    .related-title {
+      margin: 0 0 var(--spacing-04) 0;
+      font-size: var(--desktop-caption);
+      color: var(--content-secondary);
+      font-family: var(--monospace);
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-03);
+    }
+
+    .related-card {
+      display: flex;
       align-items: center;
       gap: var(--spacing-03);
+      padding: var(--spacing-03);
+      background-color: var(--background-secondary);
+      text-decoration: none;
+      border-radius: var(--spacing-00);
+    }
+
+    .related-card:hover {
+      background-color: var(--background-selected);
+    }
+
+    .related-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .related-name {
+      color: var(--content-primary);
+      font-size: var(--desktop-body-sm);
+      line-height: var(--lh-desktop-body-sm);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     span.tag {
@@ -837,6 +1162,14 @@ const breadcrumbs = [
 
       .tool-section {
         padding: var(--spacing-05);
+      }
+
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .external-links-buttons {
+        flex-direction: column;
       }
     }
   </style>

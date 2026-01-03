@@ -20,6 +20,9 @@ export interface MetadataEntry {
     slug: string;
     title?: string | undefined;
     description?: string | undefined;
+    ogImage?: string | undefined;
+    twitterHandle?: string | undefined;
+    githubUrl?: string | undefined;
 }
 
 export type MetadataMap = Record<string, MetadataEntry>;

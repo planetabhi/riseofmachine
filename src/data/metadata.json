@@ -402,15 +402,15 @@
     "title": "Vocal Remover & Instrumental AI Splitter | LALAL.AI",
     "description": "Split vocal and instrumental tracks quickly and accurately with LALAL.AI. Upload any audio file and receive high-quality extracted tracks in a few seconds."
   },
-  "eleven-ai": {
-    "slug": "eleven-ai",
-    "title": "Free AI Voice Generator & Voice Agents Platform | ElevenLabs",
-    "description": "Create lifelike speech with our AI voice generator and voice agents platform. Access 5,000+ voices in 70+ languages with secure APIs and SDKs."
-  },
   "kits-ai": {
     "slug": "kits-ai",
     "title": "AI Voice Studio | Change a voice with Kits.AI",
     "description": "Change your voice into any other voice with the Kits AI Voice Studio. Upload your audio and edit your voice in our in-browser workflow, choosing from a variety of royalty-free artist or instrument AI voice generators."
+  },
+  "eleven-ai": {
+    "slug": "eleven-ai",
+    "title": "Free AI Voice Generator & Voice Agents Platform | ElevenLabs",
+    "description": "Create lifelike speech with our AI voice generator and voice agents platform. Access 5,000+ voices in 70+ languages with secure APIs and SDKs."
   },
   "lami": {
     "slug": "lami",
@@ -1115,6 +1115,10 @@
     "title": "Logo Galleria：AI Logo Maker Free Online",
     "description": "Discover how our AI logo maker can generate unique, professional logos quickly and affordably. With AI logo maker free online features, customizable designs, and watermark-free options, Logo Galleria offers the best solutions for startups, YouTube channels, and more."
   },
+  "illustroke": {
+    "slug": "illustroke",
+    "ogImage": "https://illustroke.com/preview.jpg"
+  },
   "sargam-icons": {
     "slug": "sargam-icons",
     "title": "Sargam Icons",
@@ -1215,15 +1219,15 @@
     "title": "Axflow",
     "description": "AI tooling for the future."
   },
-  "ai2sql": {
-    "slug": "ai2sql",
-    "title": "SQL Query Builder & Generator - AI Powered Database Assistant",
-    "description": "AI-powered SQL query builder enables you to quickly build SQL queries without any knowledge of SQL for beginners."
-  },
   "atla": {
     "slug": "atla",
     "title": "Collectors & Connectors in Religion & Theology",
     "description": "Collectors & Connectors in Religion & Theology"
+  },
+  "ai2sql": {
+    "slug": "ai2sql",
+    "title": "SQL Query Builder & Generator - AI Powered Database Assistant",
+    "description": "AI-powered SQL query builder enables you to quickly build SQL queries without any knowledge of SQL for beginners."
   },
   "bingchain": {
     "slug": "bingchain",
@@ -1451,6 +1455,10 @@
     "slug": "repotalent",
     "title": "Redirecting..."
   },
+  "poe-api": {
+    "slug": "poe-api",
+    "twitterHandle": "@poe_platform"
+  },
   "rysana": {
     "slug": "rysana",
     "title": "Rysana",
@@ -1560,11 +1568,6 @@
     "title": "AI Note Writers",
     "description": "Overview of the AI Note Writer API"
   },
-  "zen-agents": {
-    "slug": "zen-agents",
-    "title": "Zencoder | The AI Coding Agent",
-    "description": "Discover Zencoder's AI Coding Agent Platform for seamless code execution and collaboration. Boost productivity with advanced analytics, flexible deployment, and custom agents for your team."
-  },
   "synexa": {
     "slug": "synexa",
     "title": "Synexa AI: Deploy AI Models in One Line of Code",
@@ -1573,6 +1576,11 @@
   "tinygrad": {
     "slug": "tinygrad",
     "title": "tinygrad: A simple and powerful neural network framework"
+  },
+  "zen-agents": {
+    "slug": "zen-agents",
+    "title": "Zencoder | The AI Coding Agent",
+    "description": "Discover Zencoder's AI Coding Agent Platform for seamless code execution and collaboration. Boost productivity with advanced analytics, flexible deployment, and custom agents for your team."
   },
   "zeno": {
     "slug": "zeno",
@@ -2149,14 +2157,14 @@
     "title": "Chat100.ai: Free Access to OpenAI GPT-4o and Claude 3.5",
     "description": "Page Description"
   },
+  "aicode": {
+    "slug": "aicode",
+    "title": "Redirecting..."
+  },
   "ai-agents-live": {
     "slug": "ai-agents-live",
     "title": "AI Agents & Services Directory | AI Agents Live Dec 2025",
     "description": "The definitive directory of curated AI agents & services - discover and explore the best AI agents to transform your business with AI Agents Live"
-  },
-  "aicode": {
-    "slug": "aicode",
-    "title": "Redirecting..."
   },
   "body-fat-calc": {
     "slug": "body-fat-calc",
@@ -2667,6 +2675,11 @@
     "title": "AIWebFlux - The Flow of Creativity in the World of AI",
     "description": "The Flow of Creativity in the World of AI"
   },
+  "food-generator": {
+    "slug": "food-generator",
+    "title": "Free AI Food Generator & Recipe Maker | AIFoodGenerator.net",
+    "description": "Free AI food generator helps restaurant owners create professional food photos and videos. Generate stunning food images with AI-powered technology."
+  },
   "foosh": {
     "slug": "foosh",
     "title": "foosh.ai",
@@ -2727,6 +2740,11 @@
     "title": "Image Optimizer AI — Generate & Compress Web-Ready Images",
     "description": "Create brand-styled images with AI and optimize them for the web. Automatically compress, resize, strip metadata, convert formats, and boost SEO with the best Image Optimizer."
   },
+  "image-enlarger": {
+    "slug": "image-enlarger",
+    "title": "Imglarger | AI Image Enlarger, Enhancer, Editor and Converter",
+    "description": "Imglarger online now provides AI tools to enhance and upscale images and photos, we also offer online photo editors and image converters to help you edit and convert images online."
+  },
   "dual-shades": {
     "slug": "dual-shades",
     "title": "Dual Shades - AI Photo Editor | Keep Subject Colored, Background B&W",
@@ -2735,16 +2753,6 @@
   "facevary": {
     "slug": "facevary",
     "title": "facevary.com"
-  },
-  "food-generator": {
-    "slug": "food-generator",
-    "title": "Free AI Food Generator & Recipe Maker | AIFoodGenerator.net",
-    "description": "Free AI food generator helps restaurant owners create professional food photos and videos. Generate stunning food images with AI-powered technology."
-  },
-  "image-enlarger": {
-    "slug": "image-enlarger",
-    "title": "Imglarger | AI Image Enlarger, Enhancer, Editor and Converter",
-    "description": "Imglarger online now provides AI tools to enhance and upscale images and photos, we also offer online photo editors and image converters to help you edit and convert images online."
   },
   "imggen-ai": {
     "slug": "imggen-ai",
@@ -3448,6 +3456,11 @@
     "title": "Eye for AI",
     "description": "Create stunning, AI-generated images with ease at Eye for AI. Whether you need art, illustrations, or creative visuals, our AI-powered platform brings your imagination to life. Generate, customize, and download images in seconds."
   },
+  "flowgpt": {
+    "slug": "flowgpt",
+    "title": "Free AI Character Roleplay, AI Girlfriend, AI Boyfriend, ChatGPT Prompts Store | FlowGPT",
+    "description": "Chat with AI characters for free on FlowGPT! More than 1 million characters and bots to chat with, AI boyfriend, girlfriend, uncencored chat and AI tools."
+  },
   "gemini-photo-prompt": {
     "slug": "gemini-photo-prompt",
     "title": "Gemini AI Photo Prompt - Copy Paste Prompts for AI Image Generation | AI图片生成器",
@@ -3561,11 +3574,6 @@
     "slug": "goodprompts",
     "title": "AiGoodPrompts | ChatGPT's Curated Prompt Library",
     "description": "Explore the best curated AI prompts for ChatGPT & Bard. Streamline processes and amplify AI's potential with prompts"
-  },
-  "flowgpt": {
-    "slug": "flowgpt",
-    "title": "Free AI Character Roleplay, AI Girlfriend, AI Boyfriend, ChatGPT Prompts Store | FlowGPT",
-    "description": "Chat with AI characters for free on FlowGPT! More than 1 million characters and bots to chat with, AI boyfriend, girlfriend, uncencored chat and AI tools."
   },
   "heronai": {
     "slug": "heronai",
@@ -3876,11 +3884,6 @@
     "title": "Postli | AI-Powered LinkedIn Content Creation",
     "description": "Postli: Revolutionize your LinkedIn presence with AI-driven post creation. Use 1000 templates to create posts. Generate engaging, professional content effortlessly. Ideal for marketers, influencers, and professionals."
   },
-  "rizz-ai": {
-    "slug": "rizz-ai",
-    "title": "RIZZ AI Assistant: Free RIZZ GPT and Fun AI Dating Assistant",
-    "description": "RIZZ AI Assistant is an AI dating assistant built on the RIZE GPT model. Through a large number of high-quality chat and pick-up cases, RIZZ AI has trained chat LLMs who can understand users' psychology and are good at humorous pick-up conversations, becoming the best Tinder tutor."
-  },
   "createnew": {
     "slug": "createnew",
     "title": "Create Anything with AI — Free Video, Image, Music Tools | CreateNew",
@@ -3889,6 +3892,11 @@
   "social-hub": {
     "slug": "social-hub",
     "title": "Socialhub.AI"
+  },
+  "rizz-ai": {
+    "slug": "rizz-ai",
+    "title": "RIZZ AI Assistant: Free RIZZ GPT and Fun AI Dating Assistant",
+    "description": "RIZZ AI Assistant is an AI dating assistant built on the RIZE GPT model. Through a large number of high-quality chat and pick-up cases, RIZZ AI has trained chat LLMs who can understand users' psychology and are good at humorous pick-up conversations, becoming the best Tinder tutor."
   },
   "dadan": {
     "slug": "dadan",
@@ -3995,15 +4003,20 @@
     "title": "Kling AI",
     "description": "Kling AI, tools for creating imaginative images and videos, based on state-of-art generative AI methods."
   },
+  "eddie": {
+    "slug": "eddie",
+    "title": "soon - Just another WordPress site",
+    "description": "soon"
+  },
   "d-id": {
     "slug": "d-id",
     "title": "D-ID Creative Reality Studio",
     "description": "Create professional videos using just a still image with text or audio powered by AI."
   },
-  "eddie": {
-    "slug": "eddie",
-    "title": "soon - Just another WordPress site",
-    "description": "soon"
+  "kungfu": {
+    "slug": "kungfu",
+    "title": "AI Kungfu - Turn Your Photos into Kungfu Videos | Free AI Video Tool",
+    "description": "AI Kungfu Video Generator is a fun and easy tool that turns your photos into authentic martial arts videos in seconds. Upload any photo and watch it come alive with real kungfu moves."
   },
   "libretto": {
     "slug": "libretto",
@@ -4118,11 +4131,6 @@
     "slug": "rewinai",
     "title": "REWIN",
     "description": "Experience the power of Rewin, the AI-driven tool that optimizes your video scripts for virality. Save time, gain insights from top-performing content on social networks, and leverage rephrased video scripts to skyrocket your views and online presence. Try Rewin today!"
-  },
-  "kungfu": {
-    "slug": "kungfu",
-    "title": "AI Kungfu - Turn Your Photos into Kungfu Videos | Free AI Video Tool",
-    "description": "AI Kungfu Video Generator is a fun and easy tool that turns your photos into authentic martial arts videos in seconds. Upload any photo and watch it come alive with real kungfu moves."
   },
   "scriptmagic": {
     "slug": "scriptmagic",
@@ -4352,14 +4360,14 @@
     "slug": "elements-by-vercel",
     "title": "Login – Vercel"
   },
+  "deforge": {
+    "slug": "deforge",
+    "title": "For Sale Page"
+  },
   "dreamflow": {
     "slug": "dreamflow",
     "title": "dreamflow",
     "description": "(agi)"
-  },
-  "deforge": {
-    "slug": "deforge",
-    "title": "For Sale Page"
   },
   "finder-plus": {
     "slug": "finder-plus",
@@ -4470,15 +4478,15 @@
     "slug": "hoody",
     "title": "For Sale Page"
   },
-  "fluxaicreate": {
-    "slug": "fluxaicreate",
-    "title": "Flux AI Image, Video&Kontext Generator | All-in-One creation | AI图片生成器",
-    "description": "Unlock your creative potential with Flux AI. Generate  images, videos, and content from text using advanced AI. Fast, intuitive, and totally free to start."
-  },
   "imagebyqwen": {
     "slug": "imagebyqwen",
     "title": "Qwen Image - Advanced AI Photo Generator | ImageByQwen",
     "description": "Qwen Image is the most advanced AI photo generator that transforms your ideas into stunning, photorealistic images using cutting-edge Qwen models. Create beautiful photos in seconds. Credits required for usage."
+  },
+  "fluxaicreate": {
+    "slug": "fluxaicreate",
+    "title": "Flux AI Image, Video&Kontext Generator | All-in-One creation | AI图片生成器",
+    "description": "Unlock your creative potential with Flux AI. Generate  images, videos, and content from text using advanced AI. Fast, intuitive, and totally free to start."
   },
   "profilespider": {
     "slug": "profilespider",
