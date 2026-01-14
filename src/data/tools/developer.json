@@ -312,6 +312,14 @@
     "slug": "n8n-workflow-builder"
   },
   {
+    "title": "NAT Checker",
+    "body": "Fast, accurate NAT detection tool.",
+    "tag": "Free",
+    "url": "https://natchecker.com?ref=riseofmachine.com",
+    "date-added": "2026-01-06",
+    "slug": "nat-checker"
+  },
+  {
     "title": "Neum",
     "body": "RAG framework for large-scale and real-time data.",
     "tag": "Open-source",
@@ -486,6 +494,14 @@
     "url": "https://www.scade.pro/?ref=riseofmachine.com",
     "date-added": "2023-12-24",
     "slug": "scade"
+  },
+  {
+    "title": "Screenshot to Code",
+    "body": "Convert screenshots to HTML/CSS code.",
+    "tag": "Freemium",
+    "url": "https://screenshottocode.net/?ref=riseofmachine.com",
+    "date-added": "2026-01-06",
+    "slug": "screenshot-to-code"
   },
   {
     "title": "Shaped",

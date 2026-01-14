@@ -400,6 +400,14 @@
     "slug": "rytr"
   },
   {
+    "title": "sickleaveemail",
+    "body": "Professional sick leave email generator.",
+    "tag": "Free",
+    "url": "https://sickleaveemail.help?ref=riseofmachine.com",
+    "date-added": "2026-01-07",
+    "slug": "sickleaveemail"
+  },
+  {
     "title": "Simplified",
     "body": "Generate marketing copy.",
     "tag": "Freemium",
@@ -446,6 +454,14 @@
     "url": "https://thehumanizeai.pro/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "the-humanize"
+  },
+  {
+    "title": "TransMonkey",
+    "body": "AI document and video translator.",
+    "tag": "Freemium",
+    "url": "https://www.transmonkey.ai/?ref=riseofmachine.com",
+    "date-added": "2026-01-05",
+    "slug": "transmonkey"
   },
   {
     "title": "Typli",

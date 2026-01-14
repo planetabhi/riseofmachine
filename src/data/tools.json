@@ -45,6 +45,14 @@
           "slug": "banana-ai-art"
         },
         {
+          "title": "Banana Pro",
+          "body": "Professional text-to-image creation model.",
+          "tag": "Freemium",
+          "url": "https://banana-pro.io?ref=riseofmachine.com",
+          "date-added": "2026-01-12",
+          "slug": "banana-pro"
+        },
+        {
           "title": "Best Coloring Pages",
           "body": "Photo/idea to printable coloring pages.",
           "tag": "Freemium",
@@ -179,6 +187,22 @@
           "url": "https://exactly.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-25",
           "slug": "exactly"
+        },
+        {
+          "title": "FaceTo3D",
+          "body": "Convert face photos to 3D.",
+          "tag": "From $33/mo",
+          "url": "https://faceto3d.com?ref=riseofmachine.com",
+          "date-added": "2026-01-12",
+          "slug": "faceto3d"
+        },
+        {
+          "title": "Fast Image AI",
+          "body": "One-click image style conversion tool.",
+          "tag": "Freemium",
+          "url": "https://fastimage.ai/no-style-generator?ref=riseofmachine.com",
+          "date-added": "2026-01-07",
+          "slug": "fast-image-ai"
         },
         {
           "title": "Fastimage",
@@ -317,6 +341,14 @@
           "slug": "image-generator-nsfw"
         },
         {
+          "title": "Image to Image Maker",
+          "body": "Free AI image enhancement tool.",
+          "tag": "Free",
+          "url": "https://imagetoimagemaker.com?ref=riseofmachine.com",
+          "date-added": "2026-01-14",
+          "slug": "image-to-image-maker"
+        },
+        {
           "title": "Image to Prompt",
           "body": "Generate detailed AI art prompts from images for Midjourney & SD.",
           "tag": "Freemium",
@@ -331,6 +363,14 @@
           "url": "https://imgfx.dev/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
           "slug": "imagefx"
+        },
+        {
+          "title": "Imgkits",
+          "body": "AI image and video editor.",
+          "tag": "Freemium",
+          "url": "https://www.imgkits.com/?ref=riseofmachine.com",
+          "date-added": "2026-01-05",
+          "slug": "imgkits"
         },
         {
           "title": "Imgnai",
@@ -411,6 +451,14 @@
           "url": "https://magictryon.net/?ref=riseofmachine.com",
           "date-added": "2025-07-11",
           "slug": "magictryon"
+        },
+        {
+          "title": "MakeBW",
+          "body": "Convert photos to line art.",
+          "tag": "Free",
+          "url": "https://makebw.com?ref=riseofmachine.com",
+          "date-added": "2026-01-04",
+          "slug": "makebw"
         },
         {
           "title": "MediaAI Art",
@@ -507,6 +555,14 @@
           "url": "https://www.pictorial.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-12",
           "slug": "pictorial"
+        },
+        {
+          "title": "Picture Generator",
+          "body": "Generate images from text descriptions.",
+          "tag": "Free",
+          "url": "https://aipicturegenerator.ai/?ref=riseofmachine.com",
+          "date-added": "2026-01-11",
+          "slug": "picture-generator"
         },
         {
           "title": "PixarAI",
@@ -659,6 +715,14 @@
           "url": "https://yix.ai/?ref=riseofmachine.com",
           "date-added": "2025-12-14",
           "slug": "yix"
+        },
+        {
+          "title": "Zzo AI",
+          "body": "Instantly generate and edit backgrounds.",
+          "tag": "Freemium",
+          "url": "https://zzo.ai/?ref=riseofmachine.com",
+          "date-added": "2026-01-06",
+          "slug": "zzo-ai"
         }
       ]
     },
@@ -1599,6 +1663,14 @@
           "slug": "rytr"
         },
         {
+          "title": "sickleaveemail",
+          "body": "Professional sick leave email generator.",
+          "tag": "Free",
+          "url": "https://sickleaveemail.help?ref=riseofmachine.com",
+          "date-added": "2026-01-07",
+          "slug": "sickleaveemail"
+        },
+        {
           "title": "Simplified",
           "body": "Generate marketing copy.",
           "tag": "Freemium",
@@ -1645,6 +1717,14 @@
           "url": "https://thehumanizeai.pro/?ref=riseofmachine.com",
           "date-added": "2025-06-06",
           "slug": "the-humanize"
+        },
+        {
+          "title": "TransMonkey",
+          "body": "AI document and video translator.",
+          "tag": "Freemium",
+          "url": "https://www.transmonkey.ai/?ref=riseofmachine.com",
+          "date-added": "2026-01-05",
+          "slug": "transmonkey"
         },
         {
           "title": "Typli",
@@ -2467,6 +2547,14 @@
           "slug": "n8n-workflow-builder"
         },
         {
+          "title": "NAT Checker",
+          "body": "Fast, accurate NAT detection tool.",
+          "tag": "Free",
+          "url": "https://natchecker.com?ref=riseofmachine.com",
+          "date-added": "2026-01-06",
+          "slug": "nat-checker"
+        },
+        {
           "title": "Neum",
           "body": "RAG framework for large-scale and real-time data.",
           "tag": "Open-source",
@@ -2641,6 +2729,14 @@
           "url": "https://www.scade.pro/?ref=riseofmachine.com",
           "date-added": "2023-12-24",
           "slug": "scade"
+        },
+        {
+          "title": "Screenshot to Code",
+          "body": "Convert screenshots to HTML/CSS code.",
+          "tag": "Freemium",
+          "url": "https://screenshottocode.net/?ref=riseofmachine.com",
+          "date-added": "2026-01-06",
+          "slug": "screenshot-to-code"
         },
         {
           "title": "Shaped",
@@ -2959,6 +3055,14 @@
           "url": "https://www.studyfetch.com/?ref=riseofmachine.com",
           "date-added": "2023-12-26",
           "slug": "study-fetch"
+        },
+        {
+          "title": "TeachAny",
+          "body": "AI educational platform for teaching.",
+          "tag": "Freemium",
+          "url": "https://www.teachany.com/?ref=riseofmachine.com",
+          "date-added": "2026-01-05",
+          "slug": "teachany"
         },
         {
           "title": "Thea",
@@ -7188,6 +7292,14 @@
           "slug": "morph-studio"
         },
         {
+          "title": "Motion Control",
+          "body": "Precision AI motion transfer tool.",
+          "tag": "Freemium",
+          "url": "https://motioncontrol.app/?ref=riseofmachine.com",
+          "date-added": "2026-01-12",
+          "slug": "motion-control"
+        },
+        {
           "title": "Neural Frames",
           "body": "Text to video.",
           "tag": "Freemium",
@@ -7794,6 +7906,14 @@
           "slug": "jobbuddy-2"
         },
         {
+          "title": "JPG To Excel Converter",
+          "body": "Convert images to Excel layouts.",
+          "tag": "Free",
+          "url": "https://jpg2excel.app?ref=riseofmachine.com",
+          "date-added": "2026-01-06",
+          "slug": "jpg-to-excel-converter"
+        },
+        {
           "title": "Keys and Caches",
           "body": "Vibe profile your ML models to get max performance.",
           "tag": "Open-source",
@@ -7808,6 +7928,14 @@
           "url": "https://www.krater.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-15",
           "slug": "kraterai"
+        },
+        {
+          "title": "LargeMI",
+          "body": "Discover and compare AI tools.",
+          "tag": "Free",
+          "url": "https://largemi.com?ref=riseofmachine.com",
+          "date-added": "2026-01-14",
+          "slug": "largemi"
         },
         {
           "title": "Madespace",

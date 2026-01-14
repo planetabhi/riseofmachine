@@ -14,6 +14,9 @@
   "banana-ai-art": [
     "art"
   ],
+  "banana-pro": [
+    "art"
+  ],
   "best-coloring-pages": [
     "art"
   ],
@@ -63,6 +66,12 @@
     "art"
   ],
   "exactly": [
+    "art"
+  ],
+  "faceto3d": [
+    "art"
+  ],
+  "fast-image-ai": [
     "art"
   ],
   "fastimage": [
@@ -116,10 +125,16 @@
   "image-generator-nsfw": [
     "art"
   ],
+  "image-to-image-maker": [
+    "art"
+  ],
   "image-to-prompt": [
     "art"
   ],
   "imagefx": [
+    "art"
+  ],
+  "imgkits": [
     "art"
   ],
   "imgnai": [
@@ -150,6 +165,9 @@
     "art"
   ],
   "magictryon": [
+    "art"
+  ],
+  "makebw": [
     "art"
   ],
   "mediaai-art": [
@@ -186,6 +204,9 @@
     "art"
   ],
   "pictorial": [
+    "art"
+  ],
+  "picture-generator": [
     "art"
   ],
   "pixarai": [
@@ -243,6 +264,9 @@
     "art"
   ],
   "yix": [
+    "art"
+  ],
+  "zzo-ai": [
     "art"
   ],
   "adtwin": [
@@ -590,6 +614,9 @@
   "rytr": [
     "copywriting"
   ],
+  "sickleaveemail": [
+    "copywriting"
+  ],
   "simplified": [
     "copywriting"
   ],
@@ -606,6 +633,9 @@
     "copywriting"
   ],
   "the-humanize": [
+    "copywriting"
+  ],
+  "transmonkey": [
     "copywriting"
   ],
   "typli": [
@@ -911,6 +941,9 @@
   "n8n-workflow-builder": [
     "developer"
   ],
+  "nat-checker": [
+    "developer"
+  ],
   "neum": [
     "developer"
   ],
@@ -975,6 +1008,9 @@
     "developer"
   ],
   "scade": [
+    "developer"
+  ],
+  "screenshot-to-code": [
     "developer"
   ],
   "shaped": [
@@ -1092,6 +1128,9 @@
     "education"
   ],
   "study-fetch": [
+    "education"
+  ],
+  "teachany": [
     "education"
   ],
   "thea": [
@@ -2645,6 +2684,9 @@
   "morph-studio": [
     "video"
   ],
+  "motion-control": [
+    "video"
+  ],
   "neural-frames": [
     "video"
   ],
@@ -2870,10 +2912,16 @@
   "jobbuddy-2": [
     "xtras"
   ],
+  "jpg-to-excel-converter": [
+    "xtras"
+  ],
   "keys-and-caches": [
     "xtras"
   ],
   "kraterai": [
+    "xtras"
+  ],
+  "largemi": [
     "xtras"
   ],
   "madespace": [
