@@ -29,7 +29,7 @@ const fuseOptions = {
   ignoreLocation: true
 };
 
-export default function CardsContainer({ filter, sort = "nameAsc", randomSeed = 0, searchQuery = "" }) {
+export default function CardsContainer({ filter, sort = "nameAsc", randomSeed = 0, searchQuery = "", filterNew = false }) {
   const [displayedCount, setDisplayedCount] = useState(ITEMS_PER_PAGE);
   const [isLoading, setIsLoading] = useState(false);
   const loaderRef = useRef(null);
@@ -87,6 +87,18 @@ export default function CardsContainer({ filter, sort = "nameAsc", randomSeed = 
         );
     }
 
+    // Filter for new tools (added within last 30 days) if filterNew is enabled
+    if (filterNew) {
+      const today = new Date();
+      base = base.filter((tool) => {
+        if (!tool["date-added"]) return false;
+        const addedDate = new Date(tool["date-added"]);
+        const differenceInTime = today.getTime() - addedDate.getTime();
+        const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+        return differenceInDays <= 30;
+      });
+    }
+
     const sorted = [...base];
 
     if (sort === "random") {
@@ -117,11 +129,11 @@ export default function CardsContainer({ filter, sort = "nameAsc", randomSeed = 
     }
 
     return sorted;
-  }, [filter, sort, randomSeed, searchQuery, fuse]);
+  }, [filter, sort, randomSeed, searchQuery, filterNew, fuse]);
 
   useEffect(() => {
     setDisplayedCount(ITEMS_PER_PAGE);
-  }, [filter, searchQuery]);
+  }, [filter, searchQuery, filterNew]);
 
   useEffect(() => {
     const handleSaveState = () => {

@@ -6,6 +6,7 @@ export default function Dashboard({ category }) {
   const [currentSort, setCurrentSort] = useState("nameAsc");
   const [randomSeed, setRandomSeed] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const [filterNew, setFilterNew] = useState(false);
 
   useEffect(() => {
     const handleSortChange = (e) => {
@@ -21,15 +22,24 @@ export default function Dashboard({ category }) {
       }
     };
 
+    const handleFilterNew = (e) => {
+      const detail = e?.detail || {};
+      if (typeof detail.filterNew !== "undefined") {
+        setFilterNew(detail.filterNew);
+      }
+    };
+
     if (typeof window !== "undefined") {
       window.addEventListener("tools:sort-change", handleSortChange);
       window.addEventListener("tools:search", handleSearch);
+      window.addEventListener("tools:filter-new", handleFilterNew);
     }
 
     return () => {
       if (typeof window !== "undefined") {
         window.removeEventListener("tools:sort-change", handleSortChange);
         window.removeEventListener("tools:search", handleSearch);
+        window.removeEventListener("tools:filter-new", handleFilterNew);
       }
     };
   }, []);
@@ -42,6 +52,7 @@ export default function Dashboard({ category }) {
         sort={currentSort}
         randomSeed={randomSeed}
         searchQuery={searchQuery}
+        filterNew={filterNew}
       />
     </>
   );

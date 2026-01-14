@@ -129,6 +129,17 @@ const {
                     >
                 </div>
                 <button
+                    class="new-filter-toggle"
+                    id="new-filter-toggle"
+                    title="Recently added tools"
+                    aria-label="Filter new tools"
+                    aria-pressed="false"
+                >
+                    <span class="fire-emoji">🔥</span>
+                </button>
+            </div>
+            <div class="btn-group">
+                <button
                     class="theme-toggle"
                     id="theme-toggle"
                     title="Toggles light & dark"
@@ -177,8 +188,6 @@ const {
                         ></path></svg
                     >
                 </button>
-            </div>
-            <div class="btn-group">
                 <SortButtons
                     client:load
                     onSortChange={() => {}}
@@ -462,6 +471,50 @@ const {
         opacity: 0;
         transform: rotate(15deg) scale(0.8);
         pointer-events: none;
+    }
+
+    .new-filter-toggle {
+        z-index: 999;
+        width: var(--spacing-08);
+        height: var(--spacing-08);
+        background: none;
+        border: none;
+        padding: var(--spacing-00);
+        cursor: var(--c-pointer);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--spacing-00);
+        transition: transform 0.1s ease;
+        position: relative;
+        margin-left: var(--spacing-02);
+    }
+
+    .new-filter-toggle .fire-emoji {
+        font-size: 1.25rem;
+        transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
+        filter: grayscale(100%);
+        opacity: 0.6;
+    }
+
+    .new-filter-toggle:hover .fire-emoji {
+        transform: scale(1.1);
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .new-filter-toggle[aria-pressed="true"] .fire-emoji {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .new-filter-toggle:focus {
+        outline: 1px solid var(--button-primary);
+        outline-offset: 2px;
     }
 
     .favorites-link {
@@ -756,6 +809,29 @@ const {
                 if (!themeToggle._hasThemeListener) {
                     themeToggle.addEventListener("click", toggleTheme);
                     themeToggle._hasThemeListener = true;
+                }
+            }
+
+            // New Tools Filter Toggle - Idempotent listener
+            const newFilterToggle =
+                document.querySelector("#new-filter-toggle");
+            if (newFilterToggle) {
+                if (!newFilterToggle._hasFilterListener) {
+                    newFilterToggle.addEventListener("click", () => {
+                        const isPressed =
+                            newFilterToggle.getAttribute("aria-pressed") ===
+                            "true";
+                        newFilterToggle.setAttribute(
+                            "aria-pressed",
+                            !isPressed,
+                        );
+                        window.dispatchEvent(
+                            new CustomEvent("tools:filter-new", {
+                                detail: { filterNew: !isPressed },
+                            }),
+                        );
+                    });
+                    newFilterToggle._hasFilterListener = true;
                 }
             }
 
