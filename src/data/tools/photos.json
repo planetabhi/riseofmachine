@@ -128,6 +128,14 @@
     "slug": "clothes-changer"
   },
   {
+    "title": "CozAIPhoto",
+    "body": "Photo generator for realistic portraits.",
+    "tag": "From $15.90/mo",
+    "url": "https://cozaiphoto.com?ref=riseofmachine.com",
+    "date-added": "2026-02-14",
+    "slug": "cozaiphoto"
+  },
+  {
     "title": "DressX",
     "body": "AI tool instantly removes image backgrounds.",
     "tag": "Freemium",
@@ -400,6 +408,14 @@
     "slug": "mypicnow"
   },
   {
+    "title": "Nano Banana Pro",
+    "body": "Google's AI image generator.",
+    "tag": "Paid",
+    "url": "https://nanabananapro.com?ref=riseofmachine.com",
+    "date-added": "2026-02-14",
+    "slug": "nano-banana-pro-1"
+  },
+  {
     "title": "Nanopic",
     "body": "Google's world-leading AI image editor.",
     "tag": "From $2.99",
@@ -526,6 +542,14 @@
     "url": "https://www.profilepicture.ai/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "profile-picture-ai"
+  },
+  {
+    "title": "PromptWall",
+    "body": "Curated AI image prompts.",
+    "tag": "Freemium",
+    "url": "https://www.chatgptimage.art?ref=riseofmachine.com",
+    "date-added": "2026-02-14",
+    "slug": "promptwall"
   },
   {
     "title": "PS Nano Banana",
