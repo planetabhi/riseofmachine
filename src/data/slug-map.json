@@ -716,6 +716,9 @@
   "graffiti": [
     "design"
   ],
+  "graffiti-generator": [
+    "design"
+  ],
   "illostration-ai": [
     "design"
   ],
@@ -1793,6 +1796,9 @@
   "clothes-changer": [
     "photos"
   ],
+  "cozaiphoto": [
+    "photos"
+  ],
   "dressx": [
     "photos"
   ],
@@ -1895,6 +1901,9 @@
   "mypicnow": [
     "photos"
   ],
+  "nano-banana-pro-1": [
+    "photos"
+  ],
   "nanopic": [
     "photos"
   ],
@@ -1941,6 +1950,9 @@
     "photos"
   ],
   "profile-picture-ai": [
+    "photos"
+  ],
+  "promptwall": [
     "photos"
   ],
   "ps-nano-banana": [
@@ -2615,6 +2627,9 @@
   "autopilot-shorts": [
     "video"
   ],
+  "baby-dance": [
+    "video"
+  ],
   "capcut": [
     "video"
   ],
@@ -2795,6 +2810,9 @@
   "shortsfarm": [
     "video"
   ],
+  "soda-video-ai": [
+    "video"
+  ],
   "sora-2": [
     "video"
   ],
@@ -2937,6 +2955,9 @@
     "xtras"
   ],
   "generators": [
+    "xtras"
+  ],
+  "gmapsextrator": [
     "xtras"
   ],
   "goodsfox": [

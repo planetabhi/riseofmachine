@@ -168,6 +168,14 @@
     "slug": "generators"
   },
   {
+    "title": "GmapsExtrator",
+    "body": "Extract Google Maps leads.",
+    "tag": "Not available",
+    "url": "https://gmaps-extractor.com?ref=riseofmachine.com",
+    "date-added": "2026-02-14",
+    "slug": "gmapsextrator"
+  },
+  {
     "title": "GoodsFox",
     "body": "Track competitor ads, traffic sources, and creatives.",
     "tag": "Freemium",
