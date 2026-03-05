@@ -176,6 +176,14 @@
     "slug": "google-veo"
   },
   {
+    "title": "Grok Video Generator",
+    "body": "AI video with synced audio.",
+    "tag": "Freemium",
+    "url": "https://grokvideogenerator.com/?ref=riseofmachine.com",
+    "date-added": "2026-03-05",
+    "slug": "grok-video-generator"
+  },
+  {
     "title": "Hailuoai",
     "body": "AI Video Creation Tool by Minimax",
     "tag": "Not available",
@@ -480,6 +488,22 @@
     "slug": "seedance"
   },
   {
+    "title": "Seedance 2 AI Video Generator",
+    "body": "Multimodal AI video generator tool.",
+    "tag": "Freemium",
+    "url": "https://tryseedance2.com?ref=riseofmachine.com",
+    "date-added": "2026-03-05",
+    "slug": "seedance-2-ai-video-generator"
+  },
+  {
+    "title": "Seedance 2 Video",
+    "body": "High-quality AI video platform.",
+    "tag": "From $29.9/mo",
+    "url": "https://seedance2.video?ref=riseofmachine.com",
+    "date-added": "2026-03-05",
+    "slug": "seedance-2-video"
+  },
+  {
     "title": "Seedances",
     "body": "AI video generation from text and images.",
     "tag": "Freemium",
@@ -574,6 +598,14 @@
     "url": "https://kie.ai/features/v3-api?ref=riseofmachine.com",
     "date-added": "2025-06-17",
     "slug": "veo-3-by-kie"
+  },
+  {
+    "title": "Veo 4",
+    "body": "Free professional AI video generator.",
+    "tag": "Freemium",
+    "url": "https://veo4.im/?ref=riseofmachine.com",
+    "date-added": "2026-03-05",
+    "slug": "veo-4"
   },
   {
     "title": "Veo Video",
