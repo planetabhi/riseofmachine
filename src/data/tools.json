@@ -5846,14 +5846,6 @@
           "slug": "lock-in"
         },
         {
-          "title": "Love-MBTI",
-          "body": "AI personality analysis and compatibility.",
-          "tag": "Freemium",
-          "url": "https://love-mbti.com/?ref=riseofmachine.com",
-          "date-added": "2026-03-05",
-          "slug": "love-mbti"
-        },
-        {
           "title": "Lyra",
           "body": "Record, transcribe + auto‑create action items for every call.",
           "tag": "Freemium",
@@ -8192,6 +8184,14 @@
           "url": "https://largemi.com?ref=riseofmachine.com",
           "date-added": "2026-01-14",
           "slug": "largemi"
+        },
+        {
+          "title": "Love-MBTI",
+          "body": "AI personality analysis and compatibility.",
+          "tag": "Freemium",
+          "url": "https://love-mbti.com/?ref=riseofmachine.com",
+          "date-added": "2026-03-05",
+          "slug": "love-mbti"
         },
         {
           "title": "Madespace",
