@@ -48,6 +48,14 @@
     "slug": "blocks"
   },
   {
+    "title": "BookletAI",
+    "body": "AI booklet generator.",
+    "tag": "Freemium",
+    "url": "https://bookletai.org/?ref=riseofmachine.com",
+    "date-added": "2026-03-19",
+    "slug": "bookletai"
+  },
+  {
     "title": "Caesr AI",
     "body": "AI that controls real apps across web and desktop.",
     "tag": "Freemium",

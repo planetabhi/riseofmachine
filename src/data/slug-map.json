@@ -305,6 +305,9 @@
   "calldock": [
     "audio"
   ],
+  "cleanaudio-ai": [
+    "audio"
+  ],
   "cleanvoice": [
     "audio"
   ],
@@ -2024,6 +2027,9 @@
   "blocks": [
     "productivity"
   ],
+  "bookletai": [
+    "productivity"
+  ],
   "caesr-ai": [
     "productivity"
   ],
@@ -2633,6 +2639,9 @@
   "animant": [
     "video"
   ],
+  "animate-image-ai": [
+    "video"
+  ],
   "autopilot-shorts": [
     "video"
   ],
@@ -2960,6 +2969,9 @@
   "deepseek-v31": [
     "xtras"
   ],
+  "destiny-matrix": [
+    "xtras"
+  ],
   "elements-by-vercel": [
     "xtras"
   ],
@@ -3117,6 +3129,9 @@
     "xtras"
   ],
   "tripnotes": [
+    "xtras"
+  ],
+  "vacnavi": [
     "xtras"
   ],
   "vibeflow": [
