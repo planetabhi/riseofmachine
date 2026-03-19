@@ -120,6 +120,14 @@
     "slug": "deepseek-v31"
   },
   {
+    "title": "Destiny Matrix",
+    "body": "AI destiny numerology reading.",
+    "tag": "Freemium",
+    "url": "https://matrix-destiny.net/?ref=riseofmachine.com",
+    "date-added": "2026-03-19",
+    "slug": "destiny-matrix"
+  },
+  {
     "title": "Elements by Vercel",
     "body": "A component library for building AI-native apps.",
     "tag": "Open-source",
@@ -542,6 +550,14 @@
     "url": "https://tripnotes.ai/?ref=riseofmachine.com",
     "date-added": "2025-07-19",
     "slug": "tripnotes"
+  },
+  {
+    "title": "VacNavi",
+    "body": "AI-powered vacuum finder.",
+    "tag": "Free",
+    "url": "https://vacnavi.com/?ref=riseofmachine.com",
+    "date-added": "2026-03-19",
+    "slug": "vacnavi"
   },
   {
     "title": "VibeFlow",

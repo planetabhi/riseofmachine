@@ -827,6 +827,14 @@
           "slug": "calldock"
         },
         {
+          "title": "CleanAudio AI",
+          "body": "AI audio noise removal.",
+          "tag": "Freemium",
+          "url": "https://www.cleanaudio.io/?ref=riseofmachine.com",
+          "date-added": "2026-03-19",
+          "slug": "cleanaudio-ai"
+        },
+        {
           "title": "Cleanvoice",
           "body": "Removes filler, stuttering & mouth sounds.",
           "tag": "Pay-as-you-go",
@@ -5502,6 +5510,14 @@
           "slug": "blocks"
         },
         {
+          "title": "BookletAI",
+          "body": "AI booklet generator.",
+          "tag": "Freemium",
+          "url": "https://bookletai.org/?ref=riseofmachine.com",
+          "date-added": "2026-03-19",
+          "slug": "bookletai"
+        },
+        {
           "title": "Caesr AI",
           "body": "AI that controls real apps across web and desktop.",
           "tag": "Freemium",
@@ -7156,6 +7172,14 @@
           "slug": "animant"
         },
         {
+          "title": "Animate Image AI",
+          "body": "AI image-to-video animation.",
+          "tag": "Freemium",
+          "url": "https://animate-image.ai/?ref=riseofmachine.com",
+          "date-added": "2026-03-19",
+          "slug": "animate-image-ai"
+        },
+        {
           "title": "Autopilot Shorts",
           "body": "AI video generation and editing tool for shorts.",
           "tag": "From $9.50/mo",
@@ -8034,6 +8058,14 @@
           "slug": "deepseek-v31"
         },
         {
+          "title": "Destiny Matrix",
+          "body": "AI destiny numerology reading.",
+          "tag": "Freemium",
+          "url": "https://matrix-destiny.net/?ref=riseofmachine.com",
+          "date-added": "2026-03-19",
+          "slug": "destiny-matrix"
+        },
+        {
           "title": "Elements by Vercel",
           "body": "A component library for building AI-native apps.",
           "tag": "Open-source",
@@ -8456,6 +8488,14 @@
           "url": "https://tripnotes.ai/?ref=riseofmachine.com",
           "date-added": "2025-07-19",
           "slug": "tripnotes"
+        },
+        {
+          "title": "VacNavi",
+          "body": "AI-powered vacuum finder.",
+          "tag": "Free",
+          "url": "https://vacnavi.com/?ref=riseofmachine.com",
+          "date-added": "2026-03-19",
+          "slug": "vacnavi"
         },
         {
           "title": "VibeFlow",
