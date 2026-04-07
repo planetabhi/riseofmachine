@@ -264,6 +264,14 @@
     "slug": "kite"
   },
   {
+    "title": "Kling 3.0",
+    "body": "AI director-level cinematic video generator.",
+    "tag": "Freemium",
+    "url": "https://kling-3.net/?ref=riseofmachine.com",
+    "date-added": "2026-04-07",
+    "slug": "kling-30"
+  },
+  {
     "title": "Kling AI",
     "body": "AI Video Creation Tool by kuaishou.",
     "tag": "Not available",
@@ -590,6 +598,14 @@
     "url": "https://textideo.com/?ref=riseofmachine.com",
     "date-added": "2025-08-06",
     "slug": "textideo"
+  },
+  {
+    "title": "Towan AI",
+    "body": "One-stop WAN AI video and image generator.",
+    "tag": "From $15/mo",
+    "url": "https://towan.net?ref=riseofmachine.com",
+    "date-added": "2026-04-07",
+    "slug": "towan-ai"
   },
   {
     "title": "TryVeo3",

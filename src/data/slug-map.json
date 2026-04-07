@@ -65,6 +65,9 @@
   "dsnr": [
     "art"
   ],
+  "editaimg": [
+    "art"
+  ],
   "elf-on-the-shelf-generator": [
     "art"
   ],
@@ -1415,6 +1418,9 @@
   "outfitfm": [
     "fashion"
   ],
+  "outfitswap-studio": [
+    "fashion"
+  ],
   "saree-generator": [
     "fashion"
   ],
@@ -1638,9 +1644,6 @@
     "music"
   ],
   "beatoven": [
-    "music"
-  ],
-  "beatviz": [
     "music"
   ],
   "elevenlabssound-effects": [
@@ -2618,9 +2621,6 @@
   "repixify": [
     "social"
   ],
-  "replymind": [
-    "social"
-  ],
   "rizz-ai": [
     "social"
   ],
@@ -2762,6 +2762,9 @@
   "kite": [
     "video"
   ],
+  "kling-30": [
+    "video"
+  ],
   "kling-ai": [
     "video"
   ],
@@ -2883,6 +2886,9 @@
     "video"
   ],
   "textideo": [
+    "video"
+  ],
+  "towan-ai": [
     "video"
   ],
   "tryveo3": [
