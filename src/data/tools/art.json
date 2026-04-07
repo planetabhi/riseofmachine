@@ -560,6 +560,14 @@
     "slug": "oc-maker"
   },
   {
+    "title": "OC Maker",
+    "body": "AI character idea to artwork generator.",
+    "tag": "Freemium",
+    "url": "https://oc-maker.org?ref=riseofmachine.com",
+    "date-added": "2026-04-07",
+    "slug": "oc-maker-1"
+  },
+  {
     "title": "OCMaker",
     "body": "Generate characters online.",
     "tag": "Freemium",
@@ -672,6 +680,14 @@
     "slug": "stockimg"
   },
   {
+    "title": "SVG Generator",
+    "body": "Text prompts to scalable SVG graphics.",
+    "tag": "Freemium",
+    "url": "https://aisvggenerator.net?ref=riseofmachine.com",
+    "date-added": "2026-04-07",
+    "slug": "svg-generator"
+  },
+  {
     "title": "TattooCoverUp.AI",
     "body": "AI tattoo cover-up generator.",
     "tag": "Freemium",
@@ -686,6 +702,14 @@
     "url": "https://tattooer.info/?ref=riseofmachine.com",
     "date-added": "2025-06-02",
     "slug": "tattooer-info"
+  },
+  {
+    "title": "Thumbnail Maker",
+    "body": "AI-powered attention-grabbing thumbnail creator.",
+    "tag": "Freemium",
+    "url": "https://ai-thumbnail-maker.net?ref=riseofmachine.com",
+    "date-added": "2026-04-07",
+    "slug": "thumbnail-maker"
   },
   {
     "title": "Unicorn Coloring Pages",
