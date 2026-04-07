@@ -181,6 +181,14 @@
           "slug": "dsnr"
         },
         {
+          "title": "Editaimg",
+          "body": "AI-powered image editor and enhancer.",
+          "tag": "Freemium",
+          "url": "https://editaimg.com/?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "editaimg"
+        },
+        {
           "title": "Elf On The Shelf Generator",
           "body": "Create magical elf images and videos.",
           "tag": "Freemium",
@@ -3827,6 +3835,14 @@
           "url": "https://outfit.fm/?ref=riseofmachine.com",
           "date-added": "2025-01-06",
           "slug": "outfitfm"
+        },
+        {
+          "title": "OutfitSwap Studio",
+          "body": "AI clothes changer and virtual try-on.",
+          "tag": "Freemium",
+          "url": "https://outfitswapstudio.com?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "outfitswap-studio"
         },
         {
           "title": "Saree Generator",
@@ -7500,6 +7516,14 @@
           "slug": "kite"
         },
         {
+          "title": "Kling 3.0",
+          "body": "AI director-level cinematic video generator.",
+          "tag": "Freemium",
+          "url": "https://kling-3.net/?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "kling-30"
+        },
+        {
           "title": "Kling AI",
           "body": "AI Video Creation Tool by kuaishou.",
           "tag": "Not available",
@@ -7826,6 +7850,14 @@
           "url": "https://textideo.com/?ref=riseofmachine.com",
           "date-added": "2025-08-06",
           "slug": "textideo"
+        },
+        {
+          "title": "Towan AI",
+          "body": "One-stop WAN AI video and image generator.",
+          "tag": "From $15/mo",
+          "url": "https://towan.net?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "towan-ai"
         },
         {
           "title": "TryVeo3",
