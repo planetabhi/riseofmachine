@@ -96,6 +96,14 @@
     "slug": "developer-pal"
   },
   {
+    "title": "Forge",
+    "body": "AI app builder for Next.js and Supabase.",
+    "tag": "Freemium",
+    "url": "https://forge.new?ref=riseofmachine.com",
+    "date-added": "2026-04-07",
+    "slug": "forge"
+  },
+  {
     "title": "GitHub Copilot",
     "body": "AI pair programmer.",
     "tag": "From $10/mo",

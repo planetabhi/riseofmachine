@@ -565,6 +565,14 @@
           "slug": "oc-maker"
         },
         {
+          "title": "OC Maker",
+          "body": "AI character idea to artwork generator.",
+          "tag": "Freemium",
+          "url": "https://oc-maker.org?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "oc-maker-1"
+        },
+        {
           "title": "OCMaker",
           "body": "Generate characters online.",
           "tag": "Freemium",
@@ -677,6 +685,14 @@
           "slug": "stockimg"
         },
         {
+          "title": "SVG Generator",
+          "body": "Text prompts to scalable SVG graphics.",
+          "tag": "Freemium",
+          "url": "https://aisvggenerator.net?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "svg-generator"
+        },
+        {
           "title": "TattooCoverUp.AI",
           "body": "AI tattoo cover-up generator.",
           "tag": "Freemium",
@@ -691,6 +707,14 @@
           "url": "https://tattooer.info/?ref=riseofmachine.com",
           "date-added": "2025-06-02",
           "slug": "tattooer-info"
+        },
+        {
+          "title": "Thumbnail Maker",
+          "body": "AI-powered attention-grabbing thumbnail creator.",
+          "tag": "Freemium",
+          "url": "https://ai-thumbnail-maker.net?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "thumbnail-maker"
         },
         {
           "title": "Unicorn Coloring Pages",
@@ -1035,6 +1059,14 @@
           "slug": "respeecher"
         },
         {
+          "title": "RingFoods",
+          "body": "AI voice agent for restaurant calls.",
+          "tag": "From $100/mo",
+          "url": "https://www.ringfoods.com?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "ringfoods"
+        },
+        {
           "title": "Seamless",
           "body": "AI translation model",
           "tag": "Free",
@@ -1263,6 +1295,14 @@
           "tag": "Freemium",
           "date-added": "2025-10-22",
           "slug": "developer-pal"
+        },
+        {
+          "title": "Forge",
+          "body": "AI app builder for Next.js and Supabase.",
+          "tag": "Freemium",
+          "url": "https://forge.new?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "forge"
         },
         {
           "title": "GitHub Copilot",
@@ -1891,6 +1931,14 @@
           "url": "https://banana-nano.org/?ref=riseofmachine.com",
           "date-added": "2025-10-18",
           "slug": "banana-nano"
+        },
+        {
+          "title": "Banani",
+          "body": "AI-powered text to UI design tool.",
+          "tag": "Freemium",
+          "url": "https://www.banani.co?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "banani"
         },
         {
           "title": "Cheers GEO",
@@ -3111,6 +3159,14 @@
           "url": "https://www.mindgrasp.ai/?ref=riseofmachine.com",
           "date-added": "2024-12-14",
           "slug": "mindgrasp"
+        },
+        {
+          "title": "Miss Formula",
+          "body": "AI image to LaTeX and Word equations.",
+          "tag": "Freemium",
+          "url": "https://imgtoformula.com?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "miss-formula"
         },
         {
           "title": "My Math Solver AI",
@@ -6904,6 +6960,14 @@
           "slug": "snoika"
         },
         {
+          "title": "Tool Disk",
+          "body": "AI tools and SaaS solutions directory.",
+          "tag": "Freemium",
+          "url": "https://tooldisk.com?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "tool-disk"
+        },
+        {
           "title": "Writerzen",
           "body": "Topic and Keyword Research.",
           "tag": "Freemium",
@@ -7004,6 +7068,14 @@
           "url": "https://www.liseller.com/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
           "slug": "liseller"
+        },
+        {
+          "title": "Meme Generator",
+          "body": "Free AI meme generator, no sign-up.",
+          "tag": "Free",
+          "url": "https://aimemegenerator.io?ref=riseofmachine.com",
+          "date-added": "2026-04-07",
+          "slug": "meme-generator"
         },
         {
           "title": "Ocoya",

@@ -209,6 +209,9 @@
   "oc-maker": [
     "art"
   ],
+  "oc-maker-1": [
+    "art"
+  ],
   "ocmaker": [
     "art"
   ],
@@ -251,10 +254,16 @@
   "stockimg": [
     "art"
   ],
+  "svg-generator": [
+    "art"
+  ],
   "tattoocoverupai": [
     "art"
   ],
   "tattooer-info": [
+    "art"
+  ],
+  "thumbnail-maker": [
     "art"
   ],
   "unicorn-coloring-pages": [
@@ -383,6 +392,9 @@
   "respeecher": [
     "audio"
   ],
+  "ringfoods": [
+    "audio"
+  ],
   "seamless": [
     "audio"
   ],
@@ -465,6 +477,9 @@
     "code"
   ],
   "developer-pal": [
+    "code"
+  ],
+  "forge": [
     "code"
   ],
   "github-copilot": [
@@ -696,6 +711,9 @@
     "copywriting"
   ],
   "banana-nano": [
+    "design"
+  ],
+  "banani": [
     "design"
   ],
   "cheers-geo": [
@@ -1149,6 +1167,9 @@
     "education"
   ],
   "mindgrasp": [
+    "education"
+  ],
+  "miss-formula": [
     "education"
   ],
   "my-math-solver-ai": [
@@ -2543,6 +2564,9 @@
   "snoika": [
     "seo"
   ],
+  "tool-disk": [
+    "seo"
+  ],
   "writerzen": [
     "seo"
   ],
@@ -2577,6 +2601,9 @@
     "social"
   ],
   "liseller": [
+    "social"
+  ],
+  "meme-generator": [
     "social"
   ],
   "ocoya": [
