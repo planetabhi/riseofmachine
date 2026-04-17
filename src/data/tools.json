@@ -2379,7 +2379,14 @@
       "category": "developer",
       "content": [
         {
-          "title": "✨ New UI",
+          "title": "Not Human Search",
+          "body": "Agent-first search engine indexing 8,000+ MCP servers and agent-readable sites.",
+          "tag": "Free",
+          "url": "https://nothumansearch.ai?ref=riseofmachine.com",
+          "date-added": "2026-04-17"
+        },
+        {
+          "title": "\u2728 New UI",
           "body": "Modern, semantic UI framework for building beautiful sites and apps.",
           "tag": "Open-source",
           "url": "https://new-ui.com/?ref=riseofmachine.com",
@@ -2812,7 +2819,7 @@
         },
         {
           "title": "Reachy Mini",
-          "body": "Open‑source desktop robot kit.",
+          "body": "Open\u2011source desktop robot kit.",
           "tag": "Hardware purchase",
           "url": "https://www.pollen-robotics.com/reachy-mini/?ref=riseofmachine.com",
           "date-added": "2025-07-16",
@@ -4645,7 +4652,7 @@
         },
         {
           "title": "TemPolor",
-          "body": "Royalty-free music tailored to creators’ vision.",
+          "body": "Royalty-free music tailored to creators\u2019 vision.",
           "tag": "Freemium",
           "url": "https://www.tempolor.com/?ref=riseofmachine.com",
           "date-added": "2025-06-06",
@@ -5542,6 +5549,13 @@
           "slug": "agentsea"
         },
         {
+          "title": "AI Dev Jobs",
+          "body": "Job board specialized for AI/ML engineering roles with 8,400+ active listings; free REST API + MCP.",
+          "tag": "Free",
+          "url": "https://aidevboard.com?ref=riseofmachine.com",
+          "date-added": "2026-04-17"
+        },
+        {
           "title": "Autoppt",
           "body": "AI generator for PowerPoint presentations.",
           "url": "https://autoppt.com/?ref=riseofmachine.com",
@@ -5927,7 +5941,7 @@
         },
         {
           "title": "Lyra",
-          "body": "Record, transcribe + auto‑create action items for every call.",
+          "body": "Record, transcribe + auto\u2011create action items for every call.",
           "tag": "Freemium",
           "url": "https://lyra.so?ref=riseofmachine.com",
           "date-added": "2025-11-12",
@@ -7278,7 +7292,7 @@
         {
           "title": "CQTAI",
           "body": "AI content pipelines, automated video apps.",
-          "tag": "Starting from ¥0.06",
+          "tag": "Starting from \u00a50.06",
           "url": "https://cqtai.com?ref=riseofmachine.com",
           "date-added": "2025-07-03",
           "slug": "cqtai"
@@ -8523,7 +8537,7 @@
         },
         {
           "title": "ThatsMy",
-          "body": "India’s fastest-growing AI tools directory.",
+          "body": "India\u2019s fastest-growing AI tools directory.",
           "tag": "Free",
           "url": "https://thatsmy.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
