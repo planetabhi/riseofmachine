@@ -2380,7 +2380,7 @@
       "content": [
         {
           "title": "Not Human Search",
-          "body": "Agent-first search engine indexing 8,000+ MCP servers and agent-readable sites.",
+          "body": "Agent-first search engine indexing 8k+ MCP servers & agent-readable sites.",
           "tag": "Free",
           "url": "https://nothumansearch.ai?ref=riseofmachine.com",
           "date-added": "2026-04-17"
@@ -5549,8 +5549,8 @@
           "slug": "agentsea"
         },
         {
-          "title": "AI Dev Jobs",
-          "body": "Job board specialized for AI/ML engineering roles with 8,400+ active listings; free REST API + MCP.",
+          "title": "Dev Jobs",
+          "body": "Job board for AI/ML engineering roles with 8k+ active listings.",
           "tag": "Free",
           "url": "https://aidevboard.com?ref=riseofmachine.com",
           "date-added": "2026-04-17"
