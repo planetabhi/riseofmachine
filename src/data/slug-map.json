@@ -1004,6 +1004,9 @@
   "nora": [
     "developer"
   ],
+  "not-human-search": [
+    "developer"
+  ],
   "ollama-desktop-app": [
     "developer"
   ],
@@ -2091,6 +2094,9 @@
     "productivity"
   ],
   "decktopus": [
+    "productivity"
+  ],
+  "dev-jobs": [
     "productivity"
   ],
   "disclaimr": [
