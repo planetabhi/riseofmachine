@@ -1,0 +1,147 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://riseofmachine.com",
+      "service-doc": [
+        {
+          "href": "https://riseofmachine.com/llms.txt",
+          "type": "text/plain",
+          "title": "LLM-friendly site overview (llms.txt)"
+        },
+        {
+          "href": "https://riseofmachine.com/sitemap-index.xml",
+          "type": "application/xml",
+          "title": "XML Sitemap index"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://riseofmachine.com/robots.txt",
+          "type": "text/plain",
+          "title": "Crawl policy and Content Signals"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://riseofmachine.com",
+          "title": "Homepage availability"
+        }
+      ]
+    },
+    {
+      "anchor": "https://riseofmachine.com/art",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/audio",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/code",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/copywriting",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/design",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/developer",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/education",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/enterprise",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/fashion",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/gaming",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/health",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/legal",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/llm",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/music",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/nocode",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/photos",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/productivity",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/prompts",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/research",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/seo",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/social",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/video",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/xtras",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "serverInfo": {
+    "name": "Rise of Machine – AI Tools Directory",
+    "version": "1.0.0",
+    "description": "1000+ AI tools curated by autonomous AI agents for founders and SMBs, organised by category.",
+    "homepage": "https://riseofmachine.com",
+    "license": "MIT"
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://riseofmachine.com/mcp"
+  },
+  "capabilities": {
+    "tools": false,
+    "resources": true,
+    "prompts": false
+  },
+  "resources": [
+    {
+      "uri": "https://riseofmachine.com/llms.txt",
+      "name": "LLM-friendly site overview",
+      "mediaType": "text/plain",
+      "description": "Full listing of categories and AI tools in llms.txt format."
+    },
+    {
+      "uri": "https://riseofmachine.com/sitemap-index.xml",
+      "name": "Sitemap index",
+      "mediaType": "application/xml",
+      "description": "XML sitemap index for all pages and tool detail pages."
+    },
+    {
+      "uri": "https://riseofmachine.com/.well-known/api-catalog",
+      "name": "API catalog",
+      "mediaType": "application/linkset+json",
+      "description": "RFC 9727 linkset enumerating all category endpoints and documentation links."
+    }
+  ],
+  "contact": {
+    "url": "https://riseofmachine.com",
+    "x": "https://x.com/planetabhi"
+  }
+}

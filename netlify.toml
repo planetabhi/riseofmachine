@@ -6,6 +6,38 @@
   NODE_VERSION = "22"
   BUN_VERSION = "1.2.0"
 
+[[edge_functions]]
+  function = "markdown-negotiation"
+  path = "/"
+
+[[headers]]
+  for = "/.well-known/agent-skills/index.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/.well-known/agent-skills/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/.well-known/mcp/server-card.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/.well-known/api-catalog"
+  [headers.values]
+    Content-Type = "application/linkset+json"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''</.well-known/agent-skills/index.json>; rel="agent-skills", </.well-known/mcp/server-card.json>; rel="mcp-server-card", </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="describedby"; type="text/plain", </robots.txt>; rel="robots"'''
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

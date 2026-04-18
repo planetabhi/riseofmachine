@@ -336,6 +336,14 @@
     "slug": "nora"
   },
   {
+    "title": "Not Human Search",
+    "body": "Agent-first search engine indexing 8k+ MCP servers & agent-readable sites.",
+    "tag": "Free",
+    "url": "https://nothumansearch.ai?ref=riseofmachine.com",
+    "date-added": "2026-04-17",
+    "slug": "not-human-search"
+  },
+  {
     "title": "Ollama Desktop App",
     "body": "The easiest way to chat with local AI.",
     "tag": "Open-source",

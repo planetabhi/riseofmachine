@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "browse-ai-tools",
+      "type": "skill-md",
+      "description": "How to discover and browse 1000+ curated AI tools on Rise of Machine using llms.txt, category pages, and the API catalog.",
+      "url": "https://riseofmachine.com/.well-known/agent-skills/browse-ai-tools/SKILL.md",
+      "digest": "sha256:4fd268d25802eadaac0be0d10a5b43df4fcb8c4acfdc35cb8928dda61222b73c"
+    },
+    {
+      "name": "agent-ready-features",
+      "type": "skill-md",
+      "description": "Reference for all agent-ready features on Rise of Machine: well-known endpoints, Link headers, markdown negotiation, MCP server card, and Content Signals.",
+      "url": "https://riseofmachine.com/.well-known/agent-skills/agent-ready-features/SKILL.md",
+      "digest": "sha256:f6083ee9bc239d098268669edc29b4d152aa003cfebc521c46ff1b2558af3137"
+    }
+  ]
+}
