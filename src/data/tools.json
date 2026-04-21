@@ -45,6 +45,14 @@
           "slug": "banana-ai-1"
         },
         {
+          "title": "Banana AI",
+          "body": "Chat-based AI image generator.",
+          "tag": "Freemium",
+          "url": "https://bananai.net?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "banana-ai-2"
+        },
+        {
           "title": "Banana AI Art",
           "body": "AI Image generator.",
           "tag": "Not available",
@@ -2317,6 +2325,14 @@
           "slug": "uizard"
         },
         {
+          "title": "UXMagic AI",
+          "body": "AI-first UX/UI design tool.",
+          "tag": "Freemium",
+          "url": "https://uxmagic.ai?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "uxmagic-ai"
+        },
+        {
           "title": "V0",
           "body": "Generate UI with text prompts.",
           "tag": "Beta",
@@ -2395,15 +2411,7 @@
           "slug": "new-ui"
         },
         {
-          "title": "AI SDK 5 by Vercel",
-          "body": "The AI toolkit for TypeScript.",
-          "tag": "Open-source",
-          "url": "https://vercel.com/blog/ai-sdk-5?ref=riseofmachine.com",
-          "date-added": "2025-08-01",
-          "slug": "ai-sdk-5-by-vercel"
-        },
-        {
-          "title": "AI2sql",
+          "title": "2sql",
           "body": "Natural language to SQL queries effortlessly.",
           "tag": "Freemium",
           "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
@@ -2675,6 +2683,14 @@
           "slug": "makehub"
         },
         {
+          "title": "Markitdown",
+          "body": "Convert files to AI-ready markdown.",
+          "tag": "Free",
+          "url": "https://markitdown.tech?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "markitdown"
+        },
+        {
           "title": "Marscode",
           "body": "AI programming assistant.",
           "tag": "Free",
@@ -2889,6 +2905,14 @@
           "url": "https://screenshottocode.net/?ref=riseofmachine.com",
           "date-added": "2026-01-06",
           "slug": "screenshot-to-code"
+        },
+        {
+          "title": "SDK 5 by Vercel",
+          "body": "The AI toolkit for TypeScript.",
+          "tag": "Open-source",
+          "url": "https://vercel.com/blog/ai-sdk-5?ref=riseofmachine.com",
+          "date-added": "2025-08-01",
+          "slug": "ai-sdk-5-by-vercel"
         },
         {
           "title": "Shaped",
@@ -5070,6 +5094,14 @@
           "url": "https://facevary.com/?ref=riseofmachine.com",
           "date-added": "2025-07-19",
           "slug": "facevary"
+        },
+        {
+          "title": "Fast Image AI",
+          "body": "AI photo style transfer tool.",
+          "tag": "Free",
+          "url": "https://fastimage.ai?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "fast-image-ai-1"
         },
         {
           "title": "Flux AI",
@@ -7372,6 +7404,14 @@
           "slug": "dadan"
         },
         {
+          "title": "Dance2AI",
+          "body": "AI video generator using Seedance 2.0.",
+          "tag": "Freemium",
+          "url": "https://dance2ai.com?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "dance2ai"
+        },
+        {
           "title": "DaVinci Resolve",
           "body": "Unified editing, color, VFX & audio post-prod.",
           "tag": "Freemium",
@@ -7476,12 +7516,28 @@
           "slug": "grok-video-generator"
         },
         {
+          "title": "Grok Video Maker",
+          "body": "Free AI video generator tool.",
+          "tag": "Freemium",
+          "url": "https://grokvideomaker.com?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "grok-video-maker"
+        },
+        {
           "title": "Hailuoai",
           "body": "AI Video Creation Tool by Minimax",
           "tag": "Not available",
           "url": "https://hailuoai.com/video?ref=riseofmachine.com",
           "date-added": "2025-06-14",
           "slug": "hailuoai"
+        },
+        {
+          "title": "HappyHorse",
+          "body": "Cinematic AI video generator online.",
+          "tag": "From $9/mo",
+          "url": "https://happyhorses.online?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "happyhorse"
         },
         {
           "title": "Heygen",
@@ -8128,6 +8184,14 @@
           "url": "https://astrocarto.org/?ref=riseofmachine.com",
           "date-added": "2026-01-26",
           "slug": "astrocarto"
+        },
+        {
+          "title": "Astrocartography",
+          "body": "AI astrocartography map and charts.",
+          "tag": "Free",
+          "url": "https://astrocarto.net?ref=riseofmachine.com",
+          "date-added": "2026-04-21",
+          "slug": "astrocartography"
         },
         {
           "title": "Attractive Analyzer",

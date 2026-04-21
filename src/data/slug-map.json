@@ -14,6 +14,9 @@
   "banana-ai-1": [
     "art"
   ],
+  "banana-ai-2": [
+    "art"
+  ],
   "banana-ai-art": [
     "art"
   ],
@@ -857,6 +860,9 @@
   "uizard": [
     "design"
   ],
+  "uxmagic-ai": [
+    "design"
+  ],
   "v0": [
     "design"
   ],
@@ -882,9 +888,6 @@
     "design"
   ],
   "new-ui": [
-    "developer"
-  ],
-  "ai-sdk-5-by-vercel": [
     "developer"
   ],
   "ai2sql": [
@@ -989,6 +992,9 @@
   "makehub": [
     "developer"
   ],
+  "markitdown": [
+    "developer"
+  ],
   "marscode": [
     "developer"
   ],
@@ -1068,6 +1074,9 @@
     "developer"
   ],
   "screenshot-to-code": [
+    "developer"
+  ],
+  "ai-sdk-5-by-vercel": [
     "developer"
   ],
   "shaped": [
@@ -1863,6 +1872,9 @@
     "photos"
   ],
   "facevary": [
+    "photos"
+  ],
+  "fast-image-ai-1": [
     "photos"
   ],
   "flux-ai": [
@@ -2714,6 +2726,9 @@
   "dadan": [
     "video"
   ],
+  "dance2ai": [
+    "video"
+  ],
   "davinci-resolve": [
     "video"
   ],
@@ -2753,7 +2768,13 @@
   "grok-video-generator": [
     "video"
   ],
+  "grok-video-maker": [
+    "video"
+  ],
   "hailuoai": [
+    "video"
+  ],
+  "happyhorse": [
     "video"
   ],
   "heygen": [
@@ -2994,6 +3015,9 @@
     "xtras"
   ],
   "astrocarto": [
+    "xtras"
+  ],
+  "astrocartography": [
     "xtras"
   ],
   "attractive-analyzer": [
