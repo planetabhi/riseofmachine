@@ -333,6 +333,14 @@
           "slug": "ghibli-art-ai"
         },
         {
+          "title": "GPT Image 2",
+          "body": "Next-gen AI image generator.",
+          "tag": "Freemium",
+          "url": "https://gptimage2.tools/?ref=riseofmachine.com",
+          "date-added": "2026-04-12",
+          "slug": "gpt-image-2"
+        },
+        {
           "title": "Grok Ghibli",
           "body": "Generates Studio Ghibli style images.",
           "url": "https://grokghibli.pro/?ref=riseofmachine.com",
@@ -4063,20 +4071,20 @@
           "slug": "agents-by-athena"
         },
         {
+          "title": "Agents Live",
+          "body": "Discover AI Agents & services for your business.",
+          "tag": "Free",
+          "url": "https://aiagentslive.com/?ref=riseofmachine.com",
+          "date-added": "2025-02-19",
+          "slug": "ai-agents-live"
+        },
+        {
           "title": "AI Agents List",
           "body": "AI agents to complete workflows.",
           "tag": "Free",
           "url": "https://aiagentslist.com/?ref=riseofmachine.com",
           "date-added": "2024-10-23",
           "slug": "ai-agents-list"
-        },
-        {
-          "title": "AI Agents Live",
-          "body": "Discover AI Agents & services for your business.",
-          "tag": "Free",
-          "url": "https://aiagentslive.com/?ref=riseofmachine.com",
-          "date-added": "2025-02-19",
-          "slug": "ai-agents-live"
         },
         {
           "title": "Appagent",
@@ -4277,6 +4285,14 @@
           "url": "https://modal.com/?ref=riseofmachine.com",
           "date-added": "2023-12-24",
           "slug": "modal"
+        },
+        {
+          "title": "Muse Spark AI",
+          "body": "Multimodal reasoning AI that thinks deeper.",
+          "tag": "Free",
+          "url": "https://musespark-ai.org/?ref=riseofmachine.com",
+          "date-added": "2026-04-12",
+          "slug": "muse-spark-ai"
         },
         {
           "title": "Numbers Station",
@@ -4490,6 +4506,14 @@
           "url": "https://elevenlabs.io/app/sound-effects?ref=riseofmachine.com",
           "date-added": "2025-06-14",
           "slug": "elevenlabssound-effects"
+        },
+        {
+          "title": "Image To Music AI",
+          "body": "Turn photo into AI-generated soundtrack.",
+          "tag": "Freemium",
+          "url": "https://imagetomusicai.com/?ref=riseofmachine.com",
+          "date-added": "2026-04-12",
+          "slug": "image-to-music-ai"
         },
         {
           "title": "Imagetomusic",
@@ -7292,6 +7316,14 @@
           "slug": "capcut"
         },
         {
+          "title": "ClipMake AI",
+          "body": "Create ad creatives with 300+ AI actors.",
+          "tag": "Freemium",
+          "url": "https://clipmake.ai/?ref=riseofmachine.com",
+          "date-added": "2026-04-12",
+          "slug": "clipmake-ai"
+        },
+        {
           "title": "CQTAI",
           "body": "AI content pipelines, automated video apps.",
           "tag": "Starting from ¥0.06",
@@ -8344,6 +8376,14 @@
           "url": "https://makeforindia.com/digital-products/?ref=riseofmachine.com",
           "date-added": "2025-12-26",
           "slug": "make-for-india"
+        },
+        {
+          "title": "Manga Translator",
+          "body": "Enjoy manga with AI-powered instant translation.",
+          "tag": "Not available",
+          "url": "https://aimangatranslator.io/?ref=riseofmachine.com",
+          "date-added": "2026-04-12",
+          "slug": "manga-translator"
         },
         {
           "title": "Manus",

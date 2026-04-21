@@ -122,6 +122,9 @@
   "ghibli-art-ai": [
     "art"
   ],
+  "gpt-image-2": [
+    "art"
+  ],
   "grok-ghibli": [
     "art"
   ],
@@ -1496,10 +1499,10 @@
   "agents-by-athena": [
     "llm"
   ],
-  "ai-agents-list": [
+  "ai-agents-live": [
     "llm"
   ],
-  "ai-agents-live": [
+  "ai-agents-list": [
     "llm"
   ],
   "appagent": [
@@ -1577,6 +1580,9 @@
   "modal": [
     "llm"
   ],
+  "muse-spark-ai": [
+    "llm"
+  ],
   "numbers-station": [
     "llm"
   ],
@@ -1650,6 +1656,9 @@
     "music"
   ],
   "elevenlabssound-effects": [
+    "music"
+  ],
+  "image-to-music-ai": [
     "music"
   ],
   "imagetomusic": [
@@ -2684,6 +2693,9 @@
   "capcut": [
     "video"
   ],
+  "clipmake-ai": [
+    "video"
+  ],
   "cqtai": [
     "video"
   ],
@@ -3075,6 +3087,9 @@
     "xtras"
   ],
   "make-for-india": [
+    "xtras"
+  ],
+  "manga-translator": [
     "xtras"
   ],
   "manus": [
