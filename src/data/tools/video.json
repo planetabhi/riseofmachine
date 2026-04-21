@@ -96,6 +96,14 @@
     "slug": "dadan"
   },
   {
+    "title": "Dance2AI",
+    "body": "AI video generator using Seedance 2.0.",
+    "tag": "Freemium",
+    "url": "https://dance2ai.com?ref=riseofmachine.com",
+    "date-added": "2026-04-21",
+    "slug": "dance2ai"
+  },
+  {
     "title": "DaVinci Resolve",
     "body": "Unified editing, color, VFX & audio post-prod.",
     "tag": "Freemium",
@@ -200,12 +208,28 @@
     "slug": "grok-video-generator"
   },
   {
+    "title": "Grok Video Maker",
+    "body": "Free AI video generator tool.",
+    "tag": "Freemium",
+    "url": "https://grokvideomaker.com?ref=riseofmachine.com",
+    "date-added": "2026-04-21",
+    "slug": "grok-video-maker"
+  },
+  {
     "title": "Hailuoai",
     "body": "AI Video Creation Tool by Minimax",
     "tag": "Not available",
     "url": "https://hailuoai.com/video?ref=riseofmachine.com",
     "date-added": "2025-06-14",
     "slug": "hailuoai"
+  },
+  {
+    "title": "HappyHorse",
+    "body": "Cinematic AI video generator online.",
+    "tag": "From $9/mo",
+    "url": "https://happyhorses.online?ref=riseofmachine.com",
+    "date-added": "2026-04-21",
+    "slug": "happyhorse"
   },
   {
     "title": "Heygen",

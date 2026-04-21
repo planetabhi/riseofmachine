@@ -8,22 +8,6 @@
     "slug": "new-ui"
   },
   {
-    "title": "AI SDK 5 by Vercel",
-    "body": "The AI toolkit for TypeScript.",
-    "tag": "Open-source",
-    "url": "https://vercel.com/blog/ai-sdk-5?ref=riseofmachine.com",
-    "date-added": "2025-08-01",
-    "slug": "ai-sdk-5-by-vercel"
-  },
-  {
-    "title": "AI2sql",
-    "body": "Natural language to SQL queries effortlessly.",
-    "tag": "Freemium",
-    "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
-    "date-added": "2025-06-06",
-    "slug": "ai2sql"
-  },
-  {
     "title": "Amazon Codewhisperer",
     "body": "A code writing assistant developed by Amazon",
     "tag": "Not available",
@@ -288,6 +272,14 @@
     "slug": "makehub"
   },
   {
+    "title": "Markitdown",
+    "body": "Convert files to AI-ready markdown.",
+    "tag": "Free",
+    "url": "https://markitdown.tech?ref=riseofmachine.com",
+    "date-added": "2026-04-21",
+    "slug": "markitdown"
+  },
+  {
     "title": "Marscode",
     "body": "AI programming assistant.",
     "tag": "Free",
@@ -504,6 +496,14 @@
     "slug": "screenshot-to-code"
   },
   {
+    "title": "SDK 5 by Vercel",
+    "body": "The AI toolkit for TypeScript.",
+    "tag": "Open-source",
+    "url": "https://vercel.com/blog/ai-sdk-5?ref=riseofmachine.com",
+    "date-added": "2025-08-01",
+    "slug": "ai-sdk-5-by-vercel"
+  },
+  {
     "title": "Shaped",
     "body": "Deploy embeddings infrastructure.",
     "tag": "Flat-fee/mo",
@@ -518,6 +518,14 @@
     "url": "https://smythos.com/?ref=riseofmachine.com",
     "date-added": "2025-06-24",
     "slug": "smythos"
+  },
+  {
+    "title": "Sql",
+    "body": "Natural language to SQL queries effortlessly.",
+    "tag": "Freemium",
+    "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
+    "date-added": "2025-06-06",
+    "slug": "ai2sql"
   },
   {
     "title": "StackGen",
