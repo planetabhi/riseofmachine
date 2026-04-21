@@ -890,9 +890,6 @@
   "new-ui": [
     "developer"
   ],
-  "ai2sql": [
-    "developer"
-  ],
   "amazon-codewhisperer": [
     "developer"
   ],
@@ -1083,6 +1080,9 @@
     "developer"
   ],
   "smythos": [
+    "developer"
+  ],
+  "ai2sql": [
     "developer"
   ],
   "stackgen": [

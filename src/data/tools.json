@@ -2411,14 +2411,6 @@
           "slug": "new-ui"
         },
         {
-          "title": "2sql",
-          "body": "Natural language to SQL queries effortlessly.",
-          "tag": "Freemium",
-          "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
-          "date-added": "2025-06-06",
-          "slug": "ai2sql"
-        },
-        {
           "title": "Amazon Codewhisperer",
           "body": "A code writing assistant developed by Amazon",
           "tag": "Not available",
@@ -2929,6 +2921,14 @@
           "url": "https://smythos.com/?ref=riseofmachine.com",
           "date-added": "2025-06-24",
           "slug": "smythos"
+        },
+        {
+          "title": "Sql",
+          "body": "Natural language to SQL queries effortlessly.",
+          "tag": "Freemium",
+          "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
+          "date-added": "2025-06-06",
+          "slug": "ai2sql"
         },
         {
           "title": "StackGen",
