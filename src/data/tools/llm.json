@@ -8,20 +8,20 @@
     "slug": "agents-by-athena"
   },
   {
+    "title": "Agents Live",
+    "body": "Discover AI Agents & services for your business.",
+    "tag": "Free",
+    "url": "https://aiagentslive.com/?ref=riseofmachine.com",
+    "date-added": "2025-02-19",
+    "slug": "ai-agents-live"
+  },
+  {
     "title": "AI Agents List",
     "body": "AI agents to complete workflows.",
     "tag": "Free",
     "url": "https://aiagentslist.com/?ref=riseofmachine.com",
     "date-added": "2024-10-23",
     "slug": "ai-agents-list"
-  },
-  {
-    "title": "AI Agents Live",
-    "body": "Discover AI Agents & services for your business.",
-    "tag": "Free",
-    "url": "https://aiagentslive.com/?ref=riseofmachine.com",
-    "date-added": "2025-02-19",
-    "slug": "ai-agents-live"
   },
   {
     "title": "Appagent",
@@ -222,6 +222,14 @@
     "url": "https://modal.com/?ref=riseofmachine.com",
     "date-added": "2023-12-24",
     "slug": "modal"
+  },
+  {
+    "title": "Muse Spark AI",
+    "body": "Multimodal reasoning AI that thinks deeper.",
+    "tag": "Free",
+    "url": "https://musespark-ai.org/?ref=riseofmachine.com",
+    "date-added": "2026-04-12",
+    "slug": "muse-spark-ai"
   },
   {
     "title": "Numbers Station",
