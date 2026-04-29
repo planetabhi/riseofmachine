@@ -23,6 +23,7 @@ export interface Props {
     twitterImage?: string;
     pageFavicon?: string;
     showSearch?: boolean;
+    showLatestFilter?: boolean;
     searchPlaceholder?: string;
 }
 
@@ -45,6 +46,7 @@ const {
     twitterImage,
     pageFavicon,
     showSearch = false,
+    showLatestFilter = true,
     searchPlaceholder = "Search by name, category, or feature...",
 } = Astro.props;
 ---
@@ -142,6 +144,7 @@ const {
                 </button>
             </div>
             <div class="btn-group">
+                {showLatestFilter && (
                 <button
                     class="new-filter-toggle"
                     id="new-filter-toggle"
@@ -151,6 +154,7 @@ const {
                 >
                     Latest
                 </button>
+                )}
                 <a
                     href="/saved"
                     class="favorites-link"
@@ -383,7 +387,7 @@ const {
     .left-group {
         display: flex;
         align-items: center;
-        gap: var(--spacing-04);
+        gap: var(--spacing-05);
     }
 
     .new-filter-toggle {
@@ -434,6 +438,10 @@ const {
         align-items: center;
         border-radius: var(--spacing-00);
         position: relative;
+    }
+
+    .theme-toggle:hover {
+        background-color: var(--background-hover);
     }
 
     .theme-toggle .theme-emoji {

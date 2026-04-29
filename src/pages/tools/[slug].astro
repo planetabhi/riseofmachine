@@ -123,6 +123,7 @@ const breadcrumbs = [
   twitterDescription={seoDescription}
   twitterImage={seoOgImage}
   pageFavicon={faviconUrl}
+  showLatestFilter={false}
 >
   <SoftwareApplicationSchema
     name={tool.title}
@@ -389,7 +390,7 @@ const breadcrumbs = [
           copyBtn.innerHTML =
             '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
           setTimeout(() => (copyBtn.innerHTML = original), 2000);
-        });
+        }).catch(() => {});
       }
     }
 
@@ -471,6 +472,7 @@ const breadcrumbs = [
       position: relative;
       padding: var(--spacing-09);
       background-color: var(--background);
+      box-shadow: var(--dialog-strong);
       content-visibility: auto;
       contain-intrinsic-size: 8.5rem;
       transition: box-shadow 0.2s ease-out;
@@ -671,6 +673,7 @@ const breadcrumbs = [
       background-color: var(--accent);
       color: var(--background-high-contrast);
       text-decoration: none;
+      font-family: "ROM-Bold",var(--system-ui);
       font-weight: 600;
       text-align: center;
       font-size: var(--desktop-body);
