@@ -136,6 +136,7 @@ const {
                     id="theme-toggle"
                     title="Toggle dark theme"
                     aria-label="Toggle dark theme"
+                    aria-pressed="false"
                 >
                     <span class="theme-emoji" aria-hidden="true"></span>
                 </button>
@@ -768,8 +769,10 @@ const {
             document.documentElement.setAttribute('data-new-ui-theme', theme);
             const btn = document.getElementById('theme-toggle');
             if (btn) {
+                const isCold = theme === 'dark--cold';
+                btn.setAttribute('aria-pressed', String(isCold));
                 btn.setAttribute('aria-label',
-                    theme === 'dark--cold' ? 'Switch to warm theme' : 'Switch to cold theme');
+                    isCold ? 'Switch to warm theme' : 'Switch to cold theme');
             }
         };
 

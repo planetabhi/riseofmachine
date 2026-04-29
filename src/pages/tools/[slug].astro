@@ -15,7 +15,7 @@ export async function getStaticPaths() {
     return paths;
   } catch (e) {
     console.error("Failed to load slug-map.json for static paths:", e);
-    return [];
+    throw e;
   }
 }
 
