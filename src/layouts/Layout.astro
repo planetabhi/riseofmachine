@@ -52,6 +52,9 @@ const {
 <!doctype html>
 <html lang="en" data-new-ui-theme="dark--warm">
     <head>
+        <script is:inline>
+            (function(){try{var t=localStorage.getItem('rom_theme');if(t==='dark--warm'||t==='dark--cold')document.documentElement.setAttribute('data-new-ui-theme',t);}catch(e){}})();
+        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link
@@ -128,6 +131,14 @@ const {
                         /></a
                     >
                 </div>
+                <button
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    title="Toggle dark theme"
+                    aria-label="Toggle dark theme"
+                >
+                    <span class="theme-emoji" aria-hidden="true"></span>
+                </button>
             </div>
             <div class="btn-group">
                 <button
@@ -137,7 +148,7 @@ const {
                     aria-label="Filter new tools"
                     aria-pressed="false"
                 >
-                    <span class="fire-emoji">🔥</span>
+                    Latest
                 </button>
                 <a
                     href="/saved"
@@ -153,7 +164,7 @@ const {
                     target="_blank"
                     rel="noopener noreferrer"
                     class="submit-btn"
-                    tabindex="0"><span class="submit-text">Submit</span></a
+                    tabindex="0"><span class="submit-text">Submit ↗</span></a
                 >
             </div>
         </div>
@@ -371,10 +382,43 @@ const {
     .left-group {
         display: flex;
         align-items: center;
-        gap: var(--spacing-03);
+        gap: var(--spacing-04);
     }
 
     .new-filter-toggle {
+        padding: var(--spacing-02) var(--spacing-05);
+        border: 0.5px solid var(--border-muted);
+        background-color: var(--background);
+        color: var(--content-secondary);
+        cursor: var(--c-pointer);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        border-radius: var(--spacing-00);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+        transition: transform 0.2s ease;
+        outline: none;
+    }
+
+    .new-filter-toggle:hover {
+        color: var(--accent);
+    }
+
+    .new-filter-toggle[aria-pressed="true"] {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    .new-filter-toggle:active {
+        transform: scale(0.97);
+    }
+
+    .new-filter-toggle:focus {
+        outline: 1px solid var(--button-primary);
+        outline-offset: 2px;
+    }
+
+    .theme-toggle {
         z-index: 999;
         width: var(--spacing-08);
         height: var(--spacing-08);
@@ -388,32 +432,23 @@ const {
         justify-content: center;
         align-items: center;
         border-radius: var(--spacing-00);
-        transition: transform 0.1s ease;
         position: relative;
-        margin-right: var(--spacing-03);
     }
 
-    .new-filter-toggle .fire-emoji {
+    .theme-toggle .theme-emoji {
         font-size: 1.25rem;
-        transition:
-            transform 0.2s ease,
-            filter 0.2s ease;
-        filter: grayscale(100%);
-        opacity: 0.6;
+        line-height: 1;
     }
 
-    .new-filter-toggle:hover .fire-emoji {
-        transform: scale(1.1);
-        filter: grayscale(0%);
-        opacity: 1;
+    .theme-toggle .theme-emoji::after {
+        content: '♨️';
     }
 
-    .new-filter-toggle[aria-pressed="true"] .fire-emoji {
-        filter: grayscale(0%);
-        opacity: 1;
+    html[data-new-ui-theme="dark--cold"] .theme-toggle .theme-emoji::after {
+        content: '🧊';
     }
 
-    .new-filter-toggle:focus {
+    .theme-toggle:focus {
         outline: 1px solid var(--button-primary);
         outline-offset: 2px;
     }
@@ -716,20 +751,62 @@ const {
         history.scrollRestoration = "manual";
         window.onbeforeunload = () => window.scrollTo(0, 0);
 
+        // Theme toggle
+        const VALID_THEMES = ['dark--warm', 'dark--cold'];
+        const DEFAULT_THEME = 'dark--warm';
+
+        const getSavedTheme = () => {
+            try {
+                const t = localStorage.getItem('rom_theme');
+                return VALID_THEMES.includes(t) ? t : DEFAULT_THEME;
+            } catch (e) {
+                return DEFAULT_THEME;
+            }
+        };
+
+        const applyTheme = (theme) => {
+            document.documentElement.setAttribute('data-new-ui-theme', theme);
+            const btn = document.getElementById('theme-toggle');
+            if (btn) {
+                btn.setAttribute('aria-label',
+                    theme === 'dark--cold' ? 'Switch to warm theme' : 'Switch to cold theme');
+            }
+        };
+
+        const initTheme = () => {
+            applyTheme(getSavedTheme());
+
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle && !themeToggle._hasThemeListener) {
+                themeToggle.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-new-ui-theme');
+                    const next = current === 'dark--warm' ? 'dark--cold' : 'dark--warm';
+                    try { localStorage.setItem('rom_theme', next); } catch (e) {}
+                    applyTheme(next);
+                });
+                themeToggle._hasThemeListener = true;
+            }
+        };
+
         // Global Event Listeners (ensure single attachment)
         if (!window.__rom_initialized) {
             window.addEventListener("scroll", throttledNavScroll);
             window.addEventListener("bookmarks:changed", updateFavoritesLink);
             window.addEventListener("pageshow", updateFavoritesLink);
-            document.addEventListener("astro:page-load", init);
+            document.addEventListener("astro:before-swap", (e) => {
+                const theme = getSavedTheme();
+                e.newDocument.documentElement.setAttribute('data-new-ui-theme', theme);
+            });
+            document.addEventListener("astro:page-load", () => { init(); initTheme(); });
             window.__rom_initialized = true;
         }
 
         // Initial run for the current page
         if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", init);
+            document.addEventListener("DOMContentLoaded", () => { init(); initTheme(); });
         } else {
             init();
+            initTheme();
         }
     })();
 </script>
