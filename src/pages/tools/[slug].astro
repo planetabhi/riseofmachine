@@ -7,12 +7,16 @@ import BookmarkButton from "../../components/BookmarkButton";
 
 export async function getStaticPaths() {
   // Use slug-map for efficient path generation (no need to load full tools.json)
-  const slugMapData = await import("../../data/slug-map.json");
-  const paths = Object.keys(slugMapData.default).map((slug) => ({
-    params: { slug },
-  }));
-
-  return paths;
+  try {
+    const slugMapData = await import("../../data/slug-map.json");
+    const paths = Object.keys(slugMapData.default).map((slug) => ({
+      params: { slug },
+    }));
+    return paths;
+  } catch (e) {
+    console.error("Failed to load slug-map.json for static paths:", e);
+    throw e;
+  }
 }
 
 export const prerender = true;
@@ -24,15 +28,21 @@ const categoryList = (slugMap as Record<string, string[]>)[slug as string];
 const categoryName = categoryList?.[0];
 
 if (!categoryName) {
-  throw new Error(`Tool not found: ${slug}`);
+  return Astro.redirect("/404");
 }
 
 // Dynamically import only the needed category file
-const categoryTools = await import(`../../data/tools/${categoryName}.json`);
+let categoryTools: any;
+try {
+  categoryTools = await import(`../../data/tools/${categoryName}.json`);
+} catch (e) {
+  console.error(`Failed to load category file for: ${categoryName}`, e);
+  return Astro.redirect("/404");
+}
 const found = categoryTools.default.find((x: any) => x.slug === slug) || null;
 
 if (!found) {
-  throw new Error(`Tool not found: ${slug}`);
+  return Astro.redirect("/404");
 }
 
 const tool = found;

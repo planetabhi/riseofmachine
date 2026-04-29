@@ -36,23 +36,23 @@
     "update-metadata": "bun run scripts/update-metadata.ts"
   },
   "dependencies": {
-    "@astrojs/netlify": "^7.0.7",
+    "@astrojs/netlify": "^7.0.8",
     "@astrojs/partytown": "^2.1.7",
-    "@astrojs/react": "^5.0.3",
+    "@astrojs/react": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.1.8",
+    "@new-ui/foundations": "^0.3.6",
+    "astro": "^6.1.10",
     "fuse.js": "^7.3.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "@new-ui/foundations": "^0.3.4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "jsdom": "^29.0.2",
+    "@vitejs/plugin-react": "^5.2.0",
+    "jsdom": "^29.1.0",
     "node-html-parser": "^7.1.0",
     "vitest": "^4.1.5"
   },
