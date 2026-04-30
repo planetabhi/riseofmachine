@@ -367,10 +367,13 @@ const breadcrumbs = [
       document.body.removeAttribute("data-modal-open");
       document.body.style.overflow = "";
 
-      if (window.history.length > 1) window.history.back();
-      else
-        window.location.href =
-          document.getElementById("toolModal")?.dataset.fallback || "/";
+      const fallback =
+        document.getElementById("toolModal")?.dataset.fallback || "/";
+      const ref = document.referrer;
+      const sameOrigin = ref && new URL(ref, location.href).origin === location.origin;
+
+      if (sameOrigin && window.history.length > 1) window.history.back();
+      else window.location.href = fallback;
     }
 
     function handleInteraction(e) {

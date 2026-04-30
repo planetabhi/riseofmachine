@@ -58,7 +58,7 @@ const {
             (function(){try{var t=localStorage.getItem('rom_theme');if(t==='dark--warm'||t==='dark--cold')document.documentElement.setAttribute('data-new-ui-theme',t);}catch(e){}})();
         </script>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
             rel="icon"
             type="image/svg+xml"
@@ -120,10 +120,10 @@ const {
 
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
-        <div class="floating-nav" aria-label="main navigation">
+        <nav class="floating-nav" aria-label="Main">
             <div class="left-group">
                 <div class="logo">
-                    <a href="/" aria-label="home page" tabindex="-1"
+                    <a href="/" aria-label="home page"
                         ><img
                             src="/rise-of-machine.svg"
                             width="32"
@@ -136,7 +136,6 @@ const {
                 <button
                     class="theme-toggle"
                     id="theme-toggle"
-                    title="Toggle dark theme"
                     aria-label="Toggle dark theme"
                     aria-pressed="false"
                 >
@@ -148,8 +147,7 @@ const {
                 <button
                     class="new-filter-toggle"
                     id="new-filter-toggle"
-                    title="Recently added tools"
-                    aria-label="Filter new tools"
+                    aria-label="Filter recently added tools"
                     aria-pressed="false"
                 >
                     Latest
@@ -169,10 +167,39 @@ const {
                     target="_blank"
                     rel="noopener noreferrer"
                     class="submit-btn"
-                    tabindex="0"><span class="submit-text">Submit ↗</span></a
+                    ><span class="submit-text">Submit ↗</span></a
                 >
             </div>
-        </div>
+        </nav>
+        <script is:inline>
+            (function () {
+                try {
+                    var t = localStorage.getItem("rom_theme");
+                    var isCold = t === "dark--cold";
+                    var btn = document.getElementById("theme-toggle");
+                    if (btn) {
+                        btn.setAttribute("aria-pressed", String(isCold));
+                        btn.setAttribute(
+                            "aria-label",
+                            isCold ? "Switch to warm theme" : "Switch to cold theme",
+                        );
+                    }
+                    var raw = localStorage.getItem("rom_bookmarks");
+                    var count = 0;
+                    if (raw) {
+                        try {
+                            count = JSON.parse(raw).length || 0;
+                        } catch (e) {}
+                    }
+                    var link = document.getElementById("favoritesLink");
+                    var countEl = document.getElementById("favoritesCount");
+                    if (link && count > 0) {
+                        link.style.display = "inline-flex";
+                        if (countEl) countEl.textContent = count;
+                    }
+                } catch (e) {}
+            })();
+        </script>
 
         <Hero
             title={title}
@@ -259,6 +286,7 @@ const {
         font-family: var(--body-copy);
         background-color: var(--background-high-contrast);
         cursor: var(--c-arrow);
+        scrollbar-gutter: stable;
     }
     body {
         margin: 0;
@@ -335,13 +363,9 @@ const {
     }
     .floating-nav {
         padding: var(--spacing-06) var(--spacing-09);
-        top: 0;
-        left: 0;
-        right: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 999999;
     }
     .btn-group {
         display: flex;
@@ -353,7 +377,6 @@ const {
         border: 0.5px solid var(--border-muted);
         outline: none;
         text-decoration: none;
-        color: inherit;
         color: var(--content-secondary);
         background-color: var(--background);
         border-radius: var(--spacing-00);
@@ -504,17 +527,12 @@ const {
     }
 
     @media (max-width: 48rem) {
-        .favorites-text,
-        .submit-text {
+        .favorites-text {
             display: none;
         }
 
         .favorites-count {
             display: inline;
-        }
-
-        .submit-btn::after {
-            content: "Submit";
         }
     }
 
@@ -641,47 +659,6 @@ const {
 
 <script is:inline>
     (function () {
-        // Navigation & UI Management
-        let previousScrollPosition = 0;
-        let pageCTAPosition = 0;
-
-        const handleNavScroll = () => {
-            const nav = document.querySelector(".floating-nav");
-            if (!nav) return;
-
-            const currentScrolledPosition =
-                window.scrollY || window.pageYOffset;
-            const scrollingDown =
-                currentScrolledPosition > previousScrollPosition;
-
-            if (scrollingDown) {
-                nav.classList.add("scroll-down");
-                nav.classList.remove("scroll-up");
-            } else {
-                nav.classList.add("scroll-up");
-                nav.classList.remove("scroll-down");
-            }
-
-            if (currentScrolledPosition > pageCTAPosition + 50) {
-                nav.classList.add("is-active");
-            } else {
-                nav.classList.remove("is-active");
-            }
-            previousScrollPosition = currentScrolledPosition;
-        };
-
-        function throttle(callback, delay) {
-            let waiting = false;
-            return function () {
-                if (waiting) return;
-                waiting = true;
-                callback();
-                setTimeout(() => {
-                    waiting = false;
-                }, delay);
-            };
-        }
-
         const updateFavoritesLink = () => {
             try {
                 const linkEl = document.getElementById("favoritesLink");
@@ -703,19 +680,8 @@ const {
             } catch (e) {}
         };
 
-        // Create throttled scroll handler once
-        const throttledNavScroll = throttle(handleNavScroll, 80);
-
         // Core Initialization (Runs on every page load including initial)
         const init = () => {
-            // Handle Nav & CTA positions
-            const nav = document.querySelector(".floating-nav");
-            const pageCTA = document.querySelector(".floating-nav .submit-btn");
-            if (pageCTA) {
-                pageCTAPosition = pageCTA.getBoundingClientRect().bottom;
-            }
-
-
             // New Tools Filter Toggle - Idempotent listener
             const newFilterToggle =
                 document.querySelector("#new-filter-toggle");
@@ -739,26 +705,8 @@ const {
                 }
             }
 
-            // Path-specific attributes
-            if (window.location.pathname.startsWith("/tools/")) {
-                document.documentElement.setAttribute("data-tool-page", "true");
-                // Ensure body is ready before setting attribute
-                if (document.body) {
-                    document.body.setAttribute("data-modal-open", "true");
-                }
-            } else {
-                document.documentElement.removeAttribute("data-tool-page");
-                if (document.body) {
-                    document.body.removeAttribute("data-modal-open");
-                }
-            }
-
             updateFavoritesLink();
         };
-
-        // Scroll Restoration
-        history.scrollRestoration = "manual";
-        window.onbeforeunload = () => window.scrollTo(0, 0);
 
         // Theme toggle
         const VALID_THEMES = ['dark--warm', 'dark--cold'];
@@ -801,7 +749,6 @@ const {
 
         // Global Event Listeners (ensure single attachment)
         if (!window.__rom_initialized) {
-            window.addEventListener("scroll", throttledNavScroll);
             window.addEventListener("bookmarks:changed", updateFavoritesLink);
             window.addEventListener("pageshow", updateFavoritesLink);
             document.addEventListener("astro:before-swap", (e) => {

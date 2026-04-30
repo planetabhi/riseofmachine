@@ -47,9 +47,10 @@ export default function CardsContainer({
     const loaderRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        try {
-            const raw = sessionStorage.getItem('toolsState');
-            if (raw) {
+        const tryRestore = () => {
+            try {
+                const raw = sessionStorage.getItem('toolsState');
+                if (!raw) return;
                 const state = JSON.parse(raw);
                 if (state && state.filter === filter) {
                     if (state.displayedCount && state.displayedCount > displayedCount) {
@@ -62,9 +63,17 @@ export default function CardsContainer({
                     }, 50);
                 }
                 sessionStorage.removeItem('toolsState');
-            }
-        } catch (err) { }
-    }, []);
+            } catch (err) { }
+        };
+
+        tryRestore();
+        window.addEventListener('pageshow', tryRestore);
+        window.addEventListener('astro:page-load', tryRestore);
+        return () => {
+            window.removeEventListener('pageshow', tryRestore);
+            window.removeEventListener('astro:page-load', tryRestore);
+        };
+    }, [filter]);
 
     const allFlatTools = useMemo((): ToolWithCategory[] => {
         return (data.tools as Category[]).flatMap((item) =>
@@ -115,7 +124,12 @@ export default function CardsContainer({
         }
     }, [filter, sort, randomSeed, searchQuery, filterNew, fuse]);
 
+    const isFirstFilterChange = useRef(true);
     useEffect(() => {
+        if (isFirstFilterChange.current) {
+            isFirstFilterChange.current = false;
+            return;
+        }
         setDisplayedCount(ITEMS_PER_PAGE);
     }, [filter, searchQuery, filterNew]);
 
@@ -134,34 +148,6 @@ export default function CardsContainer({
         window.addEventListener('tools:save-state', handleSaveState);
         return () => window.removeEventListener('tools:save-state', handleSaveState);
     }, [displayedCount, filter]);
-
-    useEffect(() => {
-        const tryRestore = () => {
-            try {
-                const raw = sessionStorage.getItem('toolsState');
-                if (!raw) return;
-                const state = JSON.parse(raw);
-                if (state && state.filter === filter) {
-                    if (state.displayedCount && state.displayedCount > displayedCount) {
-                        setDisplayedCount(state.displayedCount);
-                    }
-                    setTimeout(() => {
-                        if (typeof window !== 'undefined' && typeof state.scrollY !== 'undefined') {
-                            window.scrollTo(0, state.scrollY);
-                        }
-                    }, 50);
-                }
-                sessionStorage.removeItem('toolsState');
-            } catch (err) { }
-        };
-
-        window.addEventListener('pageshow', tryRestore);
-        window.addEventListener('astro:page-load', tryRestore);
-        return () => {
-            window.removeEventListener('pageshow', tryRestore);
-            window.removeEventListener('astro:page-load', tryRestore);
-        };
-    }, [filter]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

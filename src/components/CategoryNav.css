@@ -36,6 +36,16 @@
   	z-index: 999;
   	cursor: pointer;
   	pointer-events: none;
+	border: 0.5px solid var(--border-muted);
+	color: var(--content-secondary);
+	cursor: var(--c-pointer);
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	border-radius: var(--spacing-00);
+	font-size: var(--desktop-body-sm);
+	line-height: var(--lh-desktop-body-sm);
+	transition: transform 0.2s ease;
+	outline: none;
   }
 
   .nav-fade-left {

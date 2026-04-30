@@ -26,7 +26,15 @@ export default function ParticleBackground() {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        let animationFrameId: number;
+        const reduceMotion =
+            typeof window !== 'undefined' &&
+            window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        let animationFrameId: number | null = null;
+        let isVisible = true;
+        let isOnScreen = true;
         let particles: Particle[] = [];
         const mouse: Mouse = { x: null, y: null, radius: 150 };
 
@@ -111,6 +119,35 @@ export default function ParticleBackground() {
             animationFrameId = requestAnimationFrame(animate);
         };
 
+        const startAnimation = () => {
+            if (animationFrameId === null && isVisible && isOnScreen) {
+                animate();
+            }
+        };
+
+        const stopAnimation = () => {
+            if (animationFrameId !== null) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        };
+
+        const handleVisibility = () => {
+            isVisible = !document.hidden;
+            if (isVisible) startAnimation();
+            else stopAnimation();
+        };
+
+        const intersectionObserver = new IntersectionObserver(
+            (entries) => {
+                isOnScreen = entries[0]?.isIntersecting ?? true;
+                if (isOnScreen) startAnimation();
+                else stopAnimation();
+            },
+            { threshold: 0 }
+        );
+        intersectionObserver.observe(canvas);
+
         const handleMouseMove = (e: MouseEvent) => {
             const rect = canvas.getBoundingClientRect();
             mouse.x = e.clientX - rect.left;
@@ -123,15 +160,18 @@ export default function ParticleBackground() {
         };
 
         resizeCanvas();
-        animate();
+        startAnimation();
 
         window.addEventListener('resize', resizeCanvas);
+        document.addEventListener('visibilitychange', handleVisibility);
         canvas.addEventListener('mousemove', handleMouseMove);
         canvas.addEventListener('mouseleave', handleMouseLeave);
 
         return () => {
-            cancelAnimationFrame(animationFrameId);
+            stopAnimation();
+            intersectionObserver.disconnect();
             window.removeEventListener('resize', resizeCanvas);
+            document.removeEventListener('visibilitychange', handleVisibility);
             canvas.removeEventListener('mousemove', handleMouseMove);
             canvas.removeEventListener('mouseleave', handleMouseLeave);
         };

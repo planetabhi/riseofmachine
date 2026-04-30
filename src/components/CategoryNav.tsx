@@ -67,7 +67,7 @@ export default function CategoryNav({ filter }: CategoryNavProps) {
 
     return (
         <div className="category-nav-container">
-            <nav className="category-nav" tabIndex={-1}>
+            <nav className="category-nav" aria-label="Categories">
                 {navItems.map((c, i) => (
                     <CategoryNavItem
                         key={i}
@@ -78,17 +78,27 @@ export default function CategoryNav({ filter }: CategoryNavProps) {
                 ))}
             </nav>
 
-            <div className="nav-fade nav-fade-left">
-                <svg className="nav-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+            <button
+                type="button"
+                className="nav-fade nav-fade-left"
+                aria-label="Scroll categories left"
+                tabIndex={-1}
+            >
+                <svg className="nav-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" aria-hidden="true">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m16 20-8-8 8-8" />
                 </svg>
-            </div>
+            </button>
 
-            <div className="nav-fade nav-fade-right">
-                <svg className="nav-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+            <button
+                type="button"
+                className="nav-fade nav-fade-right"
+                aria-label="Scroll categories right"
+                tabIndex={-1}
+            >
+                <svg className="nav-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" aria-hidden="true">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m8 20 8-8-8-8" />
                 </svg>
-            </div>
+            </button>
         </div>
     );
 }
