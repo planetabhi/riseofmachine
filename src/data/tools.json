@@ -381,6 +381,14 @@
           "slug": "image-generator-nsfw"
         },
         {
+          "title": "Image to 3D AI",
+          "body": "Generate 3D models from images.",
+          "tag": "Free",
+          "url": "https://image-to-3d.ai/?ref=riseofmachine.com",
+          "date-added": "2026-04-30",
+          "slug": "image-to-3d-ai"
+        },
+        {
           "title": "Image to Image Maker",
           "body": "Free AI image enhancement tool.",
           "tag": "Free",
