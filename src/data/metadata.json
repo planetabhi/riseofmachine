@@ -230,6 +230,11 @@
     "title": "ImageFX - Free AI Image Generator | Create Stunning AI Art",
     "description": "Transform your ideas into stunning artwork with ImageFX, the professional AI image generator. Create high-quality digital art, illustrations, and photo-realistic images in seconds with our advanced AI technology."
   },
+  "igly-ai": {
+    "slug": "igly-ai",
+    "title": "igly.ai - AI Image Editing Platform",
+    "description": "AI image editing platform for background removal, inpainting, upscaling, and generative fill."
+  },
   "imgkits": {
     "slug": "imgkits",
     "title": "Imgkits | Top AI Image & Video Processing Tools Online",
