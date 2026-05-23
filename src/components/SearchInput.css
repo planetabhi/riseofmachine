@@ -23,7 +23,7 @@
     padding-left: var(--spacing-09);
     padding-right: var(--spacing-12);
     border: 0.5px solid var(--border-muted);
-    border-radius: var(--spacing-00);
+    border-radius: var(--spacing-05);
     background-color: var(--background);
     color: var(--content-primary);
     font-size: var(--desktop-body-sm);
@@ -62,7 +62,7 @@
     right: var(--spacing-03);
     padding: var(--spacing-01) var(--spacing-02);
     border: 0.5px solid var(--border-muted);
-    border-radius: var(--spacing-00);
+    border-radius: var(--spacing-04);
     background-color: var(--background-secondary);
     color: var(--content-secondary);
     font-size: var(--desktop-caption);

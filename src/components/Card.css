@@ -3,7 +3,7 @@
     display: flex;
     background-color: var(--background);
     background-position: 100%;
-    border-radius: var(--spacing-00);
+    border-radius: var(--spacing-05);
     height: 8rem;
     position: relative;
     box-shadow: var(--content);
