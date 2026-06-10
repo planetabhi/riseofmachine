@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './CategoryNav.css';
 import data from '../data/tools.json';
 import CategoryNavItem from './CategoryNavItem';
@@ -22,34 +22,37 @@ export default function CategoryNav({ filter }: CategoryNavProps) {
         })),
     ];
 
+    const navRef = useRef<HTMLElement | null>(null);
+    const leftFadeRef = useRef<HTMLButtonElement | null>(null);
+    const rightFadeRef = useRef<HTMLButtonElement | null>(null);
+
     useEffect(() => {
-        const nav = document.querySelector('.category-nav');
-        const leftFade = document.querySelector('.nav-fade-left');
-        const rightFade = document.querySelector('.nav-fade-right');
+        const nav = navRef.current;
+        const leftFade = leftFadeRef.current;
+        const rightFade = rightFadeRef.current;
 
         if (!nav || !leftFade || !rightFade) return;
 
-        function checkScroll() {
-            if (!nav) return;
-            if ((nav as HTMLElement).scrollLeft > 0) {
-                leftFade?.classList.add('show');
+        const checkScroll = () => {
+            if (nav.scrollLeft > 0) {
+                leftFade.classList.add('show');
             } else {
-                leftFade?.classList.remove('show');
+                leftFade.classList.remove('show');
             }
 
-            if ((nav as HTMLElement).scrollLeft >= (nav as HTMLElement).scrollWidth - (nav as HTMLElement).clientWidth - 5) {
-                rightFade?.classList.add('hide');
+            if (nav.scrollLeft >= nav.scrollWidth - nav.clientWidth - 5) {
+                rightFade.classList.add('hide');
             } else {
-                rightFade?.classList.remove('hide');
+                rightFade.classList.remove('hide');
             }
-        }
+        };
 
         const handleLeftClick = () => {
-            (nav as HTMLElement).scrollBy({ left: -200, behavior: 'smooth' });
+            nav.scrollBy({ left: -200, behavior: 'smooth' });
         };
 
         const handleRightClick = () => {
-            (nav as HTMLElement).scrollBy({ left: 200, behavior: 'smooth' });
+            nav.scrollBy({ left: 200, behavior: 'smooth' });
         };
 
         nav.addEventListener('scroll', checkScroll);
@@ -67,7 +70,7 @@ export default function CategoryNav({ filter }: CategoryNavProps) {
 
     return (
         <div className="category-nav-container">
-            <nav className="category-nav" aria-label="Categories">
+            <nav ref={navRef} className="category-nav" aria-label="Categories">
                 {navItems.map((c, i) => (
                     <CategoryNavItem
                         key={i}
@@ -79,6 +82,7 @@ export default function CategoryNav({ filter }: CategoryNavProps) {
             </nav>
 
             <button
+                ref={leftFadeRef}
                 type="button"
                 className="nav-fade nav-fade-left"
                 aria-label="Scroll categories left"
@@ -90,6 +94,7 @@ export default function CategoryNav({ filter }: CategoryNavProps) {
             </button>
 
             <button
+                ref={rightFadeRef}
                 type="button"
                 className="nav-fade nav-fade-right"
                 aria-label="Scroll categories right"

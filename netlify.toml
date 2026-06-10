@@ -42,3 +42,59 @@
   from = "/*"
   to = "/index.html"
   status = "200"
+
+# Global security headers (apply to every response; can be overridden below)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+# Astro emits content-hashed bundles under /_astro/ — safe to cache forever
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Self-hosted fonts — versioned by filename, never mutated
+[[headers]]
+  for = "/woffs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Per-tool favicons — long cache + stale-while-revalidate so updates propagate
+[[headers]]
+  for = "/favicons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+
+# Brand assets
+[[headers]]
+  for = "/rise-of-machine.*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/grid.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Static descriptors / feeds — short cache so updates propagate
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/rss.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    Content-Type = "application/rss+xml; charset=utf-8"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type = "application/manifest+json"

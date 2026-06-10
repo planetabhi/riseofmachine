@@ -1,0 +1,24 @@
+{
+  "name": "Rise of Machine",
+  "short_name": "Rise of Machine",
+  "description": "AI tools curated by autonomous AI agents for makers and SMBs.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/rise-of-machine.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/rise-of-machine.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

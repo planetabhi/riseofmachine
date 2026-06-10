@@ -5,15 +5,52 @@ interface SearchInputProps {
     placeholder?: string;
 }
 
+const QUERY_PARAM = 'q';
+
+function readQueryFromUrl(): string {
+    if (typeof window === 'undefined') return '';
+    try {
+        return new URLSearchParams(window.location.search).get(QUERY_PARAM) || '';
+    } catch {
+        return '';
+    }
+}
+
+function writeQueryToUrl(value: string) {
+    if (typeof window === 'undefined') return;
+    try {
+        const url = new URL(window.location.href);
+        if (value) url.searchParams.set(QUERY_PARAM, value);
+        else url.searchParams.delete(QUERY_PARAM);
+        const next = url.pathname + (url.search ? url.search : '') + url.hash;
+        window.history.replaceState(null, '', next);
+    } catch {}
+}
+
 export default function SearchInput({
     placeholder = "Search by name, category, or feature...",
 }: SearchInputProps) {
+    // Initialize empty so SSR HTML matches client first render
+    // (avoids React 19 hydration mismatch). URL value is applied right
+    // after hydration in the effect below.
     const [query, setQuery] = useState('');
     const inputRef = useRef<HTMLInputElement>(null);
     const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
+        const syncFromUrl = () => setQuery(readQueryFromUrl());
+        // Apply URL value immediately after hydration so direct deep-link
+        // loads (e.g. /?q=foo) display the right input value on first paint.
+        syncFromUrl();
+
+        // Keep input value in sync with URL across Astro view-transition
+        // navigations and browser back/forward.
+        document.addEventListener('astro:page-load', syncFromUrl);
+        window.addEventListener('popstate', syncFromUrl);
+
         return () => {
+            document.removeEventListener('astro:page-load', syncFromUrl);
+            window.removeEventListener('popstate', syncFromUrl);
             if (debounceRef.current) {
                 clearTimeout(debounceRef.current);
                 debounceRef.current = null;
@@ -41,6 +78,7 @@ export default function SearchInput({
     }, [query]);
 
     const dispatchSearch = (value: string) => {
+        writeQueryToUrl(value);
         window.dispatchEvent(new CustomEvent('tools:search', {
             detail: { query: value }
         }));
