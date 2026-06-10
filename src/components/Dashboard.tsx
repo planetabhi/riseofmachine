@@ -65,13 +65,18 @@ export default function Dashboard({ category }: DashboardProps) {
         // Astro view-transition navigations keep this component mounted
         // (transition:persist) but the URL changes — resync from URL on
         // every page-load so cross-category nav clears stale q/new state.
+        // popstate covers browser back/forward inside the same page (e.g.
+        // SearchInput's replaceState history entries), keeping CardsContainer
+        // in lockstep with the URL and the search input value.
         window.addEventListener('tools:search', handleSearch);
         window.addEventListener('tools:filter-new', handleFilterNew);
+        window.addEventListener('popstate', syncFromUrl);
         document.addEventListener('astro:page-load', syncFromUrl);
 
         return () => {
             window.removeEventListener('tools:search', handleSearch);
             window.removeEventListener('tools:filter-new', handleFilterNew);
+            window.removeEventListener('popstate', syncFromUrl);
             document.removeEventListener('astro:page-load', syncFromUrl);
         };
     }, []);

@@ -1,6 +1,6 @@
 import type { Category, Tool } from '../types';
 
-const STORAGE_KEY = 'rom_bookmarks';
+export const STORAGE_KEY = 'rom_bookmarks';
 
 /**
  * Get all bookmarked tool slugs from localStorage

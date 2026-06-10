@@ -7,10 +7,9 @@ import {
     toggleBookmark,
     getBookmarkedTools,
     getBookmarkCount,
+    STORAGE_KEY,
 } from './bookmarks';
 import type { Category } from '../types';
-
-const STORAGE_KEY = 'rom_bookmarks';
 
 const sampleCategories: Category[] = [
     {
@@ -49,8 +48,10 @@ describe('bookmarks', () => {
 
         it('returns empty array on corrupt JSON', () => {
             localStorage.setItem(STORAGE_KEY, '{not-json');
-            vi.spyOn(console, 'warn').mockImplementation(() => {});
+            const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
             expect(getBookmarks()).toEqual([]);
+            expect(warnSpy).toHaveBeenCalledTimes(1);
+            expect(warnSpy.mock.calls[0]?.[0]).toMatch(/Failed to read bookmarks/);
         });
     });
 

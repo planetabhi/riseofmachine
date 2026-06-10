@@ -94,11 +94,18 @@ export default function CardsContainer({
     useEffect(() => {
         if (!wantsSearch || fuseRef.current) return;
         let cancelled = false;
-        import('fuse.js').then(({ default: FuseCtor }) => {
-            if (cancelled) return;
-            fuseRef.current = new FuseCtor(allFlatTools, fuseOptions);
-            setFuseReady(true);
-        });
+        import('fuse.js')
+            .then(({ default: FuseCtor }) => {
+                if (cancelled) return;
+                fuseRef.current = new FuseCtor(allFlatTools, fuseOptions);
+                setFuseReady(true);
+            })
+            .catch(() => {
+                // Mark ready even on failure so the loader UI doesn't hang.
+                // filteredCards will return [] for this search; the empty-state
+                // path renders normally in category views.
+                if (!cancelled) setFuseReady(true);
+            });
         return () => { cancelled = true; };
     }, [wantsSearch, allFlatTools]);
 
@@ -193,7 +200,7 @@ export default function CardsContainer({
 
     const displayedCards = filteredCards.slice(0, displayedCount);
 
-    const isFuseLoading = wantsSearch && !fuseRef.current;
+    const isFuseLoading = wantsSearch && !fuseReady;
 
     // Check if searching with no results in a specific category
     const isSearchingInCategory = searchQuery && searchQuery.length >= 2 && filter !== 'all';

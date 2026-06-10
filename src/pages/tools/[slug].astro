@@ -407,10 +407,27 @@ const breadcrumbs = [
           setTimeout(() => (copyBtn.innerHTML = original), 2000);
         };
 
+        const flashError = () => {
+          const original = copyBtn.innerHTML;
+          const originalLabel = copyBtn.getAttribute("aria-label");
+          const originalTitle = copyBtn.getAttribute("title");
+          copyBtn.setAttribute("aria-label", "Copy failed");
+          copyBtn.setAttribute("title", "Copy failed");
+          copyBtn.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+          setTimeout(() => {
+            copyBtn.innerHTML = original;
+            if (originalLabel !== null) copyBtn.setAttribute("aria-label", originalLabel);
+            if (originalTitle !== null) copyBtn.setAttribute("title", originalTitle);
+          }, 2000);
+        };
+
         const fallbackCopy = () => {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(url).then(flashCheck).catch(() => {});
+          if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            flashError();
+            return;
           }
+          navigator.clipboard.writeText(url).then(flashCheck).catch(() => flashError());
         };
 
         if (isCoarse && typeof navigator.share === "function") {
@@ -503,7 +520,6 @@ const breadcrumbs = [
       background-color: var(--background);
       content-visibility: auto;
       contain-intrinsic-size: 8.5rem;
-      transition: box-shadow 0.2s ease-out;
       border-radius: var(--spacing-06);
     }
 

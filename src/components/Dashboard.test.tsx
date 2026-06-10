@@ -116,6 +116,28 @@ describe('Dashboard', () => {
         expect(screen.getByTestId('new').textContent).toBe('1');
     });
 
+    it('re-syncs from URL on popstate (browser back/forward)', () => {
+        setUrl('?q=foo');
+        render(<Dashboard category="all" />);
+        expect(screen.getByTestId('q').textContent).toBe('foo');
+
+        // Simulate the user hitting Back: URL changes, popstate fires.
+        setUrl('?q=bar&new=1');
+        act(() => {
+            window.dispatchEvent(new PopStateEvent('popstate'));
+        });
+        expect(screen.getByTestId('q').textContent).toBe('bar');
+        expect(screen.getByTestId('new').textContent).toBe('1');
+
+        // Forward to a clean URL.
+        setUrl('');
+        act(() => {
+            window.dispatchEvent(new PopStateEvent('popstate'));
+        });
+        expect(screen.getByTestId('q').textContent).toBe('');
+        expect(screen.getByTestId('new').textContent).toBe('0');
+    });
+
     it('ignores malformed event detail (no detail object)', () => {
         render(<Dashboard category="all" />);
         act(() => {
