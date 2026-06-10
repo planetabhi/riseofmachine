@@ -39,16 +39,6 @@
     height: 18px;
 }
 
-/* Variant: large (for detail pages) */
-.bookmark-btn--large {
-    padding: var(--spacing-02);
-}
-
-.bookmark-btn--large svg {
-    width: 20px;
-    height: 20px;
-}
-
 /* Default variant */
 .bookmark-btn--default svg {
     width: 20px;

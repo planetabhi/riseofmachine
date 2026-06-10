@@ -64,6 +64,14 @@ const {
             type="image/svg+xml"
             href={pageFavicon || "/rise-of-machine.svg"}
         />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="theme-color" content="#000000" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Rise of Machine — Latest AI Tools"
+            href="/rss.xml"
+        />
         <meta name="generator" content={Astro.generator} />
         <title>
             {
@@ -681,23 +689,51 @@ const {
         };
 
         // Core Initialization (Runs on every page load including initial)
+        const NEW_PARAM = "new";
+
+        const readNewFromUrl = () => {
+            try {
+                return new URLSearchParams(window.location.search).get(NEW_PARAM) === "1";
+            } catch (e) {
+                return false;
+            }
+        };
+
+        const writeNewToUrl = (on) => {
+            try {
+                const url = new URL(window.location.href);
+                if (on) url.searchParams.set(NEW_PARAM, "1");
+                else url.searchParams.delete(NEW_PARAM);
+                const next = url.pathname + (url.search ? url.search : "") + url.hash;
+                window.history.replaceState(null, "", next);
+            } catch (e) {}
+        };
+
         const init = () => {
             // New Tools Filter Toggle - Idempotent listener
             const newFilterToggle =
                 document.querySelector("#new-filter-toggle");
             if (newFilterToggle) {
+                // Sync button visual state from URL on each page load.
+                // Dashboard reads the same URL on mount/page-load, so we
+                // don't dispatch from here (which would race React hydration).
+                const urlOn = readNewFromUrl();
+                newFilterToggle.setAttribute("aria-pressed", String(urlOn));
+
                 if (!newFilterToggle._hasFilterListener) {
                     newFilterToggle.addEventListener("click", () => {
                         const isPressed =
                             newFilterToggle.getAttribute("aria-pressed") ===
                             "true";
+                        const next = !isPressed;
                         newFilterToggle.setAttribute(
                             "aria-pressed",
-                            !isPressed,
+                            next,
                         );
+                        writeNewToUrl(next);
                         window.dispatchEvent(
                             new CustomEvent("tools:filter-new", {
-                                detail: { filterNew: !isPressed },
+                                detail: { filterNew: next },
                             }),
                         );
                     });

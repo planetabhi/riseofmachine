@@ -167,6 +167,9 @@ const breadcrumbs = [
               src={faviconUrl}
               alt={`${tool.title} icon`}
               class="tool-icon"
+              width="48"
+              height="48"
+              decoding="async"
               onerror="this.style.display='none'"
             />
           </div>
@@ -336,6 +339,10 @@ const breadcrumbs = [
                         src={`/favicons/${t.slug}.png`}
                         alt=""
                         class="related-icon"
+                        width="24"
+                        height="24"
+                        loading="lazy"
+                        decoding="async"
                         onerror="this.style.display='none'"
                       />
                       <span class="related-name">{t.title}</span>
@@ -388,12 +395,48 @@ const breadcrumbs = [
 
       const copyBtn = e.target.closest("#copyLinkBtn");
       if (copyBtn) {
-        navigator.clipboard.writeText(window.location.href).then(() => {
+        const url = window.location.href;
+        const title = document.title;
+        const isCoarse =
+          window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+
+        const flashCheck = () => {
           const original = copyBtn.innerHTML;
           copyBtn.innerHTML =
             '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
           setTimeout(() => (copyBtn.innerHTML = original), 2000);
-        }).catch(() => {});
+        };
+
+        const flashError = () => {
+          const original = copyBtn.innerHTML;
+          const originalLabel = copyBtn.getAttribute("aria-label");
+          const originalTitle = copyBtn.getAttribute("title");
+          copyBtn.setAttribute("aria-label", "Copy failed");
+          copyBtn.setAttribute("title", "Copy failed");
+          copyBtn.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+          setTimeout(() => {
+            copyBtn.innerHTML = original;
+            if (originalLabel !== null) copyBtn.setAttribute("aria-label", originalLabel);
+            if (originalTitle !== null) copyBtn.setAttribute("title", originalTitle);
+          }, 2000);
+        };
+
+        const fallbackCopy = () => {
+          if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            flashError();
+            return;
+          }
+          navigator.clipboard.writeText(url).then(flashCheck).catch(() => flashError());
+        };
+
+        if (isCoarse && typeof navigator.share === "function") {
+          navigator.share({ title, url }).then(flashCheck).catch((err) => {
+            if (err && err.name !== "AbortError") fallbackCopy();
+          });
+        } else {
+          fallbackCopy();
+        }
       }
     }
 
@@ -475,10 +518,9 @@ const breadcrumbs = [
       position: relative;
       padding: var(--spacing-09);
       background-color: var(--background);
-      box-shadow: var(--dialog-strong);
       content-visibility: auto;
       contain-intrinsic-size: 8.5rem;
-      transition: box-shadow 0.2s ease-out;
+      border-radius: var(--spacing-06);
     }
 
     .tool-detail-close-btn {
