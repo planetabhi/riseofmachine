@@ -5085,5 +5085,10 @@
     "slug": "vibeflow",
     "title": "ViBeFlOw Studios | Music Production & Video Content Creation Services",
     "description": "ViBeFlOw Studios offers professional music production and video content creation services in Fullerton, CA. Specializing in live events, DJ sets, and high-quality audio-visual content."
+  },
+  "remio": {
+    "slug": "remio",
+    "title": "Remio - Local-first AI memory and knowledge base",
+    "description": "Capture and search files, webpages, recordings, emails, messages, images, and notes with local indexes and vectors so AI agents can retrieve context faster while reducing token use."
   }
 }
