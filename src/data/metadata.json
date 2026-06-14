@@ -4995,6 +4995,11 @@
     "title": "Sell your media on a pay-per-view basis in minutes | Recast",
     "description": "RecastPay - a universal media wallet that unlocks new revenue by enabling media owners to sell any digital media, asset or engagement directly to consumers, anywhere, at any price."
   },
+  "remio": {
+    "slug": "remio",
+    "title": "Remio - Local-first AI memory and knowledge base",
+    "description": "Capture and search files, webpages, recordings, emails, messages, images, and notes with local indexes and vectors so AI agents can retrieve context faster while reducing token use."
+  },
   "righthair": {
     "slug": "righthair",
     "title": "Free AI Hairstyle Changer: Try-On Hairstyles Online | RightHair",
