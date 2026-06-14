@@ -6508,6 +6508,14 @@
           "url": "https://www.zyler.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
           "slug": "zyler-ai"
+        },
+        {
+          "title": "Remio",
+          "body": "Local-first AI memory and knowledge base for personal and agent context.",
+          "tag": "Freemium",
+          "url": "https://remio.ai/?ref=riseofmachine.com",
+          "date-added": "2026-06-13",
+          "slug": "remio"
         }
       ]
     },
