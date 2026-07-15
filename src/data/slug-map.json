@@ -725,6 +725,9 @@
   "yahini": [
     "copywriting"
   ],
+  "new-ui-templates": [
+    "design"
+  ],
   "banana-nano": [
     "design"
   ],
@@ -821,9 +824,6 @@
   "napkin-ai": [
     "design"
   ],
-  "new-ui-templates": [
-    "design"
-  ],
   "paper-design": [
     "design"
   ],
@@ -837,6 +837,9 @@
     "design"
   ],
   "recraft-v3-svg": [
+    "design"
+  ],
+  "roblox-gui-maker": [
     "design"
   ],
   "rustic-ai": [
@@ -895,9 +898,6 @@
   ],
   "yenex": [
     "design"
-  ],
-  "new-ui": [
-    "developer"
   ],
   "amazon-codewhisperer": [
     "developer"
@@ -1014,6 +1014,9 @@
     "developer"
   ],
   "neum": [
+    "developer"
+  ],
+  "new-ui": [
     "developer"
   ],
   "nora": [
@@ -2303,6 +2306,9 @@
   "reclaim-ai": [
     "productivity"
   ],
+  "remio": [
+    "productivity"
+  ],
   "remio-note-taker": [
     "productivity"
   ],
@@ -3223,8 +3229,5 @@
   ],
   "vibeflow": [
     "xtras"
-  ],
-  "remio": [
-    "productivity"
   ]
 }

@@ -1,5 +1,13 @@
 [
   {
+    "title": "✨ New UI Templates",
+    "body": "Simple, production-ready templates for AI founders.",
+    "tag": "Freemium",
+    "url": "https://new-ui.com/templates?ref=riseofmachine.com",
+    "date-added": "2025-08-10",
+    "slug": "new-ui-templates"
+  },
+  {
     "title": "Banana Nano",
     "body": "Googles revolutionary AI image generation.",
     "tag": "Freemium",
@@ -81,7 +89,7 @@
   },
   {
     "title": "Flux2ai",
-    "body": ".2 AI Image Generator - Text to Image, Multi Image Workflows Flux ai image gen.",
+    "body": "Text to image, multi image workflows flux ai image gen.",
     "tag": "Freemium",
     "url": "https://flux2ai.org/?ref=riseofmachine.com",
     "date-added": "2025-12-14",
@@ -256,14 +264,6 @@
     "slug": "napkin-ai"
   },
   {
-    "title": "New UI Templates",
-    "body": "Simple templates for AI founders.",
-    "tag": "Freemium",
-    "url": "https://new-ui.com/templates?ref=riseofmachine.com",
-    "date-added": "2025-08-10",
-    "slug": "new-ui-templates"
-  },
-  {
     "title": "Paper Design",
     "body": "A canvas for designers to create beautiful art.",
     "tag": "Freemium",
@@ -302,6 +302,14 @@
     "url": "https://replicate.com/recraft-ai/recraft-v3-svg?ref=riseofmachine.com",
     "date-added": "2024-11-07",
     "slug": "recraft-v3-svg"
+  },
+  {
+    "title": "Roblox GUI Maker",
+    "body": "AI Roblox Studio GUI planner.",
+    "tag": "Free",
+    "url": "https://robloxguimaker.dev/?ref=riseofmachine.com",
+    "date-added": "2026-06-18",
+    "slug": "roblox-gui-maker"
   },
   {
     "title": "Rustic AI",

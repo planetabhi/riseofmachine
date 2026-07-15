@@ -1,6 +1,6 @@
 {
   "title": "Remio - Local-first AI memory and knowledge base",
-  "description": "Remio captures and searches files, webpages, recordings, emails, messages, images, and notes with local indexes and vectors, helping users and AI agents retrieve personal context faster while reducing token use and repeated file scanning.",
+  "description": "Capture and search files, webpages, recordings, emails, messages, images, and notes with local indexes and vectors so AI agents can retrieve context faster while reducing token use.",
   "category": "productivity",
   "url": "https://remio.ai/?ref=riseofmachine.com",
   "tag": "Freemium",

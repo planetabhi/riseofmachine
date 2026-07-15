@@ -1965,6 +1965,14 @@
       "category": "design",
       "content": [
         {
+          "title": "✨ New UI Templates",
+          "body": "Simple, production-ready templates for AI founders.",
+          "tag": "Freemium",
+          "url": "https://new-ui.com/templates?ref=riseofmachine.com",
+          "date-added": "2025-08-10",
+          "slug": "new-ui-templates"
+        },
+        {
           "title": "Banana Nano",
           "body": "Googles revolutionary AI image generation.",
           "tag": "Freemium",
@@ -2046,7 +2054,7 @@
         },
         {
           "title": "Flux2ai",
-          "body": ".2 AI Image Generator - Text to Image, Multi Image Workflows Flux ai image gen.",
+          "body": "Text to image, multi image workflows flux ai image gen.",
           "tag": "Freemium",
           "url": "https://flux2ai.org/?ref=riseofmachine.com",
           "date-added": "2025-12-14",
@@ -2219,14 +2227,6 @@
           "url": "https://www.napkin.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
           "slug": "napkin-ai"
-        },
-        {
-          "title": "New UI Templates",
-          "body": "Simple templates for AI founders.",
-          "tag": "Freemium",
-          "url": "https://new-ui.com/templates?ref=riseofmachine.com",
-          "date-added": "2025-08-10",
-          "slug": "new-ui-templates"
         },
         {
           "title": "Paper Design",
@@ -2434,14 +2434,6 @@
       "title": "Developer",
       "category": "developer",
       "content": [
-        {
-          "title": "✨ New UI",
-          "body": "Modern, semantic UI framework for building beautiful sites and apps.",
-          "tag": "Open-source",
-          "url": "https://new-ui.com/?ref=riseofmachine.com",
-          "date-added": "2025-11-19",
-          "slug": "new-ui"
-        },
         {
           "title": "Amazon Codewhisperer",
           "body": "A code writing assistant developed by Amazon",
@@ -2753,6 +2745,14 @@
           "url": "https://www.neum.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-29",
           "slug": "neum"
+        },
+        {
+          "title": "New UI",
+          "body": "Modern, semantic UI framework for building beautiful sites and apps.",
+          "tag": "Open-source",
+          "url": "https://new-ui.com/?ref=riseofmachine.com",
+          "date-added": "2025-11-19",
+          "slug": "new-ui"
         },
         {
           "title": "Nora",
@@ -6516,14 +6516,6 @@
           "url": "https://www.zyler.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
           "slug": "zyler-ai"
-        },
-        {
-          "title": "Remio",
-          "body": "Local-first AI memory and knowledge base for personal and agent context.",
-          "tag": "Freemium",
-          "url": "https://remio.ai/?ref=riseofmachine.com",
-          "date-added": "2026-06-13",
-          "slug": "remio"
         }
       ]
     },

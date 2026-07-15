@@ -1,13 +1,5 @@
 [
   {
-    "title": "✨ New UI",
-    "body": "Modern, semantic UI framework for building beautiful sites and apps.",
-    "tag": "Open-source",
-    "url": "https://new-ui.com/?ref=riseofmachine.com",
-    "date-added": "2025-11-19",
-    "slug": "new-ui"
-  },
-  {
     "title": "Amazon Codewhisperer",
     "body": "A code writing assistant developed by Amazon",
     "tag": "Not available",
@@ -318,6 +310,14 @@
     "url": "https://www.neum.ai/?ref=riseofmachine.com",
     "date-added": "2023-12-29",
     "slug": "neum"
+  },
+  {
+    "title": "New UI",
+    "body": "Modern, semantic UI framework for building beautiful sites and apps.",
+    "tag": "Open-source",
+    "url": "https://new-ui.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-19",
+    "slug": "new-ui"
   },
   {
     "title": "Nora",
