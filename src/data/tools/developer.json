@@ -1,13 +1,5 @@
 [
   {
-    "title": "✨ New UI",
-    "body": "Modern, semantic UI framework for building beautiful sites and apps.",
-    "tag": "Open-source",
-    "url": "https://new-ui.com/?ref=riseofmachine.com",
-    "date-added": "2025-11-19",
-    "slug": "new-ui"
-  },
-  {
     "title": "Amazon Codewhisperer",
     "body": "A code writing assistant developed by Amazon",
     "tag": "Not available",
@@ -320,6 +312,14 @@
     "slug": "neum"
   },
   {
+    "title": "New UI",
+    "body": "Modern, semantic UI framework for building beautiful sites and apps.",
+    "tag": "Open-source",
+    "url": "https://new-ui.com/?ref=riseofmachine.com",
+    "date-added": "2025-11-19",
+    "slug": "new-ui"
+  },
+  {
     "title": "Nora",
     "body": "The AI coding agent for building secure Web3 apps.",
     "tag": "Freemium",
@@ -526,6 +526,14 @@
     "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "ai2sql"
+  },
+  {
+    "title": "sqlmate",
+    "body": "macOS database client, AI SQL",
+    "tag": "Free",
+    "url": "https://sqlmate.io/?ref=riseofmachine.com",
+    "date-added": "2026-06-19",
+    "slug": "sqlmate"
   },
   {
     "title": "StackGen",

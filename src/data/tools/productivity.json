@@ -128,6 +128,14 @@
     "slug": "context"
   },
   {
+    "title": "Converge AI",
+    "body": "AI workspace for agents and workflows",
+    "tag": "Freemium",
+    "url": "https://converge.ai?ref=riseofmachine.com",
+    "date-added": "2026-07-01",
+    "slug": "converge-ai"
+  },
+  {
     "title": "Cvbee.ai",
     "body": "AI-powered CV maker.",
     "tag": "Freemium",
@@ -494,6 +502,14 @@
     "url": "https://noiz.io/?ref=riseofmachine.com",
     "date-added": "2024-12-14",
     "slug": "noiz"
+  },
+  {
+    "title": "NotebookLM Remover",
+    "body": "Clean NotebookLM exports and watermarks",
+    "tag": "Free",
+    "url": "https://notebooklmremover.org/?ref=riseofmachine.com",
+    "date-added": "2026-06-03",
+    "slug": "notebooklm-remover"
   },
   {
     "title": "Notion",
@@ -894,13 +910,5 @@
     "url": "https://www.zyler.ai/?ref=riseofmachine.com",
     "date-added": "2025-06-01",
     "slug": "zyler-ai"
-  },
-  {
-    "title": "Remio",
-    "body": "Local-first AI memory and knowledge base for personal and agent context.",
-    "tag": "Freemium",
-    "url": "https://remio.ai/?ref=riseofmachine.com",
-    "date-added": "2026-06-13",
-    "slug": "remio"
   }
 ]

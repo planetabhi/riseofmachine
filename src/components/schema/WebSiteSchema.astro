@@ -1,4 +1,6 @@
 ---
+import { serializeJsonLd } from "../../utils/jsonLd";
+
 interface Props {
     url?: string;
 }
@@ -22,4 +24,4 @@ const schema = {
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script type="application/ld+json" set:html={serializeJsonLd(schema)} />

@@ -360,6 +360,14 @@
     "slug": "pptdetector"
   },
   {
+    "title": "ProofWrite AI",
+    "body": "Humanize and verify AI text",
+    "tag": "Freemium",
+    "url": "https://proofwrite.ai/?ref=riseofmachine.com",
+    "date-added": "2026-07-10",
+    "slug": "proofwrite-ai"
+  },
+  {
     "title": "Quillbot",
     "body": "AI writing companion.",
     "tag": "Freemium",
@@ -398,6 +406,14 @@
     "url": "https://roastmylandingpage.io/?ref=riseofmachine.com",
     "date-added": "2024-12-13",
     "slug": "roast-my-landing-page"
+  },
+  {
+    "title": "Ryter Pro",
+    "body": "Makes AI text sound human",
+    "tag": "Freemium",
+    "url": "https://www.ryter.pro/?ref=riseofmachine.com",
+    "date-added": "2026-07-12",
+    "slug": "ryter-pro"
   },
   {
     "title": "Rytr",

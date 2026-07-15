@@ -80,6 +80,14 @@
     "slug": "chatgpt"
   },
   {
+    "title": "CoderPlan",
+    "body": "One API key for all LLMs",
+    "tag": "Freemium",
+    "url": "https://coderplan.ai?ref=riseofmachine.com",
+    "date-added": "2026-06-06",
+    "slug": "coderplan"
+  },
+  {
     "title": "Deepseek",
     "body": "DeepSeek's AI assistant.",
     "tag": "Freemium",
@@ -110,6 +118,14 @@
     "url": "https://www.delphi.ai/?ref=riseofmachine.com",
     "date-added": "2023-12-26",
     "slug": "delphi"
+  },
+  {
+    "title": "FerryAPI",
+    "body": "OpenAI-compatible gateway for AI apps",
+    "tag": "Freemium",
+    "url": "https://www.ferryapi.io/?ref=riseofmachine.com",
+    "date-added": "2026-06-05",
+    "slug": "ferryapi"
   },
   {
     "title": "Flowpoint",

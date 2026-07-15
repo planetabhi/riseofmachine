@@ -6,6 +6,7 @@ interface Props {
     title: string;
     tagline: string;
     showSearch?: boolean;
+    showParticles?: boolean;
     searchPlaceholder?: string;
 }
 
@@ -13,12 +14,13 @@ const {
     title,
     tagline,
     showSearch = false,
+    showParticles = true,
     searchPlaceholder = "Search by name, category, or feature...",
 } = Astro.props;
 ---
 
 <div class="hero">
-    <ParticleBackground client:idle />
+    {showParticles && <ParticleBackground client:idle />}
     <div class="container">
         <h1 class="nu-c-h5 nu-u-text--primary nu-u-mt-0 nu-u-mb-s title">
             {title}

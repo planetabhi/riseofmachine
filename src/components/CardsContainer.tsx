@@ -122,14 +122,9 @@ export default function CardsContainer({
                 base = base.filter(tool => tool.category === filter);
             }
         } else {
-            base = (data.tools as Category[])
-                .filter((item) => filter === 'all' || filter === item.category)
-                .flatMap((item) =>
-                    item.content.map((tool) => ({
-                        ...tool,
-                        category: item.category,
-                    }))
-                );
+            base = allFlatTools.filter(
+                (tool) => filter === 'all' || tool.category === filter
+            );
         }
 
         // Filter for new tools (added within last 30 days)
@@ -146,7 +141,7 @@ export default function CardsContainer({
             const comparator = toolComparators[sort] || toolComparators.nameAsc;
             return [...base].sort(comparator);
         }
-    }, [filter, sort, randomSeed, searchQuery, filterNew, wantsSearch, fuseReady]);
+    }, [filter, sort, randomSeed, searchQuery, filterNew, wantsSearch, fuseReady, allFlatTools]);
 
     const isFirstFilterChange = useRef(true);
     useEffect(() => {
@@ -223,16 +218,15 @@ export default function CardsContainer({
     return (
         <section>
             <ul role="list" className="link-card-grid">
-                {displayedCards.map(({ url, title, body, tag, 'date-added': dateAdded, slug, category }, i) => (
+                {displayedCards.map(({ url, title, body, tag, 'date-added': dateAdded, slug }, i) => (
                     <Card
-                        key={`${title}-${i}`}
+                        key={slug ?? `${title}-${i}`}
                         href={url}
                         title={title}
                         body={body}
                         tag={tag}
                         dateAdded={dateAdded}
                         slug={slug}
-                        category={category}
                     />
                 ))}
             </ul>

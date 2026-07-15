@@ -53,6 +53,9 @@
   "comicsai": [
     "art"
   ],
+  "comicsmakernet": [
+    "art"
+  ],
   "craiyon": [
     "art"
   ],
@@ -212,6 +215,9 @@
   "nanobanana-2": [
     "art"
   ],
+  "nanobanana-pro": [
+    "art"
+  ],
   "nanobananaimage": [
     "art"
   ],
@@ -306,6 +312,9 @@
     "art"
   ],
   "z-image": [
+    "art"
+  ],
+  "zilivo-ai": [
     "art"
   ],
   "zzo-ai": [
@@ -447,6 +456,9 @@
     "audio"
   ],
   "voicetype": [
+    "audio"
+  ],
+  "voqusa": [
     "audio"
   ],
   "wellsaid-labs": [
@@ -653,6 +665,9 @@
   "pptdetector": [
     "copywriting"
   ],
+  "proofwrite-ai": [
+    "copywriting"
+  ],
   "quillbot": [
     "copywriting"
   ],
@@ -666,6 +681,9 @@
     "copywriting"
   ],
   "roast-my-landing-page": [
+    "copywriting"
+  ],
+  "ryter-pro": [
     "copywriting"
   ],
   "rytr": [
@@ -725,6 +743,9 @@
   "yahini": [
     "copywriting"
   ],
+  "new-ui-templates": [
+    "design"
+  ],
   "banana-nano": [
     "design"
   ],
@@ -750,6 +771,9 @@
     "design"
   ],
   "flair": [
+    "design"
+  ],
+  "floor-plan-maker": [
     "design"
   ],
   "flora-ai": [
@@ -821,9 +845,6 @@
   "napkin-ai": [
     "design"
   ],
-  "new-ui-templates": [
-    "design"
-  ],
   "paper-design": [
     "design"
   ],
@@ -837,6 +858,9 @@
     "design"
   ],
   "recraft-v3-svg": [
+    "design"
+  ],
+  "roblox-gui-maker": [
     "design"
   ],
   "rustic-ai": [
@@ -864,6 +888,9 @@
     "design"
   ],
   "tripo": [
+    "design"
+  ],
+  "tryonink": [
     "design"
   ],
   "uizard": [
@@ -895,9 +922,6 @@
   ],
   "yenex": [
     "design"
-  ],
-  "new-ui": [
-    "developer"
   ],
   "amazon-codewhisperer": [
     "developer"
@@ -1016,6 +1040,9 @@
   "neum": [
     "developer"
   ],
+  "new-ui": [
+    "developer"
+  ],
   "nora": [
     "developer"
   ],
@@ -1092,6 +1119,9 @@
     "developer"
   ],
   "ai2sql": [
+    "developer"
+  ],
+  "sqlmate": [
     "developer"
   ],
   "stackgen": [
@@ -1361,6 +1391,9 @@
   "rainex-agents": [
     "enterprise"
   ],
+  "raykolabs": [
+    "enterprise"
+  ],
   "rebellion": [
     "enterprise"
   ],
@@ -1454,6 +1487,9 @@
   "chub": [
     "gaming"
   ],
+  "combos-ai": [
+    "gaming"
+  ],
   "game-generator": [
     "gaming"
   ],
@@ -1544,6 +1580,9 @@
   "chatgpt": [
     "llm"
   ],
+  "coderplan": [
+    "llm"
+  ],
   "deepseek": [
     "llm"
   ],
@@ -1554,6 +1593,9 @@
     "llm"
   ],
   "delphi": [
+    "llm"
+  ],
+  "ferryapi": [
     "llm"
   ],
   "flowpoint": [
@@ -1754,6 +1796,9 @@
   "wondera": [
     "music"
   ],
+  "ai-rapper": [
+    "nocode"
+  ],
   "akkio": [
     "nocode"
   ],
@@ -1790,7 +1835,13 @@
   "lindo": [
     "nocode"
   ],
+  "make-song-ai": [
+    "nocode"
+  ],
   "makeform": [
+    "nocode"
+  ],
+  "musikso": [
     "nocode"
   ],
   "olive": [
@@ -1805,6 +1856,9 @@
   "shader": [
     "nocode"
   ],
+  "song-lyrics-review": [
+    "nocode"
+  ],
   "stack": [
     "nocode"
   ],
@@ -1813,6 +1867,12 @@
   ],
   "vectorize-ai": [
     "nocode"
+  ],
+  "add-person-to-photo": [
+    "photos"
+  ],
+  "ai-magic-eraser": [
+    "photos"
   ],
   "aragon-ai": [
     "photos"
@@ -1872,6 +1932,12 @@
     "photos"
   ],
   "erase-bg": [
+    "photos"
+  ],
+  "ez-img-editor": [
+    "photos"
+  ],
+  "ezmaker-ai": [
     "photos"
   ],
   "facerate": [
@@ -2012,6 +2078,9 @@
   "pixelfox-objects-remover": [
     "photos"
   ],
+  "piximagen": [
+    "photos"
+  ],
   "portraitart": [
     "photos"
   ],
@@ -2112,6 +2181,9 @@
     "productivity"
   ],
   "context": [
+    "productivity"
+  ],
+  "converge-ai": [
     "productivity"
   ],
   "cvbeeai": [
@@ -2252,6 +2324,9 @@
   "noiz": [
     "productivity"
   ],
+  "notebooklm-remover": [
+    "productivity"
+  ],
   "notion": [
     "productivity"
   ],
@@ -2301,6 +2376,9 @@
     "productivity"
   ],
   "reclaim-ai": [
+    "productivity"
+  ],
+  "remio": [
     "productivity"
   ],
   "remio-note-taker": [
@@ -2648,6 +2726,9 @@
   "ocoya": [
     "social"
   ],
+  "ogimage": [
+    "social"
+  ],
   "postli": [
     "social"
   ],
@@ -2698,6 +2779,9 @@
   ],
   "videolulu": [
     "social"
+  ],
+  "anam": [
+    "video"
   ],
   "animant": [
     "video"
@@ -2762,6 +2846,9 @@
   "fliki": [
     "video"
   ],
+  "framia-pro": [
+    "video"
+  ],
   "freebeat": [
     "video"
   ],
@@ -2798,6 +2885,9 @@
   "image2video": [
     "video"
   ],
+  "imagineclip": [
+    "video"
+  ],
   "img2video": [
     "video"
   ],
@@ -2820,6 +2910,9 @@
     "video"
   ],
   "libretto": [
+    "video"
+  ],
+  "lip-sync": [
     "video"
   ],
   "ltx2": [
@@ -2858,6 +2951,15 @@
   "omagic-ai": [
     "video"
   ],
+  "omni-ai-video-generator": [
+    "video"
+  ],
+  "omni-flash-video": [
+    "video"
+  ],
+  "openseedance": [
+    "video"
+  ],
   "opusclip": [
     "video"
   ],
@@ -2886,6 +2988,9 @@
     "video"
   ],
   "rask-ai": [
+    "video"
+  ],
+  "recapoai": [
     "video"
   ],
   "rewinai": [
@@ -2939,6 +3044,9 @@
   "towan-ai": [
     "video"
   ],
+  "transcribe-video-ai": [
+    "video"
+  ],
   "tryveo3": [
     "video"
   ],
@@ -2961,6 +3069,9 @@
     "video"
   ],
   "video-marketer": [
+    "video"
+  ],
+  "video-to-prompt": [
     "video"
   ],
   "videomaker": [
@@ -3128,6 +3239,9 @@
   "manus": [
     "xtras"
   ],
+  "mee-manga-translator": [
+    "xtras"
+  ],
   "nano-bananaai": [
     "xtras"
   ],
@@ -3223,8 +3337,5 @@
   ],
   "vibeflow": [
     "xtras"
-  ],
-  "remio": [
-    "productivity"
   ]
 }

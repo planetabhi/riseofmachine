@@ -1,4 +1,6 @@
 ---
+import { serializeJsonLd } from "../../utils/jsonLd";
+
 const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -15,4 +17,4 @@ const schema = {
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script type="application/ld+json" set:html={serializeJsonLd(schema)} />

@@ -1,5 +1,13 @@
 [
   {
+    "title": "AI Rapper",
+    "body": "Generate your own rap songs",
+    "tag": "Free",
+    "url": "https://rapper.im/?ref=riseofmachine.com",
+    "date-added": "2026-05-13",
+    "slug": "ai-rapper"
+  },
+  {
     "title": "Akkio",
     "body": "No-code AI for predictive analytics and models.",
     "tag": "Freemium",
@@ -96,12 +104,28 @@
     "slug": "lindo"
   },
   {
+    "title": "Make Song AI",
+    "body": "Make songs from lyrics and prompts",
+    "tag": "Freemium",
+    "url": "https://makesong.now?ref=riseofmachine.com",
+    "date-added": "2026-06-23",
+    "slug": "make-song-ai"
+  },
+  {
     "title": "Makeform",
     "body": "Free AI form builder, conversational text input.",
     "tag": "Freemium",
     "url": "https://www.makeform.ai/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "makeform"
+  },
+  {
+    "title": "Musik.so",
+    "body": "AI music generator and editor",
+    "tag": "Not available",
+    "url": "https://musik.so?ref=riseofmachine.com",
+    "date-added": "2026-06-18",
+    "slug": "musikso"
   },
   {
     "title": "Olive",
@@ -134,6 +158,14 @@
     "url": "https://www.shaderapp.com/?ref=riseofmachine.com",
     "date-added": "2023-12-25",
     "slug": "shader"
+  },
+  {
+    "title": "Song Lyrics Review",
+    "body": "AI tool to analyze lyrics",
+    "tag": "Freemium",
+    "url": "https://song-lyrics-review.com/?ref=riseofmachine.com",
+    "date-added": "2026-05-25",
+    "slug": "song-lyrics-review"
   },
   {
     "title": "Stack",

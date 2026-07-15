@@ -1,4 +1,6 @@
 ---
+import { serializeJsonLd } from "../../utils/jsonLd";
+
 interface Props {
     name: string;
     description: string;
@@ -101,4 +103,4 @@ if (dateAdded) {
 }
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script type="application/ld+json" set:html={serializeJsonLd(schema)} />

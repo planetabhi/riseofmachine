@@ -149,6 +149,14 @@
           "slug": "comicsai"
         },
         {
+          "title": "ComicsMaker.net",
+          "body": "AI comic and manga maker",
+          "tag": "Freemium",
+          "url": "https://comicsmaker.net/links?ref=riseofmachine.com",
+          "date-added": "2026-07-08",
+          "slug": "comicsmakernet"
+        },
+        {
           "title": "Craiyon",
           "body": "Transforms text into vivid, diverse artistic images.",
           "tag": "Freemium",
@@ -573,6 +581,14 @@
           "slug": "nanobanana-2"
         },
         {
+          "title": "NanoBanana Pro",
+          "body": "Generate and edit AI images",
+          "tag": "Freemium",
+          "url": "https://nanobananapromax.com/?ref=riseofmachine.com",
+          "date-added": "2026-07-11",
+          "slug": "nanobanana-pro"
+        },
+        {
           "title": "Nanobananaimage",
           "body": "Powerful AI image generation tools.",
           "tag": "Freemium",
@@ -827,6 +843,14 @@
           "url": "https://zimageturbo.dev/?ref=riseofmachine.com",
           "date-added": "2026-03-05",
           "slug": "z-image"
+        },
+        {
+          "title": "Zilivo AI",
+          "body": "AI image and video generation",
+          "tag": "Freemium",
+          "url": "https://zilivo.io?ref=riseofmachine.com",
+          "date-added": "2026-06-12",
+          "slug": "zilivo-ai"
         },
         {
           "title": "Zzo AI",
@@ -1209,6 +1233,14 @@
           "url": "https://voicetype.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-06",
           "slug": "voicetype"
+        },
+        {
+          "title": "Voqusa",
+          "body": "Free AI transcripts for videos",
+          "tag": "Free",
+          "url": "https://www.voqusa.com?ref=riseofmachine.com",
+          "date-added": "2026-06-30",
+          "slug": "voqusa"
         },
         {
           "title": "WellSaid Labs",
@@ -1767,6 +1799,14 @@
           "slug": "pptdetector"
         },
         {
+          "title": "ProofWrite AI",
+          "body": "Humanize and verify AI text",
+          "tag": "Freemium",
+          "url": "https://proofwrite.ai/?ref=riseofmachine.com",
+          "date-added": "2026-07-10",
+          "slug": "proofwrite-ai"
+        },
+        {
           "title": "Quillbot",
           "body": "AI writing companion.",
           "tag": "Freemium",
@@ -1805,6 +1845,14 @@
           "url": "https://roastmylandingpage.io/?ref=riseofmachine.com",
           "date-added": "2024-12-13",
           "slug": "roast-my-landing-page"
+        },
+        {
+          "title": "Ryter Pro",
+          "body": "Makes AI text sound human",
+          "tag": "Freemium",
+          "url": "https://www.ryter.pro/?ref=riseofmachine.com",
+          "date-added": "2026-07-12",
+          "slug": "ryter-pro"
         },
         {
           "title": "Rytr",
@@ -1965,6 +2013,14 @@
       "category": "design",
       "content": [
         {
+          "title": "✨ New UI Templates",
+          "body": "Simple, production-ready templates for AI founders.",
+          "tag": "Freemium",
+          "url": "https://new-ui.com/templates?ref=riseofmachine.com",
+          "date-added": "2025-08-10",
+          "slug": "new-ui-templates"
+        },
+        {
           "title": "Banana Nano",
           "body": "Googles revolutionary AI image generation.",
           "tag": "Freemium",
@@ -2037,6 +2093,14 @@
           "slug": "flair"
         },
         {
+          "title": "Floor Plan Maker",
+          "body": "Create 2D and 3D layouts",
+          "tag": "Free",
+          "url": "https://floorplanmaker.ai/?ref=riseofmachine.com",
+          "date-added": "2026-06-26",
+          "slug": "floor-plan-maker"
+        },
+        {
           "title": "FLORA AI",
           "body": "Creative AI tools on one canvas.",
           "tag": "Freemium",
@@ -2046,7 +2110,7 @@
         },
         {
           "title": "Flux2ai",
-          "body": ".2 AI Image Generator - Text to Image, Multi Image Workflows Flux ai image gen.",
+          "body": "Text to image, multi image workflows flux ai image gen.",
           "tag": "Freemium",
           "url": "https://flux2ai.org/?ref=riseofmachine.com",
           "date-added": "2025-12-14",
@@ -2221,14 +2285,6 @@
           "slug": "napkin-ai"
         },
         {
-          "title": "New UI Templates",
-          "body": "Simple templates for AI founders.",
-          "tag": "Freemium",
-          "url": "https://new-ui.com/templates?ref=riseofmachine.com",
-          "date-added": "2025-08-10",
-          "slug": "new-ui-templates"
-        },
-        {
           "title": "Paper Design",
           "body": "A canvas for designers to create beautiful art.",
           "tag": "Freemium",
@@ -2349,6 +2405,14 @@
           "slug": "tripo"
         },
         {
+          "title": "TryOn.ink",
+          "body": "AI tattoo generator with try-on",
+          "tag": "Freemium",
+          "url": "https://tryon.ink/?ref=riseofmachine.com",
+          "date-added": "2026-07-11",
+          "slug": "tryonink"
+        },
+        {
           "title": "Uizard",
           "body": "Design & ideation tool",
           "tag": "Freemium",
@@ -2434,14 +2498,6 @@
       "title": "Developer",
       "category": "developer",
       "content": [
-        {
-          "title": "✨ New UI",
-          "body": "Modern, semantic UI framework for building beautiful sites and apps.",
-          "tag": "Open-source",
-          "url": "https://new-ui.com/?ref=riseofmachine.com",
-          "date-added": "2025-11-19",
-          "slug": "new-ui"
-        },
         {
           "title": "Amazon Codewhisperer",
           "body": "A code writing assistant developed by Amazon",
@@ -2755,6 +2811,14 @@
           "slug": "neum"
         },
         {
+          "title": "New UI",
+          "body": "Modern, semantic UI framework for building beautiful sites and apps.",
+          "tag": "Open-source",
+          "url": "https://new-ui.com/?ref=riseofmachine.com",
+          "date-added": "2025-11-19",
+          "slug": "new-ui"
+        },
+        {
           "title": "Nora",
           "body": "The AI coding agent for building secure Web3 apps.",
           "tag": "Freemium",
@@ -2961,6 +3025,14 @@
           "url": "https://www.ai2sql.io/?ref=riseofmachine.com",
           "date-added": "2025-06-06",
           "slug": "ai2sql"
+        },
+        {
+          "title": "sqlmate",
+          "body": "macOS database client, AI SQL",
+          "tag": "Free",
+          "url": "https://sqlmate.io/?ref=riseofmachine.com",
+          "date-added": "2026-06-19",
+          "slug": "sqlmate"
         },
         {
           "title": "StackGen",
@@ -3687,6 +3759,14 @@
           "slug": "rainex-agents"
         },
         {
+          "title": "RaykoLabs",
+          "body": "AI agents that give live demos",
+          "tag": "From $9/demo",
+          "url": "https://raykolabs.com?ref=riseofmachine.com",
+          "date-added": "2026-05-07",
+          "slug": "raykolabs"
+        },
+        {
           "title": "Rebellion",
           "body": "AI agent for real estate automation.",
           "tag": "Freemium",
@@ -3947,6 +4027,14 @@
           "slug": "chub"
         },
         {
+          "title": "Combos AI",
+          "body": "Turn text into playable games",
+          "tag": "From $19.99/mo",
+          "url": "https://combos.converge.ai/?ref=riseofmachine.com",
+          "date-added": "2026-07-02",
+          "slug": "combos-ai"
+        },
+        {
           "title": "Game Generator",
           "body": "AI-powered game generation.",
           "tag": "Freemium",
@@ -4199,6 +4287,14 @@
           "slug": "chatgpt"
         },
         {
+          "title": "CoderPlan",
+          "body": "One API key for all LLMs",
+          "tag": "Freemium",
+          "url": "https://coderplan.ai?ref=riseofmachine.com",
+          "date-added": "2026-06-06",
+          "slug": "coderplan"
+        },
+        {
           "title": "Deepseek",
           "body": "DeepSeek's AI assistant.",
           "tag": "Freemium",
@@ -4229,6 +4325,14 @@
           "url": "https://www.delphi.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-26",
           "slug": "delphi"
+        },
+        {
+          "title": "FerryAPI",
+          "body": "OpenAI-compatible gateway for AI apps",
+          "tag": "Freemium",
+          "url": "https://www.ferryapi.io/?ref=riseofmachine.com",
+          "date-added": "2026-06-05",
+          "slug": "ferryapi"
         },
         {
           "title": "Flowpoint",
@@ -4778,6 +4882,14 @@
       "category": "nocode",
       "content": [
         {
+          "title": "AI Rapper",
+          "body": "Generate your own rap songs",
+          "tag": "Free",
+          "url": "https://rapper.im/?ref=riseofmachine.com",
+          "date-added": "2026-05-13",
+          "slug": "ai-rapper"
+        },
+        {
           "title": "Akkio",
           "body": "No-code AI for predictive analytics and models.",
           "tag": "Freemium",
@@ -4874,12 +4986,28 @@
           "slug": "lindo"
         },
         {
+          "title": "Make Song AI",
+          "body": "Make songs from lyrics and prompts",
+          "tag": "Freemium",
+          "url": "https://makesong.now?ref=riseofmachine.com",
+          "date-added": "2026-06-23",
+          "slug": "make-song-ai"
+        },
+        {
           "title": "Makeform",
           "body": "Free AI form builder, conversational text input.",
           "tag": "Freemium",
           "url": "https://www.makeform.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-06",
           "slug": "makeform"
+        },
+        {
+          "title": "Musik.so",
+          "body": "AI music generator and editor",
+          "tag": "Not available",
+          "url": "https://musik.so?ref=riseofmachine.com",
+          "date-added": "2026-06-18",
+          "slug": "musikso"
         },
         {
           "title": "Olive",
@@ -4914,6 +5042,14 @@
           "slug": "shader"
         },
         {
+          "title": "Song Lyrics Review",
+          "body": "AI tool to analyze lyrics",
+          "tag": "Freemium",
+          "url": "https://song-lyrics-review.com/?ref=riseofmachine.com",
+          "date-added": "2026-05-25",
+          "slug": "song-lyrics-review"
+        },
+        {
           "title": "Stack",
           "body": "Build custom AI assistants.",
           "tag": "Freemium",
@@ -4943,6 +5079,22 @@
       "title": "Photos",
       "category": "photos",
       "content": [
+        {
+          "title": "Add Person to Photo",
+          "body": "Add people into photos with AI",
+          "tag": "Freemium",
+          "url": "https://add-person-to-photo.com/?ref=riseofmachine.com",
+          "date-added": "2026-06-03",
+          "slug": "add-person-to-photo"
+        },
+        {
+          "title": "AI Magic Eraser",
+          "body": "Remove unwanted objects from photos",
+          "tag": "Freemium",
+          "url": "https://magiceraser.art/?ref=riseofmachine.com",
+          "date-added": "2026-07-01",
+          "slug": "ai-magic-eraser"
+        },
         {
           "title": "Aragon AI",
           "body": "Generate pro AI headshots rapidly & affordably.",
@@ -5102,6 +5254,22 @@
           "url": "https://www.erase.bg/?ref=riseofmachine.com",
           "date-added": "2023-12-15",
           "slug": "erase-bg"
+        },
+        {
+          "title": "Ez Img Editor",
+          "body": "Fast free AI image editor",
+          "tag": "Free",
+          "url": "https://ezimgeditor.io?ref=riseofmachine.com",
+          "date-added": "2026-06-12",
+          "slug": "ez-img-editor"
+        },
+        {
+          "title": "EzMaker AI",
+          "body": "Free all-in-one AI image editor",
+          "tag": "Free",
+          "url": "https://ezmaker.ai/?ref=riseofmachine.com",
+          "date-added": "2026-06-17",
+          "slug": "ezmaker-ai"
         },
         {
           "title": "FaceRate",
@@ -5472,6 +5640,14 @@
           "slug": "pixelfox-objects-remover"
         },
         {
+          "title": "PixImagen",
+          "body": "Free AI background removal tool",
+          "tag": "Free",
+          "url": "https://piximagen.com/remove-background?ref=riseofmachine.com",
+          "date-added": "2026-05-29",
+          "slug": "piximagen"
+        },
+        {
           "title": "PortraitArt",
           "body": "Turn photos into art.",
           "tag": "From $7.99",
@@ -5748,6 +5924,14 @@
           "url": "https://context.ai/?ref=riseofmachine.com",
           "date-added": "2025-07-07",
           "slug": "context"
+        },
+        {
+          "title": "Converge AI",
+          "body": "AI workspace for agents and workflows",
+          "tag": "Freemium",
+          "url": "https://converge.ai?ref=riseofmachine.com",
+          "date-added": "2026-07-01",
+          "slug": "converge-ai"
         },
         {
           "title": "Cvbee.ai",
@@ -6116,6 +6300,14 @@
           "url": "https://noiz.io/?ref=riseofmachine.com",
           "date-added": "2024-12-14",
           "slug": "noiz"
+        },
+        {
+          "title": "NotebookLM Remover",
+          "body": "Clean NotebookLM exports and watermarks",
+          "tag": "Free",
+          "url": "https://notebooklmremover.org/?ref=riseofmachine.com",
+          "date-added": "2026-06-03",
+          "slug": "notebooklm-remover"
         },
         {
           "title": "Notion",
@@ -6516,14 +6708,6 @@
           "url": "https://www.zyler.ai/?ref=riseofmachine.com",
           "date-added": "2025-06-01",
           "slug": "zyler-ai"
-        },
-        {
-          "title": "Remio",
-          "body": "Local-first AI memory and knowledge base for personal and agent context.",
-          "tag": "Freemium",
-          "url": "https://remio.ai/?ref=riseofmachine.com",
-          "date-added": "2026-06-13",
-          "slug": "remio"
         }
       ]
     },
@@ -7214,6 +7398,14 @@
           "slug": "ocoya"
         },
         {
+          "title": "OGimage",
+          "body": "Free OG image size checker",
+          "tag": "Freemium",
+          "url": "https://ogimagesize.com?ref=riseofmachine.com",
+          "date-added": "2026-07-12",
+          "slug": "ogimage"
+        },
+        {
           "title": "Postli",
           "body": "LinkedIn post generator.",
           "tag": "Freemium",
@@ -7355,6 +7547,14 @@
       "title": "Video",
       "category": "video",
       "content": [
+        {
+          "title": "Anam",
+          "body": "Real-time AI avatars that talk",
+          "tag": "Freemium",
+          "url": "https://anam.ai/?ref=riseofmachine.com",
+          "date-added": "2026-05-25",
+          "slug": "anam"
+        },
         {
           "title": "Animant",
           "body": "Go beyond static presentations.",
@@ -7524,6 +7724,14 @@
           "slug": "fliki"
         },
         {
+          "title": "Framia Pro",
+          "body": "Generate and edit AI visuals",
+          "tag": "Freemium",
+          "url": "https://framia.converge.ai/?ref=riseofmachine.com",
+          "date-added": "2026-06-27",
+          "slug": "framia-pro"
+        },
+        {
           "title": "Freebeat",
           "body": "AI Video Creation.",
           "tag": "Freemium",
@@ -7620,6 +7828,14 @@
           "slug": "image2video"
         },
         {
+          "title": "ImagineClip",
+          "body": "AI avatar clips for social video",
+          "tag": "Freemium",
+          "url": "https://imagineclip.com?ref=riseofmachine.com",
+          "date-added": "2026-06-21",
+          "slug": "imagineclip"
+        },
+        {
           "title": "Img2Video",
           "body": "Text & images into short videos.",
           "tag": "Freemium",
@@ -7682,6 +7898,14 @@
           "url": "https://libretto.fm/?ref=riseofmachine.com",
           "date-added": "2024-11-17",
           "slug": "libretto"
+        },
+        {
+          "title": "Lip Sync",
+          "body": "Turn portraits into talking videos",
+          "tag": "Freemium",
+          "url": "https://lip-sync.pro?ref=riseofmachine.com",
+          "date-added": "2026-05-18",
+          "slug": "lip-sync"
         },
         {
           "title": "LTX2",
@@ -7780,6 +8004,30 @@
           "slug": "omagic-ai"
         },
         {
+          "title": "Omni AI Video Generator",
+          "body": "Quickly visualize creative video ideas",
+          "tag": "Not available",
+          "url": "https://geminiomni.org/?ref=riseofmachine.com",
+          "date-added": "2026-05-13",
+          "slug": "omni-ai-video-generator"
+        },
+        {
+          "title": "Omni Flash Video",
+          "body": "AI video generator for creators",
+          "tag": "Not available",
+          "url": "https://omniflashvideo.org/?ref=riseofmachine.com",
+          "date-added": "2026-05-20",
+          "slug": "omni-flash-video"
+        },
+        {
+          "title": "OpenSeedance",
+          "body": "Cinematic AI video generation platform",
+          "tag": "Freemium",
+          "url": "https://openseedance.org/?ref=riseofmachine.com",
+          "date-added": "2026-06-09",
+          "slug": "openseedance"
+        },
+        {
           "title": "OpusClip",
           "body": "AI video clipping tool.",
           "tag": "Beta",
@@ -7858,6 +8106,14 @@
           "url": "https://www.rask.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-15",
           "slug": "rask-ai"
+        },
+        {
+          "title": "Recapo.ai",
+          "body": "AI video editing and scripting",
+          "tag": "Freemium",
+          "url": "https://recapo.ai?ref=riseofmachine.com",
+          "date-added": "2026-07-07",
+          "slug": "recapoai"
         },
         {
           "title": "Rewin.ai",
@@ -7996,6 +8252,14 @@
           "slug": "towan-ai"
         },
         {
+          "title": "Transcribe Video AI",
+          "body": "AI video transcription and subtitles",
+          "tag": "Free",
+          "url": "https://transcribe-video.ai/?ref=riseofmachine.com",
+          "date-added": "2026-06-30",
+          "slug": "transcribe-video-ai"
+        },
+        {
           "title": "TryVeo3",
           "body": "Cinematic videos from text/images, synced audio.",
           "tag": "Free",
@@ -8058,6 +8322,14 @@
           "tag": "Freemium",
           "date-added": "2025-09-24",
           "slug": "video-marketer"
+        },
+        {
+          "title": "Video to Prompt",
+          "body": "Turns videos into AI prompts",
+          "tag": "Freemium",
+          "url": "https://video2prompt.io/?ref=riseofmachine.com",
+          "date-added": "2026-06-20",
+          "slug": "video-to-prompt"
         },
         {
           "title": "Videomaker",
@@ -8504,6 +8776,14 @@
           "tag": "Freemium",
           "date-added": "2025-10-22",
           "slug": "manus"
+        },
+        {
+          "title": "Mee Manga Translator",
+          "body": "Translate manga while keeping layout",
+          "tag": "Freemium",
+          "url": "https://mangatranslator.me/?ref=riseofmachine.com",
+          "date-added": "2026-05-14",
+          "slug": "mee-manga-translator"
         },
         {
           "title": "Nano Bananaai",
