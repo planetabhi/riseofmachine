@@ -4,6 +4,7 @@ import slugMap from "../../data/slug-map.json";
 import SoftwareApplicationSchema from "../../components/schema/SoftwareApplicationSchema.astro";
 import BreadcrumbSchema from "../../components/schema/BreadcrumbSchema.astro";
 import BookmarkButton from "../../components/BookmarkButton";
+import { seededShuffle } from "../../utils/sorting";
 
 export async function getStaticPaths() {
   // Use slug-map for efficient path generation (no need to load full tools.json)
@@ -71,7 +72,7 @@ const domain = extractDomain(tool.url || "");
 const formattedDate = formatDate(tool["date-added"]);
 const canonicalUrl = `https://riseofmachine.com/tools/${tool.slug}`;
 const faviconUrl = `/favicons/${slug}.png`;
-const fallbackPath = category === "all" ? "/" : `/${category}`;
+const fallbackPath = `/${category}`;
 
 let meta: any = {};
 try {
@@ -95,7 +96,12 @@ const redditShareUrl = `https://www.reddit.com/submit?url=${encodedCanonicalUrl}
 
 const allCategoryTools = categoryTools.default || [];
 const otherTools = allCategoryTools.filter((t: any) => t.slug !== slug);
-const relatedTools = otherTools.sort(() => Math.random() - 0.5).slice(0, 4);
+// Deterministic per-tool ordering so the build output is stable and the
+// shuffle is uniform (Array.sort with a random comparator is neither).
+const slugSeed = String(slug)
+  .split("")
+  .reduce((acc, ch) => (acc * 31 + ch.charCodeAt(0)) | 0, 0);
+const relatedTools = seededShuffle(otherTools, slugSeed).slice(0, 4);
 
 const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
 const breadcrumbs = [
@@ -124,6 +130,7 @@ const breadcrumbs = [
   twitterImage={seoOgImage}
   pageFavicon={faviconUrl}
   showLatestFilter={false}
+  showParticles={false}
 >
   <SoftwareApplicationSchema
     name={tool.title}
@@ -354,9 +361,7 @@ const breadcrumbs = [
           }
 
           <div class="tool-detail-nav">
-            <a href={category === "all" ? "/" : `/${category}`} class="nav-link"
-              >← Go back</a
-            >
+            <a href={`/${category}`} class="nav-link">← Go back</a>
             <BookmarkButton
               client:load
               slug={slug}

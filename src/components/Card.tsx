@@ -9,7 +9,6 @@ interface CardProps {
     tag?: string | undefined;
     dateAdded?: string | undefined;
     slug?: string | undefined;
-    category?: string | undefined;
 }
 
 export default function Card({
@@ -23,10 +22,30 @@ export default function Card({
     const linkUrl = slug ? `/tools/${slug}` : href;
     const isNew = isRecentlyAdded(dateAdded, 30);
 
+    // Prefetch the tool page HTML on intent (hover/focus/touch) so the click
+    // navigation is instant in production. This also covers cards rendered
+    // client-side (infinite scroll / search results) that Astro's page-load
+    // prefetch scan wouldn't catch. Internal-route only; deduped by Astro.
+    const prefetchTool = () => {
+        if (!slug) return;
+        import('astro:prefetch')
+            .then(({ prefetch }) => {
+                try {
+                    prefetch(linkUrl);
+                } catch {
+                    /* prefetch disabled or unsupported — ignore */
+                }
+            })
+            .catch(() => {});
+    };
+
     return (
         <li className="link-card">
             <a
                 href={linkUrl}
+                onMouseEnter={prefetchTool}
+                onFocus={prefetchTool}
+                onTouchStart={prefetchTool}
                 onClick={() => {
                     window.dispatchEvent(new CustomEvent('tools:save-state'));
                 }}

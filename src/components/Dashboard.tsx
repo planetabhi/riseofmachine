@@ -33,6 +33,12 @@ function readFilterNewFromUrl(): boolean {
 }
 
 export default function Dashboard({ category }: DashboardProps) {
+    // NOTE: this island is mounted with `transition:persist`, so it survives
+    // view-transition navigations between categories. It relies on Astro
+    // re-applying the `category` prop from each destination page (default
+    // `transition:persist-props={false}`). If that directive is ever set to
+    // `true`, `category` would go stale and CategoryNav/CardsContainer would
+    // stop tracking the active route — keep it unset.
     // Initialize to empty/false so SSR output matches client first render
     // (avoids React 19 hydration mismatch warning). The real URL sync
     // happens in the effect below, immediately after hydration.

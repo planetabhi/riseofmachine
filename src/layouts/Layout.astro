@@ -24,6 +24,7 @@ export interface Props {
     pageFavicon?: string;
     showSearch?: boolean;
     showLatestFilter?: boolean;
+    showParticles?: boolean;
     searchPlaceholder?: string;
 }
 
@@ -47,6 +48,7 @@ const {
     pageFavicon,
     showSearch = false,
     showLatestFilter = true,
+    showParticles = true,
     searchPlaceholder = "Search by name, category, or feature...",
 } = Astro.props;
 ---
@@ -213,6 +215,7 @@ const {
             title={title}
             tagline={tagline}
             showSearch={showSearch}
+            showParticles={showParticles}
             searchPlaceholder={searchPlaceholder}
         />
         <slot />
