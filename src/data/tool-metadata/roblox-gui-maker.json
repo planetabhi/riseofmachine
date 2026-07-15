@@ -1,6 +1,6 @@
 {
-  "title": "Roblox GUI Maker",
-  "description": "AI Roblox Studio GUI planner.",
+  "title": "Roblox GUI Maker - AI GUI Generator and Lua Export",
+  "description": "Turn a prompt into a game-ready Roblox GUI: menus, HUDs, shops, and inventory with live previews and clean Lua to paste into Roblox Studio.",
   "category": "design",
   "url": "https://robloxguimaker.dev/?ref=riseofmachine.com",
   "tag": "Free",

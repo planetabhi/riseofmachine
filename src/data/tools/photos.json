@@ -1,5 +1,21 @@
 [
   {
+    "title": "Add Person to Photo",
+    "body": "Add people into photos with AI",
+    "tag": "Freemium",
+    "url": "https://add-person-to-photo.com/?ref=riseofmachine.com",
+    "date-added": "2026-06-03",
+    "slug": "add-person-to-photo"
+  },
+  {
+    "title": "AI Magic Eraser",
+    "body": "Remove unwanted objects from photos",
+    "tag": "Freemium",
+    "url": "https://magiceraser.art/?ref=riseofmachine.com",
+    "date-added": "2026-07-01",
+    "slug": "ai-magic-eraser"
+  },
+  {
     "title": "Aragon AI",
     "body": "Generate pro AI headshots rapidly & affordably.",
     "tag": "Paid",
@@ -158,6 +174,22 @@
     "url": "https://www.erase.bg/?ref=riseofmachine.com",
     "date-added": "2023-12-15",
     "slug": "erase-bg"
+  },
+  {
+    "title": "Ez Img Editor",
+    "body": "Fast free AI image editor",
+    "tag": "Free",
+    "url": "https://ezimgeditor.io?ref=riseofmachine.com",
+    "date-added": "2026-06-12",
+    "slug": "ez-img-editor"
+  },
+  {
+    "title": "EzMaker AI",
+    "body": "Free all-in-one AI image editor",
+    "tag": "Free",
+    "url": "https://ezmaker.ai/?ref=riseofmachine.com",
+    "date-added": "2026-06-17",
+    "slug": "ezmaker-ai"
   },
   {
     "title": "FaceRate",
@@ -526,6 +558,14 @@
     "url": "https://pixelfox.ai/image/objects-remover?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "pixelfox-objects-remover"
+  },
+  {
+    "title": "PixImagen",
+    "body": "Free AI background removal tool",
+    "tag": "Free",
+    "url": "https://piximagen.com/remove-background?ref=riseofmachine.com",
+    "date-added": "2026-05-29",
+    "slug": "piximagen"
   },
   {
     "title": "PortraitArt",

@@ -1,0 +1,9 @@
+{
+  "title": "CoderPlan - 开发者首选 Claude Code/Codex 中转、Gemini CLI 中转站",
+  "description": "CoderPlan 面向开发者提供 Claude Code/Codex 中转、Gemini CLI 中转站和第三方 API 接入，按真实调用扣费，API 使用额度、tokens、缓存复用和费用明细都能核对。",
+  "category": "llm",
+  "url": "https://coderplan.ai?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-06-06",
+  "slug": "coderplan"
+}

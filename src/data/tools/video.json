@@ -1,5 +1,13 @@
 [
   {
+    "title": "Anam",
+    "body": "Real-time AI avatars that talk",
+    "tag": "Freemium",
+    "url": "https://anam.ai/?ref=riseofmachine.com",
+    "date-added": "2026-05-25",
+    "slug": "anam"
+  },
+  {
     "title": "Animant",
     "body": "Go beyond static presentations.",
     "url": "https://www.animant.com/?ref=riseofmachine.com",
@@ -168,6 +176,14 @@
     "slug": "fliki"
   },
   {
+    "title": "Framia Pro",
+    "body": "Generate and edit AI visuals",
+    "tag": "Freemium",
+    "url": "https://framia.converge.ai/?ref=riseofmachine.com",
+    "date-added": "2026-06-27",
+    "slug": "framia-pro"
+  },
+  {
     "title": "Freebeat",
     "body": "AI Video Creation.",
     "tag": "Freemium",
@@ -264,6 +280,14 @@
     "slug": "image2video"
   },
   {
+    "title": "ImagineClip",
+    "body": "AI avatar clips for social video",
+    "tag": "Freemium",
+    "url": "https://imagineclip.com?ref=riseofmachine.com",
+    "date-added": "2026-06-21",
+    "slug": "imagineclip"
+  },
+  {
     "title": "Img2Video",
     "body": "Text & images into short videos.",
     "tag": "Freemium",
@@ -326,6 +350,14 @@
     "url": "https://libretto.fm/?ref=riseofmachine.com",
     "date-added": "2024-11-17",
     "slug": "libretto"
+  },
+  {
+    "title": "Lip Sync",
+    "body": "Turn portraits into talking videos",
+    "tag": "Freemium",
+    "url": "https://lip-sync.pro?ref=riseofmachine.com",
+    "date-added": "2026-05-18",
+    "slug": "lip-sync"
   },
   {
     "title": "LTX2",
@@ -424,6 +456,30 @@
     "slug": "omagic-ai"
   },
   {
+    "title": "Omni AI Video Generator",
+    "body": "Quickly visualize creative video ideas",
+    "tag": "Not available",
+    "url": "https://geminiomni.org/?ref=riseofmachine.com",
+    "date-added": "2026-05-13",
+    "slug": "omni-ai-video-generator"
+  },
+  {
+    "title": "Omni Flash Video",
+    "body": "AI video generator for creators",
+    "tag": "Not available",
+    "url": "https://omniflashvideo.org/?ref=riseofmachine.com",
+    "date-added": "2026-05-20",
+    "slug": "omni-flash-video"
+  },
+  {
+    "title": "OpenSeedance",
+    "body": "Cinematic AI video generation platform",
+    "tag": "Freemium",
+    "url": "https://openseedance.org/?ref=riseofmachine.com",
+    "date-added": "2026-06-09",
+    "slug": "openseedance"
+  },
+  {
     "title": "OpusClip",
     "body": "AI video clipping tool.",
     "tag": "Beta",
@@ -502,6 +558,14 @@
     "url": "https://www.rask.ai/?ref=riseofmachine.com",
     "date-added": "2023-12-15",
     "slug": "rask-ai"
+  },
+  {
+    "title": "Recapo.ai",
+    "body": "AI video editing and scripting",
+    "tag": "Freemium",
+    "url": "https://recapo.ai?ref=riseofmachine.com",
+    "date-added": "2026-07-07",
+    "slug": "recapoai"
   },
   {
     "title": "Rewin.ai",
@@ -640,6 +704,14 @@
     "slug": "towan-ai"
   },
   {
+    "title": "Transcribe Video AI",
+    "body": "AI video transcription and subtitles",
+    "tag": "Free",
+    "url": "https://transcribe-video.ai/?ref=riseofmachine.com",
+    "date-added": "2026-06-30",
+    "slug": "transcribe-video-ai"
+  },
+  {
     "title": "TryVeo3",
     "body": "Cinematic videos from text/images, synced audio.",
     "tag": "Free",
@@ -702,6 +774,14 @@
     "tag": "Freemium",
     "date-added": "2025-09-24",
     "slug": "video-marketer"
+  },
+  {
+    "title": "Video to Prompt",
+    "body": "Turns videos into AI prompts",
+    "tag": "Freemium",
+    "url": "https://video2prompt.io/?ref=riseofmachine.com",
+    "date-added": "2026-06-20",
+    "slug": "video-to-prompt"
   },
   {
     "title": "Videomaker",

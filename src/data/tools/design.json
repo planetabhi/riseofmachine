@@ -80,6 +80,14 @@
     "slug": "flair"
   },
   {
+    "title": "Floor Plan Maker",
+    "body": "Create 2D and 3D layouts",
+    "tag": "Free",
+    "url": "https://floorplanmaker.ai/?ref=riseofmachine.com",
+    "date-added": "2026-06-26",
+    "slug": "floor-plan-maker"
+  },
+  {
     "title": "FLORA AI",
     "body": "Creative AI tools on one canvas.",
     "tag": "Freemium",
@@ -382,6 +390,14 @@
     "url": "https://www.tripo3d.ai/?ref=riseofmachine.com",
     "date-added": "2023-12-26",
     "slug": "tripo"
+  },
+  {
+    "title": "TryOn.ink",
+    "body": "AI tattoo generator with try-on",
+    "tag": "Freemium",
+    "url": "https://tryon.ink/?ref=riseofmachine.com",
+    "date-added": "2026-07-11",
+    "slug": "tryonink"
   },
   {
     "title": "Uizard",

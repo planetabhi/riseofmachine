@@ -528,6 +528,14 @@
     "slug": "ai2sql"
   },
   {
+    "title": "sqlmate",
+    "body": "macOS database client, AI SQL",
+    "tag": "Free",
+    "url": "https://sqlmate.io/?ref=riseofmachine.com",
+    "date-added": "2026-06-19",
+    "slug": "sqlmate"
+  },
+  {
     "title": "StackGen",
     "body": "AI platform for autonomous cloud management.",
     "url": "https://stackgen.com/?ref=riseofmachine.com",
