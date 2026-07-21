@@ -332,6 +332,9 @@
   "audio-muse": [
     "audio"
   ],
+  "audio-transcriber-ai": [
+    "audio"
+  ],
   "blogaudio": [
     "audio"
   ],
@@ -818,6 +821,9 @@
   "logollama": [
     "design"
   ],
+  "lovspark-ai": [
+    "design"
+  ],
   "luma-ai": [
     "design"
   ],
@@ -1197,6 +1203,9 @@
     "education"
   ],
   "eduaide": [
+    "education"
+  ],
+  "essaybot": [
     "education"
   ],
   "everlearns": [
@@ -2337,6 +2346,9 @@
     "productivity"
   ],
   "ocrmd": [
+    "productivity"
+  ],
+  "onetwo-resume": [
     "productivity"
   ],
   "orchestra": [
