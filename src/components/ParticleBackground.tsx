@@ -7,13 +7,33 @@ interface Particle {
     size: number;
     speedX: number;
     speedY: number;
-    opacity: number;
+    baseOpacity: number;
+    depth: number;
+    phase: number;
+    twinkleSpeed: number;
 }
 
 interface Mouse {
     x: number | null;
     y: number | null;
     radius: number;
+}
+
+function readAccent(): [number, number, number] {
+    if (typeof window === 'undefined') return [255, 255, 255];
+    const raw = getComputedStyle(document.documentElement)
+        .getPropertyValue('--accent')
+        .trim();
+    const m = raw.match(/^#?([0-9a-f]{6})$/i);
+    if (m && m[1]) {
+        const int = parseInt(m[1], 16);
+        return [(int >> 16) & 255, (int >> 8) & 255, int & 255];
+    }
+    const rgb = raw.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+    if (rgb && rgb[1] && rgb[2] && rgb[3]) {
+        return [Number(rgb[1]), Number(rgb[2]), Number(rgb[3])];
+    }
+    return [255, 255, 255];
 }
 
 export default function ParticleBackground() {
@@ -36,22 +56,36 @@ export default function ParticleBackground() {
         let isVisible = true;
         let isOnScreen = true;
         let particles: Particle[] = [];
-        const mouse: Mouse = { x: null, y: null, radius: 150 };
+        let width = 0;
+        let height = 0;
+        let accent = readAccent();
+        const mouse: Mouse = { x: null, y: null, radius: 160 };
 
         const resizeCanvas = () => {
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            width = canvas.offsetWidth;
+            height = canvas.offsetHeight;
+            canvas.width = Math.round(width * dpr);
+            canvas.height = Math.round(height * dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            accent = readAccent();
             initParticles();
         };
 
-        const createParticle = (): Particle => ({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: Math.random() * 2 + 0.5,
-            speedX: Math.random() * 0.5 - 0.25,
-            speedY: Math.random() * 0.5 - 0.25,
-            opacity: Math.random() * 0.5 + 0.2,
-        });
+        const createParticle = (): Particle => {
+            const depth = Math.random();
+            return {
+                x: Math.random() * width,
+                y: Math.random() * height,
+                size: depth * 1.6 + 0.4,
+                speedX: (Math.random() - 0.5) * (0.12 + depth * 0.32),
+                speedY: (Math.random() - 0.5) * (0.12 + depth * 0.32),
+                baseOpacity: depth * 0.4 + 0.12,
+                depth,
+                phase: Math.random() * Math.PI * 2,
+                twinkleSpeed: Math.random() * 1.2 + 0.4,
+            };
+        };
 
         const updateParticle = (p: Particle) => {
             p.x += p.speedX;
@@ -65,40 +99,49 @@ export default function ParticleBackground() {
                 if (distance < mouse.radius) {
                     const force = (mouse.radius - distance) / mouse.radius;
                     const angle = Math.atan2(dy, dx);
-                    p.x -= Math.cos(angle) * force * 2;
-                    p.y -= Math.sin(angle) * force * 2;
+                    const push = force * (1 + p.depth * 2);
+                    p.x -= Math.cos(angle) * push;
+                    p.y -= Math.sin(angle) * push;
                 }
             }
 
-            if (p.x > canvas.width) p.x = 0;
-            if (p.x < 0) p.x = canvas.width;
-            if (p.y > canvas.height) p.y = 0;
-            if (p.y < 0) p.y = canvas.height;
+            if (p.x > width) p.x = 0;
+            if (p.x < 0) p.x = width;
+            if (p.y > height) p.y = 0;
+            if (p.y < 0) p.y = height;
         };
 
-        const drawParticle = (p: Particle) => {
-            ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+        const drawParticle = (p: Particle, opacity: number) => {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+            ctx.shadowColor = `rgba(255, 255, 255, ${opacity})`;
+            ctx.shadowBlur = p.size * 2.5;
             ctx.fill();
         };
 
         const initParticles = () => {
             particles = [];
-            const numberOfParticles = Math.floor((canvas.width * canvas.height) / 15000);
+            const numberOfParticles = Math.floor((width * height) / 10000);
             for (let i = 0; i < numberOfParticles; i++) {
                 particles.push(createParticle());
             }
         };
 
         const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const t = performance.now() / 1000;
+            ctx.clearRect(0, 0, width, height);
 
-            particles.forEach((particle) => {
+            const opacities = particles.map(
+                (p) => p.baseOpacity * (0.7 + 0.3 * Math.sin(t * p.twinkleSpeed + p.phase))
+            );
+
+            particles.forEach((particle, i) => {
                 updateParticle(particle);
-                drawParticle(particle);
+                drawParticle(particle, opacities[i] ?? particle.baseOpacity);
             });
 
+            ctx.shadowBlur = 0;
             particles.forEach((a, i) => {
                 particles.slice(i + 1).forEach((b) => {
                     const dx = a.x - b.x;
@@ -115,6 +158,23 @@ export default function ParticleBackground() {
                     }
                 });
             });
+
+            if (mouse.x !== null && mouse.y !== null) {
+                const [r, g, bl] = accent;
+                particles.forEach((p) => {
+                    const dx = (mouse.x as number) - p.x;
+                    const dy = (mouse.y as number) - p.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        ctx.strokeStyle = `rgba(${r}, ${g}, ${bl}, ${0.18 * (1 - distance / mouse.radius)})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.beginPath();
+                        ctx.moveTo(mouse.x as number, mouse.y as number);
+                        ctx.lineTo(p.x, p.y);
+                        ctx.stroke();
+                    }
+                });
+            }
 
             animationFrameId = requestAnimationFrame(animate);
         };

@@ -16,6 +16,5 @@
 }
 
 .empty-state-action {
-    margin-top: var(--spacing-06);
     display: inline-block;
 }

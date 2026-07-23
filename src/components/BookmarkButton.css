@@ -9,6 +9,7 @@
     color: var(--content-secondary);
     border-radius: var(--spacing-01);
     -webkit-tap-highlight-color: transparent;
+    position: relative;
 }
 
 .bookmark-btn:hover {

@@ -9,10 +9,21 @@
     box-shadow: var(--content);
     content-visibility: auto;
     contain-intrinsic-size: 8rem;
-    transition: box-shadow 0.2s ease-out;
+    transition: box-shadow var(--duration-fast) var(--ease-smooth-out);
 }
 
-.link-card>a {
+.link-card.t-tilt {
+    touch-action: auto;
+}
+
+.t-tilt-card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: var(--spacing-05);
+}
+
+.link-card a {
     width: 100%;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
@@ -26,7 +37,7 @@ p {
 
 .link-card:is(:hover, :focus-within) {
     background-position: 0;
-    background: var(--background);
+    background: var(--background-high-contrast);
     box-shadow: var(--dialog);
 }
 
@@ -60,6 +71,10 @@ span.tag-new {
     font-size: var(--desktop-caption);
     line-height: var(--lh-desktop-caption);
     font-family: var(--monospace);
+}
+
+span.tag-new.t-badge {
+    position: static;
 }
 
 strong {

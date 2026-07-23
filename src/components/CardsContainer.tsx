@@ -233,7 +233,7 @@ export default function CardsContainer({
 
             {isFuseLoading && (
                 <div className="infinite-scroll-loader" aria-live="polite">
-                    <p className="loading-text">Loading more...</p>
+                    <p className="loading-text t-shimmer" data-text="Loading more...">Loading more...</p>
                 </div>
             )}
 
@@ -243,7 +243,7 @@ export default function CardsContainer({
                     className="infinite-scroll-loader"
                     aria-live="polite"
                 >
-                    <p className="loading-text">Loading more...</p>
+                    <p className="loading-text t-shimmer" data-text="Loading more...">Loading more...</p>
                 </div>
             )}
         </section>

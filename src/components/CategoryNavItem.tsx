@@ -2,6 +2,7 @@ import { navigate } from 'astro:transitions/client';
 import { useState, useEffect, useRef, useMemo } from 'react';
 import data from '../data/tools.json';
 import './CategoryNavItem.css';
+import { useReducedMotion } from '../utils/useReducedMotion';
 import type { Category } from '../types';
 
 interface CategoryNavItemProps {
@@ -17,6 +18,7 @@ export default function CategoryNavItem({
 }: CategoryNavItemProps) {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [isActive, setIsActive] = useState(false);
+    const reduced = useReducedMotion();
 
     const path = category === 'all' ? '/' : `/${category}`;
 
@@ -50,6 +52,32 @@ export default function CategoryNavItem({
         return (data.tools as Category[]).find((item) => item.category === category)?.content.length || 0;
     }, [category]);
 
+    const [displayCount, setDisplayCount] = useState(categoryCount);
+
+    useEffect(() => {
+        if (!isActive) {
+            setDisplayCount(categoryCount);
+            return;
+        }
+        if (reduced) {
+            setDisplayCount(categoryCount);
+            return;
+        }
+        let raf = 0;
+        let startTs = 0;
+        const duration = 700;
+        const step = (ts: number) => {
+            if (!startTs) startTs = ts;
+            const t = Math.min(1, (ts - startTs) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            setDisplayCount(Math.round(categoryCount * eased));
+            if (t < 1) raf = requestAnimationFrame(step);
+        };
+        setDisplayCount(0);
+        raf = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(raf);
+    }, [isActive, categoryCount, reduced]);
+
     useEffect(() => {
         setIsActive(filter === category);
     }, [filter, category]);
@@ -74,7 +102,13 @@ export default function CategoryNavItem({
             className={`nav__item nu-u-text--secondary-alt nu-c-fs-small nav__item--filter ${isActive ? 'is-active' : ''}`}
             aria-label={`Navigate to ${title} category with ${categoryCount} items`}
         >
-            {title} <span className="category-count">{categoryCount}</span>
+            {title}{' '}
+            <span
+                className="category-count"
+                style={{ minWidth: `${Math.max(2, String(categoryCount).length)}ch` }}
+            >
+                {displayCount}
+            </span>
         </button>
     );
 }

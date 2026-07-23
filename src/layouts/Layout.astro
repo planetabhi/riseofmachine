@@ -2,7 +2,9 @@
 import { ClientRouter } from "astro:transitions";
 import WebSiteSchema from "../components/schema/WebSiteSchema.astro";
 import Hero from "../components/Hero.astro";
+import HoverBeam from "../components/HoverBeam";
 import "@new-ui/foundations";
+import "../styles/transitions.css";
 
 export interface Props {
     site: string;
@@ -143,42 +145,50 @@ const {
                         /></a
                     >
                 </div>
-                <button
-                    class="theme-toggle"
-                    id="theme-toggle"
-                    aria-label="Toggle dark theme"
-                    aria-pressed="false"
-                >
-                    <span class="theme-emoji" aria-hidden="true"></span>
-                </button>
+                <HoverBeam client:visible borderRadius={0}>
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Toggle dark theme"
+                        aria-pressed="false"
+                    >
+                        <span class="theme-emoji" aria-hidden="true"></span>
+                    </button>
+                </HoverBeam>
             </div>
             <div class="btn-group">
                 {showLatestFilter && (
-                <button
-                    class="new-filter-toggle"
-                    id="new-filter-toggle"
-                    aria-label="Filter recently added tools"
-                    aria-pressed="false"
-                >
-                    Latest
-                </button>
+                <HoverBeam client:visible borderRadius={12}>
+                    <button
+                        class="new-filter-toggle"
+                        id="new-filter-toggle"
+                        aria-label="Filter recently added tools"
+                        aria-pressed="false"
+                    >
+                        Latest
+                    </button>
+                </HoverBeam>
                 )}
-                <a
-                    href="/saved"
-                    class="favorites-link"
-                    id="favoritesLink"
-                    style="display: none;"
-                >
-                    <span class="favorites-text">Saved tools</span>
-                    <span class="favorites-count" id="favoritesCount"></span>
-                </a>
-                <a
-                    href="https://github.com/planetabhi/riseofmachine/issues"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="submit-btn"
-                    ><span class="submit-text">Submit ↗</span></a
-                >
+                <HoverBeam client:visible borderRadius={12}>
+                    <a
+                        href="/saved"
+                        class="favorites-link"
+                        id="favoritesLink"
+                        style="display: none;"
+                    >
+                        <span class="favorites-text">Saved tools</span>
+                        <span class="favorites-count" id="favoritesCount"></span>
+                    </a>
+                </HoverBeam>
+                <HoverBeam client:visible borderRadius={0}>
+                    <a
+                        href="https://github.com/planetabhi/riseofmachine/issues"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="submit-btn"
+                        ><span class="submit-text">Submit ↗</span></a
+                    >
+                </HoverBeam>
             </div>
         </nav>
         <script is:inline>
@@ -422,6 +432,10 @@ const {
         display: flex;
         align-items: center;
         gap: var(--spacing-05);
+    }
+
+    .logo img {
+        border-radius: 6px;
     }
 
     .new-filter-toggle {

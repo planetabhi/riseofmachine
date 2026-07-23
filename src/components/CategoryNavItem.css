@@ -30,7 +30,7 @@ span.category-count {
 
 .nav__item.is-active {
   color: var(--content-primary);
-  border-bottom: .5px solid var(--accent);
+  border-bottom: .5px solid transparent;
 }
 
 .nav__item:hover span.category-count,
