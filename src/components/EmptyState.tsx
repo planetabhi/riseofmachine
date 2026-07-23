@@ -1,4 +1,7 @@
 import type { ReactNode } from 'react';
+import { useEffect, useRef } from 'react';
+import { BorderBeam } from 'border-beam';
+import { useReducedMotion } from '../utils/useReducedMotion';
 import './EmptyState.css';
 
 interface EmptyStateProps {
@@ -29,17 +32,39 @@ export default function EmptyState({
         ? { onClick: onAction, type: 'button' as const }
         : { href: actionHref };
 
+    const staggerRef = useRef<HTMLDivElement>(null);
+    const reduced = useReducedMotion();
+
+    useEffect(() => {
+        const el = staggerRef.current;
+        if (!el) return;
+        const id = requestAnimationFrame(() => el.classList.add('is-shown'));
+        return () => cancelAnimationFrame(id);
+    }, []);
+
     return (
         <div className="empty-state">
             {icon && <div className="empty-state-icon">{icon}</div>}
-            <p className="nu-c-fs-small nu-u-text--secondary empty-state-message">
-                {message}
-            </p>
-            {actionText && (
-                <ActionElement className="submit-btn empty-state-action" {...actionProps}>
-                    {actionText}
-                </ActionElement>
-            )}
+            <div ref={staggerRef} className="t-stagger">
+                <p className="nu-c-fs-small nu-u-text--secondary empty-state-message t-stagger-line t-stagger-line--1">
+                    {message}
+                </p>
+                {actionText && (
+                    <BorderBeam
+                        size="sm"
+                        colorVariant="ocean"
+                        theme="dark"
+                        strength={0.7}
+                        active={!reduced}
+                        className="t-stagger-line t-stagger-line--2"
+                        style={{ display: 'inline-block', marginTop: 'var(--spacing-06)' }}
+                    >
+                        <ActionElement className="submit-btn empty-state-action" {...actionProps}>
+                            {actionText}
+                        </ActionElement>
+                    </BorderBeam>
+                )}
+            </div>
         </div>
     );
 }

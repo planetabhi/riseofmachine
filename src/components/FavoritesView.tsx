@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { BorderBeam } from 'border-beam';
 import { getBookmarkedTools, type BookmarkedTool } from '../utils/bookmarks';
 import { toolComparators, type SortKey } from '../utils/sorting';
+import { useReducedMotion } from '../utils/useReducedMotion';
 import Card from './Card';
 import EmptyState, { BookmarkIcon } from './EmptyState';
 import './CardsContainer.css';
@@ -12,6 +14,7 @@ type FavoritesSortKey = Exclude<SortKey, 'random'>;
 export default function FavoritesView() {
     const [bookmarkedTools, setBookmarkedTools] = useState<BookmarkedTool[]>([]);
     const [sortBy, setSortBy] = useState<FavoritesSortKey>('nameAsc');
+    const reduced = useReducedMotion();
 
     const loadBookmarks = () => {
         const tools = getBookmarkedTools(data.tools as Category[]);
@@ -52,9 +55,18 @@ export default function FavoritesView() {
         <section>
             <div className="favorites-header">
                 <div className="favorites-info">
-                    <p className="nu-c-fs-small nu-u-text--secondary">
-                        {bookmarkedTools.length} {bookmarkedTools.length === 1 ? 'tool' : 'tools'} saved
-                    </p>
+                    <BorderBeam
+                        size="sm"
+                        colorVariant="ocean"
+                        theme="dark"
+                        strength={0.7}
+                        active={!reduced}
+                        style={{ display: 'inline-block' }}
+                    >
+                        <p className="nu-c-fs-small nu-u-text--secondary">
+                            {bookmarkedTools.length} {bookmarkedTools.length === 1 ? 'tool' : 'tools'} saved
+                        </p>
+                    </BorderBeam>
                 </div>
 
                 <div className="favorites-controls">

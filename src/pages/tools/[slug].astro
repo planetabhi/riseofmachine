@@ -4,6 +4,7 @@ import slugMap from "../../data/slug-map.json";
 import SoftwareApplicationSchema from "../../components/schema/SoftwareApplicationSchema.astro";
 import BreadcrumbSchema from "../../components/schema/BreadcrumbSchema.astro";
 import BookmarkButton from "../../components/BookmarkButton";
+import { BorderBeam } from "border-beam";
 import { seededShuffle } from "../../utils/sorting";
 
 export async function getStaticPaths() {
@@ -234,14 +235,24 @@ const breadcrumbs = [
             <div class="tool-detail-actions">
               {
                 tool.url ? (
-                  <a
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary"
+                  <BorderBeam
+                    client:visible
+                    size="pulse-inner"
+                    colorVariant="ocean"
+                    theme="dark"
+                    strength={0.7}
+                    borderRadius={12}
+                    style={{ display: "block", width: "100%" }}
                   >
-                    Visit {tool.title}
-                  </a>
+                    <a
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn-primary"
+                    >
+                      Visit {tool.title}
+                    </a>
+                  </BorderBeam>
                 ) : (
                   <span class="btn-primary btn-disabled" aria-disabled="true">
                     No website listed
@@ -718,7 +729,7 @@ const breadcrumbs = [
     }
 
     .btn-primary {
-      display: inline-block;
+      display: block;
       padding: var(--spacing-03) var(--spacing-05);
       background-color: var(--accent);
       color: var(--background-high-contrast);
