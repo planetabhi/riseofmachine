@@ -384,6 +384,14 @@
     "slug": "onlook-for-web"
   },
   {
+    "title": "PalmScanner AI",
+    "body": "AI palm reading photo scanner.",
+    "tag": "Freemium",
+    "url": "https://palmscannerai.com/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "palmscanner-ai"
+  },
+  {
     "title": "Penny",
     "body": "Online shopping assistant.",
     "tag": "Free",
@@ -582,6 +590,14 @@
     "url": "https://vacnavi.com/?ref=riseofmachine.com",
     "date-added": "2026-03-19",
     "slug": "vacnavi"
+  },
+  {
+    "title": "Vedic Astrology Chart",
+    "body": "AI-assisted sidereal birth chart reading",
+    "tag": "Free",
+    "url": "https://vedicastrologychart.net/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "vedic-astrology-chart"
   },
   {
     "title": "VibeFlow",

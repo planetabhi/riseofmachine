@@ -200,6 +200,14 @@
     "slug": "funy-video-image"
   },
   {
+    "title": "Gemini Omni AI",
+    "body": "Generate cinematic AI videos with audio.",
+    "tag": "Freemium",
+    "url": "https://geminiomni.co/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "gemini-omni-ai"
+  },
+  {
     "title": "Genmo",
     "body": "Make videos using AI.",
     "tag": "Freemium",
@@ -342,6 +350,14 @@
     "url": "https://aikungfu.net/?ref=riseofmachine.com",
     "date-added": "2025-12-30",
     "slug": "kungfu"
+  },
+  {
+    "title": "LEHAR: AI Video Generator",
+    "body": "Generate AI videos, music, images.",
+    "tag": "Freemium",
+    "url": "https://play.google.com/store/apps/details?id=com.lahar.ai&ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "lehar-ai-video-generator"
   },
   {
     "title": "Libretto",
@@ -782,6 +798,14 @@
     "url": "https://video2prompt.io/?ref=riseofmachine.com",
     "date-added": "2026-06-20",
     "slug": "video-to-prompt"
+  },
+  {
+    "title": "Video Upscaler",
+    "body": "Upscale blurry footage to 4K",
+    "tag": "Freemium",
+    "url": "https://videoupscaler.video/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "video-upscaler"
   },
   {
     "title": "Videomaker",
