@@ -131,6 +131,9 @@
   "gpt-image-2": [
     "art"
   ],
+  "gpt-image-2-1": [
+    "art"
+  ],
   "grok-ghibli": [
     "art"
   ],
@@ -840,6 +843,9 @@
     "design"
   ],
   "mixo": [
+    "design"
+  ],
+  "morphlogo": [
     "design"
   ],
   "move": [
@@ -1619,6 +1625,9 @@
   "gpt4o": [
     "llm"
   ],
+  "gptgeminigrokai": [
+    "llm"
+  ],
   "grok": [
     "llm"
   ],
@@ -1880,7 +1889,7 @@
   "add-person-to-photo": [
     "photos"
   ],
-  "ai-magic-eraser": [
+  "animegenai": [
     "photos"
   ],
   "aragon-ai": [
@@ -1908,6 +1917,9 @@
     "photos"
   ],
   "blonde-filter": [
+    "photos"
+  ],
+  "blur-background": [
     "photos"
   ],
   "bria": [
@@ -2006,6 +2018,12 @@
   "headshot-photo": [
     "photos"
   ],
+  "image-changer-app": [
+    "photos"
+  ],
+  "image-describer": [
+    "photos"
+  ],
   "image-enlarger": [
     "photos"
   ],
@@ -2028,6 +2046,9 @@
     "photos"
   ],
   "magic-eraser": [
+    "photos"
+  ],
+  "ai-magic-eraser": [
     "photos"
   ],
   "magnific": [
@@ -2867,6 +2888,9 @@
   "funy-video-image": [
     "video"
   ],
+  "gemini-omni-ai": [
+    "video"
+  ],
   "genmo": [
     "video"
   ],
@@ -2919,6 +2943,9 @@
     "video"
   ],
   "kungfu": [
+    "video"
+  ],
+  "lehar-ai-video-generator": [
     "video"
   ],
   "libretto": [
@@ -3084,6 +3111,9 @@
     "video"
   ],
   "video-to-prompt": [
+    "video"
+  ],
+  "video-upscaler": [
     "video"
   ],
   "videomaker": [
@@ -3272,6 +3302,9 @@
   "onlook-for-web": [
     "xtras"
   ],
+  "palmscanner-ai": [
+    "xtras"
+  ],
   "penny": [
     "xtras"
   ],
@@ -3345,6 +3378,9 @@
     "xtras"
   ],
   "vacnavi": [
+    "xtras"
+  ],
+  "vedic-astrology-chart": [
     "xtras"
   ],
   "vibeflow": [

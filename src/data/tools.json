@@ -357,6 +357,14 @@
           "slug": "gpt-image-2"
         },
         {
+          "title": "GPT Image 2",
+          "body": "AI image generator for commercial visuals",
+          "tag": "Freemium",
+          "url": "https://gptimage2.asia/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "gpt-image-2-1"
+        },
+        {
           "title": "Grok Ghibli",
           "body": "Generates Studio Ghibli style images.",
           "url": "https://grokghibli.pro/?ref=riseofmachine.com",
@@ -2275,6 +2283,14 @@
           "tag": "Freemium",
           "date-added": "2025-10-21",
           "slug": "mixo"
+        },
+        {
+          "title": "MorphLogo",
+          "body": "AI logo animation maker.",
+          "tag": "Freemium",
+          "url": "https://morphlogo.com/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "morphlogo"
         },
         {
           "title": "Move",
@@ -4391,6 +4407,14 @@
           "slug": "gpt4o"
         },
         {
+          "title": "GPTGeminiGrok.AI",
+          "body": "Multi-model AI workspace for content.",
+          "tag": "Freemium",
+          "url": "https://trygrokai.asia/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "gptgeminigrokai"
+        },
+        {
           "title": "Grok",
           "body": "XAI's AI assistant",
           "tag": "Free",
@@ -5112,12 +5136,12 @@
           "slug": "add-person-to-photo"
         },
         {
-          "title": "AI Magic Eraser",
-          "body": "Remove unwanted objects from photos",
+          "title": "AnimeGen.ai",
+          "body": "Turn selfies into anime-style art.",
           "tag": "Freemium",
-          "url": "https://magiceraser.art/?ref=riseofmachine.com",
-          "date-added": "2026-07-01",
-          "slug": "ai-magic-eraser"
+          "url": "https://animegen.ai/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "animegenai"
         },
         {
           "title": "Aragon AI",
@@ -5190,6 +5214,14 @@
           "url": "https://blondefilter.net?ref=riseofmachine.com",
           "date-added": "2025-09-13",
           "slug": "blonde-filter"
+        },
+        {
+          "title": "Blur Background",
+          "body": "Remove or blur image backgrounds.",
+          "tag": "Freemium",
+          "url": "https://blurbackground.vip/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "blur-background"
         },
         {
           "title": "Bria",
@@ -5448,6 +5480,22 @@
           "slug": "headshot-photo"
         },
         {
+          "title": "Image Changer App",
+          "body": "Edit images with plain-language prompts.",
+          "tag": "Freemium",
+          "url": "https://aiimagechanger.app/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "image-changer-app"
+        },
+        {
+          "title": "Image Describer",
+          "body": "Generate image descriptions and alt text.",
+          "tag": "Freemium",
+          "url": "https://imagedescriber.dev/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "image-describer"
+        },
+        {
           "title": "Image Enlarger",
           "body": "Enhance & upscale images.",
           "tag": "From $0/mo",
@@ -5510,6 +5558,14 @@
           "url": "https://magicstudio.com/magiceraser/?ref=riseofmachine.com",
           "date-added": "2023-12-15",
           "slug": "magic-eraser"
+        },
+        {
+          "title": "Magic Eraser",
+          "body": "Remove unwanted objects from photos",
+          "tag": "Freemium",
+          "url": "https://magiceraser.art/?ref=riseofmachine.com",
+          "date-added": "2026-07-01",
+          "slug": "ai-magic-eraser"
         },
         {
           "title": "Magnific",
@@ -7780,6 +7836,14 @@
           "slug": "funy-video-image"
         },
         {
+          "title": "Gemini Omni AI",
+          "body": "Generate cinematic AI videos with audio.",
+          "tag": "Freemium",
+          "url": "https://geminiomni.co/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "gemini-omni-ai"
+        },
+        {
           "title": "Genmo",
           "body": "Make videos using AI.",
           "tag": "Freemium",
@@ -7922,6 +7986,14 @@
           "url": "https://aikungfu.net/?ref=riseofmachine.com",
           "date-added": "2025-12-30",
           "slug": "kungfu"
+        },
+        {
+          "title": "LEHAR: AI Video Generator",
+          "body": "Generate AI videos, music, images.",
+          "tag": "Freemium",
+          "url": "https://play.google.com/store/apps/details?id=com.lahar.ai&ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "lehar-ai-video-generator"
         },
         {
           "title": "Libretto",
@@ -8362,6 +8434,14 @@
           "url": "https://video2prompt.io/?ref=riseofmachine.com",
           "date-added": "2026-06-20",
           "slug": "video-to-prompt"
+        },
+        {
+          "title": "Video Upscaler",
+          "body": "Upscale blurry footage to 4K",
+          "tag": "Freemium",
+          "url": "https://videoupscaler.video/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "video-upscaler"
         },
         {
           "title": "Videomaker",
@@ -8866,6 +8946,14 @@
           "slug": "onlook-for-web"
         },
         {
+          "title": "PalmScanner AI",
+          "body": "AI palm reading photo scanner.",
+          "tag": "Freemium",
+          "url": "https://palmscannerai.com/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "palmscanner-ai"
+        },
+        {
           "title": "Penny",
           "body": "Online shopping assistant.",
           "tag": "Free",
@@ -9064,6 +9152,14 @@
           "url": "https://vacnavi.com/?ref=riseofmachine.com",
           "date-added": "2026-03-19",
           "slug": "vacnavi"
+        },
+        {
+          "title": "Vedic Astrology Chart",
+          "body": "AI-assisted sidereal birth chart reading",
+          "tag": "Free",
+          "url": "https://vedicastrologychart.net/?ref=riseofmachine.com",
+          "date-added": "2026-07-31",
+          "slug": "vedic-astrology-chart"
         },
         {
           "title": "VibeFlow",

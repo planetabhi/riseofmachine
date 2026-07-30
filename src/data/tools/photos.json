@@ -8,12 +8,12 @@
     "slug": "add-person-to-photo"
   },
   {
-    "title": "AI Magic Eraser",
-    "body": "Remove unwanted objects from photos",
+    "title": "AnimeGen.ai",
+    "body": "Turn selfies into anime-style art.",
     "tag": "Freemium",
-    "url": "https://magiceraser.art/?ref=riseofmachine.com",
-    "date-added": "2026-07-01",
-    "slug": "ai-magic-eraser"
+    "url": "https://animegen.ai/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "animegenai"
   },
   {
     "title": "Aragon AI",
@@ -86,6 +86,14 @@
     "url": "https://blondefilter.net?ref=riseofmachine.com",
     "date-added": "2025-09-13",
     "slug": "blonde-filter"
+  },
+  {
+    "title": "Blur Background",
+    "body": "Remove or blur image backgrounds.",
+    "tag": "Freemium",
+    "url": "https://blurbackground.vip/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "blur-background"
   },
   {
     "title": "Bria",
@@ -344,6 +352,22 @@
     "slug": "headshot-photo"
   },
   {
+    "title": "Image Changer App",
+    "body": "Edit images with plain-language prompts.",
+    "tag": "Freemium",
+    "url": "https://aiimagechanger.app/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "image-changer-app"
+  },
+  {
+    "title": "Image Describer",
+    "body": "Generate image descriptions and alt text.",
+    "tag": "Freemium",
+    "url": "https://imagedescriber.dev/?ref=riseofmachine.com",
+    "date-added": "2026-07-31",
+    "slug": "image-describer"
+  },
+  {
     "title": "Image Enlarger",
     "body": "Enhance & upscale images.",
     "tag": "From $0/mo",
@@ -406,6 +430,14 @@
     "url": "https://magicstudio.com/magiceraser/?ref=riseofmachine.com",
     "date-added": "2023-12-15",
     "slug": "magic-eraser"
+  },
+  {
+    "title": "Magic Eraser",
+    "body": "Remove unwanted objects from photos",
+    "tag": "Freemium",
+    "url": "https://magiceraser.art/?ref=riseofmachine.com",
+    "date-added": "2026-07-01",
+    "slug": "ai-magic-eraser"
   },
   {
     "title": "Magnific",
