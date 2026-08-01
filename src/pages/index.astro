@@ -20,7 +20,18 @@ const latestTools = [...allTools]
       new Date(b["date-added"]).getTime() - new Date(a["date-added"]).getTime()
   )
   .slice(0, 12);
-const featuredTools = seededShuffle(allTools, 20260801).slice(0, 4);
+
+const featuredSlugs = ["chatgpt", "midjourney", "cursor", "elevenlabs"];
+const featuredTools = featuredSlugs
+  .map((slug) => allTools.find((tool: any) => tool.slug === slug))
+  .filter(Boolean);
+if (featuredTools.length < 4) {
+  featuredTools.push(
+    ...seededShuffle(allTools, 20260801)
+      .filter((tool: any) => !featuredSlugs.includes(tool.slug))
+      .slice(0, 4 - featuredTools.length)
+  );
+}
 ---
 
 <Layout
@@ -55,6 +66,42 @@ const featuredTools = seededShuffle(allTools, 20260801).slice(0, 4);
     <HomeEnhancer />
   </main>
 </Layout>
+
+<script>
+  // 3D hover tilt on the Featured cards (desktop pointers only so mobile
+  // scrolling isn't captured). Reuses the shipped `t-tilt` CSS.
+  function initFeaturedTilt() {
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    const MAX = 6;
+    document
+      .querySelectorAll<HTMLElement>('#section-featured .link-card')
+      .forEach((card) => {
+        if (card.dataset.tiltBound) return;
+        card.dataset.tiltBound = '1';
+        card.classList.add('t-tilt', 't-tilt-card');
+        const glare = document.createElement('span');
+        glare.className = 't-tilt-glare';
+        card.appendChild(glare);
+        card.addEventListener('pointermove', (e) => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width;
+          const py = (e.clientY - r.top) / r.height;
+          card.style.setProperty('--tilt-ry', `${(px - 0.5) * MAX * 2}deg`);
+          card.style.setProperty('--tilt-rx', `${(0.5 - py) * MAX * 2}deg`);
+          card.style.setProperty('--tilt-gx', `${px * 100}%`);
+          card.style.setProperty('--tilt-gy', `${py * 100}%`);
+          card.classList.add('is-tilting', 'is-hover');
+        });
+        card.addEventListener('pointerleave', () => {
+          card.classList.remove('is-tilting', 'is-hover');
+          card.style.setProperty('--tilt-rx', '0deg');
+          card.style.setProperty('--tilt-ry', '0deg');
+        });
+      });
+  }
+  document.addEventListener('astro:page-load', initFeaturedTilt);
+</script>
+
 
 <style>
   .home-section {

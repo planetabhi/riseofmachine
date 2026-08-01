@@ -34,17 +34,19 @@ const showLatest = listingPaths.has(current);
         </div>
 
         <nav class="sidebar-nav" aria-label="Categories">
-            <a href="/" class:list={['sidebar-item', { 'is-active': current === '/' }]}>
+            <span class="sidebar-nav-pill" aria-hidden="true"></span>
+            <a href="/" data-astro-prefetch class:list={['sidebar-item', { 'is-active': current === '/' }]}>
                 <span class="sidebar-item-label">Home</span>
-                <span class="sidebar-count">{totalCount}</span>
+                <span class="sidebar-count" data-count={totalCount}>{totalCount}</span>
             </a>
             {cats.map(([category, meta]) => (
                 <a
                     href={`/${category}`}
+                    data-astro-prefetch
                     class:list={['sidebar-item', { 'is-active': current === `/${category}` }]}
                 >
                     <span class="sidebar-item-label">{meta.title}</span>
-                    <span class="sidebar-count">{meta.count}</span>
+                    <span class="sidebar-count" data-count={meta.count}>{meta.count}</span>
                 </a>
             ))}
         </nav>
@@ -62,6 +64,7 @@ const showLatest = listingPaths.has(current);
             <a
                 href="/saved"
                 id="favoritesLink"
+                data-astro-prefetch
                 class:list={['sidebar-item', { 'is-active': current === '/saved' }]}
             >
                 <span class="sidebar-item-label">Saved tools</span>
@@ -71,9 +74,15 @@ const showLatest = listingPaths.has(current);
                 href="https://github.com/planetabhi/riseofmachine/issues"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="sidebar-item"
+                class="sidebar-item t-learn"
             >
-                <span class="sidebar-item-label">Submit ↗</span>
+                <span class="sidebar-item-label">Submit</span>
+                <span class="t-learn-chevron" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                        <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" />
+                        <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" />
+                    </svg>
+                </span>
             </a>
 
             <p class="sidebar-legal">
@@ -218,6 +227,55 @@ const showLatest = listingPaths.has(current);
         );
         const latest = document.getElementById('new-filter-toggle');
         if (latest) latest.style.display = navHrefs.has(path) && path !== '/' ? '' : 'none';
+        moveNavPill();
+    }
+
+    // Slide the active pill to the active nav item and pop its count in.
+    function moveNavPill() {
+        const navEl = document.querySelector<HTMLElement>('.sidebar-nav');
+        const pill = document.querySelector<HTMLElement>('.sidebar-nav-pill');
+        if (!navEl || !pill) return;
+        const active = navEl.querySelector<HTMLElement>('a.sidebar-item.is-active');
+        if (!active) {
+            pill.style.opacity = '0';
+            return;
+        }
+        const ready = pill.dataset.ready === '1';
+        if (!ready) pill.style.transition = 'none';
+        pill.style.transform = `translateY(${active.offsetTop}px)`;
+        pill.style.height = `${active.offsetHeight}px`;
+        pill.style.opacity = '1';
+        if (!ready) {
+            void pill.offsetWidth;
+            pill.style.transition = '';
+            pill.dataset.ready = '1';
+        }
+        const count = active.querySelector<HTMLElement>('.sidebar-count');
+        if (count) countUp(count);
+    }
+
+    // Roll the count from 0 up to its target when the tab becomes active.
+    // Only the text changes (no transform), so nothing shifts in the layout.
+    function countUp(el: HTMLElement) {
+        const target = parseInt(el.dataset.count ?? el.textContent ?? '', 10);
+        if (!Number.isFinite(target)) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            el.textContent = String(target);
+            return;
+        }
+        const token = ((el as any).__countToken || 0) + 1;
+        (el as any).__countToken = token;
+        const dur = 600;
+        const start = performance.now();
+        const step = (now: number) => {
+            if ((el as any).__countToken !== token) return;
+            const t = Math.min(1, (now - start) / dur);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = String(Math.round(target * eased));
+            if (t < 1) requestAnimationFrame(step);
+            else el.textContent = String(target);
+        };
+        requestAnimationFrame(step);
     }
 
     if (!(window as any).__sidebarBound) {

@@ -299,3 +299,103 @@
 @media (prefers-reduced-motion: reduce) {
   .t-like-icon, .t-like-particles i { animation: none !important; }
 }
+
+/* Skeleton reveal (#14) — data is already in memory, so we use the reveal half:
+   lazily rendered cards fade + un-blur in as they mount. */
+:root {
+  --reveal-dur: 400ms;
+  --reveal-blur: 2px;
+  --reveal-ease: ease-in-out;
+}
+@keyframes t-card-reveal {
+  from { opacity: 0; filter: blur(var(--reveal-blur)); }
+  to   { opacity: 1; filter: blur(0); }
+}
+.link-card.is-revealing {
+  animation: t-card-reveal var(--reveal-dur) var(--reveal-ease) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .link-card.is-revealing { animation: none !important; }
+}
+
+/* Learn more hover (#24) — chevron slides right while its arms spread open. */
+:root {
+  --learn-shift: 2px;
+  --learn-spread: 8deg;
+  --learn-in: 350ms;
+  --learn-out: 350ms;
+  --learn-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.t-learn-chevron {
+  display: inline-flex;
+  transform: translateX(0);
+  transition: transform var(--learn-out) var(--learn-ease);
+}
+.t-learn-arm {
+  transform-box: view-box;
+  transform-origin: 10px 8px;
+  vector-effect: non-scaling-stroke;
+  transition: transform var(--learn-out) var(--learn-ease);
+}
+.t-learn:hover .t-learn-chevron { transform: translateX(var(--learn-shift)); transition-duration: var(--learn-in); }
+.t-learn:hover .t-learn-arm { transition-duration: var(--learn-in); }
+.t-learn:hover .t-learn-arm-top { transform: rotate(var(--learn-spread)); }
+.t-learn:hover .t-learn-arm-bot { transform: rotate(calc(var(--learn-spread) * -1)); }
+@media (prefers-reduced-motion: reduce) {
+  .t-learn-chevron, .t-learn-arm { transition: none !important; }
+}
+
+/* Card resize (#1) — tween a container's size when its layout state changes. */
+:root {
+  --resize-dur: 300ms;
+  --resize-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.t-resize {
+  transition:
+    width var(--resize-dur) var(--resize-ease),
+    height var(--resize-dur) var(--resize-ease);
+  will-change: width, height;
+}
+@media (prefers-reduced-motion: reduce) {
+  .t-resize { transition: none !important; }
+}
+
+/* Page side-by-side (#8) — used as the enter slide when the detail panel
+   swaps from one tool to the next (step 1 -> step 2). */
+:root {
+  --page-slide-dur: 250ms;
+  --page-slide-distance: 8px;
+  --page-blur: 3px;
+  --page-slide-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes t-page-enter {
+  from {
+    opacity: 0;
+    transform: translateX(var(--page-slide-distance));
+    filter: blur(var(--page-blur));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+.t-page-enter {
+  animation: t-page-enter var(--page-slide-dur) var(--page-slide-ease) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .t-page-enter { animation: none !important; }
+}
+
+/* Input clear dissolve (#13) — mirror text overlays the field's own text so it
+   can fly down, blur and fade on clear; the glow layer lights a streak. */
+.search-input-wrapper .t-clear-mirror {
+  padding-left: var(--spacing-09);
+  padding-right: var(--spacing-12);
+  color: var(--content-primary);
+  font-size: var(--desktop-body-sm);
+  line-height: var(--lh-desktop-body-sm);
+}
+.search-input-wrapper .t-clear-glow {
+  mix-blend-mode: screen;
+}

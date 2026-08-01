@@ -40,8 +40,14 @@ import './BookmarkButton.css';
         </div>
 
         <div class="detail-actions">
-            <a class="detail-action detail-action--primary" id="detail-visit" target="_blank" rel="noopener noreferrer">
-                Visit site ↗
+            <a class="detail-action detail-action--primary t-learn" id="detail-visit" target="_blank" rel="noopener noreferrer">
+                Visit site
+                <span class="t-learn-chevron" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                        <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" />
+                        <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" />
+                    </svg>
+                </span>
             </a>
         </div>
 
@@ -77,7 +83,9 @@ import './BookmarkButton.css';
         overflow: hidden;
         box-sizing: border-box;
         background-color: var(--background-high-contrast);
-        transition: width var(--duration-medium) var(--ease-smooth-out);
+        /* Card resize (#1): the container tweens its width on the is-open state. */
+        transition: width var(--resize-dur) var(--resize-ease);
+        will-change: width;
     }
 
     .detail-panel.is-open {
@@ -333,6 +341,8 @@ import './BookmarkButton.css';
     let lastFocus: HTMLElement | null = null;
     let pushed = false;
     let openCategory = '';
+    // The listing URL the panel was opened from, restored in place on close.
+    let originUrl = '';
 
     // Fuller descriptions live in the search index (key `x`); load once and cache.
     let descMap: Record<string, string> | null = null;
@@ -585,13 +595,23 @@ import './BookmarkButton.css';
     function showPanel(link: HTMLAnchorElement, opts: { push: boolean; focus: boolean }) {
         const panel = panelEl();
         if (!panel) return;
-        if (!isOpen()) lastFocus = document.activeElement as HTMLElement;
+        const switching = isOpen();
+        if (!switching) lastFocus = document.activeElement as HTMLElement;
         populate(link);
         openCategory = link.dataset.category ?? '';
         panel.classList.add('is-open');
         panel.removeAttribute('inert');
         panel.setAttribute('aria-hidden', 'false');
         panel.querySelector('.detail-panel-inner')?.scrollTo(0, 0);
+        // Page side-by-side (#8): swapping tools while open slides the new content in.
+        if (switching) {
+            const inner = panel.querySelector('.detail-panel-inner');
+            if (inner) {
+                inner.classList.remove('t-page-enter');
+                void (inner as HTMLElement).offsetWidth;
+                inner.classList.add('t-page-enter');
+            }
+        }
         if (opts.focus) document.getElementById('detail-close')?.focus();
         if (opts.push) {
             const href = link.getAttribute('href') ?? undefined;
@@ -605,6 +625,7 @@ import './BookmarkButton.css';
     }
 
     function openPanel(link: HTMLAnchorElement) {
+        if (!isOpen()) originUrl = location.pathname + location.search;
         showPanel(link, { push: true, focus: true });
     }
 
@@ -620,7 +641,12 @@ import './BookmarkButton.css';
     function requestClose() {
         if (pushed) {
             pushed = false;
-            history.back();
+            hidePanel();
+            // Restore the listing URL in place (no ClientRouter navigation) so the
+            // close animation stays smooth instead of jerking on a page transition.
+            try {
+                history.replaceState(null, '', originUrl || (openCategory ? `/${openCategory}` : '/'));
+            } catch { /* history unavailable */ }
         } else if (/^\/tools\//.test(location.pathname) && openCategory) {
             // Direct-loaded tool page: closing returns to the category listing.
             navigate(`/${openCategory}`);

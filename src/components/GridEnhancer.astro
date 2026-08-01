@@ -65,8 +65,19 @@
                 if (matchSlugs !== null || filterNew) return;
                 const total = cards().length;
                 if (revealed >= total) return;
+                const prev = revealed;
                 revealed = Math.min(revealed + PAGE, total);
                 recompute();
+                // Fade + un-blur the batch that just became visible.
+                requestAnimationFrame(() => {
+                    cards()
+                        .slice(prev, revealed)
+                        .forEach((c) => {
+                            c.classList.remove('is-revealing');
+                            void c.offsetWidth;
+                            c.classList.add('is-revealing');
+                        });
+                });
             },
             { root: document.querySelector('.app-content'), rootMargin: '400px' },
         );

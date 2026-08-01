@@ -277,7 +277,7 @@ const {
         box-sizing: border-box;
         margin: var(--spacing-03) var(--spacing-03) var(--spacing-03) 0;
         border: 0.5px solid var(--border-muted);
-        border-radius: var(--spacing-04);
+        border-radius: var(--spacing-06);
         background-color: var(--background-high-contrast);
         overflow-y: auto;
     }
@@ -486,6 +486,7 @@ const {
     .theme-toggle .theme-emoji {
         font-size: 1.25rem;
         line-height: 1;
+        display: inline-block;
     }
 
     .theme-toggle .theme-emoji::after {
@@ -494,6 +495,21 @@ const {
 
     html[data-new-ui-theme="dark--cold"] .theme-toggle .theme-emoji::after {
         content: '🍵';
+    }
+
+    /* Icon swap: blur + scale the emoji as it changes on toggle. */
+    @keyframes theme-emoji-swap {
+        0% { transform: scale(1); filter: blur(0); opacity: 1; }
+        45% { transform: scale(0.7); filter: blur(var(--blur-small)); opacity: 0.5; }
+        100% { transform: scale(1); filter: blur(0); opacity: 1; }
+    }
+
+    .theme-toggle .theme-emoji.is-swapping {
+        animation: theme-emoji-swap var(--duration-fast) var(--ease-in-out);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .theme-toggle .theme-emoji.is-swapping { animation: none; }
     }
 
     .theme-toggle:focus {
@@ -780,6 +796,12 @@ const {
                     const next = current === 'dark--warm' ? 'dark--cold' : 'dark--warm';
                     try { localStorage.setItem('rom_theme', next); } catch (e) {}
                     applyTheme(next);
+                    const emoji = themeToggle.querySelector('.theme-emoji');
+                    if (emoji) {
+                        emoji.classList.remove('is-swapping');
+                        void emoji.offsetWidth;
+                        emoji.classList.add('is-swapping');
+                    }
                 });
                 themeToggle._hasThemeListener = true;
             }

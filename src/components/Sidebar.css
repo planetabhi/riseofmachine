@@ -69,9 +69,34 @@
 }
 
 .sidebar-nav {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-01);
+}
+
+/* Sliding active pill: JS writes translateY + height so it tweens between tabs. */
+.sidebar-nav-pill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0;
+    border-radius: var(--spacing-02);
+    background-color: var(--background-selected);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform, height;
+    transition:
+        transform var(--tabs-dur) var(--tabs-ease),
+        height var(--tabs-dur) var(--tabs-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar-nav-pill {
+        transition: none;
+    }
 }
 
 .sidebar-footer {
@@ -105,14 +130,27 @@
     touch-action: manipulation;
 }
 
+.sidebar-nav .sidebar-item {
+    position: relative;
+    z-index: 1;
+}
+
 .sidebar-item:hover {
     background-color: var(--background-hover);
     color: var(--content-primary);
 }
 
 .sidebar-item.is-active {
-    background-color: var(--background-selected);
     color: var(--content-primary);
+}
+
+/* Category items get their active background from the sliding pill instead. */
+.sidebar-nav .sidebar-item.is-active {
+    background-color: transparent;
+}
+
+.sidebar-footer .sidebar-item.is-active {
+    background-color: var(--background-selected);
 }
 
 .sidebar-item:focus-visible {
@@ -132,6 +170,7 @@
     font-family: var(--monospace);
     font-size: var(--desktop-caption);
     line-height: var(--lh-desktop-caption);
+    font-variant-numeric: tabular-nums;
 }
 
 .sidebar-toggle-item[aria-pressed='true'] {
