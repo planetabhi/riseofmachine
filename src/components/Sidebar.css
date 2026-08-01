@@ -4,7 +4,7 @@
     height: 100vh;
     box-sizing: border-box;
     display: flex;
-    background-color: var(--background-high-contrast);
+    background-color: var(--background);
 }
 
 .sidebar-scroll {
@@ -48,7 +48,7 @@
 .sidebar-logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-02);
+    gap: var(--spacing-04);
     text-decoration: none;
     color: var(--content-primary);
     min-width: 0;
