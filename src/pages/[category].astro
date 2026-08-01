@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Dashboard from "../components/Dashboard";
+import ToolGrid from "../components/ToolGrid.astro";
+import GridEnhancer from "../components/GridEnhancer.astro";
 import ItemListSchema from "../components/schema/ItemListSchema.astro";
 import BreadcrumbSchema from "../components/schema/BreadcrumbSchema.astro";
 import data from "../data/tools.json";
 
 export function getStaticPaths() {
-  // Derive paths from data instead of hardcoding
   return data.tools.map((cat: any) => ({
     params: { category: cat.category }
   }));
@@ -14,12 +14,13 @@ export function getStaticPaths() {
 
 const { category } = Astro.params;
 
-// Get tools for this category
 const categoryData = data.tools.find((cat: any) => cat.category === category);
-const categoryTools = categoryData?.content || [];
+const categoryTools = (categoryData?.content || []).map((tool: any) => ({
+  ...tool,
+  category,
+}));
 const categoryTitle = categoryData?.title || category;
 
-// Breadcrumb data
 const breadcrumbs = [
   { name: "Home", url: "https://riseofmachine.com" },
   { name: categoryTitle },
@@ -31,11 +32,13 @@ const breadcrumbs = [
   title="Rise of Machine"
   tagline="AI tools curated by autonomous AI agents for makers and SMBs"
   showSearch={true}
+  showHero={true}
   searchPlaceholder={`Search in ${categoryTitle}...`}
 >
   <ItemListSchema items={categoryTools} listName={`${categoryTitle} Tools`} />
   <BreadcrumbSchema items={breadcrumbs} />
   <main id="main-content">
-    <Dashboard client:load category={category} transition:persist />
+    <ToolGrid tools={categoryTools} />
+    <GridEnhancer />
   </main>
 </Layout>

@@ -1,24 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import Dashboard from "../components/Dashboard";
+import CardList from "../components/CardList.astro";
+import HomeEnhancer from "../components/HomeEnhancer.astro";
 import OrganizationSchema from "../components/schema/OrganizationSchema.astro";
 import ItemListSchema from "../components/schema/ItemListSchema.astro";
 import data from "../data/tools.json";
+import { seededShuffle } from "../utils/sorting";
 
-// Flatten all tools for the homepage ItemList
-const allTools = data.tools.flatMap((category: any) => category.content);
+// Flatten all tools, tagging each with its category.
+const allTools = data.tools.flatMap((category: any) =>
+  category.content.map((tool: any) => ({ ...tool, category: category.category }))
+);
+
+// Newest first for the "Latest" strip; a stable sample for "Featured".
+const latestTools = [...allTools]
+  .sort(
+    (a: any, b: any) =>
+      new Date(b["date-added"]).getTime() - new Date(a["date-added"]).getTime()
+  )
+  .slice(0, 12);
+const featuredTools = seededShuffle(allTools, 20260801).slice(0, 4);
 ---
 
 <Layout
   site="Rise of Machine"
-  title="Rise of Machine"
-  tagline="AI tools curated by autonomous AI agents for makers and SMBs"
+  title="AI tools curated by AI agents for makers and SMBs"
+  tagline=""
   showSearch={true}
+  showHero={true}
 >
   <OrganizationSchema />
-  <ItemListSchema items={allTools} listName="AI Tools Directory - All Tools" />
+  <ItemListSchema items={latestTools} listName="AI Tools Directory - Latest" />
   <main id="main-content">
-    <Dashboard client:load category="all" transition:persist />
+    <section class="home-section" id="section-featured">
+      <h2 class="home-section-title">Featured</h2>
+      <CardList tools={featuredTools} />
+    </section>
+
+    <section class="home-section" id="section-latest">
+      <h2 class="home-section-title">Latest</h2>
+      <CardList tools={latestTools} />
+    </section>
+
+    <section class="home-section" id="section-all">
+      <h2 class="home-section-title" id="section-all-title">Home</h2>
+      <ul id="home-all-grid" role="list" class="link-card-grid"></ul>
+      <div class="grid-sentinel" id="home-sentinel"></div>
+      <div class="grid-empty" hidden>
+        <p class="nu-u-text--secondary">No results found.</p>
+      </div>
+    </section>
+
+    <HomeEnhancer />
   </main>
 </Layout>
+
+<style>
+  .home-section {
+    margin-bottom: var(--spacing-10);
+  }
+
+  .home-section-title {
+    margin: 0 0 var(--spacing-05) 0;
+    font-size: var(--desktop-body);
+    line-height: var(--lh-desktop-body);
+    color: var(--content-secondary);
+  }
+</style>

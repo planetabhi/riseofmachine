@@ -1,0 +1,131 @@
+---
+import './SearchInput.css';
+
+interface Props {
+    placeholder?: string;
+}
+
+const { placeholder = 'Search by name, category, or feature...' } = Astro.props;
+---
+
+<div class="search-container">
+    <div class="search-input-wrapper">
+        <svg
+            class="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+        >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input
+            type="text"
+            id="tool-search"
+            class="search-input"
+            placeholder={placeholder}
+            aria-label="Search AI tools"
+            autocomplete="off"
+        />
+        <button
+            id="search-clear"
+            class="search-clear"
+            type="button"
+            aria-label="Clear search"
+            style="display: none;"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+        </button>
+        <kbd class="search-shortcut">⌘K</kbd>
+    </div>
+</div>
+
+<script>
+    const QUERY_PARAM = 'q';
+
+    const readUrl = () => {
+        try {
+            return new URLSearchParams(location.search).get(QUERY_PARAM) || '';
+        } catch {
+            return '';
+        }
+    };
+
+    const writeUrl = (value: string) => {
+        try {
+            const url = new URL(location.href);
+            if (value) url.searchParams.set(QUERY_PARAM, value);
+            else url.searchParams.delete(QUERY_PARAM);
+            history.replaceState(null, '', url.pathname + url.search + url.hash);
+        } catch {}
+    };
+
+    const dispatch = (value: string) => {
+        writeUrl(value);
+        window.dispatchEvent(new CustomEvent('tools:search', { detail: { query: value } }));
+    };
+
+    let debounce: ReturnType<typeof setTimeout> | undefined;
+
+    const input = () => document.getElementById('tool-search') as HTMLInputElement | null;
+    const clearBtn = () => document.getElementById('search-clear') as HTMLButtonElement | null;
+
+    const toggleClear = (el: HTMLInputElement) => {
+        const c = clearBtn();
+        if (c) c.style.display = el.value ? 'flex' : 'none';
+    };
+
+    // Re-sync the field from the URL on each navigation; bind input listeners once.
+    const bind = () => {
+        const el = input();
+        if (!el) return;
+        el.value = readUrl();
+        toggleClear(el);
+        if ((el as any).__searchBound) return;
+        (el as any).__searchBound = true;
+
+        el.addEventListener('input', () => {
+            toggleClear(el);
+            clearTimeout(debounce);
+            const value = el.value;
+            debounce = setTimeout(() => dispatch(value), 300);
+        });
+
+        clearBtn()?.addEventListener('click', () => {
+            el.value = '';
+            toggleClear(el);
+            dispatch('');
+            el.focus();
+        });
+    };
+
+    if (!(window as any).__searchGlobalBound) {
+        (window as any).__searchGlobalBound = true;
+
+        window.addEventListener('keydown', (e) => {
+            const el = input();
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                el?.focus();
+            } else if (e.key === 'Escape' && el && document.activeElement === el) {
+                el.blur();
+                if (el.value) {
+                    el.value = '';
+                    toggleClear(el);
+                    dispatch('');
+                }
+            }
+        });
+
+        window.addEventListener('popstate', bind);
+    }
+
+    document.addEventListener('astro:page-load', bind);
+</script>

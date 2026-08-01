@@ -4,23 +4,12 @@
     background-color: var(--background);
     background-position: 100%;
     border-radius: var(--spacing-05);
-    height: 8rem;
+    height: 7rem;
     position: relative;
     box-shadow: var(--content);
     content-visibility: auto;
-    contain-intrinsic-size: 8rem;
+    contain-intrinsic-size: 7rem;
     transition: box-shadow var(--duration-fast) var(--ease-smooth-out);
-}
-
-.link-card.t-tilt {
-    touch-action: auto;
-}
-
-.t-tilt-card {
-    position: relative;
-    display: flex;
-    width: 100%;
-    border-radius: var(--spacing-05);
 }
 
 .link-card a {

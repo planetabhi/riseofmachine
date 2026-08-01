@@ -1865,19 +1865,19 @@
     "title": "AI Note Writers",
     "description": "Overview of the AI Note Writer API"
   },
-  "synexa": {
-    "slug": "synexa",
-    "title": "Synexa AI: Deploy AI Models in One Line of Code",
-    "description": "Simplify AI deployment with Synexa. Run powerful AI models instantly with just one line of code. Fast, stable, and developer-friendly."
+  "tinygrad": {
+    "slug": "tinygrad",
+    "title": "tinygrad: A simple and powerful neural network framework"
   },
   "zen-agents": {
     "slug": "zen-agents",
     "title": "Zencoder | The AI Coding Agent",
     "description": "Discover Zencoder's AI Coding Agent Platform for seamless code execution and collaboration. Boost productivity with advanced analytics, flexible deployment, and custom agents for your team."
   },
-  "tinygrad": {
-    "slug": "tinygrad",
-    "title": "tinygrad: A simple and powerful neural network framework"
+  "synexa": {
+    "slug": "synexa",
+    "title": "Synexa AI: Deploy AI Models in One Line of Code",
+    "description": "Simplify AI deployment with Synexa. Run powerful AI models instantly with just one line of code. Fast, stable, and developer-friendly."
   },
   "zeno": {
     "slug": "zeno",
@@ -5261,6 +5261,12 @@
     "title": "Qwen Image - Advanced AI Photo Generator | ImageByQwen",
     "description": "Qwen Image is the most advanced AI photo generator that transforms your ideas into stunning, photorealistic images using cutting-edge Qwen models. Create beautiful photos in seconds. Credits required for usage."
   },
+  "palmscanner-ai": {
+    "slug": "palmscanner-ai",
+    "title": "PalmScanner AI | AI Palm Reading From Your Palm Photo",
+    "description": "Upload your palm photo for a personalized AI palm reading report. Discover insights about personality, love, career, and life path. New users get 1 free credit.",
+    "ogImage": "https://palmscannerai.com/preview.png"
+  },
   "penny": {
     "slug": "penny",
     "title": "Penny AI - Smart Shopping via Price Comparison & Pros and Cons Analysis",
@@ -5376,12 +5382,6 @@
     "title": "Stock Market Intelligence Platform - AI Analysis & Portfolio Tracking | TradingLens",
     "description": "Complete stock market platform: Real-time market overview, 20-second AI stock analysis, and smart portfolio tracking. Professional insights helping investors consistently beat the market."
   },
-  "palmscanner-ai": {
-    "slug": "palmscanner-ai",
-    "title": "PalmScanner AI | AI Palm Reading From Your Palm Photo",
-    "description": "Upload your palm photo for a personalized AI palm reading report. Discover insights about personality, love, career, and life path. New users get 1 free credit.",
-    "ogImage": "https://palmscannerai.com/preview.png"
-  },
   "tripnotes": {
     "slug": "tripnotes",
     "title": "Dorsia",
@@ -5393,15 +5393,15 @@
     "description": "Compare top vacuums and cleaning products side-by-side with detailed specs, honest reviews, and curated recommendations. Robot vacuums, cordless vacuums, upright vacuums, carpet cleaners, vacuum mops, and air purifiers.",
     "ogImage": "https://vacnavi.com/og.png?v=1"
   },
-  "vibeflow": {
-    "slug": "vibeflow",
-    "title": "ViBeFlOw Studios | Music Production & Video Content Creation Services",
-    "description": "ViBeFlOw Studios offers professional music production and video content creation services in Fullerton, CA. Specializing in live events, DJ sets, and high-quality audio-visual content."
-  },
   "vedic-astrology-chart": {
     "slug": "vedic-astrology-chart",
     "title": "Vedic Astrology Chart - Free Birth Chart Calculator",
     "description": "Generate a free Vedic astrology chart with AI interpretation. See your sidereal birth chart, houses, nakshatras, D9/Navamsa, dashas, and divisional charts.",
     "ogImage": "https://vedicastrologychart.net/preview.png"
+  },
+  "vibeflow": {
+    "slug": "vibeflow",
+    "title": "ViBeFlOw Studios | Music Production & Video Content Creation Services",
+    "description": "ViBeFlOw Studios offers professional music production and video content creation services in Fullerton, CA. Specializing in live events, DJ sets, and high-quality audio-visual content."
   }
 }

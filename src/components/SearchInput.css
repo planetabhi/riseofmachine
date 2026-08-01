@@ -10,19 +10,6 @@
     max-width: 24rem;
 }
 
-.search-input-wrapper.t-clear {
-    overflow: hidden;
-    border-radius: var(--spacing-05);
-}
-
-.search-input-wrapper .t-clear-mirror {
-    padding-left: var(--spacing-09);
-    padding-right: var(--spacing-12);
-    color: var(--content-primary);
-    font-size: var(--desktop-body-sm);
-    line-height: var(--lh-desktop-body-sm);
-}
-
 .search-icon {
     position: absolute;
     left: var(--spacing-04);

@@ -1,0 +1,46 @@
+---
+// Global bookmark sync: delegated toggle + visual state for every .bookmark-btn
+// (static cards, JS-rendered cards, and the detail panel). Included once in Layout.
+---
+
+<script>
+    import { isBookmarked, toggleBookmark } from '../utils/bookmarks';
+
+    function applyBookmarkState() {
+        document
+            .querySelectorAll<HTMLButtonElement>('.bookmark-btn[data-bookmark]')
+            .forEach((btn) => {
+                const slug = btn.dataset.slug;
+                if (!slug) return;
+                const on = isBookmarked(slug);
+                btn.classList.toggle('bookmarked', on);
+                btn.dataset.liked = String(on);
+                const title = btn.dataset.title ?? '';
+                const label = on
+                    ? `Remove ${title} from saved list`
+                    : `Add ${title} to saved list`;
+                btn.setAttribute('aria-label', label);
+                btn.title = label;
+            });
+    }
+
+    if (!(window as any).__bookmarkSyncBound) {
+        (window as any).__bookmarkSyncBound = true;
+
+        document.addEventListener('click', (e) => {
+            const btn = (e.target as HTMLElement).closest<HTMLButtonElement>(
+                '.bookmark-btn[data-bookmark]',
+            );
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const slug = btn.dataset.slug;
+            if (slug) toggleBookmark(slug); // fires bookmarks:changed
+        });
+
+        window.addEventListener('bookmarks:changed', applyBookmarkState);
+        // Fired after cards are rendered dynamically so their state reflects storage.
+        window.addEventListener('bookmarks:sync', applyBookmarkState);
+        document.addEventListener('astro:page-load', applyBookmarkState);
+    }
+</script>

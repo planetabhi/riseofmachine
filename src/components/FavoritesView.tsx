@@ -1,24 +1,49 @@
 import { useState, useEffect } from 'react';
 import { BorderBeam } from 'border-beam';
-import { getBookmarkedTools, type BookmarkedTool } from '../utils/bookmarks';
+import { getBookmarks } from '../utils/bookmarks';
 import { toolComparators, type SortKey } from '../utils/sorting';
+import { isRecentlyAdded } from '../utils/dates';
 import { useReducedMotion } from '../utils/useReducedMotion';
-import Card from './Card';
+import BookmarkButton from './BookmarkButton';
 import EmptyState, { BookmarkIcon } from './EmptyState';
+import './Card.css';
 import './CardsContainer.css';
-import data from '../data/tools.json';
-import type { Category } from '../types';
+import type { Tool } from '../types';
 
 type FavoritesSortKey = Exclude<SortKey, 'random'>;
+type SearchRecord = { s: string; t: string; g: string; c: string; b: string; u: string; d: string };
 
 export default function FavoritesView() {
-    const [bookmarkedTools, setBookmarkedTools] = useState<BookmarkedTool[]>([]);
+    const [bookmarkedTools, setBookmarkedTools] = useState<Tool[]>([]);
     const [sortBy, setSortBy] = useState<FavoritesSortKey>('nameAsc');
     const reduced = useReducedMotion();
 
-    const loadBookmarks = () => {
-        const tools = getBookmarkedTools(data.tools as Category[]);
-        setBookmarkedTools(tools);
+    // Resolve bookmarked slugs against the lazily-fetched search index so this
+    // page never bundles the full tools.json.
+    const loadBookmarks = async () => {
+        const slugs = new Set(getBookmarks());
+        if (slugs.size === 0) {
+            setBookmarkedTools([]);
+            return;
+        }
+        try {
+            const res = await fetch('/search-index.json');
+            const records: SearchRecord[] = await res.json();
+            setBookmarkedTools(
+                records
+                    .filter((r) => slugs.has(r.s))
+                    .map((r) => ({
+                        slug: r.s,
+                        title: r.t,
+                        body: r.b,
+                        tag: r.g,
+                        url: r.u,
+                        'date-added': r.d,
+                    })),
+            );
+        } catch {
+            setBookmarkedTools([]);
+        }
     };
 
     useEffect(() => {
@@ -84,17 +109,31 @@ export default function FavoritesView() {
             </div>
 
             <ul role="list" className="link-card-grid">
-                {sortedTools.map(({ url, title, body, tag, 'date-added': dateAdded, slug }, i) => (
-                    <Card
-                        key={`${slug}-${i}`}
-                        href={url}
-                        title={title}
-                        body={body}
-                        tag={tag}
-                        dateAdded={dateAdded}
-                        slug={slug}
-                    />
-                ))}
+                {sortedTools.map(({ url, title, body, tag, 'date-added': dateAdded, slug }, i) => {
+                    const isNew = isRecentlyAdded(dateAdded, 30);
+                    const linkUrl = slug ? `/tools/${slug}` : url;
+                    return (
+                        <li className="link-card" key={`${slug}-${i}`}>
+                            <a href={linkUrl}>
+                                <strong className="nu-c-fs-normal nu-u-mt-1 nu-u-mb-1">{title}</strong>
+                                <p className="nu-c-helper-text nu-u-mt-1 nu-u-mb-1">{body}</p>
+                                <p className="distribution">
+                                    {isNew && (
+                                        <span className="tag nu-u-me-2 tag-new t-badge" data-open="true" title="Recently added" aria-label="New item">
+                                            <span className="t-badge-dot">🔥</span>
+                                        </span>
+                                    )}
+                                    {tag && <span className="tag">{tag}</span>}
+                                </p>
+                            </a>
+                            {slug && (
+                                <div className="card-bookmark">
+                                    <BookmarkButton slug={slug} title={title} variant="small" />
+                                </div>
+                            )}
+                        </li>
+                    );
+                })}
             </ul>
         </section>
     );

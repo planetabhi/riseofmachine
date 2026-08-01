@@ -1,0 +1,147 @@
+---
+// Progressive enhancement for the static tool grid: bookmark toggle, the
+// "Latest" filter, and lazy search — all via event delegation, no per-card JS.
+---
+
+<script>
+    type SearchRecord = { s: string; t: string; g: string; c: string; b: string };
+
+    const fuseOptions = {
+        keys: [
+            { name: 't', weight: 0.4 },
+            { name: 'b', weight: 0.3 },
+            { name: 'c', weight: 0.2 },
+            { name: 'g', weight: 0.1 },
+        ],
+        threshold: 0.3,
+        ignoreLocation: true,
+        minMatchCharLength: 2,
+    };
+
+    let query = '';
+    let filterNew = false;
+    let matchSlugs: Set<string> | null = null; // null = no active search
+    let fuse: any = null;
+    let fusePromise: Promise<any> | null = null;
+
+    // Progressive reveal: render 32 cards, load the next batch on scroll.
+    const PAGE = 32;
+    let revealed = PAGE;
+    let io: IntersectionObserver | null = null;
+
+    const cards = () =>
+        Array.from(document.querySelectorAll<HTMLElement>('.link-card'));
+
+    function recompute() {
+        // The reveal cap only applies while plainly browsing — search and the
+        // Latest filter show all their (already narrow) matches.
+        const searching = matchSlugs !== null;
+        const capped = !searching && !filterNew;
+        let shown = 0;
+        let visible = 0;
+        for (const card of cards()) {
+            const slug = card.dataset.slug ?? '';
+            const okSearch = !searching || matchSlugs!.has(slug);
+            const okNew = !filterNew || card.dataset.new === 'true';
+            let show = okSearch && okNew;
+            if (show && capped && shown >= revealed) show = false;
+            if (show && capped) shown += 1;
+            card.style.display = show ? '' : 'none';
+            if (show) visible += 1;
+        }
+        const empty = document.querySelector<HTMLElement>('.grid-empty');
+        if (empty) empty.hidden = visible !== 0;
+        const sentinel = document.querySelector<HTMLElement>('.grid-sentinel');
+        if (sentinel) sentinel.hidden = !(capped && revealed < cards().length);
+    }
+
+    function setupObserver() {
+        io?.disconnect();
+        const sentinel = document.querySelector('.grid-sentinel');
+        if (!sentinel) return;
+        io = new IntersectionObserver(
+            (entries) => {
+                if (!entries[0]?.isIntersecting) return;
+                if (matchSlugs !== null || filterNew) return;
+                const total = cards().length;
+                if (revealed >= total) return;
+                revealed = Math.min(revealed + PAGE, total);
+                recompute();
+            },
+            { root: document.querySelector('.app-content'), rootMargin: '400px' },
+        );
+        io.observe(sentinel);
+    }
+
+    async function ensureFuse() {
+        if (fuse) return fuse;
+        if (!fusePromise) {
+            fusePromise = (async () => {
+                const [{ default: Fuse }, res] = await Promise.all([
+                    import('fuse.js'),
+                    fetch('/search-index.json'),
+                ]);
+                const records: SearchRecord[] = await res.json();
+                fuse = new Fuse(records, fuseOptions);
+                return fuse;
+            })();
+        }
+        return fusePromise;
+    }
+
+    async function runSearch(q: string) {
+        query = q;
+        if (!q || q.length < 2) {
+            matchSlugs = null;
+            recompute();
+            return;
+        }
+        const f = await ensureFuse();
+        // Guard against a stale async result if the query changed meanwhile.
+        if (query !== q) return;
+        matchSlugs = new Set(
+            f.search(q).map((r: { item: SearchRecord }) => r.item.s),
+        );
+        recompute();
+    }
+
+    function readUrlState() {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            filterNew = params.get('new') === '1';
+            void runSearch(params.get('q') ?? '');
+        } catch {
+            filterNew = false;
+            void runSearch('');
+        }
+    }
+
+    // Global listeners attached once (survive view transitions).
+    if (!(window as any).__gridEnhancerBound) {
+        (window as any).__gridEnhancerBound = true;
+
+        window.addEventListener('tools:search', (e: Event) => {
+            const detail = (e as CustomEvent<{ query?: string }>).detail || {};
+            if (typeof detail.query !== 'undefined') void runSearch(detail.query);
+        });
+
+        window.addEventListener('tools:filter-new', (e: Event) => {
+            const detail = (e as CustomEvent<{ filterNew?: boolean }>).detail || {};
+            if (typeof detail.filterNew !== 'undefined') {
+                filterNew = detail.filterNew;
+                recompute();
+            }
+        });
+    }
+
+    // Per-navigation init (fires on first load and every view transition).
+    const init = () => {
+        query = '';
+        filterNew = false;
+        matchSlugs = null;
+        revealed = PAGE;
+        readUrlState();
+        setupObserver();
+    };
+    document.addEventListener('astro:page-load', init);
+</script>

@@ -1,0 +1,25 @@
+---
+import './CardsContainer.css';
+import Card from './Card.astro';
+import type { Tool } from '../types';
+
+interface Props {
+    tools: (Tool & { category?: string })[];
+}
+
+const { tools } = Astro.props;
+---
+
+<ul role="list" class="link-card-grid">
+    {tools.map((tool) => (
+        <Card
+            title={tool.title}
+            body={tool.body}
+            tag={tool.tag}
+            dateAdded={tool['date-added']}
+            slug={tool.slug}
+            url={tool.url}
+            category={tool.category}
+        />
+    ))}
+</ul>

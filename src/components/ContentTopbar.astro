@@ -1,0 +1,109 @@
+---
+import SearchInput from './SearchInput.astro';
+
+interface Props {
+    title: string;
+    showSearch?: boolean;
+    searchPlaceholder?: string;
+    minimal?: boolean;
+}
+
+const {
+    title,
+    showSearch = false,
+    searchPlaceholder = 'Search by name, category, or feature...',
+    minimal = false,
+} = Astro.props;
+---
+
+<div class:list={['content-topbar', { 'content-topbar--minimal': minimal }]}>
+    <button
+        type="button"
+        id="sidebar-toggle"
+        class="sidebar-hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="app-sidebar"
+    >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+    </button>
+    {!minimal && <h1 class="content-title nu-c-h5 nu-u-text--primary">{title}</h1>}
+    {!minimal && showSearch && (
+        <div class="content-search">
+            <SearchInput placeholder={searchPlaceholder} />
+        </div>
+    )}
+</div>
+
+<style>
+    .content-topbar {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-04);
+        padding: var(--spacing-06) var(--spacing-09);
+    }
+
+    /* When a hero supplies the title/search, the bar only holds the mobile menu. */
+    .content-topbar--minimal {
+        padding: 0;
+    }
+
+    .content-title {
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .content-search {
+        margin-left: auto;
+        min-width: 0;
+    }
+
+    .content-search :global(.search-container) {
+        margin-top: 0;
+    }
+
+    .sidebar-hamburger {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: var(--spacing-09);
+        height: var(--spacing-09);
+        flex-shrink: 0;
+        padding: var(--spacing-02);
+        border: none;
+        border-radius: var(--spacing-02);
+        background: none;
+        color: var(--content-secondary);
+        cursor: var(--c-pointer);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .sidebar-hamburger:hover {
+        background-color: var(--background-hover);
+        color: var(--content-primary);
+    }
+
+    .sidebar-hamburger:focus-visible {
+        outline: 1px solid var(--button-primary);
+        outline-offset: -1px;
+    }
+
+    @media (max-width: 48rem) {
+        .sidebar-hamburger {
+            display: inline-flex;
+        }
+
+        .content-topbar {
+            padding: var(--spacing-05) var(--spacing-06);
+        }
+
+        .content-topbar--minimal {
+            padding: var(--spacing-05) var(--spacing-06) 0;
+        }
+    }
+</style>
