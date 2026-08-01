@@ -1,0 +1,94 @@
+{
+  "art": {
+    "title": "Art",
+    "count": 108
+  },
+  "audio": {
+    "title": "Audio",
+    "count": 51
+  },
+  "code": {
+    "title": "Code",
+    "count": 20
+  },
+  "copywriting": {
+    "title": "Copywriting",
+    "count": 71
+  },
+  "design": {
+    "title": "Design",
+    "count": 62
+  },
+  "developer": {
+    "title": "Developer",
+    "count": 89
+  },
+  "education": {
+    "title": "Education",
+    "count": 22
+  },
+  "enterprise": {
+    "title": "Enterprise",
+    "count": 67
+  },
+  "fashion": {
+    "title": "Fashion",
+    "count": 10
+  },
+  "gaming": {
+    "title": "Gaming",
+    "count": 13
+  },
+  "health": {
+    "title": "Health",
+    "count": 9
+  },
+  "llm": {
+    "title": "LLMs",
+    "count": 46
+  },
+  "legal": {
+    "title": "Legal",
+    "count": 7
+  },
+  "music": {
+    "title": "Music",
+    "count": 30
+  },
+  "nocode": {
+    "title": "No Code",
+    "count": 24
+  },
+  "photos": {
+    "title": "Photos",
+    "count": 93
+  },
+  "productivity": {
+    "title": "Productivity",
+    "count": 115
+  },
+  "prompts": {
+    "title": "Prompts",
+    "count": 22
+  },
+  "research": {
+    "title": "Research",
+    "count": 28
+  },
+  "seo": {
+    "title": "SEO",
+    "count": 21
+  },
+  "social": {
+    "title": "Social Media",
+    "count": 30
+  },
+  "video": {
+    "title": "Video",
+    "count": 115
+  },
+  "xtras": {
+    "title": "Xtras",
+    "count": 76
+  }
+}

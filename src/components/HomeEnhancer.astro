@@ -1,0 +1,261 @@
+---
+// Homepage only: renders the "All Tools" section on demand (on scroll) from the
+// lazily-fetched search index, so the homepage HTML stays tiny. Also drives
+// homepage search (results rendered from the index).
+---
+
+<script>
+    import { isRecentlyAdded } from '../utils/dates';
+
+    type Rec = { s: string; t: string; g: string; c: string; b: string; u: string; d: string };
+
+    const PAGE = 32;
+    const fuseOptions = {
+        keys: [
+            { name: 't', weight: 0.4 },
+            { name: 'b', weight: 0.3 },
+            { name: 'c', weight: 0.2 },
+            { name: 'g', weight: 0.1 },
+        ],
+        threshold: 0.3,
+        ignoreLocation: true,
+        minMatchCharLength: 2,
+    };
+
+    let records: Rec[] | null = null;
+    let loadPromise: Promise<Rec[]> | null = null;
+    let fuse: any = null;
+    let rendered = 0;
+    let searching = false;
+    let loadingMore = false;
+    let searchSeq = 0;
+    let io: IntersectionObserver | null = null;
+    let catTitles: Record<string, string> = {};
+
+    const grid = () => document.getElementById('home-all-grid');
+    const sentinel = () => document.getElementById('home-sentinel');
+    const emptyEl = () => document.querySelector<HTMLElement>('#section-all .grid-empty');
+    const isHome = () => location.pathname === '/' && !!grid();
+
+    // Category slug -> title, read from the sidebar (zero extra fetch).
+    function buildCatMap() {
+        catTitles = {};
+        document.querySelectorAll<HTMLAnchorElement>('#app-sidebar .sidebar-nav a').forEach((a) => {
+            try {
+                const slug = new URL(a.href).pathname.replace(/^\//, '').replace(/\/$/, '');
+                const label = a.querySelector('.sidebar-item-label')?.textContent?.trim();
+                if (slug && label) catTitles[slug] = label;
+            } catch {}
+        });
+    }
+
+    async function loadRecords() {
+        if (records) return records;
+        if (!loadPromise) {
+            loadPromise = fetch('/search-index.json')
+                .then((r) => {
+                    if (!r.ok) throw new Error(`search-index ${r.status}`);
+                    return r.json();
+                })
+                .then((d: Rec[]) => (records = d))
+                .catch(() => {
+                    // Degrade gracefully: empty records now, allow a retry next call.
+                    loadPromise = null;
+                    return [] as Rec[];
+                });
+        }
+        return loadPromise;
+    }
+
+    // Mirror of Card.astro so the panel/bookmark/CSS all work on rendered cards.
+    function cardEl(r: Rec): HTMLLIElement {
+        const isNew = isRecentlyAdded(r.d, 30);
+        const li = document.createElement('li');
+        li.className = 'link-card';
+        li.dataset.slug = r.s;
+        li.dataset.category = r.c;
+        li.dataset.new = String(isNew);
+
+        const a = document.createElement('a');
+        a.href = `/tools/${r.s}`;
+        a.setAttribute('data-tool-link', '');
+        a.dataset.title = r.t;
+        a.dataset.body = r.b;
+        a.dataset.tag = r.g;
+        a.dataset.date = r.d;
+        a.dataset.url = r.u;
+        a.dataset.slug = r.s;
+        a.dataset.category = r.c;
+        a.dataset.categoryTitle = catTitles[r.c] ?? r.c;
+
+        const strong = document.createElement('strong');
+        strong.className = 'nu-c-fs-normal nu-u-mt-1 nu-u-mb-1';
+        strong.textContent = r.t;
+
+        const body = document.createElement('p');
+        body.className = 'nu-c-helper-text nu-u-mt-1 nu-u-mb-1';
+        body.textContent = r.b;
+
+        const dist = document.createElement('p');
+        dist.className = 'distribution';
+        if (isNew) {
+            const badge = document.createElement('span');
+            badge.className = 'tag nu-u-me-2 tag-new t-badge';
+            badge.setAttribute('data-open', 'true');
+            badge.title = 'Recently added';
+            badge.setAttribute('aria-label', 'New item');
+            const dot = document.createElement('span');
+            dot.className = 't-badge-dot';
+            dot.textContent = '🔥';
+            badge.appendChild(dot);
+            dist.appendChild(badge);
+        }
+        if (r.g) {
+            const tag = document.createElement('span');
+            tag.className = 'tag';
+            tag.textContent = r.g;
+            dist.appendChild(tag);
+        }
+        a.append(strong, body, dist);
+        li.appendChild(a);
+
+        const wrap = document.createElement('div');
+        wrap.className = 'card-bookmark';
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'bookmark-btn bookmark-btn--small t-like';
+        btn.setAttribute('data-bookmark', '');
+        btn.dataset.slug = r.s;
+        btn.dataset.title = r.t;
+        btn.setAttribute('aria-label', `Add ${r.t} to saved list`);
+        btn.title = `Add ${r.t} to saved list`;
+        const icon = document.createElement('span');
+        icon.className = 't-like-icon';
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('class', 't-like-heart');
+        svg.setAttribute('width', '20');
+        svg.setAttribute('height', '20');
+        svg.setAttribute('viewBox', '0 0 20 20');
+        svg.setAttribute('fill', 'none');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M15 19L9.80769 17.0435L5 19V1H15V19Z');
+        path.setAttribute('stroke', 'currentColor');
+        path.setAttribute('stroke-miterlimit', '10');
+        svg.appendChild(path);
+        icon.appendChild(svg);
+        btn.appendChild(icon);
+        wrap.appendChild(btn);
+        li.appendChild(wrap);
+        li.classList.add('is-revealing');
+        return li;
+    }
+
+    function renderBatch(list: Rec[]) {
+        const g = grid();
+        if (!g) return;
+        const frag = document.createDocumentFragment();
+        list.forEach((r) => frag.appendChild(cardEl(r)));
+        g.appendChild(frag);
+        window.dispatchEvent(new Event('bookmarks:sync'));
+    }
+
+    async function loadMore() {
+        if (searching || loadingMore) return;
+        loadingMore = true;
+        try {
+            const recs = await loadRecords();
+            if (!isHome()) return;
+            const next = recs.slice(rendered, rendered + PAGE);
+            if (next.length) {
+                renderBatch(next);
+                rendered += next.length;
+            }
+            const s = sentinel();
+            if (s) s.hidden = rendered >= recs.length;
+        } finally {
+            loadingMore = false;
+        }
+    }
+
+    function setSectionsHidden(hidden: boolean) {
+        ['section-latest', 'section-featured'].forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) el.hidden = hidden;
+        });
+        const title = document.getElementById('section-all-title');
+        if (title) title.textContent = hidden ? 'Results' : 'All Tools';
+    }
+
+    async function runSearch(q: string) {
+        const g = grid();
+        if (!g) return;
+        const empty = emptyEl();
+        // Newer calls supersede in-flight ones so stale results never render.
+        const seq = ++searchSeq;
+        if (!q || q.length < 2) {
+            searching = false;
+            setSectionsHidden(false);
+            g.replaceChildren();
+            rendered = 0;
+            if (empty) empty.hidden = true;
+            const s = sentinel();
+            if (s) s.hidden = false;
+            void loadMore();
+            return;
+        }
+        searching = true;
+        setSectionsHidden(true);
+        const recs = await loadRecords();
+        if (seq !== searchSeq || location.pathname !== '/') return;
+        if (!fuse) {
+            const { default: Fuse } = await import('fuse.js');
+            fuse = new Fuse(recs, fuseOptions);
+        }
+        if (seq !== searchSeq) return;
+        const results = fuse.search(q).map((x: { item: Rec }) => x.item);
+        g.replaceChildren();
+        renderBatch(results);
+        rendered = results.length;
+        const s = sentinel();
+        if (s) s.hidden = true;
+        if (empty) empty.hidden = results.length !== 0;
+    }
+
+    function setupObserver() {
+        io?.disconnect();
+        const s = sentinel();
+        if (!s) return;
+        io = new IntersectionObserver(
+            (entries) => {
+                if (entries[0]?.isIntersecting && !searching) void loadMore();
+            },
+            { root: document.querySelector('.app-content'), rootMargin: '400px' },
+        );
+        io.observe(s);
+    }
+
+    function init() {
+        if (!isHome()) return;
+        buildCatMap();
+        rendered = 0;
+        searching = false;
+        grid()!.replaceChildren();
+        setSectionsHidden(false);
+        setupObserver();
+        const q = new URLSearchParams(location.search).get('q') ?? '';
+        if (q.length >= 2) void runSearch(q);
+        else void loadMore();
+    }
+
+    if (!(window as any).__homeEnhancerBound) {
+        (window as any).__homeEnhancerBound = true;
+        window.addEventListener('tools:search', (e: Event) => {
+            if (location.pathname !== '/') return;
+            const detail = (e as CustomEvent<{ query?: string }>).detail || {};
+            if (typeof detail.query !== 'undefined') void runSearch(detail.query);
+        });
+
+        document.addEventListener('astro:page-load', init);
+        init();
+    }
+</script>

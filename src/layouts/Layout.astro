@@ -1,8 +1,11 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import WebSiteSchema from "../components/schema/WebSiteSchema.astro";
+import Sidebar from "../components/Sidebar.astro";
+import ContentTopbar from "../components/ContentTopbar.astro";
 import Hero from "../components/Hero.astro";
-import HoverBeam from "../components/HoverBeam";
+import DetailPanel from "../components/DetailPanel.astro";
+import BookmarkSync from "../components/BookmarkSync.astro";
 import "@new-ui/foundations";
 import "../styles/transitions.css";
 
@@ -27,6 +30,7 @@ export interface Props {
     showSearch?: boolean;
     showLatestFilter?: boolean;
     showParticles?: boolean;
+    showHero?: boolean;
     searchPlaceholder?: string;
 }
 
@@ -50,7 +54,7 @@ const {
     pageFavicon,
     showSearch = false,
     showLatestFilter = true,
-    showParticles = true,
+    showHero = false,
     searchPlaceholder = "Search by name, category, or feature...",
 } = Astro.props;
 ---
@@ -132,65 +136,27 @@ const {
 
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
-        <nav class="floating-nav" aria-label="Main">
-            <div class="left-group">
-                <div class="logo">
-                    <a href="/" aria-label="home page"
-                        ><img
-                            src="/rise-of-machine.svg"
-                            width="32"
-                            height="32"
-                            alt="Rise of Machine"
-                            aria-hidden="true"
-                        /></a
-                    >
-                </div>
-                <HoverBeam client:visible borderRadius={0}>
-                    <button
-                        class="theme-toggle"
-                        id="theme-toggle"
-                        aria-label="Toggle dark theme"
-                        aria-pressed="false"
-                    >
-                        <span class="theme-emoji" aria-hidden="true"></span>
-                    </button>
-                </HoverBeam>
-            </div>
-            <div class="btn-group">
-                {showLatestFilter && (
-                <HoverBeam client:visible borderRadius={12}>
-                    <button
-                        class="new-filter-toggle"
-                        id="new-filter-toggle"
-                        aria-label="Filter recently added tools"
-                        aria-pressed="false"
-                    >
-                        Latest
-                    </button>
-                </HoverBeam>
-                )}
-                <HoverBeam client:visible borderRadius={12}>
-                    <a
-                        href="/saved"
-                        class="favorites-link"
-                        id="favoritesLink"
-                        style="display: none;"
-                    >
-                        <span class="favorites-text">Saved tools</span>
-                        <span class="favorites-count" id="favoritesCount"></span>
-                    </a>
-                </HoverBeam>
-                <HoverBeam client:visible borderRadius={0}>
-                    <a
-                        href="https://github.com/planetabhi/riseofmachine/issues"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="submit-btn"
-                        ><span class="submit-text">Submit ↗</span></a
-                    >
-                </HoverBeam>
-            </div>
-        </nav>
+        <Sidebar showLatestFilter={showLatestFilter} />
+        <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+        <div class="app-content">
+            <ContentTopbar
+                title={title}
+                showSearch={showSearch}
+                searchPlaceholder={searchPlaceholder}
+                minimal={showHero}
+            />
+            {showHero && (
+                <Hero
+                    title={title}
+                    tagline={tagline}
+                    showSearch={showSearch}
+                    searchPlaceholder={searchPlaceholder}
+                />
+            )}
+            <slot />
+        </div>
+        <DetailPanel />
+        <BookmarkSync />
         <script is:inline>
             (function () {
                 try {
@@ -211,40 +177,11 @@ const {
                             count = JSON.parse(raw).length || 0;
                         } catch (e) {}
                     }
-                    var link = document.getElementById("favoritesLink");
                     var countEl = document.getElementById("favoritesCount");
-                    if (link && count > 0) {
-                        link.style.display = "inline-flex";
-                        if (countEl) countEl.textContent = count;
-                    }
+                    if (countEl) countEl.textContent = count > 0 ? String(count) : "";
                 } catch (e) {}
             })();
         </script>
-
-        <Hero
-            title={title}
-            tagline={tagline}
-            showSearch={showSearch}
-            showParticles={showParticles}
-            searchPlaceholder={searchPlaceholder}
-        />
-        <slot />
-
-        <div class="footer">
-            <p>
-                ABHIMANYU RANA 2026 © <br />
-                <a
-                    href="https://x.com/planetabhi"
-                    class="nu-u-link--subtle"
-                    target="_blank"
-                    rel="noopener noreferrer">@planetabhi</a
-                >
-                <span class="footer-separator">·</span>
-                <a href="/privacy" class="nu-u-link--subtle">Privacy</a>
-                <span class="footer-separator">·</span>
-                <a href="/terms" class="nu-u-link--subtle">Terms</a>
-            </p>
-        </div>
     </body>
 </html>
 <style is:global>
@@ -307,13 +244,67 @@ const {
         font-family: var(--body-copy);
         background-color: var(--background-high-contrast);
         cursor: var(--c-arrow);
-        scrollbar-gutter: stable;
+    }
+ 
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-muted) transparent;
+    }
+    *::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--border-muted);
+        border-radius: var(--spacing-01);
     }
     body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        overflow-x: hidden;
+        height: 100vh;
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+        background-color: var(--background);
+    }
+
+    .app-content {
+        flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
+        margin: var(--spacing-03) var(--spacing-03) var(--spacing-03) 0;
+        border: 0.5px solid var(--border-muted);
+        border-radius: var(--spacing-06);
+        background-color: var(--background-high-contrast);
+        overflow-y: auto;
+    }
+    .sidebar-backdrop {
+        display: none;
+    }
+    @media (max-width: 48rem) {
+        .sidebar-backdrop {
+            display: block;
+            position: fixed;
+            inset: 0;
+            z-index: 99;
+            opacity: 0;
+            pointer-events: none;
+            -webkit-backdrop-filter: blur(var(--blur-large));
+            backdrop-filter: blur(var(--blur-large));
+            transition: opacity var(--duration-medium) var(--ease-smooth-out);
+        }
+        body.sidebar-open .sidebar-backdrop {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .sidebar-backdrop {
+            transition: none;
+        }
     }
     
     /* Skip link for accessibility */
@@ -495,6 +486,7 @@ const {
     .theme-toggle .theme-emoji {
         font-size: 1.25rem;
         line-height: 1;
+        display: inline-block;
     }
 
     .theme-toggle .theme-emoji::after {
@@ -503,6 +495,21 @@ const {
 
     html[data-new-ui-theme="dark--cold"] .theme-toggle .theme-emoji::after {
         content: '🍵';
+    }
+
+    /* Icon swap: blur + scale the emoji as it changes on toggle. */
+    @keyframes theme-emoji-swap {
+        0% { transform: scale(1); filter: blur(0); opacity: 1; }
+        45% { transform: scale(0.7); filter: blur(var(--blur-small)); opacity: 0.5; }
+        100% { transform: scale(1); filter: blur(0); opacity: 1; }
+    }
+
+    .theme-toggle .theme-emoji.is-swapping {
+        animation: theme-emoji-swap var(--duration-fast) var(--ease-in-out);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .theme-toggle .theme-emoji.is-swapping { animation: none; }
     }
 
     .theme-toggle:focus {
@@ -686,22 +693,16 @@ const {
     (function () {
         const updateFavoritesLink = () => {
             try {
-                const linkEl = document.getElementById("favoritesLink");
                 const countEl = document.getElementById("favoritesCount");
-                if (!linkEl || !countEl) return;
+                if (!countEl) return;
 
                 const bookmarksString = localStorage.getItem("rom_bookmarks");
                 const count = bookmarksString
                     ? JSON.parse(bookmarksString).length
                     : 0;
 
-                if (count > 0) {
-                    linkEl.style.display = "inline-flex";
-                    countEl.textContent = count;
-                } else {
-                    linkEl.style.display = "none";
-                    countEl.textContent = "";
-                }
+                // Saved is a permanent sidebar item now — only reflect the count.
+                countEl.textContent = count > 0 ? String(count) : "";
             } catch (e) {}
         };
 
@@ -795,8 +796,45 @@ const {
                     const next = current === 'dark--warm' ? 'dark--cold' : 'dark--warm';
                     try { localStorage.setItem('rom_theme', next); } catch (e) {}
                     applyTheme(next);
+                    const emoji = themeToggle.querySelector('.theme-emoji');
+                    if (emoji) {
+                        emoji.classList.remove('is-swapping');
+                        void emoji.offsetWidth;
+                        emoji.classList.add('is-swapping');
+                    }
                 });
                 themeToggle._hasThemeListener = true;
+            }
+        };
+
+        // Mobile sidebar drawer
+        const closeSidebar = () => {
+            const wasOpen = document.body.classList.contains('sidebar-open');
+            document.body.classList.remove('sidebar-open');
+            const t = document.getElementById('sidebar-toggle');
+            if (t) {
+                t.setAttribute('aria-expanded', 'false');
+                if (wasOpen) t.focus();
+            }
+        };
+
+        const drawerFocusables = () => {
+            const bar = document.getElementById('app-sidebar');
+            if (!bar) return [];
+            return Array.from(
+                bar.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+            ).filter((el) => el.offsetParent !== null);
+        };
+
+        const initDrawer = () => {
+            const toggle = document.getElementById('sidebar-toggle');
+            if (toggle && !toggle._hasDrawerListener) {
+                toggle.addEventListener('click', () => {
+                    const open = document.body.classList.toggle('sidebar-open');
+                    toggle.setAttribute('aria-expanded', String(open));
+                    if (open) drawerFocusables()[0]?.focus();
+                });
+                toggle._hasDrawerListener = true;
             }
         };
 
@@ -808,16 +846,34 @@ const {
                 const theme = getSavedTheme();
                 e.newDocument.documentElement.setAttribute('data-new-ui-theme', theme);
             });
-            document.addEventListener("astro:page-load", () => { init(); initTheme(); });
+            document.addEventListener("astro:page-load", () => { init(); initTheme(); initDrawer(); closeSidebar(); });
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") { closeSidebar(); return; }
+                // Trap focus inside the drawer while it's open (mobile).
+                if (e.key === "Tab" && document.body.classList.contains("sidebar-open")) {
+                    const items = drawerFocusables();
+                    if (!items.length) return;
+                    const first = items[0];
+                    const last = items[items.length - 1];
+                    if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+                    else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+                }
+            });
+            document.addEventListener("click", (e) => {
+                const backdrop = document.getElementById("sidebar-backdrop");
+                const nav = e.target.closest && e.target.closest("#app-sidebar .sidebar-item[href]");
+                if (e.target === backdrop || nav) closeSidebar();
+            });
             window.__rom_initialized = true;
         }
 
         // Initial run for the current page
         if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", () => { init(); initTheme(); });
+            document.addEventListener("DOMContentLoaded", () => { init(); initTheme(); initDrawer(); });
         } else {
             init();
             initTheme();
+            initDrawer();
         }
     })();
 </script>

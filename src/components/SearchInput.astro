@@ -1,0 +1,218 @@
+---
+import './SearchInput.css';
+
+interface Props {
+    placeholder?: string;
+}
+
+const { placeholder = 'Search by name, category, or feature...' } = Astro.props;
+---
+
+<div class="search-container">
+    <div class="search-input-wrapper t-clear">
+        <svg
+            class="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+        >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input
+            type="text"
+            id="tool-search"
+            class="search-input"
+            placeholder={placeholder}
+            aria-label="Search AI tools"
+            autocomplete="off"
+        />
+        <div class="t-clear-mirror" id="search-mirror" aria-hidden="true"></div>
+        <div class="t-clear-glow" id="search-glow" aria-hidden="true"></div>
+        <button
+            id="search-clear"
+            class="search-clear"
+            type="button"
+            aria-label="Clear search"
+            style="display: none;"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+        </button>
+        <kbd class="search-shortcut">⌘K</kbd>
+    </div>
+</div>
+
+<script>
+    const QUERY_PARAM = 'q';
+
+    const readUrl = () => {
+        try {
+            return new URLSearchParams(location.search).get(QUERY_PARAM) || '';
+        } catch {
+            return '';
+        }
+    };
+
+    const writeUrl = (value: string) => {
+        try {
+            const url = new URL(location.href);
+            if (value) url.searchParams.set(QUERY_PARAM, value);
+            else url.searchParams.delete(QUERY_PARAM);
+            history.replaceState(null, '', url.pathname + url.search + url.hash);
+        } catch {}
+    };
+
+    const dispatch = (value: string) => {
+        writeUrl(value);
+        window.dispatchEvent(new CustomEvent('tools:search', { detail: { query: value } }));
+    };
+
+    let debounce: ReturnType<typeof setTimeout> | undefined;
+
+    const input = () => document.getElementById('tool-search') as HTMLInputElement | null;
+    const clearBtn = () => document.getElementById('search-clear') as HTMLButtonElement | null;
+
+    const toggleClear = (el: HTMLInputElement) => {
+        const c = clearBtn();
+        if (c) c.style.display = el.value ? 'flex' : 'none';
+    };
+
+    // --- Input clear dissolve (#13) ---
+    const numVar = (name: string, fb: number) => {
+        const v = parseFloat(getComputedStyle(document.documentElement).getPropertyValue(name));
+        return Number.isFinite(v) ? v : fb;
+    };
+    // cubic-bezier(x1,y1,x2,y2) sampler so JS easing matches the CSS token.
+    const bezier = (str: string) => {
+        const m = String(str).match(/cubic-bezier\(([-\d.]+),([-\d.]+),([-\d.]+),([-\d.]+)\)/);
+        if (!m) return (t: number) => t;
+        const [x1, y1, x2, y2] = m.slice(1).map(parseFloat) as [number, number, number, number];
+        const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+        const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+        return (t: number) => {
+            if (t <= 0) return 0;
+            if (t >= 1) return 1;
+            let s = t;
+            for (let i = 0; i < 8; i++) {
+                const dx = ((ax * s + bx) * s + cx) * s - t;
+                const d = (3 * ax * s + 2 * bx) * s + cx;
+                if (Math.abs(dx) < 1e-6 || d === 0) break;
+                s -= dx / d;
+            }
+            return ((ay * s + by) * s + cy) * s;
+        };
+    };
+    let glowCtx: CanvasRenderingContext2D | null = null;
+    const buildGlow = (inp: HTMLInputElement, text: string) => {
+        glowCtx ||= document.createElement('canvas').getContext('2d');
+        if (!glowCtx) return '';
+        const cs = getComputedStyle(inp);
+        glowCtx.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+        const wrap = inp.closest('.t-clear') as HTMLElement | null;
+        const w = (wrap?.clientWidth || 280);
+        const padLeft = parseFloat(cs.paddingLeft) || 12;
+        const spread = numVar('--glow-spread', 1.5);
+        const layers: string[] = [];
+        let x = 0;
+        text.split(/(\s+)/).forEach((seg) => {
+            const segW = glowCtx!.measureText(seg).width;
+            if (seg.trim()) {
+                const cx = padLeft + x + segW / 2;
+                const hw = Math.max(segW * 0.45, 8) * spread;
+                ([[0, 0.8, 7, 0.22], [hw * 0.45, 0.55, 8, 0.18], [-hw * 0.4, 0.65, 6, 0.16], [hw * 0.15, 0.9, 5, 0.14]] as [number, number, number, number][])
+                    .forEach(([dx, rwm, rh, a]) => {
+                        const lx = (((cx + dx) / w) * 100).toFixed(2);
+                        layers.push(`radial-gradient(ellipse ${Math.max(hw * rwm, 2).toFixed(1)}px ${rh}px at ${lx}% 100%, rgba(255,255,255,${a}), transparent)`);
+                    });
+            }
+            x += segW;
+        });
+        return layers.join(', ');
+    };
+    // Reset search instantly, then fly the old text down with blur + a glow streak.
+    const dissolveClear = (el: HTMLInputElement) => {
+        const val = el.value;
+        el.value = '';
+        toggleClear(el);
+        dispatch('');
+        const wrap = el.closest('.t-clear') as HTMLElement | null;
+        const mirror = wrap?.querySelector('.t-clear-mirror') as HTMLElement | null;
+        const glow = wrap?.querySelector('.t-clear-glow') as HTMLElement | null;
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce || !mirror || !val) return;
+        mirror.textContent = val.replace(/ /g, '\u00a0');
+        if (glow) glow.style.background = buildGlow(el, val);
+        const dur = numVar('--clear-out-dur', 400);
+        const fly = numVar('--clear-out-fly', 12);
+        const blur = numVar('--clear-blur', 2);
+        const gOp = numVar('--glow-opacity', 0.42);
+        const ease = bezier(getComputedStyle(document.documentElement).getPropertyValue('--clear-out-ease'));
+        const start = performance.now();
+        const step = (now: number) => {
+            const t = Math.min(1, (now - start) / dur);
+            const e = ease(t);
+            mirror.style.opacity = String(1 - e);
+            mirror.style.transform = `translateY(${fly * e}px)`;
+            mirror.style.filter = `blur(${blur * e}px)`;
+            if (glow) glow.style.opacity = String(Math.sin(Math.min(1, t / 0.9) * Math.PI) * gOp);
+            if (t < 1) requestAnimationFrame(step);
+            else {
+                mirror.textContent = '';
+                mirror.removeAttribute('style');
+                if (glow) { glow.style.opacity = '0'; glow.style.background = ''; }
+            }
+        };
+        requestAnimationFrame(step);
+    };
+
+    // Re-sync the field from the URL on each navigation; bind input listeners once.
+    const bind = () => {
+        const el = input();
+        if (!el) return;
+        el.value = readUrl();
+        toggleClear(el);
+        if ((el as any).__searchBound) return;
+        (el as any).__searchBound = true;
+
+        el.addEventListener('input', () => {
+            toggleClear(el);
+            clearTimeout(debounce);
+            const value = el.value;
+            debounce = setTimeout(() => dispatch(value), 300);
+        });
+
+        clearBtn()?.addEventListener('click', () => {
+            dissolveClear(el);
+            el.focus();
+        });
+    };
+
+    if (!(window as any).__searchGlobalBound) {
+        (window as any).__searchGlobalBound = true;
+
+        window.addEventListener('keydown', (e) => {
+            const el = input();
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                el?.focus();
+            } else if (e.key === 'Escape' && el && document.activeElement === el) {
+                el.blur();
+                if (el.value) dissolveClear(el);
+            }
+        });
+
+        window.addEventListener('popstate', bind);
+
+        // Registered once (module runs once); fires on initial load + every
+        // view transition. `bind()` immediately covers a missed initial event.
+        document.addEventListener('astro:page-load', bind);
+        bind();
+    }
+</script>

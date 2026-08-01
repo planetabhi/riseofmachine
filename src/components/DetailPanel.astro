@@ -1,0 +1,721 @@
+---
+import './BookmarkButton.css';
+
+// Inline (non-modal) tool detail panel: slides in as a flex sibling, pushing the
+// content column left. Populated from the clicked card's data-* (zero fetch).
+// Opening updates the URL to /tools/{slug} (Back closes).
+---
+
+<aside class="detail-panel" id="detail-panel" aria-label="Tool details" aria-hidden="true" inert>
+    <div class="detail-panel-inner">
+        <div class="detail-head">
+            <img class="detail-favicon" id="detail-favicon" width="40" height="40" alt="" />
+            <div class="detail-head-actions">
+                <button
+                    type="button"
+                    id="detail-bookmark"
+                    class="bookmark-btn bookmark-btn--small t-like"
+                    data-bookmark
+                    aria-label="Save tool"
+                >
+                    <span class="t-like-icon">
+                        <svg class="t-like-heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M15 19L9.80769 17.0435L5 19V1H15V19Z" stroke="currentColor" stroke-miterlimit="10" />
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" class="detail-close" id="detail-close" aria-label="Close panel">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <h2 class="detail-title nu-c-h5 nu-u-text--primary" id="detail-title"></h2>
+        <div class="detail-meta">
+            <a class="detail-category" id="detail-category"></a>
+            <span class="detail-sep" aria-hidden="true">·</span>
+            <span class="detail-added" id="detail-added"></span>
+        </div>
+
+        <div class="detail-actions">
+            <a class="detail-action detail-action--primary t-learn" id="detail-visit" target="_blank" rel="noopener noreferrer">
+                Visit site
+                <span class="t-learn-chevron" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                        <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" />
+                        <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <section class="detail-section">
+            <p class="detail-label">About</p>
+            <p class="detail-body nu-u-text--secondary" id="detail-body"></p>
+        </section>
+
+        <div class="detail-snapshot">
+            <article class="detail-fact">
+                <p class="detail-label">Pricing</p>
+                <p class="detail-value" id="detail-tag"></p>
+            </article>
+            <article class="detail-fact">
+                <p class="detail-label">Official site</p>
+                <a class="detail-value detail-link" id="detail-site" target="_blank" rel="noopener noreferrer"></a>
+            </article>
+        </div>
+
+        <section class="detail-section detail-similar" id="detail-similar" hidden>
+            <p class="detail-label">Similar tools</p>
+            <div class="detail-similar-list" id="detail-similar-list"></div>
+        </section>
+    </div>
+</aside>
+
+<style>
+    /* Floating inset surface (like .app-content); width animates 0 -> open,
+       pushing content. The fixed-width inner prevents reflow during animation. */
+    .detail-panel {
+        flex-shrink: 0;
+        width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: var(--background-high-contrast);
+        /* Card resize (#1): the container tweens its width on the is-open state. */
+        transition: width var(--resize-dur) var(--resize-ease);
+        will-change: width;
+    }
+
+    .detail-panel.is-open {
+        width: 33vw;
+        margin: var(--spacing-03) var(--spacing-03) var(--spacing-03) 0;
+        border: 0.5px solid var(--border-muted);
+        border-radius: var(--spacing-06);
+    }
+
+    .detail-panel-inner {
+        width: 33vw;
+        box-sizing: border-box;
+        height: 100%;
+        overflow-y: auto;
+        padding: var(--spacing-08) var(--spacing-06);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-05);
+    }
+
+    .detail-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .detail-head-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-01);
+    }
+
+    .detail-favicon {
+        border-radius: var(--spacing-02);
+    }
+
+    .detail-panel .bookmark-btn {
+        position: static;
+        color: var(--content-secondary);
+    }
+
+    .detail-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--spacing-08);
+        height: var(--spacing-08);
+        padding: var(--spacing-01);
+        border: none;
+        border-radius: var(--spacing-02);
+        background: none;
+        color: var(--content-secondary);
+        cursor: var(--c-pointer);
+    }
+
+    .detail-close:hover {
+        background-color: var(--background-hover);
+        color: var(--content-primary);
+    }
+
+    .detail-close:focus-visible {
+        outline: 1px solid var(--button-primary);
+        outline-offset: -1px;
+    }
+
+    .detail-title {
+        margin: 0;
+    }
+
+    .detail-meta {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-02);
+        flex-wrap: wrap;
+        color: var(--content-secondary);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+    }
+
+    .detail-category {
+        color: var(--content-secondary);
+        text-decoration: none;
+    }
+
+    .detail-category:hover {
+        color: var(--accent);
+    }
+
+    .detail-sep {
+        color: var(--content-secondary-alt);
+    }
+
+    .detail-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-02);
+    }
+
+    .detail-label {
+        margin: 0;
+        color: var(--content-secondary-alt);
+        font-family: var(--monospace);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .detail-body {
+        margin: 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+    }
+
+    .detail-snapshot {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-04);
+    }
+
+    .detail-fact {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-01);
+        padding-bottom: var(--spacing-04);
+        box-shadow: inset 0 -0.5px 0 var(--background-secondary);
+    }
+
+    .detail-value {
+        margin: 0;
+        color: var(--content-secondary);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+        word-break: break-word;
+    }
+
+    .detail-link {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .detail-link:hover {
+        text-decoration: underline;
+    }
+
+    .detail-actions {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-03);
+    }
+
+    .detail-action {
+        padding: var(--spacing-03) var(--spacing-05);
+        border: 0.5px solid var(--border-muted);
+        border-radius: var(--spacing-05);
+        text-align: center;
+        text-decoration: none;
+        color: var(--content-secondary);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+    }
+
+    .detail-action:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    .detail-action:focus-visible {
+        outline: 1px solid var(--button-primary);
+        outline-offset: 2px;
+    }
+
+    .detail-similar {
+        margin-top: var(--spacing-02);
+    }
+
+    .detail-similar-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-01);
+    }
+
+    /* Similar items are created in JS, so they miss Astro's scope attribute. */
+    :global(.detail-similar-item) {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-02);
+        padding: var(--spacing-02) var(--spacing-03);
+        border-radius: var(--spacing-02);
+        text-decoration: none;
+        color: var(--content-secondary);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+    }
+
+    :global(.detail-similar-item:hover) {
+        background-color: var(--background-hover);
+        color: var(--content-primary);
+    }
+
+    :global(.detail-similar-item img) {
+        flex-shrink: 0;
+        border-radius: var(--spacing-01);
+    }
+
+    :global(.detail-similar-item span) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Mobile: overlay full-width (pushing isn't practical on a phone). */
+    @media (max-width: 48rem) {
+        .detail-panel {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            z-index: 200;
+        }
+
+        .detail-panel.is-open {
+            width: 100%;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .detail-panel-inner {
+            width: 100vw;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .detail-panel {
+            transition: none;
+        }
+    }
+</style>
+
+<script>
+    import { isBookmarked } from '../utils/bookmarks';
+    import { navigate } from 'astro:transitions/client';
+    import { seededShuffle } from '../utils/sorting';
+
+    type Rec = { s: string; t: string; g: string; c: string; b: string; u: string; d: string };
+    // Must match the Featured seed in src/pages/index.astro so fill-ins line up.
+    const FEATURED_SEED = 20260801;
+
+    // Card link interception runs in the capture phase so preventDefault +
+    // stopPropagation block Astro's ClientRouter (bubble-phase) click handler.
+    // Opening updates the URL to /tools/{slug} (Back closes).
+    let lastFocus: HTMLElement | null = null;
+    let pushed = false;
+    let openCategory = '';
+    // The listing URL the panel was opened from, restored in place on close.
+    let originUrl = '';
+
+    // Fuller descriptions live in the search index (key `x`); load once and cache.
+    let descMap: Record<string, string> | null = null;
+    let descPromise: Promise<Record<string, string>> | null = null;
+    let currentSlug = '';
+
+    function ensureDescMap(): Promise<Record<string, string>> {
+        if (descMap) return Promise.resolve(descMap);
+        if (!descPromise) {
+            descPromise = fetch('/tool-descriptions.json')
+                .then((r) => r.json())
+                .then((m: Record<string, string>) => (descMap = m))
+                .catch(() => (descMap = {}));
+        }
+        return descPromise;
+    }
+
+    const panelEl = () => document.getElementById('detail-panel');
+    const isOpen = () => !!panelEl()?.classList.contains('is-open');
+
+    const dateFmt = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+
+    const setText = (id: string, value: string) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    };
+
+    const domainOf = (url: string) => {
+        try {
+            return new URL(url).hostname.replace('www.', '');
+        } catch {
+            return '';
+        }
+    };
+
+    // Full dataset (for similarity scoring), loaded once and cached.
+    let indexRecs: Rec[] | null = null;
+    let indexPromise: Promise<Rec[]> | null = null;
+    function ensureIndex(): Promise<Rec[]> {
+        if (indexRecs) return Promise.resolve(indexRecs);
+        if (!indexPromise) {
+            indexPromise = fetch('/search-index.json')
+                .then((r) => r.json())
+                .then((d: Rec[]) => (indexRecs = d))
+                .catch(() => (indexRecs = []));
+        }
+        return indexPromise;
+    }
+
+    // Category slug -> title, read from the sidebar (zero extra fetch).
+    let catTitles: Record<string, string> = {};
+    function buildCatMap() {
+        catTitles = {};
+        document.querySelectorAll<HTMLAnchorElement>('#app-sidebar .sidebar-nav a').forEach((a) => {
+            try {
+                const slug = new URL(a.href).pathname.replace(/^\//, '').replace(/\/$/, '');
+                const label = a.querySelector('.sidebar-item-label')?.textContent?.trim();
+                if (slug && label) catTitles[slug] = label;
+            } catch {}
+        });
+    }
+
+    const STOP = new Set(['the','a','an','and','or','for','to','of','with','your','you','ai','app','tool','tools','online','free','best','create','generate','make','using','use','from','on','in','by','into','it','is','are','that','this','all','platform','powered','based','simple','easy','get','more','new']);
+    function tokenize(s: string): Set<string> {
+        const set = new Set<string>();
+        for (const w of (s || '').toLowerCase().split(/[^a-z0-9]+/)) {
+            if (w.length >= 3 && !STOP.has(w)) set.add(w);
+        }
+        return set;
+    }
+    function overlap(a: Set<string>, b: Set<string>): number {
+        let n = 0;
+        for (const w of a) if (b.has(w)) n += 1;
+        return n;
+    }
+
+    // Score by shared category (+3), tag/pricing (+2), and title/body keyword
+    // overlap; always return 4, filling any gaps from the Featured pool.
+    function pickSimilar(cur: Rec, recs: Rec[]): Rec[] {
+        const curTok = tokenize(`${cur.t} ${cur.b}`);
+        const scored: { r: Rec; score: number }[] = [];
+        for (const r of recs) {
+            if (r.s === cur.s) continue;
+            let score = 0;
+            if (r.c === cur.c) score += 3;
+            if (r.g && r.g === cur.g) score += 2;
+            score += overlap(curTok, tokenize(`${r.t} ${r.b}`));
+            if (score > 0) scored.push({ r, score });
+        }
+        scored.sort((a, b) => b.score - a.score || a.r.t.localeCompare(b.r.t));
+        const picks = scored.slice(0, 4).map((x) => x.r);
+        if (picks.length < 4) {
+            const have = new Set(picks.map((p) => p.s));
+            have.add(cur.s);
+            for (const r of seededShuffle(recs, FEATURED_SEED)) {
+                if (picks.length >= 4) break;
+                if (!have.has(r.s)) { picks.push(r); have.add(r.s); }
+            }
+        }
+        return picks.slice(0, 4);
+    }
+
+    function renderSimilarItems(items: Rec[]) {
+        const section = document.getElementById('detail-similar');
+        const list = document.getElementById('detail-similar-list');
+        if (!section || !list) return;
+        list.replaceChildren();
+        if (!items.length) { section.hidden = true; return; }
+        section.hidden = false;
+        items.forEach((r) => {
+            const item = document.createElement('a');
+            item.className = 'detail-similar-item';
+            item.href = `/tools/${r.s}`;
+            item.setAttribute('data-tool-link', '');
+            item.dataset.title = r.t;
+            item.dataset.body = r.b;
+            item.dataset.tag = r.g;
+            item.dataset.date = r.d;
+            item.dataset.url = r.u;
+            item.dataset.slug = r.s;
+            item.dataset.category = r.c;
+            item.dataset.categoryTitle = catTitles[r.c] ?? r.c;
+            const img = document.createElement('img');
+            img.width = 24;
+            img.height = 24;
+            img.alt = '';
+            img.loading = 'lazy';
+            img.onerror = () => { img.style.display = 'none'; };
+            img.src = `/favicons/${r.s}.png`;
+            const span = document.createElement('span');
+            span.textContent = r.t;
+            item.append(img, span);
+            list.appendChild(item);
+        });
+    }
+
+    // Instant same-category picks from the DOM (may be < 4) while the full index loads.
+    function domSimilar(link: HTMLAnchorElement): Rec[] {
+        const cat = link.dataset.category;
+        if (!cat) return [];
+        return Array.from(
+            document.querySelectorAll<HTMLAnchorElement>(
+                `.link-card[data-category="${CSS.escape(cat)}"] a[data-tool-link]`,
+            ),
+        )
+            .filter((a) => a.dataset.slug && a.dataset.slug !== link.dataset.slug)
+            .slice(0, 4)
+            .map((a) => ({
+                s: a.dataset.slug!,
+                t: a.dataset.title ?? '',
+                b: a.dataset.body ?? '',
+                g: a.dataset.tag ?? '',
+                c: a.dataset.category ?? cat,
+                u: a.dataset.url ?? '',
+                d: a.dataset.date ?? '',
+            }));
+    }
+
+    function buildSimilar(link: HTMLAnchorElement) {
+        if (!Object.keys(catTitles).length) buildCatMap();
+        const slug = link.dataset.slug ?? '';
+        // Instant fallback from the DOM, then upgrade to scored matches.
+        renderSimilarItems(domSimilar(link));
+        void ensureIndex().then((recs) => {
+            if (currentSlug !== slug || !recs.length) return;
+            const cur = recs.find((r) => r.s === slug) ?? {
+                s: slug,
+                t: link.dataset.title ?? '',
+                b: link.dataset.body ?? '',
+                g: link.dataset.tag ?? '',
+                c: link.dataset.category ?? '',
+                u: link.dataset.url ?? '',
+                d: link.dataset.date ?? '',
+            };
+            renderSimilarItems(pickSimilar(cur, recs));
+        });
+    }
+
+    function populate(link: HTMLAnchorElement) {
+        const d = link.dataset;
+        setText('detail-title', d.title ?? '');
+        setText('detail-body', d.body ?? '');
+        setText('detail-tag', d.tag || 'Not provided');
+
+        // Swap in the fuller fetched description when available (instant if cached).
+        currentSlug = d.slug ?? '';
+        if (d.slug) {
+            const slug = d.slug;
+            if (descMap?.[slug]) {
+                setText('detail-body', descMap[slug]);
+            } else {
+                void ensureDescMap().then((m) => {
+                    if (currentSlug === slug && m[slug]) setText('detail-body', m[slug]);
+                });
+            }
+        }
+
+        const cat = document.getElementById('detail-category') as HTMLAnchorElement | null;
+        if (cat) {
+            cat.textContent = d.categoryTitle ?? '';
+            cat.hidden = !d.categoryTitle;
+            if (d.category) cat.href = `/${d.category}`;
+            else cat.removeAttribute('href');
+        }
+
+        const added = document.getElementById('detail-added');
+        const parsed = d.date ? new Date(d.date) : null;
+        const dateOk = parsed && !Number.isNaN(parsed.getTime());
+        if (added) added.textContent = dateOk ? `Added ${dateFmt.format(parsed as Date)}` : '';
+
+        const site = document.getElementById('detail-site') as HTMLAnchorElement | null;
+        if (site) {
+            const dom = domainOf(d.url ?? '');
+            site.textContent = dom || 'Not provided';
+            if (d.url) site.href = d.url;
+            else site.removeAttribute('href');
+            site.classList.toggle('detail-link', !!d.url);
+        }
+
+        const visit = document.getElementById('detail-visit') as HTMLAnchorElement | null;
+        if (visit) visit.href = d.url ?? link.href;
+
+        // Bookmark (toggle handled by the grid's delegated listener).
+        const bm = document.getElementById('detail-bookmark');
+        if (bm && d.slug) {
+            bm.dataset.slug = d.slug;
+            bm.dataset.title = d.title ?? '';
+            const on = isBookmarked(d.slug);
+            bm.classList.toggle('bookmarked', on);
+            const label = on ? `Remove ${d.title ?? ''} from saved list` : `Add ${d.title ?? ''} to saved list`;
+            bm.setAttribute('aria-label', label);
+        }
+
+        const fav = document.getElementById('detail-favicon') as HTMLImageElement | null;
+        if (fav) {
+            if (d.slug) {
+                fav.onerror = () => { fav.style.visibility = 'hidden'; };
+                fav.style.visibility = 'visible';
+                fav.src = `/favicons/${d.slug}.png`;
+            } else {
+                fav.style.visibility = 'hidden';
+            }
+        }
+
+        buildSimilar(link);
+    }
+
+    function showPanel(link: HTMLAnchorElement, opts: { push: boolean; focus: boolean }) {
+        const panel = panelEl();
+        if (!panel) return;
+        const switching = isOpen();
+        if (!switching) lastFocus = document.activeElement as HTMLElement;
+        populate(link);
+        openCategory = link.dataset.category ?? '';
+        panel.classList.add('is-open');
+        panel.removeAttribute('inert');
+        panel.setAttribute('aria-hidden', 'false');
+        panel.querySelector('.detail-panel-inner')?.scrollTo(0, 0);
+        // Page side-by-side (#8): swapping tools while open slides the new content in.
+        if (switching) {
+            const inner = panel.querySelector('.detail-panel-inner');
+            if (inner) {
+                inner.classList.remove('t-page-enter');
+                void (inner as HTMLElement).offsetWidth;
+                inner.classList.add('t-page-enter');
+            }
+        }
+        if (opts.focus) document.getElementById('detail-close')?.focus();
+        if (opts.push) {
+            const href = link.getAttribute('href') ?? undefined;
+            try {
+                // First open pushes a history entry (Back closes); switching tools
+                // while open replaces it so Back returns straight to the list.
+                if (pushed) history.replaceState({ romPanel: true }, '', href);
+                else { history.pushState({ romPanel: true }, '', href); pushed = true; }
+            } catch { /* history unavailable */ }
+        }
+    }
+
+    function openPanel(link: HTMLAnchorElement) {
+        if (!isOpen()) originUrl = location.pathname + location.search;
+        showPanel(link, { push: true, focus: true });
+    }
+
+    function hidePanel() {
+        const panel = panelEl();
+        if (!panel) return;
+        panel.classList.remove('is-open');
+        panel.setAttribute('aria-hidden', 'true');
+        panel.setAttribute('inert', '');
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    }
+
+    function requestClose() {
+        if (pushed) {
+            pushed = false;
+            hidePanel();
+            // Restore the listing URL in place (no ClientRouter navigation) so the
+            // close animation stays smooth instead of jerking on a page transition.
+            try {
+                history.replaceState(null, '', originUrl || (openCategory ? `/${openCategory}` : '/'));
+            } catch { /* history unavailable */ }
+        } else if (/^\/tools\//.test(location.pathname) && openCategory) {
+            // Direct-loaded tool page: closing returns to the category listing.
+            navigate(`/${openCategory}`);
+        } else {
+            hidePanel();
+        }
+    }
+
+    if (!(window as any).__detailPanelBound) {
+        (window as any).__detailPanelBound = true;
+
+        document.addEventListener(
+            'click',
+            (e) => {
+                const target = e.target as HTMLElement;
+                if (target.closest('#detail-close')) {
+                    e.preventDefault();
+                    requestClose();
+                    return;
+                }
+                // Let the grid's delegated bookmark handler process this click.
+                if (target.closest('#detail-bookmark')) return;
+
+                const link = target.closest<HTMLAnchorElement>('a[data-tool-link]');
+                if (!link) return;
+                if (e.defaultPrevented) return;
+                const me = e as MouseEvent;
+                if (me.button !== 0 || me.metaKey || me.ctrlKey || me.shiftKey || me.altKey) return;
+                e.preventDefault();
+                e.stopPropagation();
+                openPanel(link);
+            },
+            true,
+        );
+
+        // Sync the panel to the popped URL (same-document history nav doesn't
+        // fire astro:page-load): reopen for /tools/{slug}, close otherwise.
+        window.addEventListener('popstate', () => {
+            pushed = false;
+            const m = location.pathname.match(/^\/tools\/([^/]+)\/?$/);
+            if (m && m[1]) {
+                const slug = decodeURIComponent(m[1]);
+                const card = document.querySelector<HTMLAnchorElement>(
+                    `a[data-tool-link][data-slug="${CSS.escape(slug)}"]`,
+                );
+                if (card) { showPanel(card, { push: false, focus: false }); return; }
+            }
+            if (isOpen()) hidePanel();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isOpen()) requestClose();
+        });
+
+        // On a /tools/{slug} load, open the panel over the listing for that tool;
+        // otherwise ensure it's closed. (Panel markup persists in the layout.)
+        document.addEventListener('astro:page-load', () => {
+            pushed = false;
+            const m = location.pathname.match(/^\/tools\/([^/]+)\/?$/);
+            if (m && m[1]) {
+                const slug = decodeURIComponent(m[1]);
+                const card = document.querySelector<HTMLAnchorElement>(
+                    `a[data-tool-link][data-slug="${CSS.escape(slug)}"]`,
+                );
+                if (card) { showPanel(card, { push: false, focus: false }); return; }
+            }
+            if (isOpen()) hidePanel();
+        });
+    }
+</script>

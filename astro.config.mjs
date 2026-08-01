@@ -6,12 +6,12 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: 'https://riseofmachine.com',
-  // Prefetch page HTML on hover/focus so view-transition navigations feel
-  // instant in production (no cold round-trip on click). Deduped + cached by
-  // Astro; `hover` only fetches links the user actually points at.
+  // Sidebar tabs are eagerly prefetched (they're always in the viewport), so
+  // navigating between category pages is instant. Card links aren't prefetched
+  // because clicking a card opens the inline detail panel with no navigation.
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: 'hover',
+    prefetchAll: false,
+    defaultStrategy: 'viewport',
   },
   integrations: [react(), partytown(
     {

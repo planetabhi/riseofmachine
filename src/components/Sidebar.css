@@ -1,0 +1,228 @@
+.app-sidebar {
+    width: 16vw;
+    flex-shrink: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    background-color: var(--background);
+}
+
+.sidebar-scroll {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: var(--spacing-05) var(--spacing-04);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-05);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-resizer {
+    flex-shrink: 0;
+    width: var(--spacing-02);
+    cursor: col-resize;
+    background-color: transparent;
+    transition: background-color var(--duration-fast) var(--ease-smooth-out);
+    touch-action: none;
+}
+
+.sidebar-resizer:hover,
+.sidebar-resizer:focus-visible {
+    background-color: var(--border-muted);
+    outline: none;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-03);
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-04);
+    text-decoration: none;
+    color: var(--content-primary);
+    min-width: 0;
+}
+
+.sidebar-logo img {
+    border-radius: var(--spacing-03);
+    flex-shrink: 0;
+}
+
+.sidebar-brand {
+    font-family: var(--body-strong);
+    font-size: var(--desktop-body-sm);
+    line-height: var(--lh-desktop-body-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-01);
+}
+
+/* Sliding active pill: JS writes translateY + height so it tweens between tabs. */
+.sidebar-nav-pill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0;
+    border-radius: var(--spacing-02);
+    background-color: var(--background-selected);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform, height;
+    transition:
+        transform var(--tabs-dur) var(--tabs-ease),
+        height var(--tabs-dur) var(--tabs-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar-nav-pill {
+        transition: none;
+    }
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-01);
+    padding-top: var(--spacing-04);
+    box-shadow: inset 0 0.5px 0 var(--background-secondary);
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-02);
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--spacing-02) var(--spacing-03);
+    border: none;
+    border-radius: var(--spacing-02);
+    background: none;
+    text-align: left;
+    text-decoration: none;
+    color: var(--content-secondary);
+    font-family: var(--body-copy);
+    font-size: var(--desktop-body-sm);
+    line-height: var(--lh-desktop-body-sm);
+    cursor: var(--c-pointer);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.sidebar-nav .sidebar-item {
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-item:hover {
+    background-color: var(--background-hover);
+    color: var(--content-primary);
+}
+
+.sidebar-item.is-active {
+    color: var(--content-primary);
+}
+
+/* Category items get their active background from the sliding pill instead. */
+.sidebar-nav .sidebar-item.is-active {
+    background-color: transparent;
+}
+
+.sidebar-footer .sidebar-item.is-active {
+    background-color: var(--background-selected);
+}
+
+.sidebar-item:focus-visible {
+    outline: 1px solid var(--button-primary);
+    outline-offset: -1px;
+}
+
+.sidebar-item-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sidebar-count {
+    flex-shrink: 0;
+    color: var(--content-secondary-alt);
+    font-family: var(--monospace);
+    font-size: var(--desktop-caption);
+    line-height: var(--lh-desktop-caption);
+    font-variant-numeric: tabular-nums;
+}
+
+.sidebar-toggle-item[aria-pressed='true'] {
+    color: var(--accent);
+}
+
+.sidebar-toggle-item[aria-pressed='true'] .sidebar-item-label::after {
+    content: ' ●';
+    color: var(--accent);
+}
+
+.sidebar-legal {
+    margin: var(--spacing-04) 0 0;
+    padding: 0 var(--spacing-03);
+    color: var(--content-secondary-alt);
+    font-family: var(--monospace);
+    font-size: var(--desktop-caption);
+    line-height: var(--lh-desktop-caption);
+}
+
+.sidebar-legal a {
+    color: var(--content-secondary);
+    text-decoration: none;
+}
+
+.sidebar-legal a:hover {
+    color: var(--accent);
+}
+
+/* Mobile: sidebar becomes an off-canvas drawer toggled by the hamburger. */
+@media (max-width: 48rem) {
+    .app-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: var(--spacing-18) !important;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform var(--duration-medium) var(--ease-smooth-out);
+    }
+
+    body.sidebar-open .app-sidebar {
+        transform: translateX(0);
+    }
+
+    .sidebar-resizer {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .app-sidebar {
+        transition: none;
+    }
+}

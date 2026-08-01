@@ -1,0 +1,292 @@
+---
+import './Sidebar.css';
+import categoryIndex from '../data/category-index.json';
+
+const cats = Object.entries(
+    categoryIndex as Record<string, { title: string; count: number }>,
+);
+const totalCount = cats.reduce((acc, [, meta]) => acc + meta.count, 0);
+
+const normalize = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
+const current = normalize(Astro.url.pathname);
+
+// Latest applies to category listing routes; the homepage has its own Latest
+// section, so exclude '/'. A script keeps this in sync after nav (sidebar persists).
+const listingPaths = new Set(cats.map(([c]) => `/${c}`));
+const showLatest = listingPaths.has(current);
+---
+
+<aside id="app-sidebar" class="app-sidebar" aria-label="Primary" transition:persist>
+    <div class="sidebar-scroll">
+        <div class="sidebar-header">
+            <a href="/" class="sidebar-logo" aria-label="home page">
+                <img src="/rise-of-machine.svg" width="28" height="28" alt="Rise of Machine" />
+                <span class="sidebar-brand">Rise of Machine</span>
+            </a>
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                aria-label="Toggle dark theme"
+                aria-pressed="false"
+            >
+                <span class="theme-emoji" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Categories">
+            <span class="sidebar-nav-pill" aria-hidden="true"></span>
+            <a href="/" data-astro-prefetch class:list={['sidebar-item', { 'is-active': current === '/' }]}>
+                <span class="sidebar-item-label">Home</span>
+                <span class="sidebar-count" data-count={totalCount}>{totalCount}</span>
+            </a>
+            {cats.map(([category, meta]) => (
+                <a
+                    href={`/${category}`}
+                    data-astro-prefetch
+                    class:list={['sidebar-item', { 'is-active': current === `/${category}` }]}
+                >
+                    <span class="sidebar-item-label">{meta.title}</span>
+                    <span class="sidebar-count" data-count={meta.count}>{meta.count}</span>
+                </a>
+            ))}
+        </nav>
+
+        <div class="sidebar-footer">
+            <button
+                class="sidebar-item sidebar-toggle-item"
+                id="new-filter-toggle"
+                aria-label="Filter recently added tools"
+                aria-pressed="false"
+                style={showLatest ? undefined : 'display: none;'}
+            >
+                <span class="sidebar-item-label">Latest</span>
+            </button>
+            <a
+                href="/saved"
+                id="favoritesLink"
+                data-astro-prefetch
+                class:list={['sidebar-item', { 'is-active': current === '/saved' }]}
+            >
+                <span class="sidebar-item-label">Saved tools</span>
+                <span class="sidebar-count" id="favoritesCount"></span>
+            </a>
+            <a
+                href="https://github.com/planetabhi/riseofmachine/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sidebar-item t-learn"
+            >
+                <span class="sidebar-item-label">Submit</span>
+                <span class="t-learn-chevron" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                        <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" />
+                        <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" />
+                    </svg>
+                </span>
+            </a>
+
+            <p class="sidebar-legal">
+                ABHIMANYU RANA 2026 ©<br />
+                <a
+                    href="https://x.com/planetabhi"
+                    target="_blank"
+                    rel="noopener noreferrer">@planetabhi</a
+                >
+                <span aria-hidden="true">·</span>
+                <a href="/privacy">Privacy</a>
+                <span aria-hidden="true">·</span>
+                <a href="/terms">Terms</a>
+            </p>
+        </div>
+    </div>
+    <div
+        id="sidebar-resizer"
+        class="sidebar-resizer"
+        role="separator"
+        aria-orientation="vertical"
+        aria-label="Resize sidebar"
+        tabindex="0"
+    ></div>
+</aside>
+
+<script is:inline>
+    // Apply the saved width before first paint to avoid a resize flash.
+    (function () {
+        try {
+            var w = parseInt(localStorage.getItem("rom_sidebar_width") || "", 10);
+            var el = document.getElementById("app-sidebar");
+            if (w && el) el.style.width = w + "px";
+        } catch (e) {}
+    })();
+</script>
+
+<script>
+    const KEY = 'rom_sidebar_width';
+    const normalize = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
+
+    // Measure a spacing token in px (no hardcoded pixel bounds).
+    function tokenPx(name: string): number {
+        const probe = document.createElement('div');
+        probe.style.cssText = `position:absolute;visibility:hidden;width:var(${name})`;
+        document.body.appendChild(probe);
+        const w = probe.getBoundingClientRect().width;
+        probe.remove();
+        return w;
+    }
+
+    let MIN = 0;
+    let STEP = 0;
+    // Max resize width is viewport-relative (24vw); min/step from spacing tokens.
+    const maxW = () => Math.round(window.innerWidth * 0.24);
+    const clamp = (v: number) => Math.min(maxW(), Math.max(MIN, v));
+
+    function measure() {
+        MIN = tokenPx('--spacing-16'); // 96px min
+        STEP = tokenPx('--spacing-04'); // 8px keyboard step
+    }
+
+    function setWidth(aside: HTMLElement, rz: HTMLElement, w: number) {
+        const c = Math.round(clamp(w));
+        aside.style.width = `${c}px`;
+        rz.setAttribute('aria-valuenow', String(c));
+    }
+
+    function initResizer() {
+        const aside = document.getElementById('app-sidebar');
+        const rz = document.getElementById('sidebar-resizer');
+        if (!aside || !rz) return;
+        if (!MIN) measure();
+
+        rz.setAttribute('aria-valuemin', String(Math.round(MIN)));
+        rz.setAttribute('aria-valuemax', String(maxW()));
+        // Clamp any restored width to the current viewport-based bounds.
+        const cur = aside.getBoundingClientRect().width;
+        const clamped = Math.round(clamp(cur));
+        if (clamped !== Math.round(cur)) aside.style.width = `${clamped}px`;
+        rz.setAttribute('aria-valuenow', String(Math.round(aside.getBoundingClientRect().width)));
+
+        if ((rz as any).__bound) return;
+        (rz as any).__bound = true;
+
+        const commit = () => {
+            try {
+                localStorage.setItem(KEY, String(Math.round(aside.getBoundingClientRect().width)));
+            } catch {}
+        };
+
+        rz.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
+            rz.setPointerCapture(e.pointerId);
+            const startX = e.clientX;
+            const startW = aside.getBoundingClientRect().width;
+            const move = (ev: PointerEvent) => setWidth(aside, rz, startW + (ev.clientX - startX));
+            // pointercancel (touch interruption, context menu, lost pointer) must
+            // tear down the drag too, else pointermove keeps resizing.
+            const end = () => {
+                try { rz.releasePointerCapture(e.pointerId); } catch {}
+                rz.removeEventListener('pointermove', move);
+                rz.removeEventListener('pointerup', end);
+                rz.removeEventListener('pointercancel', end);
+                commit();
+            };
+            rz.addEventListener('pointermove', move);
+            rz.addEventListener('pointerup', end);
+            rz.addEventListener('pointercancel', end);
+        });
+
+        rz.addEventListener('keydown', (e) => {
+            const w = aside.getBoundingClientRect().width;
+            if (e.key === 'ArrowLeft') setWidth(aside, rz, w - STEP);
+            else if (e.key === 'ArrowRight') setWidth(aside, rz, w + STEP);
+            else if (e.key === 'Home') setWidth(aside, rz, MIN);
+            else if (e.key === 'End') setWidth(aside, rz, maxW());
+            else return;
+            e.preventDefault();
+            commit();
+        });
+
+        rz.addEventListener('dblclick', () => {
+            aside.style.width = '';
+            try { localStorage.removeItem(KEY); } catch {}
+            rz.setAttribute('aria-valuenow', String(Math.round(aside.getBoundingClientRect().width)));
+        });
+    }
+
+    // The sidebar is persisted across view transitions, so sync the active item
+    // and the (route-dependent) Latest toggle on every navigation.
+    function syncActive() {
+        const nav = document.getElementById('app-sidebar');
+        if (!nav) return;
+        const path = normalize(location.pathname);
+        nav.querySelectorAll<HTMLAnchorElement>('a.sidebar-item').forEach((a) => {
+            const same =
+                a.href.startsWith(location.origin) &&
+                normalize(new URL(a.href).pathname) === path;
+            a.classList.toggle('is-active', same);
+        });
+        const navHrefs = new Set(
+            [...nav.querySelectorAll<HTMLAnchorElement>('.sidebar-nav a')].map((a) =>
+                normalize(new URL(a.href).pathname),
+            ),
+        );
+        const latest = document.getElementById('new-filter-toggle');
+        if (latest) latest.style.display = navHrefs.has(path) && path !== '/' ? '' : 'none';
+        moveNavPill();
+    }
+
+    // Slide the active pill to the active nav item and pop its count in.
+    function moveNavPill() {
+        const navEl = document.querySelector<HTMLElement>('.sidebar-nav');
+        const pill = document.querySelector<HTMLElement>('.sidebar-nav-pill');
+        if (!navEl || !pill) return;
+        const active = navEl.querySelector<HTMLElement>('a.sidebar-item.is-active');
+        if (!active) {
+            pill.style.opacity = '0';
+            return;
+        }
+        const ready = pill.dataset.ready === '1';
+        if (!ready) pill.style.transition = 'none';
+        pill.style.transform = `translateY(${active.offsetTop}px)`;
+        pill.style.height = `${active.offsetHeight}px`;
+        pill.style.opacity = '1';
+        if (!ready) {
+            void pill.offsetWidth;
+            pill.style.transition = '';
+            pill.dataset.ready = '1';
+        }
+        const count = active.querySelector<HTMLElement>('.sidebar-count');
+        if (count) countUp(count);
+    }
+
+    // Roll the count from 0 up to its target when the tab becomes active.
+    // Only the text changes (no transform), so nothing shifts in the layout.
+    function countUp(el: HTMLElement) {
+        const target = parseInt(el.dataset.count ?? el.textContent ?? '', 10);
+        if (!Number.isFinite(target)) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            el.textContent = String(target);
+            return;
+        }
+        const token = ((el as any).__countToken || 0) + 1;
+        (el as any).__countToken = token;
+        const dur = 600;
+        const start = performance.now();
+        const step = (now: number) => {
+            if ((el as any).__countToken !== token) return;
+            const t = Math.min(1, (now - start) / dur);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = String(Math.round(target * eased));
+            if (t < 1) requestAnimationFrame(step);
+            else el.textContent = String(target);
+        };
+        requestAnimationFrame(step);
+    }
+
+    if (!(window as any).__sidebarBound) {
+        (window as any).__sidebarBound = true;
+        document.addEventListener('astro:page-load', () => {
+            initResizer();
+            syncActive();
+        });
+    }
+</script>

@@ -1,0 +1,68 @@
+---
+import './Card.css';
+import './BookmarkButton.css';
+import { isRecentlyAdded } from '../utils/dates';
+import categoryIndex from '../data/category-index.json';
+
+interface Props {
+    title: string;
+    body: string;
+    tag?: string | undefined;
+    dateAdded?: string | undefined;
+    slug?: string | undefined;
+    url: string;
+    category?: string | undefined;
+}
+
+const { title, body, tag, dateAdded, slug, url, category } = Astro.props;
+const linkUrl = slug ? `/tools/${slug}` : url;
+const isNew = isRecentlyAdded(dateAdded, 30);
+const categoryTitle = category
+    ? (categoryIndex as Record<string, { title: string }>)[category]?.title ?? category
+    : '';
+---
+
+<li class="link-card" data-slug={slug} data-category={category} data-new={isNew ? 'true' : 'false'}>
+    <a
+        href={linkUrl}
+        data-tool-link
+        data-title={title}
+        data-body={body}
+        data-tag={tag}
+        data-date={dateAdded}
+        data-url={url}
+        data-slug={slug}
+        data-category={category}
+        data-category-title={categoryTitle}
+    >
+        <strong class="nu-c-fs-normal nu-u-mt-1 nu-u-mb-1">{title}</strong>
+        <p class="nu-c-helper-text nu-u-mt-1 nu-u-mb-1">{body}</p>
+        <p class="distribution">
+            {isNew && (
+                <span class="tag nu-u-me-2 tag-new t-badge" data-open="true" title="Recently added" aria-label="New item">
+                    <span class="t-badge-dot">🔥</span>
+                </span>
+            )}
+            {tag && <span class="tag">{tag}</span>}
+        </p>
+    </a>
+    {slug && (
+        <div class="card-bookmark">
+            <button
+                class="bookmark-btn bookmark-btn--small t-like"
+                type="button"
+                data-bookmark
+                data-slug={slug}
+                data-title={title}
+                aria-label={`Add ${title} to saved list`}
+                title={`Add ${title} to saved list`}
+            >
+                <span class="t-like-icon">
+                    <svg class="t-like-heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 19L9.80769 17.0435L5 19V1H15V19Z" stroke="currentColor" stroke-miterlimit="10" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    )}
+</li>

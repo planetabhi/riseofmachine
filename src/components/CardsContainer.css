@@ -5,6 +5,10 @@
   padding: var(--spacing-00);
 }
 
+.grid-sentinel {
+  height: var(--spacing-01);
+}
+
 .infinite-scroll-loader {
   display: flex;
   justify-content: center;
