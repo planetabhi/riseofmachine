@@ -29,10 +29,16 @@
     let revealed = PAGE;
     let io: IntersectionObserver | null = null;
 
-    const cards = () =>
-        Array.from(document.querySelectorAll<HTMLElement>('.link-card'));
+    // Scope everything to this page's tool grid so the persistent global
+    // listeners never touch the homepage's cards/sentinel after navigation.
+    const gridEl = () => document.querySelector<HTMLElement>('[data-tool-grid]');
+    const cards = () => {
+        const g = gridEl();
+        return g ? Array.from(g.querySelectorAll<HTMLElement>('.link-card')) : [];
+    };
 
     function recompute() {
+        if (!gridEl()) return;
         // The reveal cap only applies while plainly browsing — search and the
         // Latest filter show all their (already narrow) matches.
         const searching = matchSlugs !== null;
@@ -49,15 +55,15 @@
             card.style.display = show ? '' : 'none';
             if (show) visible += 1;
         }
-        const empty = document.querySelector<HTMLElement>('.grid-empty');
+        const empty = gridEl()?.querySelector<HTMLElement>('.grid-empty');
         if (empty) empty.hidden = visible !== 0;
-        const sentinel = document.querySelector<HTMLElement>('.grid-sentinel');
+        const sentinel = gridEl()?.querySelector<HTMLElement>('.grid-sentinel');
         if (sentinel) sentinel.hidden = !(capped && revealed < cards().length);
     }
 
     function setupObserver() {
         io?.disconnect();
-        const sentinel = document.querySelector('.grid-sentinel');
+        const sentinel = gridEl()?.querySelector('.grid-sentinel');
         if (!sentinel) return;
         io = new IntersectionObserver(
             (entries) => {
@@ -92,15 +98,21 @@
                     import('fuse.js'),
                     fetch('/search-index.json'),
                 ]);
+                if (!res.ok) throw new Error(`search-index ${res.status}`);
                 const records: SearchRecord[] = await res.json();
                 fuse = new Fuse(records, fuseOptions);
                 return fuse;
-            })();
+            })().catch(() => {
+                // Degrade gracefully: empty results now, allow a retry next search.
+                fusePromise = null;
+                return { search: () => [] as { item: SearchRecord }[] };
+            });
         }
         return fusePromise;
     }
 
     async function runSearch(q: string) {
+        if (!gridEl()) return;
         query = q;
         if (!q || q.length < 2) {
             matchSlugs = null;
@@ -127,6 +139,17 @@
         }
     }
 
+    // Per-navigation init (fires on first load and every view transition).
+    const init = () => {
+        if (!gridEl()) return;
+        query = '';
+        filterNew = false;
+        matchSlugs = null;
+        revealed = PAGE;
+        readUrlState();
+        setupObserver();
+    };
+
     // Global listeners attached once (survive view transitions).
     if (!(window as any).__gridEnhancerBound) {
         (window as any).__gridEnhancerBound = true;
@@ -143,16 +166,8 @@
                 recompute();
             }
         });
-    }
 
-    // Per-navigation init (fires on first load and every view transition).
-    const init = () => {
-        query = '';
-        filterNew = false;
-        matchSlugs = null;
-        revealed = PAGE;
-        readUrlState();
-        setupObserver();
-    };
-    document.addEventListener('astro:page-load', init);
+        document.addEventListener('astro:page-load', init);
+        init();
+    }
 </script>

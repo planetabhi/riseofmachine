@@ -5,6 +5,7 @@ import ToolGrid from "../../components/ToolGrid.astro";
 import GridEnhancer from "../../components/GridEnhancer.astro";
 import SoftwareApplicationSchema from "../../components/schema/SoftwareApplicationSchema.astro";
 import BreadcrumbSchema from "../../components/schema/BreadcrumbSchema.astro";
+import categoryIndex from "../../data/category-index.json";
 
 export async function getStaticPaths() {
   // Use slug-map for efficient path generation (no need to load full tools.json)
@@ -37,11 +38,14 @@ const tool = categoryData.default.find((x: any) => x.slug === slug) || null;
 if (!tool) return Astro.redirect("/404");
 
 const category = categoryName;
-const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
+const categoryTitle =
+  (categoryIndex as Record<string, { title: string }>)[category]?.title ?? category;
 // Render the tool's category as the backdrop; the panel opens over it for this tool.
 const categoryTools = categoryData.default.map((t: any) => ({ ...t, category }));
 
 const faviconUrl = `/favicons/${slug}.png`;
+// Social scrapers require an absolute URL for og:image / twitter:image.
+const socialImageUrl = `https://riseofmachine.com/favicons/${slug}.png`;
 const canonicalUrl = `https://riseofmachine.com/tools/${tool.slug}`;
 
 let meta: any = {};
@@ -70,13 +74,13 @@ const breadcrumbs = [
   ogTitle={seoTitle}
   ogDescription={seoDescription}
   ogUrl={canonicalUrl}
-  ogImage={faviconUrl}
+  ogImage={socialImageUrl}
   ogType="website"
   ogSiteName="Rise of Machine"
   twitterCard="summary"
   twitterTitle={seoTitle}
   twitterDescription={seoDescription}
-  twitterImage={faviconUrl}
+  twitterImage={socialImageUrl}
   pageFavicon={faviconUrl}
   showLatestFilter={false}
   showSearch={true}
@@ -92,6 +96,13 @@ const breadcrumbs = [
   />
   <BreadcrumbSchema items={breadcrumbs} />
   <main id="main-content">
+    <noscript>
+      <section class="tool-fallback">
+        <h2>{tool.title}</h2>
+        <p>{seoDescription}</p>
+        <a href={tool.url} target="_blank" rel="noopener noreferrer">Visit {tool.title} ↗</a>
+      </section>
+    </noscript>
     <ToolGrid tools={categoryTools} />
     <GridEnhancer />
   </main>

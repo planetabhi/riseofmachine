@@ -209,7 +209,10 @@ const { placeholder = 'Search by name, category, or feature...' } = Astro.props;
         });
 
         window.addEventListener('popstate', bind);
-    }
 
-    document.addEventListener('astro:page-load', bind);
+        // Registered once (module runs once); fires on initial load + every
+        // view transition. `bind()` immediately covers a missed initial event.
+        document.addEventListener('astro:page-load', bind);
+        bind();
+    }
 </script>

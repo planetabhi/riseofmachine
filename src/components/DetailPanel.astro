@@ -92,7 +92,7 @@ import './BookmarkButton.css';
         width: 33vw;
         margin: var(--spacing-03) var(--spacing-03) var(--spacing-03) 0;
         border: 0.5px solid var(--border-muted);
-        border-radius: var(--spacing-04);
+        border-radius: var(--spacing-06);
     }
 
     .detail-panel-inner {
@@ -549,6 +549,7 @@ import './BookmarkButton.css';
             cat.textContent = d.categoryTitle ?? '';
             cat.hidden = !d.categoryTitle;
             if (d.category) cat.href = `/${d.category}`;
+            else cat.removeAttribute('href');
         }
 
         const added = document.getElementById('detail-added');
@@ -561,6 +562,7 @@ import './BookmarkButton.css';
             const dom = domainOf(d.url ?? '');
             site.textContent = dom || 'Not provided';
             if (d.url) site.href = d.url;
+            else site.removeAttribute('href');
             site.classList.toggle('detail-link', !!d.url);
         }
 
@@ -682,8 +684,18 @@ import './BookmarkButton.css';
             true,
         );
 
+        // Sync the panel to the popped URL (same-document history nav doesn't
+        // fire astro:page-load): reopen for /tools/{slug}, close otherwise.
         window.addEventListener('popstate', () => {
             pushed = false;
+            const m = location.pathname.match(/^\/tools\/([^/]+)\/?$/);
+            if (m && m[1]) {
+                const slug = decodeURIComponent(m[1]);
+                const card = document.querySelector<HTMLAnchorElement>(
+                    `a[data-tool-link][data-slug="${CSS.escape(slug)}"]`,
+                );
+                if (card) { showPanel(card, { push: false, focus: false }); return; }
+            }
             if (isOpen()) hidePanel();
         });
 

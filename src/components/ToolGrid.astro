@@ -10,7 +10,7 @@ interface Props {
 const { tools } = Astro.props;
 ---
 
-<section>
+<section data-tool-grid>
     <ul role="list" class="link-card-grid">
         {tools.map((tool) => (
             <Card

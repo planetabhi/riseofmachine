@@ -27,6 +27,8 @@
     let fuse: any = null;
     let rendered = 0;
     let searching = false;
+    let loadingMore = false;
+    let searchSeq = 0;
     let io: IntersectionObserver | null = null;
     let catTitles: Record<string, string> = {};
 
@@ -51,8 +53,16 @@
         if (records) return records;
         if (!loadPromise) {
             loadPromise = fetch('/search-index.json')
-                .then((r) => r.json())
-                .then((d: Rec[]) => (records = d));
+                .then((r) => {
+                    if (!r.ok) throw new Error(`search-index ${r.status}`);
+                    return r.json();
+                })
+                .then((d: Rec[]) => (records = d))
+                .catch(() => {
+                    // Degrade gracefully: empty records now, allow a retry next call.
+                    loadPromise = null;
+                    return [] as Rec[];
+                });
         }
         return loadPromise;
     }
@@ -150,16 +160,21 @@
     }
 
     async function loadMore() {
-        if (searching) return;
-        const recs = await loadRecords();
-        if (!isHome()) return;
-        const next = recs.slice(rendered, rendered + PAGE);
-        if (next.length) {
-            renderBatch(next);
-            rendered += next.length;
+        if (searching || loadingMore) return;
+        loadingMore = true;
+        try {
+            const recs = await loadRecords();
+            if (!isHome()) return;
+            const next = recs.slice(rendered, rendered + PAGE);
+            if (next.length) {
+                renderBatch(next);
+                rendered += next.length;
+            }
+            const s = sentinel();
+            if (s) s.hidden = rendered >= recs.length;
+        } finally {
+            loadingMore = false;
         }
-        const s = sentinel();
-        if (s) s.hidden = rendered >= recs.length;
     }
 
     function setSectionsHidden(hidden: boolean) {
@@ -175,6 +190,8 @@
         const g = grid();
         if (!g) return;
         const empty = emptyEl();
+        // Newer calls supersede in-flight ones so stale results never render.
+        const seq = ++searchSeq;
         if (!q || q.length < 2) {
             searching = false;
             setSectionsHidden(false);
@@ -189,11 +206,12 @@
         searching = true;
         setSectionsHidden(true);
         const recs = await loadRecords();
-        if (location.pathname !== '/') return;
+        if (seq !== searchSeq || location.pathname !== '/') return;
         if (!fuse) {
             const { default: Fuse } = await import('fuse.js');
             fuse = new Fuse(recs, fuseOptions);
         }
+        if (seq !== searchSeq) return;
         const results = fuse.search(q).map((x: { item: Rec }) => x.item);
         g.replaceChildren();
         renderBatch(results);
@@ -236,7 +254,8 @@
             const detail = (e as CustomEvent<{ query?: string }>).detail || {};
             if (typeof detail.query !== 'undefined') void runSearch(detail.query);
         });
-    }
 
-    document.addEventListener('astro:page-load', init);
+        document.addEventListener('astro:page-load', init);
+        init();
+    }
 </script>

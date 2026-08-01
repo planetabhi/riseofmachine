@@ -180,14 +180,18 @@ const showLatest = listingPaths.has(current);
             const startX = e.clientX;
             const startW = aside.getBoundingClientRect().width;
             const move = (ev: PointerEvent) => setWidth(aside, rz, startW + (ev.clientX - startX));
-            const up = () => {
-                rz.releasePointerCapture(e.pointerId);
+            // pointercancel (touch interruption, context menu, lost pointer) must
+            // tear down the drag too, else pointermove keeps resizing.
+            const end = () => {
+                try { rz.releasePointerCapture(e.pointerId); } catch {}
                 rz.removeEventListener('pointermove', move);
-                rz.removeEventListener('pointerup', up);
+                rz.removeEventListener('pointerup', end);
+                rz.removeEventListener('pointercancel', end);
                 commit();
             };
             rz.addEventListener('pointermove', move);
-            rz.addEventListener('pointerup', up);
+            rz.addEventListener('pointerup', end);
+            rz.addEventListener('pointercancel', end);
         });
 
         rz.addEventListener('keydown', (e) => {
