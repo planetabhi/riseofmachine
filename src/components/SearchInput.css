@@ -35,12 +35,20 @@
         linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    opacity: 0.55;
+    opacity: 0.3;
     pointer-events: none;
     animation: search-beam-rotate 4s linear infinite;
 }
 
 .search-input-wrapper:focus-within::after {
+    background: conic-gradient(
+        from var(--search-beam-angle),
+        transparent 0turn 0.72turn,
+        color-mix(in srgb, #f97316 40%, transparent) 0.82turn,
+        #ec4899 0.9turn,
+        #8b5cf6 0.96turn,
+        transparent 1turn
+    );
     opacity: 1;
 }
 

@@ -178,7 +178,7 @@
 }
 
 .sidebar-toggle-item[aria-pressed='true'] .sidebar-item-label::after {
-    content: ' ●';
+    content: ' ✨';
     color: var(--accent);
 }
 
