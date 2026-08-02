@@ -21,17 +21,9 @@ const latestTools = [...allTools]
   )
   .slice(0, 12);
 
-const featuredSlugs = ["chatgpt", "midjourney", "cursor", "elevenlabs"];
-const featuredTools = featuredSlugs
-  .map((slug) => allTools.find((tool: any) => tool.slug === slug))
-  .filter(Boolean);
-if (featuredTools.length < 4) {
-  featuredTools.push(
-    ...seededShuffle(allTools, 20260801)
-      .filter((tool: any) => !featuredSlugs.includes(tool.slug))
-      .slice(0, 4 - featuredTools.length)
-  );
-}
+// Randomly selected Featured picks. Seed matches DetailPanel's FEATURED_SEED so
+// its similar-tool fill-ins stay aligned with this set.
+const featuredTools = seededShuffle(allTools, 20260801).slice(0, 4);
 ---
 
 <Layout

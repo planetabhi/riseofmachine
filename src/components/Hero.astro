@@ -45,10 +45,13 @@ const {
     .hero-search {
         display: flex;
         justify-content: flex-start;
+        /* Reclaim the hero's horizontal padding so the search can reach 24rem. */
+        margin-inline: calc(-1 * var(--spacing-06));
     }
 
     .hero-search :global(.search-container) {
         margin-top: 0;
+        width: 100%;
     }
 
     .hero-search :global(.search-input-wrapper) {

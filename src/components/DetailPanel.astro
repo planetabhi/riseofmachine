@@ -1,5 +1,6 @@
 ---
 import './BookmarkButton.css';
+import DetailVisitButton from './DetailVisitButton.tsx';
 
 // Inline (non-modal) tool detail panel: slides in as a flex sibling, pushing the
 // content column left. Populated from the clicked card's data-* (zero fetch).
@@ -40,15 +41,7 @@ import './BookmarkButton.css';
         </div>
 
         <div class="detail-actions">
-            <a class="detail-action detail-action--primary t-learn" id="detail-visit" target="_blank" rel="noopener noreferrer">
-                Visit site
-                <span class="t-learn-chevron" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                        <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" />
-                        <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" />
-                    </svg>
-                </span>
-            </a>
+            <DetailVisitButton client:load />
         </div>
 
         <section class="detail-section">
@@ -100,7 +93,7 @@ import './BookmarkButton.css';
         box-sizing: border-box;
         height: 100%;
         overflow-y: auto;
-        padding: var(--spacing-08) var(--spacing-06);
+        padding: var(--spacing-06) var(--spacing-06);
         display: flex;
         flex-direction: column;
         gap: var(--spacing-05);
@@ -115,7 +108,7 @@ import './BookmarkButton.css';
     .detail-head-actions {
         display: flex;
         align-items: center;
-        gap: var(--spacing-01);
+        gap: var(--spacing-04);
     }
 
     .detail-favicon {
@@ -237,24 +230,33 @@ import './BookmarkButton.css';
         gap: var(--spacing-03);
     }
 
-    .detail-action {
+    /* The visit button is rendered by a React island (DetailVisitButton), so it
+       misses Astro's scope attribute — these rules must be global. */
+    :global(.detail-action) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-02);
+        width: 100%;
+        box-sizing: border-box;
         padding: var(--spacing-03) var(--spacing-05);
-        border: 0.5px solid var(--border-muted);
+        border: 1px solid var(--accent);
         border-radius: var(--spacing-05);
         text-align: center;
         text-decoration: none;
-        color: var(--content-secondary);
+        color: var(--accent);
         font-size: var(--desktop-body-sm);
         line-height: var(--lh-desktop-body-sm);
     }
 
-    .detail-action:hover {
+    /* On hover the colorful border-beam takes over as the stroke, so hide the
+       button's own primary border. */
+    :global(.detail-action--primary:hover) {
         color: var(--accent);
-        border-color: var(--accent);
     }
 
-    .detail-action:focus-visible {
-        outline: 1px solid var(--button-primary);
+    :global(.detail-action:focus-visible) {
+        outline: 1px solid var(--accent);
         outline-offset: 2px;
     }
 
@@ -272,7 +274,7 @@ import './BookmarkButton.css';
     :global(.detail-similar-item) {
         display: flex;
         align-items: center;
-        gap: var(--spacing-02);
+        gap: var(--spacing-05);
         padding: var(--spacing-02) var(--spacing-03);
         border-radius: var(--spacing-02);
         text-decoration: none;
