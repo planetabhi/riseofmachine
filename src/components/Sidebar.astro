@@ -86,13 +86,11 @@ const showLatest = listingPaths.has(current);
             </a>
 
             <p class="sidebar-legal">
-                ABHIMANYU RANA 2026 ©<br />
                 <a
                     href="https://x.com/planetabhi"
                     target="_blank"
                     rel="noopener noreferrer">@planetabhi</a
-                >
-                <span aria-hidden="true">·</span>
+                > 2026 ©<br />
                 <a href="/privacy">Privacy</a>
                 <span aria-hidden="true">·</span>
                 <a href="/terms">Terms</a>
@@ -177,6 +175,7 @@ const showLatest = listingPaths.has(current);
         rz.addEventListener('pointerdown', (e) => {
             e.preventDefault();
             rz.setPointerCapture(e.pointerId);
+            rz.classList.add('is-dragging');
             const startX = e.clientX;
             const startW = aside.getBoundingClientRect().width;
             const move = (ev: PointerEvent) => setWidth(aside, rz, startW + (ev.clientX - startX));
@@ -184,6 +183,7 @@ const showLatest = listingPaths.has(current);
             // tear down the drag too, else pointermove keeps resizing.
             const end = () => {
                 try { rz.releasePointerCapture(e.pointerId); } catch {}
+                rz.classList.remove('is-dragging');
                 rz.removeEventListener('pointermove', move);
                 rz.removeEventListener('pointerup', end);
                 rz.removeEventListener('pointercancel', end);

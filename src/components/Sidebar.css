@@ -24,18 +24,31 @@
 }
 
 .sidebar-resizer {
+    position: relative;
     flex-shrink: 0;
     width: var(--spacing-02);
+    margin-block: var(--spacing-03);
     cursor: col-resize;
     background-color: transparent;
     transition: background-color var(--duration-fast) var(--ease-smooth-out);
     touch-action: none;
 }
 
+/* Widen the pointer target by 1px each side without altering the visible bar. */
+.sidebar-resizer::before {
+    content: "";
+    position: absolute;
+    inset: 0 -1px;
+}
+
 .sidebar-resizer:hover,
 .sidebar-resizer:focus-visible {
     background-color: var(--border-muted);
     outline: none;
+}
+
+.sidebar-resizer.is-dragging {
+    background-color: var(--border);
 }
 
 .sidebar-header {
