@@ -6,6 +6,7 @@ import ContentTopbar from "../components/ContentTopbar.astro";
 import Hero from "../components/Hero.astro";
 import DetailPanel from "../components/DetailPanel.astro";
 import BookmarkSync from "../components/BookmarkSync.astro";
+import MoireBackground from "../components/MoireBackground.astro";
 import "@new-ui/foundations";
 import "../styles/transitions.css";
 
@@ -136,6 +137,7 @@ const {
 
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
+        <MoireBackground />
         <Sidebar showLatestFilter={showLatestFilter} />
         <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
         <div class="app-content">
@@ -269,6 +271,7 @@ const {
         align-items: stretch;
         overflow: hidden;
         background-color: var(--background);
+        isolation: isolate;
     }
 
     .app-content {
@@ -280,6 +283,7 @@ const {
         border-radius: var(--spacing-06);
         background-color: var(--background-high-contrast);
         overflow-y: auto;
+        position: relative;
     }
     .sidebar-backdrop {
         display: none;

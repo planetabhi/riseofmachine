@@ -4,7 +4,7 @@
     height: 100vh;
     box-sizing: border-box;
     display: flex;
-    background-color: var(--background);
+    background-color: transparent;
 }
 
 .sidebar-scroll {
