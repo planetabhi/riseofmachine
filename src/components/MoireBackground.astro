@@ -1,0 +1,167 @@
+---
+---
+
+<div class="moire-wrap" aria-hidden="true">
+    <canvas class="moire-bg"></canvas>
+</div>
+
+<script>
+    import { Renderer, Triangle, Program, Mesh } from "ogl";
+
+    const fragment = `
+        precision highp float;
+        uniform float uTime;
+        uniform vec2 uResolution;
+        uniform vec3 uColor;
+        uniform float uOpacity;
+        uniform float uReduced;
+        uniform float uDpr;
+
+        float lineGrating(vec2 p, float angle, float pitch) {
+            float coord = (p.x * cos(angle) + p.y * sin(angle)) / pitch;
+            float dist = abs(coord - floor(coord + 0.5));
+            float aa = 1.0 / (pitch * uResolution.y);
+            float halfW = 0.25 * uDpr * aa;
+            return 1.0 - smoothstep(halfW, halfW + aa, dist);
+        }
+
+        void main() {
+            vec2 uv = (gl_FragCoord.xy - 0.5 * uResolution) / uResolution.y;
+
+            float t = uReduced > 0.5 ? 0.0 : uTime;
+
+            float pitch = 0.045;
+            float baseAngle = 1.5708 + 0.12 * sin(t * 0.02);
+            float theta = 0.045 + 0.02 * sin(t * 0.05);
+            float a = lineGrating(uv, baseAngle, pitch);
+            float b = lineGrating(uv, baseAngle + theta, pitch);
+            float line = max(a, b);
+
+            gl_FragColor = vec4(uColor, line * uOpacity);
+        }
+    `;
+
+    const vertex = `
+        attribute vec2 uv;
+        attribute vec2 position;
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            gl_Position = vec4(position, 0.0, 1.0);
+        }
+    `;
+
+    let renderer: any = null;
+    let program: any = null;
+    let raf = 0;
+    let onResize: (() => void) | null = null;
+    let observer: MutationObserver | null = null;
+
+    const prefersReduced = () =>
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function readColor(): [number, number, number] {
+        return [1, 1, 1];
+    }
+
+    function destroy() {
+        cancelAnimationFrame(raf);
+        raf = 0;
+        if (onResize) window.removeEventListener("resize", onResize);
+        onResize = null;
+        observer?.disconnect();
+        observer = null;
+        renderer?.gl?.getExtension("WEBGL_lose_context")?.loseContext();
+        renderer = null;
+        program = null;
+    }
+
+    function init() {
+        const canvas = document.querySelector<HTMLCanvasElement>(".moire-bg");
+        if (!canvas) return;
+
+        try {
+            renderer = new Renderer({
+                canvas,
+                alpha: true,
+                premultipliedAlpha: false,
+                dpr: Math.min(window.devicePixelRatio || 1, 1.5),
+            });
+        } catch {
+            return;
+        }
+
+        const gl = renderer.gl;
+        gl.clearColor(0, 0, 0, 0);
+
+        const geometry = new Triangle(gl);
+        program = new Program(gl, {
+            vertex,
+            fragment,
+            transparent: true,
+            uniforms: {
+                uTime: { value: 0 },
+                uResolution: { value: [1, 1] },
+                uColor: { value: readColor() },
+                uOpacity: { value: 0.40 },
+                uReduced: { value: prefersReduced() ? 1 : 0 },
+                uDpr: { value: renderer.dpr },
+            },
+        });
+        const mesh = new Mesh(gl, { geometry, program });
+
+        onResize = () => {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            renderer.setSize(w, h);
+            program.uniforms.uResolution.value = [
+                gl.drawingBufferWidth,
+                gl.drawingBufferHeight,
+            ];
+        };
+        window.addEventListener("resize", onResize);
+        onResize();
+
+        const loop = (time: number) => {
+            if (!renderer) return;
+            if (!document.hidden) {
+                program.uniforms.uTime.value = time * 0.001;
+                renderer.render({ scene: mesh });
+            }
+            raf = requestAnimationFrame(loop);
+        };
+        raf = requestAnimationFrame(loop);
+
+        observer = new MutationObserver(() => {
+            if (program) program.uniforms.uColor.value = readColor();
+        });
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-new-ui-theme"],
+        });
+    }
+
+    document.addEventListener("astro:page-load", init);
+    document.addEventListener("astro:before-swap", destroy);
+</script>
+
+<style>
+    .moire-wrap {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .moire-bg {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .moire-bg {
+            opacity: 0.85;
+        }
+    }
+</style>
