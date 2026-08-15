@@ -2531,6 +2531,14 @@
       "category": "developer",
       "content": [
         {
+          "title": "agent-qa",
+          "body": "Self-improving agent for software quality.",
+          "tag": "Free",
+          "url": "https://github.com/vostride/agent-qa?ref=riseofmachine.com",
+          "date-added": "2026-08-15",
+          "slug": "agent-qa"
+        },
+        {
           "title": "Amazon Codewhisperer",
           "body": "A code writing assistant developed by Amazon",
           "tag": "Not available",
