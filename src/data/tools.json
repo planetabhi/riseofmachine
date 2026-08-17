@@ -2531,7 +2531,7 @@
       "category": "developer",
       "content": [
         {
-          "title": "agent-qa",
+          "title": "Agent QA",
           "body": "Self-improving agent for software quality.",
           "tag": "Free",
           "url": "https://github.com/vostride/agent-qa?ref=riseofmachine.com",
