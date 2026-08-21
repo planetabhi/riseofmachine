@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
-import netlify from "@astrojs/netlify";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 
@@ -19,7 +18,5 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }
-  ), sitemap()],
-
-  adapter: netlify()
+  ), sitemap()]
 });

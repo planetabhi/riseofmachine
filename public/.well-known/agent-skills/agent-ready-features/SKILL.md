@@ -26,16 +26,6 @@ Link: </.well-known/mcp/server-card.json>; rel="mcp-server-card",
       </robots.txt>; rel="robots"
 ```
 
-## Markdown Content Negotiation
-
-Any page on the site supports `Accept: text/markdown` content negotiation.
-When requested, the response is served as `text/markdown` with:
-
-- `Content-Type: text/markdown; charset=utf-8`
-- `Vary: Accept`
-- `x-markdown-tokens: {estimated token count}`
-- `Content-Signal: ai-train=yes, search=yes, ai-input=yes`
-
 ## Content Signals (robots.txt)
 
 The site declares content usage preferences per the Content Signals spec
