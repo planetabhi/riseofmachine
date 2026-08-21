@@ -28,16 +28,6 @@ GET https://riseofmachine.com/llms.txt
 Accept: text/plain
 ```
 
-### Markdown version of any page
-
-Request `Accept: text/markdown` on any page to receive a markdown
-representation (served via content negotiation):
-
-```
-GET https://riseofmachine.com/
-Accept: text/markdown
-```
-
 ### Category pages
 
 Navigate directly to a category:
@@ -66,7 +56,6 @@ The site organisation is described by an Organization schema.
 ## Tips for Agents
 
 - Prefer `llms.txt` over crawling HTML pages — it is compact and structured.
-- Use `Accept: text/markdown` when you need a richer markdown response.
 - The `api-catalog` linkset enumerates every category anchor with rel links.
 - Respect the `Content-Signal: ai-train=no, search=yes, ai-input=yes` policy
   declared in `https://riseofmachine.com/robots.txt`.
