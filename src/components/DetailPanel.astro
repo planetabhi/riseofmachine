@@ -331,11 +331,8 @@ import DetailVisitButton from './DetailVisitButton.tsx';
 <script>
     import { isBookmarked } from '../utils/bookmarks';
     import { navigate } from 'astro:transitions/client';
-    import { seededShuffle } from '../utils/sorting';
 
     type Rec = { s: string; t: string; g: string; c: string; b: string; u: string; d: string };
-    // Must match the Featured seed in src/pages/index.astro so fill-ins line up.
-    const FEATURED_SEED = 20260801;
 
     // Card link interception runs in the capture phase so preventDefault +
     // stopPropagation block Astro's ClientRouter (bubble-phase) click handler.
@@ -346,17 +343,19 @@ import DetailVisitButton from './DetailVisitButton.tsx';
     // The listing URL the panel was opened from, restored in place on close.
     let originUrl = '';
 
-    // Fuller descriptions live in the search index (key `x`); load once and cache.
-    let descMap: Record<string, string> | null = null;
-    let descPromise: Promise<Record<string, string>> | null = null;
+    // Panel-open payload from /tool-descriptions.json: fuller description (d) +
+    // precomputed related slugs (r). Loaded once and cached.
+    type Panel = { d?: string; r?: string[] };
+    let descMap: Record<string, Panel> | null = null;
+    let descPromise: Promise<Record<string, Panel>> | null = null;
     let currentSlug = '';
 
-    function ensureDescMap(): Promise<Record<string, string>> {
+    function ensureDescMap(): Promise<Record<string, Panel>> {
         if (descMap) return Promise.resolve(descMap);
         if (!descPromise) {
             descPromise = fetch('/tool-descriptions.json')
                 .then((r) => r.json())
-                .then((m: Record<string, string>) => (descMap = m))
+                .then((m: Record<string, Panel>) => (descMap = m))
                 .catch(() => (descMap = {}));
         }
         return descPromise;
@@ -411,45 +410,6 @@ import DetailVisitButton from './DetailVisitButton.tsx';
         });
     }
 
-    const STOP = new Set(['the','a','an','and','or','for','to','of','with','your','you','ai','app','tool','tools','online','free','best','create','generate','make','using','use','from','on','in','by','into','it','is','are','that','this','all','platform','powered','based','simple','easy','get','more','new']);
-    function tokenize(s: string): Set<string> {
-        const set = new Set<string>();
-        for (const w of (s || '').toLowerCase().split(/[^a-z0-9]+/)) {
-            if (w.length >= 3 && !STOP.has(w)) set.add(w);
-        }
-        return set;
-    }
-    function overlap(a: Set<string>, b: Set<string>): number {
-        let n = 0;
-        for (const w of a) if (b.has(w)) n += 1;
-        return n;
-    }
-
-    // Score by shared category (+3), tag/pricing (+2), and title/body keyword
-    // overlap; always return 4, filling any gaps from the Featured pool.
-    function pickSimilar(cur: Rec, recs: Rec[]): Rec[] {
-        const curTok = tokenize(`${cur.t} ${cur.b}`);
-        const scored: { r: Rec; score: number }[] = [];
-        for (const r of recs) {
-            if (r.s === cur.s) continue;
-            let score = 0;
-            if (r.c === cur.c) score += 3;
-            if (r.g && r.g === cur.g) score += 2;
-            score += overlap(curTok, tokenize(`${r.t} ${r.b}`));
-            if (score > 0) scored.push({ r, score });
-        }
-        scored.sort((a, b) => b.score - a.score || a.r.t.localeCompare(b.r.t));
-        const picks = scored.slice(0, 4).map((x) => x.r);
-        if (picks.length < 4) {
-            const have = new Set(picks.map((p) => p.s));
-            have.add(cur.s);
-            for (const r of seededShuffle(recs, FEATURED_SEED)) {
-                if (picks.length >= 4) break;
-                if (!have.has(r.s)) { picks.push(r); have.add(r.s); }
-            }
-        }
-        return picks.slice(0, 4);
-    }
 
     function renderSimilarItems(items: Rec[]) {
         const section = document.getElementById('detail-similar');
@@ -510,20 +470,17 @@ import DetailVisitButton from './DetailVisitButton.tsx';
     function buildSimilar(link: HTMLAnchorElement) {
         if (!Object.keys(catTitles).length) buildCatMap();
         const slug = link.dataset.slug ?? '';
-        // Instant fallback from the DOM, then upgrade to scored matches.
+        // Instant same-category fallback from the DOM, then upgrade to precomputed related.
         renderSimilarItems(domSimilar(link));
-        void ensureIndex().then((recs) => {
+        void Promise.all([ensureIndex(), ensureDescMap()]).then(([recs, pmap]) => {
             if (currentSlug !== slug || !recs.length) return;
-            const cur = recs.find((r) => r.s === slug) ?? {
-                s: slug,
-                t: link.dataset.title ?? '',
-                b: link.dataset.body ?? '',
-                g: link.dataset.tag ?? '',
-                c: link.dataset.category ?? '',
-                u: link.dataset.url ?? '',
-                d: link.dataset.date ?? '',
-            };
-            renderSimilarItems(pickSimilar(cur, recs));
+            const related = pmap[slug]?.r;
+            if (!related || !related.length) return; // keep the DOM fallback
+            const bySlug = new Map(recs.map((r) => [r.s, r]));
+            const items = related
+                .map((s) => bySlug.get(s))
+                .filter((r): r is Rec => !!r); // drop any dangling slugs
+            if (items.length) renderSimilarItems(items);
         });
     }
 
@@ -537,11 +494,11 @@ import DetailVisitButton from './DetailVisitButton.tsx';
         currentSlug = d.slug ?? '';
         if (d.slug) {
             const slug = d.slug;
-            if (descMap?.[slug]) {
-                setText('detail-body', descMap[slug]);
+            if (descMap?.[slug]?.d) {
+                setText('detail-body', descMap[slug]!.d!);
             } else {
                 void ensureDescMap().then((m) => {
-                    if (currentSlug === slug && m[slug]) setText('detail-body', m[slug]);
+                    if (currentSlug === slug && m[slug]?.d) setText('detail-body', m[slug]!.d!);
                 });
             }
         }

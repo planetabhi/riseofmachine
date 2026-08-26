@@ -5,5 +5,15 @@
   "url": "https://www.blazesql.com/?ref=riseofmachine.com",
   "tag": "Paid",
   "date-added": "2025-06-06",
-  "slug": "blaze-sql"
+  "slug": "blaze-sql",
+  "related": [
+    "capmonster-cloud",
+    "fitten-code",
+    "lintrule",
+    "sqlmate",
+    "ai2sql",
+    "i18n-code-gen",
+    "screenshot-to-code",
+    "amazon-codewhisperer"
+  ]
 }

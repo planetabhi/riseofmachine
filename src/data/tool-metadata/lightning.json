@@ -5,5 +5,15 @@
   "url": "https://lightning.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "lightning"
+  "slug": "lightning",
+  "related": [
+    "amazon-sagemaker",
+    "director",
+    "rork-app",
+    "smythos",
+    "nora",
+    "pythagora-20",
+    "screenshot-to-code",
+    "orchids"
+  ]
 }

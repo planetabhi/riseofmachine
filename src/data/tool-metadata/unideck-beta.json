@@ -5,5 +5,15 @@
   "url": "https://unideck.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-03",
-  "slug": "unideck-beta"
+  "slug": "unideck-beta",
+  "related": [
+    "chaindesk",
+    "droxy",
+    "imagica",
+    "stack",
+    "akkio",
+    "make-song-ai",
+    "song-lyrics-review",
+    "browse-ai"
+  ]
 }

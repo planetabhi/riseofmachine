@@ -5,5 +5,15 @@
   "url": "https://codesnippets.ai/?ref=riseofmachine.com",
   "tag": "From $4/mo",
   "date-added": "2023-12-26",
-  "slug": "code-snippets"
+  "slug": "code-snippets",
+  "related": [
+    "melty",
+    "codestream",
+    "cody-by-sourcegraph",
+    "qodo",
+    "forge",
+    "grok-video",
+    "blackbox-ai",
+    "builderio"
+  ]
 }

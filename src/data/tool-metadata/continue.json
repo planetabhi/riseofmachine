@@ -5,5 +5,15 @@
   "url": "https://continue.dev/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-29",
-  "slug": "continue"
+  "slug": "continue",
+  "related": [
+    "forge",
+    "grok-video",
+    "blackbox-ai",
+    "builderio",
+    "cody-by-sourcegraph",
+    "developer-pal",
+    "lovable",
+    "replit-ghostwriter"
+  ]
 }

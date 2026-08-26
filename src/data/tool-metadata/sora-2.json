@@ -5,5 +5,15 @@
   "url": "https://www.aisora2.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-02",
-  "slug": "sora-2"
+  "slug": "sora-2",
+  "related": [
+    "gemini-omni-ai",
+    "photo-to-video-ai",
+    "hoox",
+    "supermaker",
+    "genmo",
+    "grok-video-generator",
+    "vidmix",
+    "qudemo"
+  ]
 }

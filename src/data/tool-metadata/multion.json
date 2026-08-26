@@ -5,5 +5,15 @@
   "url": "https://www.multion.ai/?ref=riseofmachine.com",
   "tag": "From $0.04/request",
   "date-added": "2024-07-16",
-  "slug": "multion"
+  "slug": "multion",
+  "related": [
+    "converge-ai",
+    "notion",
+    "dart",
+    "onetwo-resume",
+    "remio",
+    "notebooklm-remover",
+    "dev-jobs",
+    "bookletai"
+  ]
 }

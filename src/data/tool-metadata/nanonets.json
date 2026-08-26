@@ -5,5 +5,15 @@
   "url": "https://nanonets.com/?ref=riseofmachine.com",
   "tag": "Pay-as-you-go",
   "date-added": "2023-12-15",
-  "slug": "nanonets"
+  "slug": "nanonets",
+  "related": [
+    "scale-ai",
+    "togetherai",
+    "insights-by-couplerio",
+    "supaboard",
+    "credal-ai",
+    "dropshiphunt",
+    "raykolabs",
+    "ellie"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.voqusa.com?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-06-30",
-  "slug": "voqusa"
+  "slug": "voqusa",
+  "related": [
+    "audio-transcriber-ai",
+    "sonicker",
+    "nicevoice",
+    "kyutai-tts",
+    "eleven-ai",
+    "seamless",
+    "so-vits-svc",
+    "f5-tts"
+  ]
 }

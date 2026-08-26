@@ -5,5 +5,15 @@
   "url": "https://consensus.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "consensus"
+  "slug": "consensus",
+  "related": [
+    "research",
+    "osum",
+    "gaabstract",
+    "resea-ai",
+    "capgo-ai",
+    "scite",
+    "heronai",
+    "storm"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://voicepen.ai/?ref=riseofmachine.com",
   "tag": "From $6.99",
   "date-added": "2023-12-24",
-  "slug": "voicepen"
+  "slug": "voicepen",
+  "related": [
+    "transmonkey",
+    "ryter-pro",
+    "proofwrite-ai",
+    "manga-ai-translator",
+    "sickleaveemail",
+    "justdone-ai",
+    "hard-usernames",
+    "headcanon-generator-fun"
+  ]
 }

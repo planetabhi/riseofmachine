@@ -5,5 +5,15 @@
   "url": "https://www.photoleapapp.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-29",
-  "slug": "photoleap"
+  "slug": "photoleap",
+  "related": [
+    "photo-editor",
+    "picsart",
+    "hama",
+    "add-person-to-photo",
+    "image-text-editor",
+    "clipdrop",
+    "photo-style",
+    "imggood"
+  ]
 }

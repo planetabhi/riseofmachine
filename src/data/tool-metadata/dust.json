@@ -5,5 +5,15 @@
   "url": "https://dust.tt/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "dust"
+  "slug": "dust",
+  "related": [
+    "ellie",
+    "sniff-job",
+    "my-askai",
+    "superai",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu"
+  ]
 }

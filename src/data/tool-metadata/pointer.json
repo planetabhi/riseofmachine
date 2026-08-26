@@ -5,5 +5,15 @@
   "url": "https://www.getpointer.ai/google-docs-ai?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-01",
-  "slug": "pointer"
+  "slug": "pointer",
+  "related": [
+    "plus-docs",
+    "chatize",
+    "koncile",
+    "semantic-email",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

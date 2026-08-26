@@ -5,5 +5,15 @@
   "url": "https://graffiti-generator.org?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-02-14",
-  "slug": "graffiti-generator"
+  "slug": "graffiti-generator",
+  "related": [
+    "graffiti",
+    "paper-design",
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "uxmagic-ai",
+    "banani",
+    "ximagin"
+  ]
 }

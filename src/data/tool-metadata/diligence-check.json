@@ -5,5 +5,15 @@
   "url": "https://stepfun.ai/docs/diligence-check?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-07-11",
-  "slug": "diligence-check"
+  "slug": "diligence-check",
+  "related": [
+    "xprompts",
+    "banana-prompts",
+    "promptforge",
+    "prompt-generator",
+    "midlearning",
+    "srefhunter",
+    "goodprompts",
+    "dallelist"
+  ]
 }

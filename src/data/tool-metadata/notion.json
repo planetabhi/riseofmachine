@@ -5,5 +5,15 @@
   "url": "https://www.notion.so/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-22",
-  "slug": "notion"
+  "slug": "notion",
+  "related": [
+    "converge-ai",
+    "hipocap",
+    "dart",
+    "everyday",
+    "jigso",
+    "onetwo-resume",
+    "remio",
+    "bookletai"
+  ]
 }

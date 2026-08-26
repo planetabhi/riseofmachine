@@ -5,5 +5,15 @@
   "url": "https://foragemail.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-17",
-  "slug": "forage-mail"
+  "slug": "forage-mail",
+  "related": [
+    "blocks",
+    "semantic-email",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform"
+  ]
 }

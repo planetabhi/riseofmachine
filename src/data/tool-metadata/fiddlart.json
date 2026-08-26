@@ -5,5 +5,15 @@
   "url": "https://fiddl.art/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-31",
-  "slug": "fiddlart"
+  "slug": "fiddlart",
+  "related": [
+    "lora",
+    "lora-pro",
+    "vieutopia",
+    "nightcafe-creator",
+    "furryai",
+    "imgnai",
+    "rabbit-road",
+    "imagefx"
+  ]
 }

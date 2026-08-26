@@ -5,5 +5,15 @@
   "url": "https://github.com/Torantulino/Auto-GPT?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-14",
-  "slug": "auto-gpt"
+  "slug": "auto-gpt",
+  "related": [
+    "agents-by-athena",
+    "flowpoint",
+    "ai-agents-list",
+    "gpt4o",
+    "potpie-aipotpie",
+    "ai-agents-live",
+    "replicate",
+    "gptgeminigrokai"
+  ]
 }

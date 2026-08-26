@@ -5,5 +5,15 @@
   "url": "https://lami.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-17",
-  "slug": "lami"
+  "slug": "lami",
+  "related": [
+    "mp3-to-text",
+    "voicetype",
+    "audio-muse",
+    "mix-audio",
+    "playht",
+    "lyricstosong",
+    "trint",
+    "unreal-speech"
+  ]
 }

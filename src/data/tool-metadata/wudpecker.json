@@ -5,5 +5,15 @@
   "url": "https://www.wudpecker.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "wudpecker"
+  "slug": "wudpecker",
+  "related": [
+    "otter",
+    "supernormal",
+    "pally-ai",
+    "remio",
+    "onetwo-resume",
+    "converge-ai",
+    "bookletai",
+    "uniquenamesnet"
+  ]
 }

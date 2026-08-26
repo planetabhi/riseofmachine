@@ -5,5 +5,15 @@
   "url": "https://www.brancher.ai/?ref=riseofmachine.com",
   "tag": "100 credits free",
   "date-added": "2023-12-26",
-  "slug": "brancher-ai"
+  "slug": "brancher-ai",
+  "related": [
+    "buildai",
+    "imagica",
+    "riku",
+    "lindo",
+    "stack",
+    "akkio",
+    "butternut",
+    "make-song-ai"
+  ]
 }

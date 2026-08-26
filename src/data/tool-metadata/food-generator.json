@@ -5,5 +5,15 @@
   "url": "https://aifoodgenerator.net?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-12-25",
-  "slug": "food-generator"
+  "slug": "food-generator",
+  "related": [
+    "ezmaker-ai",
+    "ez-img-editor",
+    "piximagen",
+    "fast-image-ai-1",
+    "travel-photos",
+    "ghostface-ai",
+    "random-image-generator",
+    "silhouette-generator"
+  ]
 }

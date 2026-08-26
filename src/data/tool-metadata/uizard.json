@@ -5,5 +5,15 @@
   "url": "https://uizard.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-12",
-  "slug": "uizard"
+  "slug": "uizard",
+  "related": [
+    "kittl",
+    "uxmagic-ai",
+    "banani",
+    "subframe",
+    "shape-of-ai",
+    "lovspark-ai",
+    "rustic-ai",
+    "flair"
+  ]
 }

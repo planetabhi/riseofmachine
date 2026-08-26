@@ -5,5 +5,15 @@
   "url": "https://sider.ai/?ref=riseofmachine.com",
   "tag": "From $10/mo",
   "date-added": "2023-12-24",
-  "slug": "sider"
+  "slug": "sider",
+  "related": [
+    "floworks",
+    "intellibar",
+    "otter",
+    "walles",
+    "mavexai",
+    "krisp",
+    "hero",
+    "lock-in"
+  ]
 }

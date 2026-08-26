@@ -5,5 +5,15 @@
   "url": "https://www.usesaaskit.com/?ref=riseofmachine.com",
   "tag": "$119 One-time",
   "date-added": "2025-06-04",
-  "slug": "usesaaskit"
+  "slug": "usesaaskit",
+  "related": [
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "screenshot-to-code",
+    "chatgpt-apps-sdk",
+    "evolink",
+    "new-ui"
+  ]
 }

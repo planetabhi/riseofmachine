@@ -5,5 +5,15 @@
   "url": "https://www.numbersstation.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2023-12-24",
-  "slug": "numbers-station"
+  "slug": "numbers-station",
+  "related": [
+    "microsoft-copilot",
+    "sid",
+    "langfuse",
+    "llamaindex",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "muse-spark-ai"
+  ]
 }

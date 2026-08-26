@@ -5,5 +5,15 @@
   "url": "https://aipromptgenerator.ai?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-19",
-  "slug": "prompt-generator"
+  "slug": "prompt-generator",
+  "related": [
+    "goodprompts",
+    "dallelist",
+    "xprompts",
+    "promptforge",
+    "midlearning",
+    "banana-prompts",
+    "diligence-check",
+    "srefhunter"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.springworks.in/albus/?ref=riseofmachine.com",
   "tag": "From $4.99/mo",
   "date-added": "2023-12-15",
-  "slug": "albus"
+  "slug": "albus",
+  "related": [
+    "gptbotsai",
+    "social-intents",
+    "raykolabs",
+    "ellie",
+    "superai",
+    "streaml",
+    "conduit",
+    "security-questionnaire"
+  ]
 }

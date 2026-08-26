@@ -5,5 +5,15 @@
   "url": "https://converge.ai?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-01",
-  "slug": "converge-ai"
+  "slug": "converge-ai",
+  "related": [
+    "cloudairy",
+    "notion",
+    "dart",
+    "hyperfeed",
+    "orchestra",
+    "onetwo-resume",
+    "remio",
+    "bookletai"
+  ]
 }

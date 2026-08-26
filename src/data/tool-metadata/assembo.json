@@ -5,5 +5,15 @@
   "url": "https://app.assembo.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "assembo"
+  "slug": "assembo",
+  "related": [
+    "ogimage",
+    "rizz-line-generator",
+    "authorscale",
+    "uplodio",
+    "schedpilot",
+    "bestever",
+    "cloutsim-influencer-simulator",
+    "instaclip"
+  ]
 }

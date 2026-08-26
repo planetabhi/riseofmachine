@@ -5,5 +5,15 @@
   "url": "https://onlook.app/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-08-25",
-  "slug": "onlook-for-web"
+  "slug": "onlook-for-web",
+  "related": [
+    "traceroot",
+    "elements-by-vercel",
+    "keys-and-caches",
+    "deepseek-v31",
+    "omnara",
+    "speedvitals-rum",
+    "palmscanner-ai",
+    "vedic-astrology-chart"
+  ]
 }

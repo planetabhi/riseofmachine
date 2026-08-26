@@ -5,5 +5,15 @@
   "url": "https://lyricstosongai.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-17",
-  "slug": "lyricstosong"
+  "slug": "lyricstosong",
+  "related": [
+    "mp3-to-text",
+    "lami",
+    "voicetype",
+    "playht",
+    "song-maker",
+    "trint",
+    "unreal-speech",
+    "wellsaid-labs"
+  ]
 }

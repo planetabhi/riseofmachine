@@ -5,5 +5,15 @@
   "url": "https://www.heronai.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-16",
-  "slug": "heronai"
+  "slug": "heronai",
+  "related": [
+    "chat4data",
+    "datviz",
+    "scite",
+    "gaabstract",
+    "research",
+    "resea-ai",
+    "storm",
+    "marketalertsai"
+  ]
 }

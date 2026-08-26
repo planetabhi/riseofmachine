@@ -5,5 +5,15 @@
   "url": "https://framia.converge.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-06-27",
-  "slug": "framia-pro"
+  "slug": "framia-pro",
+  "related": [
+    "pictory",
+    "gemini-omni-ai",
+    "lehar-ai-video-generator",
+    "video-upscaler",
+    "recapoai",
+    "imagineclip",
+    "video-to-prompt",
+    "openseedance"
+  ]
 }

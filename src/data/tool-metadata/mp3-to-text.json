@@ -5,5 +5,15 @@
   "url": "https://mp3totext.net?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-12-24",
-  "slug": "mp3-to-text"
+  "slug": "mp3-to-text",
+  "related": [
+    "lami",
+    "voicetype",
+    "playht",
+    "lyricstosong",
+    "trint",
+    "unreal-speech",
+    "wellsaid-labs",
+    "cleanaudio-ai"
+  ]
 }

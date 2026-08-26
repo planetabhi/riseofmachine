@@ -5,5 +5,15 @@
   "url": "https://ghibliart.ai/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-01",
-  "slug": "ghibli-art-ai"
+  "slug": "ghibli-art-ai",
+  "related": [
+    "ghibli-app",
+    "makebw",
+    "image-to-3d-ai",
+    "visual-chatgpt",
+    "designer",
+    "picture-generator",
+    "image-generator-nsfw",
+    "grok-ghibli"
+  ]
 }

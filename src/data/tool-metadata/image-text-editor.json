@@ -5,5 +5,15 @@
   "url": "https://imagetexteditor.org?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-22",
-  "slug": "image-text-editor"
+  "slug": "image-text-editor",
+  "related": [
+    "photo-editor",
+    "image-describer",
+    "imggood",
+    "beautycam-image-master",
+    "graficai",
+    "fotol-image-generator",
+    "photoleap",
+    "promptwall"
+  ]
 }

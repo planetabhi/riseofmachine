@@ -5,5 +5,15 @@
   "url": "https://walles.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "walles"
+  "slug": "walles",
+  "related": [
+    "intellibar",
+    "otter",
+    "mavexai",
+    "krisp",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

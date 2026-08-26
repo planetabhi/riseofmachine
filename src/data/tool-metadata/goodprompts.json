@@ -5,5 +5,15 @@
   "url": "https://www.aigoodprompts.com/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-26",
-  "slug": "goodprompts"
+  "slug": "goodprompts",
+  "related": [
+    "xprompts",
+    "midlearning",
+    "banana-prompts",
+    "prompt-generator",
+    "diligence-check",
+    "promptforge",
+    "srefhunter",
+    "dallelist"
+  ]
 }

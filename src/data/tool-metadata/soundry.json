@@ -5,5 +5,15 @@
   "url": "https://soundry.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "soundry"
+  "slug": "soundry",
+  "related": [
+    "murekaai",
+    "tomusic",
+    "musegen",
+    "image-to-music-ai",
+    "lyria3",
+    "orange-music",
+    "lyrics-to-song",
+    "mubert"
+  ]
 }

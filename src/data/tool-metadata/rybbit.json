@@ -5,5 +5,15 @@
   "url": "https://rybbit.com/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-11-12",
-  "slug": "rybbit"
+  "slug": "rybbit",
+  "related": [
+    "open-interpreter",
+    "new-ui",
+    "n8n-workflow-builder",
+    "ai-sdk-5-by-vercel",
+    "ollama-desktop-app",
+    "axflow",
+    "neum",
+    "rysana"
+  ]
 }

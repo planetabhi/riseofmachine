@@ -5,5 +5,15 @@
   "url": "https://kyutai.org/next/tts?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-07-07",
-  "slug": "kyutai-tts"
+  "slug": "kyutai-tts",
+  "related": [
+    "f5-tts",
+    "audio-transcriber-ai",
+    "voqusa",
+    "sonicker",
+    "nicevoice",
+    "eleven-ai",
+    "seamless",
+    "so-vits-svc"
+  ]
 }

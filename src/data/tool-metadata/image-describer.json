@@ -5,5 +5,15 @@
   "url": "https://imagedescriber.dev/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-31",
-  "slug": "image-describer"
+  "slug": "image-describer",
+  "related": [
+    "image-text-editor",
+    "graficai",
+    "fotol-image-generator",
+    "promptwall",
+    "magnific",
+    "blur-background",
+    "gemini-flash-image",
+    "dressx"
+  ]
 }

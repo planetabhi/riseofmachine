@@ -5,5 +5,15 @@
   "url": "https://resea.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-31",
-  "slug": "resea-ai"
+  "slug": "resea-ai",
+  "related": [
+    "research",
+    "osum",
+    "gaabstract",
+    "capgo-ai",
+    "consensus",
+    "scite",
+    "papers",
+    "heronai"
+  ]
 }

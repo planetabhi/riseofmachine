@@ -5,5 +5,15 @@
   "url": "https://exactly.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-25",
-  "slug": "exactly"
+  "slug": "exactly",
+  "related": [
+    "oc-maker-1",
+    "imagefx",
+    "banana-pro",
+    "gpt-image-2-1",
+    "nanobanana-pro",
+    "comicsmakernet",
+    "zilivo-ai",
+    "banana-ai-2"
+  ]
 }

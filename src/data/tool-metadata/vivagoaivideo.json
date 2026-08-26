@@ -5,5 +5,15 @@
   "url": "https://vivago.ai/video?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "vivagoaivideo"
+  "slug": "vivagoaivideo",
+  "related": [
+    "soda-video-ai",
+    "transcribe-video-ai",
+    "videomaker",
+    "videoswapface",
+    "veo3bot",
+    "tryveo3",
+    "image-to-video",
+    "vidu-studio"
+  ]
 }

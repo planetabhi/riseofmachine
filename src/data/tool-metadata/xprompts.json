@@ -5,5 +5,15 @@
   "url": "https://xprompts.app?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-01-22",
-  "slug": "xprompts"
+  "slug": "xprompts",
+  "related": [
+    "goodprompts",
+    "banana-prompts",
+    "midlearning",
+    "prompt-generator",
+    "diligence-check",
+    "promptforge",
+    "srefhunter",
+    "dallelist"
+  ]
 }

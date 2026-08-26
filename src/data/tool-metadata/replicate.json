@@ -5,5 +5,15 @@
   "url": "https://replicate.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-10-30",
-  "slug": "replicate"
+  "slug": "replicate",
+  "related": [
+    "modal",
+    "run-llm",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena"
+  ]
 }

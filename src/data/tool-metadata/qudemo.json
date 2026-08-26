@@ -5,5 +5,15 @@
   "url": "https://www.qudemo.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-24",
-  "slug": "qudemo"
+  "slug": "qudemo",
+  "related": [
+    "hoox",
+    "supermaker",
+    "genmo",
+    "vidmix",
+    "lyric-video-studio",
+    "vmeg-clips-to-videos",
+    "creatify",
+    "gemini-omni-ai"
+  ]
 }

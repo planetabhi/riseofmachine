@@ -5,5 +5,15 @@
   "url": "https://you.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "you"
+  "slug": "you",
+  "related": [
+    "agentsea",
+    "fireflies",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform"
+  ]
 }

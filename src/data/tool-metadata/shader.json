@@ -5,5 +5,15 @@
   "url": "https://www.shaderapp.com/?ref=riseofmachine.com",
   "tag": "Private Beta",
   "date-added": "2023-12-25",
-  "slug": "shader"
+  "slug": "shader",
+  "related": [
+    "make-song-ai",
+    "musikso",
+    "song-lyrics-review",
+    "ai-rapper",
+    "olive",
+    "unideck-beta",
+    "easysite",
+    "pageai"
+  ]
 }

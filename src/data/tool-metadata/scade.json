@@ -5,5 +5,15 @@
   "url": "https://www.scade.pro/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-24",
-  "slug": "scade"
+  "slug": "scade",
+  "related": [
+    "synthetic",
+    "starter-best",
+    "runpod",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "screenshot-to-code"
+  ]
 }

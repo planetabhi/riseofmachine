@@ -5,5 +5,15 @@
   "url": "https://deforum.art/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-31",
-  "slug": "deforum"
+  "slug": "deforum",
+  "related": [
+    "morph-studio",
+    "opusclip",
+    "pixverse",
+    "moonvalley",
+    "framia-pro",
+    "gemini-omni-ai",
+    "lehar-ai-video-generator",
+    "video-upscaler"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://lobechat.com/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-04",
-  "slug": "lobe-chat"
+  "slug": "lobe-chat",
+  "related": [
+    "bingchain",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "cursor-mcp",
+    "buildrs"
+  ]
 }

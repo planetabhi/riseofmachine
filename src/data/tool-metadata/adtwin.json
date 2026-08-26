@@ -5,5 +5,15 @@
   "url": "https://adtwin.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-31",
-  "slug": "adtwin"
+  "slug": "adtwin",
+  "related": [
+    "cleanaudio-ai",
+    "audio-muse",
+    "mix-audio",
+    "reelscribe",
+    "descript",
+    "trint",
+    "sync",
+    "wellsaid-labs"
+  ]
 }

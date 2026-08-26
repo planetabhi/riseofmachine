@@ -5,5 +5,15 @@
   "url": "https://getsmartgpt.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-01",
-  "slug": "smartgpt"
+  "slug": "smartgpt",
+  "related": [
+    "openart",
+    "prompthero",
+    "gemini-photo-prompt",
+    "eye-for-ai",
+    "promptvibe",
+    "gpt-prompts",
+    "goodprompts",
+    "promptbox"
+  ]
 }

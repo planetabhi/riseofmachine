@@ -5,5 +5,15 @@
   "url": "https://coderplan.ai?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-06-06",
-  "slug": "coderplan"
+  "slug": "coderplan",
+  "related": [
+    "gptgeminigrokai",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "character",
+    "flowpoint",
+    "resolveai"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.morphstudio.com/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-26",
-  "slug": "morph-studio"
+  "slug": "morph-studio",
+  "related": [
+    "moonvalley",
+    "opusclip",
+    "pixverse",
+    "vidu-studio",
+    "soda-video-ai",
+    "lyric-video-studio",
+    "deforum",
+    "neural-frames"
+  ]
 }

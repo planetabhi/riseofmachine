@@ -5,5 +5,15 @@
   "url": "https://openrouter.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2023-12-29",
-  "slug": "openrouter"
+  "slug": "openrouter",
+  "related": [
+    "coderplan",
+    "llamaindex",
+    "gptgeminigrokai",
+    "ferryapi",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "auto-gpt"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://ezimgeditor.io?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-06-12",
-  "slug": "ez-img-editor"
+  "slug": "ez-img-editor",
+  "related": [
+    "ezmaker-ai",
+    "fast-image-ai-1",
+    "imggen-ai",
+    "quitarfondo",
+    "random-image-generator",
+    "piximagen",
+    "travel-photos",
+    "food-generator"
+  ]
 }

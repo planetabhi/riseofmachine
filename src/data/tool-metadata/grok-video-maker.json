@@ -5,5 +5,15 @@
   "url": "https://grokvideomaker.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-04-21",
-  "slug": "grok-video-maker"
+  "slug": "grok-video-maker",
+  "related": [
+    "grok-video-generator",
+    "viralrot",
+    "image-to-video",
+    "vivago",
+    "decohere",
+    "dance2ai",
+    "seedance-2-ai-video-generator",
+    "veo-4"
+  ]
 }

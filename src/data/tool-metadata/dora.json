@@ -5,5 +5,15 @@
   "url": "https://www.dora.run/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-25",
-  "slug": "dora"
+  "slug": "dora",
+  "related": [
+    "pixelesq",
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "uxmagic-ai",
+    "banani",
+    "graffiti-generator",
+    "ximagin"
+  ]
 }

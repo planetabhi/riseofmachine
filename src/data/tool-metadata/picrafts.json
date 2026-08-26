@@ -5,5 +5,15 @@
   "url": "https://picrafts.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-26",
-  "slug": "picrafts"
+  "slug": "picrafts",
+  "related": [
+    "z-image",
+    "fastimage",
+    "banana-ai-2",
+    "banana-ai-1",
+    "ptool",
+    "dsnr",
+    "gpt-image-2-1",
+    "zilivo-ai"
+  ]
 }

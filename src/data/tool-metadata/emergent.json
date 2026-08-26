@@ -5,5 +5,15 @@
   "url": "https://app.emergent.sh?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-11-12",
-  "slug": "emergent"
+  "slug": "emergent",
+  "related": [
+    "kixo",
+    "gpt-image-2-1",
+    "nanobanana-pro",
+    "comicsmakernet",
+    "zilivo-ai",
+    "banana-ai-2",
+    "gpt-image-2",
+    "editaimg"
+  ]
 }

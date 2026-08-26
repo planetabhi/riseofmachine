@@ -5,5 +5,15 @@
   "url": "https://www.lalal.ai/?ref=riseofmachine.com",
   "tag": "$18 one-time",
   "date-added": "2023-12-11",
-  "slug": "lalal"
+  "slug": "lalal",
+  "related": [
+    "audio-transcriber-ai",
+    "voqusa",
+    "ringfoods",
+    "cleanaudio-ai",
+    "sonicker",
+    "mp3-to-text",
+    "goose-pod",
+    "reelscribe"
+  ]
 }

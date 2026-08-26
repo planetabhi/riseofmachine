@@ -5,5 +5,15 @@
   "url": "https://yenex.com/?ref=riseofmachine.com",
   "tag": "$9.99 One-time",
   "date-added": "2025-06-02",
-  "slug": "yenex"
+  "slug": "yenex",
+  "related": [
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "floor-plan-maker",
+    "roblox-gui-maker",
+    "landscapioai",
+    "uxmagic-ai",
+    "banani"
+  ]
 }

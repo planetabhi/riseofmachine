@@ -5,5 +5,15 @@
   "url": "https://www.marblism.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "marblism"
+  "slug": "marblism",
+  "related": [
+    "chatsimple",
+    "ellie",
+    "superai",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu",
+    "chat-agents"
+  ]
 }

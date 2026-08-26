@@ -5,5 +5,15 @@
   "url": "https://ai-flux.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-30",
-  "slug": "flux-ai"
+  "slug": "flux-ai",
+  "related": [
+    "flux-ai-online",
+    "image-changer-app",
+    "fotol-image-generator",
+    "gemini-flash-image",
+    "preset-generator",
+    "befunky",
+    "imggood",
+    "animegenai"
+  ]
 }

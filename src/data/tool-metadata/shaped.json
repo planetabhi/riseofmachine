@@ -5,5 +5,15 @@
   "url": "https://www.shaped.ai/?ref=riseofmachine.com",
   "tag": "Flat-fee/mo",
   "date-added": "2023-12-15",
-  "slug": "shaped"
+  "slug": "shaped",
+  "related": [
+    "liner",
+    "smythos",
+    "lightning",
+    "amazon-sagemaker",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker"
+  ]
 }

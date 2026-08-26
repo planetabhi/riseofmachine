@@ -5,5 +5,15 @@
   "url": "https://typli.ai/?ref=riseofmachine.com",
   "tag": "From $49/mo",
   "date-added": "2023-12-12",
-  "slug": "typli"
+  "slug": "typli",
+  "related": [
+    "rytr",
+    "wordtune",
+    "hyperwrite",
+    "hypotenuse",
+    "paragraphai",
+    "writego",
+    "fastwrite",
+    "heynds"
+  ]
 }

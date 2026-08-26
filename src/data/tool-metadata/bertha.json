@@ -5,5 +5,15 @@
   "url": "https://bertha.ai/?ref=riseofmachine.com",
   "tag": "Pay-as-you-go",
   "date-added": "2023-12-12",
-  "slug": "bertha"
+  "slug": "bertha",
+  "related": [
+    "originality",
+    "contents",
+    "rytr",
+    "wordtune",
+    "anyword",
+    "closerscopy",
+    "hyperwrite",
+    "hypotenuse"
+  ]
 }

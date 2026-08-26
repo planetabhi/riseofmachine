@@ -5,5 +5,15 @@
   "url": "https://openinterpreter.com/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-28",
-  "slug": "open-interpreter"
+  "slug": "open-interpreter",
+  "related": [
+    "rybbit",
+    "new-ui",
+    "n8n-workflow-builder",
+    "ai-sdk-5-by-vercel",
+    "ollama-desktop-app",
+    "axflow",
+    "neum",
+    "rysana"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.ferryapi.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-06-05",
-  "slug": "ferryapi"
+  "slug": "ferryapi",
+  "related": [
+    "chatgpt",
+    "sid",
+    "gptgeminigrokai",
+    "coderplan",
+    "deepseek",
+    "agents-by-athena",
+    "character",
+    "flowpoint"
+  ]
 }

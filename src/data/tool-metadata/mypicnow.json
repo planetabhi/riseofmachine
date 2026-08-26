@@ -5,5 +5,15 @@
   "url": "https://www.mypicnow.com/?ref=riseofmachine.com",
   "tag": "From $16/mo",
   "date-added": "2025-06-06",
-  "slug": "mypicnow"
+  "slug": "mypicnow",
+  "related": [
+    "headshot-photo",
+    "magic-ai-avatars",
+    "mirror-ai",
+    "profile-picture-ai",
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer"
+  ]
 }

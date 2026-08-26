@@ -5,5 +5,15 @@
   "url": "https://www.animant.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-20",
-  "slug": "animant"
+  "slug": "animant",
+  "related": [
+    "gemini-omni-ai",
+    "lehar-ai-video-generator",
+    "video-upscaler",
+    "recapoai",
+    "framia-pro",
+    "imagineclip",
+    "video-to-prompt",
+    "openseedance"
+  ]
 }

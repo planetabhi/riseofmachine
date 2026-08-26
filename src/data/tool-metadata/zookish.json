@@ -5,5 +5,15 @@
   "url": "https://zookish.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-11",
-  "slug": "zookish"
+  "slug": "zookish",
+  "related": [
+    "xmind",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform",
+    "upscaler"
+  ]
 }

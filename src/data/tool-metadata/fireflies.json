@@ -5,5 +5,15 @@
   "url": "https://fireflies.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "fireflies"
+  "slug": "fireflies",
+  "related": [
+    "tldv",
+    "you",
+    "vocalscribe",
+    "lyra",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

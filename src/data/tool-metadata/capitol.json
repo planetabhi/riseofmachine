@@ -5,5 +5,15 @@
   "url": "https://capitol.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "capitol"
+  "slug": "capitol",
+  "related": [
+    "textgen",
+    "generor",
+    "rightblogger",
+    "botowski",
+    "copyai",
+    "easy-peasy",
+    "lek",
+    "pptdetector"
+  ]
 }

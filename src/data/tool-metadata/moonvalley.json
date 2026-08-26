@@ -5,5 +5,15 @@
   "url": "https://moonvalley.ai/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-15",
-  "slug": "moonvalley"
+  "slug": "moonvalley",
+  "related": [
+    "morph-studio",
+    "opusclip",
+    "pixverse",
+    "soda-video-ai",
+    "google-veo",
+    "deforum",
+    "neural-frames",
+    "seedances"
+  ]
 }

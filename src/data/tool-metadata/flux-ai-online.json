@@ -5,5 +5,15 @@
   "url": "https://fluxaiweb.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-08-31",
-  "slug": "flux-ai-online"
+  "slug": "flux-ai-online",
+  "related": [
+    "flux-ai",
+    "fotol-image-generator",
+    "gemini-flash-image",
+    "preset-generator",
+    "image-changer-app",
+    "animegenai",
+    "blur-background",
+    "image-describer"
+  ]
 }

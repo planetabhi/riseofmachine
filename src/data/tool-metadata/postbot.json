@@ -5,5 +5,15 @@
   "url": "https://learning.postman.com/docs/getting-started/basics/about-postbot/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "postbot"
+  "slug": "postbot",
+  "related": [
+    "poe-api",
+    "builduo",
+    "tabnine",
+    "buildship",
+    "screenshot-to-code",
+    "director",
+    "nora",
+    "orchids"
+  ]
 }

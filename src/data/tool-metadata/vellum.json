@@ -5,5 +5,15 @@
   "url": "https://www.vellum.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2023-12-29",
-  "slug": "vellum"
+  "slug": "vellum",
+  "related": [
+    "flappy",
+    "pieces",
+    "rork-app",
+    "lintrule",
+    "runpod",
+    "teachable-machine",
+    "chatgpt-apps-sdk",
+    "lightning"
+  ]
 }

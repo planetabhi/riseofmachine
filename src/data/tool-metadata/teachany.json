@@ -5,5 +5,15 @@
   "url": "https://www.teachany.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-05",
-  "slug": "teachany"
+  "slug": "teachany",
+  "related": [
+    "eduaide",
+    "essaybot",
+    "miss-formula",
+    "manna",
+    "fourgpa",
+    "lovestudyai",
+    "thesify",
+    "learnfast"
+  ]
 }

@@ -6,7 +6,7 @@ import HomeEnhancer from "../components/HomeEnhancer.astro";
 import OrganizationSchema from "../components/schema/OrganizationSchema.astro";
 import ItemListSchema from "../components/schema/ItemListSchema.astro";
 import data from "../data/tools.json";
-import { seededShuffle } from "../utils/sorting";
+import featured from "../data/featured.json";
 
 // Flatten all tools, tagging each with its category.
 const allTools = data.tools.flatMap((category: any) =>
@@ -21,7 +21,11 @@ const latestTools = [...allTools]
   )
   .slice(0, 12);
 
-const featuredTools = seededShuffle(allTools, Math.floor(Math.random() * 1e9)).slice(0, 4);
+// Editorial + rotated Featured picks, resolved from precomputed slugs.
+const bySlug = new Map(allTools.map((t: any) => [t.slug, t]));
+const featuredTools = (featured.slugs as string[])
+  .map((s) => bySlug.get(s))
+  .filter(Boolean);
 ---
 
 <Layout

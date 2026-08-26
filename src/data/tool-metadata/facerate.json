@@ -5,5 +5,15 @@
   "url": "https://facerate.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-10-30",
-  "slug": "facerate"
+  "slug": "facerate",
+  "related": [
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "add-person-to-photo",
+    "promptwall",
+    "image-text-editor"
+  ]
 }

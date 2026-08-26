@@ -5,5 +5,15 @@
   "url": "https://www.daydrm.ai/?ref=riseofmachine.com",
   "tag": "From $19/mo",
   "date-added": "2023-12-12",
-  "slug": "daydrm"
+  "slug": "daydrm",
+  "related": [
+    "copymatic",
+    "cowriter",
+    "headcanon-generator",
+    "ryter-pro",
+    "proofwrite-ai",
+    "manga-ai-translator",
+    "sickleaveemail",
+    "transmonkey"
+  ]
 }

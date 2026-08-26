@@ -5,5 +5,15 @@
   "url": "https://phototovideoai.io?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-20",
-  "slug": "photo-to-video-ai"
+  "slug": "photo-to-video-ai",
+  "related": [
+    "vidmix",
+    "gemini-omni-ai",
+    "seedance",
+    "openseedance",
+    "grok-video-generator",
+    "lyric-video-studio",
+    "libretto",
+    "fliki"
+  ]
 }

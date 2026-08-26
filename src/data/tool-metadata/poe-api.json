@@ -5,5 +5,15 @@
   "url": "https://poe.com/api_introduction?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-04",
-  "slug": "poe-api"
+  "slug": "poe-api",
+  "related": [
+    "builduo",
+    "postbot",
+    "strata",
+    "pythagora-20",
+    "amazon-sagemaker",
+    "tensorblock-forge",
+    "screenshot-to-code",
+    "director"
+  ]
 }

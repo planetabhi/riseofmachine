@@ -5,5 +5,15 @@
   "url": "https://ezmaker.ai/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-06-17",
-  "slug": "ezmaker-ai"
+  "slug": "ezmaker-ai",
+  "related": [
+    "ez-img-editor",
+    "imggen-ai",
+    "quitarfondo",
+    "fast-image-ai-1",
+    "random-image-generator",
+    "piximagen",
+    "travel-photos",
+    "food-generator"
+  ]
 }

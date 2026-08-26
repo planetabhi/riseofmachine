@@ -5,5 +5,15 @@
   "url": "https://originality.ai/?ref=riseofmachine.com",
   "tag": "Pay-as-you-go",
   "date-added": "2023-12-26",
-  "slug": "originality"
+  "slug": "originality",
+  "related": [
+    "contents",
+    "detector-writer",
+    "bertha",
+    "undetect",
+    "generor",
+    "rightblogger",
+    "botowski",
+    "copyai"
+  ]
 }

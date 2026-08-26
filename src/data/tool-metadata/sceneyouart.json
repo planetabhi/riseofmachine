@@ -5,5 +5,15 @@
   "url": "https://sceneyou.art?ref=riseofmachine.com",
   "tag": "From $19/mo",
   "date-added": "2026-01-22",
-  "slug": "sceneyouart"
+  "slug": "sceneyouart",
+  "related": [
+    "random-image-generator",
+    "imggen-ai",
+    "graficai",
+    "bulk-image-generator",
+    "fotol-image-generator",
+    "image-optimizer",
+    "ezmaker-ai",
+    "ez-img-editor"
+  ]
 }

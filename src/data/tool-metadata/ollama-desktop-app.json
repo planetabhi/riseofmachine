@@ -5,5 +5,15 @@
   "url": "https://ollama.ai/download?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-08-01",
-  "slug": "ollama-desktop-app"
+  "slug": "ollama-desktop-app",
+  "related": [
+    "new-ui",
+    "n8n-workflow-builder",
+    "rybbit",
+    "ai-sdk-5-by-vercel",
+    "axflow",
+    "neum",
+    "rysana",
+    "tinygrad"
+  ]
 }

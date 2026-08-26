@@ -5,5 +5,15 @@
   "url": "https://synclabs.so/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-29",
-  "slug": "sync"
+  "slug": "sync",
+  "related": [
+    "reelscribe",
+    "trint",
+    "cleanaudio-ai",
+    "adtwin",
+    "audio-muse",
+    "mix-audio",
+    "wellsaid-labs",
+    "mp3-to-text"
+  ]
 }

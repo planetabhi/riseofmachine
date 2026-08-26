@@ -5,5 +5,15 @@
   "url": "https://www.developerpal.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "developer-pal"
+  "slug": "developer-pal",
+  "related": [
+    "blackbox-ai",
+    "q-developer",
+    "cody-by-sourcegraph",
+    "bito",
+    "forge",
+    "grok-video",
+    "builderio",
+    "lovable"
+  ]
 }

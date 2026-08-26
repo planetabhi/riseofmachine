@@ -5,5 +5,15 @@
   "url": "https://cekura.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-24",
-  "slug": "cekura"
+  "slug": "cekura",
+  "related": [
+    "atla",
+    "strata",
+    "smythos",
+    "zen-agents",
+    "stringcom",
+    "pythagora-20",
+    "screenshot-to-code",
+    "director"
+  ]
 }

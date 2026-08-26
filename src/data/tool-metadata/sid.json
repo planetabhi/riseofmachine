@@ -5,5 +5,15 @@
   "url": "https://www.sid.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "sid"
+  "slug": "sid",
+  "related": [
+    "ferryapi",
+    "gptgeminigrokai",
+    "coderplan",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "character",
+    "flowpoint"
+  ]
 }

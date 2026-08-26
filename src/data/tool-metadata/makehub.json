@@ -5,5 +5,15 @@
   "url": "https://makehub.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-24",
-  "slug": "makehub"
+  "slug": "makehub",
+  "related": [
+    "poe-api",
+    "builduo",
+    "lintrule",
+    "vellum",
+    "postbot",
+    "tensorblock-forge",
+    "tinq",
+    "create-apidev"
+  ]
 }

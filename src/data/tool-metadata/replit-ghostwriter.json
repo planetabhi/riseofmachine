@@ -5,5 +5,15 @@
   "url": "https://replit.com/site/ghostwriter?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "replit-ghostwriter"
+  "slug": "replit-ghostwriter",
+  "related": [
+    "cursor",
+    "forge",
+    "grok-video",
+    "blackbox-ai",
+    "builderio",
+    "cody-by-sourcegraph",
+    "developer-pal",
+    "lovable"
+  ]
 }

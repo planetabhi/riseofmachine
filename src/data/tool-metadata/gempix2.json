@@ -5,5 +5,15 @@
   "url": "https://gempix2ai.art/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-11-10",
-  "slug": "gempix2"
+  "slug": "gempix2",
+  "related": [
+    "image-to-3d-ai",
+    "image-to-image-maker",
+    "image-generator-nsfw",
+    "z-image",
+    "picture-generator",
+    "makebw",
+    "comicsai",
+    "fastimage"
+  ]
 }

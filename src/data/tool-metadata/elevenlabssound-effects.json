@@ -5,5 +5,15 @@
   "url": "https://elevenlabs.io/app/sound-effects?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "elevenlabssound-effects"
+  "slug": "elevenlabssound-effects",
+  "related": [
+    "audiocraft",
+    "shazam",
+    "raplyrics",
+    "sprunki",
+    "vocal-remover",
+    "songburst",
+    "image-to-music-ai",
+    "lyria3"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://namelix.com/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-06",
-  "slug": "namelix"
+  "slug": "namelix",
+  "related": [
+    "security-questionnaire",
+    "myreport",
+    "prometai",
+    "venturekit",
+    "cody",
+    "rainex-agents",
+    "gptbotsai",
+    "chat-whisperer"
+  ]
 }

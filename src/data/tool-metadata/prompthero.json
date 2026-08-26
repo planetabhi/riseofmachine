@@ -5,5 +5,15 @@
   "url": "https://prompthero.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "prompthero"
+  "slug": "prompthero",
+  "related": [
+    "openart",
+    "smartgpt",
+    "gemini-photo-prompt",
+    "eye-for-ai",
+    "midlearning",
+    "promptvibe",
+    "gpt-prompts",
+    "goodprompts"
+  ]
 }

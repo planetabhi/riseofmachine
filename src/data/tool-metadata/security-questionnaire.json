@@ -5,5 +5,15 @@
   "url": "https://sprinto.com/security-questionnaire/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-09-24",
-  "slug": "security-questionnaire"
+  "slug": "security-questionnaire",
+  "related": [
+    "namelix",
+    "nuclia",
+    "raykolabs",
+    "ellie",
+    "superai",
+    "streaml",
+    "conduit",
+    "salestarget"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.nostalgia.photo/?ref=riseofmachine.com",
   "tag": "From $3",
   "date-added": "2023-12-15",
-  "slug": "nostalgia-photo"
+  "slug": "nostalgia-photo",
+  "related": [
+    "restore-photos",
+    "photo",
+    "photo-editor",
+    "photify",
+    "photoleap",
+    "cozaiphoto",
+    "headshot-photo",
+    "hama"
+  ]
 }

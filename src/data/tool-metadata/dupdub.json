@@ -5,5 +5,15 @@
   "url": "https://www.dupdub.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "dupdub"
+  "slug": "dupdub",
+  "related": [
+    "generor",
+    "rightblogger",
+    "pptdetector",
+    "yahini",
+    "unbounce",
+    "remagine-ai",
+    "justdone-ai",
+    "blogwald"
+  ]
 }

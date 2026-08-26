@@ -5,5 +5,15 @@
   "url": "https://rebillion.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-23",
-  "slug": "rebellion"
+  "slug": "rebellion",
+  "related": [
+    "chatsimple",
+    "rainex-agents",
+    "toffu",
+    "jude-ai",
+    "ellie",
+    "superai",
+    "conduit",
+    "salestarget"
+  ]
 }

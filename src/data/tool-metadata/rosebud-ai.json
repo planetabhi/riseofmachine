@@ -5,5 +5,15 @@
   "url": "https://www.rosebud.ai/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-12",
-  "slug": "rosebud-ai"
+  "slug": "rosebud-ai",
+  "related": [
+    "combos-ai",
+    "rolechar",
+    "game-generator",
+    "chub",
+    "meshy",
+    "silentsalt",
+    "pinpoint-answer",
+    "path-weaver"
+  ]
 }

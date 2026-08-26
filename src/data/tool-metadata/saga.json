@@ -5,5 +5,15 @@
   "url": "https://sagarpg.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "saga"
+  "slug": "saga",
+  "related": [
+    "game-generator",
+    "soga-ai",
+    "meshy",
+    "rolechar",
+    "chub",
+    "path-weaver",
+    "roleplayr",
+    "combos-ai"
+  ]
 }

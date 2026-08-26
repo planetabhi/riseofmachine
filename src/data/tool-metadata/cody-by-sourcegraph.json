@@ -5,5 +5,15 @@
   "url": "https://about.sourcegraph.com/cody?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "cody-by-sourcegraph"
+  "slug": "cody-by-sourcegraph",
+  "related": [
+    "blackbox-ai",
+    "developer-pal",
+    "bito",
+    "q-developer",
+    "qodo",
+    "forge",
+    "grok-video",
+    "builderio"
+  ]
 }

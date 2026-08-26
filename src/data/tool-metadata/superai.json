@@ -5,5 +5,15 @@
   "url": "https://super.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-21",
-  "slug": "superai"
+  "slug": "superai",
+  "related": [
+    "ellie",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu",
+    "chat-agents",
+    "insights-by-couplerio",
+    "sniff-job"
+  ]
 }

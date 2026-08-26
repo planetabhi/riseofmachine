@@ -5,5 +5,15 @@
   "url": "https://flowpoint.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "flowpoint"
+  "slug": "flowpoint",
+  "related": [
+    "agents-by-athena",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "character",
+    "resolveai"
+  ]
 }

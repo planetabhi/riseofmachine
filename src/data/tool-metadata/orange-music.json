@@ -5,5 +5,15 @@
   "url": "https://oaimusicgen.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-04",
-  "slug": "orange-music"
+  "slug": "orange-music",
+  "related": [
+    "musegen",
+    "image-to-music-ai",
+    "music-generator",
+    "song-generator",
+    "lyrics-to-song",
+    "murekaai",
+    "wondera",
+    "tomusic"
+  ]
 }

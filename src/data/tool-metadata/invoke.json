@@ -5,5 +5,15 @@
   "url": "https://invoke.ai/?ref=riseofmachine.com",
   "tag": "From $13/mo",
   "date-added": "2023-12-26",
-  "slug": "invoke"
+  "slug": "invoke",
+  "related": [
+    "yix",
+    "gpt-image-2-1",
+    "nanobanana-pro",
+    "comicsmakernet",
+    "zilivo-ai",
+    "igly-ai",
+    "image-to-3d-ai",
+    "banana-ai-2"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.meshy.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "meshy"
+  "slug": "meshy",
+  "related": [
+    "roleplayr",
+    "saga",
+    "rolechar",
+    "game-generator",
+    "chub",
+    "path-weaver",
+    "soga-ai",
+    "combos-ai"
+  ]
 }

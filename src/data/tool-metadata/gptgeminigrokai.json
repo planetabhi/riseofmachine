@@ -5,5 +5,15 @@
   "url": "https://trygrokai.asia/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-31",
-  "slug": "gptgeminigrokai"
+  "slug": "gptgeminigrokai",
+  "related": [
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "character",
+    "flowpoint",
+    "resolveai"
+  ]
 }

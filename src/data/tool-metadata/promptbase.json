@@ -5,5 +5,15 @@
   "url": "https://promptbase.com/?ref=riseofmachine.com",
   "tag": "Marketplace",
   "date-added": "2023-12-15",
-  "slug": "promptbase"
+  "slug": "promptbase",
+  "related": [
+    "promptvibe",
+    "gpt-prompts",
+    "goodprompts",
+    "promptbox",
+    "promptlayer",
+    "flowgpt",
+    "openart",
+    "xprompts"
+  ]
 }

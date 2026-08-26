@@ -5,5 +5,15 @@
   "url": "https://silentsalt.site/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-10-03",
-  "slug": "silentsalt"
+  "slug": "silentsalt",
+  "related": [
+    "game-generator",
+    "soga-ai",
+    "pinpoint-answer",
+    "saga",
+    "combos-ai",
+    "rolechar",
+    "chub",
+    "meshy"
+  ]
 }

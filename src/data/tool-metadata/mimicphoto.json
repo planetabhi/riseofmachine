@@ -5,5 +5,15 @@
   "url": "https://mimicphoto.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "mimicphoto"
+  "slug": "mimicphoto",
+  "related": [
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "add-person-to-photo",
+    "promptwall",
+    "image-text-editor"
+  ]
 }

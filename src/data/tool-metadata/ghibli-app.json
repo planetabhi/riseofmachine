@@ -5,5 +5,15 @@
   "url": "https://aighibli.app/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-01",
-  "slug": "ghibli-app"
+  "slug": "ghibli-app",
+  "related": [
+    "ghibli-art-ai",
+    "makebw",
+    "comicsai",
+    "image-to-3d-ai",
+    "image-to-image-maker",
+    "picture-generator",
+    "wanai",
+    "gempix2"
+  ]
 }

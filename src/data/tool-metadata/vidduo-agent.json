@@ -5,5 +5,15 @@
   "url": "https://www.vidduo.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-29",
-  "slug": "vidduo-agent"
+  "slug": "vidduo-agent",
+  "related": [
+    "lyric-video-studio",
+    "lehar-ai-video-generator",
+    "video-to-prompt",
+    "seedance",
+    "veo3-video-generator",
+    "viralrot",
+    "photo-to-video-ai",
+    "hoox"
+  ]
 }

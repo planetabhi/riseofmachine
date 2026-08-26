@@ -5,5 +5,15 @@
   "url": "https://www.guidde.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "guidde"
+  "slug": "guidde",
+  "related": [
+    "ellie",
+    "superai",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu",
+    "chat-agents",
+    "insights-by-couplerio"
+  ]
 }

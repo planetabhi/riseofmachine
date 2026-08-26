@@ -5,5 +5,15 @@
   "url": "https://happyhorses.online?ref=riseofmachine.com",
   "tag": "From $9/mo",
   "date-added": "2026-04-21",
-  "slug": "happyhorse"
+  "slug": "happyhorse",
+  "related": [
+    "openseedance",
+    "kling-30",
+    "seedance",
+    "viralrot",
+    "photo-to-video-ai",
+    "image-to-video",
+    "vivago",
+    "decohere"
+  ]
 }

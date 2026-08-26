@@ -5,5 +5,15 @@
   "url": "https://askconcierge.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "concierge"
+  "slug": "concierge",
+  "related": [
+    "taskade",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform",
+    "upscaler"
+  ]
 }

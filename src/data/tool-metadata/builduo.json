@@ -5,5 +5,15 @@
   "url": "https://builduo.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-16",
-  "slug": "builduo"
+  "slug": "builduo",
+  "related": [
+    "poe-api",
+    "postbot",
+    "helix",
+    "smythos",
+    "zen-agents",
+    "buildship",
+    "amazon-sagemaker",
+    "screenshot-to-code"
+  ]
 }

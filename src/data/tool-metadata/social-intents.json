@@ -5,5 +5,15 @@
   "url": "https://www.socialintents.com/?ref=riseofmachine.com",
   "tag": "From $39/mo",
   "date-added": "2024-12-14",
-  "slug": "social-intents"
+  "slug": "social-intents",
+  "related": [
+    "dust",
+    "chatclient",
+    "kommunicate",
+    "albus",
+    "raykolabs",
+    "ellie",
+    "superai",
+    "streaml"
+  ]
 }

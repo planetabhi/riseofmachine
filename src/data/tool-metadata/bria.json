@@ -5,5 +5,15 @@
   "url": "https://bria.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "bria"
+  "slug": "bria",
+  "related": [
+    "attractiveness-scale",
+    "picsart",
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "add-person-to-photo"
+  ]
 }

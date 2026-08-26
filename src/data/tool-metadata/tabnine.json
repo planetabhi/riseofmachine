@@ -5,5 +5,15 @@
   "url": "https://www.tabnine.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "tabnine"
+  "slug": "tabnine",
+  "related": [
+    "postbot",
+    "screenshot-to-code",
+    "director",
+    "nora",
+    "orchids",
+    "atla",
+    "strata",
+    "teable"
+  ]
 }

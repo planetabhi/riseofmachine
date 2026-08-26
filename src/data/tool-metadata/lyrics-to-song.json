@@ -5,5 +5,15 @@
   "url": "https://lyricstosong.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-11",
-  "slug": "lyrics-to-song"
+  "slug": "lyrics-to-song",
+  "related": [
+    "song-generator",
+    "suno",
+    "orange-music",
+    "image-to-music-ai",
+    "lyria3",
+    "musegen",
+    "murekaai",
+    "mubert"
+  ]
 }

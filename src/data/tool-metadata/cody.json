@@ -5,5 +5,15 @@
   "url": "https://meetcody.ai/?ref=riseofmachine.com",
   "tag": "$29/mo",
   "date-added": "2023-12-27",
-  "slug": "cody"
+  "slug": "cody",
+  "related": [
+    "ellie",
+    "myreport",
+    "prometai",
+    "venturekit",
+    "dust",
+    "sniff-job",
+    "hoory",
+    "rainex-agents"
+  ]
 }

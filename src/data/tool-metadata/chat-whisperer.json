@@ -5,5 +5,15 @@
   "url": "https://chatwhisperer.ai?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-02",
-  "slug": "chat-whisperer"
+  "slug": "chat-whisperer",
+  "related": [
+    "myreport",
+    "prometai",
+    "chat-agents",
+    "rainex-agents",
+    "chatclient",
+    "ellie",
+    "superai",
+    "conduit"
+  ]
 }

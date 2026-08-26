@@ -5,5 +5,15 @@
   "url": "https://www.lintrule.com/?ref=riseofmachine.com",
   "tag": "$1.00/1,000 lines",
   "date-added": "2023-12-29",
-  "slug": "lintrule"
+  "slug": "lintrule",
+  "related": [
+    "fitten-code",
+    "vellum",
+    "i18n-code-gen",
+    "screenshot-to-code",
+    "amazon-codewhisperer",
+    "blaze-sql",
+    "open-interpreter",
+    "flappy"
+  ]
 }

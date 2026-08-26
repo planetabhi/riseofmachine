@@ -5,5 +5,15 @@
   "url": "https://browserbase.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-11-12",
-  "slug": "director"
+  "slug": "director",
+  "related": [
+    "lightning",
+    "screenshot-to-code",
+    "nora",
+    "orchids",
+    "atla",
+    "strata",
+    "teable",
+    "rork-app"
+  ]
 }

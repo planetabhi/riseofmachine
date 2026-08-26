@@ -5,5 +5,15 @@
   "url": "https://www.qodo.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "qodo"
+  "slug": "qodo",
+  "related": [
+    "grok-video",
+    "cody-by-sourcegraph",
+    "forge",
+    "blackbox-ai",
+    "builderio",
+    "developer-pal",
+    "lovable",
+    "replit-ghostwriter"
+  ]
 }

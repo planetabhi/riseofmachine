@@ -5,5 +5,15 @@
   "url": "https://www.songburst.ai/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-28",
-  "slug": "songburst"
+  "slug": "songburst",
+  "related": [
+    "raplyrics",
+    "shazam",
+    "sprunki",
+    "audiocraft",
+    "vocal-remover",
+    "elevenlabssound-effects",
+    "music-generator",
+    "song-generator"
+  ]
 }

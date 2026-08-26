@@ -5,5 +5,15 @@
   "url": "https://hipocap.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-04",
-  "slug": "hipocap"
+  "slug": "hipocap",
+  "related": [
+    "jigso",
+    "timeos",
+    "notion",
+    "everyday",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

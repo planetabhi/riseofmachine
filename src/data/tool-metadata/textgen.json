@@ -5,5 +5,15 @@
   "url": "https://text-gen.com/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-24",
-  "slug": "textgen"
+  "slug": "textgen",
+  "related": [
+    "notion-ai",
+    "capitol",
+    "generor",
+    "rightblogger",
+    "botowski",
+    "copyai",
+    "easy-peasy",
+    "lek"
+  ]
 }

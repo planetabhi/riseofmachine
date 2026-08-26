@@ -5,5 +5,15 @@
   "url": "https://aiimagechanger.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-31",
-  "slug": "image-changer-app"
+  "slug": "image-changer-app",
+  "related": [
+    "fotol-image-generator",
+    "promptwall",
+    "flux-ai",
+    "gemini-flash-image",
+    "flux-ai-online",
+    "graficai",
+    "magnific",
+    "blur-background"
+  ]
 }

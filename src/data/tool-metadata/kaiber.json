@@ -5,5 +5,15 @@
   "url": "https://kaiber.ai/?ref=riseofmachine.com",
   "tag": "From $5/mo",
   "date-added": "2023-12-31",
-  "slug": "kaiber"
+  "slug": "kaiber",
+  "related": [
+    "vidmix",
+    "creatify",
+    "lehar-ai-video-generator",
+    "lumen5",
+    "img2video",
+    "kungfu",
+    "picloft",
+    "veo3-video-generator"
+  ]
 }

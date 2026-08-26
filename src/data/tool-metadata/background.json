@@ -5,5 +5,15 @@
   "url": "https://aibackground.net?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-26",
-  "slug": "background"
+  "slug": "background",
+  "related": [
+    "blur-background",
+    "dressx",
+    "graficai",
+    "fotol-image-generator",
+    "promptwall",
+    "remove-background-by-picsart",
+    "magnific",
+    "photoroom"
+  ]
 }

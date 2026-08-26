@@ -5,5 +5,15 @@
   "url": "https://soundraw.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "soundraw"
+  "slug": "soundraw",
+  "related": [
+    "beatoven",
+    "mubert",
+    "image-to-music-ai",
+    "tempolor",
+    "music-generator",
+    "song-generator",
+    "murekaai",
+    "wondera"
+  ]
 }

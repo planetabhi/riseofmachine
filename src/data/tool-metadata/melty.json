@@ -5,5 +5,15 @@
   "url": "https://melty.sh/?ref=riseofmachine.com",
   "tag": "Early access",
   "date-added": "2024-09-11",
-  "slug": "melty"
+  "slug": "melty",
+  "related": [
+    "codestream",
+    "cursor",
+    "code-snippets",
+    "cody-by-sourcegraph",
+    "qodo",
+    "forge",
+    "grok-video",
+    "blackbox-ai"
+  ]
 }

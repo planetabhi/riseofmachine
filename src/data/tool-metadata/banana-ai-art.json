@@ -5,5 +5,15 @@
   "url": "https://banana-ai.art/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-11-03",
-  "slug": "banana-ai-art"
+  "slug": "banana-ai-art",
+  "related": [
+    "banana-ai-2",
+    "z-image",
+    "banana-ai",
+    "anyimg",
+    "banana-pro",
+    "image-to-prompt",
+    "nano-banana-pro",
+    "fastimage"
+  ]
 }

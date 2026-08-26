@@ -5,5 +5,15 @@
   "url": "https://boo.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-12",
-  "slug": "booai"
+  "slug": "booai",
+  "related": [
+    "simplified",
+    "proofwrite-ai",
+    "ryter-pro",
+    "bypassgpt",
+    "the-humanize",
+    "manga-ai-translator",
+    "transmonkey",
+    "justdone-ai"
+  ]
 }

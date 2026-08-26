@@ -5,5 +5,15 @@
   "url": "https://geminiomni.co/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-31",
-  "slug": "gemini-omni-ai"
+  "slug": "gemini-omni-ai",
+  "related": [
+    "photo-to-video-ai",
+    "sora-2",
+    "seedance",
+    "hoox",
+    "supermaker",
+    "genmo",
+    "openseedance",
+    "grok-video-generator"
+  ]
 }

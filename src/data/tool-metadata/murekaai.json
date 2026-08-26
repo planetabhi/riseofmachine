@@ -5,5 +5,15 @@
   "url": "https://www.mureka.ai?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-14",
-  "slug": "murekaai"
+  "slug": "murekaai",
+  "related": [
+    "tomusic",
+    "musegen",
+    "music-generator",
+    "song-generator",
+    "wondera",
+    "imagetomusic",
+    "music-ai",
+    "tracksy"
+  ]
 }

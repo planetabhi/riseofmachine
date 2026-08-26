@@ -5,5 +5,15 @@
   "url": "https://www.success.ai/?ref=riseofmachine.com",
   "tag": "From $23/mo",
   "date-added": "2023-12-15",
-  "slug": "successai"
+  "slug": "successai",
+  "related": [
+    "migma",
+    "ryter-pro",
+    "proofwrite-ai",
+    "manga-ai-translator",
+    "sickleaveemail",
+    "transmonkey",
+    "justdone-ai",
+    "hard-usernames"
+  ]
 }

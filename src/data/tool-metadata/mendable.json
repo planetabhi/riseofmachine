@@ -5,5 +5,15 @@
   "url": "https://www.mendable.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "mendable"
+  "slug": "mendable",
+  "related": [
+    "retune",
+    "ellie",
+    "superai",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu",
+    "chat-agents"
+  ]
 }

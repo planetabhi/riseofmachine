@@ -23,7 +23,7 @@ if (!fs.existsSync(faviconsDir)) {
 
 function extractDomain(url: string): string | null {
     try {
-        return new URL(url).hostname.replace('www.', '');
+        return new URL(url).hostname.replace(/^www\./, '');
     } catch {
         return null;
     }
@@ -55,7 +55,12 @@ async function fetchFavicon(tool: Tool): Promise<boolean> {
 
         if (!response.ok) return false;
 
+        // Guard against non-image responses (error pages) being cached as icons.
+        const contentType = response.headers.get('content-type') || '';
+        if (!contentType.startsWith('image/')) return false;
+
         const buffer = await response.arrayBuffer();
+        if (buffer.byteLength < 100) return false;
         fs.writeFileSync(faviconPath, new Uint8Array(buffer));
         return true;
 
@@ -161,9 +166,20 @@ async function main() {
             if (completed % 50 === 0) {
                 process.stdout.write(`\rProgress: ${completed}/${allTools.length} | Metadata: ${metadataFetched} | Favicons: ${faviconsFetched}`);
             }
+            const prev = existingMetadata[slug];
             if (res && res.slug) {
-                results[res.slug] = res;
+                // Merge over any curated fields (featured, githubUrl, twitterHandle).
+                results[res.slug] = {
+                    ...prev,
+                    slug: res.slug,
+                    title: res.title ?? prev?.title,
+                    description: res.description ?? prev?.description,
+                    ogImage: res.ogImage ?? prev?.ogImage,
+                };
                 metadataFetched++;
+            } else if (prev) {
+                // Fetch failed but the entry exists (e.g. only `featured: true`) — keep it.
+                results[slug] = prev;
             }
         });
 

@@ -5,5 +5,15 @@
   "url": "https://www.browse.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "browse-ai"
+  "slug": "browse-ai",
+  "related": [
+    "buildai",
+    "vectorize-ai",
+    "make-song-ai",
+    "song-lyrics-review",
+    "unideck-beta",
+    "akkio",
+    "makeform",
+    "create"
+  ]
 }

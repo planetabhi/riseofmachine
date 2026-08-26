@@ -5,5 +5,15 @@
   "url": "https://tryon.ink/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-11",
-  "slug": "tryonink"
+  "slug": "tryonink",
+  "related": [
+    "morphlogo",
+    "lovspark-ai",
+    "uxmagic-ai",
+    "banani",
+    "graffiti-generator",
+    "ximagin",
+    "flux2ai",
+    "graffiti"
+  ]
 }

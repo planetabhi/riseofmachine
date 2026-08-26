@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import type { ToolsConfig, Category, Tool } from '../src/types/index.ts';
+import { computeRelated } from './lib/related.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,6 +12,7 @@ console.log('🔧 Generating individual tool metadata files...\n');
 // Paths
 const toolsPath = path.join(__dirname, '../src/data/tools.json');
 const metadataPath = path.join(__dirname, '../src/data/metadata.json');
+const slugMapPath = path.join(__dirname, '../src/data/slug-map.json');
 const outputDir = path.join(__dirname, '../src/data/tool-metadata');
 
 // Ensure output directory exists
@@ -35,6 +37,12 @@ try {
         console.log('⚠️  metadata.json not found, will use tool data only');
     }
 
+    // Precompute related tools (alternatives) from category + text signals.
+    const slugMap: Record<string, string[]> = fs.existsSync(slugMapPath)
+        ? JSON.parse(fs.readFileSync(slugMapPath, 'utf-8'))
+        : {};
+    const relatedMap = computeRelated(toolsData, slugMap);
+
     let totalFiles = 0;
     let totalSize = 0;
 
@@ -57,7 +65,8 @@ try {
                 url: tool.url,
                 tag: tool.tag,
                 'date-added': tool['date-added'],
-                slug: tool.slug
+                slug: tool.slug,
+                related: relatedMap[tool.slug] ?? []
             };
 
             // Write to individual file

@@ -5,5 +5,15 @@
   "url": "https://raykolabs.com?ref=riseofmachine.com",
   "tag": "From $9/demo",
   "date-added": "2026-05-07",
-  "slug": "raykolabs"
+  "slug": "raykolabs",
+  "related": [
+    "chat-agents",
+    "rainex-agents",
+    "multimodal",
+    "conduit",
+    "ellie",
+    "superai",
+    "streaml",
+    "security-questionnaire"
+  ]
 }

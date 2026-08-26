@@ -5,5 +5,15 @@
   "url": "https://quillbot.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "quillbot"
+  "slug": "quillbot",
+  "related": [
+    "fastwrite",
+    "heynds",
+    "rytr",
+    "wordtune",
+    "hyperwrite",
+    "writego",
+    "remagine-ai",
+    "deep-l-write"
+  ]
 }

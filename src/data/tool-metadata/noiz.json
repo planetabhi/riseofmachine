@@ -5,5 +5,15 @@
   "url": "https://noiz.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-12-14",
-  "slug": "noiz"
+  "slug": "noiz",
+  "related": [
+    "youtube-transcripts",
+    "tldv",
+    "mindmap-extension",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet"
+  ]
 }

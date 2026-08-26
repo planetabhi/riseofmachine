@@ -5,5 +5,15 @@
   "url": "https://buildship.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-29",
-  "slug": "buildship"
+  "slug": "buildship",
+  "related": [
+    "builduo",
+    "postbot",
+    "helix",
+    "smythos",
+    "zen-agents",
+    "amazon-sagemaker",
+    "screenshot-to-code",
+    "director"
+  ]
 }

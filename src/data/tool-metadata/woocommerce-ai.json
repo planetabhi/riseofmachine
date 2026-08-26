@@ -5,5 +5,15 @@
   "url": "https://writetext.ai/woocommerce/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-03-23",
-  "slug": "woocommerce-ai"
+  "slug": "woocommerce-ai",
+  "related": [
+    "ryter-pro",
+    "proofwrite-ai",
+    "manga-ai-translator",
+    "transmonkey",
+    "justdone-ai",
+    "hard-usernames",
+    "blogwald",
+    "passivecraft"
+  ]
 }

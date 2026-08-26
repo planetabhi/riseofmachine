@@ -5,5 +5,15 @@
   "url": "https://app.grammarly.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-14",
-  "slug": "grammarly"
+  "slug": "grammarly",
+  "related": [
+    "ryter-pro",
+    "proofwrite-ai",
+    "manga-ai-translator",
+    "transmonkey",
+    "justdone-ai",
+    "hard-usernames",
+    "blogwald",
+    "passivecraft"
+  ]
 }

@@ -5,5 +5,13 @@
   "url": "https://westaway.com/ace/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-27",
-  "slug": "westaway-ace"
+  "slug": "westaway-ace",
+  "related": [
+    "ai-lawyer",
+    "law-school-ai",
+    "genie",
+    "adalat",
+    "draftlex",
+    "spellbook"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://sweep.dev/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "sweep"
+  "slug": "sweep",
+  "related": [
+    "zen-agents",
+    "screenshot-to-code",
+    "director",
+    "nora",
+    "orchids",
+    "atla",
+    "strata",
+    "teable"
+  ]
 }

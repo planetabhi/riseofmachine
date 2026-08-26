@@ -5,5 +5,15 @@
   "url": "https://grokvideogenerator.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-03-05",
-  "slug": "grok-video-generator"
+  "slug": "grok-video-generator",
+  "related": [
+    "grok-video-maker",
+    "libretto",
+    "fliki",
+    "viralrot",
+    "photo-to-video-ai",
+    "image-to-video",
+    "vivago",
+    "decohere"
+  ]
 }

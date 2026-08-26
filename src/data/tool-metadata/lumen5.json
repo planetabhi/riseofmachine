@@ -5,5 +5,15 @@
   "url": "https://lumen5.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "lumen5"
+  "slug": "lumen5",
+  "related": [
+    "invideo-ai",
+    "pictory",
+    "vidmix",
+    "creatify",
+    "img2video",
+    "veo3-video-generator",
+    "photo-to-video-ai",
+    "hoox"
+  ]
 }

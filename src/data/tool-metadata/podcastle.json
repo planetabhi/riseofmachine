@@ -5,5 +5,15 @@
   "url": "https://podcastle.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-11",
-  "slug": "podcastle"
+  "slug": "podcastle",
+  "related": [
+    "cleanaudio-ai",
+    "mp3-to-text",
+    "goose-pod",
+    "reelscribe",
+    "monologue",
+    "playht",
+    "whisper",
+    "adtwin"
+  ]
 }

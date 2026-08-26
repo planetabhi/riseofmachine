@@ -5,5 +5,15 @@
   "url": "https://rytr.me/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "rytr"
+  "slug": "rytr",
+  "related": [
+    "wordtune",
+    "hyperwrite",
+    "writego",
+    "fastwrite",
+    "heynds",
+    "quillbot",
+    "remagine-ai",
+    "deep-l-write"
+  ]
 }

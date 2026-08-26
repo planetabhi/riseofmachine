@@ -5,5 +5,15 @@
   "url": "https://www.kinetix.tech/?ref=riseofmachine.com",
   "tag": "Paid",
   "date-added": "2025-06-06",
-  "slug": "kinetix"
+  "slug": "kinetix",
+  "related": [
+    "kaedim",
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "floor-plan-maker",
+    "roblox-gui-maker",
+    "landscapioai",
+    "uxmagic-ai"
+  ]
 }

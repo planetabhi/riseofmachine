@@ -5,5 +5,15 @@
   "url": "https://liner.ai/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-15",
-  "slug": "liner"
+  "slug": "liner",
+  "related": [
+    "marvin",
+    "chatgpt-apps-sdk",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "cursor-mcp",
+    "buildrs"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.kaedim3d.com/?ref=riseofmachine.com",
   "tag": "Paid",
   "date-added": "2025-06-06",
-  "slug": "kaedim"
+  "slug": "kaedim",
+  "related": [
+    "kinetix",
+    "tripo",
+    "recraft-v3-svg",
+    "csm",
+    "x-design",
+    "luma-ai",
+    "morphlogo",
+    "lovspark-ai"
+  ]
 }

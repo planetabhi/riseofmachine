@@ -5,5 +5,15 @@
   "url": "https://v0.dev/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-23",
-  "slug": "v0"
+  "slug": "v0",
+  "related": [
+    "banani",
+    "recraft-v3-svg",
+    "tripo",
+    "textomap",
+    "magicpath",
+    "luma-ai",
+    "napkin-ai",
+    "flux2ai"
+  ]
 }

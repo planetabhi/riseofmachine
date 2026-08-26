@@ -5,5 +5,15 @@
   "url": "https://chat100.ai/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2024-10-23",
-  "slug": "chat100"
+  "slug": "chat100",
+  "related": [
+    "gemini",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "deepseek-r1",
+    "grok",
+    "grok-1",
+    "mastraai"
+  ]
 }

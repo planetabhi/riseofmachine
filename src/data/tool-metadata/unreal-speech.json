@@ -5,5 +5,15 @@
   "url": "https://unrealspeech.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "unreal-speech"
+  "slug": "unreal-speech",
+  "related": [
+    "voicetype",
+    "wellsaid-labs",
+    "playht",
+    "mp3-to-text",
+    "lami",
+    "lyricstosong",
+    "elevenlabs",
+    "whisper"
+  ]
 }

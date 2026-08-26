@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import type { ToolsConfig, Category, Tool } from '../src/types/index.ts';
+import { computeRelated } from './lib/related.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,11 +21,18 @@ interface SearchRecord {
     d: string; // date-added
 }
 
+// Panel-open payload, keyed by slug: fuller description (d) + related slugs (r).
+interface PanelEntry {
+    d?: string;
+    r?: string[];
+}
+
 const toolsPath = path.join(__dirname, '../src/data/tools.json');
 const metadataPath = path.join(__dirname, '../src/data/metadata.json');
+const slugMapPath = path.join(__dirname, '../src/data/slug-map.json');
 const outputPath = path.join(__dirname, '../public/search-index.json');
-// Fuller descriptions live in a separate file, fetched only when a tool panel
-// opens — keeps the search index (loaded on every homepage visit) lean.
+// Fuller descriptions + related slugs live in a separate file, fetched only when
+// a tool panel opens — keeps the search index (loaded on search) lean.
 const descOutputPath = path.join(__dirname, '../public/tool-descriptions.json');
 
 try {
@@ -32,9 +40,13 @@ try {
     const metadata: Record<string, { description?: string }> = fs.existsSync(metadataPath)
         ? JSON.parse(fs.readFileSync(metadataPath, 'utf-8'))
         : {};
+    const slugMap: Record<string, string[]> = fs.existsSync(slugMapPath)
+        ? JSON.parse(fs.readFileSync(slugMapPath, 'utf-8'))
+        : {};
+    const relatedMap = computeRelated(data, slugMap);
 
     const records: SearchRecord[] = [];
-    const descriptions: Record<string, string> = {};
+    const panel: Record<string, PanelEntry> = {};
     data.tools.forEach((category: Category) => {
         category.content.forEach((tool: Tool) => {
             if (!tool.slug) return;
@@ -49,11 +61,15 @@ try {
                 d: tool['date-added'] ?? '',
             });
             const desc = metadata[tool.slug]?.description;
-            if (desc && desc !== body) descriptions[tool.slug] = desc;
+            const related = relatedMap[tool.slug];
+            const entry: PanelEntry = {};
+            if (desc && desc !== body) entry.d = desc;
+            if (related && related.length) entry.r = related;
+            if (entry.d || entry.r) panel[tool.slug] = entry;
         });
     });
 
-    fs.writeFileSync(descOutputPath, JSON.stringify(descriptions));
+    fs.writeFileSync(descOutputPath, JSON.stringify(panel));
 
     // Records only — the client builds the Fuse index lazily on first search.
     // Indexing ~1.1k records is <50ms; shipping a pre-built index only bloats
@@ -66,7 +82,7 @@ try {
         `✅ Wrote ${records.length} records -> public/search-index.json (${(bytes / 1024).toFixed(1)} KB)`,
     );
     console.log(
-        `✅ Wrote ${Object.keys(descriptions).length} descriptions -> public/tool-descriptions.json (${(descBytes / 1024).toFixed(1)} KB)`,
+        `✅ Wrote ${Object.keys(panel).length} panel entries -> public/tool-descriptions.json (${(descBytes / 1024).toFixed(1)} KB)`,
     );
 } catch (error: any) {
     console.error('❌ Error generating search index:', error.message);

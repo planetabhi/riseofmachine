@@ -5,5 +5,15 @@
   "url": "https://syntheticaidata.com/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-26",
-  "slug": "synthetic"
+  "slug": "synthetic",
+  "related": [
+    "scade",
+    "roboto",
+    "teable",
+    "rantir",
+    "oss-insight",
+    "neum",
+    "sqlmate",
+    "markitdown"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.venturekit.ai/?ref=riseofmachine.com",
   "tag": "From $8/mo",
   "date-added": "2025-06-06",
-  "slug": "venturekit"
+  "slug": "venturekit",
+  "related": [
+    "prometai",
+    "myreport",
+    "cody",
+    "rainex-agents",
+    "gptbotsai",
+    "chat-whisperer",
+    "namelix",
+    "raykolabs"
+  ]
 }

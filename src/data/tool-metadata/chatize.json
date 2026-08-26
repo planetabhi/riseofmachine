@@ -5,5 +5,15 @@
   "url": "https://www.chatize.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-03-31",
-  "slug": "chatize"
+  "slug": "chatize",
+  "related": [
+    "koncile",
+    "agentsea",
+    "sidekick",
+    "pointer",
+    "orchestra",
+    "humata",
+    "onetwo-resume",
+    "converge-ai"
+  ]
 }

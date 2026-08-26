@@ -5,5 +5,15 @@
   "url": "https://song-lyrics-review.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-05-25",
-  "slug": "song-lyrics-review"
+  "slug": "song-lyrics-review",
+  "related": [
+    "make-song-ai",
+    "unideck-beta",
+    "akkio",
+    "browse-ai",
+    "makeform",
+    "create",
+    "vectorize-ai",
+    "chaindesk"
+  ]
 }

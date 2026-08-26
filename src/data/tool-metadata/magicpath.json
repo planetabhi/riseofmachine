@@ -5,5 +5,15 @@
   "url": "https://www.magicpath.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-30",
-  "slug": "magicpath"
+  "slug": "magicpath",
+  "related": [
+    "magicpatterns",
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "uxmagic-ai",
+    "banani",
+    "graffiti-generator",
+    "ximagin"
+  ]
 }

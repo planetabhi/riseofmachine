@@ -5,5 +5,15 @@
   "url": "https://youtubetranscripts.org/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-10",
-  "slug": "youtube-transcripts"
+  "slug": "youtube-transcripts",
+  "related": [
+    "noiz",
+    "hyperfeed",
+    "mindmap-extension",
+    "humanize-ai-text",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

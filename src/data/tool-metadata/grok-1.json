@@ -5,5 +5,15 @@
   "url": "https://github.com/xai-org/grok-1?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "grok-1"
+  "slug": "grok-1",
+  "related": [
+    "grok",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "gemini",
+    "microsoft-copilot",
+    "qwen",
+    "ai-agents-live",
+    "ai-agents-list"
+  ]
 }

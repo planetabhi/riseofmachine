@@ -5,5 +5,15 @@
   "url": "https://lyra.so?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-11-12",
-  "slug": "lyra"
+  "slug": "lyra",
+  "related": [
+    "noty",
+    "tldv",
+    "dashform",
+    "upscaler",
+    "fireflies",
+    "onetwo-resume",
+    "converge-ai",
+    "remio"
+  ]
 }
