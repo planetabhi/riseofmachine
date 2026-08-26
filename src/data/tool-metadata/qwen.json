@@ -5,5 +5,15 @@
   "url": "https://chat.qwen.ai?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "qwen"
+  "slug": "qwen",
+  "related": [
+    "grok",
+    "microsoft-copilot",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "deepseek-r1",
+    "gemini",
+    "grok-1"
+  ]
 }

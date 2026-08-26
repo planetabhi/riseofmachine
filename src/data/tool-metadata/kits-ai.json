@@ -5,5 +5,15 @@
   "url": "https://app.kits.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-11",
-  "slug": "kits-ai"
+  "slug": "kits-ai",
+  "related": [
+    "calldock",
+    "voicemyai",
+    "voice-cloning-free",
+    "audio-muse",
+    "altered",
+    "playht",
+    "elevenlabs",
+    "respeecher"
+  ]
 }

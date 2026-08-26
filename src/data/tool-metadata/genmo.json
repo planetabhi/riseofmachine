@@ -5,5 +5,15 @@
   "url": "https://www.genmo.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-31",
-  "slug": "genmo"
+  "slug": "genmo",
+  "related": [
+    "hoox",
+    "supermaker",
+    "vidmix",
+    "qudemo",
+    "lyric-video-studio",
+    "vmeg-clips-to-videos",
+    "creatify",
+    "gemini-omni-ai"
+  ]
 }

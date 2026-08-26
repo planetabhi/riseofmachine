@@ -5,5 +5,15 @@
   "url": "https://aiagentslive.com/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-02-19",
-  "slug": "ai-agents-live"
+  "slug": "ai-agents-live",
+  "related": [
+    "ai-agents-list",
+    "appagent",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "deepseek-r1",
+    "gemini",
+    "grok",
+    "grok-1"
+  ]
 }

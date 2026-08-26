@@ -5,5 +5,15 @@
   "url": "https://github.com/mnotgod96/AppAgent?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "appagent"
+  "slug": "appagent",
+  "related": [
+    "ai-agents-list",
+    "ai-agents-live",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "gemini",
+    "grok",
+    "microsoft-copilot",
+    "qwen"
+  ]
 }

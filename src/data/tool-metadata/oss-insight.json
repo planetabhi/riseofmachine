@@ -5,5 +5,15 @@
   "url": "https://ossinsight.io/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-06",
-  "slug": "oss-insight"
+  "slug": "oss-insight",
+  "related": [
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "cursor-mcp",
+    "buildrs",
+    "tensorblock-forge"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.atla.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-23",
-  "slug": "atla"
+  "slug": "atla",
+  "related": [
+    "strata",
+    "smythos",
+    "zen-agents",
+    "stringcom",
+    "cekura",
+    "screenshot-to-code",
+    "director",
+    "nora"
+  ]
 }

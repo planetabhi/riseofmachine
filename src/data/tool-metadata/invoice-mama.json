@@ -5,5 +5,15 @@
   "url": "https://invoicemama.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-17",
-  "slug": "invoice-mama"
+  "slug": "invoice-mama",
+  "related": [
+    "flowla",
+    "ellie",
+    "superai",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu",
+    "chat-agents"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://autoppt.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-02",
-  "slug": "autoppt"
+  "slug": "autoppt",
+  "related": [
+    "hyperpresent",
+    "pitch",
+    "plus-docs",
+    "genppt",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

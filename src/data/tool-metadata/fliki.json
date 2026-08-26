@@ -5,5 +5,15 @@
   "url": "https://fliki.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "fliki"
+  "slug": "fliki",
+  "related": [
+    "grok-video-generator",
+    "libretto",
+    "viralrot",
+    "photo-to-video-ai",
+    "image-to-video",
+    "vivago",
+    "decohere",
+    "voe-ai"
+  ]
 }

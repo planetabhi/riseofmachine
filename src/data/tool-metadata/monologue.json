@@ -5,5 +5,15 @@
   "url": "https://www.monologue.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-21",
-  "slug": "monologue"
+  "slug": "monologue",
+  "related": [
+    "openwispr",
+    "calldock",
+    "voicemyai",
+    "voice-cloning-free",
+    "altered",
+    "kits-ai",
+    "playht",
+    "elevenlabs"
+  ]
 }

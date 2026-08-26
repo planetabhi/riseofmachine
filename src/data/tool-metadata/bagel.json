@@ -5,5 +5,15 @@
   "url": "https://www.bagel.net/?ref=riseofmachine.com",
   "tag": "Not applicable",
   "date-added": "2024-12-14",
-  "slug": "bagel"
+  "slug": "bagel",
+  "related": [
+    "research",
+    "osum",
+    "papers",
+    "merlin",
+    "gaabstract",
+    "resea-ai",
+    "silatus",
+    "capgo-ai"
+  ]
 }

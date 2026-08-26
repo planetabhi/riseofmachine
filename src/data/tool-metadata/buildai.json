@@ -5,5 +5,15 @@
   "url": "https://www.buildai.space/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "buildai"
+  "slug": "buildai",
+  "related": [
+    "imagica",
+    "stack",
+    "browse-ai",
+    "make-song-ai",
+    "song-lyrics-review",
+    "unideck-beta",
+    "akkio",
+    "makeform"
+  ]
 }

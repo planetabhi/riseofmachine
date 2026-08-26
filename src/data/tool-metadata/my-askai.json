@@ -5,5 +5,15 @@
   "url": "https://myaskai.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "my-askai"
+  "slug": "my-askai",
+  "related": [
+    "triviat",
+    "mutual",
+    "ellie",
+    "dust",
+    "sniff-job",
+    "superai",
+    "conduit",
+    "salestarget"
+  ]
 }

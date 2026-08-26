@@ -5,5 +5,15 @@
   "url": "https://rewin.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-22",
-  "slug": "rewinai"
+  "slug": "rewinai",
+  "related": [
+    "scriptmagic",
+    "shorts-generator",
+    "magiclight-ai",
+    "hoox",
+    "supermaker",
+    "genmo",
+    "vidmix",
+    "qudemo"
+  ]
 }

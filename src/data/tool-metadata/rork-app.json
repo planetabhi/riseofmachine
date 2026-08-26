@@ -5,5 +5,15 @@
   "url": "https://rork.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-04",
-  "slug": "rork-app"
+  "slug": "rork-app",
+  "related": [
+    "droidrun",
+    "lightning",
+    "nora",
+    "pythagora-20",
+    "screenshot-to-code",
+    "director",
+    "orchids",
+    "atla"
+  ]
 }

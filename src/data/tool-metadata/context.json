@@ -5,5 +5,15 @@
   "url": "https://context.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-07",
-  "slug": "context"
+  "slug": "context",
+  "related": [
+    "doculator",
+    "remio",
+    "onetwo-resume",
+    "converge-ai",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform",
+    "upscaler"
+  ]
 }

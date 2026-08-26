@@ -5,5 +5,15 @@
   "url": "https://openai.com/research/whisper?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-24",
-  "slug": "whisper"
+  "slug": "whisper",
+  "related": [
+    "voicetype",
+    "playht",
+    "unreal-speech",
+    "cleanaudio-ai",
+    "mp3-to-text",
+    "goose-pod",
+    "reelscribe",
+    "monologue"
+  ]
 }

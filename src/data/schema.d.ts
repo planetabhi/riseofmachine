@@ -35,6 +35,8 @@ export interface MetadataEntry {
     ogImage?: string;
     twitterHandle?: string;
     githubUrl?: string;
+    /** Editorial "Featured" pick shown on the homepage. */
+    featured?: boolean;
 }
 
 /** Shape of the default export from `riseofmachine/metadata`. */
@@ -52,4 +54,6 @@ export interface ToolMetadata {
     tag?: string;
     "date-added": string;
     slug: string;
+    /** Precomputed related tool slugs (alternatives). */
+    related?: string[];
 }

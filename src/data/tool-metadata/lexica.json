@@ -5,5 +5,15 @@
   "url": "https://lexica.art/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "lexica"
+  "slug": "lexica",
+  "related": [
+    "zilivo-ai",
+    "z-image",
+    "nanobananaimage",
+    "yix",
+    "kixo",
+    "sdxl-turbo",
+    "fastimage",
+    "banana-ai-2"
+  ]
 }

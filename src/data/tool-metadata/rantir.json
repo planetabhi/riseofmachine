@@ -5,5 +5,15 @@
   "url": "https://rantir.com/?ref=riseofmachine.com",
   "tag": "From $129/Once",
   "date-added": "2025-06-02",
-  "slug": "rantir"
+  "slug": "rantir",
+  "related": [
+    "synthetic",
+    "poe-api",
+    "roboto",
+    "teable",
+    "tensorblock-forge",
+    "strata",
+    "buildrs",
+    "pythagora-20"
+  ]
 }

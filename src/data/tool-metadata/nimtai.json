@@ -5,5 +5,15 @@
   "url": "https://www.nimt.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-31",
-  "slug": "nimtai"
+  "slug": "nimtai",
+  "related": [
+    "tool-disk",
+    "dr-checker",
+    "keywordsearch",
+    "meroid",
+    "promptwatch",
+    "seojuice",
+    "writerzen",
+    "seoaibot"
+  ]
 }

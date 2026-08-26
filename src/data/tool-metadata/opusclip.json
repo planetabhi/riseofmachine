@@ -5,5 +5,15 @@
   "url": "https://www.opus.pro/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-26",
-  "slug": "opusclip"
+  "slug": "opusclip",
+  "related": [
+    "pixverse",
+    "morph-studio",
+    "moonvalley",
+    "deforum",
+    "viralrot",
+    "image-to-video",
+    "vivago",
+    "decohere"
+  ]
 }

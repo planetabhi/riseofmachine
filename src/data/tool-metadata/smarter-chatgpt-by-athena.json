@@ -5,5 +5,15 @@
   "url": "https://athenachat.bot/chatbot?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "smarter-chatgpt-by-athena"
+  "slug": "smarter-chatgpt-by-athena",
+  "related": [
+    "chatgpt",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "deepseek",
+    "character",
+    "flowpoint",
+    "resolveai"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://flair.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-12",
-  "slug": "flair"
+  "slug": "flair",
+  "related": [
+    "kittl",
+    "uxmagic-ai",
+    "banani",
+    "subframe",
+    "shape-of-ai",
+    "uizard",
+    "lovspark-ai",
+    "rustic-ai"
+  ]
 }

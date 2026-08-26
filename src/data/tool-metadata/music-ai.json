@@ -5,5 +5,15 @@
   "url": "https://music.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "music-ai"
+  "slug": "music-ai",
+  "related": [
+    "stable-audio",
+    "music-generator",
+    "song-generator",
+    "murekaai",
+    "wondera",
+    "tomusic",
+    "imagetomusic",
+    "tracksy"
+  ]
 }

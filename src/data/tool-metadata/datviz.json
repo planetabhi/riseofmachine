@@ -5,5 +5,15 @@
   "url": "https://datvizai.online/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "datviz"
+  "slug": "datviz",
+  "related": [
+    "chat4data",
+    "heronai",
+    "gaabstract",
+    "research",
+    "resea-ai",
+    "storm",
+    "marketalertsai",
+    "osum"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://gemini.google.com?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "gemini"
+  "slug": "gemini",
+  "related": [
+    "chat100",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "deepseek-r1",
+    "grok",
+    "grok-1",
+    "mastraai"
+  ]
 }

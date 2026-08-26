@@ -5,5 +5,15 @@
   "url": "https://github.com/svc-develop-team/so-vits-svc?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "so-vits-svc"
+  "slug": "so-vits-svc",
+  "related": [
+    "sonicker",
+    "nicevoice",
+    "dubbing-ai",
+    "eleven-ai",
+    "audio-transcriber-ai",
+    "voqusa",
+    "kyutai-tts",
+    "f5-tts"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://github.com/deepseek-ai/DeepSeek-R1?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "deepseek-r1"
+  "slug": "deepseek-r1",
+  "related": [
+    "deepseekv4dev",
+    "muse-spark-ai",
+    "gemini",
+    "grok",
+    "microsoft-copilot",
+    "qwen",
+    "ai-agents-live",
+    "ai-agents-list"
+  ]
 }

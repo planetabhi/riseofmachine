@@ -5,5 +5,15 @@
   "url": "https://wanai.dev/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-11-18",
-  "slug": "wanai"
+  "slug": "wanai",
+  "related": [
+    "image-to-3d-ai",
+    "image-to-image-maker",
+    "picture-generator",
+    "makebw",
+    "comicsai",
+    "gempix2",
+    "comfy",
+    "visual-chatgpt"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://zilivo.io?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-06-12",
-  "slug": "zilivo-ai"
+  "slug": "zilivo-ai",
+  "related": [
+    "banana-ai-1",
+    "z-image",
+    "imgkits",
+    "nanobananaimage",
+    "yix",
+    "kixo",
+    "lexica",
+    "sdxl-turbo"
+  ]
 }

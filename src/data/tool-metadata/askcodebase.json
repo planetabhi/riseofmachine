@@ -5,5 +5,15 @@
   "url": "https://askcodebase.com/?ref=riseofmachine.com",
   "tag": "From $10/mo",
   "date-added": "2023-12-25",
-  "slug": "askcodebase"
+  "slug": "askcodebase",
+  "related": [
+    "github-copilot",
+    "cursor",
+    "forge",
+    "grok-video",
+    "blackbox-ai",
+    "builderio",
+    "cody-by-sourcegraph",
+    "developer-pal"
+  ]
 }

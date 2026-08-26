@@ -5,5 +5,15 @@
   "url": "https://www.mediaai.art?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-19",
-  "slug": "mediaai-art"
+  "slug": "mediaai-art",
+  "related": [
+    "anyimg",
+    "vieutopia",
+    "nightcafe-creator",
+    "furryai",
+    "imgnai",
+    "lora",
+    "rabbit-road",
+    "imagefx"
+  ]
 }

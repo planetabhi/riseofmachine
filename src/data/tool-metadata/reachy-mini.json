@@ -5,5 +5,15 @@
   "url": "https://www.pollen-robotics.com/reachy-mini/?ref=riseofmachine.com",
   "tag": "Hardware purchase",
   "date-added": "2025-07-16",
-  "slug": "reachy-mini"
+  "slug": "reachy-mini",
+  "related": [
+    "droidrun",
+    "lobe-chat",
+    "rybbit",
+    "onenode",
+    "smythos",
+    "ollama-desktop-app",
+    "open-interpreter",
+    "sqlmate"
+  ]
 }

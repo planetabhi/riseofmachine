@@ -5,5 +5,15 @@
   "url": "https://aiphone.com/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "phone-app"
+  "slug": "phone-app",
+  "related": [
+    "seamless",
+    "audio-transcriber-ai",
+    "voqusa",
+    "ringfoods",
+    "cleanaudio-ai",
+    "sonicker",
+    "mp3-to-text",
+    "goose-pod"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.llamaindex.ai/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-26",
-  "slug": "llamaindex"
+  "slug": "llamaindex",
+  "related": [
+    "langfuse",
+    "litellm",
+    "sid",
+    "openrouter",
+    "coderplan",
+    "numbers-station",
+    "gptgeminigrokai",
+    "ferryapi"
+  ]
 }

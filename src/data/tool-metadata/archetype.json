@@ -5,5 +5,15 @@
   "url": "https://www.archetypeai.io/?ref=riseofmachine.com",
   "tag": "Early Access",
   "date-added": "2023-12-26",
-  "slug": "archetype"
+  "slug": "archetype",
+  "related": [
+    "gptgeminigrokai",
+    "grok-1",
+    "coderplan",
+    "ferryapi",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "auto-gpt"
+  ]
 }

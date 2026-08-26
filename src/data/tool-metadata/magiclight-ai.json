@@ -5,5 +5,15 @@
   "url": "https://magiclight.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "magiclight-ai"
+  "slug": "magiclight-ai",
+  "related": [
+    "video-to-prompt",
+    "rewinai",
+    "kungfu",
+    "hoox",
+    "supermaker",
+    "genmo",
+    "scriptmagic",
+    "vidmix"
+  ]
 }

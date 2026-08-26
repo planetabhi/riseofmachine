@@ -5,5 +5,15 @@
   "url": "https://www.runpod.io/?ref=riseofmachine.com",
   "tag": "From $0.2/hr",
   "date-added": "2023-12-15",
-  "slug": "runpod"
+  "slug": "runpod",
+  "related": [
+    "lightning",
+    "amazon-sagemaker",
+    "rork-app",
+    "vellum",
+    "scade",
+    "teachable-machine",
+    "chatgpt-apps-sdk",
+    "new-ui"
+  ]
 }

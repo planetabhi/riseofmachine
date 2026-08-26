@@ -5,5 +5,15 @@
   "url": "https://vectorize.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-08-04",
-  "slug": "vectorize-ai"
+  "slug": "vectorize-ai",
+  "related": [
+    "browse-ai",
+    "make-song-ai",
+    "song-lyrics-review",
+    "unideck-beta",
+    "akkio",
+    "makeform",
+    "create",
+    "chaindesk"
+  ]
 }

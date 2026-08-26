@@ -5,5 +5,15 @@
   "url": "https://www.blackmagicdesign.com/products/davinciresolve?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "davinci-resolve"
+  "slug": "davinci-resolve",
+  "related": [
+    "recapoai",
+    "grok-video-generator",
+    "libretto",
+    "fliki",
+    "gemini-omni-ai",
+    "sora-2",
+    "capcut",
+    "wondershare-filmora"
+  ]
 }

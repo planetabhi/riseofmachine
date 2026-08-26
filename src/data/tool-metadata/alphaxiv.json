@@ -5,5 +5,15 @@
   "url": "https://www.alphaxiv.org?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "alphaxiv"
+  "slug": "alphaxiv",
+  "related": [
+    "morphikai",
+    "papers",
+    "resea-ai",
+    "gaabstract",
+    "research",
+    "heronai",
+    "storm",
+    "chat4data"
+  ]
 }

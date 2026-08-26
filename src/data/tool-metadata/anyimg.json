@@ -5,5 +5,15 @@
   "url": "https://anyimg.ai?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-29",
-  "slug": "anyimg"
+  "slug": "anyimg",
+  "related": [
+    "z-image",
+    "mediaai-art",
+    "image-to-prompt",
+    "fastimage",
+    "vieutopia",
+    "banana-ai-2",
+    "banana-ai-1",
+    "picrafts"
+  ]
 }

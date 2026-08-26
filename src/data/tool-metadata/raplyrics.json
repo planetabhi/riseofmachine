@@ -5,5 +5,15 @@
   "url": "https://raplyrics.eu/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-06",
-  "slug": "raplyrics"
+  "slug": "raplyrics",
+  "related": [
+    "songburst",
+    "music-generator",
+    "shazam",
+    "sprunki",
+    "audiocraft",
+    "vocal-remover",
+    "wondera",
+    "elevenlabssound-effects"
+  ]
 }

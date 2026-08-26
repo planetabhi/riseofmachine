@@ -5,5 +5,15 @@
   "url": "https://bito.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "bito"
+  "slug": "bito",
+  "related": [
+    "blackbox-ai",
+    "developer-pal",
+    "q-developer",
+    "cody-by-sourcegraph",
+    "forge",
+    "grok-video",
+    "builderio",
+    "lovable"
+  ]
 }

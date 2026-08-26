@@ -5,5 +5,15 @@
   "url": "https://grokvideo.net?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-11-12",
-  "slug": "grok-video"
+  "slug": "grok-video",
+  "related": [
+    "qodo",
+    "forge",
+    "blackbox-ai",
+    "builderio",
+    "cody-by-sourcegraph",
+    "developer-pal",
+    "lovable",
+    "replit-ghostwriter"
+  ]
 }

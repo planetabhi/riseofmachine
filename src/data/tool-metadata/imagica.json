@@ -5,5 +5,15 @@
   "url": "https://get.imagica.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "imagica"
+  "slug": "imagica",
+  "related": [
+    "buildai",
+    "droxy",
+    "stack",
+    "akkio",
+    "unideck-beta",
+    "make-song-ai",
+    "song-lyrics-review",
+    "browse-ai"
+  ]
 }

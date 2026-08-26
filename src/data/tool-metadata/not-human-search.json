@@ -5,5 +5,15 @@
   "url": "https://nothumansearch.ai?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-04-17",
-  "slug": "not-human-search"
+  "slug": "not-human-search",
+  "related": [
+    "cursor-mcp",
+    "cosine",
+    "teachable-machine",
+    "flappy",
+    "sqlmate",
+    "markitdown",
+    "nat-checker",
+    "chatgpt-apps-sdk"
+  ]
 }

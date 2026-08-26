@@ -5,5 +5,15 @@
   "url": "https://jobright.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "jobbuddy"
+  "slug": "jobbuddy",
+  "related": [
+    "jobgpt",
+    "reztune",
+    "dev-jobs",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "notebooklm-remover",
+    "bookletai"
+  ]
 }

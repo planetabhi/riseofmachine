@@ -5,5 +5,15 @@
   "url": "https://www.together.ai/?ref=riseofmachine.com",
   "tag": "Pay-as-you-go",
   "date-added": "2023-12-26",
-  "slug": "togetherai"
+  "slug": "togetherai",
+  "related": [
+    "nanonets",
+    "scale-ai",
+    "nuclia",
+    "raykolabs",
+    "ellie",
+    "superai",
+    "streaml",
+    "conduit"
+  ]
 }

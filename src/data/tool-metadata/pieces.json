@@ -5,5 +5,15 @@
   "url": "https://pieces.app/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-24",
-  "slug": "pieces"
+  "slug": "pieces",
+  "related": [
+    "flappy",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "cursor-mcp",
+    "buildrs"
+  ]
 }

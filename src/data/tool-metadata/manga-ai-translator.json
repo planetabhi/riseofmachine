@@ -5,5 +5,15 @@
   "url": "https://mangaaitranslator.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-30",
-  "slug": "manga-ai-translator"
+  "slug": "manga-ai-translator",
+  "related": [
+    "transmonkey",
+    "ryter-pro",
+    "proofwrite-ai",
+    "justdone-ai",
+    "hard-usernames",
+    "blogwald",
+    "passivecraft",
+    "deep-l-write"
+  ]
 }

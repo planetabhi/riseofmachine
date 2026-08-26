@@ -5,5 +5,15 @@
   "url": "https://www.deepl.com/write?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-14",
-  "slug": "deep-l-write"
+  "slug": "deep-l-write",
+  "related": [
+    "fastwrite",
+    "heynds",
+    "quillbot",
+    "rytr",
+    "wordtune",
+    "hyperwrite",
+    "writego",
+    "remagine-ai"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://aws.amazon.com/q/developer/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "q-developer"
+  "slug": "q-developer",
+  "related": [
+    "developer-pal",
+    "blackbox-ai",
+    "builderio",
+    "bito",
+    "cody-by-sourcegraph",
+    "forge",
+    "grok-video",
+    "lovable"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://zenoml.com/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-26",
-  "slug": "zeno"
+  "slug": "zeno",
+  "related": [
+    "new-ui",
+    "n8n-workflow-builder",
+    "rybbit",
+    "ai-sdk-5-by-vercel",
+    "ollama-desktop-app",
+    "axflow",
+    "neum",
+    "rysana"
+  ]
 }

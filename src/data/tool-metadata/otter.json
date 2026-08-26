@@ -5,5 +5,15 @@
   "url": "https://otter.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "otter"
+  "slug": "otter",
+  "related": [
+    "intellibar",
+    "supernormal",
+    "walles",
+    "mavexai",
+    "wudpecker",
+    "krisp",
+    "pally-ai",
+    "onetwo-resume"
+  ]
 }

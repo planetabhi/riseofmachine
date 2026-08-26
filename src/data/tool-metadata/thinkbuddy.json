@@ -5,5 +5,15 @@
   "url": "https://thinkbuddy.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "thinkbuddy"
+  "slug": "thinkbuddy",
+  "related": [
+    "chatgpt",
+    "smarter-chatgpt-by-athena",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent"
+  ]
 }

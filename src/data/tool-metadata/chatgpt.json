@@ -5,5 +5,15 @@
   "url": "https://chat.openai.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-14",
-  "slug": "chatgpt"
+  "slug": "chatgpt",
+  "related": [
+    "smarter-chatgpt-by-athena",
+    "ferryapi",
+    "gptgeminigrokai",
+    "coderplan",
+    "deepseek",
+    "agents-by-athena",
+    "character",
+    "flowpoint"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://aibabydance.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-02-14",
-  "slug": "baby-dance"
+  "slug": "baby-dance",
+  "related": [
+    "animate-image-ai",
+    "vidmix",
+    "kungfu",
+    "photo-to-video-ai",
+    "gemini-omni-ai",
+    "lehar-ai-video-generator",
+    "video-upscaler",
+    "recapoai"
+  ]
 }

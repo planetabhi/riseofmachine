@@ -5,5 +5,15 @@
   "url": "https://promptrepo.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-11",
-  "slug": "semantic-email"
+  "slug": "semantic-email",
+  "related": [
+    "blocks",
+    "dashform",
+    "ada",
+    "pointer",
+    "forage-mail",
+    "jigso",
+    "onetwo-resume",
+    "converge-ai"
+  ]
 }

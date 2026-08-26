@@ -5,5 +5,15 @@
   "url": "https://pfpmaker.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "pfpmaker"
+  "slug": "pfpmaker",
+  "related": [
+    "lets-enhance",
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "add-person-to-photo",
+    "promptwall"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://animegen.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-31",
-  "slug": "animegenai"
+  "slug": "animegenai",
+  "related": [
+    "photo-style",
+    "cartoon-to-real",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "add-person-to-photo",
+    "promptwall"
+  ]
 }

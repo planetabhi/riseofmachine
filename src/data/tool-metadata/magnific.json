@@ -5,5 +5,15 @@
   "url": "https://magnific.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "magnific"
+  "slug": "magnific",
+  "related": [
+    "graficai",
+    "fotol-image-generator",
+    "promptwall",
+    "blur-background",
+    "image-describer",
+    "image-text-editor",
+    "gemini-flash-image",
+    "dressx"
+  ]
 }

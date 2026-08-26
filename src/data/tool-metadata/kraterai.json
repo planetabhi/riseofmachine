@@ -5,5 +5,15 @@
   "url": "https://www.krater.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "kraterai"
+  "slug": "kraterai",
+  "related": [
+    "palmscanner-ai",
+    "mee-manga-translator",
+    "destiny-matrix",
+    "love-mbti",
+    "nectar-ai",
+    "hammer",
+    "manus",
+    "sms-launcher"
+  ]
 }

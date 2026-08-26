@@ -5,5 +5,15 @@
   "url": "https://cozaiphoto.com?ref=riseofmachine.com",
   "tag": "From $15.90/mo",
   "date-added": "2026-02-14",
-  "slug": "cozaiphoto"
+  "slug": "cozaiphoto",
+  "related": [
+    "travel-photos",
+    "photo",
+    "photo-editor",
+    "photify",
+    "photoleap",
+    "headshot-photo",
+    "hama",
+    "add-person-to-photo"
+  ]
 }

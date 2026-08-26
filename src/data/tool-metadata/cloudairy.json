@@ -5,5 +5,15 @@
   "url": "https://cloudairy.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-29",
-  "slug": "cloudairy"
+  "slug": "cloudairy",
+  "related": [
+    "converge-ai",
+    "orchestra",
+    "onetwo-resume",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform",
+    "upscaler"
+  ]
 }

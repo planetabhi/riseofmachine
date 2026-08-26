@@ -5,5 +5,15 @@
   "url": "https://vocalremover.org/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-29",
-  "slug": "vocal-remover"
+  "slug": "vocal-remover",
+  "related": [
+    "songburst",
+    "raplyrics",
+    "shazam",
+    "sprunki",
+    "audiocraft",
+    "song-generator",
+    "elevenlabssound-effects",
+    "music-generator"
+  ]
 }

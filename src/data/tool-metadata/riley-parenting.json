@@ -5,5 +5,15 @@
   "url": "https://go.rileyapp.com/phunt?ref=riseofmachine.com",
   "tag": "From $7.99/mo",
   "date-added": "2025-06-24",
-  "slug": "riley-parenting"
+  "slug": "riley-parenting",
+  "related": [
+    "you",
+    "beforesunset",
+    "magictrips",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "notebooklm-remover",
+    "dev-jobs"
+  ]
 }

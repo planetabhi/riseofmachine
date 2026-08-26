@@ -5,5 +5,15 @@
   "url": "https://www.marketalerts.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "marketalertsai"
+  "slug": "marketalertsai",
+  "related": [
+    "osum",
+    "capgo-ai",
+    "gaabstract",
+    "research",
+    "resea-ai",
+    "heronai",
+    "storm",
+    "chat4data"
+  ]
 }

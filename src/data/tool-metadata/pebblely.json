@@ -5,5 +5,15 @@
   "url": "https://pebblely.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "pebblely"
+  "slug": "pebblely",
+  "related": [
+    "sellerpic",
+    "ghostface",
+    "add-person-to-photo",
+    "befunky",
+    "magic-eraser",
+    "ai-magic-eraser",
+    "faceswap",
+    "photo-style"
+  ]
 }

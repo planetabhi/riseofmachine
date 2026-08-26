@@ -5,5 +5,15 @@
   "url": "https://communitynotes.x.com/guide/en/api/overview?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-07-03",
-  "slug": "x-note-writer-api"
+  "slug": "x-note-writer-api",
+  "related": [
+    "tensorblock-forge",
+    "create-apidev",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "cursor-mcp"
+  ]
 }

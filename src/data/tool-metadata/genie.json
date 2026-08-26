@@ -5,5 +5,13 @@
   "url": "https://genie.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "genie"
+  "slug": "genie",
+  "related": [
+    "ai-lawyer",
+    "westaway-ace",
+    "adalat",
+    "draftlex",
+    "law-school-ai",
+    "spellbook"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://kitops.ml/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-04",
-  "slug": "kitops"
+  "slug": "kitops",
+  "related": [
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "cursor-mcp",
+    "buildrs",
+    "tensorblock-forge"
+  ]
 }

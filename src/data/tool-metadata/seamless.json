@@ -5,5 +5,15 @@
   "url": "https://github.com/facebookresearch/seamless_communication?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "seamless"
+  "slug": "seamless",
+  "related": [
+    "audio-transcriber-ai",
+    "voqusa",
+    "sonicker",
+    "nicevoice",
+    "kyutai-tts",
+    "eleven-ai",
+    "f5-tts",
+    "dubbing-ai"
+  ]
 }

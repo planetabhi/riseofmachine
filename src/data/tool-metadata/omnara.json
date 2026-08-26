@@ -5,5 +5,15 @@
   "url": "https://omnara.com/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-08-22",
-  "slug": "omnara"
+  "slug": "omnara",
+  "related": [
+    "elements-by-vercel",
+    "onlook-for-web",
+    "traceroot",
+    "keys-and-caches",
+    "deepseek-v31",
+    "palmscanner-ai",
+    "vedic-astrology-chart",
+    "mee-manga-translator"
+  ]
 }

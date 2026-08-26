@@ -5,5 +5,15 @@
   "url": "https://aiocmaker.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-20",
-  "slug": "oc-maker-2"
+  "slug": "oc-maker-2",
+  "related": [
+    "hammer",
+    "palmscanner-ai",
+    "mee-manga-translator",
+    "destiny-matrix",
+    "love-mbti",
+    "nectar-ai",
+    "manus",
+    "sms-launcher"
+  ]
 }

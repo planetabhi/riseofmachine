@@ -5,5 +5,15 @@
   "url": "https://www.move.ai/?ref=riseofmachine.com",
   "tag": "From $15",
   "date-added": "2023-12-24",
-  "slug": "move"
+  "slug": "move",
+  "related": [
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "floor-plan-maker",
+    "roblox-gui-maker",
+    "landscapioai",
+    "uxmagic-ai",
+    "banani"
+  ]
 }

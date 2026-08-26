@@ -5,5 +5,15 @@
   "url": "https://ai-ghostface.org/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-11",
-  "slug": "ghostface"
+  "slug": "ghostface",
+  "related": [
+    "add-person-to-photo",
+    "pebblely",
+    "befunky",
+    "magic-eraser",
+    "ai-magic-eraser",
+    "sellerpic",
+    "faceswap",
+    "photo-style"
+  ]
 }

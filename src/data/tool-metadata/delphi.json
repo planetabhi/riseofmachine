@@ -5,5 +5,15 @@
   "url": "https://www.delphi.ai/?ref=riseofmachine.com",
   "tag": "From $25",
   "date-added": "2023-12-26",
-  "slug": "delphi"
+  "slug": "delphi",
+  "related": [
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "auto-gpt",
+    "chatgpt"
+  ]
 }

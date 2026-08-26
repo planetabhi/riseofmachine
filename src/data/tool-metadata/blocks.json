@@ -5,5 +5,15 @@
   "url": "https://useblocks.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-23",
-  "slug": "blocks"
+  "slug": "blocks",
+  "related": [
+    "onetwo-resume",
+    "forage-mail",
+    "semantic-email",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform"
+  ]
 }

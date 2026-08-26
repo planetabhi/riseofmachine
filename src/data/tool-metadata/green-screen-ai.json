@@ -5,5 +5,15 @@
   "url": "https://greenscreenai.com/?ref=riseofmachine.com",
   "tag": "In-app purchases",
   "date-added": "2023-12-15",
-  "slug": "green-screen-ai"
+  "slug": "green-screen-ai",
+  "related": [
+    "photoroom",
+    "removebg",
+    "blur-background",
+    "background",
+    "imggen-ai",
+    "piximagen",
+    "graficai",
+    "bulk-image-generator"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://chatgptwriter.ai/?ref=riseofmachine.com",
   "tag": "Extension",
   "date-added": "2023-12-15",
-  "slug": "chatgpt-writer"
+  "slug": "chatgpt-writer",
+  "related": [
+    "wiseone",
+    "mnemosphere",
+    "shortcutai",
+    "semantic-email",
+    "runbear",
+    "onetwo-resume",
+    "converge-ai",
+    "remio"
+  ]
 }

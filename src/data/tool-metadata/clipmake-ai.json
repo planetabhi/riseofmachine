@@ -5,5 +5,15 @@
   "url": "https://clipmake.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-04-12",
-  "slug": "clipmake-ai"
+  "slug": "clipmake-ai",
+  "related": [
+    "gemini-omni-ai",
+    "lehar-ai-video-generator",
+    "video-upscaler",
+    "recapoai",
+    "framia-pro",
+    "imagineclip",
+    "video-to-prompt",
+    "openseedance"
+  ]
 }

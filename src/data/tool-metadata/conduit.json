@@ -5,5 +5,15 @@
   "url": "https://www.conduit.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-09-24",
-  "slug": "conduit"
+  "slug": "conduit",
+  "related": [
+    "multimodal",
+    "chat-agents",
+    "rainex-agents",
+    "ellie",
+    "superai",
+    "salestarget",
+    "receiptor",
+    "toffu"
+  ]
 }

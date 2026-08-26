@@ -5,5 +5,15 @@
   "url": "https://www.glean.com/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2023-12-15",
-  "slug": "glean"
+  "slug": "glean",
+  "related": [
+    "sniff-job",
+    "scale-ai",
+    "nuclia",
+    "raykolabs",
+    "ellie",
+    "superai",
+    "streaml",
+    "conduit"
+  ]
 }

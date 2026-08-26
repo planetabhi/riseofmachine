@@ -5,5 +5,15 @@
   "url": "https://canofsoup.com/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-28",
-  "slug": "can-of-soup"
+  "slug": "can-of-soup",
+  "related": [
+    "travel-photos",
+    "silhouette-generator",
+    "ghostface-ai",
+    "ezmaker-ai",
+    "ez-img-editor",
+    "piximagen",
+    "fast-image-ai-1",
+    "food-generator"
+  ]
 }

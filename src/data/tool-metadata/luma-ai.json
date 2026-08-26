@@ -5,5 +5,15 @@
   "url": "https://lumalabs.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "luma-ai"
+  "slug": "luma-ai",
+  "related": [
+    "tripo",
+    "v0",
+    "banani",
+    "recraft-v3-svg",
+    "csm",
+    "textomap",
+    "kaedim",
+    "napkin-ai"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://writetext.ai/magento?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-05-02",
-  "slug": "magento"
+  "slug": "magento",
+  "related": [
+    "ryter-pro",
+    "proofwrite-ai",
+    "manga-ai-translator",
+    "transmonkey",
+    "justdone-ai",
+    "hard-usernames",
+    "blogwald",
+    "passivecraft"
+  ]
 }

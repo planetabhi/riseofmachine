@@ -5,5 +5,15 @@
   "url": "https://www.rask.ai/?ref=riseofmachine.com",
   "tag": "From $50/mo",
   "date-added": "2023-12-15",
-  "slug": "rask-ai"
+  "slug": "rask-ai",
+  "related": [
+    "grok-video-generator",
+    "libretto",
+    "fliki",
+    "veo-3-by-kie",
+    "viralrot",
+    "photo-to-video-ai",
+    "image-to-video",
+    "vivago"
+  ]
 }

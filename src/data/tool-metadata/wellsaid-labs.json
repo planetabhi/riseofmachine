@@ -5,5 +5,15 @@
   "url": "https://wellsaidlabs.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "wellsaid-labs"
+  "slug": "wellsaid-labs",
+  "related": [
+    "unreal-speech",
+    "trint",
+    "mp3-to-text",
+    "lami",
+    "voicetype",
+    "cleanaudio-ai",
+    "adtwin",
+    "audio-muse"
+  ]
 }

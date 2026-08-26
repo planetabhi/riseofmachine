@@ -5,5 +5,15 @@
   "url": "https://writego.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-05-21",
-  "slug": "writego"
+  "slug": "writego",
+  "related": [
+    "rytr",
+    "wordtune",
+    "hyperwrite",
+    "fastwrite",
+    "heynds",
+    "quillbot",
+    "remagine-ai",
+    "deep-l-write"
+  ]
 }

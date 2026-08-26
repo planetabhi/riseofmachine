@@ -5,5 +5,15 @@
   "url": "https://www.kerlig.com/prompt-library?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-04",
-  "slug": "prompt-library"
+  "slug": "prompt-library",
+  "related": [
+    "gpt-prompts",
+    "goodprompts",
+    "flowgpt",
+    "xprompts",
+    "prompt-generator",
+    "promptvibe",
+    "img2prompt",
+    "promptbox"
+  ]
 }

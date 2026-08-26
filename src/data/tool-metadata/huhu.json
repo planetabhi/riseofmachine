@@ -5,5 +5,15 @@
   "url": "https://huhu.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "huhu"
+  "slug": "huhu",
+  "related": [
+    "looksky",
+    "uwear",
+    "outfitswap-studio",
+    "bangs-hair",
+    "hairstyle-changer",
+    "saree-generator",
+    "higgsfield",
+    "aisthetic"
+  ]
 }

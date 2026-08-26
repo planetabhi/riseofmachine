@@ -5,5 +5,15 @@
   "url": "https://dressxme.com/change_background/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-29",
-  "slug": "dressx"
+  "slug": "dressx",
+  "related": [
+    "blur-background",
+    "background",
+    "graficai",
+    "fotol-image-generator",
+    "promptwall",
+    "magnific",
+    "image-describer",
+    "image-text-editor"
+  ]
 }

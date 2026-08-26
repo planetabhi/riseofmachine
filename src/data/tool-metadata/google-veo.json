@@ -5,5 +5,15 @@
   "url": "https://deepmind.google/technologies/veo/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "google-veo"
+  "slug": "google-veo",
+  "related": [
+    "veo-4",
+    "veo-video",
+    "viralrot",
+    "image-to-video",
+    "vivago",
+    "decohere",
+    "dance2ai",
+    "grok-video-maker"
+  ]
 }

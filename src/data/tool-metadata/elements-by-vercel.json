@@ -5,5 +5,15 @@
   "url": "https://vercel.com/ai-elements?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-08-25",
-  "slug": "elements-by-vercel"
+  "slug": "elements-by-vercel",
+  "related": [
+    "onlook-for-web",
+    "traceroot",
+    "keys-and-caches",
+    "deepseek-v31",
+    "omnara",
+    "aify",
+    "palmscanner-ai",
+    "vedic-astrology-chart"
+  ]
 }

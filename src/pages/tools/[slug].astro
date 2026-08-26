@@ -57,6 +57,21 @@ try {
 const seoTitle = meta.title || tool.title;
 const seoDescription = meta.description || tool.body;
 
+// Precomputed alternatives, resolved to titles for a crawlable static list.
+const relatedSlugs: string[] = Array.isArray(meta.related) ? meta.related : [];
+const relatedTools = (
+  await Promise.all(
+    relatedSlugs.map(async (rs: string) => {
+      try {
+        const m = await import(`../../data/tool-metadata/${rs}.json`);
+        return { slug: rs, title: m.default.title as string };
+      } catch {
+        return null;
+      }
+    })
+  )
+).filter((x): x is { slug: string; title: string } => !!x);
+
 const breadcrumbs = [
   { name: "Home", url: "https://riseofmachine.com" },
   { name: categoryTitle, url: `https://riseofmachine.com/${category}` },
@@ -101,6 +116,16 @@ const breadcrumbs = [
         <h2>{tool.title}</h2>
         <p>{seoDescription}</p>
         <a href={tool.url} target="_blank" rel="noopener noreferrer">Visit {tool.title} ↗</a>
+        {relatedTools.length > 0 && (
+          <nav class="tool-alternatives" aria-label={`${tool.title} alternatives`}>
+            <h3>{tool.title} alternatives</h3>
+            <ul>
+              {relatedTools.map((r) => (
+                <li><a href={`/tools/${r.slug}`}>{r.title}</a></li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </section>
     </noscript>
     <ToolGrid tools={categoryTools} />

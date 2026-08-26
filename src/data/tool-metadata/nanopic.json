@@ -5,5 +5,15 @@
   "url": "https://nanopic.ai/?ref=riseofmachine.com",
   "tag": "From $2.99",
   "date-added": "2025-11-18",
-  "slug": "nanopic"
+  "slug": "nanopic",
+  "related": [
+    "ezmaker-ai",
+    "ez-img-editor",
+    "nano-banana-pro-1",
+    "image-text-editor",
+    "imggen-ai",
+    "photo-editor",
+    "graficai",
+    "bulk-image-generator"
+  ]
 }

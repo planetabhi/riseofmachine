@@ -5,5 +5,15 @@
   "url": "https://gamma.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "gamma"
+  "slug": "gamma",
+  "related": [
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "uxmagic-ai",
+    "banani",
+    "graffiti-generator",
+    "ximagin",
+    "flux2ai"
+  ]
 }

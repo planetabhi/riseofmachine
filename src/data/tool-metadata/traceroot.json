@@ -5,5 +5,15 @@
   "url": "https://traceroot.ai/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-08-25",
-  "slug": "traceroot"
+  "slug": "traceroot",
+  "related": [
+    "onlook-for-web",
+    "elements-by-vercel",
+    "keys-and-caches",
+    "deepseek-v31",
+    "omnara",
+    "palmscanner-ai",
+    "vedic-astrology-chart",
+    "mee-manga-translator"
+  ]
 }

@@ -5,5 +5,13 @@
   "url": "https://www.lawschoolai.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "law-school-ai"
+  "slug": "law-school-ai",
+  "related": [
+    "ai-lawyer",
+    "westaway-ace",
+    "adalat",
+    "draftlex",
+    "genie",
+    "spellbook"
+  ]
 }

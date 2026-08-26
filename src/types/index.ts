@@ -24,6 +24,7 @@ export interface MetadataEntry {
     ogImage?: string | undefined;
     twitterHandle?: string | undefined;
     githubUrl?: string | undefined;
+    featured?: boolean | undefined;
 }
 
 export type MetadataMap = Record<string, MetadataEntry>;

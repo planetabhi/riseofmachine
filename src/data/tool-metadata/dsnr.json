@@ -5,5 +5,15 @@
   "url": "https://dsnr.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "dsnr"
+  "slug": "dsnr",
+  "related": [
+    "z-image",
+    "fastimage",
+    "banana-ai-2",
+    "banana-ai-1",
+    "picrafts",
+    "ptool",
+    "gpt-image-2-1",
+    "zilivo-ai"
+  ]
 }

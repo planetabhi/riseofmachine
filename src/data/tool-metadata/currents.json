@@ -5,5 +5,15 @@
   "url": "https://currents.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-06",
-  "slug": "currents"
+  "slug": "currents",
+  "related": [
+    "repixify",
+    "ocoya",
+    "schedpilot",
+    "cloutsim-influencer-simulator",
+    "docsfold",
+    "social-hub",
+    "highperformr",
+    "ogimage"
+  ]
 }

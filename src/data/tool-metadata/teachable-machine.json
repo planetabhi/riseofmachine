@@ -5,5 +5,15 @@
   "url": "https://teachablemachine.withgoogle.com/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-15",
-  "slug": "teachable-machine"
+  "slug": "teachable-machine",
+  "related": [
+    "tensorblock-forge",
+    "chatgpt-apps-sdk",
+    "not-human-search",
+    "sqlmate",
+    "markitdown",
+    "nat-checker",
+    "cursor-mcp",
+    "buildrs"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.befunky.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "befunky"
+  "slug": "befunky",
+  "related": [
+    "ghostface",
+    "pebblely",
+    "add-person-to-photo",
+    "flux-ai",
+    "magic-eraser",
+    "ai-magic-eraser",
+    "sellerpic",
+    "faceswap"
+  ]
 }

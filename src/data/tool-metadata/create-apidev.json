@@ -5,5 +5,15 @@
   "url": "https://create-api.dev/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-07-03",
-  "slug": "create-apidev"
+  "slug": "create-apidev",
+  "related": [
+    "tensorblock-forge",
+    "x-note-writer-api",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "cursor-mcp"
+  ]
 }

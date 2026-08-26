@@ -5,5 +5,15 @@
   "url": "https://pixverse.ai/?ref=riseofmachine.com",
   "tag": "Beta",
   "date-added": "2023-12-26",
-  "slug": "pixverse"
+  "slug": "pixverse",
+  "related": [
+    "opusclip",
+    "morph-studio",
+    "moonvalley",
+    "dadan",
+    "freebeat",
+    "createnew",
+    "hailuoai",
+    "kling-ai"
+  ]
 }

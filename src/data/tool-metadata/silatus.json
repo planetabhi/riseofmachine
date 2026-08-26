@@ -5,5 +5,15 @@
   "url": "https://silatus.com/?ref=riseofmachine.com",
   "tag": "From $14/mo",
   "date-added": "2023-12-27",
-  "slug": "silatus"
+  "slug": "silatus",
+  "related": [
+    "consensus",
+    "research",
+    "osum",
+    "papers",
+    "merlin",
+    "gaabstract",
+    "resea-ai",
+    "bagel"
+  ]
 }

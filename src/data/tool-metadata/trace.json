@@ -5,5 +5,15 @@
   "url": "https://www.trace.so/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-24",
-  "slug": "trace"
+  "slug": "trace",
+  "related": [
+    "manus",
+    "palmscanner-ai",
+    "mee-manga-translator",
+    "destiny-matrix",
+    "love-mbti",
+    "nectar-ai",
+    "hammer",
+    "sms-launcher"
+  ]
 }

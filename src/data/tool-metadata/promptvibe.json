@@ -5,5 +5,15 @@
   "url": "https://promptvibe.ai/?ref=riseofmachine.com",
   "tag": "From $10/mo",
   "date-added": "2025-06-06",
-  "slug": "promptvibe"
+  "slug": "promptvibe",
+  "related": [
+    "gpt-prompts",
+    "goodprompts",
+    "promptbox",
+    "promptlayer",
+    "flowgpt",
+    "openart",
+    "promptbase",
+    "xprompts"
+  ]
 }

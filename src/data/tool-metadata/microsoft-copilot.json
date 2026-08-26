@@ -5,5 +5,15 @@
   "url": "https://copilot.microsoft.com?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-14",
-  "slug": "microsoft-copilot"
+  "slug": "microsoft-copilot",
+  "related": [
+    "grok",
+    "qwen",
+    "muse-spark-ai",
+    "deepseekv4dev",
+    "appagent",
+    "deepseek-r1",
+    "gemini",
+    "grok-1"
+  ]
 }

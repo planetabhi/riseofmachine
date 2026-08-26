@@ -5,5 +5,15 @@
   "url": "https://character.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "character"
+  "slug": "character",
+  "related": [
+    "chatbotkit",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "flowpoint"
+  ]
 }

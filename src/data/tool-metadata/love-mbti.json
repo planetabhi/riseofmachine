@@ -5,5 +5,15 @@
   "url": "https://love-mbti.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-03-05",
-  "slug": "love-mbti"
+  "slug": "love-mbti",
+  "related": [
+    "tradinglens",
+    "palmscanner-ai",
+    "mee-manga-translator",
+    "destiny-matrix",
+    "nectar-ai",
+    "hammer",
+    "manus",
+    "sms-launcher"
+  ]
 }

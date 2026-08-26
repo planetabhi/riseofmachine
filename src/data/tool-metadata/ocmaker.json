@@ -5,5 +5,15 @@
   "url": "https://www.ocmaker.net/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-10-22",
-  "slug": "ocmaker"
+  "slug": "ocmaker",
+  "related": [
+    "oc-maker",
+    "gpt-image-2-1",
+    "nanobanana-pro",
+    "comicsmakernet",
+    "zilivo-ai",
+    "banana-ai-2",
+    "gpt-image-2",
+    "editaimg"
+  ]
 }

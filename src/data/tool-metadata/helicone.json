@@ -5,5 +5,15 @@
   "url": "https://www.helicone.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "helicone"
+  "slug": "helicone",
+  "related": [
+    "run-llm",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "character"
+  ]
 }

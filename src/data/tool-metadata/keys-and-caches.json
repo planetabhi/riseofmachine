@@ -5,5 +5,15 @@
   "url": "https://keysandcaches.com/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2025-08-23",
-  "slug": "keys-and-caches"
+  "slug": "keys-and-caches",
+  "related": [
+    "elements-by-vercel",
+    "onlook-for-web",
+    "traceroot",
+    "deepseek-v31",
+    "omnara",
+    "imagebyqwen",
+    "profilespider",
+    "speedvitals-rum"
+  ]
 }

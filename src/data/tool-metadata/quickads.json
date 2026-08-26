@@ -5,5 +5,15 @@
   "url": "https://www.quickads.ai/?ref=riseofmachine.com",
   "tag": "From $9/mo",
   "date-added": "2023-12-26",
-  "slug": "quickads"
+  "slug": "quickads",
+  "related": [
+    "ogimage",
+    "meme-generator",
+    "rizz-line-generator",
+    "authorscale",
+    "uplodio",
+    "schedpilot",
+    "bestever",
+    "cloutsim-influencer-simulator"
+  ]
 }

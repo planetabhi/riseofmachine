@@ -5,5 +5,15 @@
   "url": "https://chatbotkit.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-08-04",
-  "slug": "chatbotkit"
+  "slug": "chatbotkit",
+  "related": [
+    "character",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "flowpoint"
+  ]
 }

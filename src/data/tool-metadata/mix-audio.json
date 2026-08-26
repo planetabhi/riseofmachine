@@ -5,5 +5,15 @@
   "url": "https://mix.audio/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-03-23",
-  "slug": "mix-audio"
+  "slug": "mix-audio",
+  "related": [
+    "audio-muse",
+    "lami",
+    "cleanaudio-ai",
+    "adtwin",
+    "reelscribe",
+    "trint",
+    "sync",
+    "wellsaid-labs"
+  ]
 }

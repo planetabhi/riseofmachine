@@ -5,5 +5,15 @@
   "url": "https://goosepod.org?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-12-22",
-  "slug": "goose-pod"
+  "slug": "goose-pod",
+  "related": [
+    "wondercraft",
+    "cleanaudio-ai",
+    "mp3-to-text",
+    "reelscribe",
+    "monologue",
+    "playht",
+    "whisper",
+    "adtwin"
+  ]
 }

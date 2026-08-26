@@ -5,5 +5,15 @@
   "url": "https://humanize.im/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2024-10-23",
-  "slug": "humanize"
+  "slug": "humanize",
+  "related": [
+    "humanize-2",
+    "bexiai",
+    "proofwrite-ai",
+    "the-humanize",
+    "sickleaveemail",
+    "headcanon-generator-fun",
+    "news-article-gen",
+    "textcraft"
+  ]
 }

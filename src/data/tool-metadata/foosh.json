@@ -5,5 +5,15 @@
   "url": "https://www.foosh.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2024-12-14",
-  "slug": "foosh"
+  "slug": "foosh",
+  "related": [
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "ezmaker-ai",
+    "ez-img-editor",
+    "add-person-to-photo"
+  ]
 }

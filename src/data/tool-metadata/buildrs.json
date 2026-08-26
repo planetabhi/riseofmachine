@@ -5,5 +5,15 @@
   "url": "https://buildrs.space/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-07-07",
-  "slug": "buildrs"
+  "slug": "buildrs",
+  "related": [
+    "cursor-mcp",
+    "tensorblock-forge",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "create-apidev"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://docs.litellm.ai/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-26",
-  "slug": "litellm"
+  "slug": "litellm",
+  "related": [
+    "langfuse",
+    "llamaindex",
+    "chatgpt",
+    "giga-ml",
+    "langchain",
+    "run-llm",
+    "helicone",
+    "ferryapi"
+  ]
 }

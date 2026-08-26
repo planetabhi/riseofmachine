@@ -5,5 +5,15 @@
   "url": "https://www.headshotphoto.io/?ref=riseofmachine.com",
   "tag": "$29 One-time",
   "date-added": "2025-06-06",
-  "slug": "headshot-photo"
+  "slug": "headshot-photo",
+  "related": [
+    "mypicnow",
+    "photo",
+    "photo-editor",
+    "photify",
+    "photoleap",
+    "cozaiphoto",
+    "hama",
+    "add-person-to-photo"
+  ]
 }

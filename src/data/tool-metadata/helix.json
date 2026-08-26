@@ -5,5 +5,15 @@
   "url": "https://tryhelix.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "helix"
+  "slug": "helix",
+  "related": [
+    "builduo",
+    "text-remover",
+    "smythos",
+    "zen-agents",
+    "buildship",
+    "amazon-sagemaker",
+    "screenshot-to-code",
+    "director"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://deepseekv4.dev/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-01-29",
-  "slug": "deepseekv4dev"
+  "slug": "deepseekv4dev",
+  "related": [
+    "deepseek-r1",
+    "muse-spark-ai",
+    "appagent",
+    "gemini",
+    "grok",
+    "grok-1",
+    "mastraai",
+    "microsoft-copilot"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://flowgpt.com/?ref=riseofmachine.com",
   "tag": "Community",
   "date-added": "2023-12-15",
-  "slug": "flowgpt"
+  "slug": "flowgpt",
+  "related": [
+    "prompt-library",
+    "promptvibe",
+    "gpt-prompts",
+    "goodprompts",
+    "promptbox",
+    "promptlayer",
+    "openart",
+    "promptbase"
+  ]
 }

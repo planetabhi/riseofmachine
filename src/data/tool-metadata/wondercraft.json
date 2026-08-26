@@ -5,5 +5,15 @@
   "url": "https://www.wondercraft.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "wondercraft"
+  "slug": "wondercraft",
+  "related": [
+    "goose-pod",
+    "cleanaudio-ai",
+    "mp3-to-text",
+    "reelscribe",
+    "monologue",
+    "playht",
+    "whisper",
+    "adtwin"
+  ]
 }

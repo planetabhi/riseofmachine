@@ -5,5 +5,15 @@
   "url": "https://editaimg.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-04-07",
-  "slug": "editaimg"
+  "slug": "editaimg",
+  "related": [
+    "z-image",
+    "imgkits",
+    "fastimage",
+    "banana-ai-2",
+    "banana-ai-1",
+    "picrafts",
+    "ptool",
+    "dsnr"
+  ]
 }

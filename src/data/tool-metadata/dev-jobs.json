@@ -5,5 +5,15 @@
   "url": "https://aidevboard.com?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2026-04-17",
-  "slug": "dev-jobs"
+  "slug": "dev-jobs",
+  "related": [
+    "notebooklm-remover",
+    "hero",
+    "meet-ting",
+    "mydeviceai-v2",
+    "google-translate",
+    "runner-h-ai",
+    "computerx",
+    "magictrips"
+  ]
 }

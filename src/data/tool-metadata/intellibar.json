@@ -5,5 +5,15 @@
   "url": "https://intellibar.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-09-28",
-  "slug": "intellibar"
+  "slug": "intellibar",
+  "related": [
+    "otter",
+    "walles",
+    "mavexai",
+    "krisp",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

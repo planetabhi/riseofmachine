@@ -5,5 +5,15 @@
   "url": "https://comicsmaker.net/links?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-08",
-  "slug": "comicsmakernet"
+  "slug": "comicsmakernet",
+  "related": [
+    "oc-maker-1",
+    "oc-maker",
+    "thumbnail-maker",
+    "gpt-image-2-1",
+    "nanobanana-pro",
+    "zilivo-ai",
+    "banana-ai-2",
+    "gpt-image-2"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://mavex.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "mavexai"
+  "slug": "mavexai",
+  "related": [
+    "intellibar",
+    "otter",
+    "walles",
+    "mem",
+    "krisp",
+    "remio",
+    "onetwo-resume",
+    "converge-ai"
+  ]
 }

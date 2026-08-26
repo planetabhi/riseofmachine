@@ -5,5 +5,15 @@
   "url": "https://www.vidu-studio.net/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-12-13",
-  "slug": "vidu-studio"
+  "slug": "vidu-studio",
+  "related": [
+    "image-to-video",
+    "image2video",
+    "animate-image-ai",
+    "createnew",
+    "lyric-video-studio",
+    "neural-frames",
+    "seedances",
+    "veo-video"
+  ]
 }

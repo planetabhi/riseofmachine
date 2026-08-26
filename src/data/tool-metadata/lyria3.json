@@ -5,5 +5,15 @@
   "url": "https://lyria3.net/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-03-05",
-  "slug": "lyria3"
+  "slug": "lyria3",
+  "related": [
+    "music-generator",
+    "song-generator",
+    "murekaai",
+    "wondera",
+    "tomusic",
+    "imagetomusic",
+    "music-ai",
+    "tracksy"
+  ]
 }

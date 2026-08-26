@@ -5,5 +5,15 @@
   "url": "https://supernormal.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "supernormal"
+  "slug": "supernormal",
+  "related": [
+    "otter",
+    "shortcutai",
+    "wudpecker",
+    "pally-ai",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai"
+  ]
 }

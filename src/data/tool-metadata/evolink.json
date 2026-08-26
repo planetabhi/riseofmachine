@@ -5,5 +5,15 @@
   "url": "https://evolink.ai/?ref=riseofmachine.com",
   "tag": "$X One-time",
   "date-added": "2025-12-14",
-  "slug": "evolink"
+  "slug": "evolink",
+  "related": [
+    "poe-api",
+    "tensorblock-forge",
+    "lobe-chat",
+    "helix",
+    "teachable-machine",
+    "ollama-desktop-app",
+    "pythagora-20",
+    "amazon-sagemaker"
+  ]
 }

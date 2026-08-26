@@ -5,5 +5,15 @@
   "url": "https://www.askmarvin.ai/?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2023-12-26",
-  "slug": "marvin"
+  "slug": "marvin",
+  "related": [
+    "liner",
+    "chatgpt-apps-sdk",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker",
+    "cursor-mcp",
+    "buildrs"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://creatify.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "creatify"
+  "slug": "creatify",
+  "related": [
+    "lumen5",
+    "img2video",
+    "veo3-video-generator",
+    "invideo-ai",
+    "pictory",
+    "hoox",
+    "supermaker",
+    "genmo"
+  ]
 }

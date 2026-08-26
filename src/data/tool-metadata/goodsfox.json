@@ -5,5 +5,15 @@
   "url": "https://goodsfox.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-08-22",
-  "slug": "goodsfox"
+  "slug": "goodsfox",
+  "related": [
+    "palmscanner-ai",
+    "mee-manga-translator",
+    "destiny-matrix",
+    "love-mbti",
+    "nectar-ai",
+    "hammer",
+    "manus",
+    "sms-launcher"
+  ]
 }

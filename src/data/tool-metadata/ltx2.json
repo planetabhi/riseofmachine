@@ -5,5 +5,15 @@
   "url": "https://ltx2.org/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-11-03",
-  "slug": "ltx2"
+  "slug": "ltx2",
+  "related": [
+    "veo3-video-generator",
+    "soda-video-ai",
+    "neural-frames",
+    "morph-studio",
+    "fliki",
+    "seedances",
+    "textideo",
+    "veo-video"
+  ]
 }

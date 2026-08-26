@@ -5,5 +5,15 @@
   "url": "https://try.elevenlabs.io/v97l1k3mkplm?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-06-24",
-  "slug": "eleven-ai"
+  "slug": "eleven-ai",
+  "related": [
+    "sonicker",
+    "nicevoice",
+    "dubbing-ai",
+    "so-vits-svc",
+    "audio-transcriber-ai",
+    "voqusa",
+    "kyutai-tts",
+    "seamless"
+  ]
 }

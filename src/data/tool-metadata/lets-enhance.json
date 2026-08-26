@@ -5,5 +5,15 @@
   "url": "https://letsenhance.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "lets-enhance"
+  "slug": "lets-enhance",
+  "related": [
+    "pfpmaker",
+    "sellerpic",
+    "animegenai",
+    "blur-background",
+    "image-changer-app",
+    "image-describer",
+    "ai-magic-eraser",
+    "add-person-to-photo"
+  ]
 }

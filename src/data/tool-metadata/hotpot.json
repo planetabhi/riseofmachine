@@ -5,5 +5,15 @@
   "url": "https://hotpot.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-12",
-  "slug": "hotpot"
+  "slug": "hotpot",
+  "related": [
+    "ideogramai",
+    "svg-generator",
+    "gpt-image-2-1",
+    "nanobanana-pro",
+    "comicsmakernet",
+    "zilivo-ai",
+    "banana-ai-2",
+    "gpt-image-2"
+  ]
 }

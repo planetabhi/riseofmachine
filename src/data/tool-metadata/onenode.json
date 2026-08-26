@@ -5,5 +5,15 @@
   "url": "https://www.onenode.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-07-11",
-  "slug": "onenode"
+  "slug": "onenode",
+  "related": [
+    "droidrun",
+    "smythos",
+    "codebuddy",
+    "nora",
+    "screenshot-to-code",
+    "director",
+    "orchids",
+    "atla"
+  ]
 }

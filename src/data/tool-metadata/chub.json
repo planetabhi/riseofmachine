@@ -5,5 +5,15 @@
   "url": "https://chub.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "chub"
+  "slug": "chub",
+  "related": [
+    "path-weaver",
+    "rolechar",
+    "game-generator",
+    "meshy",
+    "roleplayr",
+    "soga-ai",
+    "saga",
+    "combos-ai"
+  ]
 }

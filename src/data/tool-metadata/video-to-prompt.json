@@ -5,5 +5,15 @@
   "url": "https://video2prompt.io/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-06-20",
-  "slug": "video-to-prompt"
+  "slug": "video-to-prompt",
+  "related": [
+    "lyric-video-studio",
+    "lehar-ai-video-generator",
+    "kungfu",
+    "magiclight-ai",
+    "seedance",
+    "veo3-video-generator",
+    "tailored-labs",
+    "vidduo-agent"
+  ]
 }

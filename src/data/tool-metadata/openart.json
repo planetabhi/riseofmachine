@@ -5,5 +5,15 @@
   "url": "https://openart.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "openart"
+  "slug": "openart",
+  "related": [
+    "prompthero",
+    "smartgpt",
+    "gemini-photo-prompt",
+    "eye-for-ai",
+    "promptvibe",
+    "gpt-prompts",
+    "goodprompts",
+    "promptbox"
+  ]
 }

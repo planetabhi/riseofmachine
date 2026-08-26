@@ -5,5 +5,15 @@
   "url": "https://un.ms/research?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-11-06",
-  "slug": "research"
+  "slug": "research",
+  "related": [
+    "osum",
+    "gaabstract",
+    "resea-ai",
+    "capgo-ai",
+    "consensus",
+    "scite",
+    "heronai",
+    "storm"
+  ]
 }

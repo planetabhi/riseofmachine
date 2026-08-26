@@ -5,5 +5,15 @@
   "url": "https://www.astria.ai/?ref=riseofmachine.com",
   "tag": "From $0.10/prompt",
   "date-added": "2023-12-15",
-  "slug": "astria"
+  "slug": "astria",
+  "related": [
+    "stockimg",
+    "image-to-3d-ai",
+    "visual-chatgpt",
+    "getimg-ai",
+    "designer",
+    "nanobanana-pro",
+    "nanobanana-2",
+    "picture-generator"
+  ]
 }

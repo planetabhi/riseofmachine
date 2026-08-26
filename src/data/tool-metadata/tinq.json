@@ -5,5 +5,15 @@
   "url": "https://tinq.ai/?ref=riseofmachine.com",
   "tag": "From $15/mo",
   "date-added": "2023-12-15",
-  "slug": "tinq"
+  "slug": "tinq",
+  "related": [
+    "poe-api",
+    "ai-sdk-5-by-vercel",
+    "builduo",
+    "postbot",
+    "tensorblock-forge",
+    "create-apidev",
+    "x-note-writer-api",
+    "capmonster-cloud"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.harmonai.org/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-24",
-  "slug": "harmonai"
+  "slug": "harmonai",
+  "related": [
+    "audio-transcriber-ai",
+    "cleanaudio-ai",
+    "adtwin",
+    "audio-muse",
+    "mix-audio",
+    "reelscribe",
+    "blogaudio",
+    "trint"
+  ]
 }

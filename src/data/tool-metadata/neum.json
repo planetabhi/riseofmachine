@@ -5,5 +5,15 @@
   "url": "https://www.neum.ai/?ref=riseofmachine.com",
   "tag": "Open-source",
   "date-added": "2023-12-29",
-  "slug": "neum"
+  "slug": "neum",
+  "related": [
+    "axflow",
+    "tinygrad",
+    "new-ui",
+    "n8n-workflow-builder",
+    "rybbit",
+    "ai-sdk-5-by-vercel",
+    "ollama-desktop-app",
+    "rysana"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.dadan.io/features/ai-assist?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "dadan"
+  "slug": "dadan",
+  "related": [
+    "freebeat",
+    "createnew",
+    "elaiio",
+    "viralrot",
+    "image-to-video",
+    "vivago",
+    "decohere",
+    "dance2ai"
+  ]
 }

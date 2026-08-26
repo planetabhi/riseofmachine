@@ -5,5 +5,15 @@
   "url": "https://www.onetworesume.com?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-22",
-  "slug": "onetwo-resume"
+  "slug": "onetwo-resume",
+  "related": [
+    "blocks",
+    "reztune",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform",
+    "upscaler"
+  ]
 }

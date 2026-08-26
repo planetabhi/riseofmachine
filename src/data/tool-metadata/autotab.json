@@ -5,5 +5,15 @@
   "url": "https://www.autotab.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-10-23",
-  "slug": "autotab"
+  "slug": "autotab",
+  "related": [
+    "sidekick",
+    "nimo",
+    "runbear",
+    "onetwo-resume",
+    "converge-ai",
+    "remio",
+    "bookletai",
+    "uniquenamesnet"
+  ]
 }

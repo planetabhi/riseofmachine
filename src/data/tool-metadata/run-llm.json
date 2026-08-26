@@ -5,5 +5,15 @@
   "url": "https://runllm.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-24",
-  "slug": "run-llm"
+  "slug": "run-llm",
+  "related": [
+    "modal",
+    "helicone",
+    "replicate",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek"
+  ]
 }

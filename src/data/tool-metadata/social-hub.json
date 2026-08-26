@@ -5,5 +5,15 @@
   "url": "https://www.socialhub.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-26",
-  "slug": "social-hub"
+  "slug": "social-hub",
+  "related": [
+    "schedpilot",
+    "cloutsim-influencer-simulator",
+    "docsfold",
+    "ogimage",
+    "rizz-line-generator",
+    "authorscale",
+    "uplodio",
+    "bestever"
+  ]
 }

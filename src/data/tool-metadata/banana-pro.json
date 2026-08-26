@@ -5,5 +5,15 @@
   "url": "https://banana-pro.io?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-12",
-  "slug": "banana-pro"
+  "slug": "banana-pro",
+  "related": [
+    "banana-ai-2",
+    "banana-ai-1",
+    "z-image",
+    "banana-ai",
+    "sdxl-turbo",
+    "fastimage",
+    "picrafts",
+    "ptool"
+  ]
 }

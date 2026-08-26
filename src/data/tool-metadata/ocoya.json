@@ -5,5 +5,15 @@
   "url": "https://www.ocoya.com/?ref=riseofmachine.com",
   "tag": "From $15/mo",
   "date-added": "2023-12-12",
-  "slug": "ocoya"
+  "slug": "ocoya",
+  "related": [
+    "repixify",
+    "schedpilot",
+    "cloutsim-influencer-simulator",
+    "currents",
+    "docsfold",
+    "postli",
+    "surudo-search",
+    "sivi"
+  ]
 }

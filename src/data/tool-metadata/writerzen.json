@@ -5,5 +5,15 @@
   "url": "https://writerzen.net/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "writerzen"
+  "slug": "writerzen",
+  "related": [
+    "keywordsearch",
+    "tool-disk",
+    "dr-checker",
+    "nimtai",
+    "meroid",
+    "promptwatch",
+    "seojuice",
+    "seoaibot"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.patterned.ai/?ref=riseofmachine.com",
   "tag": "From $10/mo",
   "date-added": "2023-12-12",
-  "slug": "patterned-ai"
+  "slug": "patterned-ai",
+  "related": [
+    "shape-of-ai",
+    "magicpatterns",
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "floor-plan-maker",
+    "roblox-gui-maker",
+    "landscapioai"
+  ]
 }

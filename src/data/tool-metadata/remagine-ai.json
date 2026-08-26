@@ -5,5 +5,15 @@
   "url": "https://remagineai.com/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-04-18",
-  "slug": "remagine-ai"
+  "slug": "remagine-ai",
+  "related": [
+    "fastwrite",
+    "generor",
+    "heynds",
+    "rightblogger",
+    "pptdetector",
+    "quillbot",
+    "yahini",
+    "dupdub"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.lindoai.com/?ref=riseofmachine.com",
   "tag": "From $17/mo",
   "date-added": "2023-12-26",
-  "slug": "lindo"
+  "slug": "lindo",
+  "related": [
+    "riku",
+    "buildai",
+    "imagica",
+    "stack",
+    "butternut",
+    "brancher-ai",
+    "make-song-ai",
+    "musikso"
+  ]
 }

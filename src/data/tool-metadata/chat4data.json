@@ -5,5 +5,15 @@
   "url": "https://chat4data.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "chat4data"
+  "slug": "chat4data",
+  "related": [
+    "datviz",
+    "heronai",
+    "gaabstract",
+    "research",
+    "resea-ai",
+    "storm",
+    "marketalertsai",
+    "osum"
+  ]
 }

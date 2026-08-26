@@ -5,5 +5,15 @@
   "url": "https://motioncontrol.app/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-01-12",
-  "slug": "motion-control"
+  "slug": "motion-control",
+  "related": [
+    "voe-ai",
+    "gemini-omni-ai",
+    "lehar-ai-video-generator",
+    "video-upscaler",
+    "recapoai",
+    "framia-pro",
+    "imagineclip",
+    "video-to-prompt"
+  ]
 }

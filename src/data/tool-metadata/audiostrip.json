@@ -5,5 +5,15 @@
   "url": "https://www.audiostrip.co.uk/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-11",
-  "slug": "audiostrip"
+  "slug": "audiostrip",
+  "related": [
+    "music-generator",
+    "song-generator",
+    "murekaai",
+    "wondera",
+    "tomusic",
+    "imagetomusic",
+    "music-ai",
+    "tracksy"
+  ]
 }

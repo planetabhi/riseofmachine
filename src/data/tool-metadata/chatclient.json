@@ -5,5 +5,15 @@
   "url": "https://chatclient.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-11-17",
-  "slug": "chatclient"
+  "slug": "chatclient",
+  "related": [
+    "chat-whisperer",
+    "ellie",
+    "superai",
+    "conduit",
+    "salestarget",
+    "receiptor",
+    "toffu",
+    "chat-agents"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://www.blackbox.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-22",
-  "slug": "blackbox-ai"
+  "slug": "blackbox-ai",
+  "related": [
+    "developer-pal",
+    "cody-by-sourcegraph",
+    "bito",
+    "q-developer",
+    "forge",
+    "grok-video",
+    "builderio",
+    "lovable"
+  ]
 }

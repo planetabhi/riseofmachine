@@ -5,5 +5,15 @@
   "url": "https://chef.convex.dev/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-04",
-  "slug": "chef"
+  "slug": "chef",
+  "related": [
+    "tabnine",
+    "marscode",
+    "archie",
+    "fitten-code",
+    "axflow",
+    "postbot",
+    "amazon-codewhisperer",
+    "sqlmate"
+  ]
 }

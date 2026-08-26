@@ -5,5 +5,15 @@
   "url": "https://www.chatgptimage.art?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-02-14",
-  "slug": "promptwall"
+  "slug": "promptwall",
+  "related": [
+    "image-changer-app",
+    "graficai",
+    "fotol-image-generator",
+    "magnific",
+    "blur-background",
+    "image-describer",
+    "image-text-editor",
+    "gemini-flash-image"
+  ]
 }

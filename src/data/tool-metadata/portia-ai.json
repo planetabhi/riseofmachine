@@ -5,5 +5,15 @@
   "url": "https://www.portialabs.ai/?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-07-03",
-  "slug": "portia-ai"
+  "slug": "portia-ai",
+  "related": [
+    "n8n-workflow-builder",
+    "smythos",
+    "zen-agents",
+    "cekura",
+    "marvin",
+    "builduo",
+    "liner",
+    "atla"
+  ]
 }

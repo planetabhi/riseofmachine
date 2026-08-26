@@ -5,5 +5,15 @@
   "url": "https://banana-nano.org/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-10-18",
-  "slug": "banana-nano"
+  "slug": "banana-nano",
+  "related": [
+    "nano-banana",
+    "flux2ai",
+    "morphlogo",
+    "lovspark-ai",
+    "tryonink",
+    "uxmagic-ai",
+    "banani",
+    "graffiti-generator"
+  ]
 }

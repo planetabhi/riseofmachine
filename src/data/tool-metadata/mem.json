@@ -5,5 +5,15 @@
   "url": "https://get.mem.ai/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2023-12-15",
-  "slug": "mem"
+  "slug": "mem",
+  "related": [
+    "mavexai",
+    "remio",
+    "onetwo-resume",
+    "converge-ai",
+    "bookletai",
+    "uniquenamesnet",
+    "dashform",
+    "upscaler"
+  ]
 }

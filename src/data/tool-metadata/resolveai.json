@@ -5,5 +5,15 @@
   "url": "https://resolveai.co/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "resolveai"
+  "slug": "resolveai",
+  "related": [
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena",
+    "character",
+    "flowpoint"
+  ]
 }

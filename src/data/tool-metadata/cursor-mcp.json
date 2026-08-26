@@ -5,5 +5,15 @@
   "url": "https://cursormcp.net/en?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-09-16",
-  "slug": "cursor-mcp"
+  "slug": "cursor-mcp",
+  "related": [
+    "not-human-search",
+    "buildrs",
+    "sqlmate",
+    "markitdown",
+    "nat-checker",
+    "chatgpt-apps-sdk",
+    "tensorblock-forge",
+    "create-apidev"
+  ]
 }

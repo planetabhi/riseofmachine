@@ -5,5 +5,15 @@
   "url": "https://aws.amazon.com/cn/codewhisperer?ref=riseofmachine.com",
   "tag": "Not available",
   "date-added": "2025-06-14",
-  "slug": "amazon-codewhisperer"
+  "slug": "amazon-codewhisperer",
+  "related": [
+    "fitten-code",
+    "marscode",
+    "chef",
+    "lintrule",
+    "postbot",
+    "tabnine",
+    "i18n-code-gen",
+    "screenshot-to-code"
+  ]
 }

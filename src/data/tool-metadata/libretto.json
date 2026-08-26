@@ -5,5 +5,15 @@
   "url": "https://libretto.fm/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2024-11-17",
-  "slug": "libretto"
+  "slug": "libretto",
+  "related": [
+    "grok-video-generator",
+    "fliki",
+    "viralrot",
+    "photo-to-video-ai",
+    "image-to-video",
+    "vivago",
+    "decohere",
+    "voe-ai"
+  ]
 }

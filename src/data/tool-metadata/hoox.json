@@ -5,5 +5,15 @@
   "url": "https://www.hoox.video/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2025-06-06",
-  "slug": "hoox"
+  "slug": "hoox",
+  "related": [
+    "supermaker",
+    "genmo",
+    "vidmix",
+    "qudemo",
+    "lyric-video-studio",
+    "vmeg-clips-to-videos",
+    "creatify",
+    "gemini-omni-ai"
+  ]
 }

@@ -5,5 +5,15 @@
   "url": "https://chatgpt-app.net?ref=riseofmachine.com",
   "tag": "Free",
   "date-added": "2025-12-21",
-  "slug": "chatgpt-apps-sdk"
+  "slug": "chatgpt-apps-sdk",
+  "related": [
+    "marvin",
+    "liner",
+    "teachable-machine",
+    "flappy",
+    "sqlmate",
+    "markitdown",
+    "not-human-search",
+    "nat-checker"
+  ]
 }

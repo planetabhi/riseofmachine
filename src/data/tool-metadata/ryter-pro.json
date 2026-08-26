@@ -5,5 +5,15 @@
   "url": "https://www.ryter.pro/?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-07-12",
-  "slug": "ryter-pro"
+  "slug": "ryter-pro",
+  "related": [
+    "bypassgpt",
+    "the-humanize",
+    "proofwrite-ai",
+    "booai",
+    "manga-ai-translator",
+    "transmonkey",
+    "justdone-ai",
+    "hard-usernames"
+  ]
 }

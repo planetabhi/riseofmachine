@@ -5,5 +5,15 @@
   "url": "https://makesong.now?ref=riseofmachine.com",
   "tag": "Freemium",
   "date-added": "2026-06-23",
-  "slug": "make-song-ai"
+  "slug": "make-song-ai",
+  "related": [
+    "song-lyrics-review",
+    "unideck-beta",
+    "akkio",
+    "browse-ai",
+    "makeform",
+    "create",
+    "vectorize-ai",
+    "chaindesk"
+  ]
 }

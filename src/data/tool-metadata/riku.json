@@ -5,5 +5,15 @@
   "url": "https://riku.ai/?ref=riseofmachine.com",
   "tag": "From $29/mo",
   "date-added": "2023-12-15",
-  "slug": "riku"
+  "slug": "riku",
+  "related": [
+    "buildai",
+    "imagica",
+    "lindo",
+    "stack",
+    "butternut",
+    "brancher-ai",
+    "make-song-ai",
+    "musikso"
+  ]
 }
