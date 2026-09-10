@@ -1,22 +1,48 @@
 ---
 import './Sidebar.css';
-import categoryIndex from '../data/category-index.json';
+import defaultCategoryIndex from '../data/category-index.json';
 
-const cats = Object.entries(
-    categoryIndex as Record<string, { title: string; count: number }>,
-);
+type CategoryIndex = Record<string, { title: string; count: number }>;
+
+interface Props {
+    // Category source + base path let one component render either the tools
+    // vertical (defaults) or the MCP vertical (/mcp) without a fork.
+    // Explicit `| undefined` so Layout can forward its own optional props under
+    // exactOptionalPropertyTypes without a type error.
+    categoryIndex?: CategoryIndex | undefined;
+    basePath?: string | undefined; // category links: `${basePath}/${slug}` (default '')
+    homeHref?: string | undefined; // "Home" link target (default '/')
+    homeLabel?: string | undefined; // "Home" link label (default 'Home')
+    showFavorites?: boolean | undefined; // Saved tools link (default true; false for MCP v1)
+    persistKey?: string | undefined; // distinct transition:persist key per vertical
+    showLatestFilter?: boolean | undefined; // forwarded from Layout (currently informational)
+}
+
+const {
+    categoryIndex = defaultCategoryIndex as CategoryIndex,
+    basePath = '',
+    homeHref = '/',
+    homeLabel = 'Home',
+    showFavorites = true,
+    persistKey = 'sidebar',
+} = Astro.props;
+
+const cats = Object.entries(categoryIndex);
 const totalCount = cats.reduce((acc, [, meta]) => acc + meta.count, 0);
 
 const normalize = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
 const current = normalize(Astro.url.pathname);
 
+// Which vertical is active — drives the Tools/MCPs segmented control.
+const isMcp = basePath === '/mcp' || current === '/mcp' || current.startsWith('/mcp/');
+
 // Latest applies to category listing routes; the homepage has its own Latest
 // section, so exclude '/'. A script keeps this in sync after nav (sidebar persists).
-const listingPaths = new Set(cats.map(([c]) => `/${c}`));
+const listingPaths = new Set(cats.map(([c]) => `${basePath}/${c}`));
 const showLatest = listingPaths.has(current);
 ---
 
-<aside id="app-sidebar" class="app-sidebar" aria-label="Primary" transition:persist>
+<aside id="app-sidebar" class="app-sidebar" aria-label="Primary" transition:persist={persistKey}>
     <div class="sidebar-scroll">
         <div class="sidebar-header">
             <a href="/" class="sidebar-logo" aria-label="home page">
@@ -33,17 +59,26 @@ const showLatest = listingPaths.has(current);
             </button>
         </div>
 
+        <div class="sidebar-segmented" role="group" aria-label="Switch between Tools and MCP servers">
+            <a href="/" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': !isMcp }]} aria-current={!isMcp ? 'page' : undefined}>
+                Tools
+            </a>
+            <a href="/mcp" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isMcp }]} aria-current={isMcp ? 'page' : undefined}>
+                MCPs
+            </a>
+        </div>
+
         <nav class="sidebar-nav" aria-label="Categories">
             <span class="sidebar-nav-pill" aria-hidden="true"></span>
-            <a href="/" data-astro-prefetch class:list={['sidebar-item', { 'is-active': current === '/' }]}>
-                <span class="sidebar-item-label">Home</span>
+            <a href={homeHref} data-astro-prefetch class:list={['sidebar-item', { 'is-active': current === normalize(homeHref) }]}>
+                <span class="sidebar-item-label">{homeLabel}</span>
                 <span class="sidebar-count" data-count={totalCount}>{totalCount}</span>
             </a>
             {cats.map(([category, meta]) => (
                 <a
-                    href={`/${category}`}
+                    href={`${basePath}/${category}`}
                     data-astro-prefetch
-                    class:list={['sidebar-item', { 'is-active': current === `/${category}` }]}
+                    class:list={['sidebar-item', { 'is-active': current === `${basePath}/${category}` }]}
                 >
                     <span class="sidebar-item-label">{meta.title}</span>
                     <span class="sidebar-count" data-count={meta.count}>{meta.count}</span>
@@ -66,6 +101,7 @@ const showLatest = listingPaths.has(current);
                 id="favoritesLink"
                 data-astro-prefetch
                 class:list={['sidebar-item', { 'is-active': current === '/saved' }]}
+                style={showFavorites ? undefined : 'display: none;'}
             >
                 <span class="sidebar-item-label">Saved tools</span>
                 <span class="sidebar-count" id="favoritesCount"></span>
@@ -154,6 +190,15 @@ const showLatest = listingPaths.has(current);
         const rz = document.getElementById('sidebar-resizer');
         if (!aside || !rz) return;
         if (!MIN) measure();
+
+        // A new sidebar element mounts whenever the vertical's persist key
+        // changes (tools ↔ mcp), so re-apply the saved width on every nav —
+        // otherwise the fresh element falls back to the CSS default and looks
+        // narrower than the one you came from.
+        try {
+            const saved = parseInt(localStorage.getItem(KEY) || '', 10);
+            if (saved) aside.style.width = `${saved}px`;
+        } catch {}
 
         rz.setAttribute('aria-valuemin', String(Math.round(MIN)));
         rz.setAttribute('aria-valuemax', String(maxW()));

@@ -1,0 +1,314 @@
+---
+// Client-rendered MCP grid: fetches the compact /mcp-index.json once, then
+// filters/sorts/searches in memory and renders 48 cards at a time (progressive
+// reveal via IntersectionObserver). Scoped to one category when the grid sets
+// data-category. Cards carry data-* + data-mcp-link so McpDetailPanel opens the
+// RHS panel with zero extra fetch. Keeps the listing HTML tiny (no SSR cards).
+---
+
+<script>
+    import { isRecentlyAdded } from '../utils/dates';
+
+    type Rec = {
+        s: string; t: string; b: string; c: string;
+        k: 'package' | 'remote' | 'none'; ic: string;
+        tr: string[]; rg: string[]; st: 'active' | 'deprecated';
+        v: string; w: string; rp: string; ev: string[]; u: string; up: string; pb: string;
+    };
+
+    const PAGE = 48;
+    type SortKey = 'name' | 'updated' | 'published';
+
+    let records: Rec[] = [];
+    const recCache = new Map<string, Rec[]>(); // per-URL cache (full index + shards)
+    const inflight = new Map<string, Promise<Rec[]>>();
+    let scoped: Rec[] = []; // records for this page's category (or all)
+    let view: Rec[] = []; // scoped + search + filters + sort
+    let rendered = 0;
+    let io: IntersectionObserver | null = null;
+    let catTitles: Record<string, string> = {};
+
+    let query = '';
+    let sort: SortKey = 'name';
+    const filters = {
+        transport: new Set<string>(),
+        registry: new Set<string>(),
+        status: new Set<string>(),
+        install: new Set<string>(),
+    };
+
+    const gridEl = () => document.querySelector<HTMLElement>('[data-mcp-grid]');
+    const listEl = () => gridEl()?.querySelector<HTMLElement>('[data-mcp-list]') ?? null;
+    const sentinelEl = () => gridEl()?.querySelector<HTMLElement>('.grid-sentinel') ?? null;
+    const emptyEl = () => gridEl()?.querySelector<HTMLElement>('.grid-empty') ?? null;
+    const pageCategory = () => gridEl()?.dataset.category || '';
+
+    const installLabel = (k: Rec['k']) => (k === 'package' ? 'installable' : k === 'remote' ? 'remote' : 'no install');
+
+    // Category pages load a small per-category shard; the landing loads the full
+    // index (it searches across every server).
+    const indexUrl = () => {
+        const cat = pageCategory();
+        return cat ? `/mcp-cat/${cat}.json` : '/mcp-index.json';
+    };
+
+    async function loadRecords(url: string): Promise<Rec[]> {
+        const cached = recCache.get(url);
+        if (cached) return cached;
+        let p = inflight.get(url);
+        if (!p) {
+            p = fetch(url)
+                .then((r) => {
+                    if (!r.ok) throw new Error(`mcp index ${r.status}`);
+                    return r.json();
+                })
+                .then((d: Rec[]) => {
+                    recCache.set(url, d);
+                    inflight.delete(url);
+                    return d;
+                })
+                .catch(() => {
+                    inflight.delete(url);
+                    return [] as Rec[];
+                });
+            inflight.set(url, p);
+        }
+        return p;
+    }
+
+    // Category slug -> title, read from the sidebar (zero extra fetch).
+    function buildCatMap() {
+        catTitles = {};
+        document.querySelectorAll<HTMLAnchorElement>('#app-sidebar .sidebar-nav a').forEach((a) => {
+            try {
+                const slug = new URL(a.href).pathname
+                    .replace(/^\/mcp\//, '')
+                    .replace(/^\//, '')
+                    .replace(/\/$/, '');
+                const label = a.querySelector('.sidebar-item-label')?.textContent?.trim();
+                if (slug && label) catTitles[slug] = label;
+            } catch {}
+        });
+    }
+
+    const isFiltering = () =>
+        query.length >= 2 ||
+        filters.transport.size > 0 ||
+        filters.registry.size > 0 ||
+        filters.status.size > 0 ||
+        filters.install.size > 0;
+
+    function matches(r: Rec): boolean {
+        if (query.length >= 2) {
+            const hay = `${r.t} ${r.b} ${r.s}`.toLowerCase();
+            if (!hay.includes(query)) return false;
+        }
+        if (filters.status.size && !filters.status.has(r.st)) return false;
+        if (filters.install.size && !filters.install.has(r.k)) return false;
+        if (filters.transport.size && !r.tr.some((x) => filters.transport.has(x))) return false;
+        if (filters.registry.size && !r.rg.some((x) => filters.registry.has(x))) return false;
+        return true;
+    }
+
+    function sortRecs(list: Rec[]): Rec[] {
+        const cmp: Record<SortKey, (a: Rec, b: Rec) => number> = {
+            name: (a, b) => a.t.localeCompare(b.t),
+            updated: (a, b) => (b.up || b.pb).localeCompare(a.up || a.pb),
+            published: (a, b) => (b.pb || '').localeCompare(a.pb || ''),
+        };
+        return list.toSorted(cmp[sort]);
+    }
+
+    function cardEl(r: Rec): HTMLLIElement {
+        const isNew = isRecentlyAdded(r.pb, 30);
+        const catTitle = catTitles[r.c] ?? r.c;
+        const tag = r.st === 'deprecated' ? 'deprecated' : installLabel(r.k);
+
+        const li = document.createElement('li');
+        li.className = 'link-card is-revealing';
+        li.dataset.slug = r.s;
+        li.dataset.category = r.c;
+        li.dataset.new = String(isNew);
+
+        const a = document.createElement('a');
+        a.href = `/mcp/servers/${r.s}`;
+        a.setAttribute('data-mcp-link', '');
+        a.dataset.title = r.t;
+        a.dataset.body = r.b;
+        a.dataset.tag = tag;
+        a.dataset.date = r.pb;
+        a.dataset.url = r.u;
+        a.dataset.slug = r.s;
+        a.dataset.category = r.c;
+        a.dataset.categoryTitle = catTitle;
+        a.dataset.installCommand = r.ic;
+        a.dataset.installKind = r.k;
+        a.dataset.transports = r.tr.join(',');
+        a.dataset.registries = r.rg.join(',');
+        a.dataset.status = r.st;
+        a.dataset.version = r.v;
+        a.dataset.updated = r.up;
+        if (r.w) a.dataset.website = r.w;
+        if (r.rp) a.dataset.repo = r.rp;
+        if (r.ev.length) a.dataset.envs = r.ev.join(',');
+
+        const strong = document.createElement('strong');
+        strong.className = 'nu-c-fs-normal nu-u-mt-1 nu-u-mb-1';
+        strong.textContent = r.t;
+
+        const body = document.createElement('p');
+        body.className = 'nu-c-helper-text nu-u-mt-1 nu-u-mb-1';
+        body.textContent = r.b;
+
+        a.append(strong, body);
+        li.appendChild(a);
+        return li;
+    }
+
+    function renderMore() {
+        const list = listEl();
+        if (!list) return;
+        const next = view.slice(rendered, rendered + PAGE);
+        if (next.length) {
+            const frag = document.createDocumentFragment();
+            next.forEach((r) => frag.appendChild(cardEl(r)));
+            list.appendChild(frag);
+            rendered += next.length;
+        }
+        const sentinel = sentinelEl();
+        if (sentinel) sentinel.hidden = rendered >= view.length;
+    }
+
+    function recompute() {
+        const list = listEl();
+        if (!list) return;
+        view = sortRecs(scoped.filter(matches));
+        list.replaceChildren();
+        rendered = 0;
+        renderMore();
+        const empty = emptyEl();
+        if (empty) empty.hidden = view.length !== 0;
+        // Hide the "Recently updated" strip whenever a query/filter/sort is active.
+        const strip = document.getElementById('mcp-recent');
+        if (strip) strip.hidden = isFiltering() || sort !== 'name';
+    }
+
+    function scope() {
+        const cat = pageCategory();
+        // Category pages fetch a per-category shard, so it's already scoped; the
+        // filter stays as a safety net (and a no-op for the full landing index).
+        scoped = cat ? records.filter((r) => r.c === cat) : records;
+    }
+
+    function setupObserver() {
+        io?.disconnect();
+        const sentinel = sentinelEl();
+        if (!sentinel) return;
+        io = new IntersectionObserver(
+            (entries) => {
+                if (!entries[0]?.isIntersecting) return;
+                if (rendered >= view.length) return;
+                renderMore();
+            },
+            { root: document.querySelector('.app-content'), rootMargin: '400px' },
+        );
+        io.observe(sentinel);
+    }
+
+    function writeUrl() {
+        try {
+            const p = new URLSearchParams();
+            if (query) p.set('q', query);
+            if (sort !== 'name') p.set('sort', sort);
+            for (const [k, set] of Object.entries(filters)) {
+                if (set.size) p.set(k, [...set].join(','));
+            }
+            const qs = p.toString();
+            history.replaceState(history.state, '', qs ? `?${qs}` : location.pathname);
+        } catch {
+            /* history unavailable */
+        }
+    }
+
+    function readUrl() {
+        try {
+            const p = new URLSearchParams(location.search);
+            query = (p.get('q') ?? '').trim().toLowerCase();
+            const s = p.get('sort');
+            sort = s === 'updated' || s === 'published' ? s : 'name';
+            for (const k of ['transport', 'registry', 'status', 'install'] as const) {
+                filters[k] = new Set((p.get(k) ?? '').split(',').filter(Boolean));
+            }
+        } catch {
+            /* ignore */
+        }
+    }
+
+    // Reflect restored URL state onto the control chips' aria-pressed.
+    function syncControls() {
+        document.querySelectorAll<HTMLElement>('[data-mcp-control]').forEach((el) => {
+            const kind = el.dataset.mcpControl;
+            const value = el.dataset.value ?? '';
+            if (kind === 'sort') {
+                el.setAttribute('aria-pressed', String((sort || 'name') === value));
+            } else if (kind && kind in filters) {
+                el.setAttribute('aria-pressed', String(filters[kind as keyof typeof filters].has(value)));
+            }
+        });
+    }
+
+    async function init() {
+        if (!gridEl()) return;
+        query = '';
+        sort = 'name';
+        (['transport', 'registry', 'status', 'install'] as const).forEach((k) => filters[k].clear());
+        buildCatMap();
+        readUrl();
+        syncControls();
+        records = await loadRecords(indexUrl());
+        if (!gridEl()) return; // navigated away while loading
+        scope();
+        setupObserver();
+        recompute();
+    }
+
+    if (!(window as any).__mcpEnhancerBound) {
+        (window as any).__mcpEnhancerBound = true;
+
+        // Inline search box (ContentTopbar/Hero dispatch this shared event).
+        window.addEventListener('tools:search', (e: Event) => {
+            const detail = (e as CustomEvent<{ query?: string }>).detail || {};
+            if (typeof detail.query === 'string' && gridEl()) {
+                query = detail.query.trim().toLowerCase();
+                recompute();
+                writeUrl();
+            }
+        });
+
+        // Filter/sort controls delegate through [data-mcp-control].
+        document.addEventListener('click', (e) => {
+            const el = (e.target as HTMLElement).closest<HTMLElement>('[data-mcp-control]');
+            if (!el || !gridEl()) return;
+            const kind = el.dataset.mcpControl;
+            const value = el.dataset.value ?? '';
+            if (kind === 'sort') {
+                sort = (value as SortKey) || 'name';
+                el.parentElement?.querySelectorAll('[data-mcp-control="sort"]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+                el.setAttribute('aria-pressed', 'true');
+            } else if (kind && kind in filters) {
+                const set = filters[kind as keyof typeof filters];
+                if (set.has(value)) set.delete(value);
+                else set.add(value);
+                el.setAttribute('aria-pressed', String(set.has(value)));
+            } else {
+                return;
+            }
+            recompute();
+            writeUrl();
+        });
+
+        document.addEventListener('astro:page-load', () => void init());
+        void init();
+    }
+</script>
+

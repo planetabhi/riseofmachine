@@ -1,0 +1,86 @@
+{
+  "databases": {
+    "title": "Databases",
+    "count": 22
+  },
+  "dev-tools": {
+    "title": "Dev Tools",
+    "count": 2947
+  },
+  "cloud-devops": {
+    "title": "Cloud & DevOps",
+    "count": 9
+  },
+  "ai-llm": {
+    "title": "AI & LLM",
+    "count": 8
+  },
+  "search": {
+    "title": "Search",
+    "count": 7
+  },
+  "payments-finance": {
+    "title": "Payments & Finance",
+    "count": 3
+  },
+  "communication": {
+    "title": "Communication",
+    "count": 7
+  },
+  "crm-sales": {
+    "title": "CRM & Sales",
+    "count": 2
+  },
+  "productivity": {
+    "title": "Productivity",
+    "count": 2
+  },
+  "data-analytics": {
+    "title": "Data & Analytics",
+    "count": 4
+  },
+  "monitoring": {
+    "title": "Monitoring",
+    "count": 1
+  },
+  "security": {
+    "title": "Security",
+    "count": 7
+  },
+  "storage": {
+    "title": "Storage",
+    "count": 3
+  },
+  "ecommerce": {
+    "title": "E-commerce",
+    "count": 2
+  },
+  "marketing": {
+    "title": "Marketing",
+    "count": 4
+  },
+  "design": {
+    "title": "Design",
+    "count": 6
+  },
+  "media": {
+    "title": "Media",
+    "count": 8
+  },
+  "web-scraping": {
+    "title": "Web Scraping",
+    "count": 1
+  },
+  "automation": {
+    "title": "Automation",
+    "count": 1
+  },
+  "docs-knowledge": {
+    "title": "Docs & Knowledge",
+    "count": 5
+  },
+  "other": {
+    "title": "Other",
+    "count": 231
+  }
+}

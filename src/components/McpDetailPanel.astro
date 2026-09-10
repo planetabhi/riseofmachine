@@ -1,0 +1,635 @@
+---
+// Inline (non-modal) MCP server detail panel — the MCP analogue of DetailPanel.
+// Slides in as a flex sibling of .app-content, populated entirely from the
+// clicked card's data-* (zero fetch). Opening updates the URL to
+// /mcp/servers/{slug} (Back closes). Keyed off a[data-mcp-link] so it never
+// conflicts with the tools DetailPanel (which keys off a[data-tool-link]).
+---
+
+<aside class="detail-panel mcp-detail-panel" id="mcp-detail-panel" aria-label="MCP server details" aria-hidden="true" inert>
+    <div class="detail-panel-inner">
+        <div class="detail-head">
+            <span class="detail-monogram" id="mcp-detail-monogram" aria-hidden="true"></span>
+            <div class="detail-head-actions">
+                <button type="button" class="detail-close" id="mcp-detail-close" aria-label="Close panel">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <h2 class="detail-title nu-c-h5 nu-u-text--primary" id="mcp-detail-title"></h2>
+        <div class="detail-meta">
+            <a class="detail-category" id="mcp-detail-category"></a>
+            <span class="detail-sep" aria-hidden="true">·</span>
+            <span class="detail-added" id="mcp-detail-updated"></span>
+        </div>
+
+        <section class="detail-section" id="mcp-detail-cmd-section" hidden>
+            <p class="detail-label">Install command</p>
+            <div class="detail-cmd-wrap">
+                <code class="detail-cmd" id="mcp-detail-cmd"></code>
+                <button type="button" class="detail-cmd-copy" id="mcp-detail-copy" aria-label="Copy install command">
+                    <svg class="detail-cmd-icon icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    <svg class="detail-cmd-icon icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <p class="detail-label">About</p>
+            <p class="detail-body nu-u-text--secondary" id="mcp-detail-body"></p>
+        </section>
+
+        <div class="detail-snapshot">
+            <article class="detail-fact">
+                <p class="detail-label">Install</p>
+                <p class="detail-value" id="mcp-detail-install"></p>
+            </article>
+            <article class="detail-fact">
+                <p class="detail-label">Transports</p>
+                <p class="detail-value" id="mcp-detail-transports"></p>
+            </article>
+            <article class="detail-fact">
+                <p class="detail-label">Registries</p>
+                <p class="detail-value" id="mcp-detail-registries"></p>
+            </article>
+            <article class="detail-fact">
+                <p class="detail-label">Version</p>
+                <p class="detail-value" id="mcp-detail-version"></p>
+            </article>
+        </div>
+
+        <section class="detail-section" id="mcp-detail-envs-section" hidden>
+            <p class="detail-label">Environment variables</p>
+            <ul class="detail-envs" id="mcp-detail-envs"></ul>
+        </section>
+
+        <section class="detail-section" id="mcp-detail-links-section" hidden>
+            <p class="detail-label">Links</p>
+            <a class="detail-value detail-link" id="mcp-detail-site" target="_blank" rel="noopener noreferrer nofollow"></a>
+            <a class="detail-value detail-link" id="mcp-detail-repo" target="_blank" rel="noopener noreferrer nofollow"></a>
+        </section>
+    </div>
+</aside>
+
+<style>
+    .detail-panel {
+        flex-shrink: 0;
+        width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: var(--background-high-contrast);
+        transition: width var(--resize-dur) var(--resize-ease);
+        will-change: width;
+    }
+
+    .detail-panel.is-open {
+        width: 33vw;
+        margin: var(--spacing-03) var(--spacing-03) var(--spacing-03) 0;
+        border: 0.5px solid var(--border-muted);
+        border-radius: var(--spacing-06);
+    }
+
+    .detail-panel-inner {
+        width: 33vw;
+        box-sizing: border-box;
+        height: 100%;
+        overflow-y: auto;
+        padding: var(--spacing-06) var(--spacing-06);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-05);
+    }
+
+    .detail-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .detail-monogram {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--spacing-02);
+        background-color: var(--background-secondary);
+        color: var(--content-secondary);
+        font-family: var(--monospace);
+        font-size: var(--desktop-body);
+        text-transform: uppercase;
+    }
+
+    .detail-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--spacing-08);
+        height: var(--spacing-08);
+        padding: var(--spacing-01);
+        border: none;
+        border-radius: var(--spacing-02);
+        background: none;
+        color: var(--content-secondary);
+        cursor: var(--c-pointer);
+    }
+
+    .detail-close:hover {
+        background-color: var(--background-hover);
+        color: var(--content-primary);
+    }
+
+    .detail-close:focus-visible {
+        outline: 1px solid var(--button-primary);
+        outline-offset: -1px;
+    }
+
+    .detail-title {
+        margin: 0;
+    }
+
+    .detail-meta {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-02);
+        flex-wrap: wrap;
+        color: var(--content-secondary);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+    }
+
+    .detail-category {
+        color: var(--content-secondary);
+        text-decoration: none;
+    }
+
+    .detail-category:hover {
+        color: var(--accent);
+    }
+
+    .detail-sep {
+        color: var(--content-secondary-alt);
+    }
+
+    .detail-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-02);
+    }
+
+    .detail-label {
+        margin: 0;
+        color: var(--content-secondary-alt);
+        font-family: var(--monospace);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .detail-body {
+        margin: 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+    }
+
+    .detail-snapshot {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-04);
+    }
+
+    .detail-fact {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-01);
+        padding-bottom: var(--spacing-04);
+        box-shadow: inset 0 -0.5px 0 var(--background-secondary);
+    }
+
+    .detail-value {
+        margin: 0;
+        color: var(--content-secondary);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+        word-break: break-word;
+    }
+
+    .detail-cmd {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: var(--spacing-03) var(--spacing-04);
+        border-radius: var(--spacing-03);
+        background-color: var(--background-secondary);
+        color: var(--content-primary);
+        font-family: var(--monospace);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+
+    .detail-cmd-wrap {
+        position: relative;
+    }
+
+    .detail-cmd-wrap .detail-cmd {
+        padding-right: var(--spacing-08);
+    }
+
+    .detail-cmd-copy {
+        position: absolute;
+        top: var(--spacing-02);
+        right: var(--spacing-02);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--spacing-07);
+        height: var(--spacing-07);
+        padding: 0;
+        border: none;
+        border-radius: var(--spacing-02);
+        background: none;
+        color: var(--content-secondary);
+        cursor: var(--c-pointer);
+    }
+
+    .detail-cmd-copy:hover {
+        background-color: var(--background-hover);
+        color: var(--content-primary);
+    }
+
+    .detail-cmd-copy:focus-visible {
+        outline: 1px solid var(--button-primary);
+        outline-offset: -1px;
+    }
+
+    .detail-cmd-copy .icon-check {
+        display: none;
+        color: var(--accent);
+    }
+
+    .detail-cmd-copy.is-copied .icon-copy {
+        display: none;
+    }
+
+    .detail-cmd-copy.is-copied .icon-check {
+        display: inline;
+    }
+
+    .detail-envs {
+        margin: 0;
+        padding-left: var(--spacing-05);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-01);
+        color: var(--content-secondary);
+        font-size: var(--desktop-body-sm);
+        line-height: var(--lh-desktop-body-sm);
+    }
+
+    .detail-envs code {
+        font-family: var(--monospace);
+    }
+
+    .detail-link {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .detail-link:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 48rem) {
+        .detail-panel {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            z-index: 200;
+        }
+
+        .detail-panel.is-open {
+            width: 100%;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .detail-panel-inner {
+            width: 100vw;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .detail-panel {
+            transition: none;
+        }
+    }
+</style>
+
+<script>
+    import { navigate } from 'astro:transitions/client';
+
+    let lastFocus: HTMLElement | null = null;
+    let pushed = false;
+    let openCategory = '';
+    let originUrl = '';
+    let currentCommand = '';
+    let currentKind = '';
+    let retryTimer = 0;
+
+    const panelEl = () => document.getElementById('mcp-detail-panel');
+    const isOpen = () => !!panelEl()?.classList.contains('is-open');
+
+    const dateFmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    const setText = (id: string, value: string) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    };
+
+    const domainOf = (url: string) => {
+        try {
+            return new URL(url).hostname.replace('www.', '');
+        } catch {
+            return '';
+        }
+    };
+
+    const safeDecode = (value: string) => {
+        try {
+            return decodeURIComponent(value);
+        } catch {
+            return value;
+        }
+    };
+
+    function populate(link: HTMLAnchorElement) {
+        const d = link.dataset;
+        setText('mcp-detail-title', d.title ?? '');
+        setText('mcp-detail-body', d.body || 'No description provided.');
+
+        const cat = document.getElementById('mcp-detail-category') as HTMLAnchorElement | null;
+        if (cat) {
+            cat.textContent = d.categoryTitle ?? '';
+            cat.hidden = !d.categoryTitle;
+            if (d.category) cat.href = `/mcp/${d.category}`;
+            else cat.removeAttribute('href');
+        }
+
+        const updated = document.getElementById('mcp-detail-updated');
+        const raw = d.updated || d.date || '';
+        const parsed = raw ? new Date(raw) : null;
+        const ok = parsed && !Number.isNaN(parsed.getTime());
+        if (updated) updated.textContent = ok ? `Updated ${dateFmt.format(parsed as Date)}` : '';
+
+        // Facts.
+        const kind = d.installKind || 'none';
+        setText('mcp-detail-install', kind === 'package' ? 'Package' : kind === 'remote' ? 'Remote endpoint' : 'No published install method');
+        setText('mcp-detail-transports', (d.transports || '').split(',').filter(Boolean).join(', ') || 'Not provided');
+        setText('mcp-detail-registries', (d.registries || '').split(',').filter(Boolean).join(', ') || 'Not provided');
+        setText('mcp-detail-version', d.version || 'Not provided');
+
+        // Primary action — copy the install command / endpoint (zero navigation).
+        currentCommand = d.installCommand || '';
+        currentKind = kind;
+
+        // Full install command, rendered inline with an embedded copy button.
+        const cmdSection = document.getElementById('mcp-detail-cmd-section');
+        const cmd = document.getElementById('mcp-detail-cmd');
+        const copyBtn = document.getElementById('mcp-detail-copy');
+        if (cmdSection && cmd) {
+            cmd.textContent = currentCommand;
+            cmdSection.hidden = !currentCommand;
+        }
+        if (copyBtn) {
+            copyBtn.classList.remove('is-copied');
+            copyBtn.setAttribute('aria-label', kind === 'remote' ? 'Copy endpoint URL' : 'Copy install command');
+        }
+
+        // Environment variable names (never values); required ones carry a '*'.
+        const envSection = document.getElementById('mcp-detail-envs-section');
+        const envList = document.getElementById('mcp-detail-envs');
+        if (envSection && envList) {
+            const envs = (d.envs || '').split(',').filter(Boolean);
+            envList.replaceChildren();
+            for (const raw of envs) {
+                const required = raw.endsWith('*');
+                const name = required ? raw.slice(0, -1) : raw;
+                const li = document.createElement('li');
+                const code = document.createElement('code');
+                code.textContent = name;
+                li.appendChild(code);
+                if (required) li.appendChild(document.createTextNode(' (required)'));
+                envList.appendChild(li);
+            }
+            envSection.hidden = envs.length === 0;
+        }
+
+        // Links — website + source repository.
+        const site = document.getElementById('mcp-detail-site') as HTMLAnchorElement | null;
+        const repo = document.getElementById('mcp-detail-repo') as HTMLAnchorElement | null;
+        const linksSection = document.getElementById('mcp-detail-links-section');
+        const siteHref = d.website || (d.repo ? '' : d.url) || '';
+        if (site) {
+            if (siteHref) {
+                site.textContent = `Website (${domainOf(siteHref) || 'link'})`;
+                site.href = siteHref;
+                site.hidden = false;
+            } else {
+                site.hidden = true;
+            }
+        }
+        if (repo) {
+            if (d.repo) {
+                repo.textContent = `Source (${domainOf(d.repo) || 'repository'})`;
+                repo.href = d.repo;
+                repo.hidden = false;
+            } else {
+                repo.hidden = true;
+            }
+        }
+        if (linksSection) linksSection.hidden = !siteHref && !d.repo;
+
+        // Monogram (first letter of the title) stands in for the removed icon.
+        const mono = document.getElementById('mcp-detail-monogram');
+        if (mono) mono.textContent = (d.title?.trim()[0] ?? '?').toUpperCase();
+    }
+
+    async function copyCommand() {
+        if (!currentCommand) return;
+        const btn = document.getElementById('mcp-detail-copy');
+        let okCopy = false;
+        try {
+            await navigator.clipboard.writeText(currentCommand);
+            okCopy = true;
+        } catch {
+            // Fallback for non-secure contexts / no clipboard API.
+            try {
+                const ta = document.createElement('textarea');
+                ta.value = currentCommand;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                okCopy = document.execCommand('copy');
+                document.body.removeChild(ta);
+            } catch {
+                okCopy = false;
+            }
+        }
+        if (btn && okCopy) {
+            btn.classList.add('is-copied');
+            btn.setAttribute('aria-label', 'Copied');
+            window.setTimeout(() => {
+                btn.classList.remove('is-copied');
+                btn.setAttribute('aria-label', currentKind === 'remote' ? 'Copy endpoint URL' : 'Copy install command');
+            }, 1600);
+        }
+    }
+
+    function showPanel(link: HTMLAnchorElement, opts: { push: boolean; focus: boolean }) {
+        const panel = panelEl();
+        if (!panel) return;
+        const switching = isOpen();
+        if (!switching) lastFocus = document.activeElement as HTMLElement;
+        populate(link);
+        openCategory = link.dataset.category ?? '';
+        panel.classList.add('is-open');
+        panel.removeAttribute('inert');
+        panel.setAttribute('aria-hidden', 'false');
+        panel.querySelector('.detail-panel-inner')?.scrollTo(0, 0);
+        if (switching) {
+            const inner = panel.querySelector('.detail-panel-inner');
+            if (inner) {
+                inner.classList.remove('t-page-enter');
+                void (inner as HTMLElement).offsetWidth;
+                inner.classList.add('t-page-enter');
+            }
+        }
+        if (opts.focus) document.getElementById('mcp-detail-close')?.focus();
+        if (opts.push) {
+            const href = link.getAttribute('href') ?? undefined;
+            try {
+                if (pushed) history.replaceState({ romMcpPanel: true }, '', href);
+                else {
+                    history.pushState({ romMcpPanel: true }, '', href);
+                    pushed = true;
+                }
+            } catch {
+                /* history unavailable */
+            }
+        }
+    }
+
+    function openPanel(link: HTMLAnchorElement) {
+        if (!isOpen()) originUrl = location.pathname + location.search;
+        showPanel(link, { push: true, focus: true });
+    }
+
+    function hidePanel() {
+        const panel = panelEl();
+        if (!panel) return;
+        panel.classList.remove('is-open');
+        panel.setAttribute('aria-hidden', 'true');
+        panel.setAttribute('inert', '');
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    }
+
+    function requestClose() {
+        if (pushed) {
+            pushed = false;
+            hidePanel();
+            try {
+                history.replaceState(null, '', originUrl || (openCategory ? `/mcp/${openCategory}` : '/mcp'));
+            } catch {
+                /* history unavailable */
+            }
+        } else if (/^\/mcp\/servers\//.test(location.pathname)) {
+            navigate('/mcp');
+        } else {
+            hidePanel();
+        }
+    }
+
+    // Find a rendered card anchor for a given slug (cards are client-rendered).
+    const cardForSlug = (slug: string) =>
+        document.querySelector<HTMLAnchorElement>(`a[data-mcp-link][data-slug="${CSS.escape(slug)}"]`);
+
+    function syncFromUrl(push: boolean) {
+        pushed = false;
+        if (retryTimer) { window.clearInterval(retryTimer); retryTimer = 0; }
+        const m = location.pathname.match(/^\/mcp\/servers\/([^/]+)\/?$/);
+        if (m && m[1]) {
+            const slug = safeDecode(m[1]);
+            const card = cardForSlug(slug);
+            if (card) {
+                showPanel(card, { push: false, focus: false });
+                return;
+            }
+            // Card not yet rendered (client grid still loading): retry shortly.
+            let tries = 0;
+            retryTimer = window.setInterval(() => {
+                tries += 1;
+                const c = cardForSlug(slug);
+                if (c) {
+                    window.clearInterval(retryTimer);
+                    retryTimer = 0;
+                    showPanel(c, { push: false, focus: false });
+                } else if (tries > 40) {
+                    window.clearInterval(retryTimer);
+                    retryTimer = 0;
+                }
+            }, 100);
+            return;
+        }
+        if (!push && isOpen()) hidePanel();
+    }
+
+    if (!(window as any).__mcpDetailPanelBound) {
+        (window as any).__mcpDetailPanelBound = true;
+
+        document.addEventListener(
+            'click',
+            (e) => {
+                const target = e.target as HTMLElement;
+                if (target.closest('#mcp-detail-close')) {
+                    e.preventDefault();
+                    requestClose();
+                    return;
+                }
+                if (target.closest('#mcp-detail-copy')) {
+                    e.preventDefault();
+                    void copyCommand();
+                    return;
+                }
+                const link = target.closest<HTMLAnchorElement>('a[data-mcp-link]');
+                if (!link) return;
+                if (e.defaultPrevented) return;
+                const me = e as MouseEvent;
+                if (me.button !== 0 || me.metaKey || me.ctrlKey || me.shiftKey || me.altKey) return;
+                e.preventDefault();
+                e.stopPropagation();
+                openPanel(link);
+            },
+            true,
+        );
+
+        window.addEventListener('popstate', () => syncFromUrl(false));
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isOpen()) requestClose();
+        });
+        document.addEventListener('astro:page-load', () => syncFromUrl(true));
+    }
+</script>

@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import McpControls from '../../components/McpControls.astro';
+import McpGrid from '../../components/McpGrid.astro';
+import McpEnhancer from '../../components/McpEnhancer.astro';
+import McpDetailPanel from '../../components/McpDetailPanel.astro';
+import ItemListSchema from '../../components/schema/ItemListSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import mcpData from '../../data/mcp-servers.json';
+import mcpIndex from '../../data/mcp-category-index.json';
+import type { McpData, McpCategoryIndex } from '../../types/mcp';
+
+export function getStaticPaths() {
+    const index = mcpIndex as McpCategoryIndex;
+    // Only real MCP category slugs (never the reserved `servers/` prefix).
+    return Object.keys(index).map((category) => ({ params: { category } }));
+}
+
+export const prerender = true;
+
+const { category } = Astro.params;
+const data = mcpData as McpData;
+const index = mcpIndex as McpCategoryIndex;
+
+const categoryTitle = index[category as string]?.title ?? category;
+const servers = data.servers.filter((s) => s.category === category);
+
+const schemaItems = servers.slice(0, 50).map((s) => ({ title: s.title, body: s.description, url: s.url, slug: s.slug }));
+const breadcrumbs = [
+    { name: 'MCP Servers', url: 'https://riseofmachine.com/mcp' },
+    { name: categoryTitle as string },
+];
+---
+
+<Layout
+    site={`Rise of Machine - ${categoryTitle}`}
+    title={`${categoryTitle} MCP Servers`}
+    tagline=""
+    pageTitle={`${categoryTitle} MCP Servers`}
+    pageDescription={`MCP servers in the ${categoryTitle} category from the official Model Context Protocol registry.`}
+    canonicalUrl={`https://riseofmachine.com/mcp/${category}`}
+    showSearch={true}
+    showHero={true}
+    searchPlaceholder={`Search ${categoryTitle} servers...`}
+    sidebarCategoryIndex={index}
+    sidebarBasePath="/mcp"
+    sidebarHomeHref="/mcp"
+    sidebarHomeLabel="MCP Servers"
+    sidebarShowFavorites={false}
+    sidebarPersistKey="mcp-sidebar"
+>
+    <ItemListSchema items={schemaItems} listName={`${categoryTitle} MCP Servers`} urlBase="/mcp/servers" />
+    <BreadcrumbSchema items={breadcrumbs} />
+    <main id="main-content">
+        <McpControls />
+        <McpGrid category={category} />
+        <McpEnhancer />
+    </main>
+    <McpDetailPanel slot="side-panel" />
+</Layout>

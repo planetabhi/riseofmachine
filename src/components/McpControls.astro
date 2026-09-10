@@ -1,0 +1,103 @@
+---
+import './CardsContainer.css';
+
+// Static sort/filter control bar for the MCP vertical. Servers are all active +
+// stdio-only, so only Sort and Registry remain useful. Behavior is handled by
+// McpEnhancer via delegated [data-mcp-control] clicks (keyboard-operable).
+const sorts: Array<{ value: string; label: string }> = [
+    { value: 'name', label: 'A–Z' },
+    { value: 'updated', label: 'Updated' },
+    { value: 'published', label: 'Published' },
+];
+const facets: Array<{ kind: string; label: string; options: string[] }> = [
+    { kind: 'registry', label: 'Registry', options: ['npm', 'pypi', 'oci', 'nuget', 'mcpb'] },
+];
+---
+
+<div class="mcp-controls" role="group" aria-label="Filter and sort servers">
+    <div class="mcp-control-group" role="group" aria-label="Sort">
+        <span class="mcp-control-label">Sort</span>
+        {sorts.map((s, i) => (
+            <button
+                type="button"
+                class="mcp-chip"
+                data-mcp-control="sort"
+                data-value={s.value}
+                aria-pressed={i === 0 ? 'true' : 'false'}
+            >
+                {s.label}
+            </button>
+        ))}
+    </div>
+
+    {facets.map((f) => (
+        <div class="mcp-control-group" role="group" aria-label={f.label}>
+            <span class="mcp-control-label">{f.label}</span>
+            {f.options.map((opt) => (
+                <button
+                    type="button"
+                    class="mcp-chip"
+                    data-mcp-control={f.kind}
+                    data-value={opt}
+                    aria-pressed="false"
+                >
+                    {opt}
+                </button>
+            ))}
+        </div>
+    ))}
+</div>
+
+<style>
+    .mcp-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-05);
+        margin-bottom: var(--spacing-06);
+    }
+
+    .mcp-control-group {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-02);
+    }
+
+    .mcp-control-label {
+        color: var(--content-secondary-alt);
+        font-family: var(--monospace);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-right: var(--spacing-02);
+    }
+
+    .mcp-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--spacing-01) var(--spacing-03);
+        border: 0.5px solid var(--border-muted);
+        background: none;
+        color: var(--content-secondary);
+        font-size: var(--desktop-caption);
+        line-height: var(--lh-desktop-caption);
+        cursor: var(--c-pointer);
+    }
+
+    .mcp-chip:hover {
+        background-color: var(--background-hover);
+        color: var(--content-primary);
+    }
+
+    .mcp-chip[aria-pressed='true'] {
+        border-color: var(--border);
+        color: var(--content-primary);
+        background-color: var(--background-hover);
+    }
+
+    .mcp-chip:focus-visible {
+        outline: 1px solid var(--border);
+        outline-offset: 1px;
+    }
+</style>

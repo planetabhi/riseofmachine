@@ -1,0 +1,43 @@
+---
+import './CardsContainer.css';
+import './Card.css';
+
+// Empty grid shell. Cards are rendered client-side by McpEnhancer from the
+// fetched /mcp-index.json (48 at a time), so the listing HTML never ships
+// thousands of DOM nodes. `category` scopes the client render to one category.
+interface Props {
+    category?: string;
+}
+const { category } = Astro.props;
+---
+
+<section data-mcp-grid data-category={category ?? ''}>
+    <ul role="list" class="link-card-grid" data-mcp-list></ul>
+    <noscript>
+        <p class="nu-u-text--secondary">Enable JavaScript to browse MCP servers, or pick a category from the sidebar.</p>
+    </noscript>
+    <div class="grid-sentinel" id="mcp-sentinel" aria-hidden="true"></div>
+    <div class="grid-empty" hidden>
+        <p class="nu-u-text--secondary">No servers found.</p>
+    </div>
+</section>
+
+<style is:global>
+    /* Clamp MCP card title + description to two lines (landing strip + client grid). */
+    [data-mcp-grid] .link-card strong,
+    #mcp-recent .link-card strong,
+    [data-mcp-grid] .link-card p.nu-c-helper-text,
+    #mcp-recent .link-card p.nu-c-helper-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        overflow: hidden;
+    }
+
+    /* MCP cards drop the distribution row (tags + "new" badge). */
+    [data-mcp-grid] .link-card .distribution,
+    #mcp-recent .link-card .distribution {
+        display: none;
+    }
+</style>
