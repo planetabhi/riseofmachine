@@ -2,7 +2,9 @@
 import './Card.css';
 import './BookmarkButton.css';
 import { isRecentlyAdded } from '../utils/dates';
-import categoryIndex from '../data/category-index.json';
+import defaultCategoryIndex from '../data/category-index.json';
+
+type CategoryIndex = Record<string, { title: string }>;
 
 interface Props {
     title: string;
@@ -12,20 +14,46 @@ interface Props {
     slug?: string | undefined;
     url: string;
     category?: string | undefined;
+    // Vertical generalization: default to the tools vertical, override for MCP.
+    hrefBase?: string; // detail link base (default '/tools')
+    categoryIndex?: CategoryIndex; // resolves the category title (default tools index)
+    showBookmark?: boolean; // MCP v1 passes false (bookmarking is tools-only)
+    // Emit data-tool-link so the tools DetailPanel intercepts the click. MCP v1
+    // passes false so its cards navigate to the full detail page instead.
+    panelLink?: boolean;
+    // Attribute the panel listener keys off. Tools use 'data-tool-link'; MCP
+    // cards pass 'data-mcp-link' so the MCP panel (not the tools one) intercepts.
+    panelAttr?: string;
+    // Optional extra data-* for the detail panel (MCP: install command, badges…).
+    extraData?: Record<string, string | undefined>;
 }
 
-const { title, body, tag, dateAdded, slug, url, category } = Astro.props;
-const linkUrl = slug ? `/tools/${slug}` : url;
+const {
+    title,
+    body,
+    tag,
+    dateAdded,
+    slug,
+    url,
+    category,
+    hrefBase = '/tools',
+    categoryIndex = defaultCategoryIndex as CategoryIndex,
+    showBookmark = true,
+    panelLink = true,
+    panelAttr = 'data-tool-link',
+    extraData = {},
+} = Astro.props;
+
+const linkUrl = slug ? `${hrefBase}/${slug}` : url;
 const isNew = isRecentlyAdded(dateAdded, 30);
-const categoryTitle = category
-    ? (categoryIndex as Record<string, { title: string }>)[category]?.title ?? category
-    : '';
+const categoryTitle = category ? (categoryIndex[category]?.title ?? category) : '';
+const panelData = panelLink ? { [panelAttr]: '' } : {};
 ---
 
 <li class="link-card" data-slug={slug} data-category={category} data-new={isNew ? 'true' : 'false'}>
     <a
         href={linkUrl}
-        data-tool-link
+        {...panelData}
         data-title={title}
         data-body={body}
         data-tag={tag}
@@ -34,6 +62,7 @@ const categoryTitle = category
         data-slug={slug}
         data-category={category}
         data-category-title={categoryTitle}
+        {...extraData}
     >
         <strong class="nu-c-fs-normal nu-u-mt-1 nu-u-mb-1">{title}</strong>
         <p class="nu-c-helper-text nu-u-mt-1 nu-u-mb-1">{body}</p>
@@ -46,7 +75,7 @@ const categoryTitle = category
             {tag && <span class="tag">{tag}</span>}
         </p>
     </a>
-    {slug && (
+    {slug && showBookmark && (
         <div class="card-bookmark">
             <button
                 class="bookmark-btn bookmark-btn--small t-like"

@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import McpControls from '../../components/McpControls.astro';
+import McpGrid from '../../components/McpGrid.astro';
+import McpEnhancer from '../../components/McpEnhancer.astro';
+import McpDetailPanel from '../../components/McpDetailPanel.astro';
+import ItemListSchema from '../../components/schema/ItemListSchema.astro';
+import mcpData from '../../data/mcp-servers.json';
+import mcpIndex from '../../data/mcp-category-index.json';
+import type { McpData, McpServer, McpCategoryIndex } from '../../types/mcp';
+
+const data = mcpData as McpData;
+const index = mcpIndex as McpCategoryIndex;
+
+// Servers arrive A–Z by name (deterministic crawl sort). "Recently updated" is
+// a small strip on top of the default list; it hides once a query/sort is active.
+const recent = [...data.servers]
+    .sort((a, b) => (b.updatedAt || b.publishedAt).localeCompare(a.updatedAt || a.publishedAt))
+    .slice(0, 12);
+
+// Compact data-* payload the MCP panel reads (zero fetch) for the SSR strip cards.
+function extraData(s: McpServer): Record<string, string | undefined> {
+    const envs = [
+        ...new Set(
+            s.packages.flatMap((p) => (p.environmentVariables ?? []).map((e) => (e.required ? `${e.name}*` : e.name))),
+        ),
+    ].filter(Boolean);
+    return {
+        'data-install-command': s.installCommand || undefined,
+        'data-install-kind': s.installKind,
+        'data-transports': [...new Set([...s.remotes.map((r) => r.type), ...s.packages.map((p) => p.transport)])].join(','),
+        'data-registries': [...new Set(s.packages.map((p) => p.registryType))].join(','),
+        'data-status': s.status,
+        'data-version': s.version || undefined,
+        'data-updated': s.updatedAt || undefined,
+        'data-website': s.websiteUrl || undefined,
+        'data-repo': s.repository?.url || undefined,
+        'data-envs': envs.length ? envs.join(',') : undefined,
+    };
+}
+
+// Reuse the tools list schema (title/body/url are compatible enough).
+const schemaItems = recent.map((s) => ({ title: s.title, body: s.description, url: s.url, slug: s.slug }));
+---
+
+<Layout
+    site="Rise of Machine - MCP Servers"
+    title="Local MCP servers from the official MCP registry"
+    tagline=""
+    pageTitle="MCP Servers Directory"
+    pageDescription="Browse Model Context Protocol (MCP) servers from the official registry — install commands, transports, and categories."
+    canonicalUrl="https://riseofmachine.com/mcp"
+    showSearch={true}
+    showHero={true}
+    searchPlaceholder="Search MCP servers by name or feature..."
+    sidebarCategoryIndex={index}
+    sidebarBasePath="/mcp"
+    sidebarHomeHref="/mcp"
+    sidebarHomeLabel="MCP Servers"
+    sidebarShowFavorites={false}
+    sidebarPersistKey="mcp-sidebar"
+>
+    <ItemListSchema items={schemaItems} listName="MCP Servers - Recently Updated" urlBase="/mcp/servers" />
+    <main id="main-content">
+        <section class="home-section" id="mcp-recent">
+            <h2 class="home-section-title">Recently updated</h2>
+            <ul role="list" class="link-card-grid">
+                {recent.map((s) => (
+                    <Card
+                        title={s.title}
+                        body={s.description}
+                        tag={s.status === 'deprecated' ? 'deprecated' : undefined}
+                        dateAdded={s.publishedAt}
+                        slug={s.slug}
+                        url={s.url}
+                        category={s.category}
+                        hrefBase="/mcp/servers"
+                        categoryIndex={index}
+                        showBookmark={false}
+                        panelAttr="data-mcp-link"
+                        extraData={extraData(s)}
+                    />
+                ))}
+            </ul>
+        </section>
+
+        <section class="home-section">
+            <h2 class="home-section-title">All servers ({data.servers.length})</h2>
+            <McpControls />
+            <McpGrid />
+        </section>
+
+        <McpEnhancer />
+    </main>
+    <McpDetailPanel slot="side-panel" />
+</Layout>
+
+
+<style>
+    .home-section { margin-bottom: var(--spacing-10); }
+    .home-section-title {
+        margin: 0 0 var(--spacing-05) 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-secondary);
+    }
+</style>
