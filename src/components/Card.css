@@ -6,6 +6,7 @@
     border-radius: var(--spacing-05);
     height: 7rem;
     position: relative;
+    border: .5px solid var(--border-muted);
     box-shadow: var(--content);
     content-visibility: auto;
     contain-intrinsic-size: 7rem;
