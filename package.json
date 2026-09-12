@@ -60,7 +60,7 @@
     "@astrojs/react": "^6.0.5",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
-    "@new-ui/foundations": "^0.3.6",
+    "@new-ui/foundations": "^3.0.0",
     "astro": "^7.3.2",
     "fuse.js": "^7.5.0",
     "ogl": "^1.0.11",
@@ -68,6 +68,7 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@new-ui/themes": "^3.0.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.3",
     "@types/react": "^19.2.18",

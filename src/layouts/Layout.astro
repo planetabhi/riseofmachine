@@ -7,7 +7,8 @@ import Hero from "../components/Hero.astro";
 import DetailPanel from "../components/DetailPanel.astro";
 import BookmarkSync from "../components/BookmarkSync.astro";
 import MoireBackground from "../components/MoireBackground.astro";
-import "@new-ui/foundations";
+import '@new-ui/foundations/css';
+import '@new-ui/themes/css';
 import "../styles/transitions.css";
 
 export interface Props {
@@ -74,10 +75,10 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-new-ui-theme="dark--warm">
+<html lang="en" data-new-ui-theme="sargam-dark">
     <head>
         <script is:inline>
-            (function(){try{var t=localStorage.getItem('rom_theme');if(t==='dark--warm'||t==='dark--cold')document.documentElement.setAttribute('data-new-ui-theme',t);}catch(e){}})();
+            (function(){try{var T=['sargam-dark','aura','ayu-dark','catppuccin-mocha','dracula','flexoki-dark','monokai','night-owl','synthwave-84','tokyo-night'];var t=localStorage.getItem('rom_theme');if(T.indexOf(t)>-1)document.documentElement.setAttribute('data-new-ui-theme',t);}catch(e){}})();
         </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -184,16 +185,6 @@ const {
         <script is:inline>
             (function () {
                 try {
-                    var t = localStorage.getItem("rom_theme");
-                    var isCold = t === "dark--cold";
-                    var btn = document.getElementById("theme-toggle");
-                    if (btn) {
-                        btn.setAttribute("aria-pressed", String(isCold));
-                        btn.setAttribute(
-                            "aria-label",
-                            isCold ? "Switch to warm theme" : "Switch to cold theme",
-                        );
-                    }
                     var raw = localStorage.getItem("rom_bookmarks:v1") || localStorage.getItem("rom_bookmarks");
                     var count = 0;
                     if (raw) {
@@ -232,6 +223,7 @@ const {
     }
     :root {
         --accent: var(--link);
+         --background-high-contrast: oklch(0% 0 0);
         --body-copy: "ROM-Regular", var(--system-ui);
         --monospace: "ROM-Mono", var(--monospace-code);
         --body-strong: "ROM-Bold", var(--system-ui);
@@ -256,12 +248,6 @@ const {
             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' height='24' width='24'%3E%3Cpath fill='black' d='M13 4H11V5H10V6H9V5H7V6H6V8H7V10H5V11H4V13H5V14H6V16H7V17H8V18H9V20H10H11H12H13V19H14H15V20H16V19H17V17H18V15H19V12H20V8H19V7H18V8H17V6H16V5H14H13V4ZM13 5V10H14V6H16V11H17V9H18V8H19V12H18V15H17V17H16V13H15V17H16V19H15V18H14H13V19H12H11H10V18H9V17H8V16H7V14H6V13H5V11H7V12H8V13H9V10H8V8H7V6H9V8H10V10H11V5H13ZM8 10V11H7V10H8ZM14 13H13V17H14V13ZM11 13H12V17H11V13Z' clip-rule='evenodd' fill-rule='evenodd'/%3E%3Cpath fill='white' d='M13 5H11V10H10V8H9V6H7V8H8V10H9V12V13H8V12H7V11H5V13H6V14H7V16H8V17H9V18H10V19H11H12H13V18H15V19H16V18V17H17V15H18V12H19V8H18V9H17V11H16V10V6H14V10H13V5ZM14 13H13V17H14V13ZM12 13H11V17H12V13ZM16 13H15V17H16V13Z' clip-rule='evenodd' fill-rule='evenodd'/%3E%3C/svg%3E")
                 12 12,
             grab;
-    }
-    html[data-new-ui-theme*="dark"] {
-        --link: DarkOrange;
-        --link-hover: DarkOrange;
-        --link-visited: DarkOrange;
-        --border-focus: DarkOrange;
     }
 
     html {
@@ -515,13 +501,16 @@ const {
         display: inline-block;
     }
 
-    .theme-toggle .theme-emoji::after {
-        content: '🥤';
-    }
-
-    html[data-new-ui-theme="dark--cold"] .theme-toggle .theme-emoji::after {
-        content: '🍵';
-    }
+    html[data-new-ui-theme="aura"] .theme-toggle .theme-emoji::after { content: '🌌'; }
+    html[data-new-ui-theme="ayu-dark"] .theme-toggle .theme-emoji::after { content: '🍂'; }
+    html[data-new-ui-theme="catppuccin-mocha"] .theme-toggle .theme-emoji::after { content: '🍫'; }
+    html[data-new-ui-theme="dracula"] .theme-toggle .theme-emoji::after { content: '🩸'; }
+    html[data-new-ui-theme="flexoki-dark"] .theme-toggle .theme-emoji::after { content: '🪶'; }
+    html[data-new-ui-theme="monokai"] .theme-toggle .theme-emoji::after { content: '🌸'; }
+    html[data-new-ui-theme="night-owl"] .theme-toggle .theme-emoji::after { content: '🦉'; }
+    html[data-new-ui-theme="sargam-dark"] .theme-toggle .theme-emoji::after { content: '🪷'; }
+    html[data-new-ui-theme="synthwave-84"] .theme-toggle .theme-emoji::after { content: '🚗'; }
+    html[data-new-ui-theme="tokyo-night"] .theme-toggle .theme-emoji::after { content: '🌃'; }
 
     /* Icon swap: blur + scale the emoji as it changes on toggle. */
     @keyframes theme-emoji-swap {
@@ -788,14 +777,26 @@ const {
             updateFavoritesLink();
         };
 
-        // Theme toggle
-        const VALID_THEMES = ['dark--warm', 'dark--cold'];
-        const DEFAULT_THEME = 'dark--warm';
+        // Theme toggle — cycles through every dark theme from @new-ui/themes.
+        const THEMES = [
+            { id: 'sargam-dark', label: 'Sargam Dark' },
+            { id: 'aura', label: 'Aura' },
+            { id: 'ayu-dark', label: 'Ayu Dark' },
+            { id: 'catppuccin-mocha', label: 'Catppuccin Mocha' },
+            { id: 'dracula', label: 'Dracula' },
+            { id: 'flexoki-dark', label: 'Flexoki Dark' },
+            { id: 'monokai', label: 'Monokai' },
+            { id: 'night-owl', label: 'Night Owl' },
+            { id: 'synthwave-84', label: 'Synthwave 84' },
+            { id: 'tokyo-night', label: 'Tokyo Night' },
+        ];
+        const THEME_IDS = THEMES.map((t) => t.id);
+        const DEFAULT_THEME = THEME_IDS[0];
 
         const getSavedTheme = () => {
             try {
                 const t = localStorage.getItem('rom_theme');
-                return VALID_THEMES.includes(t) ? t : DEFAULT_THEME;
+                return THEME_IDS.includes(t) ? t : DEFAULT_THEME;
             } catch (e) {
                 return DEFAULT_THEME;
             }
@@ -805,10 +806,9 @@ const {
             document.documentElement.setAttribute('data-new-ui-theme', theme);
             const btn = document.getElementById('theme-toggle');
             if (btn) {
-                const isCold = theme === 'dark--cold';
-                btn.setAttribute('aria-pressed', String(isCold));
+                const meta = THEMES.find((t) => t.id === theme);
                 btn.setAttribute('aria-label',
-                    isCold ? 'Switch to warm theme' : 'Switch to cold theme');
+                    `Change theme (current: ${meta ? meta.label : theme})`);
             }
         };
 
@@ -819,7 +819,8 @@ const {
             if (themeToggle && !themeToggle._hasThemeListener) {
                 themeToggle.addEventListener('click', () => {
                     const current = document.documentElement.getAttribute('data-new-ui-theme');
-                    const next = current === 'dark--warm' ? 'dark--cold' : 'dark--warm';
+                    const idx = THEME_IDS.indexOf(current);
+                    const next = THEME_IDS[(idx + 1) % THEME_IDS.length];
                     try { localStorage.setItem('rom_theme', next); } catch (e) {}
                     applyTheme(next);
                     const emoji = themeToggle.querySelector('.theme-emoji');
