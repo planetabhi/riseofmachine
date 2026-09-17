@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-09-17T17:58:38.285Z",
+  "skills": [
+    {
+      "slug": "ad-creative",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' 'static ads,' 'ad templates,' 'iMessage ad,' 'chat reveal ad,' 'ChatGPT ad,' 'Apple Notes ad,' 'AirDrop ad,' 'creative strategy,' 'creative roadmap,' 'creative retro,' 'hook writing,' 'creative review page,' 'present ad creative for approval,' 'motion video ad,' 'faceless video ad,' 'UGC ad,' 'greenscreen ad,' 'TikTok/Reels ad format,' 'which ad format to make,' 'Meta ad format tier list,' or 'creative format taxonomy.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see ads. For landing page copy, see copywriting.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/ad-creative",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill ad-creative",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "agent-browser",
+      "source": "vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"automate browser actions\", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.",
+      "url": "https://www.skills.sh/vercel-labs/agent-browser/agent-browser",
+      "installCommand": "npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "ai-sdk",
+      "source": "vercel/ai",
+      "description": "Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents, chatbots, RAG systems, or text generation features, (3) Have questions about AI providers (OpenAI, Anthropic, Google, etc.), streaming, tool calling, structured output, or embeddings, (4) Use React hooks like useChat or useCompletion. Triggers on: \"AI SDK\", \"Vercel AI SDK\", \"generateText\", \"streamText\", \"add AI to my app\", \"build an agent\", \"tool calling\", \"structured output\", \"useChat\".",
+      "url": "https://www.skills.sh/vercel/ai/ai-sdk",
+      "installCommand": "npx skills add https://github.com/vercel/ai --skill ai-sdk",
+      "categories": [
+        "nextjs"
+      ]
+    },
+    {
+      "slug": "ai-seo",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' 'optimize for Claude/Gemini,' 'llms.txt,' 'llms-full.txt,' 'OKF,' 'Open Knowledge Format,' 'knowledge bundle,' 'agent-readable site,' 'agent readiness,' 'is my site agent-ready,' 'WebMCP,' 'do listicles still work for AI,' 'ChatGPT stopped citing comparison pages,' or 'AI citation format shift.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/ai-seo",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill ai-seo",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "brainstorming",
+      "source": "obra/superpowers",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "url": "https://www.skills.sh/obra/superpowers/brainstorming",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill brainstorming",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "browser-use",
+      "source": "browser-use/browser-use",
+      "description": "Direct browser control via CDP for web interaction: automation, scraping, testing, screenshots, and site/app work.",
+      "url": "https://www.skills.sh/browser-use/browser-use/browser-use",
+      "installCommand": "npx skills add https://github.com/browser-use/browser-use --skill browser-use",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "canvas-design",
+      "source": "anthropics/skills",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "url": "https://www.skills.sh/anthropics/skills/canvas-design",
+      "installCommand": "npx skills add https://github.com/anthropics/skills --skill canvas-design",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "churn-prevention",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see emails. For in-app upgrade paywalls, see paywalls.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/churn-prevention",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill churn-prevention",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "cold-email",
+      "source": "coreyhaines31/marketingskills",
+      "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outbound email,\" \"email to leads,\" \"reach out to prospects,\" \"sales email,\" \"follow-up email sequence,\" \"nobody's replying to my emails,\" or \"how do I write a cold email.\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see emails. For sales collateral beyond emails, see sales-enablement.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/cold-email",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill cold-email",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "content-strategy",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/content-strategy",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill content-strategy",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "convex-quickstart",
+      "source": "get-convex/agent-skills",
+      "description": "Get a barebones Convex + web template running from a one-sentence idea.",
+      "url": "https://www.skills.sh/get-convex/agent-skills/convex-quickstart",
+      "installCommand": "npx skills add https://github.com/get-convex/agent-skills --skill convex-quickstart",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "copywriting",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" or \"help me describe my product.\" Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing. For the offer underneath the copy (bonuses, guarantees, value framing), see offers.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/copywriting",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill copywriting",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "deploy-to-vercel",
+      "source": "vercel-labs/agent-skills",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "url": "https://www.skills.sh/vercel-labs/agent-skills/deploy-to-vercel",
+      "installCommand": "npx skills add https://github.com/vercel-labs/agent-skills --skill deploy-to-vercel",
+      "categories": [
+        "nextjs"
+      ]
+    },
+    {
+      "slug": "design-taste-frontend",
+      "source": "leonxlnx/taste-skill",
+      "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+      "url": "https://www.skills.sh/leonxlnx/taste-skill/design-taste-frontend",
+      "installCommand": "npx skills add https://github.com/leonxlnx/taste-skill --skill design-taste-frontend",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "dispatching-parallel-agents",
+      "source": "obra/superpowers",
+      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "url": "https://www.skills.sh/obra/superpowers/dispatching-parallel-agents",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill dispatching-parallel-agents",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "emil-design-eng",
+      "source": "emilkowalski/skill",
+      "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "url": "https://www.skills.sh/emilkowalski/skill/emil-design-eng",
+      "installCommand": "npx skills add https://github.com/emilkowalski/skill --skill emil-design-eng",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "executing-plans",
+      "source": "obra/superpowers",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "url": "https://www.skills.sh/obra/superpowers/executing-plans",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill executing-plans",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "extract-design-system",
+      "source": "arvindrk/extract-design-system",
+      "description": "Extract design primitives from a public website and generate starter token files for your project.",
+      "url": "https://www.skills.sh/arvindrk/extract-design-system/extract-design-system",
+      "installCommand": "npx skills add https://github.com/arvindrk/extract-design-system --skill extract-design-system",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "find-skills",
+      "source": "vercel-labs/skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "url": "https://www.skills.sh/vercel-labs/skills/find-skills",
+      "installCommand": "npx skills add https://github.com/vercel-labs/skills --skill find-skills",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "finishing-a-development-branch",
+      "source": "obra/superpowers",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work",
+      "url": "https://www.skills.sh/obra/superpowers/finishing-a-development-branch",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill finishing-a-development-branch",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "firebase-auth-basics",
+      "source": "firebase/agent-skills",
+      "description": "Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using auth rules.",
+      "url": "https://www.skills.sh/firebase/agent-skills/firebase-auth-basics",
+      "installCommand": "npx skills add https://github.com/firebase/agent-skills --skill firebase-auth-basics",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "firebase-basics",
+      "source": "firebase/agent-skills",
+      "description": "Provides foundational Firebase CLI setup, CLI installation, version checks (`firebase-tools@latest --version`), CLI login (including --no-localhost), project creation, project selection (`firebase use`), and app config file downloads (`google-services.json`, `GoogleService-Info.plist`). Use ONLY for CLI login, project creation/switching, or downloading app config files. Don't use for Firebase Hosting deploy, Firestore, Auth, App Hosting, Data Connect, Crashlytics, or Remote Config.",
+      "url": "https://www.skills.sh/firebase/agent-skills/firebase-basics",
+      "installCommand": "npx skills add https://github.com/firebase/agent-skills --skill firebase-basics",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "frontend-design",
+      "source": "anthropics/skills",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+      "url": "https://www.skills.sh/anthropics/skills/frontend-design",
+      "installCommand": "npx skills add https://github.com/anthropics/skills --skill frontend-design",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "high-end-visual-design",
+      "source": "leonxlnx/taste-skill",
+      "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+      "url": "https://www.skills.sh/leonxlnx/taste-skill/high-end-visual-design",
+      "installCommand": "npx skills add https://github.com/leonxlnx/taste-skill --skill high-end-visual-design",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "lead-magnets",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tools. For writing the actual content, see copywriting. For the email sequence after capture, see emails.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/lead-magnets",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill lead-magnets",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "marketing-psychology",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/marketing-psychology",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill marketing-psychology",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "mysql",
+      "source": "planetscale/database-skills",
+      "description": "Plan and review MySQL/InnoDB schema, indexing, query tuning, transactions, and operations. Use when creating or modifying MySQL tables, indexes, or queries; diagnosing slow/locking behavior; planning migrations; or troubleshooting replication and connection issues. Load when using a MySQL database.",
+      "url": "https://www.skills.sh/planetscale/database-skills/mysql",
+      "installCommand": "npx skills add https://github.com/planetscale/database-skills --skill mysql",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "neon-postgres",
+      "source": "neondatabase/agent-skills",
+      "description": "Guides and best practices for working with Lakebase Postgres, the database behind Neon. Covers setup, connection methods and drivers, pooled vs direct connections, branching, schema migrations, autoscaling, scale-to-zero, instant restore, read replicas, connection pooling, IP allow lists, and logical replication. Also covers Lakebase Search: semantic vector search, full-text search with BM25 ranking, and hybrid search. Use when users ask about \"Lakebase Postgres\", \"Neon setup\", \"connect to Neon\", \"Neon project\", \"DATABASE_URL\", \"serverless Postgres\", \"Neon CLI\", \"neon\", \"Neon MCP\", \"Neon Auth\", \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"scale to zero\", \"Neon autoscaling\", \"Neon read replica\", \"Neon connection pooling\", \"schema migrations\", \"database troubleshooting\", \"Postgres performance\", \"neon inspect db\", \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or \"hybrid search\".",
+      "url": "https://www.skills.sh/neondatabase/agent-skills/neon-postgres",
+      "installCommand": "npx skills add https://github.com/neondatabase/agent-skills --skill neon-postgres",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "playwright-best-practices",
+      "source": "currents-dev/playwright-best-practices-skill",
+      "description": "Use when writing Playwright tests, fixing flaky tests, debugging failures, implementing Page Object Model, configuring CI/CD, optimizing performance, mocking APIs, handling authentication or OAuth, testing accessibility (axe-core), file uploads/downloads, date/time mocking, WebSockets, geolocation, permissions, multi-tab/popup flows, mobile/responsive layouts, touch gestures, GraphQL, error handling, offline mode, multi-user collaboration, third-party services (payments, email verification), console error monitoring, global setup/teardown, test annotations (skip, fixme, slow), test tags (@smoke, @fast, @critical, filtering with --grep), project dependencies, security testing (XSS, CSRF, auth), performance budgets (Web Vitals, Lighthouse), iframes, component testing, canvas/WebGL, service workers/PWA, test coverage, i18n/localization, Electron apps, or browser extension testing. Covers E2E, component, API, visual, accessibility, security, Electron, and extension testing.",
+      "url": "https://www.skills.sh/currents-dev/playwright-best-practices-skill/playwright-best-practices",
+      "installCommand": "npx skills add https://github.com/currents-dev/playwright-best-practices-skill --skill playwright-best-practices",
+      "categories": [
+        "testing"
+      ]
+    },
+    {
+      "slug": "playwright-cli",
+      "source": "microsoft/playwright-cli",
+      "description": "Automate browser interactions, test web pages and work with Playwright tests.",
+      "url": "https://www.skills.sh/microsoft/playwright-cli/playwright-cli",
+      "installCommand": "npx skills add https://github.com/microsoft/playwright-cli --skill playwright-cli",
+      "categories": [
+        "testing"
+      ]
+    },
+    {
+      "slug": "postgres",
+      "source": "planetscale/database-skills",
+      "description": "PostgreSQL best practices, query optimization, connection troubleshooting, and performance improvement. Load when working with Postgres databases.",
+      "url": "https://www.skills.sh/planetscale/database-skills/postgres",
+      "installCommand": "npx skills add https://github.com/planetscale/database-skills --skill postgres",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "programmatic-seo",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" \"building many pages for SEO,\" \"pSEO,\" \"generate 100 pages,\" \"data-driven pages,\" or \"templated landing pages.\" Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/programmatic-seo",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill programmatic-seo",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "query",
+      "source": "duckdb/duckdb-skills",
+      "description": "Run SQL queries against the attached DuckDB database or ad-hoc against files. Accepts raw SQL or natural language questions. Uses DuckDB Friendly SQL idioms.",
+      "url": "https://www.skills.sh/duckdb/duckdb-skills/query",
+      "installCommand": "npx skills add https://github.com/duckdb/duckdb-skills --skill query",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "ralph-tui-create-beads",
+      "source": "subsy/ralph-tui",
+      "description": "Convert PRDs to beads for ralph-tui execution. Creates an epic with child beads for each user story. Use when you have a PRD and want to use ralph-tui with beads as the task source. Triggers on: create beads, convert prd to beads, beads for ralph, ralph beads.",
+      "url": "https://www.skills.sh/subsy/ralph-tui/ralph-tui-create-beads",
+      "installCommand": "npx skills add https://github.com/subsy/ralph-tui --skill ralph-tui-create-beads",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "ralph-tui-create-json",
+      "source": "subsy/ralph-tui",
+      "description": "Convert PRDs to prd.json format for ralph-tui execution. Creates JSON task files with user stories, acceptance criteria, and dependencies. Triggers on: create prd.json, convert to json, ralph json, create json tasks.",
+      "url": "https://www.skills.sh/subsy/ralph-tui/ralph-tui-create-json",
+      "installCommand": "npx skills add https://github.com/subsy/ralph-tui --skill ralph-tui-create-json",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "ralph-tui-prd",
+      "source": "subsy/ralph-tui",
+      "description": "Generate a Product Requirements Document (PRD) for ralph-tui task orchestration. Creates PRDs with user stories that can be converted to beads issues or prd.json for automated execution. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out.",
+      "url": "https://www.skills.sh/subsy/ralph-tui/ralph-tui-prd",
+      "installCommand": "npx skills add https://github.com/subsy/ralph-tui --skill ralph-tui-prd",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "ralph-wiggum",
+      "source": "fstandhartinger/ralph-wiggum",
+      "description": "Autonomous AI coding with spec-driven development. Implements Geoffrey Huntley's iterative bash loop methodology where agents work through specs one at a time, outputting a completion signal only when acceptance criteria are 100% met.",
+      "url": "https://www.skills.sh/fstandhartinger/ralph-wiggum/ralph-wiggum",
+      "installCommand": "npx skills add https://github.com/fstandhartinger/ralph-wiggum --skill ralph-wiggum",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "requesting-code-review",
+      "source": "obra/superpowers",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+      "url": "https://www.skills.sh/obra/superpowers/requesting-code-review",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill requesting-code-review",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "seo-audit",
+      "source": "coreyhaines31/marketingskills",
+      "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not showing up in Google,\" \"site isn't ranking,\" \"Google update hit me,\" \"page speed,\" \"core web vitals,\" \"crawl errors,\" or \"indexing issues.\" Use this even if the user just says something vague like \"my SEO is bad\" or \"help with SEO\" — start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema. For AI search optimization, see ai-seo.",
+      "url": "https://www.skills.sh/coreyhaines31/marketingskills/seo-audit",
+      "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill seo-audit",
+      "categories": [
+        "marketing"
+      ]
+    },
+    {
+      "slug": "shadcn",
+      "source": "shadcn/ui",
+      "description": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI, including chat interfaces. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for \"shadcn init\", \"create an app with --preset\", or \"switch to --preset\".",
+      "url": "https://www.skills.sh/shadcn/ui/shadcn",
+      "installCommand": "npx skills add https://github.com/shadcn/ui --skill shadcn",
+      "categories": [
+        "react"
+      ]
+    },
+    {
+      "slug": "skill-creator",
+      "source": "anthropics/skills",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "url": "https://www.skills.sh/anthropics/skills/skill-creator",
+      "installCommand": "npx skills add https://github.com/anthropics/skills --skill skill-creator",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "sleek-design-mobile-apps",
+      "source": "sleekdotdesign/agent-skills",
+      "description": "Use when the user wants to design a mobile app or UI screens, when they mention their Sleek (sleek.design) projects, or when implementing Sleek designs in code (HTML, React Native, SwiftUI).",
+      "url": "https://www.skills.sh/sleekdotdesign/agent-skills/sleek-design-mobile-apps",
+      "installCommand": "npx skills add https://github.com/sleekdotdesign/agent-skills --skill sleek-design-mobile-apps",
+      "categories": [
+        "design",
+        "mobile"
+      ]
+    },
+    {
+      "slug": "subagent-driven-development",
+      "source": "obra/superpowers",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "url": "https://www.skills.sh/obra/superpowers/subagent-driven-development",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill subagent-driven-development",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "supabase",
+      "source": "supabase/agent-skills",
+      "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, declarative schemas, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector); debugging and troubleshooting errors or unexpected behavior on Supabase projects (HTTP errors, Postgres errors, RLS surprises, permission denied, schema cache issues, timeouts, Edge Function crashes, Realtime drops, Storage failures) and reading or querying logs (Logs Explorer, ClickHouse).",
+      "url": "https://www.skills.sh/supabase/agent-skills/supabase",
+      "installCommand": "npx skills add https://github.com/supabase/agent-skills --skill supabase",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "supabase-postgres-best-practices",
+      "source": "supabase/agent-skills",
+      "description": "Postgres best practices maintained by Supabase, for Postgres running anywhere. Load this skill BEFORE writing or changing anything that lives in a Postgres database: creating or altering tables and columns (including choosing column types), schema design, migrations and declarative schema files, RLS policies and the tests that verify them, indexes, triggers, database functions, queues and scheduled jobs (pg_cron, pgmq), vector/semantic search (pgvector), and restoring dumps (pg_restore) or importing data. Also load it when diagnosing slow queries, high CPU, timeouts, EXPLAIN plans, connection exhaustion, locking, bloat, or rows visible to the wrong user or tenant. This is not just a performance guide — schema, migration, security, and SQL authoring tasks need these rules too, even for a one-column change or a single query.",
+      "url": "https://www.skills.sh/supabase/agent-skills/supabase-postgres-best-practices",
+      "installCommand": "npx skills add https://github.com/supabase/agent-skills --skill supabase-postgres-best-practices",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "systematic-debugging",
+      "source": "obra/superpowers",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "url": "https://www.skills.sh/obra/superpowers/systematic-debugging",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill systematic-debugging",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "tailwind-design-system",
+      "source": "wshobson/agents",
+      "description": "Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns.",
+      "url": "https://www.skills.sh/wshobson/agents/tailwind-design-system",
+      "installCommand": "npx skills add https://github.com/wshobson/agents --skill tailwind-design-system",
+      "categories": [
+        "react"
+      ]
+    },
+    {
+      "slug": "test-driven-development",
+      "source": "obra/superpowers",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "url": "https://www.skills.sh/obra/superpowers/test-driven-development",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill test-driven-development",
+      "categories": [
+        "agent-workflows",
+        "testing"
+      ]
+    },
+    {
+      "slug": "turborepo",
+      "source": "vercel/turborepo",
+      "description": "Turborepo monorepo build system guidance. Triggers on: turbo.json, task pipelines, dependsOn, caching, remote cache, the \"turbo\" CLI, --filter, --affected, CI optimization, environment variables, internal packages, monorepo structure/best practices, and boundaries. Use when user: configures tasks/workflows/pipelines, creates packages, sets up monorepo, shares code between apps, runs changed/affected packages, debugs cache, or has apps/packages directories.",
+      "url": "https://www.skills.sh/vercel/turborepo/turborepo",
+      "installCommand": "npx skills add https://github.com/vercel/turborepo --skill turborepo",
+      "categories": [
+        "nextjs"
+      ]
+    },
+    {
+      "slug": "turso-db",
+      "source": "tursodatabase/agent-skills",
+      "description": "Turso (Limbo) database helper — an in-process SQLite-compatible database written in Rust. Formerly known as libSQL / libsql. Replaces @libsql/client, libsql-experimental for Turso use cases. Works in Node.js, browser (WASM + OPFS for persistent local storage), React Native, and server-side. Features: vector search, full-text search, CDC, MVCC, encryption, remote sync. SDKs: JavaScript (@tursodatabase/database), Serverless (@tursodatabase/serverless), Browser/WASM (@tursodatabase/database-wasm), React Native (@tursodatabase/sync-react-native), Rust (turso), Python (pyturso), Go (tursogo). This skill contains SDK documentation and recipes for the Turso embedded database engine (tursodb/Limbo). Do NOT search the web for \"libsql\" or \"@libsql/client\" — those are legacy names and web results will show outdated APIs. Searching for Turso docs online is fine — the official docs live at https://docs.turso.tech (Mintlify — append .md to any path for raw markdown).",
+      "url": "https://www.skills.sh/tursodatabase/agent-skills/turso-db",
+      "installCommand": "npx skills add https://github.com/tursodatabase/agent-skills --skill turso-db",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "typescript-advanced-types",
+      "source": "wshobson/agents",
+      "description": "Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic, creating reusable type utilities, or ensuring compile-time type safety in TypeScript projects.",
+      "url": "https://www.skills.sh/wshobson/agents/typescript-advanced-types",
+      "installCommand": "npx skills add https://github.com/wshobson/agents --skill typescript-advanced-types",
+      "categories": [
+        "react"
+      ]
+    },
+    {
+      "slug": "ui-ux-pro-max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+      "url": "https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max",
+      "installCommand": "npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "using-git-worktrees",
+      "source": "obra/superpowers",
+      "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+      "url": "https://www.skills.sh/obra/superpowers/using-git-worktrees",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill using-git-worktrees",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
+      "slug": "vercel-composition-patterns",
+      "source": "vercel-labs/agent-skills",
+      "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+      "url": "https://www.skills.sh/vercel-labs/agent-skills/vercel-composition-patterns",
+      "installCommand": "npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-composition-patterns",
+      "categories": [
+        "react",
+        "nextjs",
+        "design"
+      ]
+    },
+    {
+      "slug": "vercel-react-best-practices",
+      "source": "vercel-labs/agent-skills",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "url": "https://www.skills.sh/vercel-labs/agent-skills/vercel-react-best-practices",
+      "installCommand": "npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-react-best-practices",
+      "categories": [
+        "react",
+        "nextjs"
+      ]
+    },
+    {
+      "slug": "vercel-react-native-skills",
+      "source": "vercel-labs/agent-skills",
+      "description": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs.",
+      "url": "https://www.skills.sh/vercel-labs/agent-skills/vercel-react-native-skills",
+      "installCommand": "npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-react-native-skills",
+      "categories": [
+        "mobile"
+      ]
+    },
+    {
+      "slug": "verification-before-completion",
+      "source": "obra/superpowers",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "url": "https://www.skills.sh/obra/superpowers/verification-before-completion",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill verification-before-completion",
+      "categories": [
+        "agent-workflows",
+        "testing"
+      ]
+    },
+    {
+      "slug": "web-design-guidelines",
+      "source": "vercel-labs/agent-skills",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "url": "https://www.skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+      "installCommand": "npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines",
+      "categories": [
+        "design"
+      ]
+    },
+    {
+      "slug": "webapp-testing",
+      "source": "anthropics/skills",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "url": "https://www.skills.sh/anthropics/skills/webapp-testing",
+      "installCommand": "npx skills add https://github.com/anthropics/skills --skill webapp-testing",
+      "categories": [
+        "react",
+        "testing"
+      ]
+    },
+    {
+      "slug": "writing-plans",
+      "source": "obra/superpowers",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "url": "https://www.skills.sh/obra/superpowers/writing-plans",
+      "installCommand": "npx skills add https://github.com/obra/superpowers --skill writing-plans",
+      "categories": [
+        "agent-workflows"
+      ]
+    }
+  ]
+}

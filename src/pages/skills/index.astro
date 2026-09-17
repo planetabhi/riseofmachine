@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SkillsGrid from '../../components/SkillsGrid.astro';
+import SkillsEnhancer from '../../components/SkillsEnhancer.astro';
+import SkillsDetailPanel from '../../components/SkillsDetailPanel.astro';
+import ItemListSchema from '../../components/schema/ItemListSchema.astro';
+import skillsData from '../../data/skills.json';
+import skillsIndex from '../../data/skills-category-index.json';
+import type { SkillsData, SkillsCategoryIndex } from '../../types/skills';
+
+const data = skillsData as SkillsData;
+const index = skillsIndex as SkillsCategoryIndex;
+
+// On-site detail URL per skill (no `slug` field → schema uses the url directly).
+const schemaItems = data.skills.slice(0, 100).map((s) => ({
+    title: s.slug,
+    body: s.description,
+    url: `https://riseofmachine.com/skills/${s.source}/${s.slug}`,
+}));
+---
+
+<Layout
+    site="Rise of Machine - Agent Skills"
+    title="Agent skills for coding agents, grouped by topic"
+    tagline=""
+    pageTitle="Agent Skills Directory"
+    pageDescription="Browse agent skills from skills.sh — install commands, source repos, and topics."
+    canonicalUrl="https://riseofmachine.com/skills"
+    showSearch={true}
+    showHero={true}
+    searchPlaceholder="Search skills by name, topic, or source..."
+    sidebarCategoryIndex={index}
+    sidebarBasePath="/skills"
+    sidebarHomeHref="/skills"
+    sidebarHomeLabel="Skills"
+    sidebarShowFavorites={false}
+    sidebarPersistKey="skills-sidebar"
+    sidebarTotalCount={data.skills.length}
+>
+    <ItemListSchema items={schemaItems} listName="Agent Skills" urlBase="/skills" />
+    <main id="main-content">
+        <section class="home-section">
+            <h2 class="home-section-title">All skills ({data.skills.length})</h2>
+            <SkillsGrid />
+            <SkillsEnhancer />
+        </section>
+    </main>
+    <SkillsDetailPanel slot="side-panel" />
+</Layout>
+
+<style>
+    .home-section { margin-bottom: var(--spacing-10); }
+    .home-section-title {
+        margin: 0 0 var(--spacing-05) 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-secondary);
+    }
+</style>

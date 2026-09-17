@@ -1,0 +1,42 @@
+---
+import './CardsContainer.css';
+import './Card.css';
+
+// Empty grid shell. Cards are rendered client-side by SkillsEnhancer from the
+// fetched /skills-index.json (48 at a time), so the listing HTML never ships a
+// large DOM. `category` scopes the client render to one topic.
+interface Props {
+    category?: string;
+}
+const { category } = Astro.props;
+---
+
+<section data-skills-grid data-category={category ?? ''}>
+    <ul role="list" class="link-card-grid" data-skills-list></ul>
+    <noscript>
+        <p class="nu-u-text--secondary">Enable JavaScript to browse skills, or pick a topic from the sidebar.</p>
+    </noscript>
+    <div class="grid-sentinel" id="skills-sentinel" aria-hidden="true"></div>
+    <div class="grid-empty" hidden>
+        <p class="nu-u-text--secondary">No skills found.</p>
+    </div>
+</section>
+
+<style is:global>
+    /* Clamp skill card title to one line, description to two. */
+    [data-skills-grid] .link-card strong {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        overflow: hidden;
+    }
+
+    [data-skills-grid] .link-card p.nu-c-helper-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        overflow: hidden;
+    }
+</style>

@@ -41,6 +41,7 @@ export interface Props {
     sidebarHomeLabel?: string;
     sidebarShowFavorites?: boolean;
     sidebarPersistKey?: string;
+    sidebarTotalCount?: number;
 }
 
 const {
@@ -71,6 +72,7 @@ const {
     sidebarHomeLabel,
     sidebarShowFavorites,
     sidebarPersistKey,
+    sidebarTotalCount,
 } = Astro.props;
 ---
 
@@ -160,6 +162,7 @@ const {
             homeLabel={sidebarHomeLabel}
             showFavorites={sidebarShowFavorites}
             persistKey={sidebarPersistKey}
+            totalCount={sidebarTotalCount}
         />
         <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
         <div class="app-content">
