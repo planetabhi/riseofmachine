@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SkillsGrid from '../../components/SkillsGrid.astro';
+import SkillsEnhancer from '../../components/SkillsEnhancer.astro';
+import SkillsDetailPanel from '../../components/SkillsDetailPanel.astro';
+import SoftwareApplicationSchema from '../../components/schema/SoftwareApplicationSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import skillsData from '../../data/skills.json';
+import skillsIndex from '../../data/skills-category-index.json';
+import type { SkillsData, Skill, SkillsCategoryIndex } from '../../types/skills';
+
+export function getStaticPaths() {
+    const data = skillsData as SkillsData;
+    // params.slug is the full multi-segment path "{owner}/{repo}/{slug}".
+    return data.skills.map((s) => ({ params: { slug: `${s.source}/${s.slug}` }, props: { skill: s } }));
+}
+
+export const prerender = true;
+
+interface Props {
+    skill: Skill;
+}
+const { skill } = Astro.props as Props;
+const index = skillsIndex as SkillsCategoryIndex;
+const totalSkills = (skillsData as SkillsData).skills.length;
+
+// Render the skill's topic listing as the backdrop; the RHS panel opens over it
+// for this skill on load (same model as /mcp/servers/{slug}). No standalone page.
+const category = skill.categories[0] ?? '';
+const categoryTitle = index[category]?.title ?? category;
+const canonicalUrl = `https://riseofmachine.com/skills/${skill.source}/${skill.slug}`;
+
+const breadcrumbs = [
+    { name: 'Skills', url: 'https://riseofmachine.com/skills' },
+    ...(category ? [{ name: categoryTitle, url: `https://riseofmachine.com/skills/${category}` }] : []),
+    { name: skill.slug },
+];
+---
+
+<Layout
+    site={`Rise of Machine - ${skill.slug}`}
+    title={category ? `${categoryTitle} skills` : 'Agent skills'}
+    tagline=""
+    pageTitle={`${skill.slug} — Agent Skill`}
+    pageDescription={skill.description}
+    canonicalUrl={canonicalUrl}
+    ogTitle={`${skill.slug} — Agent Skill`}
+    ogDescription={skill.description}
+    ogUrl={canonicalUrl}
+    ogType="website"
+    ogSiteName="Rise of Machine"
+    twitterCard="summary"
+    showSearch={true}
+    showHero={true}
+    searchPlaceholder={category ? `Search ${categoryTitle} skills...` : 'Search skills...'}
+    sidebarCategoryIndex={index}
+    sidebarBasePath="/skills"
+    sidebarHomeHref="/skills"
+    sidebarHomeLabel="Skills"
+    sidebarShowFavorites={false}
+    sidebarPersistKey="skills-sidebar"
+    sidebarTotalCount={totalSkills}
+>
+    <SoftwareApplicationSchema
+        name={skill.slug}
+        description={skill.description}
+        url={skill.url}
+        category={category}
+    />
+    <BreadcrumbSchema items={breadcrumbs} />
+    <main id="main-content">
+        <noscript>
+            <section class="skills-fallback">
+                <h2>{skill.slug}</h2>
+                <p>{skill.description}</p>
+                <pre class="skills-fallback-cmd">{skill.installCommand}</pre>
+                <ul>
+                    <li><a href={skill.url} target="_blank" rel="noopener nofollow">Listing ↗</a></li>
+                    <li><a href={`https://github.com/${skill.source}`} target="_blank" rel="noopener nofollow">Source ↗</a></li>
+                    {category && <li><a href={`/skills/${category}`}>All {categoryTitle} skills</a></li>}
+                </ul>
+            </section>
+        </noscript>
+        <SkillsGrid category={category} />
+        <SkillsEnhancer />
+    </main>
+    <SkillsDetailPanel slot="side-panel" />
+</Layout>
+
+<style>
+    .skills-fallback {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-04);
+        max-width: 60ch;
+    }
+    .skills-fallback-cmd {
+        margin: 0;
+        padding: var(--spacing-03) var(--spacing-04);
+        background-color: var(--background-secondary);
+        border-radius: var(--spacing-03);
+        font-family: var(--monospace);
+        font-size: var(--desktop-caption);
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+</style>

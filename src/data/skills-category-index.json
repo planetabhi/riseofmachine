@@ -1,0 +1,34 @@
+{
+  "agent-workflows": {
+    "title": "Agent workflows",
+    "count": 19
+  },
+  "databases": {
+    "title": "Databases",
+    "count": 10
+  },
+  "design": {
+    "title": "Design",
+    "count": 10
+  },
+  "marketing": {
+    "title": "Marketing",
+    "count": 10
+  },
+  "react": {
+    "title": "React",
+    "count": 6
+  },
+  "nextjs": {
+    "title": "Nextjs",
+    "count": 5
+  },
+  "testing": {
+    "title": "Testing",
+    "count": 5
+  },
+  "mobile": {
+    "title": "Mobile",
+    "count": 2
+  }
+}

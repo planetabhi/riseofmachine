@@ -16,6 +16,10 @@ interface Props {
     showFavorites?: boolean | undefined; // Saved tools link (default true; false for MCP v1)
     persistKey?: string | undefined; // distinct transition:persist key per vertical
     showLatestFilter?: boolean | undefined; // forwarded from Layout (currently informational)
+    // Home count override. Tools/MCP have one category per item, so the summed
+    // category counts equal the unique total. Skills are multi-category, so the
+    // sum double-counts — those pages pass the real unique count here.
+    totalCount?: number | undefined;
 }
 
 const {
@@ -25,16 +29,19 @@ const {
     homeLabel = 'Home',
     showFavorites = true,
     persistKey = 'sidebar',
+    totalCount: totalCountOverride,
 } = Astro.props;
 
 const cats = Object.entries(categoryIndex);
-const totalCount = cats.reduce((acc, [, meta]) => acc + meta.count, 0);
+const totalCount = totalCountOverride ?? cats.reduce((acc, [, meta]) => acc + meta.count, 0);
 
 const normalize = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
 const current = normalize(Astro.url.pathname);
 
-// Which vertical is active — drives the Tools/MCPs segmented control.
+// Which vertical is active — drives the Tools/MCPs/Skills segmented control.
 const isMcp = basePath === '/mcp' || current === '/mcp' || current.startsWith('/mcp/');
+const isSkills = basePath === '/skills' || current === '/skills' || current.startsWith('/skills/');
+const isTools = !isMcp && !isSkills;
 
 // Latest applies to category listing routes; the homepage has its own Latest
 // section, so exclude '/'. A script keeps this in sync after nav (sidebar persists).
@@ -58,12 +65,15 @@ const showLatest = listingPaths.has(current);
             </button>
         </div>
 
-        <div class="sidebar-segmented" role="group" aria-label="Switch between Tools and MCP servers">
-            <a href="/" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': !isMcp }]} aria-current={!isMcp ? 'page' : undefined}>
+        <div class="sidebar-segmented" role="group" aria-label="Switch between Tools, MCP servers, and Skills">
+            <a href="/" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isTools }]} aria-current={isTools ? 'page' : undefined}>
                 Tools
             </a>
             <a href="/mcp" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isMcp }]} aria-current={isMcp ? 'page' : undefined}>
                 MCPs
+            </a>
+            <a href="/skills" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isSkills }]} aria-current={isSkills ? 'page' : undefined}>
+                Skills
             </a>
         </div>
 
@@ -91,7 +101,7 @@ const showLatest = listingPaths.has(current);
                 id="new-filter-toggle"
                 aria-label="Filter recently added tools"
                 aria-pressed="false"
-                style={showLatest && !isMcp ? undefined : 'display: none;'}
+                style={showLatest && isTools ? undefined : 'display: none;'}
             >
                 <span class="sidebar-item-label">Latest</span>
             </button>
@@ -105,7 +115,7 @@ const showLatest = listingPaths.has(current);
                 <span class="sidebar-item-label">Saved tools</span>
                 <span class="sidebar-count" id="favoritesCount"></span>
             </a>
-            {!isMcp && (
+            {!isMcp && !isSkills && (
                 <a
                     href="https://github.com/planetabhi/riseofmachine/issues"
                     target="_blank"
@@ -281,7 +291,7 @@ const showLatest = listingPaths.has(current);
             ),
         );
         const latest = document.getElementById('new-filter-toggle');
-        if (latest) latest.style.display = navHrefs.has(path) && path !== '/' && !path.startsWith('/mcp') ? '' : 'none';
+        if (latest) latest.style.display = navHrefs.has(path) && path !== '/' && !path.startsWith('/mcp') && !path.startsWith('/skills') ? '' : 'none';
         moveNavPill();
     }
 

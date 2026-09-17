@@ -1,6 +1,6 @@
 {
-  "title": "elva",
-  "description": "API management for AI agents.",
+  "title": "Elva | Discover, govern, and expose your APIs to developers and AI agents",
+  "description": "Elva reads your repos to find every API you have, scores them, governs access with per-audience contracts, and exposes them to developers and AI agents through hosted MCP servers, docs, and SDKs. No OpenAPI spec required.",
   "category": "developer",
   "url": "https://getelva.ai/?ref=riseofmachine.com",
   "tag": "Freemium",

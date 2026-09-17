@@ -31,12 +31,6 @@
       "skillPath": "skills/ship-this/SKILL.md",
       "computedHash": "720169078262be2cee65992bfd423bd285a2c6313abcbb65e196fac3568aeea2"
     },
-    "ship-ui": {
-      "source": "planetabhi/skills",
-      "sourceType": "github",
-      "skillPath": "skills/ship-ui/SKILL.md",
-      "computedHash": "9c728e347a76e11916e01a33eb1da729ef9ef52747e082d3a5304c875569b18b"
-    },
     "transitions-dev": {
       "source": "jakubantalik/transitions.dev",
       "sourceType": "github",

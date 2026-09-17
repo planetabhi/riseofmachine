@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SkillsGrid from '../../components/SkillsGrid.astro';
+import SkillsEnhancer from '../../components/SkillsEnhancer.astro';
+import SkillsDetailPanel from '../../components/SkillsDetailPanel.astro';
+import ItemListSchema from '../../components/schema/ItemListSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import skillsData from '../../data/skills.json';
+import skillsIndex from '../../data/skills-category-index.json';
+import type { SkillsData, SkillsCategoryIndex } from '../../types/skills';
+
+export function getStaticPaths() {
+    const index = skillsIndex as SkillsCategoryIndex;
+    // Single-segment topic slugs only — never the multi-segment detail URLs.
+    return Object.keys(index).map((category) => ({ params: { category } }));
+}
+
+export const prerender = true;
+
+const { category } = Astro.params;
+const data = skillsData as SkillsData;
+const index = skillsIndex as SkillsCategoryIndex;
+
+const categoryTitle = index[category as string]?.title ?? category;
+const skills = data.skills.filter((s) => s.categories.includes(category as string));
+
+const schemaItems = skills.slice(0, 100).map((s) => ({
+    title: s.slug,
+    body: s.description,
+    url: `https://riseofmachine.com/skills/${s.source}/${s.slug}`,
+}));
+const breadcrumbs = [
+    { name: 'Skills', url: 'https://riseofmachine.com/skills' },
+    { name: categoryTitle as string },
+];
+---
+
+<Layout
+    site={`Rise of Machine - ${categoryTitle}`}
+    title={`${categoryTitle} skills`}
+    tagline=""
+    pageTitle={`${categoryTitle} Agent Skills`}
+    pageDescription={`Agent skills in the ${categoryTitle} topic, sourced from skills.sh.`}
+    canonicalUrl={`https://riseofmachine.com/skills/${category}`}
+    showSearch={true}
+    showHero={true}
+    searchPlaceholder={`Search ${categoryTitle} skills...`}
+    sidebarCategoryIndex={index}
+    sidebarBasePath="/skills"
+    sidebarHomeHref="/skills"
+    sidebarHomeLabel="Skills"
+    sidebarShowFavorites={false}
+    sidebarPersistKey="skills-sidebar"
+    sidebarTotalCount={data.skills.length}
+>
+    <ItemListSchema items={schemaItems} listName={`${categoryTitle} Agent Skills`} urlBase="/skills" />
+    <BreadcrumbSchema items={breadcrumbs} />
+    <main id="main-content">
+        <SkillsGrid category={category} />
+        <SkillsEnhancer />
+    </main>
+    <SkillsDetailPanel slot="side-panel" />
+</Layout>
