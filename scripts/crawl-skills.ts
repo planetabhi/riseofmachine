@@ -56,24 +56,45 @@ interface Seed {
 
 const REPO_RE = /^[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+$/;
 
+// A missing seeds file means "no extra repos" and is fine; any other problem
+// (unreadable, malformed, wrong shape, or an invalid entry) throws so main()
+// aborts before writing and the last-good skills.json is preserved.
 function readSeeds(): Seed[] {
+    let text: string;
+    try {
+        text = fs.readFileSync(SEEDS_PATH, 'utf-8');
+    } catch (e) {
+        if ((e as NodeJS.ErrnoException).code === 'ENOENT') return [];
+        throw new Error(`cannot read ${SEEDS_PATH}: ${e instanceof Error ? e.message : e}`);
+    }
     let raw: unknown;
     try {
-        raw = JSON.parse(fs.readFileSync(SEEDS_PATH, 'utf-8'));
-    } catch {
-        return [];
+        raw = JSON.parse(text);
+    } catch (e) {
+        throw new Error(`${SEEDS_PATH} is not valid JSON: ${e instanceof Error ? e.message : e}`);
     }
-    if (!Array.isArray(raw)) return [];
-    const strings = (v: unknown): string[] | undefined =>
-        Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : undefined;
-    return raw
-        .filter((s): s is Seed => !!s && typeof (s as Seed).repo === 'string' && REPO_RE.test((s as Seed).repo))
-        .map((s) => ({
-            repo: s.repo,
-            categories: strings(s.categories),
-            include: strings(s.include),
-            exclude: strings(s.exclude),
-        }));
+    if (!Array.isArray(raw)) throw new Error(`${SEEDS_PATH} must be a JSON array of seeds`);
+    const strings = (v: unknown, field: string, i: number): string[] | undefined => {
+        if (v === undefined) return undefined;
+        if (!Array.isArray(v) || v.some((x) => typeof x !== 'string'))
+            throw new Error(`${SEEDS_PATH}[${i}].${field} must be an array of strings`);
+        return v as string[];
+    };
+    return raw.map((s, i) => {
+        if (!s || typeof s !== 'object') throw new Error(`${SEEDS_PATH}[${i}] must be an object`);
+        const seed = s as Record<string, unknown>;
+        if (typeof seed.repo !== 'string' || !REPO_RE.test(seed.repo))
+            throw new Error(`${SEEDS_PATH}[${i}].repo must match owner/repo`);
+        const categories = strings(seed.categories, 'categories', i);
+        const include = strings(seed.include, 'include', i);
+        const exclude = strings(seed.exclude, 'exclude', i);
+        return {
+            repo: seed.repo,
+            ...(categories && { categories }),
+            ...(include && { include }),
+            ...(exclude && { exclude }),
+        };
+    });
 }
 
 function readPrev(): SkillsData | null {
