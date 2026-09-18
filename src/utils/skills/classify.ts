@@ -6,10 +6,11 @@ import { SKILLS_TAXONOMY } from './taxonomy';
 
 const MAX_CATEGORIES = 3;
 
-// Lowercase word tokens: split camelCase and hyphenated slugs, strip punctuation.
+// Lowercase word tokens: split acronym runs (MCPServer) and camelCase, strip punctuation.
 export function tokenize(input: string | undefined): string[] {
     if (!input) return [];
     return input
+        .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
         .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
         .toLowerCase()
         .split(/[^a-z0-9]+/)
