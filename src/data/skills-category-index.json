@@ -1,26 +1,26 @@
 {
   "agent-workflows": {
     "title": "Agent workflows",
-    "count": 19
+    "count": 20
+  },
+  "design": {
+    "title": "Design",
+    "count": 15
+  },
+  "marketing": {
+    "title": "Marketing",
+    "count": 12
   },
   "databases": {
     "title": "Databases",
     "count": 10
   },
-  "design": {
-    "title": "Design",
-    "count": 10
-  },
-  "marketing": {
-    "title": "Marketing",
-    "count": 10
-  },
   "react": {
     "title": "React",
-    "count": 6
+    "count": 7
   },
   "nextjs": {
-    "title": "Nextjs",
+    "title": "Next.js",
     "count": 5
   },
   "testing": {
@@ -29,6 +29,6 @@
   },
   "mobile": {
     "title": "Mobile",
-    "count": 2
+    "count": 3
   }
 }

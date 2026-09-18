@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T17:58:38.285Z",
+  "generatedAt": "2026-09-18T22:20:07.653Z",
   "skills": [
     {
       "slug": "ad-creative",
@@ -152,6 +152,16 @@
       ]
     },
     {
+      "slug": "docs-style-guide",
+      "source": "planetabhi/skills",
+      "description": "Documentation style guide enforcer by @planetabhi. Applies and reviews the writing style guide when authoring or editing product documentation and tutorials. Use to check prose for voice, tense, word choice, inclusive language, formatting, code block, UI, Markdown, and number/date conventions.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill docs-style-guide",
+      "categories": [
+        "design"
+      ]
+    },
+    {
       "slug": "emil-design-eng",
       "source": "emilkowalski/skill",
       "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
@@ -242,6 +252,17 @@
       ]
     },
     {
+      "slug": "keyboard-accessibility",
+      "source": "planetabhi/skills",
+      "description": "Load this skill for any project with interactive UI, such as buttons, links, forms, modals, dropdowns, menus, tabs, sliders, toolbars, carousels, or custom widgets, in React or vanilla JavaScript. Never ship an interactive element that cannot be fully operated by keyboard alone. Always ensure a visible focus indicator, logical tab order, correct widget key behavior, and no keyboard traps. Targets WCAG 2.2 Level AA.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill keyboard-accessibility",
+      "categories": [
+        "design",
+        "react"
+      ]
+    },
+    {
       "slug": "lead-magnets",
       "source": "coreyhaines31/marketingskills",
       "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tools. For writing the actual content, see copywriting. For the email sequence after capture, see emails.",
@@ -262,6 +283,16 @@
       ]
     },
     {
+      "slug": "motion-design",
+      "source": "planetabhi/skills",
+      "description": "Load this skill when adding or reviewing web UI motion such as animations, transitions, entrances and exits, hovers, modals, dropdowns, toasts, page transitions, and micro-interactions. Triggers on \"animate\", \"add a transition\", \"make it move\", \"motion\", \"fade\", \"slide\", \"stagger\", \"open and close\". Builds dependency-free, Baseline-first, framework-agnostic CSS, with the Web Animations API and View Transitions API where they help.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill motion-design",
+      "categories": [
+        "design"
+      ]
+    },
+    {
       "slug": "mysql",
       "source": "planetscale/database-skills",
       "description": "Plan and review MySQL/InnoDB schema, indexing, query tuning, transactions, and operations. Use when creating or modifying MySQL tables, indexes, or queries; diagnosing slow/locking behavior; planning migrations; or troubleshooting replication and connection issues. Load when using a MySQL database.",
@@ -274,7 +305,7 @@
     {
       "slug": "neon-postgres",
       "source": "neondatabase/agent-skills",
-      "description": "Guides and best practices for working with Lakebase Postgres, the database behind Neon. Covers setup, connection methods and drivers, pooled vs direct connections, branching, schema migrations, autoscaling, scale-to-zero, instant restore, read replicas, connection pooling, IP allow lists, and logical replication. Also covers Lakebase Search: semantic vector search, full-text search with BM25 ranking, and hybrid search. Use when users ask about \"Lakebase Postgres\", \"Neon setup\", \"connect to Neon\", \"Neon project\", \"DATABASE_URL\", \"serverless Postgres\", \"Neon CLI\", \"neon\", \"Neon MCP\", \"Neon Auth\", \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"scale to zero\", \"Neon autoscaling\", \"Neon read replica\", \"Neon connection pooling\", \"schema migrations\", \"database troubleshooting\", \"Postgres performance\", \"neon inspect db\", \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or \"hybrid search\".",
+      "description": "Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching, autoscaling, scale-to-zero, instant restore, read replicas, IP allow lists, logical replication, and Lakebase Search. Use when the work is an existing DATABASE_URL, SQL, schema, inspect, or search. New backends, Auth, files, Functions, and LLM calls go to the parent `neon` skill. Also use for \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"neon inspect db\", \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or \"hybrid search\".",
       "url": "https://www.skills.sh/neondatabase/agent-skills/neon-postgres",
       "installCommand": "npx skills add https://github.com/neondatabase/agent-skills --skill neon-postgres",
       "categories": [
@@ -382,6 +413,18 @@
       ]
     },
     {
+      "slug": "responsive-design",
+      "source": "planetabhi/skills",
+      "description": "Load this skill for any project with a user interface that must work across screen sizes and input methods, such as websites, web apps, dashboards, marketing pages, emails, or design systems. Use when building or reviewing layouts, choosing breakpoints, setting up fluid type, sizing touch targets, or making components adapt to their container. One design must serve phones, tablets, laptops, desktops, touch, mouse, and keyboard. Prefers content-first, mobile-first, framework-agnostic CSS and Baseline-stable features.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill responsive-design",
+      "categories": [
+        "design",
+        "marketing",
+        "mobile"
+      ]
+    },
+    {
       "slug": "seo-audit",
       "source": "coreyhaines31/marketingskills",
       "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not showing up in Google,\" \"site isn't ranking,\" \"Google update hit me,\" \"page speed,\" \"core web vitals,\" \"crawl errors,\" or \"indexing issues.\" Use this even if the user just says something vague like \"my SEO is bad\" or \"help with SEO\" — start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema. For AI search optimization, see ai-seo.",
@@ -399,6 +442,17 @@
       "installCommand": "npx skills add https://github.com/shadcn/ui --skill shadcn",
       "categories": [
         "react"
+      ]
+    },
+    {
+      "slug": "ship-this",
+      "source": "planetabhi/skills",
+      "description": "Load this skill before shipping a UI change, to statically review the diff for design-craft regressions (accessibility, motion, responsive, and visual or UX drift), correctness and security issues, exposed secrets or credentials, and leftover commented-out code, then write a commit message and pull request description that match the repository's conventions, and offer to commit and push. Triggers on \"ship this\", \"review this\", \"ready to ship\". This is the ship gate at the end of the design → build → ship pipeline.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill ship-this",
+      "categories": [
+        "design",
+        "agent-workflows"
       ]
     },
     {
@@ -596,6 +650,16 @@
       "categories": [
         "react",
         "testing"
+      ]
+    },
+    {
+      "slug": "writing-checklist",
+      "source": "planetabhi/skills",
+      "description": "Guided self-editing checklist for anyone writing an article, essay, story, email, or post. Turns a rough draft into clear, punchy, well-flowing prose by running it against the writer's intent, reader, and a set of concrete revision checks. Use when the user says \"review my writing\", \"edit this draft\", \"make this clearer\", \"tighten this up\", \"writing checklist\", \"proofread\", \"polish this piece\", or asks how to improve an article, story, essay, or copy.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill writing-checklist",
+      "categories": [
+        "marketing"
       ]
     },
     {

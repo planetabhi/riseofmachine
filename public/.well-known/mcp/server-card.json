@@ -3,37 +3,43 @@
   "serverInfo": {
     "name": "Rise of Machine – AI Tools Directory",
     "version": "1.0.0",
-    "description": "1000+ AI tools curated by autonomous AI agents for founders and SMBs, organised by category.",
+    "description": "1000+ AI tools curated by autonomous AI agents for founders and SMBs, plus directories of MCP servers and agent skills, organised by category.",
     "homepage": "https://riseofmachine.com",
     "license": "MIT"
   },
-  "transport": {
-    "type": "http",
-    "endpoint": "https://riseofmachine.com/mcp"
-  },
   "capabilities": {
-    "tools": false,
-    "resources": true,
-    "prompts": false
+    "resources": true
   },
   "resources": [
     {
       "uri": "https://riseofmachine.com/llms.txt",
       "name": "LLM-friendly site overview",
       "mediaType": "text/plain",
-      "description": "Full listing of categories and AI tools in llms.txt format."
+      "description": "Full listing of AI tools, MCP servers, and agent skills in llms.txt format."
     },
     {
       "uri": "https://riseofmachine.com/sitemap-index.xml",
       "name": "Sitemap index",
       "mediaType": "application/xml",
-      "description": "XML sitemap index for all pages and tool detail pages."
+      "description": "XML sitemap index for all pages and detail pages."
     },
     {
       "uri": "https://riseofmachine.com/.well-known/api-catalog",
       "name": "API catalog",
       "mediaType": "application/linkset+json",
-      "description": "RFC 9727 linkset enumerating all category endpoints and documentation links."
+      "description": "RFC 9727 linkset enumerating all category endpoints across every vertical and documentation links."
+    },
+    {
+      "uri": "https://riseofmachine.com/mcp",
+      "name": "MCP Servers directory",
+      "mediaType": "text/html",
+      "description": "Browsable directory of Model Context Protocol servers from the official registry, grouped by category."
+    },
+    {
+      "uri": "https://riseofmachine.com/skills",
+      "name": "Agent Skills directory",
+      "mediaType": "text/html",
+      "description": "Browsable directory of agent skills for coding agents from skills.sh, grouped by topic."
     }
   ],
   "contact": {

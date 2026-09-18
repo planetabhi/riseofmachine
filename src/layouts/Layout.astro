@@ -74,6 +74,12 @@ const {
     sidebarPersistKey,
     sidebarTotalCount,
 } = Astro.props;
+
+// Site-wide social card fallback; pages may override via ogImage/twitterImage.
+const DEFAULT_SOCIAL_IMAGE = "https://riseofmachine.com/og-cover.png";
+const resolvedOgImage = ogImage ?? DEFAULT_SOCIAL_IMAGE;
+const resolvedTwitterImage = twitterImage ?? ogImage ?? DEFAULT_SOCIAL_IMAGE;
+const resolvedTwitterCard = twitterCard ?? "summary_large_image";
 ---
 
 <!doctype html>
@@ -120,18 +126,19 @@ const {
                 <meta property="og:description" content={ogDescription} />
             )
         }
-        {ogImage && <meta property="og:image" content={ogImage} />}
+        <meta property="og:image" content={resolvedOgImage} />
+        {!ogImage && <meta property="og:image:width" content="1200" />}
+        {!ogImage && <meta property="og:image:height" content="630" />}
         {ogUrl && <meta property="og:url" content={ogUrl} />}
         {ogSiteName && <meta property="og:site_name" content={ogSiteName} />}
-        {twitterCard && <meta name="twitter:card" content={twitterCard} />}
+        <meta name="twitter:card" content={resolvedTwitterCard} />
         {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
         {
             twitterDescription && (
                 <meta name="twitter:description" content={twitterDescription} />
             )
         }
-        {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-
+        <meta name="twitter:image" content={resolvedTwitterImage} />
         <!-- Google tag (gtag.js) -->
         <script
             type="text/partytown"

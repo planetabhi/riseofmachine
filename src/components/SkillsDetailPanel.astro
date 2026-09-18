@@ -21,8 +21,6 @@
 
         <h2 class="detail-title nu-c-h5 nu-u-text--primary" id="skills-detail-title"></h2>
         <div class="detail-meta">
-            <a class="detail-category" id="skills-detail-category"></a>
-            <span class="detail-sep" aria-hidden="true">·</span>
             <span class="detail-added" id="skills-detail-source"></span>
         </div>
 
@@ -49,7 +47,6 @@
 
         <section class="detail-section" id="skills-detail-links-section" hidden>
             <p class="detail-label">Links</p>
-            <a class="detail-value detail-link" id="skills-detail-site" target="_blank" rel="noopener noreferrer nofollow"></a>
             <a class="detail-value detail-link" id="skills-detail-repo" target="_blank" rel="noopener noreferrer nofollow"></a>
         </section>
     </div>
@@ -144,19 +141,6 @@
         margin-bottom: var(--spacing-06);
     }
 
-    .detail-category {
-        color: var(--content-secondary);
-        text-decoration: none;
-    }
-
-    .detail-category:hover {
-        color: var(--accent);
-    }
-
-    .detail-sep {
-        color: var(--content-secondary-alt);
-    }
-
     .detail-section {
         display: flex;
         flex-direction: column;
@@ -177,6 +161,21 @@
         margin: 0;
         font-size: var(--desktop-body);
         line-height: var(--lh-desktop-body);
+    }
+
+    .detail-more {
+        color: var(--accent);
+        cursor: var(--c-pointer);
+        white-space: nowrap;
+    }
+
+    .detail-more:hover {
+        text-decoration: underline;
+    }
+
+    .detail-more:focus-visible {
+        outline: 1px solid var(--button-primary);
+        outline-offset: 1px;
     }
 
     .detail-value {
@@ -297,20 +296,53 @@
     let currentCommand = '';
     let retryTimer = 0;
 
+    // About truncation state (word based, with a show more/less toggle).
+    const ABOUT_WORD_LIMIT = 45;
+    let aboutFull = '';
+    let aboutTruncated = '';
+    let aboutNeedsToggle = false;
+    let aboutExpanded = false;
+
+    function applyAbout() {
+        const body = document.getElementById('skills-detail-body');
+        if (!body) return;
+        body.replaceChildren();
+        if (!aboutNeedsToggle) {
+            body.textContent = aboutFull;
+            return;
+        }
+        // Inline toggle link at the end of the text (built as a node, never innerHTML).
+        body.append(document.createTextNode(aboutExpanded ? `${aboutFull} ` : `${aboutTruncated}… `));
+        const toggle = document.createElement('a');
+        toggle.className = 'detail-more';
+        toggle.setAttribute('role', 'button');
+        toggle.tabIndex = 0;
+        toggle.setAttribute('aria-expanded', String(aboutExpanded));
+        toggle.textContent = aboutExpanded ? 'Show less' : 'Show more';
+        body.append(toggle);
+    }
+
+    function toggleAbout() {
+        aboutExpanded = !aboutExpanded;
+        applyAbout();
+        document.querySelector<HTMLElement>('.detail-more')?.focus();
+    }
+
+    function renderAbout(text: string) {
+        aboutFull = text;
+        const words = text.split(/\s+/).filter(Boolean);
+        aboutNeedsToggle = words.length > ABOUT_WORD_LIMIT;
+        aboutTruncated = aboutNeedsToggle ? words.slice(0, ABOUT_WORD_LIMIT).join(' ') : text;
+        aboutExpanded = false;
+        applyAbout();
+    }
+
     const panelEl = () => document.getElementById('skills-detail-panel');
     const isOpen = () => !!panelEl()?.classList.contains('is-open');
 
     const setText = (id: string, value: string) => {
         const el = document.getElementById(id);
         if (el) el.textContent = value;
-    };
-
-    const domainOf = (url: string) => {
-        try {
-            return new URL(url).hostname.replace('www.', '');
-        } catch {
-            return '';
-        }
     };
 
     const safeDecode = (value: string) => {
@@ -324,17 +356,10 @@
     function populate(link: HTMLAnchorElement) {
         const d = link.dataset;
         setText('skills-detail-title', d.title ?? '');
-        setText('skills-detail-body', d.body || 'No description provided.');
-
-        const cat = document.getElementById('skills-detail-category') as HTMLAnchorElement | null;
-        if (cat) {
-            cat.textContent = d.categoryTitle ?? '';
-            cat.hidden = !d.categoryTitle;
-            if (d.category) cat.href = `/skills/${d.category}`;
-            else cat.removeAttribute('href');
-        }
-
-        setText('skills-detail-source', d.source ?? '');
+        renderAbout(d.body || 'No description provided.');
+        // Source is "owner/repo"; show only the owner, prefixed.
+        const owner = (d.source ?? '').split('/')[0] ?? '';
+        setText('skills-detail-source', owner ? `By: ${owner}` : '');
 
         // Primary action — copy the install command (zero navigation).
         currentCommand = d.installCommand || '';
@@ -347,21 +372,10 @@
         }
         if (copyBtn) copyBtn.classList.remove('is-copied');
 
-        // Links — skills.sh listing + source repository on GitHub.
-        const site = document.getElementById('skills-detail-site') as HTMLAnchorElement | null;
+        // Links — source repository on GitHub.
         const repo = document.getElementById('skills-detail-repo') as HTMLAnchorElement | null;
         const linksSection = document.getElementById('skills-detail-links-section');
-        const siteHref = d.url || '';
         const repoHref = d.source ? `https://github.com/${d.source}` : '';
-        if (site) {
-            if (siteHref) {
-                site.textContent = `Listing (${domainOf(siteHref) || 'skills.sh'})`;
-                site.href = siteHref;
-                site.hidden = false;
-            } else {
-                site.hidden = true;
-            }
-        }
         if (repo) {
             if (repoHref) {
                 repo.textContent = `Source (${d.source})`;
@@ -371,7 +385,7 @@
                 repo.hidden = true;
             }
         }
-        if (linksSection) linksSection.hidden = !siteHref && !repoHref;
+        if (linksSection) linksSection.hidden = !repoHref;
 
         // Monogram (first letter of the slug) stands in for the absent icon.
         const mono = document.getElementById('skills-detail-monogram');
@@ -528,6 +542,11 @@
                     void copyCommand();
                     return;
                 }
+                if (target.closest('.detail-more')) {
+                    e.preventDefault();
+                    toggleAbout();
+                    return;
+                }
                 const link = target.closest<HTMLAnchorElement>('a[data-skill-link]');
                 if (!link) return;
                 if (e.defaultPrevented) return;
@@ -542,7 +561,15 @@
 
         window.addEventListener('popstate', () => syncFromUrl(false));
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && isOpen()) requestClose();
+            if (e.key === 'Escape' && isOpen()) {
+                requestClose();
+                return;
+            }
+            const t = e.target as HTMLElement;
+            if ((e.key === 'Enter' || e.key === ' ') && t.closest('.detail-more')) {
+                e.preventDefault();
+                toggleAbout();
+            }
         });
         document.addEventListener('astro:page-load', () => syncFromUrl(true));
     }

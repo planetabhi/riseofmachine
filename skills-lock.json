@@ -25,6 +25,12 @@
       "skillPath": "skills/responsive-design/SKILL.md",
       "computedHash": "5f029db3466069b07e55696fd3831ac22175a49de25b864f596a35146264a275"
     },
+    "seo-aeo-best-practices": {
+      "source": "sanity-io/agent-toolkit",
+      "sourceType": "github",
+      "skillPath": "skills/seo-aeo-best-practices/SKILL.md",
+      "computedHash": "edb99db85683ff99678fcb1bebc3a5653c3ea927eea9ee2534f19be86c7b8b81"
+    },
     "ship-this": {
       "source": "planetabhi/skills",
       "sourceType": "github",

@@ -142,6 +142,161 @@
       "anchor": "https://riseofmachine.com/xtras",
       "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
       "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/ai-llm",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/automation",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/cloud-devops",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/communication",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/crm-sales",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/data-analytics",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/databases",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/design",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/dev-tools",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/docs-knowledge",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/ecommerce",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/marketing",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/media",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/monitoring",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/other",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/payments-finance",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/productivity",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/search",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/security",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/storage",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/mcp/web-scraping",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/agent-workflows",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/databases",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/design",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/marketing",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/mobile",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/nextjs",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/react",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
+    },
+    {
+      "anchor": "https://riseofmachine.com/skills/testing",
+      "service-doc": [{ "href": "https://riseofmachine.com/llms.txt", "type": "text/plain" }],
+      "type": [{ "href": "https://schema.org/ItemList" }]
     }
   ]
 }
