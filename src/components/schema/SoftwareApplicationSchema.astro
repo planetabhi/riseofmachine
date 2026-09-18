@@ -53,8 +53,36 @@ const getCategoryMapping = (toolCategory?: string): string => {
         // Health & Wellness
         health: "HealthApplication",
 
+        // Skills vertical topics
+        "agent-workflows": "DeveloperApplication",
+        databases: "DeveloperApplication",
+        react: "DeveloperApplication",
+        nextjs: "DeveloperApplication",
+        testing: "DeveloperApplication",
+        mobile: "DeveloperApplication",
+        marketing: "BusinessApplication",
+
+        // MCP vertical categories
+        "ai-llm": "DeveloperApplication",
+        automation: "BusinessApplication",
+        "cloud-devops": "DeveloperApplication",
+        communication: "CommunicationApplication",
+        "crm-sales": "BusinessApplication",
+        "data-analytics": "BusinessApplication",
+        "dev-tools": "DeveloperApplication",
+        "docs-knowledge": "BusinessApplication",
+        ecommerce: "BusinessApplication",
+        media: "MultimediaApplication",
+        monitoring: "DeveloperApplication",
+        "payments-finance": "FinanceApplication",
+        search: "BusinessApplication",
+        security: "SecurityApplication",
+        storage: "BusinessApplication",
+        "web-scraping": "DeveloperApplication",
+
         // Miscellaneous
         xtras: "BusinessApplication",
+        other: "BusinessApplication",
     };
 
     if (!toolCategory) return "BusinessApplication";

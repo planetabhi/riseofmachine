@@ -30,6 +30,7 @@ const categoryTitle = index[category]?.title ?? category;
 const canonicalUrl = `https://riseofmachine.com/mcp/servers/${server.slug}`;
 
 const breadcrumbs = [
+    { name: 'Home', url: 'https://riseofmachine.com' },
     { name: 'MCP Servers', url: 'https://riseofmachine.com/mcp' },
     { name: categoryTitle, url: `https://riseofmachine.com/mcp/${category}` },
     { name: server.title },
@@ -48,7 +49,8 @@ const breadcrumbs = [
     ogUrl={canonicalUrl}
     ogType="website"
     ogSiteName="Rise of Machine"
-    twitterCard="summary"
+    twitterTitle={`${server.title} — MCP Server`}
+    twitterDescription={server.description}
     showSearch={true}
     showHero={true}
     searchPlaceholder={`Search ${categoryTitle} servers...`}

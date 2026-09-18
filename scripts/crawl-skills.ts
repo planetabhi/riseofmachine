@@ -20,10 +20,13 @@ import { fileURLToPath } from 'url';
 import { execFile } from 'child_process';
 import { parse } from 'node-html-parser';
 import type { SkillsData, Skill } from '../src/types/skills.ts';
+import { classifySkill } from '../src/utils/skills/classify.ts';
+import { DEFAULT_SKILL_CATEGORY } from '../src/utils/skills/taxonomy.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_PATH = path.join(__dirname, '../src/data/skills.json');
+const SEEDS_PATH = path.join(__dirname, 'skills-seeds.json');
 
 const BASE = 'https://www.skills.sh';
 const TOPIC_INDEX = `${BASE}/topic`;
@@ -40,6 +43,38 @@ const RESERVED = new Set(['topic', 'search', 'api', 'internal', 'debug-security'
 // the CLI (execFile args aren't shell-interpreted, but this keeps data clean).
 const SEG = /^[A-Za-z0-9._-]+$/;
 const ALLOWED_HOSTS = new Set(['www.skills.sh', 'skills.sh']);
+
+// Extra GitHub repos to include beyond skills.sh discovery. These have no topic,
+// so their skills are categorized by the offline classifier (with the seed's
+// `categories` as a fallback). Shape: { repo, categories?, include?, exclude? }.
+interface Seed {
+    repo: string;
+    categories?: string[];
+    include?: string[]; // only these slugs
+    exclude?: string[]; // never these slugs
+}
+
+const REPO_RE = /^[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+$/;
+
+function readSeeds(): Seed[] {
+    let raw: unknown;
+    try {
+        raw = JSON.parse(fs.readFileSync(SEEDS_PATH, 'utf-8'));
+    } catch {
+        return [];
+    }
+    if (!Array.isArray(raw)) return [];
+    const strings = (v: unknown): string[] | undefined =>
+        Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : undefined;
+    return raw
+        .filter((s): s is Seed => !!s && typeof (s as Seed).repo === 'string' && REPO_RE.test((s as Seed).repo))
+        .map((s) => ({
+            repo: s.repo,
+            categories: strings(s.categories),
+            include: strings(s.include),
+            exclude: strings(s.exclude),
+        }));
+}
 
 function readPrev(): SkillsData | null {
     try {
@@ -184,12 +219,35 @@ function runList(source: string): Promise<Map<string, string>> {
     });
 }
 
+function makeSkill(source: string, slug: string, description: string, categories: string[], url: string): Skill {
+    return {
+        slug,
+        source,
+        description,
+        url,
+        installCommand: `npx skills add https://github.com/${source} --skill ${slug}`,
+        categories,
+    };
+}
+
+// Categories for a seed-repo skill: classifier match, else the seed's declared
+// categories, else the global default.
+function seedCategories(slug: string, description: string, seed: Seed): string[] {
+    const matched = classifySkill(slug, description);
+    if (matched.length) return matched;
+    if (seed.categories && seed.categories.length) return seed.categories;
+    return [DEFAULT_SKILL_CATEGORY];
+}
+
 function build(
     tuples: { source: string; slug: string; topic: string }[],
     metaBySource: Map<string, Map<string, string>>,
+    seeds: Seed[],
 ): Skill[] {
     // Dedupe on source+slug, first-seen order, unioning categories.
     const bySlug = new Map<string, Skill>();
+
+    // 1. skills.sh-discovered skills — categories come from the topic pages.
     for (const { source, slug, topic } of tuples) {
         const key = `${source}/${slug}`;
         const existing = bySlug.get(key);
@@ -200,39 +258,52 @@ function build(
         // Keep only slugs the CLI confirmed for this repo.
         const desc = metaBySource.get(source)?.get(slug);
         if (desc === undefined) continue;
-        bySlug.set(key, {
-            slug,
-            source,
-            description: desc,
-            url: `${BASE}/${source}/${slug}`,
-            installCommand: `npx skills add https://github.com/${source} --skill ${slug}`,
-            categories: [topic],
-        });
+        bySlug.set(key, makeSkill(source, slug, desc, [topic], `${BASE}/${source}/${slug}`));
     }
+
+    // 2. Seed repos — every CLI-listed slug, categorized by the classifier.
+    for (const seed of seeds) {
+        const listed = metaBySource.get(seed.repo);
+        if (!listed) continue;
+        for (const [slug, desc] of listed) {
+            if (seed.include && !seed.include.includes(slug)) continue;
+            if (seed.exclude && seed.exclude.includes(slug)) continue;
+            const cats = seedCategories(slug, desc, seed);
+            const key = `${seed.repo}/${slug}`;
+            const existing = bySlug.get(key);
+            if (existing) {
+                for (const c of cats) if (!existing.categories.includes(c)) existing.categories.push(c);
+                continue;
+            }
+            bySlug.set(key, makeSkill(seed.repo, slug, desc, cats, `https://github.com/${seed.repo}`));
+        }
+    }
+
     return [...bySlug.values()].sort((a, b) => a.slug.localeCompare(b.slug));
 }
 
 async function main(): Promise<void> {
     const prev = readPrev();
+    const seeds = readSeeds();
     let tuples: { source: string; slug: string; topic: string }[] = [];
     try {
         tuples = await scrapeTopics();
     } catch (e) {
         warn(e);
     }
-    if (tuples.length === 0) {
-        warn('phase 1 yielded no listings — keeping the last-good skills.json (fail-soft).');
+    if (tuples.length === 0 && seeds.length === 0) {
+        warn('phase 1 yielded no listings and no seeds — keeping the last-good skills.json (fail-soft).');
         process.exit(0);
     }
 
-    const sources = [...new Set(tuples.map((t) => t.source))];
-    console.log(`🔎 Phase 2: ${sources.length} unique repos via \`skills add … --list\``);
+    const sources = [...new Set([...tuples.map((t) => t.source), ...seeds.map((s) => s.repo)])];
+    console.log(`🔎 Phase 2: ${sources.length} unique repos via \`skills add … --list\` (${seeds.length} seeded)`);
     const metaBySource = new Map<string, Map<string, string>>();
     for (const source of sources) {
         metaBySource.set(source, await runList(source));
     }
 
-    const skills = build(tuples, metaBySource);
+    const skills = build(tuples, metaBySource, seeds);
     if (skills.length === 0) {
         warn('no skills resolved after CLI join — keeping the last-good skills.json (fail-soft).');
         process.exit(0);

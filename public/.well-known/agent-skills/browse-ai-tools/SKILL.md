@@ -38,6 +38,16 @@ GET https://riseofmachine.com/{category}
 
 Example: https://riseofmachine.com/code
 
+### Other verticals
+
+Beyond AI tools, Rise of Machine also publishes two sibling directories,
+both listed in `llms.txt` and enumerated in the API catalog:
+
+- **MCP Servers** — Model Context Protocol servers from the official
+  registry, grouped by category: `GET https://riseofmachine.com/mcp`
+- **Agent Skills** — agent skills for coding agents from skills.sh, grouped
+  by topic: `GET https://riseofmachine.com/skills`
+
 ### API Catalog
 
 Discover all endpoints via the RFC 9727 API catalog:

@@ -27,5 +27,46 @@
 - [Video](https://riseofmachine.com/video)
 - [Xtras](https://riseofmachine.com/xtras)
 
+## MCP Servers
+
+Model Context Protocol servers from the official registry, grouped by category.
+
+- [All MCP Servers](https://riseofmachine.com/mcp)
+- [Databases](https://riseofmachine.com/mcp/databases)
+- [Dev Tools](https://riseofmachine.com/mcp/dev-tools)
+- [Cloud & DevOps](https://riseofmachine.com/mcp/cloud-devops)
+- [AI & LLM](https://riseofmachine.com/mcp/ai-llm)
+- [Search](https://riseofmachine.com/mcp/search)
+- [Payments & Finance](https://riseofmachine.com/mcp/payments-finance)
+- [Communication](https://riseofmachine.com/mcp/communication)
+- [CRM & Sales](https://riseofmachine.com/mcp/crm-sales)
+- [Productivity](https://riseofmachine.com/mcp/productivity)
+- [Data & Analytics](https://riseofmachine.com/mcp/data-analytics)
+- [Monitoring](https://riseofmachine.com/mcp/monitoring)
+- [Security](https://riseofmachine.com/mcp/security)
+- [Storage](https://riseofmachine.com/mcp/storage)
+- [E-commerce](https://riseofmachine.com/mcp/ecommerce)
+- [Marketing](https://riseofmachine.com/mcp/marketing)
+- [Design](https://riseofmachine.com/mcp/design)
+- [Media](https://riseofmachine.com/mcp/media)
+- [Web Scraping](https://riseofmachine.com/mcp/web-scraping)
+- [Automation](https://riseofmachine.com/mcp/automation)
+- [Docs & Knowledge](https://riseofmachine.com/mcp/docs-knowledge)
+- [Other](https://riseofmachine.com/mcp/other)
+
+## Agent Skills
+
+Agent skills for coding agents from skills.sh, grouped by topic.
+
+- [All Agent Skills](https://riseofmachine.com/skills)
+- [Agent workflows](https://riseofmachine.com/skills/agent-workflows)
+- [Design](https://riseofmachine.com/skills/design)
+- [Marketing](https://riseofmachine.com/skills/marketing)
+- [Databases](https://riseofmachine.com/skills/databases)
+- [React](https://riseofmachine.com/skills/react)
+- [Next.js](https://riseofmachine.com/skills/nextjs)
+- [Testing](https://riseofmachine.com/skills/testing)
+- [Mobile](https://riseofmachine.com/skills/mobile)
+
 
 

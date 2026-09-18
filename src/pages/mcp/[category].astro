@@ -27,6 +27,7 @@ const servers = data.servers.filter((s) => s.category === category);
 
 const schemaItems = servers.slice(0, 50).map((s) => ({ title: s.title, body: s.description, url: s.url, slug: s.slug }));
 const breadcrumbs = [
+    { name: 'Home', url: 'https://riseofmachine.com' },
     { name: 'MCP Servers', url: 'https://riseofmachine.com/mcp' },
     { name: categoryTitle as string },
 ];

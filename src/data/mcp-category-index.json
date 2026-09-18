@@ -1,11 +1,11 @@
 {
   "databases": {
     "title": "Databases",
-    "count": 25
+    "count": 27
   },
   "dev-tools": {
     "title": "Dev Tools",
-    "count": 3095
+    "count": 3216
   },
   "cloud-devops": {
     "title": "Cloud & DevOps",
@@ -13,7 +13,7 @@
   },
   "ai-llm": {
     "title": "AI & LLM",
-    "count": 8
+    "count": 9
   },
   "search": {
     "title": "Search",
@@ -81,6 +81,6 @@
   },
   "other": {
     "title": "Other",
-    "count": 246
+    "count": 253
   }
 }

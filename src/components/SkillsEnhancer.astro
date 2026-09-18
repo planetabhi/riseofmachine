@@ -7,7 +7,7 @@
 ---
 
 <script>
-    type Rec = { s: string; src: string; b: string; c: string; ic: string; u: string };
+    type Rec = { s: string; src: string; b: string; cs: string[]; ic: string; u: string };
 
     const PAGE = 48;
 
@@ -18,7 +18,6 @@
     let view: Rec[] = []; // scoped + search
     let rendered = 0;
     let io: IntersectionObserver | null = null;
-    let catTitles: Record<string, string> = {};
     let query = '';
 
     const gridEl = () => document.querySelector<HTMLElement>('[data-skills-grid]');
@@ -58,21 +57,6 @@
         return p;
     }
 
-    // Category slug -> title, read from the sidebar (zero extra fetch).
-    function buildCatMap() {
-        catTitles = {};
-        document.querySelectorAll<HTMLAnchorElement>('#app-sidebar .sidebar-nav a').forEach((a) => {
-            try {
-                const slug = new URL(a.href).pathname
-                    .replace(/^\/skills\//, '')
-                    .replace(/^\//, '')
-                    .replace(/\/$/, '');
-                const label = a.querySelector('.sidebar-item-label')?.textContent?.trim();
-                if (slug && label) catTitles[slug] = label;
-            } catch {}
-        });
-    }
-
     function matches(r: Rec): boolean {
         if (query.length >= 2) {
             const hay = `${r.s} ${r.b} ${r.src}`.toLowerCase();
@@ -82,12 +66,12 @@
     }
 
     function cardEl(r: Rec): HTMLLIElement {
-        const catTitle = catTitles[r.c] ?? r.c;
+        const primary = r.cs[0] ?? '';
 
         const li = document.createElement('li');
         li.className = 'link-card is-revealing';
         li.dataset.slug = r.s;
-        li.dataset.category = r.c;
+        li.dataset.category = primary;
 
         const a = document.createElement('a');
         a.href = `/skills/${r.src}/${r.s}`;
@@ -97,8 +81,7 @@
         a.dataset.url = r.u;
         a.dataset.slug = r.s;
         a.dataset.source = r.src;
-        a.dataset.category = r.c;
-        a.dataset.categoryTitle = catTitle;
+        a.dataset.category = primary;
         a.dataset.installCommand = r.ic;
 
         const strong = document.createElement('strong');
@@ -142,7 +125,7 @@
 
     function scope() {
         const cat = pageCategory();
-        scoped = cat ? records.filter((r) => r.c === cat) : records;
+        scoped = cat ? records.filter((r) => r.cs.includes(cat)) : records;
     }
 
     function setupObserver() {
@@ -183,7 +166,6 @@
     async function init() {
         if (!gridEl()) return;
         query = '';
-        buildCatMap();
         readUrl();
         records = await loadRecords(indexUrl());
         if (!gridEl()) return; // navigated away while loading

@@ -21,24 +21,18 @@ const SHARD_DIR = path.join(__dirname, '../public/skills-cat');
 interface LiteRecord {
     s: string; // slug
     src: string; // source (owner/repo)
-    b: string; // description
-    c: string; // primary category slug (categories[0])
+    b: string; // full description (cards clamp visually via CSS; the panel shows all)
+    cs: string[]; // every topic the skill belongs to; cs[0] is primary
     ic: string; // install command (primary CTA)
     u: string; // canonical url
-}
-
-// Clamp descriptions for the listing payload; the panel only needs a summary.
-function clamp(text: string, max = 200): string {
-    const t = (text || '').trim();
-    return t.length <= max ? t : t.slice(0, max - 1).trimEnd() + '…';
 }
 
 function toLite(s: Skill): LiteRecord {
     return {
         s: s.slug,
         src: s.source,
-        b: clamp(s.description),
-        c: s.categories[0] ?? '',
+        b: (s.description || '').trim(),
+        cs: s.categories,
         ic: s.installCommand,
         u: s.url,
     };
