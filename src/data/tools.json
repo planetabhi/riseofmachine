@@ -6334,6 +6334,13 @@
           "slug": "sara-interviewer"
         },
         {
+          "title": "Screenpipe",
+          "body": "AI recall from screen and audio.",
+          "url": "https://screenpipe.com?ref=riseofmachine.com",
+          "date-added": "2026-09-21",
+          "slug": "screenpipe"
+        },
+        {
           "title": "Semantic Email",
           "body": "AI extracts data from emails to fill Google Forms.",
           "tag": "Freemium",
