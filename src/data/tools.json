@@ -4047,6 +4047,14 @@
           "slug": "archetype"
         },
         {
+          "title": "ArtificialWatch",
+          "body": "Alerts when new AI models launch.",
+          "tag": "Freemium",
+          "url": "https://artificialwatch.com/?ref=riseofmachine.com",
+          "date-added": "2026-09-24",
+          "slug": "artificialwatch"
+        },
+        {
           "title": "Character",
           "body": "Next generation conversational AI.",
           "tag": "Freemium",
