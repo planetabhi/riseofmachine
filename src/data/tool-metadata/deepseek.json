@@ -7,13 +7,13 @@
   "date-added": "2025-06-14",
   "slug": "deepseek",
   "related": [
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "agents-by-athena",
     "character",
-    "flowpoint",
-    "resolveai"
+    "flowpoint"
   ]
 }

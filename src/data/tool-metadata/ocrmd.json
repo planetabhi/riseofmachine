@@ -8,12 +8,12 @@
   "slug": "ocrmd",
   "related": [
     "mindmap-extension",
+    "screenpipe",
     "orkas",
     "onetwo-resume",
     "converge-ai",
     "remio",
     "bookletai",
-    "uniquenamesnet",
-    "dashform"
+    "uniquenamesnet"
   ]
 }

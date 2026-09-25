@@ -10,10 +10,10 @@
     "image-to-image",
     "image-text-editor",
     "muapi",
-    "photo-editor",
     "graficai",
     "fotol-image-generator",
     "promptwall",
-    "magnific"
+    "magnific",
+    "ai-image-combiner"
   ]
 }

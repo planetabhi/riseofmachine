@@ -8,12 +8,12 @@
   "slug": "sid",
   "related": [
     "ferryapi",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "chatgpt",
     "deepseek",
     "agents-by-athena",
-    "character",
-    "flowpoint"
+    "character"
   ]
 }

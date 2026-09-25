@@ -1,7 +1,7 @@
 {
   "art": {
     "title": "Art",
-    "count": 95
+    "count": 94
   },
   "audio": {
     "title": "Audio",
@@ -45,7 +45,7 @@
   },
   "llm": {
     "title": "LLMs",
-    "count": 41
+    "count": 42
   },
   "legal": {
     "title": "Legal",
@@ -57,15 +57,15 @@
   },
   "nocode": {
     "title": "No Code",
-    "count": 24
+    "count": 25
   },
   "photos": {
     "title": "Photos",
-    "count": 97
+    "count": 96
   },
   "productivity": {
     "title": "Productivity",
-    "count": 111
+    "count": 112
   },
   "prompts": {
     "title": "Prompts",
@@ -73,11 +73,11 @@
   },
   "research": {
     "title": "Research",
-    "count": 25
+    "count": 26
   },
   "seo": {
     "title": "SEO",
-    "count": 21
+    "count": 22
   },
   "social": {
     "title": "Social Media",
@@ -85,10 +85,10 @@
   },
   "video": {
     "title": "Video",
-    "count": 117
+    "count": 118
   },
   "xtras": {
     "title": "Xtras",
-    "count": 71
+    "count": 70
   }
 }

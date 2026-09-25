@@ -1,0 +1,19 @@
+{
+  "title": "Jev Social — social research in your real browser",
+  "description": "Jev chooses bounded socai CLI operations for Instagram, TikTok, and LinkedIn, streams captured evidence, and produces cited reports in a local browser UI.",
+  "category": "research",
+  "url": "https://socai-io.github.io/jev-social/?ref=riseofmachine.com",
+  "tag": "Open-source",
+  "date-added": "2026-09-24",
+  "slug": "jev-social",
+  "related": [
+    "research",
+    "osum",
+    "papers",
+    "merlin",
+    "gaabstract",
+    "resea-ai",
+    "capgo-ai",
+    "consensus"
+  ]
+}

@@ -227,9 +227,6 @@
   "ptool": [
     "art"
   ],
-  "rabbit-road": [
-    "art"
-  ],
   "rundiffusion": [
     "art"
   ],
@@ -1490,6 +1487,9 @@
   "archetype": [
     "llm"
   ],
+  "artificialwatch": [
+    "llm"
+  ],
   "character": [
     "llm"
   ],
@@ -1748,6 +1748,9 @@
   "imagica": [
     "nocode"
   ],
+  "kleap": [
+    "nocode"
+  ],
   "lindo": [
     "nocode"
   ],
@@ -1998,9 +2001,6 @@
     "photos"
   ],
   "photo": [
-    "photos"
-  ],
-  "photo-editor": [
     "photos"
   ],
   "photo-style": [
@@ -2336,6 +2336,9 @@
   "sara-interviewer": [
     "productivity"
   ],
+  "screenpipe": [
+    "productivity"
+  ],
   "semantic-email": [
     "productivity"
   ],
@@ -2507,6 +2510,9 @@
   "isaac": [
     "research"
   ],
+  "jev-social": [
+    "research"
+  ],
   "julius-ai": [
     "research"
   ],
@@ -2589,6 +2595,9 @@
     "seo"
   ],
   "rankyak": [
+    "seo"
+  ],
+  "robot-speed": [
     "seo"
   ],
   "scribli": [
@@ -2945,6 +2954,9 @@
   "shorts-generator": [
     "video"
   ],
+  "shortshort": [
+    "video"
+  ],
   "soda-video-ai": [
     "video"
   ],
@@ -3096,9 +3108,6 @@
     "xtras"
   ],
   "destiny-matrix": [
-    "xtras"
-  ],
-  "elements-by-vercel": [
     "xtras"
   ],
   "finder-plus": [

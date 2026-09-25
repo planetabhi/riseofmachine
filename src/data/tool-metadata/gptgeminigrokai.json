@@ -7,13 +7,13 @@
   "date-added": "2026-07-31",
   "slug": "gptgeminigrokai",
   "related": [
+    "artificialwatch",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
     "agents-by-athena",
     "character",
-    "flowpoint",
-    "resolveai"
+    "flowpoint"
   ]
 }

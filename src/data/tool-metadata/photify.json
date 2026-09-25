@@ -8,12 +8,12 @@
   "slug": "photify",
   "related": [
     "photo",
-    "photo-editor",
     "photoleap",
     "cozaiphoto",
     "headshot-photo",
     "hama",
     "add-person-to-photo",
-    "fast-image-ai-1"
+    "fast-image-ai-1",
+    "image-text-editor"
   ]
 }

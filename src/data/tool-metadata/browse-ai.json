@@ -9,11 +9,11 @@
   "related": [
     "buildai",
     "vectorize-ai",
+    "kleap",
     "make-song-ai",
     "song-lyrics-review",
     "unideck-beta",
     "akkio",
-    "makeform",
-    "create"
+    "makeform"
   ]
 }

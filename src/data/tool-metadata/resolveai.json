@@ -7,13 +7,13 @@
   "date-added": "2025-06-06",
   "slug": "resolveai",
   "related": [
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
     "agents-by-athena",
-    "character",
-    "flowpoint"
+    "character"
   ]
 }

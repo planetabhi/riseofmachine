@@ -12,8 +12,8 @@
     "stack",
     "akkio",
     "unideck-beta",
+    "kleap",
     "make-song-ai",
-    "song-lyrics-review",
-    "browse-ai"
+    "song-lyrics-review"
   ]
 }

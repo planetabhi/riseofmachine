@@ -8,12 +8,12 @@
   "slug": "photo",
   "related": [
     "flux-ai-online",
-    "photo-editor",
     "bulk-image-generator",
     "fotol-image-generator",
     "image-optimizer",
     "photify",
     "photoleap",
-    "cozaiphoto"
+    "cozaiphoto",
+    "food-generator"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "title": "shortshort: AI clip maker that cuts long videos into shorts",
+  "description": "AI clip maker for long videos: turn a long talk or podcast into 9:16 shorts that end on a full sentence, follow the face and caption every word.",
+  "category": "video",
+  "url": "https://www.shortshort.io?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-09-23",
+  "slug": "shortshort",
+  "related": [
+    "shorts-generator",
+    "hoox",
+    "supermaker",
+    "genmo",
+    "vidmix",
+    "qudemo",
+    "lyric-video-studio",
+    "vmeg-clips-to-videos"
+  ]
+}

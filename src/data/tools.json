@@ -613,14 +613,6 @@
           "slug": "ptool"
         },
         {
-          "title": "Rabbit Road",
-          "body": "AI art generation tool.",
-          "tag": "Freemium",
-          "url": "https://rabbitroad.art/?ref=riseofmachine.com",
-          "date-added": "2025-10-11",
-          "slug": "rabbit-road"
-        },
-        {
           "title": "RunDiffusion",
           "body": "Stable diffusion in the cloud.",
           "tag": "From $0.50/hr",
@@ -5448,14 +5440,6 @@
           "slug": "photo"
         },
         {
-          "title": "Photo Editor",
-          "body": "AI-powered photo editing tools.",
-          "tag": "Freemium",
-          "url": "https://www.aiphotoeditor.space/?ref=riseofmachine.com",
-          "date-added": "2025-10-03",
-          "slug": "photo-editor"
-        },
-        {
           "title": "Photo Style",
           "body": "Turn photos into cartoons, anime, sketches, and more.",
           "tag": "Freemium",
@@ -6352,6 +6336,7 @@
         {
           "title": "Screenpipe",
           "body": "AI recall from screen and audio.",
+          "tag": "Freemium",
           "url": "https://screenpipe.com?ref=riseofmachine.com",
           "date-added": "2026-09-21",
           "slug": "screenpipe"
@@ -8447,14 +8432,6 @@
           "url": "https://matrix-destiny.net/?ref=riseofmachine.com",
           "date-added": "2026-03-19",
           "slug": "destiny-matrix"
-        },
-        {
-          "title": "Elements by Vercel",
-          "body": "A component library for building AI-native apps.",
-          "tag": "Open-source",
-          "url": "https://vercel.com/ai-elements?ref=riseofmachine.com",
-          "date-added": "2025-08-25",
-          "slug": "elements-by-vercel"
         },
         {
           "title": "Finder Plus",

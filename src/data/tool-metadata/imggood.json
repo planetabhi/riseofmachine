@@ -7,13 +7,13 @@
   "date-added": "2025-06-29",
   "slug": "imggood",
   "related": [
-    "photo-editor",
     "remove-background-by-picsart",
     "image-text-editor",
     "pixelfox-objects-remover",
     "photoleap",
     "hama",
     "photoroom",
-    "imagine2"
+    "imagine2",
+    "blur-background"
   ]
 }

@@ -12,8 +12,8 @@
     "imagica",
     "stack",
     "akkio",
+    "kleap",
     "make-song-ai",
-    "song-lyrics-review",
-    "browse-ai"
+    "song-lyrics-review"
   ]
 }

@@ -12,8 +12,8 @@
     "replicate",
     "ai-agents-list",
     "ai-agents-live",
+    "artificialwatch",
     "gptgeminigrokai",
-    "coderplan",
-    "ferryapi"
+    "coderplan"
   ]
 }

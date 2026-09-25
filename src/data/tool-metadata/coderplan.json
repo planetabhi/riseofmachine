@@ -7,13 +7,13 @@
   "date-added": "2026-06-06",
   "slug": "coderplan",
   "related": [
+    "artificialwatch",
     "gptgeminigrokai",
     "ferryapi",
     "chatgpt",
     "deepseek",
     "agents-by-athena",
     "character",
-    "flowpoint",
-    "resolveai"
+    "flowpoint"
   ]
 }

@@ -11,9 +11,9 @@
     "sid",
     "langfuse",
     "llamaindex",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
-    "ferryapi",
-    "muse-spark-ai"
+    "ferryapi"
   ]
 }

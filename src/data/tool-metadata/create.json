@@ -8,12 +8,12 @@
   "slug": "create",
   "related": [
     "makeform",
+    "kleap",
     "make-song-ai",
     "song-lyrics-review",
     "unideck-beta",
     "akkio",
     "browse-ai",
-    "vectorize-ai",
-    "chaindesk"
+    "vectorize-ai"
   ]
 }
