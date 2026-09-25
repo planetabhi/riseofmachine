@@ -7,13 +7,13 @@
   "date-added": "2023-12-15",
   "slug": "hama",
   "related": [
-    "photo-editor",
     "photoleap",
     "add-person-to-photo",
     "image-text-editor",
     "picsart",
     "pixelfox-objects-remover",
     "magic-eraser",
-    "clipdrop"
+    "clipdrop",
+    "ai-magic-eraser"
   ]
 }

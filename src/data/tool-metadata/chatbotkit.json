@@ -8,12 +8,12 @@
   "slug": "chatbotkit",
   "related": [
     "character",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
-    "agents-by-athena",
-    "flowpoint"
+    "agents-by-athena"
   ]
 }

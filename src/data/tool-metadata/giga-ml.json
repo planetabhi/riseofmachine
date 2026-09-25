@@ -12,8 +12,8 @@
     "helicone",
     "langfuse",
     "litellm",
+    "artificialwatch",
     "gptgeminigrokai",
-    "coderplan",
-    "ferryapi"
+    "coderplan"
   ]
 }

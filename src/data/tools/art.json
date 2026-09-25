@@ -608,14 +608,6 @@
     "slug": "ptool"
   },
   {
-    "title": "Rabbit Road",
-    "body": "AI art generation tool.",
-    "tag": "Freemium",
-    "url": "https://rabbitroad.art/?ref=riseofmachine.com",
-    "date-added": "2025-10-11",
-    "slug": "rabbit-road"
-  },
-  {
     "title": "RunDiffusion",
     "body": "Stable diffusion in the cloud.",
     "tag": "From $0.50/hr",

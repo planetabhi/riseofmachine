@@ -8,12 +8,12 @@
   "slug": "sarvam",
   "related": [
     "modal",
+    "artificialwatch",
     "replicate",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "muse-spark-ai",
-    "deepseekv4dev",
-    "chatgpt"
+    "deepseekv4dev"
   ]
 }

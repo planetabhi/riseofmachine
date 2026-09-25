@@ -7,13 +7,13 @@
   "date-added": "2024-10-23",
   "slug": "gpt4o",
   "related": [
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
     "agents-by-athena",
-    "character",
-    "flowpoint"
+    "character"
   ]
 }

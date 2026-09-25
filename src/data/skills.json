@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T22:20:07.653Z",
+  "generatedAt": "2026-09-25T20:45:14.578Z",
   "skills": [
     {
       "slug": "ad-creative",
@@ -174,7 +174,7 @@
     {
       "slug": "executing-plans",
       "source": "obra/superpowers",
-      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "description": "Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available",
       "url": "https://www.skills.sh/obra/superpowers/executing-plans",
       "installCommand": "npx skills add https://github.com/obra/superpowers --skill executing-plans",
       "categories": [
@@ -540,7 +540,7 @@
     {
       "slug": "turborepo",
       "source": "vercel/turborepo",
-      "description": "Turborepo monorepo build system guidance. Triggers on: turbo.json, task pipelines, dependsOn, caching, remote cache, the \"turbo\" CLI, --filter, --affected, CI optimization, environment variables, internal packages, monorepo structure/best practices, and boundaries. Use when user: configures tasks/workflows/pipelines, creates packages, sets up monorepo, shares code between apps, runs changed/affected packages, debugs cache, or has apps/packages directories.",
+      "description": "Configure and troubleshoot Turborepo repositories. Use when working with turbo.json, task pipelines, caching, Remote Cache, the turbo CLI, filtering, environment variables, package boundaries, monorepo structure, or CI workflows.",
       "url": "https://www.skills.sh/vercel/turborepo/turborepo",
       "installCommand": "npx skills add https://github.com/vercel/turborepo --skill turborepo",
       "categories": [

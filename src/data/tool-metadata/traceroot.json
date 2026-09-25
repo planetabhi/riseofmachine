@@ -8,12 +8,12 @@
   "slug": "traceroot",
   "related": [
     "onlook-for-web",
-    "elements-by-vercel",
     "deepseek-v31",
     "omnara",
     "palmscanner-ai",
     "vedic-astrology-chart",
     "mee-manga-translator",
-    "astrocartography"
+    "astrocartography",
+    "manga-translator"
   ]
 }

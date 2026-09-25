@@ -7,13 +7,13 @@
   "date-added": "2025-06-03",
   "slug": "offlinechat",
   "related": [
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "muse-spark-ai",
     "deepseekv4dev",
     "chatgpt",
-    "deepseek",
-    "gemini"
+    "deepseek"
   ]
 }

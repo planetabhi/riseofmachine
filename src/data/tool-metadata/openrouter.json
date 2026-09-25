@@ -9,11 +9,11 @@
   "related": [
     "coderplan",
     "llamaindex",
+    "artificialwatch",
     "gptgeminigrokai",
     "ferryapi",
     "muse-spark-ai",
     "deepseekv4dev",
-    "chatgpt",
-    "deepseek"
+    "chatgpt"
   ]
 }

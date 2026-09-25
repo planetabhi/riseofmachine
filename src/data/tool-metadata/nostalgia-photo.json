@@ -9,11 +9,11 @@
   "related": [
     "restore-photos",
     "photo",
-    "photo-editor",
     "photify",
     "photoleap",
     "cozaiphoto",
     "headshot-photo",
-    "hama"
+    "hama",
+    "add-person-to-photo"
   ]
 }

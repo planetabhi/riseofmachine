@@ -9,11 +9,11 @@
   "related": [
     "smarter-chatgpt-by-athena",
     "ferryapi",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "deepseek",
     "agents-by-athena",
-    "character",
-    "flowpoint"
+    "character"
   ]
 }

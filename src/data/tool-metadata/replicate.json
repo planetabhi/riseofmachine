@@ -9,11 +9,11 @@
   "related": [
     "modal",
     "run-llm",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
-    "deepseek",
-    "agents-by-athena"
+    "deepseek"
   ]
 }

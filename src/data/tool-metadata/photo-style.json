@@ -9,11 +9,11 @@
   "related": [
     "animegenai",
     "add-person-to-photo",
-    "photo-editor",
     "photoleap",
     "ghostface",
     "pebblely",
     "hama",
-    "fromimage-ai"
+    "fromimage-ai",
+    "ai-image-combiner"
   ]
 }

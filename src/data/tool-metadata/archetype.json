@@ -8,12 +8,12 @@
   "slug": "archetype",
   "related": [
     "gptgeminigrokai",
+    "artificialwatch",
     "coderplan",
     "ferryapi",
     "muse-spark-ai",
     "deepseekv4dev",
     "chatgpt",
-    "deepseek",
-    "gemini"
+    "deepseek"
   ]
 }

@@ -10,10 +10,10 @@
     "modal",
     "helicone",
     "replicate",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
-    "chatgpt",
-    "deepseek"
+    "chatgpt"
   ]
 }

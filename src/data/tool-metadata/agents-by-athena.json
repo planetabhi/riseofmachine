@@ -8,12 +8,12 @@
   "slug": "agents-by-athena",
   "related": [
     "flowpoint",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
-    "character",
-    "resolveai"
+    "character"
   ]
 }

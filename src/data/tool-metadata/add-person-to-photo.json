@@ -9,11 +9,11 @@
   "related": [
     "ghostface",
     "photo-style",
-    "photo-editor",
     "photoleap",
     "pebblely",
     "hama",
     "fromimage-ai",
-    "ai-image-combiner"
+    "ai-image-combiner",
+    "image-text-editor"
   ]
 }

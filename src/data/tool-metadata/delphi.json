@@ -7,13 +7,13 @@
   "date-added": "2023-12-26",
   "slug": "delphi",
   "related": [
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "muse-spark-ai",
     "deepseekv4dev",
     "chatgpt",
-    "deepseek",
-    "gemini"
+    "deepseek"
   ]
 }

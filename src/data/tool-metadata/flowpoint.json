@@ -8,12 +8,12 @@
   "slug": "flowpoint",
   "related": [
     "agents-by-athena",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
-    "character",
-    "resolveai"
+    "character"
   ]
 }

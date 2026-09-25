@@ -8,12 +8,12 @@
   "slug": "helicone",
   "related": [
     "run-llm",
+    "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "chatgpt",
     "deepseek",
-    "agents-by-athena",
-    "character"
+    "agents-by-athena"
   ]
 }

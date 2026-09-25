@@ -1,0 +1,19 @@
+{
+  "title": "AI model release tracker: know the minute a new model drops · ArtificialWatch",
+  "description": "ArtificialWatch sweeps provider APIs every 60 seconds and alerts you by email, push, SMS or phone call the minute a new AI model drops. A free AI model release tracker, with release dates and live odds for what's next.",
+  "category": "llm",
+  "url": "https://artificialwatch.com/?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-09-24",
+  "slug": "artificialwatch",
+  "related": [
+    "modal",
+    "replicate",
+    "gptgeminigrokai",
+    "coderplan",
+    "ferryapi",
+    "chatgpt",
+    "deepseek",
+    "agents-by-athena"
+  ]
+}
