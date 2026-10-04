@@ -8,12 +8,12 @@
   "slug": "wondercraft",
   "related": [
     "goose-pod",
+    "remove-audio",
     "audjust-ai",
     "cleanaudio-ai",
     "mp3-to-text",
     "monologue",
     "whisper",
-    "openwispr",
-    "aimakesong"
+    "openwispr"
   ]
 }

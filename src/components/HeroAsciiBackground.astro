@@ -1,0 +1,144 @@
+---
+---
+
+<div class="hero-ascii" aria-hidden="true">
+    <canvas class="hero-ascii-canvas" data-motes-quiet></canvas>
+    <div class="hero-ascii-fade"></div>
+</div>
+
+<script>
+    import { createMotes, DEFAULT_OPTIONS, type MotesInstance } from "@lucasmarkes/motes";
+
+    let field: MotesInstance | null = null;
+    let onVisibility: (() => void) | null = null;
+    let themeObserver: MutationObserver | null = null;
+    let probeCtx: CanvasRenderingContext2D | null = null;
+
+    // motes only accepts hex. Theme tokens are oklch, whose computed string is
+    // not rgb(), so resolve through a real sRGB pixel: let the cascade compute
+    // the colour, paint it, and read the bytes back.
+    function toHex(cssColor: string): string | null {
+        const probe = document.createElement("span");
+        probe.style.color = cssColor;
+        probe.style.display = "none";
+        document.body.appendChild(probe);
+        const resolved = getComputedStyle(probe).color;
+        probe.remove();
+        if (!resolved) return null;
+
+        if (!probeCtx) {
+            probeCtx = document.createElement("canvas").getContext("2d");
+        }
+        if (!probeCtx) return null;
+        probeCtx.fillStyle = "#000";
+        probeCtx.fillStyle = resolved;
+        probeCtx.fillRect(0, 0, 1, 1);
+        const [r, g, b] = probeCtx.getImageData(0, 0, 1, 1).data;
+        const hex = (n: number) => n.toString(16).padStart(2, "0");
+        return `#${hex(r!)}${hex(g!)}${hex(b!)}`;
+    }
+
+    function readToken(name: string, fallback: string): string {
+        const raw = getComputedStyle(document.documentElement)
+            .getPropertyValue(name)
+            .trim();
+        return (raw && toHex(`var(${name})`)) || fallback;
+    }
+
+    // Neutral theme tokens so the field reads as part of each theme.
+    function palette() {
+        return {
+            ink: readToken("--background-selected", DEFAULT_OPTIONS.ink),
+            accent: readToken("--content-secondary", DEFAULT_OPTIONS.accent),
+        };
+    }
+
+    function destroy() {
+        if (onVisibility) {
+            document.removeEventListener("visibilitychange", onVisibility);
+            onVisibility = null;
+        }
+        themeObserver?.disconnect();
+        themeObserver = null;
+        field?.destroy();
+        field = null;
+    }
+
+    function init() {
+        // astro:page-load fires on every navigation; never stack two fields.
+        destroy();
+
+        const canvas = document.querySelector<HTMLCanvasElement>(
+            ".hero-ascii-canvas",
+        );
+        if (!canvas) return;
+
+        try {
+            field = createMotes(canvas, {
+                effect: "ripples",
+                pointer: true,
+                background: "transparent",
+                ...palette(),
+                density: 14,
+                trail: 0.3,
+            });
+        } catch {
+            // No WebGL2 (or context creation failed): leave the band empty.
+            return;
+        }
+
+        if (document.hidden) {
+            field.stop();
+        } else {
+            field.start();
+        }
+
+        onVisibility = () => {
+            if (!field) return;
+            if (document.hidden) field.stop();
+            else field.start();
+        };
+        document.addEventListener("visibilitychange", onVisibility);
+
+        // Re-resolve colours when the active theme changes.
+        themeObserver = new MutationObserver(() => field?.set(palette()));
+        themeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-new-ui-theme"],
+        });
+    }
+
+    document.addEventListener("astro:page-load", init);
+    document.addEventListener("astro:before-swap", destroy);
+</script>
+
+<style>
+    .hero-ascii {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    /* A <canvas> has an intrinsic 300x150 size; pinning alone will not stretch
+       it, so the box must be sized explicitly. */
+    .hero-ascii-canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Fade the bottom into the surface colour so the field never cuts off
+       abruptly. Uses the container background token to stay theme-correct. */
+    .hero-ascii-fade {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+            to bottom,
+            transparent 45%,
+            var(--background-high-contrast) 100%
+        );
+    }
+</style>

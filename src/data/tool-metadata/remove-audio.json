@@ -1,0 +1,19 @@
+{
+  "title": "Remove Audio",
+  "description": "Removes background noise from recordings.",
+  "category": "audio",
+  "url": "https://remove-audio.com/tools/remove-background-noise?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-10-04",
+  "slug": "remove-audio",
+  "related": [
+    "cleanaudio-ai",
+    "audjust-ai",
+    "audio-muse",
+    "mix-audio",
+    "trint",
+    "sync",
+    "wellsaid-labs",
+    "mp3-to-text"
+  ]
+}

@@ -7,13 +7,13 @@
   "date-added": "2025-06-06",
   "slug": "descript",
   "related": [
+    "remove-audio",
     "audjust-ai",
     "cleanaudio-ai",
     "mp3-to-text",
     "goose-pod",
     "monologue",
     "whisper",
-    "openwispr",
-    "aimakesong"
+    "openwispr"
   ]
 }

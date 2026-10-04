@@ -9,11 +9,11 @@
   "related": [
     "speechlab",
     "trint",
+    "remove-audio",
     "audjust-ai",
     "cleanaudio-ai",
     "mp3-to-text",
     "goose-pod",
-    "monologue",
-    "whisper"
+    "monologue"
   ]
 }

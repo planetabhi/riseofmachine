@@ -11,9 +11,9 @@
     "audjust-ai",
     "lami",
     "cleanaudio-ai",
+    "remove-audio",
     "trint",
     "sync",
-    "wellsaid-labs",
-    "mp3-to-text"
+    "wellsaid-labs"
   ]
 }

@@ -371,6 +371,9 @@
   "podcastle": [
     "audio"
   ],
+  "remove-audio": [
+    "audio"
+  ],
   "respeecher": [
     "audio"
   ],
@@ -2504,6 +2507,9 @@
   "heronai": [
     "research"
   ],
+  "ipulse-ai": [
+    "research"
+  ],
   "isaac": [
     "research"
   ],
@@ -2574,6 +2580,9 @@
     "seo"
   ],
   "keywordsearch": [
+    "seo"
+  ],
+  "lognorm": [
     "seo"
   ],
   "meroid": [

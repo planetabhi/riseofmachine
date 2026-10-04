@@ -13,7 +13,7 @@
     "audio-muse",
     "mix-audio",
     "blogaudio",
-    "trint",
-    "sync"
+    "remove-audio",
+    "trint"
   ]
 }
