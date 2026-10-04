@@ -8,12 +8,12 @@
   "slug": "speechlab",
   "related": [
     "dubbing-30",
+    "remove-audio",
     "audjust-ai",
     "cleanaudio-ai",
     "mp3-to-text",
     "goose-pod",
     "monologue",
-    "whisper",
-    "openwispr"
+    "whisper"
   ]
 }

@@ -12,8 +12,8 @@
     "cleanaudio-ai",
     "audio-muse",
     "mix-audio",
+    "remove-audio",
     "wellsaid-labs",
-    "mp3-to-text",
-    "goose-pod"
+    "mp3-to-text"
   ]
 }

@@ -10,10 +10,10 @@
     "cleanaudio-ai",
     "audio-muse",
     "mix-audio",
+    "remove-audio",
     "trint",
     "sync",
     "wellsaid-labs",
-    "mp3-to-text",
-    "goose-pod"
+    "mp3-to-text"
   ]
 }

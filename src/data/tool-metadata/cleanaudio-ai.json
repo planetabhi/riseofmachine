@@ -7,13 +7,13 @@
   "date-added": "2026-03-19",
   "slug": "cleanaudio-ai",
   "related": [
+    "remove-audio",
     "audjust-ai",
     "audio-muse",
     "mix-audio",
     "trint",
     "sync",
     "wellsaid-labs",
-    "mp3-to-text",
-    "goose-pod"
+    "mp3-to-text"
   ]
 }
