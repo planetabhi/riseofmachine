@@ -83,7 +83,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
 ---
 
 <!doctype html>
-<html lang="en" data-new-ui-theme="flexoki-dark">
+<html lang="en" data-new-ui-theme="monokai">
     <head>
         <script is:inline>
             (function(){try{var T=['sargam-dark','aura','ayu-dark','catppuccin-mocha','dracula','flexoki-dark','monokai','night-owl','synthwave-84','tokyo-night'];var t=localStorage.getItem('rom_theme');if(T.indexOf(t)>-1)document.documentElement.setAttribute('data-new-ui-theme',t);}catch(e){}})();
@@ -516,7 +516,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
     html[data-new-ui-theme="catppuccin-mocha"] .theme-toggle .theme-emoji::after { content: '🍫'; }
     html[data-new-ui-theme="dracula"] .theme-toggle .theme-emoji::after { content: '🩸'; }
     html[data-new-ui-theme="flexoki-dark"] .theme-toggle .theme-emoji::after { content: '🪶'; }
-    html[data-new-ui-theme="monokai"] .theme-toggle .theme-emoji::after { content: '🌸'; }
+    html[data-new-ui-theme="monokai"] .theme-toggle .theme-emoji::after { content: '🐠'; }
     html[data-new-ui-theme="night-owl"] .theme-toggle .theme-emoji::after { content: '🦉'; }
     html[data-new-ui-theme="sargam-dark"] .theme-toggle .theme-emoji::after { content: '🪷'; }
     html[data-new-ui-theme="synthwave-84"] .theme-toggle .theme-emoji::after { content: '🚗'; }
@@ -801,7 +801,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
             { id: 'tokyo-night', label: 'Tokyo Night' },
         ];
         const THEME_IDS = THEMES.map((t) => t.id);
-        const DEFAULT_THEME = 'flexoki-dark';
+        const DEFAULT_THEME = 'monokai';
 
         const getSavedTheme = () => {
             try {
