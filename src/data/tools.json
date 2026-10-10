@@ -1257,6 +1257,14 @@
           "slug": "melty"
         },
         {
+          "title": "Orbi",
+          "body": "Turns GitHub Issues into merged PRs and releases.",
+          "tag": "Open-source",
+          "url": "https://orbi.build/?ref=riseofmachine.com",
+          "date-added": "2026-10-10",
+          "slug": "orbi"
+        },
+        {
           "title": "Q Developer",
           "body": "Assistant for software development.",
           "tag": "Freemium",
