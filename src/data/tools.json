@@ -4912,7 +4912,7 @@
       "category": "photos",
       "content": [
         {
-          "title": "Add Person to Photo",
+          "title": "FaceGrader", "body": "AI face rating from 478 landmarks.", "tag": "Freemium", "url": "https://facegrader.com?ref=riseofmachine.com", "date-added": "2026-10-16", "slug": "facegrader" }, { "title": "Add Person to Photo",
           "body": "Add people into photos with AI",
           "tag": "Freemium",
           "url": "https://add-person-to-photo.com/?ref=riseofmachine.com",
