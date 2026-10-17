@@ -2515,6 +2515,14 @@
           "slug": "create-apidev"
         },
         {
+          "title": "CurlShot",
+          "body": "Screenshot API and MCP server that lets AI agents see web pages.",
+          "tag": "Freemium",
+          "url": "https://curlshot.com/?ref=riseofmachine.com",
+          "date-added": "2026-10-16",
+          "slug": "curlshot"
+        },
+        {
           "title": "Cursor MCP",
           "body": "Find the best MCP Servers for Cursor.",
           "tag": "Free",
