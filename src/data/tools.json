@@ -2213,6 +2213,14 @@
           "slug": "subframe"
         },
         {
+          "title": "SVG Animation",
+          "body": "Animate vector graphics and export GIFs.",
+          "tag": "Freemium",
+          "url": "https://svganimation.app/?ref=riseofmachine.com",
+          "date-added": "2026-10-25",
+          "slug": "svg-animation"
+        },
+        {
           "title": "Tempo",
           "body": "Design React apps 10x faster with AI.",
           "tag": "Freemium",
