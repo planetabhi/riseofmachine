@@ -65,18 +65,6 @@ const showLatest = listingPaths.has(current);
             </button>
         </div>
 
-        <div class="sidebar-segmented" role="group" aria-label="Switch between Tools, MCP servers, and Skills">
-            <a href="/" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isTools }]} aria-current={isTools ? 'page' : undefined}>
-                Tools
-            </a>
-            <a href="/mcp" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isMcp }]} aria-current={isMcp ? 'page' : undefined}>
-                MCPs
-            </a>
-            <a href="/skills" data-astro-prefetch class:list={['sidebar-segment', { 'is-active': isSkills }]} aria-current={isSkills ? 'page' : undefined}>
-                Skills
-            </a>
-        </div>
-
         <nav class="sidebar-nav" aria-label="Categories">
             <span class="sidebar-nav-pill" aria-hidden="true"></span>
             <a href={homeHref} data-astro-prefetch class:list={['sidebar-item', { 'is-active': current === normalize(homeHref) }]}>

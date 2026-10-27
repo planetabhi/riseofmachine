@@ -1,0 +1,62 @@
+---
+import './ActionBar.css';
+import ActionBarAvatar from './ActionBarAvatar.tsx';
+
+interface Props {
+    basePath?: string | undefined;
+}
+
+const { basePath = '' } = Astro.props;
+
+const normalize = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
+const current = normalize(Astro.url.pathname);
+
+const isMcp = basePath === '/mcp' || current === '/mcp' || current.startsWith('/mcp/');
+const isSkills = basePath === '/skills' || current === '/skills' || current.startsWith('/skills/');
+const isTools = !isMcp && !isSkills;
+---
+
+<div class="action-bar-dock" transition:persist="action-bar">
+    <div class="action-bar" role="group" aria-label="Switch between Tools, MCP servers, and Skills">
+        <a href="/" data-astro-prefetch class:list={['action-bar-segment', { 'is-active': isTools }]} aria-current={isTools ? 'page' : undefined}>
+            <span class="action-bar-avatar"><ActionBarAvatar client:only="react" type="droid" /></span>
+            <span class="action-bar-label">Tools</span>
+        </a>
+        <a href="/mcp" data-astro-prefetch class:list={['action-bar-segment', { 'is-active': isMcp }]} aria-current={isMcp ? 'page' : undefined}>
+            <span class="action-bar-avatar"><ActionBarAvatar client:only="react" type="drop" /></span>
+            <span class="action-bar-label">MCPs</span>
+        </a>
+        <a href="/skills" data-astro-prefetch class:list={['action-bar-segment', { 'is-active': isSkills }]} aria-current={isSkills ? 'page' : undefined}>
+            <span class="action-bar-avatar"><ActionBarAvatar client:only="react" type="cat" /></span>
+            <span class="action-bar-label">Skills</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    // The dock is persisted across view transitions, so its SSR active state is
+    // frozen at first render — re-sync the active segment on every navigation.
+    const normalize = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
+
+    function syncActionBar() {
+        const bar = document.querySelector('.action-bar');
+        if (!bar) return;
+        const path = normalize(location.pathname);
+        const isMcp = path === '/mcp' || path.startsWith('/mcp/');
+        const isSkills = path === '/skills' || path.startsWith('/skills/');
+        const state: Record<string, boolean> = {
+            '/': !isMcp && !isSkills,
+            '/mcp': isMcp,
+            '/skills': isSkills,
+        };
+        bar.querySelectorAll<HTMLAnchorElement>('a.action-bar-segment').forEach((a) => {
+            const active = state[normalize(new URL(a.href).pathname)] ?? false;
+            a.classList.toggle('is-active', active);
+            if (active) a.setAttribute('aria-current', 'page');
+            else a.removeAttribute('aria-current');
+        });
+    }
+
+    document.addEventListener('astro:page-load', syncActionBar);
+</script>
+

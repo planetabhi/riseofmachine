@@ -69,6 +69,12 @@
   --stagger-blur: 3px;
   --stagger-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
+  --card-enter-dur: var(--duration-slow);
+  --card-enter-distance: var(--distance-medium);
+  --card-enter-blur: var(--blur-medium);
+  --card-enter-stagger: var(--duration-stagger);
+  --card-enter-ease: var(--ease-smooth-out);
+
   --tilt-perspective: 1000px;
   --tilt-return: 1000ms;
   --tilt-return-ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -224,6 +230,36 @@
 @media (prefers-reduced-motion: reduce) {
   .t-stagger-line { transition: none !important; }
 }
+
+/* Staggered entrance for link-cards. The first few cards cascade in on a
+   small per-item delay; everything past the cap shares the max delay so long
+   lists don't feel late. Fires on insert too, covering JS-populated grids. */
+@keyframes t-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--card-enter-distance));
+    filter: blur(var(--card-enter-blur));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.link-card-grid > .link-card {
+  animation: t-card-enter var(--card-enter-dur) var(--card-enter-ease) both;
+}
+.link-card-grid > .link-card:nth-child(2) { animation-delay: calc(var(--card-enter-stagger) * 1); }
+.link-card-grid > .link-card:nth-child(3) { animation-delay: calc(var(--card-enter-stagger) * 2); }
+.link-card-grid > .link-card:nth-child(4) { animation-delay: calc(var(--card-enter-stagger) * 3); }
+.link-card-grid > .link-card:nth-child(5) { animation-delay: calc(var(--card-enter-stagger) * 4); }
+.link-card-grid > .link-card:nth-child(n+6) { animation-delay: calc(var(--card-enter-stagger) * 5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .link-card-grid > .link-card { animation: none !important; }
+}
+
 
 .t-tilt { touch-action: none; }
 .t-tilt-card {
@@ -383,6 +419,42 @@
 @media (prefers-reduced-motion: reduce) {
   .t-page-enter { animation: none !important; }
 }
+
+/* Panel reveal (#7) — detail panel content slides in right-to-left as the
+   container opens, with a short cross-blur so the travel reads as a full open. */
+:root {
+  --panel-reveal-dur: var(--duration-slow);
+  --panel-reveal-x: 24px;
+  --panel-reveal-blur: var(--blur-small);
+  --panel-reveal-ease: var(--ease-smooth-out);
+}
+.detail-panel .detail-panel-inner {
+  opacity: 0;
+  transform: translateX(var(--panel-reveal-x));
+  filter: blur(var(--panel-reveal-blur));
+  transition:
+    opacity   var(--panel-reveal-dur) var(--panel-reveal-ease),
+    transform var(--panel-reveal-dur) var(--panel-reveal-ease),
+    filter    var(--panel-reveal-dur) var(--panel-reveal-ease);
+  will-change: transform, opacity, filter;
+}
+.detail-panel.is-open .detail-panel-inner {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .detail-panel .detail-panel-inner {
+    transition: none !important;
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+}
+
+/* Success check draw (#10) — stroke-draw for the copy button's checkmark path.
+   Paired with the icon swap in the detail panels' own styles. */
+@keyframes t-check-draw { to { stroke-dashoffset: 0; } }
 
 /* Input clear dissolve (#13) — mirror text overlays the field's own text so it
    can fly down, blur and fade on clear; the glow layer lights a streak. */
