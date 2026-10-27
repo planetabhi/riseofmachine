@@ -1,0 +1,94 @@
+/* Floating macOS-style dock, pinned to the bottom of .app-shell and centered
+   over the content box. Absolute (not in the scroll flow) so it stays put on
+   short pages and never disturbs the content's bottom fade; the shell recenters
+   it when the detail panel narrows the column. */
+.action-bar-dock {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--spacing-03) + var(--spacing-05));
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--spacing-05);
+    pointer-events: none;
+}
+
+.action-bar {
+    display: flex;
+    gap: var(--spacing-01);
+    padding: var(--spacing-01);
+    border: 1.5px solid var(--border-muted);
+    border-radius: var(--spacing-05);
+    background-color: color-mix(in srgb, var(--background) 82%, transparent);
+    -webkit-backdrop-filter: blur(var(--blur-large));
+    backdrop-filter: blur(var(--blur-large));
+    box-shadow: var(--dialog);
+    pointer-events: auto;
+    animation: action-bar-in var(--duration-slow) var(--ease-smooth-out) both;
+}
+
+.action-bar-segment {
+    min-width: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-01);
+    padding: var(--spacing-02) var(--spacing-03);
+    border: 0.5px solid transparent;
+    border-radius: var(--spacing-04);
+    font-family: var(--monospace);
+    font-size: var(--desktop-caption);
+    line-height: var(--lh-desktop-caption);
+    text-align: center;
+    text-decoration: none;
+    color: var(--content-secondary-alt);
+    transition:
+        color var(--duration-fast) var(--ease-smooth-out),
+        background-color var(--duration-fast) var(--ease-smooth-out);
+}
+
+/* Reserve the 32px square so layout stays stable before the canvas hydrates. */
+.action-bar-avatar {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.action-bar-segment:hover {
+    color: var(--content-primary);
+}
+
+.action-bar-segment.is-active {
+    color: var(--content-primary);
+    background-color: var(--background-high-contrast);
+    border-color: var(--border-muted);
+}
+
+.action-bar-segment:focus-visible {
+    outline: 1px solid var(--button-primary);
+    outline-offset: -1px;
+}
+
+@keyframes action-bar-in {
+    from {
+        opacity: 0;
+        transform: translateY(var(--distance-large));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 48rem) {
+    .action-bar-dock {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .action-bar {
+        animation: none;
+    }
+}

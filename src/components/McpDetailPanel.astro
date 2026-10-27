@@ -251,9 +251,8 @@
         position: absolute;
         top: var(--spacing-02);
         right: var(--spacing-02);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-grid;
+        place-items: center;
         width: var(--spacing-07);
         height: var(--spacing-07);
         padding: 0;
@@ -273,17 +272,42 @@
         outline-offset: -1px;
     }
 
+    /* Both icons share one grid cell; is-copied cross-fades to the check. */
+    .detail-cmd-copy .detail-cmd-icon {
+        grid-area: 1 / 1;
+        transition:
+            opacity var(--duration-fast) var(--ease-in-out),
+            transform var(--duration-fast) var(--ease-in-out);
+    }
+
     .detail-cmd-copy .icon-check {
-        display: none;
+        opacity: 0;
+        transform: scale(0.5);
         color: var(--accent);
     }
 
+    .detail-cmd-copy .icon-check path {
+        stroke-dasharray: 22;
+        stroke-dashoffset: 22;
+    }
+
     .detail-cmd-copy.is-copied .icon-copy {
-        display: none;
+        opacity: 0;
+        transform: scale(0.5);
     }
 
     .detail-cmd-copy.is-copied .icon-check {
-        display: inline;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .detail-cmd-copy.is-copied .icon-check path {
+        animation: t-check-draw var(--duration-slow) var(--ease-smooth-out) forwards;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .detail-cmd-copy .detail-cmd-icon { transition: none; }
+        .detail-cmd-copy .icon-check path { animation: none; stroke-dashoffset: 0; }
     }
 
     .detail-envs {

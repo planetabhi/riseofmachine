@@ -47,7 +47,13 @@
       "source": "jakubantalik/transitions.dev",
       "sourceType": "github",
       "skillPath": "skills/transitions-dev/SKILL.md",
-      "computedHash": "e3da717f111c5104f1073430d2016d97d97ca5e780c7e44bb9d6b8236ca02a88"
+      "computedHash": "c7f9b40c6676ecc6d890db4ffecafa1ddebdb4ebaed3098521928e5115bd871f"
+    },
+    "transitions-polish": {
+      "source": "jakubantalik/transitions.dev",
+      "sourceType": "github",
+      "skillPath": "skills/transitions-polish/SKILL.md",
+      "computedHash": "3f0630020cdfd0ea3d582ac45201c1ad4bced2ef7d0a0145d4cc81ad25f57ec3"
     },
     "writing-checklist": {
       "source": "planetabhi/skills",

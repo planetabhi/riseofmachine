@@ -79,6 +79,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "border-beam": "^1.4.1",
+    "bot-avatars": "^0.2.2",
     "jsdom": "^29.1.1",
     "node-html-parser": "^9.0.5",
     "vitest": "^4.1.11",

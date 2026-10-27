@@ -2,6 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import WebSiteSchema from "../components/schema/WebSiteSchema.astro";
 import Sidebar from "../components/Sidebar.astro";
+import ActionBar from "../components/ActionBar.astro";
 import ContentTopbar from "../components/ContentTopbar.astro";
 import Hero from "../components/Hero.astro";
 import DetailPanel from "../components/DetailPanel.astro";
@@ -83,7 +84,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
 ---
 
 <!doctype html>
-<html lang="en" data-new-ui-theme="monokai">
+<html lang="en" data-new-ui-theme="flexoki-dark">
     <head>
         <script is:inline>
             (function(){try{var T=['sargam-dark','aura','ayu-dark','catppuccin-mocha','dracula','flexoki-dark','monokai','night-owl','synthwave-84','tokyo-night'];var t=localStorage.getItem('rom_theme');if(T.indexOf(t)>-1)document.documentElement.setAttribute('data-new-ui-theme',t);}catch(e){}})();
@@ -172,22 +173,25 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
             totalCount={sidebarTotalCount}
         />
         <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
-        <div class="app-content">
-            <ContentTopbar
-                title={title}
-                showSearch={showSearch}
-                searchPlaceholder={searchPlaceholder}
-                minimal={showHero}
-            />
-            {showHero && (
-                <Hero
+        <div class="app-shell">
+            <div class="app-content">
+                <ContentTopbar
                     title={title}
-                    tagline={tagline}
                     showSearch={showSearch}
                     searchPlaceholder={searchPlaceholder}
+                    minimal={showHero}
                 />
-            )}
-            <slot />
+                {showHero && (
+                    <Hero
+                        title={title}
+                        tagline={tagline}
+                        showSearch={showSearch}
+                        searchPlaceholder={searchPlaceholder}
+                    />
+                )}
+                <slot />
+            </div>
+            <ActionBar basePath={sidebarBasePath} />
         </div>
         <DetailPanel />
         <slot name="side-panel" />
@@ -274,6 +278,16 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
         isolation: isolate;
     }
 
+    /* Positioning context for the floating action bar: flex:1 row that holds the
+       scrolling .app-content, so the dock can pin to the box bottom and recenter
+       when the detail panel narrows the shell. */
+    .app-shell {
+        flex: 1;
+        min-width: 0;
+        position: relative;
+        display: flex;
+    }
+
     .app-content {
         flex: 1;
         min-width: 0;
@@ -291,7 +305,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
         bottom: 0;
         left: 0;
         display: block;
-        height: 3rem;
+        height: 4rem;
         margin-top: -3rem;
         pointer-events: none;
         -webkit-backdrop-filter: blur(var(--blur-medium));
@@ -467,8 +481,8 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
 
     .theme-toggle {
         z-index: 999;
-        width: var(--spacing-08);
-        height: var(--spacing-08);
+        width: 1.75rem;
+        height: 1.75rem;
         background: none;
         border: none;
         padding: var(--spacing-00);
@@ -477,7 +491,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: var(--spacing-00);
+        border-radius: var(--spacing-03);
         position: relative;
     }
 
@@ -780,7 +794,7 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
             { id: 'tokyo-night', label: 'Tokyo Night' },
         ];
         const THEME_IDS = THEMES.map((t) => t.id);
-        const DEFAULT_THEME = 'monokai';
+        const DEFAULT_THEME = 'flexoki-dark';
 
         const getSavedTheme = () => {
             try {
