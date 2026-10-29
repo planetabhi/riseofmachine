@@ -2483,6 +2483,14 @@
           "slug": "codebuddy"
         },
         {
+          "title": "Cooper Email",
+          "body": "Email inboxes API for AI agents.",
+          "tag": "Freemium",
+          "url": "https://cooperemail.com?ref=riseofmachine.com",
+          "date-added": "2026-10-28",
+          "slug": "cooper-email"
+        },
+        {
           "title": "Cosine",
           "body": "Search & understand large codebases.",
           "tag": "Free",
