@@ -3367,6 +3367,14 @@
           "slug": "convozen"
         },
         {
+          "title": "CorpusIQ",
+          "body": "Business data answers with sources.",
+          "tag": "Freemium",
+          "url": "https://www.corpusiq.io/?ref=riseofmachine.com",
+          "date-added": "2026-10-29",
+          "slug": "corpusiq"
+        },
+        {
           "title": "Credal AI",
           "body": "Securely connect internal data to LLMs.",
           "tag": "Freemium",
