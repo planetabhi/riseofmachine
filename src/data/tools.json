@@ -6809,6 +6809,14 @@
           "slug": "datviz"
         },
         {
+          "title": "DC Hub",
+          "body": "Data center power and grid intelligence.",
+          "tag": "Freemium",
+          "url": "https://dchub.cloud/?ref=riseofmachine.com",
+          "date-added": "2026-10-30",
+          "slug": "dc-hub"
+        },
+        {
           "title": "Domain Name Generator",
           "body": "Generate domain names.",
           "tag": "Freemium",
