@@ -8,12 +8,12 @@
   "slug": "sref-midjourney",
   "related": [
     "image-to-prompt",
+    "makeimg",
     "makify-ai",
     "meigen-ai",
     "cpages",
     "mycoloringai",
     "imgstyler",
-    "line-drawing-converter",
-    "gpt-image-2-1"
+    "line-drawing-converter"
   ]
 }

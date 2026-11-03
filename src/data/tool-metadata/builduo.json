@@ -9,11 +9,11 @@
   "related": [
     "elva",
     "poe-api",
+    "cooper-email",
     "helix",
     "portia-ai",
     "smythos",
     "zen-agents",
-    "buildship",
-    "amazon-sagemaker"
+    "buildship"
   ]
 }

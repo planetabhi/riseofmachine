@@ -16,6 +16,14 @@
     "slug": "beatoven"
   },
   {
+    "title": "Birthday Song AI",
+    "body": "Personalized birthday songs with their name.",
+    "tag": "Paid",
+    "url": "https://aibirthdaysong.com/?ref=riseofmachine.com",
+    "date-added": "2026-11-01",
+    "slug": "birthday-song-ai"
+  },
+  {
     "title": "Elevenlabs/sound-effects",
     "body": "Imagine a sound and bring it to life.",
     "tag": "Free",
@@ -190,6 +198,14 @@
     "url": "https://www.tempolor.com/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "tempolor"
+  },
+  {
+    "title": "Tera Studio",
+    "body": "Hear any song sung in your own voice.",
+    "tag": "Freemium",
+    "url": "https://terastudio.co/?ref=riseofmachine.com",
+    "date-added": "2026-10-30",
+    "slug": "tera-studio"
   },
   {
     "title": "ToMusic",

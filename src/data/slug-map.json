@@ -170,6 +170,9 @@
   "magictryon": [
     "art"
   ],
+  "makeimg": [
+    "art"
+  ],
   "makify-ai": [
     "art"
   ],
@@ -659,9 +662,6 @@
   "typli": [
     "copywriting"
   ],
-  "unbounce": [
-    "copywriting"
-  ],
   "undetect": [
     "copywriting"
   ],
@@ -902,6 +902,9 @@
   "cactal": [
     "developer"
   ],
+  "callmemcp": [
+    "developer"
+  ],
   "capmonster-cloud": [
     "developer"
   ],
@@ -915,6 +918,9 @@
     "developer"
   ],
   "codebuddy": [
+    "developer"
+  ],
+  "cooper-email": [
     "developer"
   ],
   "cosine": [
@@ -1236,6 +1242,9 @@
     "enterprise"
   ],
   "convozen": [
+    "enterprise"
+  ],
+  "corpusiq": [
     "enterprise"
   ],
   "credal-ai": [
@@ -1637,6 +1646,9 @@
   "beatoven": [
     "music"
   ],
+  "birthday-song-ai": [
+    "music"
+  ],
   "elevenlabssound-effects": [
     "music"
   ],
@@ -1701,6 +1713,9 @@
     "music"
   ],
   "tempolor": [
+    "music"
+  ],
+  "tera-studio": [
     "music"
   ],
   "tomusic": [
@@ -2077,9 +2092,6 @@
   ],
   "wishhush": [
     "photos"
-  ],
-  "ada": [
-    "productivity"
   ],
   "autoppt": [
     "productivity"
@@ -2498,6 +2510,9 @@
   "datviz": [
     "research"
   ],
+  "dc-hub": [
+    "research"
+  ],
   "domain-name-generator": [
     "research"
   ],
@@ -2637,6 +2652,9 @@
     "social"
   ],
   "bestever": [
+    "social"
+  ],
+  "bulkpublish": [
     "social"
   ],
   "docsfold": [
@@ -2948,6 +2966,9 @@
   "seedance-2-ai-video-generator": [
     "video"
   ],
+  "seedance-now": [
+    "video"
+  ],
   "seedclip": [
     "video"
   ],
@@ -3045,6 +3066,9 @@
     "video"
   ],
   "voe-ai": [
+    "video"
+  ],
+  "voxsail": [
     "video"
   ],
   "wan-22": [

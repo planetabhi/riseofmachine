@@ -8,12 +8,12 @@
   "slug": "security-questionnaire",
   "related": [
     "namelix",
+    "corpusiq",
     "nuclia",
     "deedspring",
     "naoma-ai",
     "raykolabs",
     "ellie",
-    "superai",
-    "streaml"
+    "superai"
   ]
 }

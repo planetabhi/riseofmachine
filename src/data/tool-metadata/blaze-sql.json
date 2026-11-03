@@ -7,13 +7,13 @@
   "date-added": "2025-06-06",
   "slug": "blaze-sql",
   "related": [
+    "callmemcp",
     "hiapi",
     "capmonster-cloud",
     "fitten-code",
     "lintrule",
     "sqlmate",
     "ai2sql",
-    "screenshot-to-code",
-    "amazon-codewhisperer"
+    "screenshot-to-code"
   ]
 }

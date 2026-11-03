@@ -12,8 +12,8 @@
     "shazam",
     "song-generator",
     "elevenlabssound-effects",
+    "tera-studio",
     "music-generator",
-    "suno",
-    "lyrics-to-song"
+    "suno"
   ]
 }

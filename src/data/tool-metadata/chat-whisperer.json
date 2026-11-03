@@ -11,9 +11,9 @@
     "prometai",
     "chat-agents",
     "chatclient",
+    "corpusiq",
     "naoma-ai",
     "ellie",
-    "superai",
-    "conduit"
+    "superai"
   ]
 }

@@ -11,9 +11,9 @@
     "chat-agents",
     "normal",
     "salestarget",
+    "corpusiq",
     "naoma-ai",
     "ellie",
-    "superai",
-    "receiptor"
+    "superai"
   ]
 }

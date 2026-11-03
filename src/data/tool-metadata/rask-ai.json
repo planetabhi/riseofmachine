@@ -7,13 +7,13 @@
   "date-added": "2023-12-15",
   "slug": "rask-ai",
   "related": [
+    "voxsail",
     "grok-video-generator",
     "libretto",
     "fliki",
     "veo-3-by-kie",
     "viralrot",
     "image-to-video",
-    "vivago",
-    "decohere"
+    "vivago"
   ]
 }

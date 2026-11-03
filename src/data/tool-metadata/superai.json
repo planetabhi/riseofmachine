@@ -7,13 +7,13 @@
   "date-added": "2025-10-21",
   "slug": "superai",
   "related": [
+    "corpusiq",
     "naoma-ai",
     "ellie",
     "conduit",
     "salestarget",
     "receiptor",
     "toffu",
-    "chat-agents",
-    "insights-by-couplerio"
+    "chat-agents"
   ]
 }

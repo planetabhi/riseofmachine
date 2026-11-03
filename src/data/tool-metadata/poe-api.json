@@ -9,11 +9,11 @@
   "related": [
     "elva",
     "builduo",
+    "cooper-email",
     "strata",
     "pythagora-20",
     "amazon-sagemaker",
     "tensorblock-forge",
-    "aident-loadout",
-    "makehub"
+    "aident-loadout"
   ]
 }
