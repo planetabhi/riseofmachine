@@ -36,12 +36,9 @@ function run(script: string): void {
     execFileSync('bun', ['run', `scripts/${script}`], { cwd: repoRoot, stdio: 'pipe' });
 }
 
-export interface ApplyResult {
-    ok: boolean;
-    reason?: string;
-    slug?: string;
-    finalUrl?: string;
-}
+export type ApplyResult =
+    | { ok: true; slug: string; finalUrl: string }
+    | { ok: false; reason: string; duplicate?: boolean };
 
 export function applyTool(listing: Listing, submittedUrl: string): ApplyResult {
     const data: ToolsConfig = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'));
@@ -53,7 +50,7 @@ export function applyTool(listing: Listing, submittedUrl: string): ApplyResult {
     for (const category of data.tools) {
         for (const tool of category.content) {
             if (tool.url && normalizeUrl(tool.url) === target) {
-                return { ok: false, reason: `Duplicate URL — already listed as "${tool.title}".` };
+                return { ok: false, duplicate: true, reason: `Duplicate URL — already listed as "${tool.title}".` };
             }
         }
     }
@@ -65,7 +62,7 @@ export function applyTool(listing: Listing, submittedUrl: string): ApplyResult {
         (t: Tool) => t.title.trim().toLowerCase() === listing.title.trim().toLowerCase(),
     );
     if (titleClash) {
-        return { ok: false, reason: `Duplicate title "${listing.title}" in category ${listing.category}.` };
+        return { ok: false, duplicate: true, reason: `Duplicate title "${listing.title}" in category ${listing.category}.` };
     }
 
     const entry: Tool = {

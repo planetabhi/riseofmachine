@@ -465,7 +465,8 @@
           "body": "Multi-model text and photo image generator.",
           "tag": "Freemium",
           "url": "https://makeimg.ai?ref=riseofmachine.com",
-          "date-added": "2026-11-03"
+          "date-added": "2026-11-03",
+          "slug": "makeimg"
         },
         {
           "title": "Makify AI",
@@ -1788,14 +1789,6 @@
           "url": "https://typli.ai/?ref=riseofmachine.com",
           "date-added": "2023-12-12",
           "slug": "typli"
-        },
-        {
-          "title": "Unbounce",
-          "body": "Generate marketing content.",
-          "tag": "Freemium",
-          "url": "https://unbounce.com/product/smart-copy/?ref=riseofmachine.com",
-          "date-added": "2023-12-12",
-          "slug": "unbounce"
         },
         {
           "title": "Undetect",
@@ -5693,14 +5686,6 @@
       "category": "productivity",
       "content": [
         {
-          "title": "Ada",
-          "body": "AI data analyst for professional reports.",
-          "tag": "Freemium",
-          "url": "https://ada.im/?ref=riseofmachine.com",
-          "date-added": "2025-09-04",
-          "slug": "ada"
-        },
-        {
           "title": "Autoppt",
           "body": "AI generator for PowerPoint presentations.",
           "url": "https://autoppt.com/?ref=riseofmachine.com",
@@ -8062,7 +8047,8 @@
           "body": "Multi-model text and image to video.",
           "tag": "Freemium",
           "url": "https://seedancenow.com?ref=riseofmachine.com",
-          "date-added": "2026-11-03"
+          "date-added": "2026-11-03",
+          "slug": "seedance-now"
         },
         {
           "title": "SeedClip",

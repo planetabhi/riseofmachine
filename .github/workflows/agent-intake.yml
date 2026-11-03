@@ -71,10 +71,11 @@ jobs:
 
   # Write-scoped: only runs for real issue submissions (never dry runs). Replays the
   # agent's file changes from the artifact and publishes the PR or rejection. Runs even
-  # when `process` failed so the issue always gets an explanation comment.
+  # when `process` failed so the issue always gets an explanation comment. Gated on the
+  # same label condition as `process` so unrelated label events never post a bogus comment.
   publish:
     needs: process
-    if: ${{ always() && github.event_name == 'issues' }}
+    if: ${{ always() && github.event_name == 'issues' && github.event.label.name == 'validated' && contains(github.event.issue.labels.*.name, 'tool-suggestion') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

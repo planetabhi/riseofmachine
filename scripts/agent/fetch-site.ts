@@ -21,16 +21,17 @@ const PARKED_MARKERS = [
     'sedoparking.com',
 ];
 
-export interface SiteResult {
-    ok: boolean;
-    reason?: string;
-    finalUrl?: string;
-    title?: string;
-    description?: string;
-    ogTitle?: string;
-    ogDescription?: string;
-    textSample?: string;
+export interface SiteOk {
+    ok: true;
+    finalUrl: string;
+    title: string;
+    description: string;
+    ogTitle: string;
+    ogDescription: string;
+    textSample: string;
 }
+
+export type SiteResult = SiteOk | { ok: false; reason: string };
 
 function fail(reason: string): SiteResult {
     return { ok: false, reason };
