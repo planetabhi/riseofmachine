@@ -7403,6 +7403,14 @@
       "category": "video",
       "content": [
         {
+          "title": "airapvideo",
+          "body": "Turns two photos into rap videos.",
+          "tag": "Freemium",
+          "url": "https://ai-rap-video.me/?ref=riseofmachine.com",
+          "date-added": "2026-11-03",
+          "slug": "airapvideo"
+        },
+        {
           "title": "Anam",
           "body": "Real-time AI avatars that talk",
           "tag": "Freemium",
