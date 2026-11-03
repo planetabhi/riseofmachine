@@ -1,0 +1,19 @@
+{
+  "title": "Cooper Email — HTTP email for autonomous agents",
+  "description": "Give every agent its own inbox, and a database it can search. One request creates a key and an address. Inbound arrives as a signed webhook. Custom domains start on Starter.",
+  "category": "developer",
+  "url": "https://cooperemail.com?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-10-28",
+  "slug": "cooper-email",
+  "related": [
+    "elva",
+    "curlshot",
+    "cactal",
+    "poe-api",
+    "builduo",
+    "atla",
+    "strata",
+    "portia-ai"
+  ]
+}

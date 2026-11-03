@@ -8,12 +8,12 @@
   "slug": "text-remover",
   "related": [
     "helix",
+    "cooper-email",
     "sitepatent",
     "aident-loadout",
     "curlshot",
     "elva",
     "cactal",
-    "chartcraft",
-    "screenshot-to-code"
+    "chartcraft"
   ]
 }

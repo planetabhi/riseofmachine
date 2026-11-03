@@ -1,0 +1,19 @@
+{
+  "title": "/call-me: your AI agent can call you",
+  "description": "Your AI agents ring your phone when they need a decision. Answer out loud and your reply goes back to the agent as text. Works with Claude Code, Codex, Cursor, ChatGPT and any MCP client.",
+  "category": "developer",
+  "url": "https://callmemcp.com?ref=riseofmachine.com",
+  "tag": "Paid",
+  "date-added": "2026-10-30",
+  "slug": "callmemcp",
+  "related": [
+    "hiapi",
+    "capmonster-cloud",
+    "blaze-sql",
+    "curlshot",
+    "cactal",
+    "elva",
+    "cooper-email",
+    "atla"
+  ]
+}

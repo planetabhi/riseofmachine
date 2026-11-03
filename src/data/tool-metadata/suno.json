@@ -9,11 +9,11 @@
   "related": [
     "song-generator",
     "lyrics-to-song",
+    "tera-studio",
     "lrc-generator",
     "words-into-music",
     "image-to-music-ai",
     "musegen",
-    "murekaai",
-    "mubert"
+    "murekaai"
   ]
 }

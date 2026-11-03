@@ -88,6 +88,14 @@
     "slug": "cactal"
   },
   {
+    "title": "CallMeMCP",
+    "body": "Lets AI agents call your phone.",
+    "tag": "Paid",
+    "url": "https://callmemcp.com?ref=riseofmachine.com",
+    "date-added": "2026-10-30",
+    "slug": "callmemcp"
+  },
+  {
     "title": "CapMonster Cloud",
     "body": "AI CAPTCHA-solving service for automation pros.",
     "tag": "Paid",
@@ -126,6 +134,14 @@
     "url": "https://codebuddy.ca/?ref=riseofmachine.com",
     "date-added": "2024-08-21",
     "slug": "codebuddy"
+  },
+  {
+    "title": "Cooper Email",
+    "body": "Email inboxes API for AI agents.",
+    "tag": "Freemium",
+    "url": "https://cooperemail.com?ref=riseofmachine.com",
+    "date-added": "2026-10-28",
+    "slug": "cooper-email"
   },
   {
     "title": "Cosine",

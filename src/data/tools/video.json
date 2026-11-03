@@ -640,6 +640,14 @@
     "slug": "seedance-2-ai-video-generator"
   },
   {
+    "title": "Seedance Now",
+    "body": "Multi-model text and image to video.",
+    "tag": "Freemium",
+    "url": "https://seedancenow.com?ref=riseofmachine.com",
+    "date-added": "2026-11-03",
+    "slug": "seedance-now"
+  },
+  {
     "title": "SeedClip",
     "body": "Seedance-based AI video generation.",
     "tag": "Freemium",
@@ -902,6 +910,14 @@
     "url": "https://voe31.com/?ref=riseofmachine.com",
     "date-added": "2025-12-30",
     "slug": "voe-ai"
+  },
+  {
+    "title": "VoxSail",
+    "body": "Translate video, dub audio, review subtitles.",
+    "tag": "Paid",
+    "url": "https://voxsail.com/en/?ref=riseofmachine.com",
+    "date-added": "2026-10-30",
+    "slug": "voxsail"
   },
   {
     "title": "Wan 2.2",

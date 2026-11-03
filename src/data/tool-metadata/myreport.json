@@ -8,12 +8,12 @@
   "slug": "myreport",
   "related": [
     "prometai",
+    "corpusiq",
     "chat-whisperer",
     "naoma-ai",
     "ellie",
     "superai",
     "conduit",
-    "salestarget",
-    "receiptor"
+    "salestarget"
   ]
 }

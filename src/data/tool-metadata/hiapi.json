@@ -7,13 +7,13 @@
   "date-added": "2026-10-20",
   "slug": "hiapi",
   "related": [
+    "callmemcp",
     "capmonster-cloud",
     "blaze-sql",
     "poe-api",
     "rysana",
     "tensorblock-forge",
     "teachable-machine",
-    "buildship",
-    "amazon-sagemaker"
+    "buildship"
   ]
 }

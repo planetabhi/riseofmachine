@@ -1,6 +1,6 @@
 {
-  "title": "Ideogram.AI",
-  "description": "Enter text to create pictures.",
+  "title": "Ideogram | AI apps and models in one platform",
+  "description": "Use purpose-built AI apps, access major image and video models through one API, and build on Ideogram 4.0, our open model.",
   "category": "art",
   "url": "https://ideogram.ai?ref=riseofmachine.com",
   "tag": "Freemium",
@@ -13,7 +13,7 @@
     "mycoloringai",
     "svg-generator",
     "sdxl-turbo",
-    "skybox-ai",
-    "banana-pro"
+    "makeimg",
+    "skybox-ai"
   ]
 }

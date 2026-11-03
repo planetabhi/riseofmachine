@@ -1,6 +1,6 @@
 {
-  "title": "DeedSpring",
-  "description": "AI transaction coordinator for US real estate with client portals.",
+  "title": "The transaction coordinator that does the work | DeedSpring",
+  "description": "DeedSpring keeps every transaction moving — it reads the contract and pulls every date, chases the lender, title, and signatures itself, and keeps your clients up to date in a branded portal.",
   "category": "enterprise",
   "url": "https://deedspring.com?ref=riseofmachine.com",
   "tag": "From $15/mo",
@@ -10,10 +10,10 @@
     "jude-ai",
     "rebellion",
     "revyou",
+    "corpusiq",
     "naoma-ai",
     "raykolabs",
     "ellie",
-    "superai",
-    "streaml"
+    "superai"
   ]
 }

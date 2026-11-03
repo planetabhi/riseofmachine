@@ -1,0 +1,19 @@
+{
+  "title": "TERA STUDIO — Hear yourself sing any song",
+  "description": "Clone your singing voice from 1 minute of audio, then hear any song sung back in your voice. Any language. 2 full songs free, no card.",
+  "category": "music",
+  "url": "https://terastudio.co/?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-10-30",
+  "slug": "tera-studio",
+  "related": [
+    "song-generator",
+    "suno",
+    "lyrics-to-song",
+    "lrc-generator",
+    "words-into-music",
+    "image-to-music-ai",
+    "musegen",
+    "murekaai"
+  ]
+}
