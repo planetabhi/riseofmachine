@@ -1,7 +1,7 @@
 // Writes the final listing fields. LLM proposes; deterministic validators dispose.
 
 import { generateObject } from './llm.ts';
-import type { SiteResult } from './fetch-site.ts';
+import type { SiteOk } from './fetch-site.ts';
 import type { SubmissionFields } from './parse-issue.ts';
 import {
     CATEGORIES,
@@ -19,6 +19,8 @@ export interface Listing {
     category: string;
     tag: string;
 }
+
+export type EnrichResult = { ok: true; listing: Listing } | { ok: false; reason: string };
 
 interface RawListing {
     title: string;
@@ -54,7 +56,7 @@ function buildTool() {
     };
 }
 
-function buildUser(site: SiteResult, hints: SubmissionFields): string {
+function buildUser(site: SiteOk, hints: SubmissionFields): string {
     return [
         'Submitter hints (may be wrong — verify against the page):',
         `- Suggested name: ${hints.toolName || '(none)'}`,
@@ -84,10 +86,7 @@ function coerce(raw: RawListing): Listing {
     };
 }
 
-export async function enrich(
-    site: SiteResult,
-    hints: SubmissionFields,
-): Promise<{ ok: boolean; listing?: Listing; reason?: string }> {
+export async function enrich(site: SiteOk, hints: SubmissionFields): Promise<EnrichResult> {
     const tool = buildTool();
     const baseUser = buildUser(site, hints);
 

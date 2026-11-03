@@ -1,7 +1,7 @@
 // Decides whether a fetched site is genuinely AI/ML powered. The only LLM gate for scope.
 
 import { generateObject } from './llm.ts';
-import type { SiteResult } from './fetch-site.ts';
+import type { SiteOk } from './fetch-site.ts';
 
 export interface Judgement {
     isAI: boolean;
@@ -33,7 +33,7 @@ const TOOL = {
     },
 };
 
-export async function judgeIsAI(site: SiteResult): Promise<{ accepted: boolean; judgement: Judgement; reason: string }> {
+export async function judgeIsAI(site: SiteOk): Promise<{ accepted: boolean; judgement: Judgement; reason: string }> {
     const user = [
         '<page-content>',
         `Title: ${site.title || site.ogTitle || ''}`,
