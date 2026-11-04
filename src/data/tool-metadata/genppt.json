@@ -10,10 +10,10 @@
     "autoppt",
     "pitch",
     "plus-docs",
+    "gtlds-si",
+    "bank-statement-converter",
+    "nameideabox",
     "neverapply",
-    "placecall",
-    "meteor-ai",
-    "screenpipe",
-    "orkas"
+    "placecall"
   ]
 }

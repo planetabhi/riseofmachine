@@ -8,12 +8,12 @@
   "slug": "chub",
   "related": [
     "rolechar",
+    "scanchess",
+    "sprite-maker",
     "game-generator",
     "meshy",
     "pinpoint-answer",
     "roleplayr",
-    "soga-ai",
-    "qmai",
-    "saga"
+    "soga-ai"
   ]
 }

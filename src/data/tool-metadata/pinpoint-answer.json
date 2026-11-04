@@ -10,10 +10,10 @@
     "game-generator",
     "soga-ai",
     "saga",
+    "scanchess",
+    "sprite-maker",
     "rolechar",
     "chub",
-    "meshy",
-    "roleplayr",
-    "qmai"
+    "meshy"
   ]
 }

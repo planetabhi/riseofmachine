@@ -9,11 +9,11 @@
   "related": [
     "z-image",
     "prisma",
+    "image-to-anime",
     "line-drawing-converter",
     "mediaai-art",
     "image-to-prompt",
     "fastimage",
-    "banana-ai-1",
-    "picrafts"
+    "banana-ai-1"
   ]
 }

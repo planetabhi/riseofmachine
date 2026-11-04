@@ -7,13 +7,13 @@
   "date-added": "2025-06-06",
   "slug": "roleplayr",
   "related": [
+    "scanchess",
     "meshy",
+    "sprite-maker",
     "rolechar",
     "game-generator",
     "chub",
     "pinpoint-answer",
-    "soga-ai",
-    "qmai",
-    "saga"
+    "soga-ai"
   ]
 }

@@ -122,6 +122,9 @@
   "image-to-3d-ai": [
     "art"
   ],
+  "image-to-anime": [
+    "art"
+  ],
   "image-to-image-maker": [
     "art"
   ],
@@ -530,6 +533,9 @@
   "detector-writer": [
     "copywriting"
   ],
+  "digital-love-letter": [
+    "copywriting"
+  ],
   "dupdub": [
     "copywriting"
   ],
@@ -825,6 +831,9 @@
     "design"
   ],
   "subframe": [
+    "design"
+  ],
+  "svg-animation": [
     "design"
   ],
   "tempo": [
@@ -1472,7 +1481,13 @@
   "saga": [
     "gaming"
   ],
+  "scanchess": [
+    "gaming"
+  ],
   "soga-ai": [
+    "gaming"
+  ],
+  "sprite-maker": [
     "gaming"
   ],
   "hypnotheraai": [
@@ -2099,6 +2114,9 @@
   "autotab": [
     "productivity"
   ],
+  "bank-statement-converter": [
+    "productivity"
+  ],
   "bankingnewsai": [
     "productivity"
   ],
@@ -2189,6 +2207,9 @@
   "groupthink": [
     "productivity"
   ],
+  "gtlds-si": [
+    "productivity"
+  ],
   "hero": [
     "productivity"
   ],
@@ -2262,6 +2283,9 @@
     "productivity"
   ],
   "multion": [
+    "productivity"
+  ],
+  "nameideabox": [
     "productivity"
   ],
   "neverapply": [
@@ -2627,6 +2651,9 @@
   "scribli": [
     "seo"
   ],
+  "seoagent": [
+    "seo"
+  ],
   "seobot": [
     "seo"
   ],
@@ -2725,6 +2752,9 @@
   ],
   "videolulu": [
     "social"
+  ],
+  "airapvideo": [
+    "video"
   ],
   "anam": [
     "video"
@@ -2849,6 +2879,9 @@
   "image2video": [
     "video"
   ],
+  "imagetovideoio": [
+    "video"
+  ],
   "imagineclip": [
     "video"
   ],
@@ -2937,6 +2970,9 @@
     "video"
   ],
   "pixwit": [
+    "video"
+  ],
+  "plimo": [
     "video"
   ],
   "popugc": [
@@ -3249,6 +3285,9 @@
     "xtras"
   ],
   "sms-launcher": [
+    "xtras"
+  ],
+  "snap-ai-studio": [
     "xtras"
   ],
   "speedvitals-rum": [

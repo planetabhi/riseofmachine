@@ -7,13 +7,13 @@
   "date-added": "2024-10-22",
   "slug": "pixarai",
   "related": [
+    "image-to-anime",
     "makeimg",
     "makify-ai",
     "meigen-ai",
     "cpages",
     "mycoloringai",
     "imgstyler",
-    "line-drawing-converter",
-    "gpt-image-2-1"
+    "line-drawing-converter"
   ]
 }

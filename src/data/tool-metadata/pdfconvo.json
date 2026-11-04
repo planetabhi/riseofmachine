@@ -10,10 +10,10 @@
     "doculator",
     "context",
     "google-translate",
+    "gtlds-si",
+    "bank-statement-converter",
+    "nameideabox",
     "neverapply",
-    "placecall",
-    "meteor-ai",
-    "screenpipe",
-    "orkas"
+    "placecall"
   ]
 }
