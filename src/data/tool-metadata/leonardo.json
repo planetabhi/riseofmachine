@@ -7,13 +7,13 @@
   "date-added": "2023-12-25",
   "slug": "leonardo",
   "related": [
+    "image-to-anime",
     "makeimg",
     "makify-ai",
     "meigen-ai",
     "cpages",
     "mycoloringai",
     "imgstyler",
-    "line-drawing-converter",
-    "gpt-image-2-1"
+    "line-drawing-converter"
   ]
 }

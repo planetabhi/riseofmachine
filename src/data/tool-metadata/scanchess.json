@@ -1,0 +1,19 @@
+{
+  "title": "ScanChess · Scoresheets to PGN, Boards to FEN, Free Analysis",
+  "description": "Photograph a scoresheet or a chess board: get a checked PGN or FEN, then a free Stockfish review shows where the game turned and an AI coach explains why.",
+  "category": "gaming",
+  "url": "https://scanchess.com/?ref=riseofmachine.com",
+  "tag": "Freemium",
+  "date-added": "2026-11-03",
+  "slug": "scanchess",
+  "related": [
+    "roleplayr",
+    "meshy",
+    "sprite-maker",
+    "rolechar",
+    "game-generator",
+    "chub",
+    "pinpoint-answer",
+    "soga-ai"
+  ]
+}

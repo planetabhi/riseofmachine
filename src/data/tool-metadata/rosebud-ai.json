@@ -8,12 +8,12 @@
   "slug": "rosebud-ai",
   "related": [
     "combos-ai",
+    "scanchess",
+    "sprite-maker",
     "rolechar",
     "game-generator",
     "chub",
     "meshy",
-    "pinpoint-answer",
-    "roleplayr",
-    "soga-ai"
+    "pinpoint-answer"
   ]
 }

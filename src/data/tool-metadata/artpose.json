@@ -7,13 +7,13 @@
   "date-added": "2025-12-14",
   "slug": "artpose",
   "related": [
+    "image-to-anime",
     "makeimg",
     "makify-ai",
     "meigen-ai",
     "cpages",
     "mycoloringai",
     "imgstyler",
-    "line-drawing-converter",
-    "gpt-image-2-1"
+    "line-drawing-converter"
   ]
 }

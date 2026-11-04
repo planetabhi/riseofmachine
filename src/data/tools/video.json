@@ -1,5 +1,13 @@
 [
   {
+    "title": "airapvideo",
+    "body": "Turns two photos into rap videos.",
+    "tag": "Freemium",
+    "url": "https://ai-rap-video.me/?ref=riseofmachine.com",
+    "date-added": "2026-11-03",
+    "slug": "airapvideo"
+  },
+  {
     "title": "Anam",
     "body": "Real-time AI avatars that talk",
     "tag": "Freemium",
@@ -328,6 +336,14 @@
     "slug": "image2video"
   },
   {
+    "title": "imagetovideo.io",
+    "body": "Animate photos into short videos.",
+    "tag": "Freemium",
+    "url": "https://imagetovideo.io/?ref=riseofmachine.com",
+    "date-added": "2026-11-03",
+    "slug": "imagetovideoio"
+  },
+  {
     "title": "ImagineClip",
     "body": "AI avatar clips for social video",
     "tag": "Freemium",
@@ -566,6 +582,14 @@
     "url": "https://pixwit.ai/?ref=riseofmachine.com",
     "date-added": "2026-09-15",
     "slug": "pixwit"
+  },
+  {
+    "title": "Plimo",
+    "body": "Template-based AI image and video generator.",
+    "tag": "Freemium",
+    "url": "https://plimo.ai/?utm_source=riseofmachine&utm_medium=directory&utm_campaign=backlink_2026q4&ref=riseofmachine.com",
+    "date-added": "2026-11-03",
+    "slug": "plimo"
   },
   {
     "title": "PopUGC",

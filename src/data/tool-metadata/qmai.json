@@ -7,13 +7,13 @@
   "date-added": "2023-12-26",
   "slug": "qmai",
   "related": [
+    "scanchess",
+    "sprite-maker",
     "rolechar",
     "game-generator",
     "chub",
     "meshy",
     "pinpoint-answer",
-    "roleplayr",
-    "soga-ai",
-    "saga"
+    "roleplayr"
   ]
 }
