@@ -4011,6 +4011,14 @@
           "slug": "saga"
         },
         {
+          "title": "ScanChess",
+          "body": "Scan chess scoresheets and board images.",
+          "tag": "Freemium",
+          "url": "https://scanchess.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-03",
+          "slug": "scanchess"
+        },
+        {
           "title": "Soga AI",
           "body": "AI character chatbot game.",
           "tag": "Freemium",
