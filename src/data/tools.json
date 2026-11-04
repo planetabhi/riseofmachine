@@ -8849,6 +8849,14 @@
           "slug": "sms-launcher"
         },
         {
+          "title": "Snap AI Studio",
+          "body": "Multi-model platform for photo, video, audio.",
+          "tag": "Freemium",
+          "url": "https://snapaistudio.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-03",
+          "slug": "snap-ai-studio"
+        },
+        {
           "title": "SpeedVitals RUM",
           "body": "Monitor real-user performance & web analytics.",
           "tag": "Freemium",
