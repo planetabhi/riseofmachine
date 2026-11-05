@@ -5344,6 +5344,14 @@
           "slug": "headshot-photo"
         },
         {
+          "title": "iLook",
+          "body": "Photo-based face shape and symmetry analysis.",
+          "tag": "Free",
+          "url": "https://www.ilook.fit/?ref=riseofmachine.com",
+          "date-added": "2026-11-05",
+          "slug": "ilook"
+        },
+        {
           "title": "Image Changer App",
           "body": "Edit images with plain-language prompts.",
           "tag": "Freemium",
