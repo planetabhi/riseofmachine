@@ -5024,6 +5024,14 @@
           "slug": "background"
         },
         {
+          "title": "BeardStyles",
+          "body": "Preview beard styles on uploaded photos.",
+          "tag": "Freemium",
+          "url": "https://beardstyles.org/?ref=riseofmachine.com",
+          "date-added": "2026-11-05",
+          "slug": "beardstyles"
+        },
+        {
           "title": "Beauty Test",
           "body": "Analyzes facial features and provides beauty score.",
           "tag": "Free",
