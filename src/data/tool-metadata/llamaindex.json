@@ -11,9 +11,9 @@
     "litellm",
     "sid",
     "openrouter",
+    "uberllm",
     "coderplan",
     "numbers-station",
-    "artificialwatch",
-    "gptgeminigrokai"
+    "artificialwatch"
   ]
 }

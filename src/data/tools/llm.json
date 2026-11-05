@@ -318,5 +318,13 @@
     "url": "https://thinkbuddy.ai/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "thinkbuddy"
+  },
+  {
+    "title": "UberLLM",
+    "body": "One API for LLMs and video.",
+    "tag": "Paid",
+    "url": "https://uberllm.dev/?ref=riseofmachine.com",
+    "date-added": "2026-11-04",
+    "slug": "uberllm"
   }
 ]
