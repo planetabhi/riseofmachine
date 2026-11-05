@@ -1634,6 +1634,9 @@
   "thinkbuddy": [
     "llm"
   ],
+  "uberllm": [
+    "llm"
+  ],
   "adalat": [
     "legal"
   ],
@@ -1844,6 +1847,9 @@
   "background": [
     "photos"
   ],
+  "beardstyles": [
+    "photos"
+  ],
   "beauty-test": [
     "photos"
   ],
@@ -1962,6 +1968,9 @@
     "photos"
   ],
   "headshot-photo": [
+    "photos"
+  ],
+  "ilook": [
     "photos"
   ],
   "image-changer-app": [
@@ -2537,6 +2546,9 @@
   "dc-hub": [
     "research"
   ],
+  "disconfirmai": [
+    "research"
+  ],
   "domain-name-generator": [
     "research"
   ],
@@ -2988,6 +3000,12 @@
     "video"
   ],
   "recapoai": [
+    "video"
+  ],
+  "reelpeat": [
+    "video"
+  ],
+  "refvid": [
     "video"
   ],
   "rewinai": [

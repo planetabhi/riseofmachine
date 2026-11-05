@@ -1,0 +1,19 @@
+{
+  "title": "UberLLM: cheap LLM, image and video API marketplace",
+  "description": "UberLLM is one OpenAI- and Anthropic-compatible API key for Claude, GPT, Gemini, DeepSeek and other text, image, video, music and speech models, usually below list price. Each request is served by a third-party provider and billed what that provider charged, from prepaid credit. No UberLLM fee on requests. Adding credit by card costs 5.5% + $0.50.",
+  "category": "llm",
+  "url": "https://uberllm.dev/?ref=riseofmachine.com",
+  "tag": "Paid",
+  "date-added": "2026-11-04",
+  "slug": "uberllm",
+  "related": [
+    "coderplan",
+    "openrouter",
+    "llamaindex",
+    "artificialwatch",
+    "gptgeminigrokai",
+    "ferryapi",
+    "deepseekv4dev",
+    "chatgpt"
+  ]
+}

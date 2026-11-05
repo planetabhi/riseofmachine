@@ -8,12 +8,12 @@
   "slug": "coderplan",
   "related": [
     "openrouter",
+    "uberllm",
     "artificialwatch",
     "gptgeminigrokai",
     "ferryapi",
     "chatgpt",
     "deepseek",
-    "potpie-aipotpie",
-    "agents-by-athena"
+    "potpie-aipotpie"
   ]
 }

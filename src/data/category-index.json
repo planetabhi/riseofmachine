@@ -45,7 +45,7 @@
   },
   "llm": {
     "title": "LLMs",
-    "count": 40
+    "count": 41
   },
   "legal": {
     "title": "Legal",
@@ -61,7 +61,7 @@
   },
   "photos": {
     "title": "Photos",
-    "count": 95
+    "count": 97
   },
   "productivity": {
     "title": "Productivity",
@@ -73,7 +73,7 @@
   },
   "research": {
     "title": "Research",
-    "count": 30
+    "count": 31
   },
   "seo": {
     "title": "SEO",
@@ -85,7 +85,7 @@
   },
   "video": {
     "title": "Video",
-    "count": 123
+    "count": 125
   },
   "xtras": {
     "title": "Xtras",
