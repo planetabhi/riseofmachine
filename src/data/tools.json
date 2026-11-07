@@ -5592,6 +5592,14 @@
           "slug": "photoroom"
         },
         {
+          "title": "Photoshoot.si",
+          "body": "AI photoshoots generated from uploaded selfies.",
+          "tag": "Freemium",
+          "url": "https://photoshoot.si/?ref=riseofmachine.com",
+          "date-added": "2026-11-07",
+          "slug": "photoshootsi"
+        },
+        {
           "title": "Picsart",
           "body": "AI photo editing & creative content platform.",
           "tag": "Freemium",
