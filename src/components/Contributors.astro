@@ -1,0 +1,192 @@
+---
+import contributors from "../data/contributors.json";
+---
+
+{contributors.length > 0 && (
+  <section class="home-section" id="section-contributors">
+    <h2 class="home-section-title">Contributors</h2>
+    <div class="contributors-strip" data-contributors>
+      <ul role="list" class="contributors-grid">
+        {contributors.map((c: any) => (
+          <li>
+            <a
+              class="contributor-avatar"
+              href={c.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={c.login}
+              title={c.login}
+            >
+              <img
+                src={c.avatar}
+                alt={c.login}
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
+      <button
+        type="button"
+        class="contributors-more nu-c-helper-text"
+        aria-expanded="false"
+        hidden
+      >+0 more</button>
+    </div>
+  </section>
+)}
+
+<style>
+  .home-section {
+    margin-bottom: var(--spacing-10);
+  }
+
+  .home-section-title {
+    margin: 0 0 var(--spacing-05) 0;
+    font-size: var(--desktop-body);
+    line-height: var(--lh-desktop-body);
+    color: var(--content-secondary);
+  }
+
+  .contributors-strip,
+  .contributors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-04);
+  }
+
+  .contributors-grid {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contributor-avatar,
+  .contributor-avatar img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  /* Mute avatars so mixed GitHub photos read evenly on the dark/black theme;
+     restore full colour on hover/focus. */
+  .contributor-avatar img {
+    filter: grayscale(1);
+    opacity: 0.72;
+    box-shadow: inset 0 0 0 0.5px var(--border-muted);
+    transition:
+      filter var(--duration-fast) var(--ease-smooth-out),
+      opacity var(--duration-fast) var(--ease-smooth-out);
+  }
+
+  .contributor-avatar:hover img,
+  .contributor-avatar:focus-visible img {
+    filter: none;
+    opacity: 1;
+  }
+
+  .contributors-more {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    color: var(--accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contributor-avatar img {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  // Cap the avatar strip to at most three rows at the current column width; any
+  // overflow collapses into a "+N more" button that expands the full list on
+  // click. Measured client-side since the fit depends on layout.
+  function capStrip(strip: HTMLElement) {
+    const grid = strip.querySelector<HTMLElement>(".contributors-grid");
+    const more = strip.querySelector<HTMLButtonElement>(".contributors-more");
+    if (!grid || !more) return;
+
+    const items = Array.from(grid.children) as HTMLElement[];
+    if (items.length === 0) return;
+
+    // Once expanded, keep every avatar visible.
+    if (strip.dataset.expanded === "true") {
+      items.forEach((item) => (item.hidden = false));
+      more.hidden = true;
+      more.setAttribute("aria-expanded", "true");
+      return;
+    }
+
+    // Reset so measurement reflects the full set.
+    items.forEach((item) => (item.hidden = false));
+    more.hidden = true;
+
+    const rowTops: number[] = [];
+    let cutoff = items.length;
+    for (let i = 0; i < items.length; i++) {
+      const top = items[i]!.offsetTop;
+      if (!rowTops.includes(top)) {
+        rowTops.push(top);
+        if (rowTops.length > 3) {
+          cutoff = i;
+          break;
+        }
+      }
+    }
+
+    if (cutoff < items.length) {
+      const hidden = items.length - cutoff;
+      for (let i = cutoff; i < items.length; i++) items[i]!.hidden = true;
+      more.textContent = `+${hidden} more`;
+      more.hidden = false;
+    }
+  }
+
+  function capContributors() {
+    document
+      .querySelectorAll<HTMLElement>("[data-contributors]")
+      .forEach(capStrip);
+  }
+
+  let raf = 0;
+  function scheduleCap() {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(capContributors);
+  }
+
+  let observer: ResizeObserver | null = null;
+
+  function initContributors() {
+    document
+      .querySelectorAll<HTMLElement>("[data-contributors]")
+      .forEach((strip) => {
+        const more = strip.querySelector<HTMLButtonElement>(".contributors-more");
+        more?.addEventListener("click", () => {
+          strip.dataset.expanded = "true";
+          capStrip(strip);
+          // Button hides itself on expand; move focus to the first revealed avatar.
+          strip
+            .querySelector<HTMLElement>(".contributor-avatar")
+            ?.focus();
+        });
+      });
+
+    capContributors();
+    const content = document.querySelector(".app-content");
+    if (content && "ResizeObserver" in window) {
+      observer?.disconnect();
+      observer = new ResizeObserver(scheduleCap);
+      observer.observe(content);
+    }
+  }
+
+  document.addEventListener("astro:page-load", initContributors);
+</script>

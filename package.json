@@ -48,6 +48,7 @@
     "add-slugs": "bun run scripts/add-slugs.ts",
     "crawl-mcp": "bun run scripts/crawl-mcp.ts",
     "crawl-skills": "bun run scripts/crawl-skills.ts",
+    "contributors": "bun run scripts/generate-contributors.ts",
     "clean": "rm -rf dist .astro src/data/slug-map.json src/data/tool-metadata src/data/category-index.json src/data/featured.json src/data/mcp-category-index.json src/data/skills-category-index.json public/search-index.json public/tool-descriptions.json public/mcp-index.json public/mcp-cat public/skills-index.json public/skills-cat",
     "test": "bun run prepare-data && vitest",
     "test:run": "bun run prepare-data && vitest run",
