@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import type { ToolsConfig, Category, Tool } from '../src/types/index.ts';
+import { safeHttpRequest } from './lib/safe-http.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,21 +25,17 @@ type Probe = { status?: number; timeout?: boolean; errCode?: string };
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function fetchOnce(url: string, method: 'HEAD' | 'GET'): Promise<Probe> {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
     try {
-        const res = await fetch(url, {
+        const response = await safeHttpRequest(url, {
             method,
-            redirect: 'follow',
+            timeoutMs: TIMEOUT_MS,
+            maxBytes: 0,
             headers: { 'User-Agent': USER_AGENT, Accept: '*/*' },
-            signal: controller.signal,
         });
-        return { status: res.status };
+        return { status: response.status };
     } catch (e: any) {
-        if (e?.name === 'AbortError') return { timeout: true };
+        if (e?.code === 'ETIMEDOUT') return { timeout: true };
         return { errCode: String(e?.cause?.code || e?.code || e?.name || 'ERR') };
-    } finally {
-        clearTimeout(timer);
     }
 }
 
@@ -52,6 +49,7 @@ function classify(p: Probe): Verdict | null {
     }
     if (p.timeout) return { kind: 'warn', reason: 'timeout' };
     const code = p.errCode || 'ERR';
+    if (code === 'EPRIVATE') return { kind: 'warn', reason: 'private-address' };
     if (code === 'ENOTFOUND') return { kind: 'dead', reason: 'dns' };
     if (code === 'ECONNREFUSED') return { kind: 'dead', reason: 'refused' };
     if (/CERT|TLS|SSL/i.test(code)) return { kind: 'dead', reason: 'tls' };

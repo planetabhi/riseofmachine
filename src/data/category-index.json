@@ -21,7 +21,7 @@
   },
   "developer": {
     "title": "Developer",
-    "count": 89
+    "count": 90
   },
   "education": {
     "title": "Education",
@@ -29,7 +29,7 @@
   },
   "enterprise": {
     "title": "Enterprise",
-    "count": 67
+    "count": 66
   },
   "fashion": {
     "title": "Fashion",
@@ -45,7 +45,7 @@
   },
   "llm": {
     "title": "LLMs",
-    "count": 41
+    "count": 40
   },
   "legal": {
     "title": "Legal",
@@ -81,11 +81,11 @@
   },
   "social": {
     "title": "Social Media",
-    "count": 27
+    "count": 26
   },
   "video": {
     "title": "Video",
-    "count": 125
+    "count": 124
   },
   "xtras": {
     "title": "Xtras",

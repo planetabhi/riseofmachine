@@ -8,12 +8,12 @@
   "slug": "agent-qa",
   "related": [
     "not-human-search",
+    "artigram",
     "sqlmate",
     "markitdown",
     "nat-checker",
     "tensorblock-forge",
     "create-apidev",
-    "x-note-writer-api",
-    "fitten-code"
+    "x-note-writer-api"
   ]
 }

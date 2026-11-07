@@ -11,9 +11,9 @@
     "create-apidev",
     "x-note-writer-api",
     "poe-api",
+    "artigram",
     "agent-qa",
     "sqlmate",
-    "markitdown",
-    "not-human-search"
+    "markitdown"
   ]
 }

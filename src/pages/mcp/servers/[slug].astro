@@ -74,7 +74,6 @@ const breadcrumbs = [
             <section class="mcp-fallback">
                 <h2>{server.title}</h2>
                 <p>{server.description}</p>
-                {server.installCommand && <pre class="mcp-fallback-cmd">{server.installCommand}</pre>}
                 <ul>
                     {server.websiteUrl && (
                         <li><a href={server.websiteUrl} target="_blank" rel="noopener nofollow">Website ↗</a></li>
@@ -99,15 +98,5 @@ const breadcrumbs = [
         flex-direction: column;
         gap: var(--spacing-04);
         max-width: 60ch;
-    }
-    .mcp-fallback-cmd {
-        margin: 0;
-        padding: var(--spacing-03) var(--spacing-04);
-        background-color: var(--background-secondary);
-        border-radius: var(--spacing-03);
-        font-family: var(--monospace);
-        font-size: var(--desktop-caption);
-        white-space: pre-wrap;
-        word-break: break-all;
     }
 </style>

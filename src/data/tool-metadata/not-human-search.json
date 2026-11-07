@@ -10,10 +10,10 @@
     "agent-qa",
     "cosine",
     "teachable-machine",
+    "artigram",
     "sqlmate",
     "markitdown",
     "nat-checker",
-    "tensorblock-forge",
-    "create-apidev"
+    "tensorblock-forge"
   ]
 }

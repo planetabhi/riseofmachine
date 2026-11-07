@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { parse } from 'node-html-parser';
 import type { ToolsConfig, Tool, MetadataEntry, MetadataMap } from '../src/types/index.ts';
+import { safeHttpRequest } from './lib/safe-http.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -75,21 +76,21 @@ async function fetchMetadata(tool: Tool): Promise<MetadataEntry | null> {
     const url = tool.url;
     if (!url) return null;
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
     try {
-        const response = await fetch(url, {
+        const response = await safeHttpRequest(url, {
+            method: 'GET',
+            timeoutMs: TIMEOUT_MS,
+            maxBytes: 2_000_000,
+            maxRedirects: 5,
             headers: { "User-Agent": USER_AGENT },
-            signal: controller.signal,
         });
 
-        if (!response.ok) return null;
+        if (response.status < 200 || response.status >= 300) return null;
 
-        const contentType = response.headers.get("content-type");
-        if (contentType && !contentType.includes("text/html")) return null;
+        const contentType = response.headers['content-type'];
+        if (contentType && !String(contentType).includes("text/html")) return null;
 
-        const html = await response.text();
+        const html = response.body.toString('utf-8');
         const root = parse(html);
 
         const title =
@@ -113,10 +114,8 @@ async function fetchMetadata(tool: Tool): Promise<MetadataEntry | null> {
             ogImage: ogImage || undefined,
         };
 
-    } catch (err: any) {
+    } catch {
         return null;
-    } finally {
-        clearTimeout(timeoutId);
     }
 }
 

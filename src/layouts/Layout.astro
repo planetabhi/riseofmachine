@@ -7,7 +7,6 @@ import ContentTopbar from "../components/ContentTopbar.astro";
 import Hero from "../components/Hero.astro";
 import DetailPanel from "../components/DetailPanel.astro";
 import BookmarkSync from "../components/BookmarkSync.astro";
-import MoireBackground from "../components/MoireBackground.astro";
 import '@new-ui/foundations/css';
 import '@new-ui/themes/css';
 import "../styles/transitions.css";
@@ -161,7 +160,6 @@ const resolvedTwitterCard = twitterCard ?? "summary_large_image";
 
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
-        <MoireBackground />
         <Sidebar
             showLatestFilter={showLatestFilter}
             categoryIndex={sidebarCategoryIndex}

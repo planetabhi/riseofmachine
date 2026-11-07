@@ -8,12 +8,12 @@
   "slug": "sqlmate",
   "related": [
     "oss-insight",
+    "artigram",
     "agent-qa",
     "markitdown",
     "not-human-search",
     "nat-checker",
     "tensorblock-forge",
-    "create-apidev",
-    "x-note-writer-api"
+    "create-apidev"
   ]
 }

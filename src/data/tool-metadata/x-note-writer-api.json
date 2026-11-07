@@ -9,11 +9,11 @@
   "related": [
     "tensorblock-forge",
     "create-apidev",
+    "artigram",
     "agent-qa",
     "sqlmate",
     "markitdown",
     "not-human-search",
-    "nat-checker",
-    "fitten-code"
+    "nat-checker"
   ]
 }
