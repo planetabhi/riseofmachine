@@ -7,13 +7,13 @@
   "date-added": "2023-12-15",
   "slug": "autoregex",
   "related": [
+    "artigram",
     "agent-qa",
     "sqlmate",
     "markitdown",
     "not-human-search",
     "nat-checker",
     "tensorblock-forge",
-    "create-apidev",
-    "x-note-writer-api"
+    "create-apidev"
   ]
 }

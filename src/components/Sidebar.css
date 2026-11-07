@@ -178,7 +178,7 @@
 
 .sidebar-count {
     flex-shrink: 0;
-    color: var(--content-placeholder);
+    color: var(--content-secondary-alt);
     font-family: var(--monospace);
     font-size: var(--desktop-caption);
     line-height: var(--lh-desktop-caption);
@@ -197,7 +197,7 @@
 .sidebar-legal {
     margin-block: var(--spacing-06);
     padding: 0 var(--spacing-03);
-    color: var(--content-placeholder);
+    color: var(--content-secondary-alt);
     font-family: var(--monospace);
     font-size: var(--desktop-caption);
     line-height: var(--lh-desktop-body-sm);

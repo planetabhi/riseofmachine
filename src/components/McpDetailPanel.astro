@@ -369,8 +369,6 @@
     let pushed = false;
     let openCategory = '';
     let originUrl = '';
-    let currentCommand = '';
-    let currentKind = '';
     let currentConfig = '';
     let retryTimer = 0;
 
@@ -462,27 +460,9 @@
         if (updated) updated.textContent = ok ? `Updated ${dateFmt.format(parsed as Date)}` : '';
 
         // Facts.
-        const kind = d.installKind || 'none';
         setText('mcp-detail-transports', (d.transports || '').split(',').filter(Boolean).join(', ') || 'Not provided');
         setText('mcp-detail-registries', (d.registries || '').split(',').filter(Boolean).join(', ') || 'Not provided');
         setText('mcp-detail-version', d.version || 'Not provided');
-
-        // Primary action — copy the install command / endpoint (zero navigation).
-        currentCommand = d.installCommand || '';
-        currentKind = kind;
-
-        // Full install command, rendered inline with an embedded copy button.
-        const cmdSection = document.getElementById('mcp-detail-cmd-section');
-        const cmd = document.getElementById('mcp-detail-cmd');
-        const copyBtn = document.getElementById('mcp-detail-copy');
-        if (cmdSection && cmd) {
-            cmd.textContent = currentCommand;
-            cmdSection.hidden = !currentCommand;
-        }
-        if (copyBtn) {
-            copyBtn.classList.remove('is-copied');
-            copyBtn.setAttribute('aria-label', kind === 'remote' ? 'Copy endpoint URL' : 'Copy install command');
-        }
 
         // Client config block (mcpServers JSON) derived from the install command.
         currentConfig = buildClientConfig(d);
@@ -543,38 +523,6 @@
         // Monogram (first letter of the title) stands in for the removed icon.
         const mono = document.getElementById('mcp-detail-monogram');
         if (mono) mono.textContent = (d.title?.trim()[0] ?? '?').toUpperCase();
-    }
-
-    async function copyCommand() {
-        if (!currentCommand) return;
-        const btn = document.getElementById('mcp-detail-copy');
-        let okCopy = false;
-        try {
-            await navigator.clipboard.writeText(currentCommand);
-            okCopy = true;
-        } catch {
-            // Fallback for non-secure contexts / no clipboard API.
-            try {
-                const ta = document.createElement('textarea');
-                ta.value = currentCommand;
-                ta.style.position = 'fixed';
-                ta.style.opacity = '0';
-                document.body.appendChild(ta);
-                ta.select();
-                okCopy = document.execCommand('copy');
-                document.body.removeChild(ta);
-            } catch {
-                okCopy = false;
-            }
-        }
-        if (btn && okCopy) {
-            btn.classList.add('is-copied');
-            btn.setAttribute('aria-label', 'Copied');
-            window.setTimeout(() => {
-                btn.classList.remove('is-copied');
-                btn.setAttribute('aria-label', currentKind === 'remote' ? 'Copy endpoint URL' : 'Copy install command');
-            }, 1600);
-        }
     }
 
     async function copyText(text: string): Promise<boolean> {
@@ -720,11 +668,6 @@
                 if (target.closest('#mcp-detail-close')) {
                     e.preventDefault();
                     requestClose();
-                    return;
-                }
-                if (target.closest('#mcp-detail-copy')) {
-                    e.preventDefault();
-                    void copyCommand();
                     return;
                 }
                 if (target.closest('#mcp-detail-config-copy')) {

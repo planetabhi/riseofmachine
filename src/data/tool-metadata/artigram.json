@@ -1,0 +1,19 @@
+{
+  "title": "ArtiGram · Share and discover AI-made artifacts",
+  "description": "Share and discover artifacts made with Claude, ChatGPT and other AI assistants.",
+  "category": "developer",
+  "url": "https://artigram.cafeboon.com?ref=riseofmachine.com",
+  "tag": "Free",
+  "date-added": "2026-11-07",
+  "slug": "artigram",
+  "related": [
+    "not-human-search",
+    "agent-qa",
+    "sqlmate",
+    "markitdown",
+    "nat-checker",
+    "tensorblock-forge",
+    "create-apidev",
+    "x-note-writer-api"
+  ]
+}

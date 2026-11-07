@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:27:42.477Z",
+  "generatedAt": "2026-11-07T10:10:35.092Z",
   "skills": [
     {
       "slug": "ad-creative",
@@ -134,7 +134,7 @@
     {
       "slug": "design-taste-frontend",
       "source": "leonxlnx/taste-skill",
-      "description": "tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love, Awwwards Sites of the Day). Deals researched directions (idea, composition, type, palette, photographs, section blueprints) from a library, enforces a strict no-slop house style with a real-browser inspector, and runs a look-and-fix loop on screenshots. Use this whenever you build, design, redesign, restyle, polish or review a landing page, marketing site, portfolio, product page, one-pager, hero or any public-facing web page, in any stack (HTML/CSS, React, Next.js, Vue, Svelte, Astro, Tailwind) — also when the user says a page looks generic, templated, \"AI-made\", sloppy, or asks to make it look designed, premium, award-level or less like every other site. Also for app screens: dashboards, admin and analytics views, settings, inboxes and other screens people work in, with their own run and rules.",
+      "description": "tasteskill 2.5.0, the anti-slop frontend skill. Builds professional company websites at the level of figma.com and x.ai: plain copy, one system, one section per screen, equal edges, real photographs and real product UI (product renders when there are no photographs), with shader effects, scenes and moments only on tech, gaming and software pages, quiet micro-interactions, and a checker that enforces it in a real browser. Use this whenever you build, design, redesign, restyle, polish or review a landing page, company, product, shop, cafe, hotel, studio, SaaS, AI, developer-tool or game site, in any stack (HTML/CSS, React, Next.js, Vue, Svelte, Astro, Tailwind), or when the user says a page looks generic, templated or \"AI-made\".",
       "url": "https://www.skills.sh/leonxlnx/taste-skill/design-taste-frontend",
       "installCommand": "npx skills add https://github.com/leonxlnx/taste-skill --skill design-taste-frontend",
       "categories": [
@@ -263,6 +263,16 @@
       ]
     },
     {
+      "slug": "lyrical-prose",
+      "source": "planetabhi/skills",
+      "description": "Rewrite existing English text into, or generate new English text in, a lyrical and contemplative prose style. Flowing, musical sentences that move from a concrete particular to a wide horizon, ground every idea in a plain image, and resolve on affirmation. Use when the user says \"make this lyrical\", \"more poetic or flowing prose\", \"contemplative style\", \"write a meditation on\", \"elevate this passage\", or asks to transmute plain prose into a rhythmic, evocative register. Subject-agnostic, and governs voice, structure, cadence, imagery, diction, and rhetoric. Authored by @planetabhi.",
+      "url": "https://github.com/planetabhi/skills",
+      "installCommand": "npx skills add https://github.com/planetabhi/skills --skill lyrical-prose",
+      "categories": [
+        "agent-workflows"
+      ]
+    },
+    {
       "slug": "marketing-psychology",
       "source": "coreyhaines31/marketingskills",
       "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting.",
@@ -270,6 +280,26 @@
       "installCommand": "npx skills add https://github.com/coreyhaines31/marketingskills --skill marketing-psychology",
       "categories": [
         "marketing"
+      ]
+    },
+    {
+      "slug": "mongodb-query-optimizer",
+      "source": "mongodb/agent-skills",
+      "description": "Help with MongoDB query optimization and indexing. Use only when the user asks for optimization or performance: \"How do I optimize this query?\", \"How do I index this?\", \"Why is this query slow?\", \"Can you fix my slow queries?\", \"What are the slow queries on my cluster?\", etc. Do not invoke for general MongoDB query writing unless user asks for performance or index help. Prefer indexing as optimization strategy. Use MongoDB MCP when available.",
+      "url": "https://www.skills.sh/mongodb/agent-skills/mongodb-query-optimizer",
+      "installCommand": "npx skills add https://github.com/mongodb/agent-skills --skill mongodb-query-optimizer",
+      "categories": [
+        "databases"
+      ]
+    },
+    {
+      "slug": "mongodb-search-and-ai",
+      "source": "mongodb/agent-skills",
+      "description": "Covers everything about search in MongoDB: Atlas Search (full-text), Vector Search (semantic), and Hybrid Search. Use this skill for ANY question about MongoDB search, including open-ended and explanatory ones asked before the user has any data or use case — 'how does search work in MongoDB?', 'I'm new to MongoDB search, where do I start?', 'what's the difference between Atlas Search and Vector Search?', 'which search type should I use?', 'what is vector search?', 'how does automated embedding work?', 'can you explain hybrid search?'. Do not answer these from general knowledge; use this skill. Also use to build search features: full-text queries, autocomplete, fuzzy matching, faceted search, semantic similarity, embeddings, RAG, text containment or substring matching ('contains', 'includes'), case-insensitive or multi-field text search, and filtering across many fields. Provides workflows for choosing a search type, creating indexes, writing queries, and optimizing performance via the MongoDB MCP server.",
+      "url": "https://www.skills.sh/mongodb/agent-skills/mongodb-search-and-ai",
+      "installCommand": "npx skills add https://github.com/mongodb/agent-skills --skill mongodb-search-and-ai",
+      "categories": [
+        "databases"
       ]
     },
     {
@@ -295,7 +325,7 @@
     {
       "slug": "neon-postgres",
       "source": "neondatabase/agent-skills",
-      "description": "Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching, autoscaling, scale-to-zero, instant restore, read replicas, IP allow lists, logical replication, and Lakebase Search. Use when the work is an existing DATABASE_URL, SQL, schema, inspect, or search. New backends, Auth, files, Functions, and LLM calls go to the parent `neon` skill. Live queries, reactive UIs, and realtime data go to `neon-realtime`. Also use for \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"neon inspect db\", \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or \"hybrid search\".",
+      "description": "Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching (including schema-only, reset-from-parent, and branch-per-PR workflows), autoscaling, scale-to-zero, instant restore, read replicas, IP allow lists, logical replication, egress optimization, and Lakebase Search. Use when the work is an existing DATABASE_URL, SQL, schema, inspect, or search. New backends, Auth, files, Functions, and LLM calls go to the parent `neon` skill. Live queries, reactive UIs, and realtime data go to `neon-realtime`. Also use for \"@neondatabase/serverless\", \"@neon/neon-js\", \"neon inspect db\", \"neon postgres computes\", \"Neon branch\", \"schema-only branch\", \"reset branch\", \"branch per PR\", high database bills, network transfer or egress, SELECT * optimization, query overfetching, \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or \"hybrid search\".",
       "url": "https://www.skills.sh/neondatabase/agent-skills/neon-postgres",
       "installCommand": "npx skills add https://github.com/neondatabase/agent-skills --skill neon-postgres",
       "categories": [
@@ -560,7 +590,7 @@
     {
       "slug": "ui-ux-pro-max",
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+      "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 80 searchable styles (51 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
       "url": "https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max",
       "installCommand": "npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max",
       "categories": [

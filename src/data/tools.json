@@ -3535,14 +3535,6 @@
           "slug": "ioni"
         },
         {
-          "title": "Jude AI",
-          "body": "Real estate with AI.",
-          "tag": "From $12.99/mo",
-          "url": "https://www.judeai.com/?ref=riseofmachine.com",
-          "date-added": "2023-12-29",
-          "slug": "jude-ai"
-        },
-        {
           "title": "Kommunicate",
           "body": "Customer support with chatbot.",
           "tag": "From $100/mo",
@@ -4333,14 +4325,6 @@
           "url": "https://modal.com/?ref=riseofmachine.com",
           "date-added": "2023-12-24",
           "slug": "modal"
-        },
-        {
-          "title": "Numbers Station",
-          "body": "Data analytics copilot.",
-          "tag": "Freemium",
-          "url": "https://www.numbersstation.ai/?ref=riseofmachine.com",
-          "date-added": "2023-12-24",
-          "slug": "numbers-station"
         },
         {
           "title": "OpenRouter",
@@ -5518,14 +5502,6 @@
           "url": "https://nanopic.ai/?ref=riseofmachine.com",
           "date-added": "2025-11-18",
           "slug": "nanopic"
-        },
-        {
-          "title": "Nostalgia Photo",
-          "body": "Restore old photographs.",
-          "tag": "From $3",
-          "url": "https://www.nostalgia.photo/?ref=riseofmachine.com",
-          "date-added": "2023-12-15",
-          "slug": "nostalgia-photo"
         },
         {
           "title": "Palette",
@@ -7301,14 +7277,6 @@
       "category": "social",
       "content": [
         {
-          "title": "Assembo",
-          "body": "Generate product photos & videos.",
-          "tag": "Freemium",
-          "url": "https://app.assembo.ai/?ref=riseofmachine.com",
-          "date-added": "2023-12-26",
-          "slug": "assembo"
-        },
-        {
           "title": "AuthorScale",
           "body": "Create viral TikTok content for authors and books.",
           "tag": "Freemium",
@@ -7641,14 +7609,6 @@
           "url": "https://danceaigenerator.com?ref=riseofmachine.com",
           "date-added": "2026-10-23",
           "slug": "dance-ai-generator"
-        },
-        {
-          "title": "Dance2AI",
-          "body": "AI video generator using Seedance 2.0.",
-          "tag": "Freemium",
-          "url": "https://dance2ai.com?ref=riseofmachine.com",
-          "date-added": "2026-04-21",
-          "slug": "dance2ai"
         },
         {
           "title": "DaVinci Resolve",
@@ -8834,7 +8794,7 @@
         },
         {
           "title": "Mee Manga Translator",
-          "body": "Translate manga while keeping layout",
+          "body": "Translate manga while keeping layout.",
           "tag": "Freemium",
           "url": "https://mangatranslator.me/?ref=riseofmachine.com",
           "date-added": "2026-05-14",

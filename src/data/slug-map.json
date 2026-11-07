@@ -890,6 +890,9 @@
   "amazon-sagemaker": [
     "developer"
   ],
+  "artigram": [
+    "developer"
+  ],
   "atla": [
     "developer"
   ],
@@ -1304,9 +1307,6 @@
   "ioni": [
     "enterprise"
   ],
-  "jude-ai": [
-    "enterprise"
-  ],
   "kommunicate": [
     "enterprise"
   ],
@@ -1593,9 +1593,6 @@
     "llm"
   ],
   "modal": [
-    "llm"
-  ],
-  "numbers-station": [
     "llm"
   ],
   "openrouter": [
@@ -2030,9 +2027,6 @@
   "nanopic": [
     "photos"
   ],
-  "nostalgia-photo": [
-    "photos"
-  ],
   "palette": [
     "photos"
   ],
@@ -2058,6 +2052,9 @@
     "photos"
   ],
   "photoroom": [
+    "photos"
+  ],
+  "photoshootsi": [
     "photos"
   ],
   "picsart": [
@@ -2684,9 +2681,6 @@
   "writetext-shopify": [
     "seo"
   ],
-  "assembo": [
-    "social"
-  ],
   "authorscale": [
     "social"
   ],
@@ -2808,9 +2802,6 @@
     "video"
   ],
   "dance-ai-generator": [
-    "video"
-  ],
-  "dance2ai": [
     "video"
   ],
   "davinci-resolve": [

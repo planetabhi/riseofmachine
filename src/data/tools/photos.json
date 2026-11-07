@@ -544,14 +544,6 @@
     "slug": "nanopic"
   },
   {
-    "title": "Nostalgia Photo",
-    "body": "Restore old photographs.",
-    "tag": "From $3",
-    "url": "https://www.nostalgia.photo/?ref=riseofmachine.com",
-    "date-added": "2023-12-15",
-    "slug": "nostalgia-photo"
-  },
-  {
     "title": "Palette",
     "body": "Colorize pictures.",
     "tag": "Pay-as-you-go",
@@ -622,6 +614,14 @@
     "url": "https://www.photoroom.com/?ref=riseofmachine.com",
     "date-added": "2023-12-15",
     "slug": "photoroom"
+  },
+  {
+    "title": "Photoshoot.si",
+    "body": "AI photoshoots generated from uploaded selfies.",
+    "tag": "Freemium",
+    "url": "https://photoshoot.si/?ref=riseofmachine.com",
+    "date-added": "2026-11-07",
+    "slug": "photoshootsi"
   },
   {
     "title": "Picsart",
