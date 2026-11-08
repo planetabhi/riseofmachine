@@ -8395,6 +8395,13 @@
           "slug": "vidmix"
         },
         {
+          "title": "Vidney",
+          "body": "Generate videos and images with AI.",
+          "url": "https://vidney.ai/?ref=riseofmachine.com",
+          "date-added": "2026-11-08",
+          "slug": "vidney"
+        },
+        {
           "title": "Vidu Studio",
           "body": "Text and image to video converter.",
           "tag": "Freemium",
