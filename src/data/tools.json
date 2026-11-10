@@ -5720,6 +5720,14 @@
           "slug": "sellerpic"
         },
         {
+          "title": "TooExtra AI",
+          "body": "Edits photos with AI templates.",
+          "tag": "Paid",
+          "url": "https://tooextra.app?ref=riseofmachine.com",
+          "date-added": "2026-11-10",
+          "slug": "tooextra-ai"
+        },
+        {
           "title": "Topaz Labs",
           "body": "AI photo & video editing, local & secure.",
           "tag": "Freemium",
