@@ -4992,6 +4992,14 @@
           "slug": "add-person-to-photo"
         },
         {
+          "title": "Age Filter",
+          "body": "Age progression filter for adult portraits.",
+          "tag": "Freemium",
+          "url": "https://aiagefilter.net/?ref=riseofmachine.com",
+          "date-added": "2026-11-10",
+          "slug": "age-filter"
+        },
+        {
           "title": "AI Image Combiner",
           "body": "Merge multiple photos with AI.",
           "tag": "Freemium",
