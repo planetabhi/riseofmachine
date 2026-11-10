@@ -1289,6 +1289,13 @@
           "slug": "forge"
         },
         {
+          "title": "Imagera Code",
+          "body": "Terminal coding agent with 276 models.",
+          "tag": "Paid",
+          "url": "https://imagera.ai/code?ref=riseofmachine.com",
+          "date-added": "2026-11-10"
+        },
+        {
           "title": "Melty",
           "body": "AI code editor.",
           "tag": "Early access",
