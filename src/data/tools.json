@@ -1043,6 +1043,14 @@
           "slug": "ringfoods"
         },
         {
+          "title": "ScribVoice",
+          "body": "Transcribe audio and video recordings.",
+          "tag": "Freemium",
+          "url": "https://scribvoice.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-10",
+          "slug": "scribvoice"
+        },
+        {
           "title": "Song Maker",
           "body": "Create songs effortlessly with our AI Song Maker.",
           "tag": "Freemium",
