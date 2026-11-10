@@ -6301,6 +6301,14 @@
           "slug": "noty"
         },
         {
+          "title": "Novastart",
+          "body": "Infinite canvas OS with AI agents.",
+          "tag": "Freemium",
+          "url": "https://novastart.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-10",
+          "slug": "novastart"
+        },
+        {
           "title": "Nurturally",
           "body": "Lead nurturing platform for intelligent follow-ups.",
           "tag": "From $19/mo",
@@ -7871,7 +7879,8 @@
           "body": "AI video studio with consistent characters.",
           "tag": "Paid",
           "url": "https://imagera.ai/?ref=riseofmachine.com",
-          "date-added": "2026-11-08"
+          "date-added": "2026-11-08",
+          "slug": "imagera"
         },
         {
           "title": "imagetovideo.io",
