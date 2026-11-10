@@ -178,7 +178,7 @@
     }
 
     function setSectionsHidden(hidden: boolean) {
-        ['section-latest', 'section-featured'].forEach((id) => {
+        ['section-latest', 'section-featured', 'section-contributors'].forEach((id) => {
             const el = document.getElementById(id);
             if (el) el.hidden = hidden;
         });

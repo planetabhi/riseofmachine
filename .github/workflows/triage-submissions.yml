@@ -45,19 +45,52 @@ jobs:
               return;
             }
 
-            // First non-empty, non-comment line under a "### Heading" (body capped for regex safety).
+            // First non-empty, non-comment line of a "### Heading" block OR an inline
+            // "Heading: value" line (optionally bold/blockquoted). The template block wins when
+            // both are present. A Markdown link or <autolink> is unwrapped to its raw value.
+            // Kept in sync with scripts/agent/parse-issue.ts.
             const body = (context.payload.issue.body || '').slice(0, 20000);
-            const field = (heading) =>
-              (body.match(new RegExp(`### +${heading}\\s*([\\s\\S]*?)(?=\\n### |\\n---|$)`, 'i'))?.[1] || '')
-                .replace(/<!--[\s\S]*?-->/g, '')
-                .split('\n').map((l) => l.trim()).find(Boolean) || '';
+            const firstLine = (chunk) => (chunk || '')
+              .replace(/<!--[\s\S]*?-->/g, '')
+              .split('\n').map((l) => l.trim()).find(Boolean) || '';
+            const clean = (value) => {
+              let v = (value || '').trim();
+              const link = v.match(/^\[[^\]]*\]\((\S+?)\)$/);
+              if (link) v = link[1].trim();
+              const auto = v.match(/^<(\S+)>$/);
+              if (auto) v = auto[1].trim();
+              return v.trim();
+            };
+            const field = (heading) => {
+              const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              const block = body.match(new RegExp(`### +${escaped}\\s*([\\s\\S]*?)(?=\\n### |\\n---|$)`, 'i'));
+              const inline = body.match(new RegExp(`^[>\\s]*[*_]{0,2}${escaped}[*_]{0,2}\\s*:\\s*[*_]{0,2}\\s*(.+)$`, 'im'));
+              return clean(firstLine(block && block[1]) || firstLine(inline && inline[1]));
+            };
+
+            // Fallback for prose bodies with no labelled field: first valid https URL, with
+            // wrappers/trailing punctuation stripped and asset (image) links skipped.
+            const findUrl = (text) => {
+              const candidates = text.match(/https?:\/\/[^\s<>()[\]]+/gi) || [];
+              for (const raw of candidates) {
+                const url = raw.replace(/[.,;:!?'")\]]+$/, '');
+                try {
+                  const u = new URL(url);
+                  if (u.protocol !== 'https:') continue;
+                  if (!/[^.]\.[^.]/.test(u.hostname)) continue;
+                  if (/\.(png|jpe?g|gif|svg|webp|ico|bmp|avif)$/i.test(u.pathname)) continue;
+                  return url;
+                } catch { continue; }
+              }
+              return '';
+            };
 
             const fails = [];
             // Validate the Website URL with the WHATWG URL parser (Node built-in, RFC 3986 /
             // URL Standard compliant): must be https and have a dotted host. All other fields
             // are left for human review.
             const isHttpsUrl = (v) => { try { const u = new URL(v); return u.protocol === 'https:' && /[^.]\.[^.]/.test(u.hostname); } catch { return false; } };
-            if (!isHttpsUrl(field('Website URL'))) fails.push('Website URL must be a valid `https://` link.');
+            if (!isHttpsUrl(field('Website URL') || findUrl(body))) fails.push('Website URL must be a valid `https://` link.');
 
             const marker = '<!-- triage-bot -->';
             const label = fails.length ? 'needs-changes' : 'validated';

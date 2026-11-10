@@ -9,11 +9,11 @@
   "related": [
     "lami",
     "voicetype",
+    "transcribe-video-to-the-text",
     "lyricstosong",
     "trint",
     "unreal-speech",
     "wellsaid-labs",
-    "remove-audio",
-    "audjust-ai"
+    "remove-audio"
   ]
 }

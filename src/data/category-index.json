@@ -5,7 +5,7 @@
   },
   "audio": {
     "title": "Audio",
-    "count": 48
+    "count": 49
   },
   "code": {
     "title": "Code",
@@ -17,7 +17,7 @@
   },
   "design": {
     "title": "Design",
-    "count": 62
+    "count": 63
   },
   "developer": {
     "title": "Developer",
@@ -45,7 +45,7 @@
   },
   "llm": {
     "title": "LLMs",
-    "count": 40
+    "count": 41
   },
   "legal": {
     "title": "Legal",
@@ -61,11 +61,11 @@
   },
   "photos": {
     "title": "Photos",
-    "count": 97
+    "count": 98
   },
   "productivity": {
     "title": "Productivity",
-    "count": 114
+    "count": 115
   },
   "prompts": {
     "title": "Prompts",
@@ -85,7 +85,7 @@
   },
   "video": {
     "title": "Video",
-    "count": 124
+    "count": 127
   },
   "xtras": {
     "title": "Xtras",

@@ -7,13 +7,13 @@
   "date-added": "2023-12-26",
   "slug": "delphi",
   "related": [
+    "teapot-router",
     "uberllm",
     "artificialwatch",
     "gptgeminigrokai",
     "coderplan",
     "ferryapi",
     "deepseekv4dev",
-    "chatgpt",
-    "deepseek"
+    "chatgpt"
   ]
 }

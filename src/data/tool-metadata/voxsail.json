@@ -8,12 +8,12 @@
   "slug": "voxsail",
   "related": [
     "wan-22",
+    "imagera",
     "powerdirector",
     "rask-ai",
     "reelpeat",
     "transcribe-video-ai",
     "grok-video-generator",
-    "libretto",
-    "fliki"
+    "libretto"
   ]
 }

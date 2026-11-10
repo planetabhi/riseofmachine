@@ -304,6 +304,14 @@
     "slug": "smarter-chatgpt-by-athena"
   },
   {
+    "title": "Teapot Router",
+    "body": "Gateway for Claude Code and GPT.",
+    "tag": "Not available",
+    "url": "https://teapotrouter.com/en?ref=riseofmachine.com",
+    "date-added": "2026-11-07",
+    "slug": "teapot-router"
+  },
+  {
     "title": "Thinkbuddy",
     "body": "Native ChatGPT for MacOS with voice & vision.",
     "tag": "Freemium",

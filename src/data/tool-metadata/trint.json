@@ -7,13 +7,13 @@
   "date-added": "2025-06-06",
   "slug": "trint",
   "related": [
+    "transcribe-video-to-the-text",
     "sync",
     "wellsaid-labs",
     "mp3-to-text",
     "audjust-ai",
     "lami",
     "voicetype",
-    "cleanaudio-ai",
-    "dubbing-30"
+    "cleanaudio-ai"
   ]
 }

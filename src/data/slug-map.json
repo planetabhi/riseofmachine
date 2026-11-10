@@ -398,6 +398,9 @@
   "sync": [
     "audio"
   ],
+  "transcribe-video-to-the-text": [
+    "audio"
+  ],
   "trint": [
     "audio"
   ],
@@ -798,6 +801,9 @@
     "design"
   ],
   "napkin-ai": [
+    "design"
+  ],
+  "objektoio": [
     "design"
   ],
   "paper-design": [
@@ -1628,6 +1634,9 @@
   "smarter-chatgpt-by-athena": [
     "llm"
   ],
+  "teapot-router": [
+    "llm"
+  ],
   "thinkbuddy": [
     "llm"
   ],
@@ -1877,9 +1886,6 @@
   "bulkgen-ai": [
     "photos"
   ],
-  "can-of-soup": [
-    "photos"
-  ],
   "cartoon-to-real": [
     "photos"
   ],
@@ -1914,6 +1920,9 @@
     "photos"
   ],
   "faceswap": [
+    "photos"
+  ],
+  "faceswapfree": [
     "photos"
   ],
   "facevary": [
@@ -2097,6 +2106,9 @@
     "photos"
   ],
   "sellerpic": [
+    "photos"
+  ],
+  "tooextra-ai": [
     "photos"
   ],
   "topaz-labs": [
@@ -2307,6 +2319,9 @@
     "productivity"
   ],
   "noty": [
+    "productivity"
+  ],
+  "novastart": [
     "productivity"
   ],
   "nurturally": [
@@ -2780,6 +2795,9 @@
   "bgchanger": [
     "video"
   ],
+  "burncaps": [
+    "video"
+  ],
   "capcut": [
     "video"
   ],
@@ -2880,6 +2898,9 @@
     "video"
   ],
   "image2video": [
+    "video"
+  ],
+  "imagera": [
     "video"
   ],
   "imagetovideoio": [
@@ -3093,6 +3114,9 @@
     "video"
   ],
   "vidmix": [
+    "video"
+  ],
+  "vidney": [
     "video"
   ],
   "vidu-studio": [

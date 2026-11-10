@@ -13,7 +13,7 @@
     "openrouter",
     "uberllm",
     "coderplan",
-    "artificialwatch",
-    "gptgeminigrokai"
+    "teapot-router",
+    "artificialwatch"
   ]
 }

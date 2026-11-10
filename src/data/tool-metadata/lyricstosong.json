@@ -10,10 +10,10 @@
     "mp3-to-text",
     "lami",
     "voicetype",
+    "transcribe-video-to-the-text",
     "song-maker",
     "trint",
     "unreal-speech",
-    "wellsaid-labs",
-    "remove-audio"
+    "wellsaid-labs"
   ]
 }

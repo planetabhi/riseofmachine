@@ -10,10 +10,10 @@
     "unreal-speech",
     "mp3-to-text",
     "lami",
+    "transcribe-video-to-the-text",
     "lyricstosong",
     "whisper",
     "trint",
-    "wellsaid-labs",
-    "f5-tts"
+    "wellsaid-labs"
   ]
 }
