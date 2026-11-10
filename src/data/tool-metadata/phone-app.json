@@ -7,13 +7,13 @@
   "date-added": "2025-06-06",
   "slug": "phone-app",
   "related": [
+    "transcribe-video-to-the-text",
     "remove-audio",
     "audjust-ai",
     "cleanaudio-ai",
     "mp3-to-text",
     "goose-pod",
     "monologue",
-    "whisper",
-    "openwispr"
+    "whisper"
   ]
 }

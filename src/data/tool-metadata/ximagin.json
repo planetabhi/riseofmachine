@@ -9,11 +9,11 @@
   "related": [
     "magicpatterns",
     "x-design",
+    "objektoio",
     "svg-animation",
     "ai3dgen",
     "applore",
     "imgto3d",
-    "floordrafter",
-    "morphlogo"
+    "floordrafter"
   ]
 }

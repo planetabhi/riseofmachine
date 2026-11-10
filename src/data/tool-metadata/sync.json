@@ -12,8 +12,8 @@
     "cleanaudio-ai",
     "audio-muse",
     "mix-audio",
+    "transcribe-video-to-the-text",
     "remove-audio",
-    "wellsaid-labs",
-    "mp3-to-text"
+    "wellsaid-labs"
   ]
 }

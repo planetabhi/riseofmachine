@@ -11,9 +11,9 @@
     "wellsaid-labs",
     "mp3-to-text",
     "lami",
+    "transcribe-video-to-the-text",
     "lyricstosong",
     "elevenlabs",
-    "whisper",
-    "trint"
+    "whisper"
   ]
 }

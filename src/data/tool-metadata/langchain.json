@@ -12,8 +12,8 @@
     "helicone",
     "langfuse",
     "litellm",
+    "teapot-router",
     "uberllm",
-    "artificialwatch",
-    "gptgeminigrokai"
+    "artificialwatch"
   ]
 }

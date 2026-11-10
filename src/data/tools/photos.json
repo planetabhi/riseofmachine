@@ -144,14 +144,6 @@
     "slug": "bulkgen-ai"
   },
   {
-    "title": "Can of Soup",
-    "body": "AI photos with your friends.",
-    "tag": "Free",
-    "url": "https://canofsoup.com/?ref=riseofmachine.com",
-    "date-added": "2023-12-28",
-    "slug": "can-of-soup"
-  },
-  {
     "title": "Cartoon To Real",
     "body": "Turn cartoon into real life effortlessly.",
     "tag": "Freemium",
@@ -246,6 +238,14 @@
     "url": "https://aifaceswap.app/?ref=riseofmachine.com",
     "date-added": "2025-06-06",
     "slug": "faceswap"
+  },
+  {
+    "title": "FaceSwap.Free",
+    "body": "Free photo and GIF face swap.",
+    "tag": "Free",
+    "url": "https://faceswap.free/?ref=riseofmachine.com",
+    "date-added": "2026-11-09",
+    "slug": "faceswapfree"
   },
   {
     "title": "FaceVary",
@@ -734,6 +734,14 @@
     "url": "https://sellerpic.ai/?ref=riseofmachine.com",
     "date-added": "2025-08-30",
     "slug": "sellerpic"
+  },
+  {
+    "title": "TooExtra AI",
+    "body": "Edits photos with AI templates.",
+    "tag": "Paid",
+    "url": "https://tooextra.app?ref=riseofmachine.com",
+    "date-added": "2026-11-10",
+    "slug": "tooextra-ai"
   },
   {
     "title": "Topaz Labs",

@@ -8,12 +8,12 @@
   "slug": "cleanvoice",
   "related": [
     "remove-audio",
+    "transcribe-video-to-the-text",
     "yap",
     "audjust-ai",
     "audio-transcriber-ai",
     "voqusa",
     "ringfoods",
-    "cleanaudio-ai",
-    "sonicker"
+    "cleanaudio-ai"
   ]
 }

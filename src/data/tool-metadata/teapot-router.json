@@ -1,0 +1,19 @@
+{
+  "title": "Teapot Router — One gateway for enterprise AI",
+  "description": "Teapot Router gives teams one gateway for Claude Code and GPT, with configurable fallback routes, auditable request costs, and response-time records.",
+  "category": "llm",
+  "url": "https://teapotrouter.com/en?ref=riseofmachine.com",
+  "tag": "Not available",
+  "date-added": "2026-11-07",
+  "slug": "teapot-router",
+  "related": [
+    "gpt4o",
+    "ferryapi",
+    "chat100",
+    "uberllm",
+    "artificialwatch",
+    "gptgeminigrokai",
+    "coderplan",
+    "deepseekv4dev"
+  ]
+}

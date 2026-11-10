@@ -10,10 +10,10 @@
     "coderplan",
     "openrouter",
     "llamaindex",
+    "teapot-router",
     "artificialwatch",
     "gptgeminigrokai",
     "ferryapi",
-    "deepseekv4dev",
-    "chatgpt"
+    "deepseekv4dev"
   ]
 }

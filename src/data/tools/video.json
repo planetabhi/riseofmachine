@@ -56,6 +56,14 @@
     "slug": "bgchanger"
   },
   {
+    "title": "Burncaps",
+    "body": "Subtitle and AI clip generator.",
+    "tag": "Freemium",
+    "url": "https://burncaps.app/?ref=riseofmachine.com",
+    "date-added": "2026-11-08",
+    "slug": "burncaps"
+  },
+  {
     "title": "CapCut",
     "body": "Advanced video editing with AI features & effects.",
     "tag": "Freemium",
@@ -326,6 +334,14 @@
     "url": "https://image2video.ai/?ref=riseofmachine.com",
     "date-added": "2024-09-20",
     "slug": "image2video"
+  },
+  {
+    "title": "Imagera",
+    "body": "AI video studio with consistent characters.",
+    "tag": "Paid",
+    "url": "https://imagera.ai/?ref=riseofmachine.com",
+    "date-added": "2026-11-08",
+    "slug": "imagera"
   },
   {
     "title": "imagetovideo.io",
@@ -894,6 +910,13 @@
     "url": "https://vidmix.ai?ref=riseofmachine.com",
     "date-added": "2025-12-28",
     "slug": "vidmix"
+  },
+  {
+    "title": "Vidney",
+    "body": "Generate videos and images with AI.",
+    "url": "https://vidney.ai/?ref=riseofmachine.com",
+    "date-added": "2026-11-08",
+    "slug": "vidney"
   },
   {
     "title": "Vidu Studio",

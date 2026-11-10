@@ -11,9 +11,9 @@
     "voicetype",
     "audio-muse",
     "mix-audio",
+    "transcribe-video-to-the-text",
     "lyricstosong",
     "trint",
-    "unreal-speech",
-    "wellsaid-labs"
+    "unreal-speech"
   ]
 }
