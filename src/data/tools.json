@@ -1075,6 +1075,14 @@
           "slug": "sync"
         },
         {
+          "title": "Transcribe Video: To The Text",
+          "body": "iPhone app transcribing video to text.",
+          "tag": "Freemium",
+          "url": "https://video2text.ttt.so/?ref=riseofmachine.com",
+          "date-added": "2026-11-10",
+          "slug": "transcribe-video-to-the-text"
+        },
+        {
           "title": "Trint",
           "body": "Audio/video to editable text; 40+ languages.",
           "tag": "Freemium",
