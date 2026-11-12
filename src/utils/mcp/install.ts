@@ -36,7 +36,8 @@ function args(pkg: McpPackage): string {
 }
 
 // Build the copyable command for a single package method (used on the detail page).
-export function commandForPackage(pkg: McpPackage): string {    const env = envPrefix(pkg);
+export function commandForPackage(pkg: McpPackage): string {
+    const env = envPrefix(pkg);
     const id = pkg.identifier;
     const v = versionSuffix(pkg);
     const extra = args(pkg);
@@ -50,8 +51,13 @@ export function commandForPackage(pkg: McpPackage): string {    const env = envP
             return `${env}${runner} ${id}${v}${extra}`.trim();
         }
         case 'oci': {
+            const required = (pkg.environmentVariables ?? []).filter((e) => e.required !== false);
+            // Docker receives these names as CLI arguments; reject invalid names
+            // instead of allowing them to become additional Docker options.
+            if (required.some((e) => !/^[A-Za-z_][A-Za-z0-9_]*$/.test(e.name))) return '';
+            const envArgs = required.map((e) => ` -e ${e.name}`).join('');
             const ver = pkg.version ? `:${pkg.version}` : '';
-            return `${env}docker run -i --rm ${id}${ver}${extra}`.trim();
+            return `${env}docker run -i --rm${envArgs} ${id}${ver}${extra}`.trim();
         }
         case 'nuget': {
             const runner = pkg.runtimeHint || 'dnx';
@@ -62,6 +68,13 @@ export function commandForPackage(pkg: McpPackage): string {    const env = envP
         default:
             return `${env}${id}${v}${extra}`.trim();
     }
+}
+
+// Regenerate OCI commands for catalog entries made by older crawler versions.
+export function catalogInstallCommand(server: Pick<McpServer, 'installCommand' | 'installKind' | 'packages'>): string {
+    if (server.installKind !== 'package') return server.installCommand;
+    const pkg = selectPrimaryPackage(server.packages);
+    return pkg?.registryType === 'oci' ? commandForPackage(pkg) : server.installCommand;
 }
 
 export interface InstallResult {

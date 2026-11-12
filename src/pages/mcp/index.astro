@@ -9,6 +9,7 @@ import ItemListSchema from '../../components/schema/ItemListSchema.astro';
 import mcpData from '../../data/mcp-servers.json';
 import mcpIndex from '../../data/mcp-category-index.json';
 import type { McpData, McpServer, McpCategoryIndex } from '../../types/mcp';
+import { catalogInstallCommand } from '../../utils/mcp/install';
 
 const data = mcpData as McpData;
 const index = mcpIndex as McpCategoryIndex;
@@ -27,7 +28,7 @@ function extraData(s: McpServer): Record<string, string | undefined> {
         ),
     ].filter(Boolean);
     return {
-        'data-install-command': s.installCommand || undefined,
+        'data-install-command': catalogInstallCommand(s) || undefined,
         'data-install-kind': s.installKind,
         'data-transports': [...new Set([...s.remotes.map((r) => r.type), ...s.packages.map((p) => p.transport)])].join(','),
         'data-registries': [...new Set(s.packages.map((p) => p.registryType))].join(','),

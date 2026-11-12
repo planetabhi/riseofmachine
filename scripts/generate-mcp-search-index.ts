@@ -7,6 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import type { McpData, McpServer } from '../src/types/mcp.ts';
+import { catalogInstallCommand } from '../src/utils/mcp/install.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -72,7 +73,7 @@ function toLite(s: McpServer): LiteRecord {
         b: clamp(s.description),
         c: s.category,
         k: s.installKind,
-        ic: s.installCommand,
+        ic: catalogInstallCommand(s),
         tr: transportsOf(s),
         rg: registriesOf(s),
         st: s.status,

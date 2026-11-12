@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildInstallCommand, selectPrimaryPackage } from './install';
+import { buildInstallCommand, catalogInstallCommand, selectPrimaryPackage } from './install';
 import type { McpPackage, McpRemote } from '../../types/mcp';
 
 const pkg = (over: Partial<McpPackage>): McpPackage => ({
@@ -47,6 +47,31 @@ describe('buildInstallCommand', () => {
     it('oci → docker run with :version', () => {
         const r = buildInstallCommand({ packages: [pkg({ registryType: 'oci', identifier: 'img', version: '2' })], remotes: [] });
         expect(r.installCommand).toBe('docker run -i --rm img:2');
+    });
+
+    it('forwards required OCI environment variables to the container by name', () => {
+        const p = pkg({
+            registryType: 'oci', identifier: 'img', version: '2',
+            environmentVariables: [
+                { name: 'API_KEY', required: true },
+                { name: 'CONFIG', required: true },
+                { name: 'OPTIONAL', required: false },
+            ],
+            packageArguments: ['serve'],
+        });
+        const result = buildInstallCommand({ packages: [p], remotes: [] });
+        expect(result.installCommand).toBe('API_KEY=<value> CONFIG=<value> docker run -i --rm -e API_KEY -e CONFIG img:2 serve');
+        expect(catalogInstallCommand({ ...result, installCommand: 'old', packages: [p] })).toBe(result.installCommand);
+    });
+
+    it('does not turn invalid OCI environment names into Docker arguments', () => {
+        const p = pkg({ registryType: 'oci', environmentVariables: [{ name: 'TOKEN --privileged' }] });
+        expect(buildInstallCommand({ packages: [p], remotes: [] }).installCommand).toBe('');
+    });
+
+    it('does not refresh other cached package or remote commands', () => {
+        expect(catalogInstallCommand({ installKind: 'package', installCommand: 'custom', packages: [pkg({})] })).toBe('custom');
+        expect(catalogInstallCommand({ installKind: 'remote', installCommand: 'https://example.test', packages: [pkg({ registryType: 'oci' })] })).toBe('https://example.test');
     });
 
     it('nuget → dnx, mcpb → mcpb install', () => {
