@@ -4278,7 +4278,7 @@
           ]
         }
       ],
-      "installCommand": "MASSDRIVER_API_KEY='<value>' MASSDRIVER_ORGANIZATION_ID='<value>' MASSDRIVER_URL='<value>' docker run -i --rm docker.io/massdrivercloud/mcp-server:0.2.0",
+      "installCommand": "MASSDRIVER_API_KEY=<value> MASSDRIVER_ORGANIZATION_ID=<value> MASSDRIVER_URL=<value> docker run -i --rm docker.io/massdrivercloud/mcp-server:0.2.0",
       "installKind": "package",
       "category": "cloud-devops",
       "categories": [
@@ -6535,7 +6535,7 @@
           ]
         }
       ],
-      "installCommand": "EASYDOCFORMS_API_KEY='<value>' EASYDOCFORMS_BASE_URL='<value>' docker run -i --rm ghcr.io/easydocforms/easydocforms-mcp:0.1.2",
+      "installCommand": "EASYDOCFORMS_API_KEY=<value> EASYDOCFORMS_BASE_URL=<value> docker run -i --rm ghcr.io/easydocforms/easydocforms-mcp:0.1.2",
       "installKind": "package",
       "category": "ai-agents",
       "categories": [
@@ -8676,7 +8676,7 @@
           ]
         }
       ],
-      "installCommand": "MICOMPRESS_API_KEY='<value>' docker run -i --rm docker.io/huuhuybn/micompress-mcp:0.1.2 '{host_dir}:/data'",
+      "installCommand": "MICOMPRESS_API_KEY=<value> docker run -i --rm docker.io/huuhuybn/micompress-mcp:0.1.2 {host_dir}:/data",
       "installKind": "package",
       "category": "media",
       "categories": [
@@ -10214,7 +10214,7 @@
           ]
         }
       ],
-      "installCommand": "PASSMCP_SERVER_ALLOW='<value>' docker run -i --rm ghcr.io/sebastienrousseau/passmcp-server:0.0.8",
+      "installCommand": "PASSMCP_SERVER_ALLOW=<value> docker run -i --rm ghcr.io/sebastienrousseau/passmcp-server:0.0.8",
       "installKind": "package",
       "category": "ai-agents",
       "categories": [
@@ -10686,7 +10686,7 @@
           ]
         }
       ],
-      "installCommand": "GRANTAI_LICENSE_KEY='<value>' docker run -i --rm ghcr.io/solonai-com/grantai-memory:1.8.5",
+      "installCommand": "GRANTAI_LICENSE_KEY=<value> docker run -i --rm ghcr.io/solonai-com/grantai-memory:1.8.5",
       "installKind": "package",
       "category": "ai-agents",
       "categories": [
@@ -15714,7 +15714,7 @@
           ]
         }
       ],
-      "installCommand": "X_API_KEY='<value>' docker run -i --rm docker.io/atonoio/atono-mcp-server:1.1.1",
+      "installCommand": "X_API_KEY=<value> docker run -i --rm docker.io/atonoio/atono-mcp-server:1.1.1",
       "installKind": "package",
       "category": "ecommerce",
       "categories": [
@@ -16383,7 +16383,7 @@
           ]
         }
       ],
-      "installCommand": "AFRICADB_API_TOKEN='<value>' AFRICADB_API_URL='<value>' docker run -i --rm docker.io/jmatrixjnr/afridb-mcp-server:1.0.1",
+      "installCommand": "AFRICADB_API_TOKEN=<value> AFRICADB_API_URL=<value> docker run -i --rm docker.io/jmatrixjnr/afridb-mcp-server:1.0.1",
       "installKind": "package",
       "category": "ai-agents",
       "categories": [
@@ -16430,7 +16430,7 @@
           ]
         }
       ],
-      "installCommand": "AGEND_API_TOKEN='<value>' docker run -i --rm ghcr.io/agend-sh/agend-mcp@sha256:4462e2571be0e69003e1be93255e04523342e1e5aa17482ec3d63bd7506bb82f AGEND_API_TOKEN",
+      "installCommand": "AGEND_API_TOKEN=<value> docker run -i --rm ghcr.io/agend-sh/agend-mcp@sha256:4462e2571be0e69003e1be93255e04523342e1e5aa17482ec3d63bd7506bb82f AGEND_API_TOKEN",
       "installKind": "package",
       "category": "ai-agents",
       "categories": [
@@ -17529,7 +17529,7 @@
           "version": "0.15.0"
         }
       ],
-      "installCommand": "OFMCP_CONVERTED_DIR='<value>' OFMCP_CONVERT_COMMAND='<value>' OFMCP_COMPILE_COMMAND='<value>' docker run -i --rm ghcr.io/aoreshkov/oracle-forms-mcp:0.15.0 /forms",
+      "installCommand": "OFMCP_CONVERTED_DIR=<value> OFMCP_CONVERT_COMMAND=<value> OFMCP_COMPILE_COMMAND=<value> docker run -i --rm ghcr.io/aoreshkov/oracle-forms-mcp:0.15.0 /forms",
       "installKind": "package",
       "category": "other",
       "categories": [
@@ -17643,7 +17643,7 @@
           ]
         }
       ],
-      "installCommand": "docker run -i --rm ghcr.io/apollographql/apollo-mcp-server:v2.0.0 'type=bind,src={config_path},dst=/config.yaml,readonly' 'type=bind,src={data_path},dst=/data' 8000:8000 /config.yaml",
+      "installCommand": "docker run -i --rm ghcr.io/apollographql/apollo-mcp-server:v2.0.0 type=bind,src={config_path},dst=/config.yaml,readonly type=bind,src={data_path},dst=/data 8000:8000 /config.yaml",
       "installKind": "package",
       "category": "other",
       "categories": [
@@ -22209,7 +22209,7 @@
           ]
         }
       ],
-      "installCommand": "PIHOLE_URL='<value>' PIHOLE_PASSWORD='<value>' TZ='<value>' PIHOLE_READ_ONLY='<value>' PIHOLE_TLS_SKIP_VERIFY='<value>' PIHOLE_REQUEST_TIMEOUT='<value>' PIHOLE_MAX_RETRIES='<value>' PIHOLE_RETRY_MAX_DELAY='<value>' docker run -i --rm ghcr.io/hexamatic/pihole-mcp:0.9.0",
+      "installCommand": "PIHOLE_URL=<value> PIHOLE_PASSWORD=<value> TZ=<value> PIHOLE_READ_ONLY=<value> PIHOLE_TLS_SKIP_VERIFY=<value> PIHOLE_REQUEST_TIMEOUT=<value> PIHOLE_MAX_RETRIES=<value> PIHOLE_RETRY_MAX_DELAY=<value> docker run -i --rm ghcr.io/hexamatic/pihole-mcp:0.9.0",
       "installKind": "package",
       "category": "databases",
       "categories": [
@@ -23337,7 +23337,7 @@
           ]
         }
       ],
-      "installCommand": "docker run -i --rm ghcr.io/janpuc/koment:1.1.0 run --rm --interactive --user '{host_user}' --mount 'type=bind,src={repository},dst=/workspace' --workdir /workspace mcp --write",
+      "installCommand": "docker run -i --rm ghcr.io/janpuc/koment:1.1.0 run --rm --interactive --user {host_user} --mount type=bind,src={repository},dst=/workspace --workdir /workspace mcp --write",
       "installKind": "package",
       "category": "other",
       "categories": [
@@ -25771,7 +25771,7 @@
           ]
         }
       ],
-      "installCommand": "GENIE_BASE_URL='<value>' docker run -i --rm ghcr.io/nhantour/genie-locker-mcp:0.2.0",
+      "installCommand": "GENIE_BASE_URL=<value> docker run -i --rm ghcr.io/nhantour/genie-locker-mcp:0.2.0",
       "installKind": "package",
       "category": "ai-llm",
       "categories": [
@@ -26701,7 +26701,7 @@
           ]
         }
       ],
-      "installCommand": "MCP_TRANSPORT='<value>' PGHOST='<value>' PGDATABASE='<value>' PGUSER='<value>' PGPASSWORD='<value>' docker run -i --rm ghcr.io/owen282000/life-dashboard-mcp:1.2.0",
+      "installCommand": "MCP_TRANSPORT=<value> PGHOST=<value> PGDATABASE=<value> PGUSER=<value> PGPASSWORD=<value> docker run -i --rm ghcr.io/owen282000/life-dashboard-mcp:1.2.0",
       "installKind": "package",
       "category": "data-analytics",
       "categories": [
@@ -27320,7 +27320,7 @@
           ]
         }
       ],
-      "installCommand": "LIGHTSPEED_CLIENT_ID='<value>' LIGHTSPEED_CLIENT_SECRET='<value>' docker run -i --rm ghcr.io/redhatinsights/red-hat-lightspeed-mcp",
+      "installCommand": "LIGHTSPEED_CLIENT_ID=<value> LIGHTSPEED_CLIENT_SECRET=<value> docker run -i --rm ghcr.io/redhatinsights/red-hat-lightspeed-mcp",
       "installKind": "package",
       "category": "ai-llm",
       "categories": [
@@ -34486,7 +34486,7 @@
           ]
         }
       ],
-      "installCommand": "GERRIT_URL='<value>' GERRIT_USERNAME='<value>' GERRIT_TOKEN='<value>' GERRIT_MCP_GROUPS='<value>' GERRIT_MCP_PROJECTS='<value>' GERRIT_MCP_OWN_CHANGES_ONLY='<value>' GERRIT_MCP_REVIEW_NOTIFICATIONS='<value>' GERRIT_MCP_REVIEW_NOTIFICATIONS_POLL_INTERVAL='<value>' GERRIT_MCP_REVIEW_NOTIFICATIONS_INCLUDE_OWN='<value>' GERRIT_MCP_REVIEW_NOTIFICATIONS_EXCLUDE_ACCOUNTS='<value>' GERRIT_MCP_REVIEW_NOTIFICATIONS_EXCLUDE_PATTERNS='<value>' docker run -i --rm ghcr.io/gaijinentertainment/go-gerrit-mcp:1.1.3",
+      "installCommand": "GERRIT_URL=<value> GERRIT_USERNAME=<value> GERRIT_TOKEN=<value> GERRIT_MCP_GROUPS=<value> GERRIT_MCP_PROJECTS=<value> GERRIT_MCP_OWN_CHANGES_ONLY=<value> GERRIT_MCP_REVIEW_NOTIFICATIONS=<value> GERRIT_MCP_REVIEW_NOTIFICATIONS_POLL_INTERVAL=<value> GERRIT_MCP_REVIEW_NOTIFICATIONS_INCLUDE_OWN=<value> GERRIT_MCP_REVIEW_NOTIFICATIONS_EXCLUDE_ACCOUNTS=<value> GERRIT_MCP_REVIEW_NOTIFICATIONS_EXCLUDE_PATTERNS=<value> docker run -i --rm ghcr.io/gaijinentertainment/go-gerrit-mcp:1.1.3",
       "installKind": "package",
       "category": "other",
       "categories": [

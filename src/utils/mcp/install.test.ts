@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { execFileSync } from 'node:child_process';
 import { mapServer } from './map';
-import { buildInstallCommand, commandForPackage, selectPrimaryPackage, splitCommandWords } from './install';
+import { buildInstallCommand, catalogInstallCommand, commandForPackage, selectPrimaryPackage, splitCommandWords } from './install';
 import type { McpPackage, McpRemote } from '../../types/mcp';
 
 const pkg = (over: Partial<McpPackage>): McpPackage => ({
@@ -125,5 +125,19 @@ describe('OCI shell boundary', () => {
             { identifier: '--privileged' }, { identifier: '' },
             { packageArguments: ['a\0b'] },
         ]) expect(commandForPackage(pkg({ registryType: 'oci', ...over }))).toBe('');
+    });
+});
+
+
+describe('catalogInstallCommand', () => {
+    it('refreshes cached OCI commands using structured package arguments', () => {
+        const image = pkg({ registryType: 'oci', identifier: 'image', packageArguments: ['two words', '$(id)'], environmentVariables: [{ name: 'TOKEN' }] });
+        const server = { installKind: 'package' as const, installCommand: 'TOKEN=<value> docker run -i --rm image two words $(id)', packages: [image] };
+        expect(catalogInstallCommand(server)).toBe("TOKEN='<value>' docker run -i --rm image 'two words' '$(id)'");
+    });
+
+    it('preserves non-OCI and remote cached commands', () => {
+        expect(catalogInstallCommand({ installKind: 'package', installCommand: 'custom', packages: [pkg({})] })).toBe('custom');
+        expect(catalogInstallCommand({ installKind: 'remote', installCommand: 'https://example.test', packages: [pkg({ registryType: 'oci' })] })).toBe('https://example.test');
     });
 });
