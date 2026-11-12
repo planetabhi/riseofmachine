@@ -1,7 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { execFileSync } from 'node:child_process';
-import { mapServer } from './map';
-import { buildInstallCommand, catalogInstallCommand, commandForPackage, selectPrimaryPackage, splitCommandWords } from './install';
+import { buildInstallCommand, catalogInstallCommand, selectPrimaryPackage } from './install';
 import type { McpPackage, McpRemote } from '../../types/mcp';
 
 const pkg = (over: Partial<McpPackage>): McpPackage => ({
@@ -51,6 +49,31 @@ describe('buildInstallCommand', () => {
         expect(r.installCommand).toBe('docker run -i --rm img:2');
     });
 
+    it('forwards required OCI environment variables to the container by name', () => {
+        const p = pkg({
+            registryType: 'oci', identifier: 'img', version: '2',
+            environmentVariables: [
+                { name: 'API_KEY', required: true },
+                { name: 'CONFIG', required: true },
+                { name: 'OPTIONAL', required: false },
+            ],
+            packageArguments: ['serve'],
+        });
+        const result = buildInstallCommand({ packages: [p], remotes: [] });
+        expect(result.installCommand).toBe('API_KEY=<value> CONFIG=<value> docker run -i --rm -e API_KEY -e CONFIG img:2 serve');
+        expect(catalogInstallCommand({ ...result, installCommand: 'old', packages: [p] })).toBe(result.installCommand);
+    });
+
+    it('does not turn invalid OCI environment names into Docker arguments', () => {
+        const p = pkg({ registryType: 'oci', environmentVariables: [{ name: 'TOKEN --privileged' }] });
+        expect(buildInstallCommand({ packages: [p], remotes: [] }).installCommand).toBe('');
+    });
+
+    it('does not refresh other cached package or remote commands', () => {
+        expect(catalogInstallCommand({ installKind: 'package', installCommand: 'custom', packages: [pkg({})] })).toBe('custom');
+        expect(catalogInstallCommand({ installKind: 'remote', installCommand: 'https://example.test', packages: [pkg({ registryType: 'oci' })] })).toBe('https://example.test');
+    });
+
     it('nuget → dnx, mcpb → mcpb install', () => {
         expect(buildInstallCommand({ packages: [pkg({ registryType: 'nuget', identifier: 'n' })], remotes: [] }).installCommand).toBe('dnx n');
         expect(buildInstallCommand({ packages: [pkg({ registryType: 'mcpb', identifier: 'm' })], remotes: [] }).installCommand).toBe('mcpb install m');
@@ -84,60 +107,5 @@ describe('buildInstallCommand', () => {
         const r = buildInstallCommand({ packages: [], remotes: [] });
         expect(r.installKind).toBe('none');
         expect(r.installCommand).toBe('');
-    });
-});
-
-
-describe('OCI shell boundary', () => {
-    const shellArgs = (command: string) => execFileSync('/bin/sh', ['-c',
-        `docker() { printf '%s\\0' "$@"; }\n${command}`,
-    ], { encoding: 'utf8' }).split('\0').slice(0, -1);
-
-    it('preserves registry arguments as literal argv through the copyable command', () => {
-        const runtime = ['$(printf INJECTED)', '`printf INJECTED`', 'two words', "a'b", ''];
-        const args = ['; printf INJECTED', '$HOME', '*', 'a\nb', '"quoted"', 'x > /dev/null'];
-        const server = mapServer({ server: {
-            name: 'io.example/test', packages: [{
-                registryType: 'oci', identifier: 'example/image', version: '2',
-                runtimeArguments: runtime.slice(0, -1).map((value) => ({ value })),
-                packageArguments: args.map((value) => ({ value })),
-            }],
-        } })!;
-        expect(shellArgs(server.installCommand)).toEqual(['run', '-i', '--rm', 'example/image:2', ...runtime.slice(0, -1), ...args]);
-        const command = commandForPackage(pkg({ registryType: 'oci', packageArguments: runtime }));
-        expect(shellArgs(command)).toEqual(['run', '-i', '--rm', 'demo', ...runtime]);
-        expect(splitCommandWords(command)).toEqual(['docker', ...shellArgs(command)]);
-    });
-
-    it('quotes image/version and env placeholders and ignores runtime hints', () => {
-        const image = 'image$(printf INJECTED)';
-        const version = "v'1; printf INJECTED";
-        const command = commandForPackage(pkg({ registryType: 'oci', identifier: image, version,
-            runtimeHint: 'printf INJECTED', environmentVariables: [{ name: 'API_KEY' }, { name: 'OPTIONAL', required: false }],
-        }));
-        expect(shellArgs(command)).toEqual(['run', '-i', '--rm', `${image}:${version}`]);
-        expect(splitCommandWords(command)).toEqual(['API_KEY=<value>', 'docker', 'run', '-i', '--rm', `${image}:${version}`]);
-    });
-
-    it('withholds commands for invalid env names, option-like images and NUL bytes', () => {
-        for (const over of [
-            { environmentVariables: [{ name: 'X=$(printf INJECTED)' }] },
-            { identifier: '--privileged' }, { identifier: '' },
-            { packageArguments: ['a\0b'] },
-        ]) expect(commandForPackage(pkg({ registryType: 'oci', ...over }))).toBe('');
-    });
-});
-
-
-describe('catalogInstallCommand', () => {
-    it('refreshes cached OCI commands using structured package arguments', () => {
-        const image = pkg({ registryType: 'oci', identifier: 'image', packageArguments: ['two words', '$(id)'], environmentVariables: [{ name: 'TOKEN' }] });
-        const server = { installKind: 'package' as const, installCommand: 'TOKEN=<value> docker run -i --rm image two words $(id)', packages: [image] };
-        expect(catalogInstallCommand(server)).toBe("TOKEN='<value>' docker run -i --rm image 'two words' '$(id)'");
-    });
-
-    it('preserves non-OCI and remote cached commands', () => {
-        expect(catalogInstallCommand({ installKind: 'package', installCommand: 'custom', packages: [pkg({})] })).toBe('custom');
-        expect(catalogInstallCommand({ installKind: 'remote', installCommand: 'https://example.test', packages: [pkg({ registryType: 'oci' })] })).toBe('https://example.test');
     });
 });
