@@ -1293,7 +1293,8 @@
           "body": "Terminal coding agent with 276 models.",
           "tag": "Paid",
           "url": "https://imagera.ai/code?ref=riseofmachine.com",
-          "date-added": "2026-11-10"
+          "date-added": "2026-11-10",
+          "slug": "imagera-code"
         },
         {
           "title": "Melty",
@@ -2866,6 +2867,14 @@
           "slug": "rork-app"
         },
         {
+          "title": "Router",
+          "body": "Unified API for AI models.",
+          "tag": "Freemium",
+          "url": "https://01router.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-12",
+          "slug": "router"
+        },
+        {
           "title": "RunPod",
           "body": "Develop, train, and scale AI apps.",
           "tag": "From $0.2/hr",
@@ -4314,7 +4323,8 @@
           "body": "One API for 320+ models from 48 labs.",
           "tag": "Paid",
           "url": "https://imagera.ai/llm-api?ref=riseofmachine.com",
-          "date-added": "2026-11-10"
+          "date-added": "2026-11-10",
+          "slug": "imagera-llm-api"
         },
         {
           "title": "LangChain",
