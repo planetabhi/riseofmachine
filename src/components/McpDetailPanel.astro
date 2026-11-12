@@ -363,6 +363,7 @@
 </style>
 
 <script>
+    import { splitCommandWords } from '../utils/mcp/install';
     import { navigate } from 'astro:transitions/client';
 
     let lastFocus: HTMLElement | null = null;
@@ -422,7 +423,9 @@
             const transports = (d.transports || '').split(',').map((t) => t.trim());
             entry = transports.includes('sse') ? { type: 'sse', url: cmd } : { type: 'http', url: cmd };
         } else {
-            const tokens = cmd.split(' ').filter(Boolean);
+            const tokens = /^(?:[A-Za-z_][A-Za-z0-9_]*='<value>' )*docker run /.test(cmd)
+                ? splitCommandWords(cmd)
+                : cmd.split(' ').filter(Boolean);
             const env: Record<string, string> = {};
             let i = 0;
             for (; i < tokens.length; i++) {

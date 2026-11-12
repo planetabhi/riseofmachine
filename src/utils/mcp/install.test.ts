@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { buildInstallCommand, selectPrimaryPackage } from './install';
+import { execFileSync } from 'node:child_process';
+import { mapServer } from './map';
+import { buildInstallCommand, commandForPackage, selectPrimaryPackage, splitCommandWords } from './install';
 import type { McpPackage, McpRemote } from '../../types/mcp';
 
 const pkg = (over: Partial<McpPackage>): McpPackage => ({
@@ -82,5 +84,46 @@ describe('buildInstallCommand', () => {
         const r = buildInstallCommand({ packages: [], remotes: [] });
         expect(r.installKind).toBe('none');
         expect(r.installCommand).toBe('');
+    });
+});
+
+
+describe('OCI shell boundary', () => {
+    const shellArgs = (command: string) => execFileSync('/bin/sh', ['-c',
+        `docker() { printf '%s\\0' "$@"; }\n${command}`,
+    ], { encoding: 'utf8' }).split('\0').slice(0, -1);
+
+    it('preserves registry arguments as literal argv through the copyable command', () => {
+        const runtime = ['$(printf INJECTED)', '`printf INJECTED`', 'two words', "a'b", ''];
+        const args = ['; printf INJECTED', '$HOME', '*', 'a\nb', '"quoted"', 'x > /dev/null'];
+        const server = mapServer({ server: {
+            name: 'io.example/test', packages: [{
+                registryType: 'oci', identifier: 'example/image', version: '2',
+                runtimeArguments: runtime.slice(0, -1).map((value) => ({ value })),
+                packageArguments: args.map((value) => ({ value })),
+            }],
+        } })!;
+        expect(shellArgs(server.installCommand)).toEqual(['run', '-i', '--rm', 'example/image:2', ...runtime.slice(0, -1), ...args]);
+        const command = commandForPackage(pkg({ registryType: 'oci', packageArguments: runtime }));
+        expect(shellArgs(command)).toEqual(['run', '-i', '--rm', 'demo', ...runtime]);
+        expect(splitCommandWords(command)).toEqual(['docker', ...shellArgs(command)]);
+    });
+
+    it('quotes image/version and env placeholders and ignores runtime hints', () => {
+        const image = 'image$(printf INJECTED)';
+        const version = "v'1; printf INJECTED";
+        const command = commandForPackage(pkg({ registryType: 'oci', identifier: image, version,
+            runtimeHint: 'printf INJECTED', environmentVariables: [{ name: 'API_KEY' }, { name: 'OPTIONAL', required: false }],
+        }));
+        expect(shellArgs(command)).toEqual(['run', '-i', '--rm', `${image}:${version}`]);
+        expect(splitCommandWords(command)).toEqual(['API_KEY=<value>', 'docker', 'run', '-i', '--rm', `${image}:${version}`]);
+    });
+
+    it('withholds commands for invalid env names, option-like images and NUL bytes', () => {
+        for (const over of [
+            { environmentVariables: [{ name: 'X=$(printf INJECTED)' }] },
+            { identifier: '--privileged' }, { identifier: '' },
+            { packageArguments: ['a\0b'] },
+        ]) expect(commandForPackage(pkg({ registryType: 'oci', ...over }))).toBe('');
     });
 });
