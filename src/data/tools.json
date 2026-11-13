@@ -2427,6 +2427,14 @@
           "slug": "aident-loadout"
         },
         {
+          "title": "AIGoCode",
+          "body": "Subscription-based API platform for AI models.",
+          "tag": "Not available",
+          "url": "https://www.aigocode.net/?utm_source=riseofmachine.com&utm_medium=directory&utm_campaign=2026q4-backlink&utm_content=20261114-aigocode&ref=riseofmachine.com",
+          "date-added": "2026-11-13",
+          "slug": "aigocode"
+        },
+        {
           "title": "Amazon Codewhisperer",
           "body": "A code writing assistant developed by Amazon",
           "tag": "Freemium",
@@ -7577,7 +7585,8 @@
           "body": "Curated slideshows and carousels for brands.",
           "tag": "Freemium",
           "url": "https://wavegrain.com/?ref=riseofmachine.com",
-          "date-added": "2026-11-12"
+          "date-added": "2026-11-12",
+          "slug": "wavegrain"
         }
       ]
     },
