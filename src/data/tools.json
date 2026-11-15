@@ -7851,6 +7851,14 @@
           "slug": "genmo"
         },
         {
+          "title": "GetYouTubeTranscript",
+          "body": "YouTube transcripts with AI summaries and chat.",
+          "tag": "Freemium",
+          "url": "https://getyoutubetranscript.com?ref=riseofmachine.com",
+          "date-added": "2026-11-15",
+          "slug": "getyoutubetranscript"
+        },
+        {
           "title": "Google Veo",
           "body": "The most capable generative video model.",
           "url": "https://deepmind.google/technologies/veo/?ref=riseofmachine.com",
