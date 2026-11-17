@@ -4692,6 +4692,14 @@
           "slug": "music-generator"
         },
         {
+          "title": "No Stairs Please",
+          "body": "Live-music venue and talent-buyer directory for touring bands.",
+          "tag": "Freemium",
+          "url": "https://nostairsplease.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-15",
+          "slug": "no-stairs-please"
+        },
+        {
           "title": "Raplyrics",
           "body": "Music creation.",
           "tag": "Free",
@@ -4826,14 +4834,6 @@
           "url": "https://wordsintomusic.com?ref=riseofmachine.com",
           "date-added": "2026-10-16",
           "slug": "words-into-music"
-        },
-        {
-          "title": "No Stairs Please",
-          "body": "Live-music venue and talent-buyer directory for touring bands.",
-          "tag": "Freemium",
-          "url": "https://nostairsplease.com/?ref=riseofmachine.com",
-          "date-added": "2026-11-15",
-          "slug": "no-stairs-please"
         }
       ]
     },
@@ -5774,6 +5774,14 @@
           "url": "https://www.restorephotos.io/?ref=riseofmachine.com",
           "date-added": "2023-12-15",
           "slug": "restore-photos"
+        },
+        {
+          "title": "Saypix",
+          "body": "AI photo editor using plain-word instructions.",
+          "tag": "Freemium",
+          "url": "https://saypix.io/?ref=riseofmachine.com",
+          "date-added": "2026-11-17",
+          "slug": "saypix"
         },
         {
           "title": "SceneYou.art",
