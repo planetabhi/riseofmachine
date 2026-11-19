@@ -4089,6 +4089,14 @@
           "url": "https://spritemaker.app/?ref=riseofmachine.com",
           "date-added": "2026-11-03",
           "slug": "sprite-maker"
+        },
+        {
+          "title": "Sprite Sheet Tool",
+          "body": "Generate four-direction RPG walking sprites.",
+          "tag": "Freemium",
+          "url": "https://spritesheettool.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-19",
+          "slug": "sprite-sheet-tool"
         }
       ]
     },
