@@ -3131,6 +3131,14 @@
           "slug": "websparks"
         },
         {
+          "title": "Wiro AI",
+          "body": "Unified API for 1,000+ AI models.",
+          "tag": "From $5/mo",
+          "url": "https://wiro.ai/?ref=riseofmachine.com",
+          "date-added": "2026-11-21",
+          "slug": "wiro-ai"
+        },
+        {
           "title": "X Note Writer API",
           "body": "API for AI to propose X Community Notes.",
           "tag": "Free",
