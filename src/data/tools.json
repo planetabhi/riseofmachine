@@ -2659,6 +2659,14 @@
           "slug": "frontend"
         },
         {
+          "title": "Great Work Labs",
+          "body": "AI task models behind one API.",
+          "tag": "From $0.005/1K calls",
+          "url": "https://labs.greatwork.company/?ref=riseofmachine.com",
+          "date-added": "2026-11-24",
+          "slug": "great-work-labs"
+        },
+        {
           "title": "Helix",
           "body": "Build, optimize text and image AI.",
           "tag": "Freemium",
