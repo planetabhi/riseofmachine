@@ -7185,6 +7185,13 @@
           "slug": "pulse"
         },
         {
+          "title": "QuestionPunk",
+          "body": "Surveys and AI-moderated voice interviews.",
+          "url": "https://www.questionpunk.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-24",
+          "slug": "questionpunk"
+        },
+        {
           "title": "Resea AI",
           "body": "AI research agent for academic research.",
           "url": "https://resea.ai/?ref=riseofmachine.com",
