@@ -5808,6 +5808,14 @@
           "slug": "remove-background-by-picsart"
         },
         {
+          "title": "removebackground.me",
+          "body": "Free background removal for image cutouts.",
+          "tag": "Freemium",
+          "url": "https://removebackground.me/?ref=riseofmachine.com",
+          "date-added": "2026-11-25",
+          "slug": "removebackgroundme"
+        },
+        {
           "title": "Removebg",
           "body": "Remove image background.",
           "tag": "Pay-as-you-go",
