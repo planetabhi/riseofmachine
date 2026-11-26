@@ -5050,6 +5050,14 @@
           "slug": "pageai"
         },
         {
+          "title": "Pageree",
+          "body": "AI landing pages published by assistants.",
+          "tag": "Freemium",
+          "url": "https://pageree.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-26",
+          "slug": "pageree"
+        },
+        {
           "title": "Riku",
           "body": "Build & deploy.",
           "tag": "From $29/mo",
