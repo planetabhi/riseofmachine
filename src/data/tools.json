@@ -2939,6 +2939,14 @@
           "slug": "scade"
         },
         {
+          "title": "Scalekit",
+          "body": "MCP gateway for AI agent integrations.",
+          "tag": "Freemium",
+          "url": "https://www.scalekit.com/?ref=riseofmachine.com",
+          "date-added": "2026-11-26",
+          "slug": "scalekit"
+        },
+        {
           "title": "Screenshot to Code",
           "body": "Convert screenshots to HTML/CSS code.",
           "tag": "Freemium",
