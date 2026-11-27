@@ -4708,6 +4708,14 @@
           "slug": "lyricsgift"
         },
         {
+          "title": "MakeASong",
+          "body": "Generates songs with vocals or instrumentals.",
+          "tag": "Freemium",
+          "url": "https://makeasong.io/?ref=riseofmachine.com",
+          "date-added": "2026-11-26",
+          "slug": "makeasong"
+        },
+        {
           "title": "Mubert",
           "body": "AI royalty-free music for creators & businesses.",
           "tag": "Freemium",
