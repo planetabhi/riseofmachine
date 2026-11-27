@@ -2651,6 +2651,14 @@
           "slug": "fitten-code"
         },
         {
+          "title": "Fork",
+          "body": "Shared, tested fixes for AI agents.",
+          "tag": "Free",
+          "url": "https://fork.zone/?ref=riseofmachine.com",
+          "date-added": "2026-11-27",
+          "slug": "fork"
+        },
+        {
           "title": "Frontend",
           "body": "UI generated from prompts or images by AI.",
           "tag": "Freemium",
