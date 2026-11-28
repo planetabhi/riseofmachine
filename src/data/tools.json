@@ -7153,6 +7153,14 @@
           "slug": "flowfeed"
         },
         {
+          "title": "Frank AI Researcher",
+          "body": "AI-moderated customer interviews for research.",
+          "tag": "Freemium",
+          "url": "https://www.hifrank.ai/?ref=riseofmachine.com",
+          "date-added": "2026-11-28",
+          "slug": "frank-ai-researcher"
+        },
+        {
           "title": "GAAbstract",
           "body": "Graphical research abstract generator.",
           "tag": "Freemium",
@@ -8470,7 +8478,8 @@
           "body": "Free-to-try browser AI video generator.",
           "tag": "Freemium",
           "url": "https://www.seeddance.io/?ref=riseofmachine.com",
-          "date-added": "2026-11-27"
+          "date-added": "2026-11-27",
+          "slug": "seedance-ai-video-generator"
         },
         {
           "title": "Seedance Now",
